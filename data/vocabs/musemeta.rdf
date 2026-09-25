@@ -1,0 +1,2717 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/musemeta"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: MuseMeta -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta">
+  <dc:title xml:lang="en">MuseMeta</dc:title>
+  <foaf:homepage rdf:resource="https://depts.washington.edu/musmeta/Welcome.html"/>
+  <skos:note  xml:lang="en">An attribute set developed for museum metadata applications by the MuseMeta project at the University of Washington iSchool</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Accessioned by  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/accessionedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">accessionedBy</reg:name>
+  <rdfs:label xml:lang="en">Accessioned by </rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for accessioning  object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Accession Method -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/accessionMethod">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">accessionMethod</reg:name>
+  <rdfs:label xml:lang="en">Accession Method</rdfs:label>
+  <skos:definition xml:lang="en">How the museum legally acquired the object or objects</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accrualMethod" />
+</rdf:Description>
+
+<!-- Property: Accession number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/accessionNumber">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">accessionNumber</reg:name>
+  <rdfs:label xml:lang="en">Accession number</rdfs:label>
+  <skos:definition xml:lang="en">Identification number assigned to a particular donation or acquisition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Acquisition price -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/acquisitionPrice">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">acquisitionPrice</reg:name>
+  <rdfs:label xml:lang="en">Acquisition price</rdfs:label>
+  <skos:definition xml:lang="en">Purchase price of object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/FIN" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accrualMethod" />
+</rdf:Description>
+
+<!-- Property: Acquisition value -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/acquisitionValue">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">acquisitionValue</reg:name>
+  <rdfs:label xml:lang="en">Acquisition value</rdfs:label>
+  <skos:definition xml:lang="en">Appraisal value at time of acquisition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/FIN" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accrualMethod" />
+</rdf:Description>
+
+<!-- Property: Additional Remarks -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/additionalRemarks">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">additionalRemarks</reg:name>
+  <rdfs:label xml:lang="en">Additional Remarks</rdfs:label>
+  <skos:definition xml:lang="en">Catch-all miscellaneous</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Alternate title -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/alternateTitle">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">alternateTitle</reg:name>
+  <rdfs:label xml:lang="en">Alternate title</rdfs:label>
+  <skos:definition xml:lang="en">Another title for the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title" />
+  <skos:altLabel xml:lang="en">Descriptive line, Alternate Name , descriptive title</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Approved by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/approvedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">approvedBy</reg:name>
+  <rdfs:label xml:lang="en">Approved by</rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for the approval of the acquisition of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Artist Dates -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/artistDates">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">artistDates</reg:name>
+  <rdfs:label xml:lang="en">Artist Dates</rdfs:label>
+  <skos:definition xml:lang="en">The lifespan of the artist, including date of birth and death</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Artist/maker attributor -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/artistMakerAttributor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">artistMakerAttributor</reg:name>
+  <rdfs:label xml:lang="en">Artist/maker attributor</rdfs:label>
+  <skos:definition xml:lang="en">Person who ascribes attribution the artist or maker of the work</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Artist Signature -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/artistSignature">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">artistSignature</reg:name>
+  <rdfs:label xml:lang="en">Artist Signature</rdfs:label>
+  <skos:definition xml:lang="en">The mark of the artist on a piece of work</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/MAR" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Attribution date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/attributionDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">attributionDate</reg:name>
+  <rdfs:label xml:lang="en">Attribution date</rdfs:label>
+  <skos:definition xml:lang="en">Date that the art work was linked the artist or marker</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Authorization date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/authorizationDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">authorizationDate</reg:name>
+  <rdfs:label xml:lang="en">Authorization date</rdfs:label>
+  <skos:definition xml:lang="en">Date object was authorized for repatriation under NAGPRA</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Authorized by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/authorizedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">authorizedBy</reg:name>
+  <rdfs:label xml:lang="en">Authorized by</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for repatriation according to  NAGPRA standards</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Borrower -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/borrower">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">borrower</reg:name>
+  <rdfs:label xml:lang="en">Borrower</rdfs:label>
+  <skos:definition xml:lang="en">Entity receiving the loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/mediator" />
+</rdf:Description>
+
+<!-- Property: Catalog date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/catalogDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">catalogDate</reg:name>
+  <rdfs:label xml:lang="en">Catalog date</rdfs:label>
+  <skos:definition xml:lang="en">Date that catalog record is created</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Catalog number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/catalogNumber">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">catalogNumber</reg:name>
+  <rdfs:label xml:lang="en">Catalog number</rdfs:label>
+  <skos:definition xml:lang="en">Unique identification number assigned to each object at time of accession </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+  <skos:altLabel xml:lang="en">Object Number, Number, Museum number</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Categories -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/categories">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">categories</reg:name>
+  <rdfs:label xml:lang="en">Categories</rdfs:label>
+  <skos:definition xml:lang="en">Descriptive information that puts the object into relationships with other objects or processes.  Determined through controlled vocabulary (e.g., AAT, Nomenclature, TGN)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+  <skos:altLabel xml:lang="en">Class</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Circumference -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/circumference">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">circumference</reg:name>
+  <rdfs:label xml:lang="en">Circumference</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Claimant(s) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/claimants">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">claimants</reg:name>
+  <rdfs:label xml:lang="en">Claimant(s)</rdfs:label>
+  <skos:definition xml:lang="en">Interest party(ies) asserting cultural affiliation to an object according to NAGPRA standards</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/rightsholder" />
+</rdf:Description>
+
+<!-- Property: Class (of animal) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/class">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">class</reg:name>
+  <rdfs:label xml:lang="en">Class (of animal)</rdfs:label>
+  <skos:definition xml:lang="en">A level in biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/class" />
+</rdf:Description>
+
+<!-- Property: Collection -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/collection">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">collection</reg:name>
+  <rdfs:label xml:lang="en">Collection</rdfs:label>
+  <skos:definition xml:lang="en">The name of the collection to which the object belongs</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/hasPart" />
+</rdf:Description>
+
+<!-- Property: Collection code -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/collectionCode">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">collectionCode</reg:name>
+  <rdfs:label xml:lang="en">Collection code</rdfs:label>
+  <skos:definition xml:lang="en">Alphanumeric identification of a collection</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Collection type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/collectionType">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">collectionType</reg:name>
+  <rdfs:label xml:lang="en">Collection type</rdfs:label>
+  <skos:definition xml:lang="en">The type of collection catgorized by material type, cultural affiliation, or Donor (eg. Ceramic Collection, Hopi Collection, Smith Collection</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Color -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/color">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">color</reg:name>
+  <rdfs:label xml:lang="en">Color</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CON" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">Colour</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Comparison of Catalog Numbers -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/comparisonCatalogNumbers">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">comparisonCatalogNumbers</reg:name>
+  <rdfs:label xml:lang="en">Comparison of Catalog Numbers</rdfs:label>
+  <skos:definition xml:lang="en">Identification number(s) assigned to the same object in different catalogues raisonnes</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Conditioned by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/conditionedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">conditionedBy</reg:name>
+  <rdfs:label xml:lang="en">Conditioned by</rdfs:label>
+  <skos:definition xml:lang="en">Museum staff that conditions of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Contact Information -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/contact">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">contact</reg:name>
+  <rdfs:label xml:lang="en">Contact Information</rdfs:label>
+  <skos:definition xml:lang="en">Information on how to contact the artist/maker.  May include address, email address, telephone number, etc.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Count -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/count">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">count</reg:name>
+  <rdfs:label xml:lang="en">Count</rdfs:label>
+  <skos:definition xml:lang="en">The number of works in a series</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Creator -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creator">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creator</reg:name>
+  <rdfs:label xml:lang="en">Creator</rdfs:label>
+  <skos:definition xml:lang="en">Name, artist/maker</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/creator" />
+  <skos:altLabel xml:lang="en">Artist, Maker</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Creator alternative name -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creatorAlternativeName">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creatorAlternativeName</reg:name>
+  <rdfs:label xml:lang="en">Creator alternative name</rdfs:label>
+  <skos:definition xml:lang="en">another name used by the artist</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/creator" />
+  <skos:altLabel xml:lang="en">artist alternative name; maker alternative name</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Creator community/town -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creatorCommunity">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creatorCommunity</reg:name>
+  <rdfs:label xml:lang="en">Creator community/town</rdfs:label>
+  <skos:definition xml:lang="en">A community generally associated with the artist. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/BIO" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">Artist/maker community/town</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Creator culture -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creatorCulture">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creatorCulture</reg:name>
+  <rdfs:label xml:lang="en">Creator culture</rdfs:label>
+  <skos:definition xml:lang="en">The culture of the artist or maker</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/BIO" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/coverage" />
+  <skos:altLabel xml:lang="en">Artist/maker culture</skos:altLabel>
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Creator place of origin -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creatorOrigin">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creatorOrigin</reg:name>
+  <rdfs:label xml:lang="en">Creator place of origin</rdfs:label>
+  <skos:definition xml:lang="en">The place of origin of the artist or maker.  In the case of an artist it is the place of birth.  In the case of a group it is their place of origin.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/BIO" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">City of Origin (Creator)</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Credit Line -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/creditLine">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">creditLine</reg:name>
+  <rdfs:label xml:lang="en">Credit Line</rdfs:label>
+  <skos:definition xml:lang="en">Ownership credit line</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/RIG" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accessRights" />
+  <skos:altLabel xml:lang="en">Label</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Culture attributor -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/cultureAttributor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">cultureAttributor</reg:name>
+  <rdfs:label xml:lang="en">Culture attributor</rdfs:label>
+  <skos:definition xml:lang="en">Person who ascribes culture or maker of the work</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Culture object -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/cultureObject">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">cultureObject</reg:name>
+  <rdfs:label xml:lang="en">Culture object</rdfs:label>
+  <skos:definition xml:lang="en">Prototypical object naming convention (eg. Zuni Mask)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Current Condition -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/currentCondition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">currentCondition</reg:name>
+  <rdfs:label xml:lang="en">Current Condition</rdfs:label>
+  <skos:definition xml:lang="en">Physical condition of the object (eg. Excellent, Good, Fair, Poor, Very Poor)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CON" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Current Condition Date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/currentConditionDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">currentConditionDate</reg:name>
+  <rdfs:label xml:lang="en">Current Condition Date</rdfs:label>
+  <skos:definition xml:lang="en">Date objects condition was late accessed</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Current Location (Exhibition) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/currentLocationExhibition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">currentLocationExhibition</reg:name>
+  <rdfs:label xml:lang="en">Current Location (Exhibition)</rdfs:label>
+  <skos:definition xml:lang="en">Where the object actually is right now.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">Present Location</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Current Location (Loan) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/currentLocationLoan">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">currentLocationLoan</reg:name>
+  <rdfs:label xml:lang="en">Current Location (Loan)</rdfs:label>
+  <skos:definition xml:lang="en">Where the object actually is right now.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">Present Location</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Current Location (Storage) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/currentLocationStorage">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">currentLocationStorage</reg:name>
+  <rdfs:label xml:lang="en">Current Location (Storage)</rdfs:label>
+  <skos:definition xml:lang="en">Where the object actually is right now.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">Present Location</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Date accessioned -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateAccessioned">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateAccessioned</reg:name>
+  <rdfs:label xml:lang="en">Date accessioned</rdfs:label>
+  <skos:definition xml:lang="en">Date object becomes museum property</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Date approved -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateApproved">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateApproved</reg:name>
+  <rdfs:label xml:lang="en">Date approved</rdfs:label>
+  <skos:definition xml:lang="en">Date the object was approved for accession</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Date collected -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateCollected">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateCollected</reg:name>
+  <rdfs:label xml:lang="en">Date collected</rdfs:label>
+  <skos:definition xml:lang="en">Date object was collected in the field</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Date (creation) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateCreation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateCreation</reg:name>
+  <rdfs:label xml:lang="en">Date (creation)</rdfs:label>
+  <skos:definition xml:lang="en">Date the object was made</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+  <skos:altLabel xml:lang="en">Year</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Date proposed  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateProposed">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateProposed</reg:name>
+  <rdfs:label xml:lang="en">Date proposed </rdfs:label>
+  <skos:definition xml:lang="en">Date that object was recommended for accession</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Date (publication) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/datePublication">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">datePublication</reg:name>
+  <rdfs:label xml:lang="en">Date (publication)</rdfs:label>
+  <skos:definition xml:lang="en">Date the object was made available publicly</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Date (signature) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dateSignature">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dateSignature</reg:name>
+  <rdfs:label xml:lang="en">Date (signature)</rdfs:label>
+  <skos:definition xml:lang="en">Date the object was signed by creator</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Deaccession -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/deaccession">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">deaccession</reg:name>
+  <rdfs:label xml:lang="en">Deaccession</rdfs:label>
+  <skos:definition xml:lang="en">Mode of deaccession (ex. destruction, transfer to another institution, auction, etc.)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accrualPolicy" />
+  <skos:altLabel xml:lang="en">Disposition</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Deaccession Approved by  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/deaccessionApprovedby">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">deaccessionApprovedby</reg:name>
+  <rdfs:label xml:lang="en">Deaccession Approved by </rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for approving deaccession of object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Deaccession Date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/deaccessionDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">deaccessionDate</reg:name>
+  <rdfs:label xml:lang="en">Deaccession Date</rdfs:label>
+  <skos:definition xml:lang="en">Date the object is approved for deaccession</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Deaccessioned by  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/deaccessionedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">deaccessionedBy</reg:name>
+  <rdfs:label xml:lang="en">Deaccessioned by </rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for the deaccession of object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Deaccession Proposed by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/deaccessionProposedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">deaccessionProposedBy</reg:name>
+  <rdfs:label xml:lang="en">Deaccession Proposed by</rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for proposing deaccession of object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Depth -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/depth">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">depth</reg:name>
+  <rdfs:label xml:lang="en">Depth</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Description of Item -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/descriptionItem">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">descriptionItem</reg:name>
+  <rdfs:label xml:lang="en">Description of Item</rdfs:label>
+  <skos:definition xml:lang="en">Detailed survey of what the object looks like, materials it is made of, etc.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">Collation</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Designer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/designer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">designer</reg:name>
+  <rdfs:label xml:lang="en">Designer</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for the layout of an exhibition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Determiner -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/determiner">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">determiner</reg:name>
+  <rdfs:label xml:lang="en">Determiner</rdfs:label>
+  <skos:definition xml:lang="en">Person who identifies the species</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Determiner date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/determinerDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">determinerDate</reg:name>
+  <rdfs:label xml:lang="en">Determiner date</rdfs:label>
+  <skos:definition xml:lang="en">Date the species was identified</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Developer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/developer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">developer</reg:name>
+  <rdfs:label xml:lang="en">Developer</rdfs:label>
+  <skos:definition xml:lang="en">Entity responsible for writing code</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Diameter -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/diameter">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">diameter</reg:name>
+  <rdfs:label xml:lang="en">Diameter</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Dimension remarks -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dimensionRemarks">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dimensionRemarks</reg:name>
+  <rdfs:label xml:lang="en">Dimension remarks</rdfs:label>
+  <skos:definition xml:lang="en">Notes on dimensional analysis</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Dimensions -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/dimensions">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">dimensions</reg:name>
+  <rdfs:label xml:lang="en">Dimensions</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Disposal Date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/disposalDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">disposalDate</reg:name>
+  <rdfs:label xml:lang="en">Disposal Date</rdfs:label>
+  <skos:definition xml:lang="en">Date object was removed from museum's permanent collection</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Division -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/division">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">division</reg:name>
+  <rdfs:label xml:lang="en">Division</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/division" />
+</rdf:Description>
+
+<!-- Property: Domain -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/domain">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">domain</reg:name>
+  <rdfs:label xml:lang="en">Domain</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+  <skos:altLabel xml:lang="en">Superregnum, Superkingdom, Empire, Regio</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Donor -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/donor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">donor</reg:name>
+  <rdfs:label xml:lang="en">Donor</rdfs:label>
+  <skos:definition xml:lang="en">Name of the person or persons or entity that donated object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/provenance" />
+  <skos:altLabel xml:lang="en">Donation by</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Edition number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/editionNumber">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">editionNumber</reg:name>
+  <rdfs:label xml:lang="en">Edition number</rdfs:label>
+  <skos:definition xml:lang="en">The specific number within the total reproductions of an object (i.e., photolithography)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/isPartOf" />
+</rdf:Description>
+
+<!-- Property: Exhibition notes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/ehibitionNotes">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">ehibitionNotes</reg:name>
+  <rdfs:label xml:lang="en">Exhibition notes</rdfs:label>
+  <skos:definition xml:lang="en">Information about the exhibition not captured in other fields</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Elevation -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/elevation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">elevation</reg:name>
+  <rdfs:label xml:lang="en">Elevation</rdfs:label>
+  <skos:definition xml:lang="en">The geographical height at which an object is found</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Epifamily -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/epifamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">epifamily</reg:name>
+  <rdfs:label xml:lang="en">Epifamily</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/family" />
+</rdf:Description>
+
+<!-- Property: Period/era -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/era">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">era</reg:name>
+  <rdfs:label xml:lang="en">Period/era</rdfs:label>
+  <skos:definition xml:lang="en">Name of the time during which the object was made</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Excavated by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/excavatedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">excavatedBy</reg:name>
+  <rdfs:label xml:lang="en">Excavated by</rdfs:label>
+  <skos:definition xml:lang="en">Person who removed object from a dig</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Excavation date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/excavationDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">excavationDate</reg:name>
+  <rdfs:label xml:lang="en">Excavation date</rdfs:label>
+  <skos:definition xml:lang="en">Date object was excavated</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Exhibition Cost  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionCost">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionCost</reg:name>
+  <rdfs:label xml:lang="en">Exhibition Cost </rdfs:label>
+  <skos:definition xml:lang="en">Total cost of exhibit</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/FIN" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Exhibition end date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionEndDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionEndDate</reg:name>
+  <rdfs:label xml:lang="en">Exhibition end date</rdfs:label>
+  <skos:definition xml:lang="en">The date an exhibit closes</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Exhibition ID -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionID">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionID</reg:name>
+  <rdfs:label xml:lang="en">Exhibition ID</rdfs:label>
+  <skos:definition xml:lang="en">Identifer for the exhibition.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Exhibition preparation -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionPreparation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionPreparation</reg:name>
+  <rdfs:label xml:lang="en">Exhibition preparation</rdfs:label>
+  <skos:definition xml:lang="en">Information about getting the exhibition ready.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Exhibition start date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionStartDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionStartDate</reg:name>
+  <rdfs:label xml:lang="en">Exhibition start date</rdfs:label>
+  <skos:definition xml:lang="en">The date an exhibit opens</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Exhibition Status -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionStatus">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionStatus</reg:name>
+  <rdfs:label xml:lang="en">Exhibition Status</rdfs:label>
+  <skos:definition xml:lang="en">On exhibit, traveling, in preparation</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Exhibition title -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionTitle">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionTitle</reg:name>
+  <rdfs:label xml:lang="en">Exhibition title</rdfs:label>
+  <skos:definition xml:lang="en">The title of an exhibition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title" />
+</rdf:Description>
+
+<!-- Property: Exhibition Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/exhibitionType">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibitionType</reg:name>
+  <rdfs:label xml:lang="en">Exhibition Type</rdfs:label>
+  <skos:definition xml:lang="en">The nature of the exhibit</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Family -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/family">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">family</reg:name>
+  <rdfs:label xml:lang="en">Family</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/family" />
+</rdf:Description>
+
+<!-- Property: Field worker note -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/fieldWorkerNote">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">fieldWorkerNote</reg:name>
+  <rdfs:label xml:lang="en">Field worker note</rdfs:label>
+  <skos:definition xml:lang="en">Additional remarks on the object or location where the object was found, written by the person who found the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">Rob note</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Form -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/form">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">form</reg:name>
+  <rdfs:label xml:lang="en">Form</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Gallery Location -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/galleryLocation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">galleryLocation</reg:name>
+  <rdfs:label xml:lang="en">Gallery Location</rdfs:label>
+  <skos:definition xml:lang="en">Location within gallery where object should be located when not on loan or in storage (different from city location). </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Genre -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/genre">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">genre</reg:name>
+  <rdfs:label xml:lang="en">Genre</rdfs:label>
+  <skos:definition xml:lang="en">Category of literature or art or culture, based on some set of stylistic criteria</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Genus -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/genus">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">genus</reg:name>
+  <rdfs:label xml:lang="en">Genus</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/genus" />
+</rdf:Description>
+
+<!-- Property: Geo-cultural area -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/geoculturalArea">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">geoculturalArea</reg:name>
+  <rdfs:label xml:lang="en">Geo-cultural area</rdfs:label>
+  <skos:definition xml:lang="en">Name that identifies both location and culture of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Habitat -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/habitat">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">habitat</reg:name>
+  <rdfs:label xml:lang="en">Habitat</rdfs:label>
+  <skos:definition xml:lang="en">The ecological or environmental area that is inhabited by a particular species</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Handling Requirements (rights and ethics) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/handlingRequirements">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">handlingRequirements</reg:name>
+  <rdfs:label xml:lang="en">Handling Requirements (rights and ethics)</rdfs:label>
+  <skos:definition xml:lang="en">Notation on ethical and legal concerns traditional cultural practices</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accessRights" />
+</rdf:Description>
+
+<!-- Property: Handling Requirements (condition) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/handlingRequirementscondition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">handlingRequirementscondition</reg:name>
+  <rdfs:label xml:lang="en">Handling Requirements (condition)</rdfs:label>
+  <skos:definition xml:lang="en">Notation on the handling of an object.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CON" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Height -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/height">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">height</reg:name>
+  <rdfs:label xml:lang="en">Height</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Identified by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/identifiedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">identifiedBy</reg:name>
+  <rdfs:label xml:lang="en">Identified by</rdfs:label>
+  <skos:definition xml:lang="en">Person who determines the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Identified date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/identifiedDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">identifiedDate</reg:name>
+  <rdfs:label xml:lang="en">Identified date</rdfs:label>
+  <skos:definition xml:lang="en">Date the object's type or purpose was determined</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+  <skos:altLabel xml:lang="en">ID date</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Image(s) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/images">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">images</reg:name>
+  <rdfs:label xml:lang="en">Image(s)</rdfs:label>
+  <skos:definition xml:lang="en">Photographic Reproduction</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/formatOf" />
+  <skos:altLabel xml:lang="en">Photographed</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Infraorder -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/Infraorder">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Infraorder</reg:name>
+  <rdfs:label xml:lang="en">Infraorder</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/order" />
+</rdf:Description>
+
+<!-- Property: Inscriptions -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/inscriptions">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">inscriptions</reg:name>
+  <rdfs:label xml:lang="en">Inscriptions</rdfs:label>
+  <skos:definition xml:lang="en">By owners, institutions or entities</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/MAR" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Insurer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/insurer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">insurer</reg:name>
+  <rdfs:label xml:lang="en">Insurer</rdfs:label>
+  <skos:definition xml:lang="en">Entity responsible for insurance of object when on loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Inventory Date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/inventoryDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">inventoryDate</reg:name>
+  <rdfs:label xml:lang="en">Inventory Date</rdfs:label>
+  <skos:definition xml:lang="en">Date object's location was last recorded in an inventory</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Kingdom -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/kingdom">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">kingdom</reg:name>
+  <rdfs:label xml:lang="en">Kingdom</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/kingdom" />
+</rdf:Description>
+
+<!-- Property: Label notes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/labelNotes">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">labelNotes</reg:name>
+  <rdfs:label xml:lang="en">Label notes</rdfs:label>
+  <skos:definition xml:lang="en">Additional remarks on an object tag or label</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Latitude Degree -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/latitudeDegree">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">latitudeDegree</reg:name>
+  <rdfs:label xml:lang="en">Latitude Degree</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Latitude Minute -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/latitudeMinute">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">latitudeMinute</reg:name>
+  <rdfs:label xml:lang="en">Latitude Minute</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Latitude Second -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/latitudeSecond">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">latitudeSecond</reg:name>
+  <rdfs:label xml:lang="en">Latitude Second</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Latitude (y coord) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/latitudeYCoord">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">latitudeYCoord</reg:name>
+  <rdfs:label xml:lang="en">Latitude (y coord)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Length -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/length">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">length</reg:name>
+  <rdfs:label xml:lang="en">Length</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: List of Exhibitions -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/listExhibitions">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">listExhibitions</reg:name>
+  <rdfs:label xml:lang="en">List of Exhibitions</rdfs:label>
+  <skos:definition xml:lang="en">List of exhibitions the object has been showcased in</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/provenance" />
+</rdf:Description>
+
+<!-- Property: Loan Approved -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanApproved">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanApproved</reg:name>
+  <rdfs:label xml:lang="en">Loan Approved</rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for grant permission for the loan to occur</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Loan end date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanEndDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanEndDate</reg:name>
+  <rdfs:label xml:lang="en">Loan end date</rdfs:label>
+  <skos:definition xml:lang="en">The date a loan ends</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Loan notes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanNotes">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanNotes</reg:name>
+  <rdfs:label xml:lang="en">Loan notes</rdfs:label>
+  <skos:definition xml:lang="en">Information on loans not captured in other fields</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">Loan memo</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Loan number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanNumber">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanNumber</reg:name>
+  <rdfs:label xml:lang="en">Loan number</rdfs:label>
+  <skos:definition xml:lang="en">A temporary number assigned to an object when it is on loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/IDE" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: Loan Person -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanPerson">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanPerson</reg:name>
+  <rdfs:label xml:lang="en">Loan Person</rdfs:label>
+  <skos:definition xml:lang="en">Contact person responsible for the loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Loan start date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanStartDate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanStartDate</reg:name>
+  <rdfs:label xml:lang="en">Loan start date</rdfs:label>
+  <skos:definition xml:lang="en">The date a loan begins</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Loan Status -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanStatus">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanStatus</reg:name>
+  <rdfs:label xml:lang="en">Loan Status</rdfs:label>
+  <skos:definition xml:lang="en">On loan, traveling, or in locus, in preparation</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Loan Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/loanType">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">loanType</reg:name>
+  <rdfs:label xml:lang="en">Loan Type</rdfs:label>
+  <skos:definition xml:lang="en">The nature of the loan </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Location Date (exhibition) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationDateExhibition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationDateExhibition</reg:name>
+  <rdfs:label xml:lang="en">Location Date (exhibition)</rdfs:label>
+  <skos:definition xml:lang="en">Date related to when object is on exhibition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Location Date (loan) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationDateLoan">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationDateLoan</reg:name>
+  <rdfs:label xml:lang="en">Location Date (loan)</rdfs:label>
+  <skos:definition xml:lang="en">Date related to when object is on loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Location Date (storage) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationDateStorage">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationDateStorage</reg:name>
+  <rdfs:label xml:lang="en">Location Date (storage)</rdfs:label>
+  <skos:definition xml:lang="en">Date related to when object is in storage</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Location History -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationHistory">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationHistory</reg:name>
+  <rdfs:label xml:lang="en">Location History</rdfs:label>
+  <skos:definition xml:lang="en">History of object's location</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Location of Origin  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationOrigin">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationOrigin</reg:name>
+  <rdfs:label xml:lang="en">Location of Origin </rdfs:label>
+  <skos:definition xml:lang="en">The location of where a object is created</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+  <skos:altLabel xml:lang="en">Camp Name and Location</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Location specimen found -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/locationSpecimenFound">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">locationSpecimenFound</reg:name>
+  <rdfs:label xml:lang="en">Location specimen found</rdfs:label>
+  <skos:definition xml:lang="en">The location of where a particular species is collected.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Longitude Degree -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/longitudeDegree">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">longitudeDegree</reg:name>
+  <rdfs:label xml:lang="en">Longitude Degree</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Longitude Minute -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/longitudeMinute">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">longitudeMinute</reg:name>
+  <rdfs:label xml:lang="en">Longitude Minute</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Longitude Second -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/longitudeSecond">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">longitudeSecond</reg:name>
+  <rdfs:label xml:lang="en">Longitude Second</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Longitude (x coord) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/longitudeXCoord">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">longitudeXCoord</reg:name>
+  <rdfs:label xml:lang="en">Longitude (x coord)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Manager -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/manager">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">manager</reg:name>
+  <rdfs:label xml:lang="en">Manager</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for the logistics of the exhibition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Manufacturer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/manufacturer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">manufacturer</reg:name>
+  <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+  <skos:definition xml:lang="en">Entity responsible for the mass production of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+  <skos:altLabel xml:lang="en">Maker; Edition Printer; Processor</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Markings -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/markings">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">markings</reg:name>
+  <rdfs:label xml:lang="en">Markings</rdfs:label>
+  <skos:definition xml:lang="en">Inscriptions on the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/MAR" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Materials -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/materials">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">materials</reg:name>
+  <rdfs:label xml:lang="en">Materials</rdfs:label>
+  <skos:definition xml:lang="en">Materials used in the object's fabrication</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/format" />
+  <skos:altLabel xml:lang="en">Specifications</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Medium -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/medium">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">medium</reg:name>
+  <rdfs:label xml:lang="en">Medium</rdfs:label>
+  <skos:definition xml:lang="en">Work type, used specifically in an art domain (e.g., Sculpture, Paintings)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/medium" />
+  <skos:altLabel xml:lang="en">Media</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Museum collector (staff) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/museumCollectorStaff">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">museumCollectorStaff</reg:name>
+  <rdfs:label xml:lang="en">Museum collector (staff)</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for field collection</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Notes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/notes">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">notes</reg:name>
+  <rdfs:label xml:lang="en">Notes</rdfs:label>
+  <skos:definition xml:lang="en">Additional remarks</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">Production note</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Notes on Condition -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/notesCondition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">notesCondition</reg:name>
+  <rdfs:label xml:lang="en">Notes on Condition</rdfs:label>
+  <skos:definition xml:lang="en">Additional remarks on the condition of an object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Notes-Process -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/notesProcess">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">notesProcess</reg:name>
+  <rdfs:label xml:lang="en">Notes-Process</rdfs:label>
+  <skos:definition xml:lang="en">Notes about the cultural or natural process of creation</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Date of Notice in Federal Registrar -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/noticeFederalRegistrar">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">noticeFederalRegistrar</reg:name>
+  <rdfs:label xml:lang="en">Date of Notice in Federal Registrar</rdfs:label>
+  <skos:definition xml:lang="en">Date object was posted to NAGPRA Federal Registrar</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: Object name -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/objectName">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">objectName</reg:name>
+  <rdfs:label xml:lang="en">Object name</rdfs:label>
+  <skos:definition xml:lang="en">Object name given by the museum</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title" />
+</rdf:Description>
+
+<!-- Property: Object Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/objectType">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">objectType</reg:name>
+  <rdfs:label xml:lang="en">Object Type</rdfs:label>
+  <skos:definition xml:lang="en">Supercategory of an object as defined by the chosen nomenclature</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Order -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/order">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">order</reg:name>
+  <rdfs:label xml:lang="en">Order</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/order" />
+</rdf:Description>
+
+<!-- Property: Packer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/packer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">packer</reg:name>
+  <rdfs:label xml:lang="en">Packer</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for crating object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Part measured -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/partMeasured">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">partMeasured</reg:name>
+  <rdfs:label xml:lang="en">Part measured</rdfs:label>
+  <skos:definition xml:lang="en">Dimensions of the sections an object can be separated into</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Parts -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/parts">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">parts</reg:name>
+  <rdfs:label xml:lang="en">Parts</rdfs:label>
+  <skos:definition xml:lang="en">List of sections the object can be separated into</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/hasPart" />
+</rdf:Description>
+
+<!-- Property: Phylum -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/phylum">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">phylum</reg:name>
+  <rdfs:label xml:lang="en">Phylum</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/phylum" />
+</rdf:Description>
+
+<!-- Property: Policy -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/policy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">policy</reg:name>
+  <rdfs:label xml:lang="en">Policy</rdfs:label>
+  <skos:definition xml:lang="en">Insurance package for loaned object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/FIN" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/requires" />
+</rdf:Description>
+
+<!-- Property: Prep by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/prepBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">prepBy</reg:name>
+  <rdfs:label xml:lang="en">Prep by</rdfs:label>
+  <skos:definition xml:lang="en">Person responsible for the fabrication of the exhibit.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Printer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/printer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">printer</reg:name>
+  <rdfs:label xml:lang="en">Printer</rdfs:label>
+  <skos:definition xml:lang="en">Entity responsible for physical manifestation of work</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor (publisher???)" />
+  <skos:altLabel xml:lang="en">Maker-Supervisory Printer; Maker-Proofer</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Production place -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/productionPlace">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">productionPlace</reg:name>
+  <rdfs:label xml:lang="en">Production place</rdfs:label>
+  <skos:definition xml:lang="en">Location where a object is made, in the context of reproduction</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Proposed by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/proposedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">proposedBy</reg:name>
+  <rdfs:label xml:lang="en">Proposed by</rdfs:label>
+  <skos:definition xml:lang="en">Museum staff responsible for proposing the acquisition of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Provenance -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/provenance">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">provenance</reg:name>
+  <rdfs:label xml:lang="en">Provenance</rdfs:label>
+  <skos:definition xml:lang="en">List of entities who have owned the object and also locations where the object has been exhibited</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVA" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/provenance" />
+</rdf:Description>
+
+<!-- Property: Provenience -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/provenience">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">provenience</reg:name>
+  <rdfs:label xml:lang="en">Provenience</rdfs:label>
+  <skos:definition xml:lang="en">Location where object was found, made or collected</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Publisher -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/publisher">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">publisher</reg:name>
+  <rdfs:label xml:lang="en">Publisher</rdfs:label>
+  <skos:definition xml:lang="en">Entity financially responsible for the creation of the work</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/publisher" />
+</rdf:Description>
+
+<!-- Property: Ratings -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/ratings">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">ratings</reg:name>
+  <rdfs:label xml:lang="en">Ratings</rdfs:label>
+  <skos:definition xml:lang="en">content information by approved organizations specifically used for interactive media</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Reason for deaccession -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/reasonDeaccession">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">reasonDeaccession</reg:name>
+  <rdfs:label xml:lang="en">Reason for deaccession</rdfs:label>
+  <skos:definition xml:lang="en">Ethical explanation for deaccession of an object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accrualPolicy" />
+</rdf:Description>
+
+<!-- Property: Received by -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/receivedBy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">receivedBy</reg:name>
+  <rdfs:label xml:lang="en">Received by</rdfs:label>
+  <skos:definition xml:lang="en">Museum staffer to physical accept object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: References (Bibliography) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/referencesBibliography">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">referencesBibliography</reg:name>
+  <rdfs:label xml:lang="en">References (Bibliography)</rdfs:label>
+  <skos:definition xml:lang="en">Link to sources that reference the object.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/bibliographicCitation" />
+  <skos:altLabel xml:lang="en">Description</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: References (Biography) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/referencesBiography">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">referencesBiography</reg:name>
+  <rdfs:label xml:lang="en">References (Biography)</rdfs:label>
+  <skos:definition xml:lang="en">Link to sources associated with the creator.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/BIO" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/bibliographicCitation" />
+</rdf:Description>
+
+<!-- Property: References-Map -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/referencesMap">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">referencesMap</reg:name>
+  <rdfs:label xml:lang="en">References-Map</rdfs:label>
+  <skos:definition xml:lang="en">map to object's location of origination</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Repatriation Notes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/repatriationNotes">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">repatriationNotes</reg:name>
+  <rdfs:label xml:lang="en">Repatriation Notes</rdfs:label>
+  <skos:definition xml:lang="en">Additional remarks involving the repatriation of an object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+  <skos:altLabel xml:lang="en">`</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Repatriation Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/repatriationType">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">repatriationType</reg:name>
+  <rdfs:label xml:lang="en">Repatriation Type</rdfs:label>
+  <skos:definition xml:lang="en">Legal reason to include an object for inclusion under NAGPRA</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/RIG" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/rights" />
+</rdf:Description>
+
+<!-- Property: Reproduction -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/reproduction">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">reproduction</reg:name>
+  <rdfs:label xml:lang="en">Reproduction</rdfs:label>
+  <skos:definition xml:lang="en">Notes on the rights the museum holds for the reproduction of an object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/NOT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/accessRights" />
+</rdf:Description>
+
+<!-- Property: School/style -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/school">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">school</reg:name>
+  <rdfs:label xml:lang="en">School/style</rdfs:label>
+  <skos:definition xml:lang="en">Names of art and architecture styles, historical periods, and art movements.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Section -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/section">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">section</reg:name>
+  <rdfs:label xml:lang="en">Section</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Series -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/series">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">series</reg:name>
+  <rdfs:label xml:lang="en">Series</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Sex -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/sex">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">sex</reg:name>
+  <rdfs:label xml:lang="en">Sex</rdfs:label>
+  <skos:definition xml:lang="en">The sex of the specimen</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="dcam:VocabularyEncodingScheme" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/type" />
+</rdf:Description>
+
+<!-- Property: Site/Site Number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/siteNumber">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">siteNumber</reg:name>
+  <rdfs:label xml:lang="en">Site/Site Number</rdfs:label>
+  <skos:definition xml:lang="en">Location identification for an archiological dig </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Size (frame) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/sizeFrame">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">sizeFrame</reg:name>
+  <rdfs:label xml:lang="en">Size (frame)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Size (motif) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/sizeMotif">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">sizeMotif</reg:name>
+  <rdfs:label xml:lang="en">Size (motif)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Size (paper) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/sizePaper">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">sizePaper</reg:name>
+  <rdfs:label xml:lang="en">Size (paper)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Special (Loan) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/specialLoan">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">specialLoan</reg:name>
+  <rdfs:label xml:lang="en">Special (Loan)</rdfs:label>
+  <skos:definition xml:lang="en">Specific instructions for the treatment of an object while on loan.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Species -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/species">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">species</reg:name>
+  <rdfs:label xml:lang="en">Species</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/species" />
+</rdf:Description>
+
+<!-- Property: Species Author -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/speciesAuthor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">speciesAuthor</reg:name>
+  <rdfs:label xml:lang="en">Species Author</rdfs:label>
+  <skos:definition xml:lang="en">Original determiner of the species' taxonomy </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/contributor" />
+</rdf:Description>
+
+<!-- Property: Storage Location -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/storageLocation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">storageLocation</reg:name>
+  <rdfs:label xml:lang="en">Storage Location</rdfs:label>
+  <skos:definition xml:lang="en">Location where object should reside when not on exhibit or loan</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/TGN" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Stretcher (size) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/stretcherSize">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">stretcherSize</reg:name>
+  <rdfs:label xml:lang="en">Stretcher (size)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Subclassis -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subclassis">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subclassis</reg:name>
+  <rdfs:label xml:lang="en">Subclassis</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/class" />
+</rdf:Description>
+
+<!-- Property: Subdiviso -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subdiviso">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subdiviso</reg:name>
+  <rdfs:label xml:lang="en">Subdiviso</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/phylum" />
+  <skos:altLabel xml:lang="en">Subphylum</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Subfamilia -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subfamilia">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subfamilia</reg:name>
+  <rdfs:label xml:lang="en">Subfamilia</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/family" />
+</rdf:Description>
+
+<!-- Property: Subfamily -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subfamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subfamily</reg:name>
+  <rdfs:label xml:lang="en">Subfamily</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/family" />
+</rdf:Description>
+
+<!-- Property: Subforma -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subforma">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subforma</reg:name>
+  <rdfs:label xml:lang="en">Subforma</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subgenus -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subgenus">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subgenus</reg:name>
+  <rdfs:label xml:lang="en">Subgenus</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/genus" />
+</rdf:Description>
+
+<!-- Property: Subjects -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subjects">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subjects</reg:name>
+  <rdfs:label xml:lang="en">Subjects</rdfs:label>
+  <skos:definition xml:lang="en">Significant characteristics of the object</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/subject" />
+</rdf:Description>
+
+<!-- Property: Suborder -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/suborder">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">suborder</reg:name>
+  <rdfs:label xml:lang="en">Suborder</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/order" />
+</rdf:Description>
+
+<!-- Property: Subordo -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subordo">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subordo</reg:name>
+  <rdfs:label xml:lang="en">Subordo</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/order" />
+</rdf:Description>
+
+<!-- Property: Subregnum -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subregnum">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subregnum</reg:name>
+  <rdfs:label xml:lang="en">Subregnum</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subsectio -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subsectio">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subsectio</reg:name>
+  <rdfs:label xml:lang="en">Subsectio</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subseries -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subseries">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subseries</reg:name>
+  <rdfs:label xml:lang="en">Subseries</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subspecies -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subspecies">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subspecies</reg:name>
+  <rdfs:label xml:lang="en">Subspecies</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/species" />
+</rdf:Description>
+
+<!-- Property: Subtribe -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subtribe">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subtribe</reg:name>
+  <rdfs:label xml:lang="en">Subtribe</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subtribus -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subtribus">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subtribus</reg:name>
+  <rdfs:label xml:lang="en">Subtribus</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Subvarietas -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/subvarietas">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">subvarietas</reg:name>
+  <rdfs:label xml:lang="en">Subvarietas</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Superfamily -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/superfamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">superfamily</reg:name>
+  <rdfs:label xml:lang="en">Superfamily</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/family" />
+</rdf:Description>
+
+<!-- Property: Support (Exhibition) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/supportExhibition">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">supportExhibition</reg:name>
+  <rdfs:label xml:lang="en">Support (Exhibition)</rdfs:label>
+  <skos:definition xml:lang="en">Description of what mounts the object uses when it is on display</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/related" />
+  <skos:altLabel xml:lang="en">Mount</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Support (Loan) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/supportLoan">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">supportLoan</reg:name>
+  <rdfs:label xml:lang="en">Support (Loan)</rdfs:label>
+  <skos:definition xml:lang="en">Description of what mounts the object uses when it is on loan.  This includes travel mounts and crates as well as exhibition mounts.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/related" />
+  <skos:altLabel xml:lang="en">Mount</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Support (Storage) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/supportStorage">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">supportStorage</reg:name>
+  <rdfs:label xml:lang="en">Support (Storage)</rdfs:label>
+  <skos:definition xml:lang="en">Description of what mounts or other storage method (e.g. boxes) the object uses when it is in storage</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/related" />
+  <skos:altLabel xml:lang="en">Mount</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: Technique -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/technique">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">technique</reg:name>
+  <rdfs:label xml:lang="en">Technique</rdfs:label>
+  <skos:definition xml:lang="en">Means of creation for cultural objects</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROC" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description" />
+</rdf:Description>
+
+<!-- Property: Title -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/Title">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Title</reg:name>
+  <rdfs:label xml:lang="en">Title</rdfs:label>
+  <skos:definition xml:lang="en">Object name given by the creator</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/TIT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title" />
+</rdf:Description>
+
+<!-- Property: Tribe (biology) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/tribeBiology">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tribeBiology</reg:name>
+  <rdfs:label xml:lang="en">Tribe (biology)</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Tribe (cultural group) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/tribeCulturalGroup">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tribeCulturalGroup</reg:name>
+  <rdfs:label xml:lang="en">Tribe (cultural group)</rdfs:label>
+  <skos:definition xml:lang="en">Band of indigenous people bound by culture</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PER" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/hasPart" />
+</rdf:Description>
+
+<!-- Property: Unit of measurement -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/unitMeasurement">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">unitMeasurement</reg:name>
+  <rdfs:label xml:lang="en">Unit of measurement</rdfs:label>
+  <skos:definition xml:lang="en">measurement standard; e.g., metric, United States customary units</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Updated -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/updated">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">updated</reg:name>
+  <rdfs:label xml:lang="en">Updated</rdfs:label>
+  <skos:definition xml:lang="en">The date the catalog record is most recently updated</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/DAT" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/W3CDTF" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/temporal" />
+</rdf:Description>
+
+<!-- Property: UTM Easting -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/utmEasting">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">utmEasting</reg:name>
+  <rdfs:label xml:lang="en">UTM Easting</rdfs:label>
+  <skos:definition xml:lang="en">Universal Transverse Mercator coordinate on horizontal axis.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: UTM Northing -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/utmNorthing">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">utmNorthing</reg:name>
+  <rdfs:label xml:lang="en">UTM Northing</rdfs:label>
+  <skos:definition xml:lang="en">Universal Transverse Mercator coordinate on vertical axis.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: UTM Zone -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/utmZone">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">utmZone</reg:name>
+  <rdfs:label xml:lang="en">UTM Zone</rdfs:label>
+  <skos:definition xml:lang="en">One of the 60 Universal Transverse Mercator Zones</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://purl.org/dc/terms/Point" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+<!-- Property: Variety -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/variety">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">variety</reg:name>
+  <rdfs:label xml:lang="en">Variety</rdfs:label>
+  <skos:definition xml:lang="en">A rank in the biological taxonomy</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/CAT" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/NET/biol/ns/rank" />
+</rdf:Description>
+
+<!-- Property: Weight -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/weight">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">weight</reg:name>
+  <rdfs:label xml:lang="en">Weight</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Width -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/width">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">width</reg:name>
+  <rdfs:label xml:lang="en">Width</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PHY" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/extent" />
+</rdf:Description>
+
+<!-- Property: Worldmap Format -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/musemeta/worldMapFormat">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/musemeta" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">worldMapFormat</reg:name>
+  <rdfs:label xml:lang="en">Worldmap Format</rdfs:label>
+  <skos:definition xml:lang="en">Implemented cartography theme</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://metadataregistry.org/uri/MuseMetaCategories/PROVI" />
+  <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/spatial" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

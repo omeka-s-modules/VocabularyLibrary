@@ -1,0 +1,441 @@
+_:B6452081e237941de0bfabae144f92a2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bab78d5b4fe969378cd08c98bddbba929 .
+_:B6452081e237941de0bfabae144f92a2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "SOUND" .
+_:Bc08f30068287505eb51df83c4b2c9eee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bc08f30068287505eb51df83c4b2c9eee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B5b88b48e62fa06f94e093173e74a26ec .
+_:Bea7f706c55df030a9810f97e3f1480f9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.europeana.eu/schemas/edm/happenedAt> .
+_:Bea7f706c55df030a9810f97e3f1480f9 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bea7f706c55df030a9810f97e3f1480f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B25dfeaaf1edb5cc5e0e703ce9e45ea37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B25dfeaaf1edb5cc5e0e703ce9e45ea37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bfb5664f84860b26379d5728ab49f76fb .
+_:B5bb3b2786999ec55692e4bdfa1fdfcc7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B797bea10a5b47ccd904b03b0b3369591 .
+_:B5bb3b2786999ec55692e4bdfa1fdfcc7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.openarchives.org/ore/terms/Proxy> .
+_:Bb5a3d2400d755606a4a64d0ff461464c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd337f9d9ad5f8e1452ce6ebd71098da5 .
+_:Bb5a3d2400d755606a4a64d0ff461464c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/Agent> .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2004/02/skos/core#definition> "Information about copyright of the digital object as specified by isShownBy\nand isShownAt"@en .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Rights"@en .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/landingPage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/landingPage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.openarchives.org/ore/terms/aggregates> .
+<http://www.europeana.eu/schemas/edm/landingPage> <http://www.w3.org/2004/02/skos/core#definition> "This property captures the relation between an aggregation representing a\nCultural Heritage Object and the Web Resource representing that Object on\nthe provider’s web site."@en .
+<http://www.europeana.eu/schemas/edm/landingPage> <http://www.w3.org/2000/01/rdf-schema#label> "Landing Page"@en .
+<http://www.europeana.eu/schemas/edm/landingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B97fc0e3bde4d21f3e91e4253f8bdb9f8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:B97fc0e3bde4d21f3e91e4253f8bdb9f8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.openarchives.org/ore/terms/proxyFor> .
+_:B97fc0e3bde4d21f3e91e4253f8bdb9f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/dc/terms/tableOfContents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasView> .
+_:B8168d64a78a7026f36f2558daa73b0fb <http://www.w3.org/2002/07/owl#unionOf> _:B754156a32987ee05d13e6c96f7bd4c9a .
+_:B8168d64a78a7026f36f2558daa73b0fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/isDerivativeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isSimilarTo> .
+<http://www.europeana.eu/schemas/edm/isDerivativeOf> <http://www.w3.org/2004/02/skos/core#definition> "This property captures a narrower notion of derivation than edm:isSimilarTo, in the sense that it relates a resource to another one, obtained by reworking, reducing, expanding, parts or the whole contents of the former, and possibly adding some minor parts. Versions have an even narrower meaning, in that it requires common identity between the related resources. Translations, summaries, abstractions etc. do not qualify as versions, but do qualify as derivatives."@en .
+<http://www.europeana.eu/schemas/edm/isDerivativeOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Derivative Of"@en .
+<http://www.europeana.eu/schemas/edm/isDerivativeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B97f4e3660b9edbdbdec9e3f96b71c1cd <http://www.w3.org/2002/07/owl#unionOf> _:Bf13c24e8f7ad0771099e4f0dd5e1c13b .
+_:B97f4e3660b9edbdbdec9e3f96b71c1cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Badc1e3175d62b446663f8d8da76a879b <http://www.w3.org/2002/07/owl#unionOf> _:B5ddd2261d2d3a8bf4e47761ba8ce821b .
+_:Badc1e3175d62b446663f8d8da76a879b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bfb5664f84860b26379d5728ab49f76fb <http://www.w3.org/2002/07/owl#intersectionOf> _:B5bb3b2786999ec55692e4bdfa1fdfcc7 .
+_:Bfb5664f84860b26379d5728ab49f76fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B958d645399c9150bc32650339e8c4660 <http://www.w3.org/2002/07/owl#intersectionOf> _:B39c83c44e79360b7faa34ee7b4f3ef87 .
+_:B958d645399c9150bc32650339e8c4660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/Place> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8168d64a78a7026f36f2558daa73b0fb .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P55F.has_current_location> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/spatial> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2004/02/skos/core#definition> "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource."@en .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Current Location"@en .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B451dcd4d869b96f5fb38547662814c17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0fd4c2f0cea7269ff7ef246259794cd3 .
+_:B451dcd4d869b96f5fb38547662814c17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/Agent> .
+_:B22bcfab652ffefc940639ec1f77a72ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B22bcfab652ffefc940639ec1f77a72ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bc4cc1170aafbfec0afa41dfe845a9222 .
+_:Be24b7db601efdb41167747bf1dbd6b61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B6452081e237941de0bfabae144f92a2d .
+_:Be24b7db601efdb41167747bf1dbd6b61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "IMAGE" .
+_:Bd8177a839568f9678ea0309ce2004165 <http://www.w3.org/2002/07/owl#unionOf> _:B5e2a8b87913b1e9a3288f2a3a8b5649c .
+_:Bd8177a839568f9678ea0309ce2004165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bbfe25eff8d8eca39cf518eed02db6ac3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bbfe25eff8d8eca39cf518eed02db6ac3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "TRUE" .
+_:Bd6c11d56efb4ab1c2baedf7f5455af08 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B9ccd092ccc33431762eec31c046fcc8c .
+_:Bd6c11d56efb4ab1c2baedf7f5455af08 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2004/02/skos/core#scopeNote> "Rationale: This class is a domain of edm:wasPresentAt" .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E39.Actor> .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2004/02/skos/core#example> "Leonardo da Vinci, the British Museum, W3C" .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2004/02/skos/core#definition> "This class comprises people, either individually or in groups, who have the\npotential to perform intentional actions for which they can be held responsible." .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+<http://www.europeana.eu/schemas/edm/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasType> .
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bf7d9a7ca06b360a5208cd1471facb968 .
+<http://purl.org/dc/elements/1.1/subject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isRelatedTo> .
+_:B34852e5f2f97389edd3a02edd6c0900a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B34852e5f2f97389edd3a02edd6c0900a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/PhysicalThing> .
+_:B9ccd092ccc33431762eec31c046fcc8c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B215714d4aa4c90067373a8362068ae4e .
+_:B9ccd092ccc33431762eec31c046fcc8c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://www.europeana.eu/schemas/edm/object> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/object> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasView> .
+<http://www.europeana.eu/schemas/edm/object> <http://www.w3.org/2004/02/skos/core#definition> "The URL of a thumbnail representing the digital object or, if there is no such\nthumbnail, the URL of the digital object in the best resolution available on the\nweb site of the data provider from which a thumbnail could be generated. This will often be the same URL as given in edm:isShownBy."@en .
+<http://www.europeana.eu/schemas/edm/object> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
+<http://www.europeana.eu/schemas/edm/object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B4aa23c9a39cf240ba51fcea818128590 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.europeana.eu/schemas/edm/aggregatedCHO> .
+_:B4aa23c9a39cf240ba51fcea818128590 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasType> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+<http://www.europeana.eu/schemas/edm/NonInformationResource> <http://www.w3.org/2002/07/owl#complementOf> <http://www.europeana.eu/schemas/edm/InformationResource> .
+<http://www.europeana.eu/schemas/edm/NonInformationResource> <http://www.w3.org/2004/02/skos/core#definition> "All resources that are not information resources."@en .
+<http://www.europeana.eu/schemas/edm/NonInformationResource> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Information Resource"@en .
+<http://www.europeana.eu/schemas/edm/NonInformationResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/userTag> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://www.europeana.eu/schemas/edm/userTag> <http://www.w3.org/2004/02/skos/core#definition> "This is a tag created by a user through the Europeana interface."@en .
+<http://www.europeana.eu/schemas/edm/userTag> <http://www.w3.org/2000/01/rdf-schema#label> "User Tag"@en .
+<http://www.europeana.eu/schemas/edm/userTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/Event> .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0f6974d9b1fd469568cd5ec25646e975 .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P12B.was_present_at> .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2004/02/skos/core#definition> "This property associates the people, things or information resources with an event at which they were present"@en .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/2000/01/rdf-schema#label> "Was Present At"@en .
+<http://www.europeana.eu/schemas/edm/wasPresentAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/provider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/Agent> .
+<http://www.europeana.eu/schemas/edm/provider> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+<http://www.europeana.eu/schemas/edm/provider> <http://www.w3.org/2004/02/skos/core#definition> "Name of the organization that delivers data to Europeana"@en .
+<http://www.europeana.eu/schemas/edm/provider> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Provider"@en .
+<http://www.europeana.eu/schemas/edm/provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:Bad92fdcbda1eb089a4ee3fbe7e1e0708 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+_:Bad92fdcbda1eb089a4ee3fbe7e1e0708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bad92fdcbda1eb089a4ee3fbe7e1e0708 .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasType> .
+<http://www.europeana.eu/schemas/edm/language> <http://www.w3.org/2000/01/rdf-schema#comment> "The recommended best practice is to use a controlled vocabulary such as\nRFC 4646 (http://www.rfc-archive.org/getrfc.php?rfc=4646) which, in\nconjunction with ISO 639, defines two- and three-letter primary language tags. Either a coded value or text string can be represented here."@en .
+<http://www.europeana.eu/schemas/edm/language> <http://www.w3.org/2004/02/skos/core#definition> "A language assigned to the resource with reference to the Provider."@en .
+<http://www.europeana.eu/schemas/edm/language> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Language"@en .
+<http://www.europeana.eu/schemas/edm/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:Bab78d5b4fe969378cd08c98bddbba929 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B489cceea6f8aed970a41c16b1ab0dc76 .
+_:Bab78d5b4fe969378cd08c98bddbba929 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "VIDEO" .
+_:Bbf8f40fe298cc73da7543c54d782b4f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bbf8f40fe298cc73da7543c54d782b4f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B97fc0e3bde4d21f3e91e4253f8bdb9f8 .
+_:B215714d4aa4c90067373a8362068ae4e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B215714d4aa4c90067373a8362068ae4e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://www.europeana.eu/schemas/edm/isShownAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/isShownAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasView> .
+<http://www.europeana.eu/schemas/edm/isShownAt> <http://www.w3.org/2004/02/skos/core#definition> "An unambiguous URL reference to the digital object on the provider’s web site in its full information context."@en .
+<http://www.europeana.eu/schemas/edm/isShownAt> <http://www.w3.org/2000/01/rdf-schema#label> "Is Shown At"@en .
+<http://www.europeana.eu/schemas/edm/isShownAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/isNextInSequence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/isNextInSequence> <http://www.w3.org/2004/02/skos/core#definition> "edm:isNextInSequence relates two resources S and R that are ordered parts of the same resource A, and such that R comes immediately after R in the order created by their being parts of S."@en .
+<http://www.europeana.eu/schemas/edm/isNextInSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Is Next In Sequence Of"@en .
+<http://www.europeana.eu/schemas/edm/isNextInSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B317209fe224edaec4fa1a195b366d617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B317209fe224edaec4fa1a195b366d617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B958d645399c9150bc32650339e8c4660 .
+_:Bf9f20fb0531073bff9cabb32e94b250a <http://www.w3.org/2002/07/owl#oneOf> _:B7c7d0910c81f644e447647292236c98d .
+_:Bf9f20fb0531073bff9cabb32e94b250a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:B007ce5ae95185330c0a1bae92b234426 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B22bcfab652ffefc940639ec1f77a72ce .
+_:B007ce5ae95185330c0a1bae92b234426 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.openarchives.org/ore/terms/Proxy> .
+_:Bc9989a1a685aa5656cef49771375f9b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B57631e236f447e89c25c4323ea93a3e0 .
+_:Bc9989a1a685aa5656cef49771375f9b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/Agent> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P129F.is_about> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.openarchives.org/ore/terms/aggregates> .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2004/02/skos/core#definition> "This property associates an ORE aggregation with the Cultural Heritage\nObject(s) (CHO for short) it is about."@en .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregated Cultural Heritage Object"@en .
+<http://www.europeana.eu/schemas/edm/aggregatedCHO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/year> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/temporal> .
+<http://www.europeana.eu/schemas/edm/year> <http://www.w3.org/2004/02/skos/core#definition> "A point of time associated with an event in the life of the original analog or\nborn digital object."@en .
+<http://www.europeana.eu/schemas/edm/year> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Year"@en .
+<http://www.europeana.eu/schemas/edm/year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B56230c8301d3ef1d7e20e295a9adf6fc <http://www.w3.org/2002/07/owl#intersectionOf> _:B5b02d6409f6f35a0afbdb526c65b39ba .
+_:B56230c8301d3ef1d7e20e295a9adf6fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5ddd2261d2d3a8bf4e47761ba8ce821b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B317209fe224edaec4fa1a195b366d617 .
+_:B5ddd2261d2d3a8bf4e47761ba8ce821b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+_:Bf7d9a7ca06b360a5208cd1471facb968 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+_:Bf7d9a7ca06b360a5208cd1471facb968 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+_:B69b67203a73189965561fc01fa91b9ad <http://www.w3.org/2002/07/owl#unionOf> _:Bd6c11d56efb4ab1c2baedf7f5455af08 .
+_:B69b67203a73189965561fc01fa91b9ad <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/Agent> .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/provenance> .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/2004/02/skos/core#definition> "This element is specifically included to allow the name of the organisation who supplies data to Europeana indirectly via an aggregator to be recorded and displayed in the portal. Aggregator names are recorded in edm:provider. If an organisation provides data directly to Europeana (i.e. not via an aggregator) the values in edm:dataProvider and edm:provider will be the same. Organisation names should be provided as an ordinary text string until the Europeana Authority File for Organisations has been established. At that point providers will be able to send an identifier from the file instead of a text string. The name provided should be the preferred form of the name in the language the provider chooses as the default language for display in the portal. Countries with multiple languages may prefer to concatenate the name in more than one language (See the example below.) Note: Europeana Data Provider is not necessarily the institution where the physical object is located."@en .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Data Provider"@en .
+<http://www.europeana.eu/schemas/edm/dataProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B6ba872ecbefed645e26274f03dcdf288 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+_:B6ba872ecbefed645e26274f03dcdf288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B7736d172560c36252a97969ac35806d4 <http://www.w3.org/2002/07/owl#oneOf> _:Bbfe25eff8d8eca39cf518eed02db6ac3 .
+_:B7736d172560c36252a97969ac35806d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/TimeSpan> .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.europeana.eu/schemas/edm/Event> .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P4F.has_time-span> .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2004/02/skos/core#definition> "This property associates an event to the smallest known time span that\noverlaps with the occurrence of that event"@en .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/2000/01/rdf-schema#label> "Occured At"@en .
+<http://www.europeana.eu/schemas/edm/occurredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd8177a839568f9678ea0309ce2004165 .
+<http://www.europeana.eu/schemas/edm/isRelatedTo> <http://www.w3.org/2004/02/skos/core#definition> "edm:isRelatedTo is the most general contextual property in EDM. Contextual\nproperties have typically to do either with the things that have happened to or together with the object under consideration, or what the object refers to by its shape, form or features in a figural or encoded form. For sake of simplicity, we include in the contextual relationships also the scholarly classification, which may have either to do with the role and cultural connections of the object in the past, or its kind of structure, substance or contents as it can be verified at present."@en .
+<http://www.europeana.eu/schemas/edm/isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "Is Related To"@en .
+<http://www.europeana.eu/schemas/edm/isRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> _:Badc1e3175d62b446663f8d8da76a879b .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P2F.has_type> .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isRelatedTo> .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2004/02/skos/core#definition> "This property relates a resource with the concepts it belongs to in a suitable\ntype system such as MIME or any thesaurus that captures categories of objects in a given field (e.g., the “Objects” facet in Getty’s Art and Architecture Thesaurus). It does not capture aboutness."@en .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/2000/01/rdf-schema#label> "Has Type"@en .
+<http://www.europeana.eu/schemas/edm/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/uri> <http://www.w3.org/2004/02/skos/core#definition> "This is a tag created by a user through the Europeana interface."@en .
+<http://www.europeana.eu/schemas/edm/uri> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana URI"@en .
+<http://www.europeana.eu/schemas/edm/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B6ba872ecbefed645e26274f03dcdf288 .
+<http://www.europeana.eu/schemas/edm/preview> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/preview> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasView> .
+<http://www.europeana.eu/schemas/edm/preview> <http://www.w3.org/2004/02/skos/core#definition> "The URL of a thumbnail representing the digital object, generated by Europeana."@en .
+<http://www.europeana.eu/schemas/edm/preview> <http://www.w3.org/2000/01/rdf-schema#label> "Preview"@en .
+<http://www.europeana.eu/schemas/edm/preview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B7c7d0910c81f644e447647292236c98d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Be24b7db601efdb41167747bf1dbd6b61 .
+_:B7c7d0910c81f644e447647292236c98d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "TEXT" .
+<http://www.europeana.eu/schemas/edm/ugc> <http://www.w3.org/2000/01/rdf-schema#range> _:B7736d172560c36252a97969ac35806d4 .
+<http://www.europeana.eu/schemas/edm/ugc> <http://www.w3.org/2004/02/skos/core#definition> "This element is used to identify user generated content (also called user created content).  It should be applied to all digitised or born digital content contributed by the general public and collected by Europeana through a crowdsourcing initiative or project."@en .
+<http://www.europeana.eu/schemas/edm/ugc> <http://www.w3.org/2000/01/rdf-schema#label> "UGC"@en .
+<http://www.europeana.eu/schemas/edm/ugc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.europeana.eu/schemas/edm/" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/creator> "Antoine Isaac" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocab/vann/changes> "=======\nChanges between EDM-v524-120820.owl\nand EDM-v523-120123.owl\n=======\n1. edm:isShownAt made a sub-property of edm:hasView\n2. added edm:begin and edm:end and their mappings to CRM\n3. added owl:Class declarations added for compatibility with some OWL-DL reasoners (feedback from Pedro Szekely, ISI)\n4. added \"of\" at the end of the label for edm:isNextInSequence\n5. added vocabulary metadata to follow Linked Open Vocabularies guidelines (http://lov.okfn.org/)"@en .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Participants of Europeana Version 1.0 Work Package on Further Specification of Functionality and Interoperability aspects of Europeana (WP3)" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/title> "Europeana Data Model (EDM) vocabulary"@en .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/2000/01/rdf-schema#comment> "The present specification is based on the document \"Definition of the Europeana Data Model elements\", originally edited by Carlo Meghini. It is aligned with the version 5.2.4 of these EDM Definitions."@en .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocab/vann/example> <http://data.europeana.eu> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocommons/voaf#toDoList> "=======\nRemaining TODOs for EDM-v524-120820.owl\n=======\n- change FRBR namespace and mappings using FRBRoo namespace or http://metadataregistry.org/schema/show/id/5.html\n- add Martin's mapping to FRBR(oo) for edm:incorporates (equivalent to crm:R14F.incorporates) and edm:WebResource (subclass of F24 Publication Expression)\n- try to capture formal cardinality constraints resulting from \"Obligation and Occurrence\" documentation, which should be attached to non-EDM constructs (esp. ore:Aggregation)\n- continue adding documentation values (skos:scopeNote, skos:example, etc, according to 1.), starting from edm:InformationResource. Add all Europeana examples and rationale notes for non-EDM constructs\n- use specific EDM-doc properties for \"rationale\" and \"obligation and occurrence\". Use skos:definition for \"Europeana definition\", skos:example for \"Example\", skos:note for \"Europeana note\""@en .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Julia Iwanowa" .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://europeanalabs.eu/wiki/EDMPrototypingTask11> .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.4" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/modified> "2012-08-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocab/vann/example> <http://pro.europeana.eu/case-studies-edm> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Nasos Drosopoulos" .
+<http://www.europeana.eu/schemas/edm/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://pro.europeana.eu/edm-documentation> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edm" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Vassilis Tzouvaras" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/issued> "2010-03-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Hugo Borbinhas" .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/description> "The Europeana Data Model (EDM) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM (as opposed to the ones EDM re-uses from other namespaces)."@en .
+<http://www.europeana.eu/schemas/edm/> <http://purl.org/dc/elements/1.1/contributor> "Martin Doerr" .
+_:B8546050f93b21a39fe23ca3ac0bacbfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba06acf4d83ae22adaaabfe7bb60b2c18 .
+_:B8546050f93b21a39fe23ca3ac0bacbfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.openarchives.org/ore/terms/Proxy> .
+_:B0fd4c2f0cea7269ff7ef246259794cd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B0fd4c2f0cea7269ff7ef246259794cd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/TimeSpan> .
+_:B57631e236f447e89c25c4323ea93a3e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B57631e236f447e89c25c4323ea93a3e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/TimeSpan> .
+_:Bcb1f6a586c5097bcda7581beb99407f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B92b14d0d66c1977d0eca4850ffc66fcc .
+_:Bcb1f6a586c5097bcda7581beb99407f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+<http://www.europeana.eu/schemas/edm/incorporates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isSimilarTo> .
+<http://www.europeana.eu/schemas/edm/incorporates> <http://www.w3.org/2004/02/skos/core#definition> "This property captures the use of some resource to add value to another\nresource. Such resources may be nested, such as performing a theater play text, and then recording the performance, or creating an artful edition of a collection of poems or just aggregating various poems in an anthology. There may be no single part that contains ultimately the incorporated object, which may be dispersed in the presentation. Therefore, incorporated resources do in general not form proper parts. Incorporated resources are not part of the same resource, but are taken from other resources, and have an independent history. Therefore edm:incorporates is not a sub-property of dcterm:hasPart."@en .
+<http://www.europeana.eu/schemas/edm/incorporates> <http://www.w3.org/2000/01/rdf-schema#label> "Incorporates"@en .
+<http://www.europeana.eu/schemas/edm/incorporates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B51bb165869d7666f701952f3d20a1873 <http://www.w3.org/2002/07/owl#onProperty> _:B4aa23c9a39cf240ba51fcea818128590 .
+_:B51bb165869d7666f701952f3d20a1873 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B51bb165869d7666f701952f3d20a1873 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/vocab/frbr/core#Place> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E53.Place> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2002/07/owl#equivalentClass> <http://metadata.net/harmony/abc#Place> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2004/02/skos/core#definition> "An \"extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter\" (CIDOC CRM)"@en .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+<http://www.europeana.eu/schemas/edm/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B7a2ccfc5043b42b892ae747243b45682 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:B7a2ccfc5043b42b892ae747243b45682 <http://www.w3.org/2002/07/owl#onProperty> <http://www.openarchives.org/ore/terms/proxyFor> .
+_:B7a2ccfc5043b42b892ae747243b45682 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#example> "The 56th issue of \"Le Temps\" is a (different) Cultural Heritage Object represented in Europeana by another EuropeanaAggregation instance"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/EuropeanaObject> .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#note> "An instance of EuropeanaAggregation is created at ingestion time for each different Cultural Heritage Object recognized by Europeana. Such instance is associated to the Cultural Heritage Object that it is about, by the property edm:aggregatedCHO"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#scopeNote> "Rationale: This class is used in Europeana to gather in a single conceptual unit all the information about a Cultural Heritage Object, necessary for all operations on these objects."@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#scopeNote> "Obligation and Occurence: The relation between the Cultural Heritage Objects represented in Europeana and the instances of the class EuropeanaAggregation is one-to-one, in the data maintained by Europeana: every Cultural Heritage Object is represented by an instance of EuropeanaAggregation, and every instance of EuropeanaAggregation represent a Cultural Heritage Object."@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B67e88e7247fe29118346a291d5886e87 .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#definition> "The set of resources related to a single Cultural Heritage Object that\ncollectively represent that object in Europeana. Such set consists of: all\ndescriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds." .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#example> "The painting Mona Lisa is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2004/02/skos/core#example> "The journal \"Le Temps\" is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.openarchives.org/ore/terms/Aggregation> .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Aggregation" .
+<http://www.europeana.eu/schemas/edm/EuropeanaAggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B849561bef709002115dd4262725962f8 <http://www.w3.org/2002/07/owl#intersectionOf> _:B8546050f93b21a39fe23ca3ac0bacbfc .
+_:B849561bef709002115dd4262725962f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5e2a8b87913b1e9a3288f2a3a8b5649c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc08f30068287505eb51df83c4b2c9eee .
+_:B5e2a8b87913b1e9a3288f2a3a8b5649c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:Bb3b481363bf3bc14d84e8a75bb9bdbb8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:Bb3b481363bf3bc14d84e8a75bb9bdbb8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.openarchives.org/ore/terms/proxyFor> .
+_:Bb3b481363bf3bc14d84e8a75bb9bdbb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb22ee393ed1a14a41f2d732d0f049796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bb22ee393ed1a14a41f2d732d0f049796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B7a2ccfc5043b42b892ae747243b45682 .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.openarchives.org/ore/terms/aggregates> .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/2004/02/skos/core#definition> "This property relates a ORE aggregation about a CHO with a web resource\nproviding a view of that CHO. Examples of view are: a thumbnail, a textual\nabstract and a table of contents. The ORE aggregation may be a Europeana\nAggregation, in which case the view is an object owned by Europeana (i.e., an instance of edm:EuropeanaObject) or an aggregation contributed by a content provider. In order to capture both these cases, the domain of edm:hasView is ore:Aggregation and its range is edm:WebResource"@en .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/2000/01/rdf-schema#label> "Has View"@en .
+<http://www.europeana.eu/schemas/edm/hasView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B01a61b2c3aa1388062c140aeaf539810 <http://www.w3.org/2002/07/owl#unionOf> _:B451dcd4d869b96f5fb38547662814c17 .
+_:B01a61b2c3aa1388062c140aeaf539810 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/relation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isRelatedTo> .
+<http://www.europeana.eu/schemas/edm/hasMet> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8bb61e26fcbc5b5d9772967ff82e7123 .
+<http://www.europeana.eu/schemas/edm/hasMet> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/hasMet> <http://www.w3.org/2004/02/skos/core#definition> "edm:hasMet relates a resource with the objects or phenomena that have happened to or have happened together with the resource under consideration. We can abstractly think of history and the present as a series of “meetings” between people and other things in space-time. Therefore we name this relationship as the things the object “has met” in the course of its existence. These meetings are events in the proper sense, in which other people and things participate in any role."@en .
+<http://www.europeana.eu/schemas/edm/hasMet> <http://www.w3.org/2000/01/rdf-schema#label> "Has Met"@en .
+<http://www.europeana.eu/schemas/edm/hasMet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:Bc4cc1170aafbfec0afa41dfe845a9222 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:Bc4cc1170aafbfec0afa41dfe845a9222 <http://www.w3.org/2002/07/owl#onProperty> <http://www.openarchives.org/ore/terms/proxyFor> .
+_:Bc4cc1170aafbfec0afa41dfe845a9222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.europeana.eu/schemas/edm/unstored> <http://www.w3.org/2004/02/skos/core#definition> "This is a container element which includes all relevant information that\notherwise cannot be mapped to another element in the ESE."@en .
+<http://www.europeana.eu/schemas/edm/unstored> <http://www.w3.org/2000/01/rdf-schema#label> "Unstored"@en .
+<http://www.europeana.eu/schemas/edm/unstored> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+<http://www.europeana.eu/schemas/edm/type> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf9f20fb0531073bff9cabb32e94b250a .
+<http://www.europeana.eu/schemas/edm/type> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/type> .
+<http://www.europeana.eu/schemas/edm/type> <http://www.w3.org/2004/02/skos/core#definition> "The Europeana material type of the resource"@en .
+<http://www.europeana.eu/schemas/edm/type> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Type"@en .
+<http://www.europeana.eu/schemas/edm/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bf13c24e8f7ad0771099e4f0dd5e1c13b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B25dfeaaf1edb5cc5e0e703ce9e45ea37 .
+_:Bf13c24e8f7ad0771099e4f0dd5e1c13b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:B92b14d0d66c1977d0eca4850ffc66fcc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B92b14d0d66c1977d0eca4850ffc66fcc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B56230c8301d3ef1d7e20e295a9adf6fc .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P138F.represents> .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.europeana.eu/schemas/edm/InformationResource> .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/2004/02/skos/core#definition> "This property associates an information resource to the resource (if any) that it represents"@en .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Representation Of"@en .
+<http://www.europeana.eu/schemas/edm/isRepresentationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/end> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba99b49d5a06acf0e860fa70368ad8996 .
+<http://www.europeana.eu/schemas/edm/end> <http://www.w3.org/2004/02/skos/core#definition> "This property denotes the end date of a period of time."@en .
+<http://www.europeana.eu/schemas/edm/end> <http://www.w3.org/2000/01/rdf-schema#label> "End"@en .
+<http://www.europeana.eu/schemas/edm/end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+_:B0f6974d9b1fd469568cd5ec25646e975 <http://www.w3.org/2002/07/owl#unionOf> _:Bb5a3d2400d755606a4a64d0ff461464c .
+_:B0f6974d9b1fd469568cd5ec25646e975 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/begin> <http://www.w3.org/2000/01/rdf-schema#domain> _:B01a61b2c3aa1388062c140aeaf539810 .
+<http://www.europeana.eu/schemas/edm/begin> <http://www.w3.org/2004/02/skos/core#definition> "This property denotes the start date of a period of time."@en .
+<http://www.europeana.eu/schemas/edm/begin> <http://www.w3.org/2000/01/rdf-schema#label> "Begin"@en .
+<http://www.europeana.eu/schemas/edm/begin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B754156a32987ee05d13e6c96f7bd4c9a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bffb8af84d797234531f27438df5188fe .
+_:B754156a32987ee05d13e6c96f7bd4c9a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+<http://purl.org/dc/terms/isFormatOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isDerivativeOf> .
+_:B797bea10a5b47ccd904b03b0b3369591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B797bea10a5b47ccd904b03b0b3369591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bb3b481363bf3bc14d84e8a75bb9bdbb8 .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/Place> .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.europeana.eu/schemas/edm/Event> .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P7F.took_place_at> .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2004/02/skos/core#definition> "This property associates an event with the place at which the event\nhappened."@en .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/2000/01/rdf-schema#label> "Happened At"@en .
+<http://www.europeana.eu/schemas/edm/happenedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B489cceea6f8aed970a41c16b1ab0dc76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B489cceea6f8aed970a41c16b1ab0dc76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "3D" .
+<http://www.europeana.eu/schemas/edm/PhysicalThing> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E18.Physical_Thing> .
+<http://www.europeana.eu/schemas/edm/PhysicalThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/PhysicalThing> <http://www.w3.org/2004/02/skos/core#definition> "A persistent physical item such as a painting, a building, a book or a stone.\nPersons are not items. This class represents Cultural Heritage Objects known to Europeana to be physical things (such as Mona Lisa) as well as all physical things Europeana refers to in the descriptions of Cultural Heritage Objects (such as the Rosetta Stone)."@en .
+<http://www.europeana.eu/schemas/edm/PhysicalThing> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Thing"@en .
+<http://www.europeana.eu/schemas/edm/PhysicalThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/InformationResource> .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.europeana.eu/schemas/edm/PhysicalThing> .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P128F.carries> .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isRelatedTo> .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2004/02/skos/core#definition> "This property describes a relation between a physical thing and the information resource that is contained in it, visible at it or otherwise carried by it, if applicable."@en .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/2000/01/rdf-schema#label> "Realizes"@en .
+<http://www.europeana.eu/schemas/edm/realizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ba99b49d5a06acf0e860fa70368ad8996 <http://www.w3.org/2002/07/owl#unionOf> _:Bc9989a1a685aa5656cef49771375f9b9 .
+_:Ba99b49d5a06acf0e860fa70368ad8996 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#example> "the change of custody of Mona Lisa"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#note> "Events are identified either by the content provider or by Europeana enrichment at ingestion time"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E4.Period> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/vocab/frbr/core#Event> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#example> "the act of painting Mona Lisa"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#scopeNote> "Rationale:This class is a domain of edm:happenedAt and the domain of edm:occurredAt"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#example> "the 2nd World War"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2002/07/owl#equivalentClass> <http://metadata.net/harmony/abc#Temporality> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2004/02/skos/core#definition> "An event is a change \"of states in cultural, social or physical systems,\n regardless of scale, brought about by a series or group of coherent physical,\ncultural, technological or legal phenomena\" (E5 Event in CIDOC CRM) or a \"set of coherent phenomena or cultural manifestations bounded in time and  space\" (E4 Period in CIDOC CRM)"@en .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bea7f706c55df030a9810f97e3f1480f9 .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+_:Bffb8af84d797234531f27438df5188fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bffb8af84d797234531f27438df5188fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B849561bef709002115dd4262725962f8 .
+<http://www.europeana.eu/schemas/edm/WebResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/InformationResource> .
+<http://www.europeana.eu/schemas/edm/WebResource> <http://www.w3.org/2004/02/skos/core#definition> "Information Resources that have at least one Web Representation and at least\na URI."@en .
+<http://www.europeana.eu/schemas/edm/WebResource> <http://www.w3.org/2000/01/rdf-schema#label> "Web Resource"@en .
+<http://www.europeana.eu/schemas/edm/WebResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.cidoc-crm.org/rdfs/cidoc-crm#P80F.end_is_qualified_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/end> .
+<http://www.europeana.eu/schemas/edm/isSuccessorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/isSimilarTo> .
+<http://www.europeana.eu/schemas/edm/isSuccessorOf> <http://www.w3.org/2004/02/skos/core#definition> "This property captures the relation between the continuation of a resource and that resource. This applies to a story, a serial, a journal etc. No content of the successor resource is identical or has a similar form with that of the precursor. The similarity is only in the context, subjects and figures of a plot. Successors typically form part of a common whole – such as a trilogy, a journal, etc."@en .
+<http://www.europeana.eu/schemas/edm/isSuccessorOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Successor Of"@en .
+<http://www.europeana.eu/schemas/edm/isSuccessorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ba06acf4d83ae22adaaabfe7bb60b2c18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ba06acf4d83ae22adaaabfe7bb60b2c18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B91558db67b57c961056a6cd86641e292 .
+<http://purl.org/dc/elements/1.1/coverage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2000/01/rdf-schema#range> _:B97f4e3660b9edbdbdec9e3f96b71c1cd .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.europeana.eu/schemas/edm/EuropeanaObject> .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P67F.refers_to> .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2004/02/skos/core#definition> "This property relates an annotation (a Europeana object) with the resource\nthat it annotates."@en .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Annotation Of"@en .
+<http://www.europeana.eu/schemas/edm/isAnnotationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasMet> .
+<http://www.europeana.eu/schemas/edm/country> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P12F.occurred_in_the_presence_of> .
+<http://www.europeana.eu/schemas/edm/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://www.europeana.eu/schemas/edm/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.europeana.eu/schemas/edm/isSimilarTo> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.cidoc-crm.org/rdfs/cidoc-crm#P130F.shows_features_of> .
+<http://www.europeana.eu/schemas/edm/isSimilarTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://www.europeana.eu/schemas/edm/isSimilarTo> <http://www.w3.org/2004/02/skos/core#definition> "The most generic derivation property, covering also the case of questionable derivation. Is Similar To asserts that parts of the contents of one resource exhibit common features with respect to ideas, shapes, structures, colors, words, plots, topics with the contents of the related resource. Those common features may be attributed to a common origin or influence (in particular for derivation), but also to more generic cultural or psychological factors."@en .
+<http://www.europeana.eu/schemas/edm/isSimilarTo> <http://www.w3.org/2000/01/rdf-schema#label> "Is Similar To"@en .
+<http://www.europeana.eu/schemas/edm/isSimilarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B39c83c44e79360b7faa34ee7b4f3ef87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bbf8f40fe298cc73da7543c54d782b4f1 .
+_:B39c83c44e79360b7faa34ee7b4f3ef87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.openarchives.org/ore/terms/Proxy> .
+_:B5b02d6409f6f35a0afbdb526c65b39ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb22ee393ed1a14a41f2d732d0f049796 .
+_:B5b02d6409f6f35a0afbdb526c65b39ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.openarchives.org/ore/terms/Proxy> .
+_:B91558db67b57c961056a6cd86641e292 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.europeana.eu/schemas/edm/ProvidedCHO> .
+_:B91558db67b57c961056a6cd86641e292 <http://www.w3.org/2002/07/owl#onProperty> <http://www.openarchives.org/ore/terms/proxyFor> .
+_:B91558db67b57c961056a6cd86641e292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.cidoc-crm.org/rdfs/cidoc-crm#P79F.beginning_is_qualified_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/begin> .
+<http://www.openarchives.org/ore/terms/Proxy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.openarchives.org/ore/terms/Aggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/InformationResource> <http://www.w3.org/2002/07/owl#equivalentClass> _:B69b67203a73189965561fc01fa91b9ad .
+<http://www.europeana.eu/schemas/edm/InformationResource> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E89.Propositional_Object> .
+<http://www.europeana.eu/schemas/edm/InformationResource> <http://www.w3.org/2004/02/skos/core#definition> "An information resource is a resource whose essential characteristics can be conveyed in a single message. It can be associated with a URI, it can have a representation, for example: a text is an InformationResource."@en .
+<http://www.europeana.eu/schemas/edm/InformationResource> <http://www.w3.org/2000/01/rdf-schema#label> "Information Resource"@en .
+<http://www.europeana.eu/schemas/edm/InformationResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bd337f9d9ad5f8e1452ce6ebd71098da5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B34852e5f2f97389edd3a02edd6c0900a .
+_:Bd337f9d9ad5f8e1452ce6ebd71098da5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.europeana.eu/schemas/edm/InformationResource> .
+_:B67e88e7247fe29118346a291d5886e87 <http://www.w3.org/2002/07/owl#onProperty> <http://www.europeana.eu/schemas/edm/aggregatedCHO> .
+_:B67e88e7247fe29118346a291d5886e87 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B67e88e7247fe29118346a291d5886e87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.europeana.eu/schemas/edm/isShownBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/isShownBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/hasView> .
+<http://www.europeana.eu/schemas/edm/isShownBy> <http://www.w3.org/2004/02/skos/core#definition> "An unambiguous URL reference to the digital object on the provider’s web site in the best available resolution/quality."@en .
+<http://www.europeana.eu/schemas/edm/isShownBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is Shown By"@en .
+<http://www.europeana.eu/schemas/edm/isShownBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2004/02/skos/core#scopeNote> "Rationale: This class is the range of edm:aggregatedCHO. A resource of type ProvidedCHO can be the subject of statements using edm:isRelatedTo or any more specific property."@en .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2004/02/skos/core#example> "Mona Lisa, Winged Victory of Samothrace"@en .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2004/02/skos/core#note> "This class has been mostly motivated by the need to assign a type to the “central node” in the EDM pattern, during the ingestion process, related to the XML expression of EDM at that stage. It was especially intended to fit the cases where edm:PhysicalThing  cannot be used as the type of the resource standing for the real-world object (independently of any specific data contributor perspective)."@en .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B51bb165869d7666f701952f3d20a1873 .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2004/02/skos/core#definition> "This class comprises the Cultural Heritage objects that Europeana collects descriptions about."@en .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/2000/01/rdf-schema#label> "Provided CHO"@en .
+<http://www.europeana.eu/schemas/edm/ProvidedCHO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B8bb61e26fcbc5b5d9772967ff82e7123 <http://www.w3.org/2002/07/owl#unionOf> _:Bcb1f6a586c5097bcda7581beb99407f2 .
+_:B8bb61e26fcbc5b5d9772967ff82e7123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2004/02/skos/core#scopeNote> "Rationale: This class is used to tag objects that are the result of activity of Europeana, and, as such, objects on which Europeana holds rights"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2004/02/skos/core#example> "Any content created by the users through the service made available by Europeana for that purpose"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2004/02/skos/core#example> "An annotation created by a user through the Europeana portal"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2004/02/skos/core#example> "Any instance of the class EuropeanaAggregation"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/WebResource> .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2004/02/skos/core#definition> "Any object that is the result of Europeana’s activities"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Object"@en .
+<http://www.europeana.eu/schemas/edm/EuropeanaObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.cidoc-crm.org/rdfs/cidoc-crm#E52.Time-Span> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#time-interval> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2002/07/owl#equivalentClass> <http://metadata.net/harmony/abc#Time> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/PeriodOfTime> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.europeana.eu/schemas/edm/NonInformationResource> .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2004/02/skos/core#definition> "The class of \"abstract temporal extents, in the sense of Galilean physics,\n having a beginning, an end and a duration\" (CIDOC CRM)"@en .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/2000/01/rdf-schema#label> "Time Span"@en .
+<http://www.europeana.eu/schemas/edm/TimeSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5b88b48e62fa06f94e093173e74a26ec <http://www.w3.org/2002/07/owl#intersectionOf> _:B007ce5ae95185330c0a1bae92b234426 .
+_:B5b88b48e62fa06f94e093173e74a26ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

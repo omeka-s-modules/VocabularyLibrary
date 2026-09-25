@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/geobibrs"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Geolocation Museo Reina Sofía Library -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs">
+  <dc:title xml:lang="en">Geolocation Museo Reina Sofía Library</dc:title>
+  <skos:note  xml:lang="en">Set of elements for the geolocation of places and resources in the  Museo Reina Sofía Library</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Coordinates -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/coordinates">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">coordinates</reg:name>
+  <rdfs:label xml:lang="en">Coordinates</rdfs:label>
+  <skos:definition xml:lang="en">This element is used to contain the geographical information of each place; we will use two coordinates representing the longitude and latitude of each point.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Besides the longitude and latitude we could also keep track of the height of points, but this information is already stored in the floor and level elements.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/place" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/longitude" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/latitude" />
+</rdf:Description>
+
+<!-- Property: Floor -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/floor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">floor</reg:name>
+  <rdfs:label xml:lang="en">Floor</rdfs:label>
+  <skos:definition xml:lang="en">This element will represent in which floor of the Library are the different places (desks, stacks…)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">At the moment the Library only has two different floors (namely -1 and +1) in which the different places are found.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/place" />
+</rdf:Description>
+
+<!-- Property: Identifier -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/Identifier">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">identifier</reg:name>
+  <rdfs:label xml:lang="en">Identifier</rdfs:label>
+  <skos:definition xml:lang="en">This element will contain a unique number identifying each place of the Library that is encodded in our application</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">This element will be used to connect placesand library resources; each Library resource will contain its own place identifier</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/place" />
+</rdf:Description>
+
+<!-- Property: Lat -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/latitude">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">latitude</reg:name>
+  <rdfs:label xml:lang="en">Lat</rdfs:label>
+  <skos:definition xml:lang="en">This element will contain the information of the latitude (south - north) of a point with respect to the geographical coordinate system.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/coordinates" />
+</rdf:Description>
+
+<!-- Property: Level -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/level">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">level</reg:name>
+  <rdfs:label xml:lang="en">Level</rdfs:label>
+  <skos:definition xml:lang="en">Since the Library of the Museo Reina Sofia has two different levels on each floor (upper and lower) and each one of them has its own stacks, this element says in which level can be found each place of the Library.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">This element is used to state if the stacks are placed in the upper or lower level of each floor. The journal stacks and desks are not located in these levels, just in the floor, but this element may be used in the future or for further places.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/place" />
+</rdf:Description>
+
+<!-- Property: Location -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/location">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">location</reg:name>
+  <rdfs:label xml:lang="en">Location</rdfs:label>
+  <skos:definition xml:lang="en">A reference to the place or physical location where the resource is to be found</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">We use the element identifier of the element place as a value to locate the resources</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/resource" />
+</rdf:Description>
+
+<!-- Property: Long -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/longitude">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">longitude</reg:name>
+  <rdfs:label xml:lang="en">Long</rdfs:label>
+  <skos:definition xml:lang="en">This element will contain the information of the longitude (east - west) of a point with respect to the geographical coordinate system.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/coordinates" />
+</rdf:Description>
+
+<!-- Property: Place -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/place">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">place</reg:name>
+  <rdfs:label xml:lang="en">Place</rdfs:label>
+  <skos:definition xml:lang="en">(Container) Element that allows to identify the places that are to be geolocated in the Library</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">The Library offers, at the moment, the following spaces: stacks, journal stacks, reading desk, circulation desk. Place will be used as a container element for the following elements: type, floor, identifier, coordinates, level and type.</rdfs:comment>
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/Identifier" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/type" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/level" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/floor" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/coordinates" />
+</rdf:Description>
+
+<!-- Property: Resource -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/resource">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">resource</reg:name>
+  <rdfs:label xml:lang="en">Resource</rdfs:label>
+  <skos:definition xml:lang="en">(Container) Element that allows to describe the different pieces in the library</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">This element is used to enclose the elements that define resources in the library </rdfs:comment>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/location" />
+</rdf:Description>
+
+<!-- Property: Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/geobibrs/type">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/geobibrs" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">type</reg:name>
+  <rdfs:label xml:lang="en">Type</rdfs:label>
+  <skos:definition xml:lang="en">This element contains a description of the type of place that we are representing</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">The type element will have one of the following values: Stacks, journal stacks, circulation desks or reading desks. If the application is enlarged with further places, this list should be accordingly extended</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/geobibrs/place" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

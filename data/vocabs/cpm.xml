@@ -1,0 +1,1696 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://catalogus-professorum.org/cpm/2/"
+     xml:base="http://catalogus-professorum.org/cpm/2/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:SysOnt="http://ns.ontowiki.net/SysOnt/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://catalogus-professorum.org/cpm/2/">
+        <owl:imports rdf:resource="http://ns.aksw.org/spatialHierarchy/"/>
+        <ns:attributionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AKSW</ns:attributionName>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalogus Professorum Model - Version 2.1 (CPM)</dc:title>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007-05-24</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-24</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-09-09</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-09-10</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-04-26</terms:modified>
+        <vann:changes rdf:resource="https://github.com/pcp-on-web/catalogus-professorum-lipsiensium/model/commits/master/cpm-2/ontology.ttl"/>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cpm</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://catalogus-professorum.org/cpm/2/</vann:preferredNamespaceUri>
+        <doap:homepage rdf:resource="https://catalogus-professorum.org/project/"/>
+        <doap:maintainer rdf:resource="http://catalogus-professorum.org/team/ThomasRiechert"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Catalogus Professorum Model defines the Model of the Catalogus Professorum Lipsiensium, the professors catalog of the University of Leipzig, Germany.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalogus Professorum Model - Version 2.1 (CPM)</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.0 (inital) - 2007-05-24 - Thomas Riechert</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.9 - 2013-04-24 - Thomas Riechert</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 2.0 - 2013-09-09 - Thomas Riechert</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 2.1 - 2018-04-26 - Thomas Riechert</owl:versionInfo>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/AndreasNareike"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/ChristianAugustin"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/ChristianRau"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/EdgardMarx"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/FrederikeBulka"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/LydiaMueller"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/NatanaelArndt"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/NormanRadtke"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/SimeonAckermann"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/ThomasRiechert"/>
+        <foaf:maker rdf:resource="http://catalogus-professorum.org/team/UlfMorgenstern"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ns.ontowiki.net/SysOnt/order -->
+
+
+    <owl:AnnotationProperty rdf:about="http://ns.ontowiki.net/SysOnt/order"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonthDay -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/bodyPlace -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/bodyPlace">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://ns.aksw.org/spatialHierarchy/SpatialArea"/>
+        <rdfs:comment xml:lang="de">Beziehung zu einem Ort einer KÃ¶rperschaft. Dies kann eine Stadt, eine Verwaltungseinheit oder ein Land sein</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation to a place of a body, this could be eather a City, a District or a Country</rdfs:comment>
+        <rdfs:label xml:lang="en">Body place</rdfs:label>
+        <rdfs:label xml:lang="de">Ort der KÃ¶rperschaft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/cognateBody -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/cognateBody">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verwandte Institutionen (manche Akademien wurden mehrfach umbenannt bzw. aufgelÃ¶st und wenig spÃ¤ter neu gegrÃ¼ndet; diese sollten dann verlinkt werden kÃ¶nnen) (Related Institutions)</rdfs:comment>
+        <rdfs:label xml:lang="de">Verwandte KÃ¶rperschaft</rdfs:label>
+        <rdfs:label xml:lang="en">cognate body</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04.02.2015 change to ObjectProperty</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from relatedBody</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/consistsOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/consistsOf">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:label xml:lang="de">eine Institution besteht aus</rdfs:label>
+        <rdfs:label xml:lang="en">institution consists of</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable  changed from consists-of on 09.09.2013</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/familyAdoptiveChild -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/familyAdoptiveChild">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Family"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">A property that adds a adoptive child to a family</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat zur Angabe eines zur Familie gehÃ¶renden Adoptivkindes</rdfs:comment>
+        <rdfs:label xml:lang="en">Adoptive child</rdfs:label>
+        <rdfs:label xml:lang="de">Adoptivkind</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable not often used so far</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/familyChild -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/familyChild">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Family"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">A property that adds a child to a family</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat zur Angabe eines zur Familie gehÃ¶renden Kindes</rdfs:comment>
+        <rdfs:label xml:lang="en">Child</rdfs:label>
+        <rdfs:label xml:lang="de">Kind</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable not often used so far</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/familyCohabitant -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/familyCohabitant">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Family"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">A proprtery that adds a cohabitant to a family</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat zur Angabe eines Lebenspartners einer Familie</rdfs:comment>
+        <rdfs:label xml:lang="en">Cohabitant</rdfs:label>
+        <rdfs:label xml:lang="de">Lebenspartner</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable not often used so far</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/familyFosterChild -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/familyFosterChild">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Family"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">A property that adds a foster child to a family</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat zur Angabe eines zur Familie gehÃ¶renden Pflegekindes</rdfs:comment>
+        <rdfs:label xml:lang="en">Foster child</rdfs:label>
+        <rdfs:label xml:lang="de">Pflegekind</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable not often used so far</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/familyParent -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/familyParent">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Family"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">A proprtery that adds a parent to a family</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat zur Angabe eines Elternteils einer Familie</rdfs:comment>
+        <rdfs:label xml:lang="de">Eltern</rdfs:label>
+        <rdfs:label xml:lang="en">Parent</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable not often used so far</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/hasPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/hasPeriod">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Ein PrÃ¤dikat, das einer Person einen Lebensabschnitt zuordnet</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a person to their period of life</rdfs:comment>
+        <rdfs:label xml:lang="en">has period</rdfs:label>
+        <rdfs:label xml:lang="de">hat Lebensabschnitt</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date:  24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 change to professor - 14.02.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3 changed back to person - 17.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from has-periods to has-period on 09.09.2013</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/hasPicture -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/hasPicture">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Picture"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">160</SysOnt:order>
+        <rdfs:label xml:lang="en">has picture</rdfs:label>
+        <rdfs:label xml:lang="de">hat Bild</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.03.2008; replaces prof-has-to-do-with</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed - 31.03.08</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed to class archive relation</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/hasTutor -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/hasTutor">
+        <owl:inverseOf rdf:resource="http://catalogus-professorum.org/cpm/2/isTutor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:label xml:lang="de">Betreuer</rdfs:label>
+        <rdfs:label xml:lang="en">tutor</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from has-tutor on 09.09.2013</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/isPartOf">
+        <owl:inverseOf rdf:resource="http://catalogus-professorum.org/cpm/2/consistsOf"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:label xml:lang="en">an institution is part of</rdfs:label>
+        <rdfs:label xml:lang="de">eine Institution gehÃ¶rt zu</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable  changed from is-part-of on 09.09.2013</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/isTutor -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/isTutor">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">330</SysOnt:order>
+        <rdfs:label xml:lang="en">is tutor</rdfs:label>
+        <rdfs:label xml:lang="de">ist Betreuer</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 26.06.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from is-tutor on 09.09.2013</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/periodBody -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/periodBody">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:label xml:lang="en">Related Body</rdfs:label>
+        <rdfs:label xml:lang="de">ZugehÃ¶rige KÃ¶rperschaft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 11.12.2009; replaces prof-has-to-do-with</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05.02.2015 - Rename to periodBody</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/periodDocument -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/periodDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:label xml:lang="en">Related Document</rdfs:label>
+        <rdfs:label xml:lang="de">ZugehÃ¶riges Dokument</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial creation - 14.01.2015;</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/periodPlace -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/periodPlace">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://ns.aksw.org/spatialHierarchy/SpatialArea"/>
+        <rdfs:comment xml:lang="de">Beziehung zu einem Ort eines Lebensabschnitts. Dies kann eine Stadt, eine Verwaltungseinheit oder ein Land sein</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation to a place of a period of life, this could be eather a City, a District or a Country</rdfs:comment>
+        <rdfs:label xml:lang="de">Ort des Lebensabschnitts</rdfs:label>
+        <rdfs:label xml:lang="en">Period place</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 initial creation - 09.09.2013, stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/pictureArchive -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/pictureArchive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Picture"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Archive"/>
+        <rdfs:label xml:lang="de">Bildherkunft</rdfs:label>
+        <rdfs:label xml:lang="en">picture archive</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 initial creation as replacement for pictureArchive</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/published -->
+
+
+    <owl:ObjectProperty rdf:about="http://catalogus-professorum.org/cpm/2/published">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:label xml:lang="en">published</rdfs:label>
+        <rdfs:label xml:lang="de">verÃ¶ffentlicht</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 25.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as relation to Person</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/academicalTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/academicalTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Qualifikationsschrift - akademischer Titel</rdfs:label>
+        <rdfs:label xml:lang="en">qualificationpaper academical title</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from bodyPlaceom qualiPaperAcademicalTitle to qualificationPaperAcademicalTitle on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/academyType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/academyType">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Academy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">Beschreibt den Typ der Hochschule genauer</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the academy type in more detail</rdfs:comment>
+        <rdfs:label xml:lang="en">Academy type</rdfs:label>
+        <rdfs:label xml:lang="de">Hochschultyp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/additionToSurname -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/additionToSurname">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Additions to the surname can be of, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="de">NamenszusÃ¤tze sind zum Beispiel von, zu, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Additions to Surename</rdfs:label>
+        <rdfs:label xml:lang="de">Namenszusatz</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed Domain from Professor to Person 0.1 initial creation - 24.05.07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/alternativeWritingOfSurname -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/alternativeWritingOfSurname">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</SysOnt:order>
+        <rdfs:comment xml:lang="de">Bsp: Meier, Meyer, Maier</rdfs:comment>
+        <rdfs:comment xml:lang="en">For Example Meier, Meyer, Maier</rdfs:comment>
+        <rdfs:label xml:lang="de">Alternative Namensschreibweisen</rdfs:label>
+        <rdfs:label xml:lang="en">Alternative writings of the surname</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed Domain from Professor to Person</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 under discussion</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/archiveCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/archiveCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Archive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">Beschreibt das KÃ¼rzel des Archievs</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the code of the archive</rdfs:comment>
+        <rdfs:label xml:lang="en">Archive Code</rdfs:label>
+        <rdfs:label xml:lang="de">ArchivkÃ¼rzel</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 31.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/date -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/date">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:comment xml:lang="en">The date within a period of life</rdfs:comment>
+        <rdfs:comment xml:lang="de">Zeitpunkt innerhalb eines Lebensabschnitts</rdfs:comment>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <rdfs:label xml:lang="de">Datum</rdfs:label>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 initial creation date: 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/denomination -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/denomination">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">140</SysOnt:order>
+        <rdfs:label xml:lang="de">Konfession</rdfs:label>
+        <rdfs:label xml:lang="en">religious denomination</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed Domain from Professor to Person</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/dissolved -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/dissolved">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:label xml:lang="de">AuflÃ¶sungsjahr</rdfs:label>
+        <rdfs:label xml:lang="en">Dissolved (year)</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/firstName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/firstName">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="de">Rufname einer Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">The given first name of a person</rdfs:comment>
+        <rdfs:comment xml:lang="en">given name of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">First Name</rdfs:label>
+        <rdfs:label xml:lang="en">First name</rdfs:label>
+        <rdfs:label xml:lang="de">Rufname</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 18.05.2015</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 29.01.2015</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/forename -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/forename">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="en">Forename(s) of a person, seperated by space</rdfs:comment>
+        <rdfs:comment xml:lang="de">Vorname(n) einer Person, getrennt mit Leerzeichen</rdfs:comment>
+        <rdfs:label xml:lang="en">Forename</rdfs:label>
+        <rdfs:label xml:lang="de">Vorname</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 18.05.2015</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/founded -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/founded">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:label xml:lang="de">GrÃ¼ndungsjahr</rdfs:label>
+        <rdfs:label xml:lang="en">founded (year)</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/from -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/from">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:comment xml:lang="de">Das Startdatum eines Lebensabschnitts</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date of the beginning of a period of life</rdfs:comment>
+        <rdfs:label xml:lang="en">From</rdfs:label>
+        <rdfs:label xml:lang="de">Von</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date:  24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable other types added</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/fullAcademicalTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/fullAcademicalTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</SysOnt:order>
+        <rdfs:label xml:lang="en">full academical title</rdfs:label>
+        <rdfs:label xml:lang="de">voller akademischer Titel</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/functionInOrganisation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/functionInOrganisation">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/SocialRole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Funktion in der Organisation</rdfs:label>
+        <rdfs:label xml:lang="en">function in organisation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 25.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed to DatatypeProperty - 13.11.07 by TR</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/furtherInformation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/furtherInformation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">340</SysOnt:order>
+        <rdfs:label xml:lang="en">further information</rdfs:label>
+        <rdfs:label xml:lang="de">weitere Informationen</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 28.06.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/gender -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/gender">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="de">Das Geschlecht einer Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">Gender of a person</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Important to get family relations lie mother and father</rdfs:comment>
+        <rdfs:label xml:lang="en">Gender</rdfs:label>
+        <rdfs:label xml:lang="de">Geschlecht</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/gnd -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/gnd">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">370</SysOnt:order>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personennamendatei</rdfs:comment>
+        <rdfs:label xml:lang="de">PND</rdfs:label>
+        <rdfs:label xml:lang="en">PND</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rename from pnd to gnd - 15.01.2016</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/graduationType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/graduationType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Graduation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">290</SysOnt:order>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bsp: Gymnasium, etc.</rdfs:comment>
+        <rdfs:label xml:lang="de">Abitur Schulart</rdfs:label>
+        <rdfs:label xml:lang="en">graduation type</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/isPublic -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/isPublic">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">is public</rdfs:label>
+        <rdfs:label xml:lang="de">ist Ã¶ffentlich</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 17.02.2015</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/lectureLink -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/lectureLink">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">186</SysOnt:order>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property is used for links to Lectures. The main use is to link into http://histvv.uni-leipzig.de/.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lectures</rdfs:label>
+        <rdfs:label xml:lang="de">Vorlesungen</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/literature -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/literature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">260</SysOnt:order>
+        <rdfs:label xml:lang="en">biographical, autobiographical literature</rdfs:label>
+        <rdfs:label xml:lang="de">biographische, autobiograhpische Literatur</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 28.06.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/note -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/note">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">390</SysOnt:order>
+        <rdfs:comment xml:lang="en">additional information that does not fit elsewhere</rdfs:comment>
+        <rdfs:comment xml:lang="de">zusÃ¤tzliche Informationen die nirgends sonst eingetragen werden kÃ¶nnen</rdfs:comment>
+        <rdfs:label xml:lang="de">Vermerk, Hinweis</rdfs:label>
+        <rdfs:label xml:lang="en">note</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed Domain from Professor to Person</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/organisationName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/organisationName">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/SocialRole"/>
+        <rdfs:comment xml:lang="de">Der Name der Organisation</rdfs:comment>
+        <rdfs:comment xml:lang="en">Name of the organisation</rdfs:comment>
+        <rdfs:label xml:lang="en">Name of organisation</rdfs:label>
+        <rdfs:label xml:lang="de">Organisationsname</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 under discussion</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/periodNote -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/periodNote">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Bemerkungen zu einem Lebensabschnitt</rdfs:comment>
+        <rdfs:comment xml:lang="en">Notes about period of life</rdfs:comment>
+        <rdfs:label xml:lang="de">Bemerkung</rdfs:label>
+        <rdfs:label xml:lang="en">Notes</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date:  31.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/picture -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/picture">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Picture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150</SysOnt:order>
+        <rdfs:comment xml:lang="de">Web-URL zum Bild</rdfs:comment>
+        <rdfs:label xml:lang="de">Bild</rdfs:label>
+        <rdfs:label xml:lang="en">picture</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/pictureCredits -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/pictureCredits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Picture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</SysOnt:order>
+        <rdfs:label xml:lang="de">Bildnachweis</rdfs:label>
+        <rdfs:label xml:lang="en">picture credits</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/pictureKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/pictureKey">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Picture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">170</SysOnt:order>
+        <rdfs:label xml:lang="de">Bildnummer</rdfs:label>
+        <rdfs:label xml:lang="en">picture key</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 10.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/pid -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/pid">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</SysOnt:order>
+        <rdfs:comment xml:lang="de">kuenstliche ID als Primaerschluessel fuer Person. Sollte automatisch erstellt werden.</rdfs:comment>
+        <rdfs:label xml:lang="de">Person ID</rdfs:label>
+        <rdfs:label xml:lang="en">person id</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 25.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/profession -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/profession">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Beruf</rdfs:label>
+        <rdfs:label xml:lang="en">Profession</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 12.02.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/publicationReference -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/publicationReference">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="de">Publikationsverzeichnisse einer Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">publication reference of a person</rdfs:comment>
+        <rdfs:label xml:lang="de">Publikationsverzeichnisse</rdfs:label>
+        <rdfs:label xml:lang="en">publication reference</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.02.2015</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/reasonForResigning -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/reasonForResigning">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Career"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Grund des Austritts</rdfs:label>
+        <rdfs:label xml:lang="en">reason for resigning</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed to DatatypeProperty - 13.11.2007 by TR</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/reference -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/reference">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">VerÃ¶ffentlichung Quellenangabe</rdfs:label>
+        <rdfs:label xml:lang="en">publication reference</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 25.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/references -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/references">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">380</SysOnt:order>
+        <rdfs:label xml:lang="de">Quellennachweis</rdfs:label>
+        <rdfs:label xml:lang="en">reference</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed Domain from Professor to Person</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/reviewed -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/reviewed">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">reviewed</rdfs:label>
+        <rdfs:label xml:lang="de">Ã¼berprÃ¼ft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 17.02.2015</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/subject -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/subject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Qualifikationsschrift - Fach</rdfs:label>
+        <rdfs:label xml:lang="en">qualification paper - subject</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from qualiPaperSubject to qualificationPaperSubject on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/subjectStudied -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/subjectStudied">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Study"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">Das Thema/Gebiet des Studiums</rdfs:comment>
+        <rdfs:comment xml:lang="en">The subject of Study</rdfs:comment>
+        <rdfs:label xml:lang="de">Fach</rdfs:label>
+        <rdfs:label xml:lang="de">Studiumsthema</rdfs:label>
+        <rdfs:label xml:lang="en">Subject studied</rdfs:label>
+        <rdfs:label xml:lang="en">subject, the professor studied</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date:  24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/subjectsTaught -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/subjectsTaught">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Career"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">FÃ¤cher die Gelehrt wurden</rdfs:label>
+        <rdfs:label xml:lang="en">subjects the professor taught</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/surname -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/surname">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="de">Nachname einer Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">The surname of a person</rdfs:comment>
+        <rdfs:label xml:lang="de">Nachname</rdfs:label>
+        <rdfs:label xml:lang="en">Surname</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 0.2  10.03.2008</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Titel der Qualifikationsschrift</rdfs:label>
+        <rdfs:label xml:lang="en">title of qualificationpaper</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from qualiPaperTitle to qualificationPaperTitle on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/to -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/to">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:comment xml:lang="de">Das Enddatum eines Lebensabschnitts</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date of the ending of a period of life</rdfs:comment>
+        <rdfs:label xml:lang="de">Bis</rdfs:label>
+        <rdfs:label xml:lang="en">To</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date:  24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable other types added</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/type -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/type">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Art der Qualifikationsschrift</rdfs:label>
+        <rdfs:label xml:lang="en">qualification paper type</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 changed to DatatypeProperty - 13.11.2007 by TR</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from qualiPaperType to qualificationPaperType on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/typeOfBody -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/typeOfBody">
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Typ der KÃ¶rperschaft</rdfs:label>
+        <rdfs:label xml:lang="en">type of body</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/veniaLegendi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/veniaLegendi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/QualificationDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Qualifikationsschrift - Venia Legendi</rdfs:label>
+        <rdfs:label xml:lang="en">qualificationpaper - venia legendi</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from qualiPaperVeniaLegendi to qualificationPaperVeniaLegendi on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/webLink -->
+
+
+    <owl:DatatypeProperty rdf:about="http://catalogus-professorum.org/cpm/2/webLink">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:domain rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <SysOnt:order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">185</SysOnt:order>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property is used for links into the WWW. e.g. Wikipedia.</rdfs:comment>
+        <rdfs:label xml:lang="de">Links (e.g.Wikipedia)</rdfs:label>
+        <rdfs:label xml:lang="en">links to (e.g.Wikipedia)</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation - 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from webLinks to webLink on 09.09.2013</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/AcademicSociety -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/AcademicSociety">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Organisation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine wissenschaftliche Gesellschaft</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an academic society</rdfs:comment>
+        <rdfs:label xml:lang="en">Academic Society</rdfs:label>
+        <rdfs:label xml:lang="de">Wissenschaftliche Gesellschaft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Academy -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Academy">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Institution"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Hochschule</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an academy</rdfs:comment>
+        <rdfs:label xml:lang="en">Academy</rdfs:label>
+        <rdfs:label xml:lang="de">Hochschule</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Archive -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Archive">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Institution"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt ein Archiv</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an archive</rdfs:comment>
+        <rdfs:label xml:lang="de">Archiv</rdfs:label>
+        <rdfs:label xml:lang="en">Archive</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 31.03.2008</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Birth -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Birth">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt den Geburtstag</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Birth describes a birth day</rdfs:comment>
+        <rdfs:label xml:lang="en">Birth</rdfs:label>
+        <rdfs:label xml:lang="de">Geburt</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Body -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Body">
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt KÃ¶rperschaften</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a Body</rdfs:comment>
+        <rdfs:label xml:lang="en">Body</rdfs:label>
+        <rdfs:label xml:lang="de">KÃ¶rperschaft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Career -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Career">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt einen Karriereschritt</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes of career step</rdfs:comment>
+        <rdfs:label xml:lang="en">Career step</rdfs:label>
+        <rdfs:label xml:lang="de">Karriereschritt</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as subclass of PeriodOfLife</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Death -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Death">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt den Sterbetag</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept describes a day of death</rdfs:comment>
+        <rdfs:label xml:lang="en">Death</rdfs:label>
+        <rdfs:label xml:lang="de">Gestorben</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Department -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Department">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Institution"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Abteilung</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a department</rdfs:comment>
+        <rdfs:label xml:lang="de">Abteilung</rdfs:label>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Document -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Document">
+        <rdfs:comment xml:lang="de">Dokument einer Periode</rdfs:comment>
+        <rdfs:comment xml:lang="en">document of a period</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 13.01.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Faculty -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Faculty">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Institution"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine FakultÃ¤t</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a faculty</rdfs:comment>
+        <rdfs:label xml:lang="en">Faculty</rdfs:label>
+        <rdfs:label xml:lang="de">FakultÃ¤t</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Family -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Family">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt Familien</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes families</rdfs:comment>
+        <rdfs:label xml:lang="de">Familie</rdfs:label>
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.01.2010</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/GeneralPeriod -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/GeneralPeriod">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt einen allgemeineren Lebensabschnitt</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a general period of life</rdfs:comment>
+        <rdfs:label xml:lang="de">Allgemeiner Abschnitt</rdfs:label>
+        <rdfs:label xml:lang="en">General Period</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable changed from cpm:General to cpm:GeneralPeriod on 09.09.2013</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Graduation -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Graduation">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt einen Abschluss</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept describes a graduation</rdfs:comment>
+        <rdfs:label xml:lang="de">Abschluss</rdfs:label>
+        <rdfs:label xml:lang="en">Graduation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/GraduationDoctorate -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/GraduationDoctorate">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Graduation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt den Abschluss einer Promotion</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept describes a graduation at university</rdfs:comment>
+        <rdfs:label xml:lang="en">Graduation Doctorate</rdfs:label>
+        <rdfs:label xml:lang="de">Promotion</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/GraduationSchool -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/GraduationSchool">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Graduation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt den Schulabschluss</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept describes a graduation of school</rdfs:comment>
+        <rdfs:label xml:lang="en">Graduation from School</rdfs:label>
+        <rdfs:label xml:lang="de">Schulabschluss</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/GraduationUniversity -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/GraduationUniversity">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Graduation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt den Abschluss an einer UniversitÃ¤t</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept describes a graduation at university</rdfs:comment>
+        <rdfs:label xml:lang="en">Graduation University</rdfs:label>
+        <rdfs:label xml:lang="de">Hochschulabschluss</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.09.2013</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Honour -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Honour">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Ehrung</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a honour</rdfs:comment>
+        <rdfs:label xml:lang="de">Ehrung</rdfs:label>
+        <rdfs:label xml:lang="en">Honour</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.02.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Institute -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Institute">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Institution"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Institut</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an institute</rdfs:comment>
+        <rdfs:label xml:lang="de">Institut</rdfs:label>
+        <rdfs:label xml:lang="en">Institute</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Institution -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Institution">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Institution</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an institution</rdfs:comment>
+        <rdfs:label xml:lang="de">Institution</rdfs:label>
+        <rdfs:label xml:lang="en">Institution</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Membership -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Membership">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Mitgliedschaft oder Funktion</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a membership</rdfs:comment>
+        <rdfs:label xml:lang="en">Membership</rdfs:label>
+        <rdfs:label xml:lang="de">Mitgliedschaft</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 09.02.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Office -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Office">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eines Amtes</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes of a office</rdfs:comment>
+        <rdfs:label xml:lang="de">Amt</rdfs:label>
+        <rdfs:label xml:lang="en">Office</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as subclass of PeriodOfLife</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Organisation -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Organisation">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Organisation</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a organisation</rdfs:comment>
+        <rdfs:label xml:lang="de">Organisation</rdfs:label>
+        <rdfs:label xml:lang="en">Organisation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable 09.09.2013 Organization changed to Organisation</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/OtherOrganisation -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/OtherOrganisation">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Organisation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine sonstige Organisation</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a other Organisation</rdfs:comment>
+        <rdfs:label xml:lang="en">Other Organisation</rdfs:label>
+        <rdfs:label xml:lang="de">Sonstige Organisation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable 09.09.2013 Organization changed to Organisation</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Party -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Party">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Organisation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine politische Partei</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a party</rdfs:comment>
+        <rdfs:label xml:lang="de">Partei</rdfs:label>
+        <rdfs:label xml:lang="en">Party</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/PeriodOfLife -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/PeriodOfLife">
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt einen Lebensabschnitt</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a period of life </rdfs:comment>
+        <rdfs:label xml:lang="de">Lebensabschnitt</rdfs:label>
+        <rdfs:label xml:lang="en">Period of Life</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Person -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Person">
+        <rdfs:comment xml:lang="de">Das Konzept beschreibt eine historische Person</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes an historic Person</rdfs:comment>
+        <rdfs:label xml:lang="de">Person</rdfs:label>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 25.5.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Picture -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Picture">
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt ein Bild</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a Picture</rdfs:comment>
+        <rdfs:label xml:lang="de">Bild</rdfs:label>
+        <rdfs:label xml:lang="en">Picture</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 13.01.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/PoliticalOrganisation -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/PoliticalOrganisation">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Organisation"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine politische Organisation</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a politcal Organisation</rdfs:comment>
+        <rdfs:label xml:lang="en">Political Organisation</rdfs:label>
+        <rdfs:label xml:lang="de">Politische Organisation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.12.2009</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable 09.09.2013 Organization changed to Organisation</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Professor -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Professor">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Person"/>
+        <rdfs:comment xml:lang="de">Das Konzept Professor beschreibt eine historische Person mit dem Beruf eines Professors</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Professor describes a person of profession Professor.</rdfs:comment>
+        <rdfs:label xml:lang="de">Professor</rdfs:label>
+        <rdfs:label xml:lang="en">Professor</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2 is now subclass of Person, moved several attributes to Person - 25.5.2007 0.1 initial creation - 24.05.07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Publication -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Publication">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Publikation</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Publication describes a publication</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+        <rdfs:label xml:lang="de">VerÃ¶ffentlichung</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as subclass of Document</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 0.2  10.03.2008</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Qualification -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Qualification">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Qualifikation, z.B. Promotion oder Habilitation</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a qualification</rdfs:comment>
+        <rdfs:label xml:lang="en">Qualification</rdfs:label>
+        <rdfs:label xml:lang="de">Qualifikation</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 04.02.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/QualificationDocument -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/QualificationDocument">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Document"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Qualifikationsschrift</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a qualification paper</rdfs:comment>
+        <rdfs:label xml:lang="en">Qualification Paper</rdfs:label>
+        <rdfs:label xml:lang="de">Qualifikationsschrift</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as subclass of Document</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/School -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/School">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/Body"/>
+        <rdfs:comment xml:lang="en">Describes a school</rdfs:comment>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine Schule</rdfs:comment>
+        <rdfs:label xml:lang="en">School</rdfs:label>
+        <rdfs:label xml:lang="de">Schule</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 19.02.2015</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/SocialRole -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/SocialRole">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt eine gesellschaftliche Funktion</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a social role</rdfs:comment>
+        <rdfs:label xml:lang="de">Gesellschaftliche Funktion</rdfs:label>
+        <rdfs:label xml:lang="en">Social Role</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://catalogus-professorum.org/cpm/2/Study -->
+
+
+    <owl:Class rdf:about="http://catalogus-professorum.org/cpm/2/Study">
+        <rdfs:subClassOf rdf:resource="http://catalogus-professorum.org/cpm/2/PeriodOfLife"/>
+        <rdfs:comment xml:lang="de">Diese Konzept beschreibt ein Studium</rdfs:comment>
+        <rdfs:comment xml:lang="en">The concept Person describes a study</rdfs:comment>
+        <rdfs:label xml:lang="de">Studium</rdfs:label>
+        <rdfs:label xml:lang="en">Study</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 initial creation date: 24.05.2007</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.01.2015 changed as subclass of PeriodOfLife</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0 stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.aksw.org/spatialHierarchy/SpatialArea -->
+
+
+    <owl:Class rdf:about="http://ns.aksw.org/spatialHierarchy/SpatialArea"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+
+

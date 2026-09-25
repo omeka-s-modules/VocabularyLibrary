@@ -1,0 +1,1374 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sealit: <http://www.sealitproject.eu/ontology/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix cc: <http://creativecommons.org/ns#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .  
+
+sealit: a owl:Ontology ;
+	rdfs:label "SeaLiT Ontology"@en ;
+	rdfs:comment "The SeaLiT Ontology is a formal ontology intended to facilitate the integration, mediation and interchange of heterogeneous information related to maritime history. It aims at providing the semantic definitions needed to transform disparate, localised information sources of maritime history into a coherent global resource. It also serves as a common language for domain experts and IT developers to formulate requirements and to agree on system functionalities with respect to the correct handling of historical information. The ontology uses and extends the CIDOC Conceptual Reference Model (ISO 21127:2014), in particular version 7.2.1, as a general ontology of human activity, things and events happening in space and time."@en ;
+	dcterms:title "SeaLiT Ontology"@en ;
+	dcterms:description "The SeaLiT Ontology is a formal ontology intended to facilitate the integration, mediation and interchange of heterogeneous information related to maritime history. It aims at providing the semantic definitions needed to transform disparate, localised information sources of maritime history into a coherent global resource. It also serves as a common language for domain experts and IT developers to formulate requirements and to agree on system functionalities with respect to the correct handling of historical information. The ontology uses and extends the CIDOC Conceptual Reference Model (ISO 21127:2014), in particular version 7.2.1, as a general ontology of human activity, things and events happening in space and time."@en ;
+	dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+	cc:license <https://creativecommons.org/licenses/by/4.0/> ; 
+	dcterms:creator <https://orcid.org/0000-0003-2788-526X>, <https://orcid.org/0000-0001-5086-7284>, <https://orcid.org/0000-0002-6006-0844> ;
+	dcterms:issued "2022-06-21"^^xsd:date ;
+    dcterms:modified "2023-06-09"^^xsd:date ;
+    owl:versionInfo "SeaLiT Ontology 1.2"@en ;
+	owl:versionIRI <https://sealitproject.eu/ontology/SeaLiT_Ontology_v1.2_RDFS.ttl> ;
+	vann:preferredNamespacePrefix "sealit" ;
+	vann:preferredNamespaceUri <http://www.sealitproject.eu/ontology/> ;
+	owl:imports <http://www.cidoc-crm.org/cidoc-crm/> .
+	
+sealit:Ammunition a rdfs:Class ;
+    rdfs:label "Ammunition"@en ;
+    rdfs:comment "This class comprises information about the kinds and the number of guns of the ship at the moment of registration. The current documentation is mostly about merchant ships. With the beginning of the Greek Revolution in 1821, the Greek merchant fleet was transformed to military – consequently, there are also references to vessels that have ammunition during that period."@en ;
+    rdfs:subClassOf crm:E22_Human-Made_Object .
+
+sealit:Arrival a rdfs:Class ;
+    rdfs:label "Arrival"@en ;
+    rdfs:comment "This class comprises the arrival activity of a ship, which is a part, a stage of the overall voyage. It includes information about a place where the ship lands within a specific timeframe. It describes end points of the partial routes or within the overall voyage."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Civil_Registration a rdfs:Class ;
+    rdfs:label "Civil Registration"@en ;
+    rdfs:comment "Civil registration stands for legal processes of registering persons in various contexts. The outcomes of this process are legal documents such as civil acts of birth or death, or other documents (such as Register of Entries in shipyards), which usually have a period of validity."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Country a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "This class describes the country, a place identified as a distinct entity in political geography."@en ;
+    rdfs:subClassOf crm:E53_Place .
+
+sealit:Course a rdfs:Class ;
+    rdfs:label "Course"@en ;
+    rdfs:comment "This class comprises information about courses, teaching units divided and organized for educational purposes."@en ;
+    rdfs:subClassOf sealit:Teaching_Unit .
+
+sealit:Crew_Payment a rdfs:Class ;
+    rdfs:label "Crew Payment"@en ;
+    rdfs:comment "This class comprises information about the wage payments of the people that are members of the crew of a ship."@en ;
+    rdfs:subClassOf sealit:Money_for_Labour .
+
+sealit:De-flagging a rdfs:Class ;
+    rdfs:label "De-flagging"@en ;
+    rdfs:comment "De-flagging is regarded in this context as synonym to ship de-registration. When a ship is no longer flagged, this means that for a reason (e.g., demolished, shipwreck, lost, sold, etc.) the ship does not anymore sail under a legal state (of registration, having a flag)."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Discharge a rdfs:Class ;
+    rdfs:label "Discharge"@en ;
+    rdfs:comment "This class comprises the termination of a working relationship, the ending of an employee to provide service. In the context of the SeaLiT project, which explores data regarding employments records with lists of maritime personnel, a discharge is specifically defined in the sense of disembarkation, which is the activity that usually terminates a sailor’s employment service."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Duration a rdfs:Class ;
+    rdfs:label "Duration"@en ;
+    rdfs:comment "This class expresses the length of time in terms of indeterminacy of the duration value that can be approximated. A duration may be expressed using all the parts of a date-time (from years to seconds) and can therefore be defined as a six-dimensional space. Because the relation between some of date parts is not fixed (such as the number of days in a month), the order relationship between durations is only partial, and the result of a comparison between two durations may be undetermined. The same value may consists of different parts, such as 4 years, 10 months and 2 days."@en ;
+    rdfs:subClassOf crm:E54_Dimension .
+
+sealit:Employment a rdfs:Class ;
+    rdfs:label "Employment"@en ;
+    rdfs:comment "This class comprises information about employment services between two parties, usually based on a contract where work is paid for. In the context of the SeaLiT project, it comprises information about the employment services provided on board. This relationship is initiated by the recruitment of the sailor man and is terminated by the discharge/disembarkation of this worker."@en ;
+    rdfs:subClassOf sealit:Service .
+
+sealit:Horsepower a rdfs:Class ;
+    rdfs:label "Horsepower"@en ;
+    rdfs:comment "The power of the ship’s marine propulsion engine. The overall operation of the ship is highly dependent on the performance of its main propulsion engine, measured in terms of its power rating. There are various types of horsepower such as Nominal horsepower (NHP), Shaft horsepower (SHP), Indicated horsepower (IHP)."@en ;
+    rdfs:subClassOf crm:E54_Dimension .
+
+sealit:Labour_Contract a rdfs:Class ;
+    rdfs:label "Labour Contract"@en ;
+    rdfs:comment "This class comprises plans expressed in a document that specifies the employment conditions."@en ;
+    rdfs:subClassOf crm:E29_Design_or_Procedure .
+
+sealit:Language_Capacity a rdfs:Class ;
+    rdfs:label "Language Capacity"@en ;
+    rdfs:comment "This class comprises concepts denoting a person knowledge of various languages."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Leaving a rdfs:Class ;
+    rdfs:label "Leaving"@en ;
+    rdfs:comment "This class comprises the leaving of a ship, which is a part, a stage of the overall voyage. It includes information about a place from which the ship leaves within a specific timeframe. It describes start points of the partial routes or with the overall voyage."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Legal_Document_with_Temporal_Validity a rdfs:Class ;
+    rdfs:label "Legal Document with Temporal Validity"@en ;
+    rdfs:comment "This class comprises official documents or legal agreements that are valid for a specific timespan. The concept of this class includes licenses, official permissions, authorizations, etc., having a temporal validity."@en ;
+    rdfs:subClassOf sealit:Legal_Object_Relationship .
+
+sealit:Legal_Object_Relationship a rdfs:Class ;
+    rdfs:label "Legal Object Relationship"@en ;
+    rdfs:comment "This class comprises legal object relationships of which the timespan and the state (of these relationships) cannot be observed or documented. We can only observe these relationships through the events that initialize or terminate this state of relationship (starting event and terminating event). Basically, it comprises of characteristics/properties of a legal relationship which is the kind of information that can be inferred/asserted and not by temporal documentation of these properties."@en ;
+    rdfs:subClassOf crm:E1_CRM_Entity .
+
+sealit:Literacy_Status a rdfs:Class ;
+    rdfs:label "Literacy Status"@en ;
+    rdfs:comment "This class comprises concepts denoting a person’s literacy status."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Loading a rdfs:Class ;
+    rdfs:label "Loading"@en ;
+    rdfs:comment "This class comprises loading activities as they are documented during the voyages (or as parts of the routes) of the ships. It seems that the definition of a ship includes the notion of the loading of things; the procedures of loading/unloading are very important; the types of ships, the ports and the routes seem to define the types of loading, the dimensions, and the technology of loading/unloading and storage in ships."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Money_for_Labour a rdfs:Class ;
+    rdfs:label "Money for Labour"@en ;
+    rdfs:comment "This class comprises activities in which actors pay/receive money for services related to labour, human work, in order to earn wage."@en ;
+    rdfs:subClassOf sealit:Money_for_Service .
+
+sealit:Money_for_Service a rdfs:Class ;
+    rdfs:label "Money for Service"@en ;
+    rdfs:comment "This class comprises transaction activities in which actors pay/receive money for services."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Money_for_Things a rdfs:Class ;
+    rdfs:label "Money for Things"@en ;
+    rdfs:comment "This class comprises transaction activities in which actors pay/receive money for services related to things, such as purchase of foods, etc."@en ;
+    rdfs:subClassOf sealit:Money_for_Service .
+
+sealit:Navigation_Type a rdfs:Class ;
+    rdfs:label "Navigation Type"@en ;
+    rdfs:comment "This class comprises concepts denoted by terms used to characterize and classify a ship, in particular its navigation type, based on the long or short distances of travel."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Passing a rdfs:Class ;
+    rdfs:label "Passing"@en ;
+    rdfs:comment "This class comprises passing by (or through) activities of a ship at sea. This information helps to track the ships and the routes. Passing by or through is a part of the overall voyage. It includes information about places by/through which the ship passes within a specific timeframe."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Port_of_Registry a rdfs:Class ;
+    rdfs:label "Port of Registry"@en ;
+    rdfs:comment "This class describes the port (the issuing authority) that is responsible for a vessel registration."@en ;
+    rdfs:subClassOf crm:E74_Group .
+
+sealit:Profession a rdfs:Class ;
+    rdfs:label "Profession"@en ;
+    rdfs:comment "This class comprises information about the person profession, work, career or job, as it was written inside the original source."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Promotion a rdfs:Class ;
+    rdfs:label "Promotion"@en ;
+    rdfs:comment "This class comprises activities that result in the promotion, the advancement of an employee within a company position or job tasks or in a higher ranking as a reward for good performance. It is typically associated with a higher rate or a financial bonus."@en ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment .
+
+sealit:Punishment a rdfs:Class ;
+    rdfs:label "Punishment"@en ;
+    rdfs:comment "This class comprises instances of punishments in terms of public policy, defined by an authority, as a response to a particular action that is deemed undesirable or unacceptable. Examples of penalties for punishment are prison, or loss of a privilege or of a status, etc."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Recruitment a rdfs:Class ;
+    rdfs:label "Recruitment"@en ;
+    rdfs:comment "This class comprises the process of hiring and bringing new staff member to work for a company, or to become a new member of an organization. In the context of the SeaLiT project, which explores data regarding employments records with lists of maritime personnel, a recruitment is specifically defined in the sense of on board employment. Recruitment or embarkation is the activity that usually starts a sailor’s employment service. There is information from sources, such as from the Maritime Register of the State for La Ciotat (matricule des maîtres au cabotage) , referring that they used to have “recruitment” systems that registered every man 18 years old and up, or a younger boy (as apprentice), exercising one of the maritime professions for over a year, at the Navy’s disposal, in case of a war. On the same time, the state provided many privileges in return for service in the navy, such as tax exemptions, military pensions, free education and life insurance for the families of listed seamen."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Religion_Status a rdfs:Class ;
+    rdfs:label "Religion Status"@en ;
+    rdfs:comment "This class comprises concepts used to characterize the religious affiliation of a person."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Section a rdfs:Class ;
+    rdfs:label "Section"@en ;
+    rdfs:comment "This class comprises information about sections of lessons. Some courses are divided into multiple sections."@en ;
+    rdfs:subClassOf sealit:Teaching_Unit .
+
+sealit:Service a rdfs:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "Service is the willing, the capability to offer a service, by some instance of E39 Actor, independently if it is executed or not. This offer is declared at the request of another instance of E39 Actor."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Sex_Type a rdfs:Class ;
+    rdfs:label "Sex Type"@en ;
+    rdfs:comment "The gender of a person."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Shareholding a rdfs:Class ;
+    rdfs:label "Shareholding"@en ;
+    rdfs:comment "This class describes the common phenomenon through periods in which ships share ownership. Therefore, if for example a person is allowed to possess up to 1/48 of a ship, it means that a single person could have many ships shares in the same time. Sometimes the leading owner has the absolute majority of the shares, sometimes only the relative majority; these are just assumptions/examples that this class can describe."@en ;
+    rdfs:subClassOf sealit:Ship_Ownership_Phase .
+
+sealit:Ship a rdfs:Class ;
+    rdfs:label "Ship"@en ;
+    rdfs:comment "This class comprises vessels, ships of different kinds, which can cross large open waters. Ships have been important contributors to human migration and commerce."@en ;
+    rdfs:subClassOf crm:E22_Human-Made_Object .
+
+sealit:Ship_Construction a rdfs:Class ;
+    rdfs:label "Ship Construction"@en ;
+    rdfs:comment "This class describes the activity of building new ships and other floating vessels. The ship construction information, in particular the location and date of construction, is the most reliable information (extracted from the source) that helps to identify a ship. A very important methodological question is what information can be used to define the unique identity of a ship. The answer is that there does not exist a single information that can define it: it is always a matter of comparison of the sources and information. Even though, there is information that is critical to the identity of a ship, such as the place and the year of construction."@en ;
+    rdfs:subClassOf crm:E12_Production .
+
+sealit:Ship_ID a rdfs:Class ;
+    rdfs:label "Ship ID"@en ;
+    rdfs:comment "This class comprises numeric information assigned as registration number of a ship."@en ;
+    rdfs:subClassOf crm:E42_Identifier .
+
+sealit:Ship_Name a rdfs:Class ;
+    rdfs:label "Ship Name"@en ;
+    rdfs:comment "This class comprises the name that identifies a ship. The name of the ship can be changed because of an ownership (so a ship can have many names through time)."@en ;
+    rdfs:subClassOf crm:E41_Appellation .
+
+sealit:Ship_Ownership_Phase a rdfs:Class ;
+    rdfs:label "Ship Ownership Phase"@en ;
+    rdfs:comment "This class comprises information about the ownership state of a ship. It consists of characteristics or properties of ownership. Ownership is a legal agreement, a kind of information that can be inferred/asserted and cannot be directly observed. Ownership usually characterizes/assigns a name to a ship and a ship changes its name under an ownership state. Ownership phase can be traced by the ship registration activity that initiates it, and by the de-flagging activity that terminates the phase. A single ship can have many owners (persons or/and companies)."@en ;
+    rdfs:subClassOf sealit:Legal_Object_Relationship .
+
+sealit:Ship_Registration a rdfs:Class ;
+    rdfs:label "Ship Registration"@en ;
+    rdfs:comment "A ship acquires legal identity with the process of its registration, the register of its name, flag, id, dimensions and horsepower. The ownership information is documented in the registry book signed by the Port of Registry."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Ship_Repair a rdfs:Class ;
+    rdfs:label "Ship Repair"@en ;
+    rdfs:comment "This class comprises activities that alter or change or restore/repair a ship."@en ;
+    rdfs:subClassOf crm:E11_Modification .
+
+sealit:Social_Status a rdfs:Class ;
+    rdfs:label "Social Status"@en ;
+    rdfs:comment "This class comprises a person’s social status, as it was written inside the original source. This can include different kinds of social status, such as marital status or estate. In such cases of further classification, these concepts can be used as instances of the Social Status class. This class extends E55 Type in order to refine the meaning of this specific concept (social status). This concept is sufficiently stable and associated with additional explicitly modelled property specific to it ( “has social status” ). An alternative mechanism is to specialize the classification of Social Status instances to any level of detail, by linking to external vocabulary sources, thesauri, classification schemas or ontologies. In general, a good practice for concepts that are not user defined metaclasses, would be to be treated as particulars with the relationship P2 has type."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Subject a rdfs:Class ;
+    rdfs:label "Subject"@en ;
+    rdfs:comment "This class comprises information about the scientific subjects of the courses that were taught at a specific semester."@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+sealit:Teaching_Unit a rdfs:Class ;
+    rdfs:label "Teaching Unit"@en ;
+    rdfs:comment "This class comprises information about the school year, the period of time during which the school holds classes and offers courses. It is a period of educational activities."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Tonnage a rdfs:Class ;
+    rdfs:label "Tonnage"@en ;
+    rdfs:comment "Tonnage is a measure of the cargo-carrying capacity of a ship. The sources refer to different kinds of tonnage, such as gross tonnage, net tonnage, etc. and through time, tonnage types may change. Tonnage may change during a reconstruction phase of a ship, for example."@en ;
+    rdfs:subClassOf crm:E54_Dimension .
+
+sealit:Unloading a rdfs:Class ;
+    rdfs:label "Unloading"@en ;
+    rdfs:comment "This class comprises unloading activities as they are documented during the voyages (or as parts of the routes) of the ships. The procedures of loading/unloading are very important; the types of ships, the ports and the routes seem to define the types of loading, the dimensions, and the technology of loading/unloading and storage in ships."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:Voyage a rdfs:Class ;
+    rdfs:label "Voyage"@en ;
+    rdfs:comment "This class comprises information about the voyages of ships. Voyage is defined as the process of travelling from one place to another, staying there, usually for a short time; it is not a simple move/change from place to place; it is a movement in space and time (and it is documented as that [1] ). The same ship can sail many voyages during its lifetime. Voyage and route information is very important for historically investigating the various trade routes and navigation patterns used to exist in different times. Voyage is an important aspect of the ship and the seaman, and generally of the seafaring life, both at sea and ashore ."@en ;
+    rdfs:subClassOf crm:E7_Activity .
+
+sealit:has_crew_number_capacity a rdf:Property ;
+    rdfs:label "has crew number capacity"@en ;
+    rdfs:comment "This property specifies the numbers of workers/sailors authorized to work on board."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range rdfs:Literal .
+
+sealit:has_current_age a rdf:Property ;
+    rdfs:label "has current age"@en ;
+    rdfs:comment "This property describes the current age of a person at a specific time (the time of the information recording)."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range rdfs:Literal .
+
+sealit:has_duration_value a rdf:Property ;
+    rdfs:label "has duration value"@en ;
+    rdfs:comment "This property allows an instance of Duration to be approximated by an instance of E60 Number primitive that provides the duration value of a time-span. The value can be expressed in multiple units (such as “2 months and 5 days” or “3 years and 10 months” ), thus it is proposed to be implemented in RDFS following ISO 8601 [2] and xsd:duration [3] (form: PnYnMnDTnHnMnS)."@en ;
+    rdfs:domain sealit:Duration ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf crm:P90_has_value .
+
+sealit:has_first_name a rdf:Property ;
+    rdfs:label "has first name"@en ;
+    rdfs:comment "This property associates an instance of E21 Person with an instance of E62 String used as the person’s first name. This property is an alternative (more convenient) implementation of P1 is identified by: E41 Appellation – P2 has type: “first name”; P190 has symbolic content: E62 String . The use of the P1 is identified by: E41 Appellation is required if there is the need to assign some additional properties to the first name, such as properties of use or attribution."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range rdfs:Literal .
+
+sealit:has_last_name a rdf:Property ;
+    rdfs:label "has last name"@en ;
+    rdfs:comment "This property associates an instance of E21 Person with an instance of E62 String used as the person’s last name. This property is an alternative (more convenient) implementation of P1 is identified by: E41 Appellation – P2 has type: “last name”; P190 has symbolic content: E62 String . The use of the P1 is identified by: E41 Appellation is required if there is the need to assign some additional properties to the last name, such as type, properties of use or attribution. In some countries (e.g., Spain), each person has two last names. In such cases, the value assigned to E62 String can contain both last names, if a clear distinction is not required."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range rdfs:Literal .
+
+sealit:of_share a rdf:Property ;
+    rdfs:label "of share"@en ;
+    rdfs:comment "This property describes the number of shares hold by an owner."@en ;
+    rdfs:domain sealit:Shareholding ;
+    rdfs:range rdfs:Literal .
+
+sealit:related_to a rdf:Property ;
+    rdfs:label "related to"@en ;
+    rdfs:comment "This property describes the existence of a relation between persons, without the need to also specify the kind of relation. It is used in cases in which the types of the possible relationships between persons are many and not defined by the model, or in cases in which there is lack of knowledge about the kind of the relationships and there is only a requirement to mark just the existence of a link between persons. The property of property has type: E55 Type can be used to specify the type of relation, e.g., by linking to a vocabulary or thesaurus."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range crm:E21_Person .
+
+sealit:with_number_of_students a rdf:Property ;
+    rdfs:label "with number of students"@en ;
+    rdfs:comment "This property describes the number of the students participating in a teaching unit."@en ;
+    rdfs:domain sealit:Teaching_Unit ;
+    rdfs:range rdfs:Literal .
+
+sealit:ID_of a rdf:Property ;
+    rdfs:label "ID of"@en ;
+    rdfs:domain crm:E42_Identifier ;
+    rdfs:range sealit:Civil_Registration ;
+    owl:inverseOf sealit:with_ID .
+
+sealit:arrival_is_part_of a rdf:Property ;
+    rdfs:label "arrival is part of"@en ;
+    rdfs:domain sealit:Arrival ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P9i_forms_part_of ;
+    owl:inverseOf sealit:consists_of_arrival .
+
+sealit:at_place a rdf:Property ;
+    rdfs:label "at place"@en ;
+    rdfs:comment "This property describes the spatial location of an arrival."@en ;
+    rdfs:domain sealit:Arrival ;
+    rdfs:range crm:E53_Place ;
+	rdfs:subPropertyOf crm:P7_took_place_at ;
+    owl:inverseOf sealit:is_place_of_arrival .
+
+sealit:by_place a rdf:Property ;
+    rdfs:label "by place"@en ;
+    rdfs:comment "This property associates an instance of a place with an instance of a passing activity by that place. This class provides information about the types of movements of a ship, which are parts of the route (of the voyage), and are documented as that."@en ;
+    rdfs:domain sealit:Passing ;
+    rdfs:range crm:E53_Place ;
+	rdfs:subPropertyOf crm:P7_took_place_at ;
+    owl:inverseOf sealit:is_place_of_passing_by .
+
+sealit:concerned a rdf:Property ;
+    rdfs:label "concerned"@en ;
+    rdfs:comment "This property identifies the person that was promoted by a promotion activity."@en ;
+    rdfs:domain sealit:Promotion ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P140_assigned_attribute_to ;
+    owl:inverseOf sealit:was_promoted_by .
+
+sealit:consists_of_arrival a rdf:Property ;
+    rdfs:label "consists of arrival"@en ;
+    rdfs:comment "This property allows an instance of a Voyage to be analysed into parts such as arrival activities. It is a subproperty of P9 consists of (forms part of). This analysis of parts of the voyage contributes to the route analysis, which provides information about specific navigation patterns of the ship."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Arrival ;
+    rdfs:subPropertyOf crm:P9_consists_of ;
+    owl:inverseOf sealit:arrival_is_part_of .
+
+sealit:consists_of_leaving a rdf:Property ;
+    rdfs:label "consists of leaving"@en ;
+    rdfs:comment "This property allows an instance of a Voyage to be analysed into parts such as leaving activities. It is a subproperty of P9 consists of (forms part of). This analysis of parts of the voyage contributes to the route analysis, which provides information about specific navigation patterns of the ship."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Leaving ;
+    rdfs:subPropertyOf crm:P9_consists_of ;
+    owl:inverseOf sealit:leaving_is_part_of .
+
+sealit:consists_of_loading a rdf:Property ;
+    rdfs:label "consists of loading"@en ;
+    rdfs:comment "This property allows an instance of a Voyage to be analysed into parts such as loading activities. It is a subproperty of P9 consists of (forms part of). The activities of loading/unloading happen ashore, before, in between, or after (with the end) of the voyage of a ship and are part of its definition."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Loading ;
+    rdfs:subPropertyOf crm:P9_consists_of ;
+    owl:inverseOf sealit:loading_is_part_of .
+
+sealit:consists_of_passing a rdf:Property ;
+    rdfs:label "consists of passing"@en ;
+    rdfs:comment "This property allows an instance of a Voyage to be analysed into parts such as passing by/through activities. It is a subproperty of P9 consists of (forms part of). This analysis of parts of the voyage contributes to the route analysis, which provides information about specific navigation patterns of the ship"@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Passing ;
+    rdfs:subPropertyOf crm:P9_consists_of ;
+    owl:inverseOf sealit:passing_is_part_of .
+
+sealit:consists_of_unloading a rdf:Property ;
+    rdfs:label "consists of unloading"@en ;
+    rdfs:comment "This property allows an instance of a Voyage to be analysed into parts such as unloading activities. It is a subproperty of P9 consists of (forms part of). The activities of loading/unloading happen ashore, before, in between, or after (with the end) of the voyage of a ship and are part of its definition."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Unloading ;
+    rdfs:subPropertyOf crm:P9_consists_of ;
+    owl:inverseOf sealit:unloading_is_part_of .
+
+sealit:constructed a rdf:Property ;
+    rdfs:label "constructed"@en ;
+    rdfs:comment "This property identifies a ship that came into existence as a result of a construction event."@en ;
+    rdfs:domain sealit:Ship_Construction ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P108_has_produced ;
+    owl:inverseOf sealit:was_constructed_by .
+
+sealit:de-flagged_in a rdf:Property ;
+    rdfs:label "de-flagged in"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:De-flagging ;
+    owl:inverseOf sealit:de-flagging_of .
+
+sealit:de-flagging_of a rdf:Property ;
+    rdfs:label "de-flagging of"@en ;
+    rdfs:comment "This property associates an instance of a ship with the instance of the de-flagging activity that de-registered it."@en ;
+    rdfs:domain sealit:De-flagging ;
+    rdfs:range sealit:Ship ;
+    owl:inverseOf sealit:de-flagged_in .
+
+sealit:destination a rdf:Property ;
+    rdfs:label "destination"@en ;
+    rdfs:comment "This property describes the intended place where the voyage, theoretically, according to the maps and the plans should end. It is the planned destination of the route, which may change in reality."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range crm:E53_Place ;
+    owl:inverseOf sealit:is_destination_of .
+
+sealit:duration_of a rdf:Property ;
+    rdfs:label "duration of"@en ;
+    rdfs:domain sealit:Duration ;
+    rdfs:range crm:E52_Time-Span ;
+    rdfs:subPropertyOf crm:P191i_was_duration_of ;
+    owl:inverseOf sealit:had_duration .
+
+sealit:employment_of a rdf:Property ;
+    rdfs:label "employment of"@en ;
+    rdfs:domain sealit:Employment ;
+    rdfs:range sealit:Money_for_Labour ;
+    rdfs:subPropertyOf sealit:service_of ;
+    owl:inverseOf sealit:for_employment .
+
+sealit:employment_position_type_was_promoted_by a rdf:Property ;
+    rdfs:label "employment position type was promoted by"@en ;
+    rdfs:domain sealit:Profession ;
+    rdfs:range sealit:Promotion ;
+    rdfs:subPropertyOf crm:P141i_was_assigned_by ;
+    owl:inverseOf sealit:promoted_into_employment_position_type .
+
+sealit:employment_provided_by a rdf:Property ;
+    rdfs:label "employment provided by"@en ;
+    rdfs:comment "This property describes the employment service provided by an E39 Actor."@en ;
+    rdfs:domain sealit:Employment ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf sealit:service_provided_by ;
+    owl:inverseOf sealit:provided_employment .
+
+sealit:ended a rdf:Property ;
+    rdfs:label "ended"@en ;
+    rdfs:comment "This property describes an employment that was ended/terminated by a discharge activity."@en ;
+    rdfs:domain sealit:Discharge ;
+    rdfs:range sealit:Employment ;
+    rdfs:subPropertyOf crm:P184_ends_before_or_with_the_end_of ;
+    owl:inverseOf sealit:ended_by .
+
+sealit:ended_by a rdf:Property ;
+    rdfs:label "ended by"@en ;
+    rdfs:domain sealit:Employment ;
+    rdfs:range sealit:Discharge ;
+    rdfs:subPropertyOf crm:P184i_ends_with_or_after_the_end_of ;
+    owl:inverseOf sealit:ended .
+
+sealit:finally_arriving_at a rdf:Property ;
+    rdfs:label "finally arriving at"@en ;
+    rdfs:comment "This property identifies the final place (end) of a voyage. It is the actual arrival place, meaning it does not refer to the original destination place but the place to which the ship finally arrived."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range crm:E53_Place ;
+    owl:inverseOf sealit:is_arrival_place_of .
+
+sealit:for_employment a rdf:Property ;
+    rdfs:label "for employment"@en ;
+    rdfs:comment "This property associates an instance of a payment with an instance of an employment that was used in order to specify rights and responsibilities between the “employee” and the “employer”."@en ;
+    rdfs:domain sealit:Money_for_Labour ;
+    rdfs:range sealit:Employment ;
+    rdfs:subPropertyOf sealit:for_service ;
+    owl:inverseOf sealit:employment_of .
+
+sealit:for_employment_period a rdf:Property ;
+    rdfs:label "for employment period"@en ;
+    rdfs:comment "This property describes the total timespan (full employment period) of the Money for Labour activity and it is a shortcut of the most detailed path: Money for Labour – for employment: Employment – P4 has timespan: E52 Time-Span (timespan of recruitment and discharge) . The time-span can be also specified through a Duration instance, using the property had duration (duration of)."@en ;
+    rdfs:domain sealit:Money_for_Labour ;
+    rdfs:range crm:E52_Time-Span ;
+    owl:inverseOf sealit:is_employment_period_of .
+
+sealit:for_thing a rdf:Property ;
+    rdfs:label "for thing"@en ;
+    rdfs:comment "This property describes a Money for Things activity that pays/receives money for physical things."@en ;
+    rdfs:domain sealit:Money_for_Things ;
+    rdfs:range crm:E18_Physical_Thing ;
+    owl:inverseOf sealit:thing_of .
+
+sealit:for_voyage a rdf:Property ;
+    rdfs:label "for voyage"@en ;
+    rdfs:comment "This property describes the voyage that sets the preconditions (motivates, determines, fixes) a crew payment. There is a dependency relationship between them; a new voyage sets the preconditions for a new crew payment activity."@en ;
+    rdfs:domain sealit:Crew_Payment ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P17_was_motivated_by ;
+    owl:inverseOf sealit:motivated_payment .
+
+sealit:formerly_or_currently_possesses a rdf:Property ;
+    rdfs:label "formerly or currently possesses"@en ;
+    rdfs:comment "This property associates an instance of a Legal Document with Temporal Validity with the instance of an Actor that formerly or currently possesses it, at the time of validity of the record or database containing the statement that uses this property. The property does not allow any indication of how long the legal document with temporal validity has been possessed by the specific Actor."@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Legal_Document_with_Temporal_Validity ;
+    owl:inverseOf sealit:is_formerly_or_currently_possessed_by .
+
+sealit:from_place a rdf:Property ;
+    rdfs:label "from place"@en ;
+    rdfs:comment "This property describes the spatial location from which leaving (of ship) was documented. The description of this type of movement provides information about the route analysis."@en ;
+    rdfs:domain sealit:Leaving ;
+    rdfs:range crm:E53_Place ;
+	rdfs:subPropertyOf crm:P7_took_place_at ;
+    owl:inverseOf sealit:is_place_of_leaving .
+
+sealit:had_duration a rdf:Property ;
+    rdfs:label "had duration"@en ;
+    rdfs:comment "This property describes the length of time covered by an E52 Time-Span. It allows an E52 Time-Span to be associated with a duration (as a dimension, an interval) independent from the actual beginning and end."@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range sealit:Duration ;
+    rdfs:subPropertyOf crm:P191_had_duration ;
+    owl:inverseOf sealit:duration_of .
+
+sealit:had_flag_of a rdf:Property ;
+    rdfs:label "had flag of"@en ;
+    rdfs:comment "This property associates an instance of a Ship with an instance of the country of which this ship becomes property and consequently acquires this country’s flag. The property is a shortcut of the full path Ship – is registered by: Ship Registration – with ship flag of: Country."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Country ;
+    owl:inverseOf sealit:was_flag_of .
+
+sealit:had_money_value a rdf:Property ;
+    rdfs:label "had money value"@en ;
+    rdfs:comment "This property describes the Monetary Amount paid (i.e., the cost) for a specific Money for Service activity."@en ;
+    rdfs:domain sealit:Money_for_Service ;
+    rdfs:range crm:E97_Monetary_Amount ;
+    owl:inverseOf sealit:was_price_of .
+
+sealit:had_student a rdf:Property ;
+    rdfs:label "had student"@en ;
+    rdfs:comment "This property associates instances of E39 Actor with the instances of Teaching Unit in which they participated in the role of students. The property of the property status of participation allows specifying the nature of an Actor’s participation in a course/teaching unit. For example, it can be the student’s exam status or paying/scholarship status in a course."@en ;
+    rdfs:domain sealit:Teaching_Unit ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P11_had_participant ;
+    owl:inverseOf sealit:student_in .
+
+sealit:has_ammunition a rdf:Property ;
+    rdfs:label "has ammunition"@en ;
+    rdfs:comment "This property associates a ship with the ammunition that it is equipped with."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ammunition ;
+    rdfs:subPropertyOf crm:P46_is_composed_of ;
+    owl:inverseOf sealit:is_ammunition_of .
+
+sealit:has_been_agreed_in a rdf:Property ;
+    rdfs:label "has been agreed in"@en ;
+    rdfs:comment "This property associates an instance of a money for labour with an instance of a Labour Contract document that is agreed and planned for this payment."@en ;
+    rdfs:domain sealit:Money_for_Labour ;
+    rdfs:range sealit:Labour_Contract ;
+    owl:inverseOf sealit:is_agreement_for .
+
+sealit:has_horsepower a rdf:Property ;
+    rdfs:label "has horsepower"@en ;
+    rdfs:comment "This property records the horsepower dimension of a ship."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Horsepower ;
+    rdfs:subPropertyOf crm:P43_has_dimension ;
+    owl:inverseOf sealit:is_horsepower_of .
+
+sealit:has_language_capacity a rdf:Property ;
+    rdfs:label "has language capacity"@en ;
+    rdfs:comment "This property describes concepts that represent language capacity/knowledge that characterizes a E21 Person at a specific time period that is maybe unknown."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Language_Capacity ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_language_capacity_of .
+
+sealit:has_literacy_status a rdf:Property ;
+    rdfs:label "has literacy status"@en ;
+    rdfs:comment "This property describes the literacy status of a person at a specific time period that is maybe unknown."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Literacy_Status ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_literacy_status_of .
+
+sealit:has_navigation_type a rdf:Property ;
+    rdfs:label "has navigation type"@en ;
+    rdfs:comment "This property describes the navigation type of the ship. It allows a form of specialisation through the use of a terminological hierarchy, or thesaurus."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Navigation_Type ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_navigation_type_of .
+
+sealit:has_profession a rdf:Property ;
+    rdfs:label "has profession"@en ;
+    rdfs:comment "This property associates a person with the profession, job or career that has been practicing at a specific time period that is maybe unknown. The evolution in the career/profession of a person is an important historical question; it implies the person development and evolution (microhistory) and consequently the population evolution (macrohistory)."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Profession ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:profession_of .
+
+sealit:has_religion_status a rdf:Property ;
+    rdfs:label "has religion status"@en ;
+    rdfs:comment "This property describes the religion status of a person at a specific time period that is maybe unknown."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Religion_Status ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_religion_status_of .
+
+sealit:has_sex_type a rdf:Property ;
+    rdfs:label "has sex type"@en ;
+    rdfs:comment "This property associates a person with the sex type that this person has at a specific time period that is maybe unknown."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Sex_Type ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_sex_type_of .
+
+sealit:has_shareholder a rdf:Property ;
+    rdfs:label "has shareholder"@en ;
+    rdfs:comment "This property associates an actor with the activity of participating in an ownership with shares. It implies that a phase of a shareholding represents one participation of a share by an actor. This means that if for a ship there are more than one shareholders, there will be consequently same number of shareholding phases. If we want to describe the sum of the shares of the shareholding for a ship in a specific timespan, then we will describe a composite shareholding activity that consists of individual shareholding activities of shares."@en ;
+    rdfs:domain sealit:Shareholding ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf sealit:has_owner ;
+    owl:inverseOf sealit:participates_with_share .
+
+sealit:has_shareholding a rdf:Property ;
+    rdfs:label "has shareholding"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Shareholding ;
+    rdfs:subPropertyOf sealit:has_ownership_phase ;
+    owl:inverseOf sealit:is_shareholding_phase_of .
+
+sealit:has_ship_ID a rdf:Property ;
+    rdfs:label "has ship ID"@en ;
+    rdfs:comment "This property describes the identification of a ship by an identifier. This property does not reveal anything about when, where and by whom this identifier was used. A more detailed representation can be made using the fully developed path through Ship Registration. The property is a shortcut for the path Ship – is registered by: Ship Registration – with ship ID: Ship ID ."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ship_ID ;
+    rdfs:subPropertyOf crm:P1_is_identified_by ;
+    owl:inverseOf sealit:ship_ID_identifies .
+
+sealit:has_social_status a rdf:Property ;
+    rdfs:label "has social status"@en ;
+    rdfs:comment "This property identifies the social status of a person at a specific time period that is maybe unknown."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Social_Status ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_social_status_of .
+
+sealit:has_subject a rdf:Property ;
+    rdfs:label "has subject"@en ;
+    rdfs:comment "This property describes the subject of a teaching unit."@en ;
+    rdfs:domain sealit:Teaching_Unit ;
+    rdfs:range sealit:Subject ;
+    rdfs:subPropertyOf crm:P2_has_type ;
+    owl:inverseOf sealit:is_subject_of .
+
+sealit:has_tonnage a rdf:Property ;
+    rdfs:label "has tonnage"@en ;
+    rdfs:comment "This property provides the tonnage dimension of a ship."@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Tonnage ;
+    rdfs:subPropertyOf crm:P43_has_dimension ;
+    owl:inverseOf sealit:is_tonnage_of .
+
+sealit:in_time a rdf:Property ;
+    rdfs:label "in time"@en ;
+    rdfs:comment "This property describes the inferred time-span of a legal object relationship, which cannot be observed or documented. It is implicit knowledge."@en ;
+    rdfs:domain sealit:Legal_Object_Relationship ;
+    rdfs:range crm:E52_Time-Span ;
+    owl:inverseOf sealit:is_time_of .
+
+sealit:initializes_ownership a rdf:Property ;
+    rdfs:label "initializes ownership"@en ;
+    rdfs:domain sealit:Ship_Registration ;
+    rdfs:range sealit:Ship_Ownership_Phase ;
+    rdfs:subPropertyOf sealit:initializes ;
+    owl:inverseOf sealit:ownership_is_initialized_by .
+
+sealit:is_agreement_for a rdf:Property ;
+    rdfs:label "is agreement for"@en ;
+    rdfs:domain sealit:Labour_Contract ;
+    rdfs:range sealit:Money_for_Labour ;
+    owl:inverseOf sealit:has_been_agreed_in .
+
+sealit:is_ammunition_of a rdf:Property ;
+    rdfs:label "is ammunition of"@en ;
+    rdfs:domain sealit:Ammunition ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P46i_forms_part_of ;
+    owl:inverseOf sealit:has_ammunition .
+
+sealit:is_arrival_place_of a rdf:Property ;
+    rdfs:label "is arrival place of"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Voyage ;
+    owl:inverseOf sealit:finally_arriving_at .
+
+sealit:is_destination_of a rdf:Property ;
+    rdfs:label "is destination of"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Voyage ;
+    owl:inverseOf sealit:destination .
+
+sealit:is_employment_period_of a rdf:Property ;
+    rdfs:label "is employment period of"@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range sealit:Money_for_Labour ;
+    owl:inverseOf sealit:for_employment_period .
+
+sealit:is_flag_of a rdf:Property ;
+    rdfs:label "is flag of"@en ;
+    rdfs:domain sealit:Country ;
+    rdfs:range sealit:Ship_Registration ;
+    owl:inverseOf sealit:with_ship_flag_of .
+
+sealit:is_formerly_or_currently_possessed_by a rdf:Property ;
+    rdfs:label "is formerly or currently possessed by"@en ;
+    rdfs:domain sealit:Legal_Document_with_Temporal_Validity ;
+    rdfs:range crm:E39_Actor ;
+    owl:inverseOf sealit:formerly_or_currently_possesses .
+
+sealit:is_given_to a rdf:Property ;
+    rdfs:label "is given to"@en ;
+    rdfs:comment "This property associates a punishment to the actor that received the punishment."@en ;
+    rdfs:domain sealit:Punishment ;
+    rdfs:range crm:E39_Actor ;
+    owl:inverseOf sealit:was_punished_by .
+
+sealit:is_horsepower_of a rdf:Property ;
+    rdfs:label "is horsepower of"@en ;
+    rdfs:domain sealit:Horsepower ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P43i_is_dimension_of ;
+    owl:inverseOf sealit:has_horsepower .
+
+sealit:is_language_capacity_of a rdf:Property ;
+    rdfs:label "is language capacity of"@en ;
+    rdfs:domain sealit:Language_Capacity ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_language_capacity .
+
+sealit:is_literacy_status_of a rdf:Property ;
+    rdfs:label "is literacy status of"@en ;
+    rdfs:domain sealit:Literacy_Status ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_literacy_status .
+
+sealit:is_navigation_type_of a rdf:Property ;
+    rdfs:label "is navigation type of"@en ;
+    rdfs:domain sealit:Navigation_Type ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_navigation_type .
+
+sealit:is_place_of_arrival a rdf:Property ;
+    rdfs:label "is place of arrival"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Arrival ;
+	rdfs:subPropertyOf crm:P7i_witnessed ;
+    owl:inverseOf sealit:at_place .
+
+sealit:is_place_of_leaving a rdf:Property ;
+    rdfs:label "is place of leaving"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Leaving ;
+	rdfs:subPropertyOf crm:P7i_witnessed ;
+    owl:inverseOf sealit:from_place .
+
+sealit:is_place_of_passing_by a rdf:Property ;
+    rdfs:label "is place of passing by"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Passing ;
+	rdfs:subPropertyOf crm:P7i_witnessed ;
+    owl:inverseOf sealit:by_place .
+
+sealit:is_place_of_passing_through a rdf:Property ;
+    rdfs:label "is place of passing through"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Passing ;
+	rdfs:subPropertyOf crm:P7i_witnessed ;
+    owl:inverseOf sealit:through_place .
+
+sealit:is_registered_by a rdf:Property ;
+    rdfs:label "is registered by"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ship_Registration ;
+    owl:inverseOf sealit:registers .
+
+sealit:is_religion_status_of a rdf:Property ;
+    rdfs:label "is religion status of"@en ;
+    rdfs:domain sealit:Religion_Status ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_religion_status .
+
+sealit:is_responsible_for_registration a rdf:Property ;
+    rdfs:label "is responsible for registration"@en ;
+    rdfs:domain sealit:Port_of_Registry ;
+    rdfs:range sealit:Ship_Registration ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:registered_by .
+
+sealit:is_sex_type_of a rdf:Property ;
+    rdfs:label "is sex type of"@en ;
+    rdfs:domain sealit:Sex_Type ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_sex_type .
+
+sealit:is_shareholding_phase_of a rdf:Property ;
+    rdfs:label "is shareholding phase of"@en ;
+    rdfs:comment "This property associates a shareholding phase to a particular ship."@en ;
+    rdfs:domain sealit:Shareholding ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf sealit:is_ownership_phase_of ;
+    owl:inverseOf sealit:has_shareholding .
+
+sealit:is_social_status_of a rdf:Property ;
+    rdfs:label "is social status of"@en ;
+    rdfs:domain sealit:Social_Status ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_social_status .
+
+sealit:is_starting_place_of a rdf:Property ;
+    rdfs:label "is starting place of"@en ;
+    rdfs:domain crm:E53_Place ;
+    rdfs:range sealit:Voyage ;
+    owl:inverseOf sealit:starting_from .
+
+sealit:is_subject_of a rdf:Property ;
+    rdfs:label "is subject of"@en ;
+    rdfs:domain sealit:Subject ;
+    rdfs:range sealit:Teaching_Unit ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_subject .
+
+sealit:is_time_of a rdf:Property ;
+    rdfs:label "is time of"@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range sealit:Legal_Object_Relationship ;
+    owl:inverseOf sealit:in_time .
+
+sealit:is_tonnage_of a rdf:Property ;
+    rdfs:label "is tonnage of"@en ;
+    rdfs:domain sealit:Tonnage ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P43i_is_dimension_of ;
+    owl:inverseOf sealit:has_tonnage .
+
+sealit:is_working_place_of a rdf:Property ;
+    rdfs:label "is working place of"@en ;
+    rdfs:domain crm:E74_Group ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P107_has_current_or_former_member ;
+    owl:inverseOf sealit:works_at .
+
+sealit:leaving_is_part_of a rdf:Property ;
+    rdfs:label "leaving is part of"@en ;
+    rdfs:domain sealit:Leaving ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P9i_forms_part_of ;
+    owl:inverseOf sealit:consists_of_leaving .
+
+sealit:loaded a rdf:Property ;
+    rdfs:label "loaded"@en ;
+    rdfs:comment "This property associates an instance E18 Physical Thing with an instance of the loading activity that moved (loaded) it."@en ;
+    rdfs:domain sealit:Loading ;
+    rdfs:range crm:E18_Physical_Thing ;
+    owl:inverseOf sealit:was_loaded_by .
+
+sealit:loading_is_part_of a rdf:Property ;
+    rdfs:label "loading is part of"@en ;
+    rdfs:domain sealit:Loading ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P9i_forms_part_of ;
+    owl:inverseOf sealit:consists_of_loading .
+
+sealit:money_provided_by a rdf:Property ;
+    rdfs:label "money provided by"@en ;
+    rdfs:comment "This property identifies the E39 Actor that paid (gave money) for a specific service (Money For Service)."@en ;
+    rdfs:domain sealit:Money_for_Service ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:provided_money .
+
+sealit:money_provided_to a rdf:Property ;
+    rdfs:label "money provided to"@en ;
+    rdfs:comment "This property identifies the E39 Actor that received money for a specific service (Money For Service)."@en ;
+    rdfs:domain sealit:Money_for_Service ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:received_money .
+
+sealit:motivated_payment a rdf:Property ;
+    rdfs:label "motivated payment"@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Crew_Payment ;
+    rdfs:subPropertyOf crm:P17i_motivated ;
+    owl:inverseOf sealit:for_voyage .
+
+sealit:name_with_ownership a rdf:Property ;
+    rdfs:label "name with ownership"@en ;
+    rdfs:domain sealit:Ship_Name ;
+    rdfs:range sealit:Ship_Ownership_Phase ;
+    owl:inverseOf sealit:ownership_under_name .
+
+sealit:named_with a rdf:Property ;
+    rdfs:label "named with"@en ;
+    rdfs:domain sealit:Ship_Name ;
+    rdfs:range sealit:Ship_Construction ;
+    owl:inverseOf sealit:under_name .
+
+sealit:navigated a rdf:Property ;
+    rdfs:label "navigated"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:navigated_by_captain .
+
+sealit:navigated_by_captain a rdf:Property ;
+    rdfs:label "navigated by captain"@en ;
+    rdfs:comment "This property describes the participation of an E39 Actor as being responsible for the navigation of the voyage. The captain may change from voyage to voyage. The concept of the captain is normally synonym to the concept of ruling, of the power of governing, so in that sense should be mapped to the E74 Group. But, in the context of the SeaLiT project, there is the requirement for a simpler structure with more details on the biographic data of a captain, so the decision is to model the captain as a role by person (not by group)."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:navigated .
+
+sealit:ownership_is_initialized_by a rdf:Property ;
+    rdfs:label "ownership is initialized by"@en ;
+    rdfs:comment "This property associates the beginning of an instance of Ship Ownership Phase with the Ship Registration that initiates it."@en ;
+    rdfs:domain sealit:Ship_Ownership_Phase ;
+    rdfs:range sealit:Ship_Registration ;
+    rdfs:subPropertyOf sealit:is_initialized_by ;
+    owl:inverseOf sealit:initializes_ownership .
+
+sealit:ownership_is_terminated_by a rdf:Property ;
+    rdfs:label "ownership is terminated by"@en ;
+    rdfs:comment "This property associates the end of existence of an instance of Ship Ownership Phase with a De-flagging event that terminates it."@en ;
+    rdfs:domain sealit:Ship_Ownership_Phase ;
+    rdfs:range sealit:De-flagging ;
+    rdfs:subPropertyOf sealit:is_terminated_by ;
+    owl:inverseOf sealit:terminates_ownership .
+
+sealit:ownership_under_name a rdf:Property ;
+    rdfs:label "ownership under name"@en ;
+    rdfs:comment "This property identifies the change of ship name because of an ownership phase. It can be used to provide previous/old names of a ship."@en ;
+    rdfs:domain sealit:Ship_Ownership_Phase ;
+    rdfs:range sealit:Ship_Name ;
+    owl:inverseOf sealit:name_with_ownership .
+
+sealit:participates_with_share a rdf:Property ;
+    rdfs:label "participates with share"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Shareholding ;
+    rdfs:subPropertyOf sealit:is_owner_of_phase ;
+    owl:inverseOf sealit:has_shareholder .
+
+sealit:passing_is_part_of a rdf:Property ;
+    rdfs:label "passing is part of"@en ;
+    rdfs:domain sealit:Passing ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P9i_forms_part_of ;
+    owl:inverseOf sealit:consists_of_passing .
+
+sealit:person_is_registered_by a rdf:Property ;
+    rdfs:label "person is registered by"@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Civil_Registration ;
+    owl:inverseOf sealit:registers_person .
+
+sealit:profession_of a rdf:Property ;
+    rdfs:label "profession of"@en ;
+    rdfs:domain sealit:Profession ;
+    rdfs:range crm:E21_Person ;
+    rdfs:subPropertyOf crm:P2i_is_type_of ;
+    owl:inverseOf sealit:has_profession .
+
+sealit:promoted_into_employment_position_type a rdf:Property ;
+    rdfs:label "promoted into employment position type"@en ;
+    rdfs:comment "This property records the employment (job) position type that was promoted by a promotion activity. In that sense, we regard that a promotion can be related to a social status promotion or to a job/career promotion."@en ;
+    rdfs:domain sealit:Promotion ;
+    rdfs:range sealit:Profession ;
+    rdfs:subPropertyOf crm:P141_assigned ;
+    owl:inverseOf sealit:employment_position_type_was_promoted_by .
+
+sealit:promoted_into_status_type a rdf:Property ;
+    rdfs:label "promoted into status type"@en ;
+    rdfs:comment "This property records the social status type that was promoted by a promotion activity. In that sense, we regard that a promotion can be related to a social status promotion or to a job/career promotion."@en ;
+    rdfs:domain sealit:Promotion ;
+    rdfs:range sealit:Social_Status ;
+    rdfs:subPropertyOf crm:P141_assigned ;
+    owl:inverseOf sealit:status_type_was_promoted_by .
+
+sealit:provided_employment a rdf:Property ;
+    rdfs:label "provided employment"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Employment ;
+    rdfs:subPropertyOf sealit:provided_service ;
+    owl:inverseOf sealit:employment_provided_by .
+
+sealit:provided_money a rdf:Property ;
+    rdfs:label "provided money"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Money_for_Service ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:money_provided_by .
+
+sealit:received_money a rdf:Property ;
+    rdfs:label "received money"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Money_for_Service ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:money_provided_to .
+
+sealit:registered_by a rdf:Property ;
+    rdfs:label "registered by"@en ;
+    rdfs:comment "This property describes the authority, the port of registry, which is responsible for the registration of a ship."@en ;
+    rdfs:domain sealit:Ship_Registration ;
+    rdfs:range sealit:Port_of_Registry ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:is_responsible_for_registration .
+
+sealit:registers a rdf:Property ;
+    rdfs:label "registers"@en ;
+    rdfs:comment "This property associates a ship and the ship registration activity that registered and identified it."@en ;
+    rdfs:domain sealit:Ship_Registration ;
+    rdfs:range sealit:Ship ;
+    owl:inverseOf sealit:is_registered_by .
+
+sealit:registers_person a rdf:Property ;
+    rdfs:label "registers person"@en ;
+    rdfs:comment "This property describes a person that is registered by a civil registration activity."@en ;
+    rdfs:domain sealit:Civil_Registration ;
+    rdfs:range crm:E21_Person ;
+    owl:inverseOf sealit:person_is_registered_by .
+
+sealit:repaired a rdf:Property ;
+    rdfs:label "repaired"@en ;
+    rdfs:comment "This property identifies a ship repaired by a ship repair activity."@en ;
+    rdfs:domain sealit:Ship_Repair ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P31_has_modified ;
+    owl:inverseOf sealit:was_repaired_by .
+
+sealit:ship_ID_identifies a rdf:Property ;
+    rdfs:label "ship ID identifies"@en ;
+    rdfs:domain sealit:Ship_ID ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P1i_identifies ;
+    owl:inverseOf sealit:has_ship_ID .
+
+sealit:ship_ID_of a rdf:Property ;
+    rdfs:label "ship ID of"@en ;
+    rdfs:domain sealit:Ship_ID ;
+    rdfs:range sealit:Ship_Registration ;
+    owl:inverseOf sealit:with_ship_ID .
+
+sealit:started a rdf:Property ;
+    rdfs:label "started"@en ;
+    rdfs:comment "This property describes an employment that was started by a recruitment activity."@en ;
+    rdfs:domain sealit:Recruitment ;
+    rdfs:range sealit:Employment ;
+    rdfs:subPropertyOf crm:P175_starts_before_or_with_the_start_of ;
+    owl:inverseOf sealit:started_by .
+
+sealit:started_by a rdf:Property ;
+    rdfs:label "started by"@en ;
+    rdfs:domain sealit:Employment ;
+    rdfs:range sealit:Recruitment ;
+    rdfs:subPropertyOf crm:P175i_starts_after_or_with_the_start_of ;
+    owl:inverseOf sealit:started .
+
+sealit:starting_from a rdf:Property ;
+    rdfs:label "starting from"@en ;
+    rdfs:comment "This property describes the spatial location from which a voyage started. It is the beginning of the route."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range crm:E53_Place ;
+    owl:inverseOf sealit:is_starting_place_of .
+
+sealit:status_type_was_promoted_by a rdf:Property ;
+    rdfs:label "status type was promoted by"@en ;
+    rdfs:domain sealit:Social_Status ;
+    rdfs:range sealit:Promotion ;
+    rdfs:subPropertyOf crm:P141i_was_assigned_by ;
+    owl:inverseOf sealit:promoted_into_status_type .
+
+sealit:student_in a rdf:Property ;
+    rdfs:label "student in"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Teaching_Unit ;
+    rdfs:subPropertyOf crm:P11i_participated_in ;
+    owl:inverseOf sealit:had_student .
+
+sealit:terminates_ownership a rdf:Property ;
+    rdfs:label "terminates ownership"@en ;
+    rdfs:domain sealit:De-flagging ;
+    rdfs:range sealit:Ship_Ownership_Phase ;
+    rdfs:subPropertyOf sealit:terminates ;
+    owl:inverseOf sealit:ownership_is_terminated_by .
+
+sealit:thing_of a rdf:Property ;
+    rdfs:label "thing of"@en ;
+    rdfs:domain crm:E18_Physical_Thing ;
+    rdfs:range sealit:Money_for_Things ;
+    owl:inverseOf sealit:for_thing .
+
+sealit:through_place a rdf:Property ;
+    rdfs:label "through place"@en ;
+    rdfs:comment "This property associates an instance of a place with an instance of a passing activity through that place. This class provides information about the types of movements of a ship, which are parts of the route (of the voyage), and are documented as that."@en ;
+    rdfs:domain sealit:Passing ;
+    rdfs:range crm:E53_Place ;
+	rdfs:subPropertyOf crm:P7_took_place_at ;
+    owl:inverseOf sealit:is_place_of_passing_through .
+
+sealit:under_name a rdf:Property ;
+    rdfs:label "under name"@en ;
+    rdfs:comment "This property identifies the name of the ship with the ship construction information."@en ;
+    rdfs:domain sealit:Ship_Construction ;
+    rdfs:range sealit:Ship_Name ;
+    owl:inverseOf sealit:named_with .
+
+sealit:unloaded a rdf:Property ;
+    rdfs:label "unloaded"@en ;
+    rdfs:comment "This property associates an instance of E18 Physical Thing with an instance of the unloading activity that moved (unloaded) it."@en ;
+    rdfs:domain sealit:Unloading ;
+    rdfs:range crm:E18_Physical_Thing ;
+    owl:inverseOf sealit:was_unloaded_by .
+
+sealit:unloading_is_part_of a rdf:Property ;
+    rdfs:label "unloading is part of"@en ;
+    rdfs:domain sealit:Unloading ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P9i_forms_part_of ;
+    owl:inverseOf sealit:consists_of_unloading .
+
+sealit:voyage_of a rdf:Property ;
+    rdfs:label "voyage of"@en ;
+    rdfs:comment "This property describes the voyage of a ship, its movement/travelling at sea."@en ;
+    rdfs:domain sealit:Voyage ;
+    rdfs:range sealit:Ship ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ;
+    owl:inverseOf sealit:voyages .
+
+sealit:voyages a rdf:Property ;
+    rdfs:label "voyages"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Voyage ;
+    rdfs:subPropertyOf crm:P12i_was_present_at ;
+    owl:inverseOf sealit:voyage_of .
+
+sealit:was_constructed_by a rdf:Property ;
+    rdfs:label "was constructed by"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ship_Construction ;
+    rdfs:subPropertyOf crm:P108i_was_produced_by ;
+    owl:inverseOf sealit:constructed .
+
+sealit:was_flag_of a rdf:Property ;
+    rdfs:label "was flag of"@en ;
+    rdfs:domain sealit:Country ;
+    rdfs:range sealit:Ship ;
+    owl:inverseOf sealit:had_flag_of .
+
+sealit:was_loaded_by a rdf:Property ;
+    rdfs:label "was loaded by"@en ;
+    rdfs:domain crm:E18_Physical_Thing ;
+    rdfs:range sealit:Loading ;
+    owl:inverseOf sealit:loaded .
+
+sealit:was_mediated_by a rdf:Property ;
+    rdfs:label "was mediated by"@en ;
+    rdfs:comment "This property identifies the E39 Actor that participated in the transaction (Money for Service activity) in the role of a mediator. For example, there are sources that refer that seamen used to provide money to the captain of the ship in order that the wives to receive these money (so the captain was the mediator of this transaction)."@en ;
+    rdfs:domain sealit:Money_for_Service ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:was_mediator_of .
+
+sealit:was_mediator_of a rdf:Property ;
+    rdfs:label "was mediator of"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Money_for_Service ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:was_mediated_by .
+
+sealit:was_price_of a rdf:Property ;
+    rdfs:label "was price of"@en ;
+    rdfs:domain crm:E97_Monetary_Amount ;
+    rdfs:range sealit:Money_for_Service ;
+    owl:inverseOf sealit:had_money_value .
+
+sealit:was_promoted_by a rdf:Property ;
+    rdfs:label "was promoted by"@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range sealit:Promotion ;
+    rdfs:subPropertyOf crm:P140i_was_attributed_by ;
+    owl:inverseOf sealit:concerned .
+
+sealit:was_punished_by a rdf:Property ;
+    rdfs:label "was punished by"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Punishment ;
+    owl:inverseOf sealit:is_given_to .
+
+sealit:was_repaired_by a rdf:Property ;
+    rdfs:label "was repaired by"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ship_Repair ;
+    rdfs:subPropertyOf crm:P31i_was_modified_by ;
+    owl:inverseOf sealit:repaired .
+
+sealit:was_unloaded_by a rdf:Property ;
+    rdfs:label "was unloaded by"@en ;
+    rdfs:domain crm:E18_Physical_Thing ;
+    rdfs:range sealit:Unloading ;
+    owl:inverseOf sealit:unloaded .
+
+sealit:with_ID a rdf:Property ;
+    rdfs:label "with ID"@en ;
+    rdfs:comment "This property records the identifier that was assigned to a person in a Civil Registration activity."@en ;
+    rdfs:domain sealit:Civil_Registration ;
+    rdfs:range crm:E42_Identifier ;
+    owl:inverseOf sealit:ID_of .
+
+sealit:with_ship_ID a rdf:Property ;
+    rdfs:label "with ship ID"@en ;
+    rdfs:comment "This property records the ship identifier assigned by a Ship Registration activity."@en ;
+    rdfs:domain sealit:Ship_Registration ;
+    rdfs:range sealit:Ship_ID ;
+    owl:inverseOf sealit:ship_ID_of .
+
+sealit:with_ship_flag_of a rdf:Property ;
+    rdfs:label "with ship flag of"@en ;
+    rdfs:comment "This property identifies the country represented in the ship flag of a Ship Registration activity."@en ;
+    rdfs:domain sealit:Ship_Registration ;
+    rdfs:range sealit:Country ;
+    owl:inverseOf sealit:is_flag_of .
+
+sealit:works_at a rdf:Property ;
+    rdfs:label "works at"@en ;
+    rdfs:comment "This property identifies the workplace, meaning the organisation/company in which a person works at. The in the role of property of the property allows specifying the nature, the role of an actor’s work in the organisation/company."@en ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range crm:E74_Group ;
+    rdfs:subPropertyOf crm:P107i_is_current_or_former_member_of ;
+    owl:inverseOf sealit:is_working_place_of .
+
+sealit:for_service a rdf:Property ;
+    rdfs:label "for service"@en ;
+    rdfs:comment "This property describes a Money for Service activity that pays/receives money for Services."@en ;
+    rdfs:domain sealit:Money_for_Service ;
+    rdfs:range sealit:Service ;
+    owl:inverseOf sealit:service_of .
+
+sealit:has_owner a rdf:Property ;
+    rdfs:label "has owner"@en ;
+    rdfs:comment "This property describes information about the owner, the person or the company (shipping enterprise), of a ship. In the context of the SeaLiT project, we make the hypothesis that the owner as a concept, implies a legal entity, so in that sense, a person is the minimum legal entity-company (with members himself/herself) of a ship."@en ;
+    rdfs:domain sealit:Ship_Ownership_Phase ;
+    rdfs:range crm:E39_Actor ;
+    owl:inverseOf sealit:is_owner_of_phase .
+
+sealit:has_ownership_phase a rdf:Property ;
+    rdfs:label "has ownership phase"@en ;
+    rdfs:domain sealit:Ship ;
+    rdfs:range sealit:Ship_Ownership_Phase ;
+    owl:inverseOf sealit:is_ownership_phase_of .
+
+sealit:initializes a rdf:Property ;
+    rdfs:label "initializes"@en ;
+    rdfs:domain crm:E5_Event ;
+    rdfs:range sealit:Legal_Object_Relationship ;
+    owl:inverseOf sealit:is_initialized_by .
+
+sealit:is_initialized_by a rdf:Property ;
+    rdfs:label "is initialized by"@en ;
+    rdfs:comment "This property associates the beginning of an instance of Legal Object Relationship with an explicit event initiating it."@en ;
+    rdfs:domain sealit:Legal_Object_Relationship ;
+    rdfs:range crm:E5_Event ;
+    owl:inverseOf sealit:initializes .
+
+sealit:is_owner_of_phase a rdf:Property ;
+    rdfs:label "is owner of phase"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Ship_Ownership_Phase ;
+    owl:inverseOf sealit:has_owner .
+
+sealit:is_ownership_phase_of a rdf:Property ;
+    rdfs:label "is ownership phase of"@en ;
+    rdfs:comment "This property associates a ship with the different ownership phases related to it."@en ;
+    rdfs:domain sealit:Ship_Ownership_Phase ;
+    rdfs:range sealit:Ship ;
+    owl:inverseOf sealit:has_ownership_phase .
+
+sealit:is_terminated_by a rdf:Property ;
+    rdfs:label "is terminated by"@en ;
+    rdfs:comment "This property associates the end of existence of an instance of Legal Object Relationship with an explicit event that terminates it."@en ;
+    rdfs:domain sealit:Legal_Object_Relationship ;
+    rdfs:range crm:E5_Event ;
+    owl:inverseOf sealit:terminates .
+
+sealit:provided_service a rdf:Property ;
+    rdfs:label "provided service"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sealit:Service ;
+    rdfs:subPropertyOf crm:P14i_performed ;
+    owl:inverseOf sealit:service_provided_by .
+
+sealit:service_of a rdf:Property ;
+    rdfs:label "service of"@en ;
+    rdfs:domain sealit:Service ;
+    rdfs:range sealit:Money_for_Service ;
+    owl:inverseOf sealit:for_service .
+
+sealit:service_provided_by a rdf:Property ;
+    rdfs:label "service provided by"@en ;
+    rdfs:comment "This property describes the intention of an E39 Actor to provide a service. The property of property in the role of allows specifying the nature of an Actor’s service provision."@en ;
+    rdfs:domain sealit:Service ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P14_carried_out_by ;
+    owl:inverseOf sealit:provided_service .
+
+sealit:terminates a rdf:Property ;
+    rdfs:label "terminates"@en ;
+    rdfs:domain crm:E5_Event ;
+    rdfs:range sealit:Legal_Object_Relationship ;
+    owl:inverseOf sealit:is_terminated_by .
+
+#
+# Classes and properties for encoding in RDF the below 
+# properties of properties of the SeaLiT Ontology: 
+#  - in the role of: E55 Type (property of 'service provided by (provided service)')
+#  - in the role of: E55 Type (property of 'works at (is working place of)')
+#  - has type: E55 Type (property of 'related to')
+#  - with status of participation (property of 'had student (student in)')
+#
+# The model makes use of the class 'PC0 Typed CRM Property' 
+# introduced by CIDOC-CRM  for encoding properties of properties in RDF 
+# (https://www.cidoc-crm.org/Resources/modeling-properties-of-properties-in-the-cidoc-crm-rdf-encoding).
+#
+
+crm:PC0_Typed_CRM_Property a rdfs:Class ;
+	rdfs:label "PC0 Typed CRM Property"@en .
+
+sealit:PC_provided_service a rdfs:Class ;
+    rdfs:label "PC provided service"@en ;
+    rdfs:subClassOf crm:PC0_Typed_CRM_Property .
+
+sealit:PCa_in_the_role_of a rdf:Property ;
+    rdfs:label "in the role of"@en ;
+    rdfs:domain sealit:PC_provided_service ;
+    rdfs:range crm:E55_Type .
+
+
+sealit:PC_works_at a rdfs:Class ;
+    rdfs:label "PC works at"@en ;
+    rdfs:subClassOf crm:PC0_Typed_CRM_Property .
+	
+sealit:PCb_in_the_role_of a rdf:Property ;
+    rdfs:label "in the role of"@en ;
+    rdfs:domain sealit:PC_works_at ;
+    rdfs:range crm:E55_Type .
+	
+	
+sealit:PC_related_to a rdfs:Class ;
+    rdfs:label "PC related to"@en ;
+    rdfs:subClassOf crm:PC0_Typed_CRM_Property .
+
+sealit:PC_has_type a rdf:Property ;
+    rdfs:label "has type"@en ;
+    rdfs:domain sealit:PC_related_to ;
+    rdfs:range crm:E55_Type .
+	
+
+sealit:PC_student_in a rdfs:Class ;
+    rdfs:label "PC student_in"@en ;
+    rdfs:subClassOf crm:PC0_Typed_CRM_Property .
+
+sealit:PC_with_status_of_participation a rdf:Property ;
+    rdfs:label "with status of participation"@en ;
+    rdfs:domain sealit:PC_student_in ;
+    rdfs:range crm:E55_Type .
+	

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://gadm.geovocab.org/ontology#">
+  <owl:Ontology rdf:about="http://gadm.geovocab.org/ontology"/>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#Country">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#IntergovernmentalAgreement"/>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#IslandCountry">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#Country"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#LandlockedCountry">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#Country"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#LeastDevelopedCountry">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#Country"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#Level1">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#Level2">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#Level3">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#Level4">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://gadm.geovocab.org/ontology#TransitionEconomy">
+    <rdfs:subClassOf rdf:resource="http://gadm.geovocab.org/ontology#Country"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#andy_id"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#contains"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#country_id"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#gadm_id">
+    <rdfs:domain rdf:resource="http://gadm.geovocab.org/ontology#AdministrativeRegion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#has_code"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#in_country"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#in_region"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#iso"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#iso2"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#ison"/>
+  <owl:ObjectProperty rdf:about="http://gadm.geovocab.org/ontology#member_of"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#name"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#name_fao"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#name_iso"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#name_obsolete"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#name_variations"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#pop2000"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#popsqkm"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#region_id"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#remarks"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#sovereign"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#sqkm"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#type"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#type_english"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#unregion1"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#unregion2"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#valid_from"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#valid_to"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#waspartof"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#wbdebt"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#wbincome"/>
+  <owl:DatatypeProperty rdf:about="http://gadm.geovocab.org/ontology#www"/>
+</rdf:RDF>
+

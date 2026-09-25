@@ -1,0 +1,177 @@
+<http://vocab.org/review/terms.html> <http://www.w3.org/2000/01/rdf-schema#label> "HTML" .
+<http://vocab.org/review/terms.html> <http://purl.org/dc/elements/1.1/format> "text/html" .
+<http://vocab.org/review/terms.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://vocab.org/review/terms.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "Introduced by request of Revyu.com" .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#maxRating> <http://purl.org/dc/elements/1.1/description> "Maximum value for rating property"@en .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric value"@en .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/2000/01/rdf-schema#label> "max Rating"@en .
+<http://purl.org/stuff/rev#maxRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a work with a a review"@en .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/2000/01/rdf-schema#label> "has Review"@en .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/stuff/rev#hasReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2000/01/rdf-schema#comment> "The person that has written the review"@en .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/2000/01/rdf-schema#label> "reviewer"@en .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/stuff/rev#reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review of an work"@en .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review"@en .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/stuff/rev#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/stuff/rev> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .
+<http://purl.org/stuff/rev> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/1.0/> .
+<http://purl.org/stuff/rev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/2000/01/rdf-schema#comment> "The text of the review"@en .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/2000/01/rdf-schema#label> "text"@en .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of usefulness votes (integer)" .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/2000/01/rdf-schema#label> "totalVotes" .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#totalVotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of positive usefulness votes (integer)" .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/2000/01/rdf-schema#label> "positiveVotes" .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#positiveVotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "Introduced by request of Revyu.com" .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#minRating> <http://purl.org/dc/elements/1.1/description> "Minimum value for rating property"@en .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric value"@en .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/2000/01/rdf-schema#label> "min Rating"@en .
+<http://purl.org/stuff/rev#minRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "rev" .
+<http://purl.org/stuff/rev#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/stuff/rev#" .
+<http://purl.org/stuff/rev#> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://vocab.org/review/html> .
+<http://purl.org/stuff/rev#> <http://www.w3.org/2003/g/data-view#profileTransformation> <http://danja.talis.com/xmlns/rev_2007-11-09/hreview2rdfxml.xsl> .
+<http://purl.org/stuff/rev#> <http://purl.org/dc/elements/1.1/date> "2007-11-08" .
+<http://purl.org/stuff/rev#> <http://purl.org/dc/elements/1.1/description> "Vocabulary for expressing reviews and ratings using the Resource Description Framework. It is compatible with hReview and conforms to OWL Lite" .
+<http://purl.org/stuff/rev#> <http://www.w3.org/2000/01/rdf-schema#label> "RDF Review Vocabulary" .
+<http://purl.org/stuff/rev#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/stuff/rev#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2000/01/rdf-schema#label> "Feedback" .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2000/01/rdf-schema#comment> "Feedback on the review. Expresses whether the review was useful or not" .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/stuff/rev#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/review/terms.json> <http://www.w3.org/2000/01/rdf-schema#label> "JSON" .
+<http://vocab.org/review/terms.json> <http://purl.org/dc/elements/1.1/format> "application/json" .
+<http://vocab.org/review/terms.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://vocab.org/review/terms.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Feedback> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#comment> "The commenter on the review" .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#label> "commenter" .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Comment> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/stuff/rev#commenter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://vocab.org/review/terms.rdf> <http://xmlns.com/foaf/0.1/topic> <http://purl.org/stuff/rev#> .
+<http://vocab.org/review/terms.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/review/terms.turtle> .
+<http://vocab.org/review/terms.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/review/terms.json> .
+<http://vocab.org/review/terms.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/review/terms.html> .
+<http://vocab.org/review/terms.rdf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/stuff/rev#> .
+<http://vocab.org/review/terms.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://vocab.org/review/terms.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to associate a review with a comment on the review" .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/stuff/rev#Comment> .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/2000/01/rdf-schema#label> "hasComment" .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/stuff/rev#hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the review" .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric value"@en .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/2000/01/rdf-schema#label> "rating"@en .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/review/terms.turtle> <http://www.w3.org/2000/01/rdf-schema#label> "Turtle" .
+<http://vocab.org/review/terms.turtle> <http://purl.org/dc/elements/1.1/format> "text/plain" .
+<http://vocab.org/review/terms.turtle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://vocab.org/review/terms.turtle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/stuff/rev#Review> .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/stuff/rev#Feedback> .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a review with a feedback on the review" .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/2000/01/rdf-schema#label> "hasFeedback" .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/stuff/rev#hasFeedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "proposed by iterating.com" .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "A comment on a review" .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/2000/01/rdf-schema#label> "Comment" .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/stuff/rev#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "core term" .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/stuff/rev#> .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of media of a work under review" .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/2000/01/rdf-schema#label> "type" .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/stuff/rev#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

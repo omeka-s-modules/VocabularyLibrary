@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>          
+<!DOCTYPE urls [ 
+ 
+    <!ENTITY wgs "http://wittgensteinsource.org/">
+    <!ENTITY base "http://discovery-project.eu/ontologies/wittgensteinsource/">
+    <!ENTITY baseinst "http://purl.org/wittgensteinsource/instances/">
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+    <!ENTITY tei "http://www.tei-c.org/ns/1.0">
+    <!ENTITY scho "http://discovery-project.eu/ontologies/scholar/0.1/">
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#">
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#">
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#">
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#">
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]> 
+<rdf:RDF xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;"
+    xmlns:xsd="&xsd;" xmlns:owl="&owl;" xmlns:tei="&tei;" xmlns:scho="&scho;"
+    xmlns:wgs="http://wittgensteinsource.org/" xmlns:protege="&protege;" xmlns="&base;"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsp="&xsp;" xmlns:inst="&baseinst;"
+    xmlns:flub="http://ub.uib.no/flibub" xmlns:swrl="&swrl;" xmlns:swrlb="&swrlb;">
+    <owl:Ontology rdf:about="http://wab.uib.no/cost-a32_rdf/wittgenstein_model.owl">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Wittgenstein Archives at the University of Bergen (WAB): Wittgenstein ontology (Work in progress, 2007-).\n \nA first version of WAB's Wittgenstein ontology, exemplifying some of its basic concepts and functions (e.g. interlinking of primary source class instances on the one hand and philosophical subject class instances on the other), was produced by WAB in cooperation with Christian Morbidoni (Philospace/SwickyNotes) and the consortium of the EU funded Discovery project in the period 2006-09. It was developed further within the framework of the NordForsk funded JNU VWAB project (2008-11), the EU funded projects Agora (2011-13) and DM2E (2012-14), and the Norwegian National Library funded project DIGITALE FULLTEKSTARKIV (DF) (2012-13) at the University of Bergen Library. For an early short slides overview of the ontology’s classes and relations and for application samples, see Alois Pichler's presentation http://www.slideshare.net/DM2E/berlin-16161631 (January 2013). \
+            \n\n \For more information see http://wab.uib.no/wab_philospace.page. <!--Wittgenstein Archives
+            at the University of Bergen (WAB): Wittgenstein ontology (Work in progress, 2007-) The
+            ontology is produced by WAB (Christian Erbacher, Rune Jensen Falch, Øyvind Liland
+            Gjesdal, Heinz Wilhelm Krüger, Alois Pichler and Deirdre Smith) in cooperation with Mark
+            Addis (Univ. of Aarhus and Birmingham City University), Hans Biesenbach ("Anspielungen
+            und Zitate in den Schriften Ludwig Wittgensteins"), Steen Brock (Univ. of Aarhus), James
+            M. Fielding (Univ. of Paris I), James Klagge (Virginia Polytechnic Institute and State
+            University, Virginia, USA), Christian Morbidoni (Philospace/SwickyNotes), Amélie
+            Zöllner-Weber ("Figurenontologie"). Responsible editor and coordinator: Alois Pichler. A
+            first version of WAB's Wittgenstein ontology, exemplifying some of its basic concepts
+            and functions (e.g. interlinking of primary source class instances on the one hand and
+            philosophical subject class instances on the other), was produced by WAB in cooperation
+            with Christian Morbidoni (Philospace/SwickyNotes) and the consortium of the EU funded
+            DISCOVERY project in the period 2006-09. It was developed further within the framework
+            of the NordForsk funded JNU VWAB project (2008-11), and is today continued in the EU
+            funded projects AGORA (2011-13) and DM2E (2012-14), and the Norwegian National Library
+            funded project DIGITALE FULLTEKSTARKIV (DF) (2012-13) at the University of Bergen
+            Library. For a short overview of the ontology’s classes and relations and for
+            application samples, see Alois Pichler's presentation
+            http://www.slideshare.net/DM2E/berlin-16161631 (January 2013). The ontology can be
+            edited in ontology editors such as Protege and installed in Semantic Web applications
+            such as Philospace/Swickynotes or Pundit. Released under the Creative Commons General
+            Public License Attribution, Non-Commercial, Share-Alike version 3 (CCPL
+            BY-NC-SA).--></rdfs:comment>
+    </owl:Ontology>
+    <rdfs:Class rdf:about="&scho;Source">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment>Source: A primary or secondary source.</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Subject">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment>Subject: A subject which is neither a source nor a person.</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;PrimarySource">
+        <rdfs:subClassOf>
+            <rdfs:Class rdf:about="&scho;Source"/>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string">Primary Source</rdfs:label>
+        <rdfs:comment>Primary Source: A primary source for Wittgenstein scholarship, authored or
+            co-authored by Wittgenstein, or if not by Wittgenstein, referred to by
+            Wittgenstein.</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;SecondarySource">
+        <rdfs:subClassOf>
+            <rdfs:Class rdf:about="&scho;Source"/>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string">Secondary Source</rdfs:label>
+        <rdfs:comment>Secondary source: A secondary source for Wittgenstein scholarship, not
+            authored nor co-authored by Wittgenstein, but referring to Wittgenstein or to a
+            Wittgenstein primary source. Example of instance: MatarAnat_2009; WallgrenThomas_2008
+        </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;WittgensteinSource">
+        <rdfs:subClassOf rdf:resource="&scho;PrimarySource"/>
+        <rdfs:label rdf:datatype="&xsd;string">WittgensteinSource</rdfs:label>
+        <rdfs:comment>Wittgenstein primary source, subclass of Primary source: A primary source for
+            Wittgenstein scholarship, authored or co-authored by Wittgenstein.</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Person">
+        <!--           <rdfs:subClassOf>
+                <rdfs:Class rdf:about="&scho;Subject"/>
+            </rdfs:subClassOf>-->
+        <rdfs:label rdf:datatype="&xsd;string">Person</rdfs:label>
+        <rdfs:comment>Person: A person, fictive, semi-historical or historical. Example of instance:
+            Socrates; Moses; WittgensteinPaul. </rdfs:comment>
+    </rdfs:Class>
+    <!--•	Author, subclass of Person:
+            o	Example of instance: KantImmanuel; WallgrenThomas
+        -->
+    <rdfs:Class rdf:about="&base;WittgensteinExternalSource">
+        <rdfs:subClassOf rdf:resource="&scho;PrimarySource"/>
+        <rdfs:label rdf:datatype="&xsd;string">WittgensteinExternalSource</rdfs:label>
+        <rdfs:comment>External primary source, subclass of Primary source: A primary source for
+            Wittgenstein scholarship, not authored or co-authored by Wittgenstein, but referred to
+            in a Wittgenstein primary source. Example of instance: Goethe JWv: Faust; Augustine St:
+            Confessiones. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;MS">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">MS</rdfs:label>
+        <rdfs:comment>MS, subclass of Wittgenstein Primary source: A Wittgenstein primary source
+            physical item, handwritten. Example of instance: Ms-115; Ms-139a. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;TS">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">TS</rdfs:label>
+        <rdfs:comment>TS, subclass of Wittgenstein Primary source: A Wittgenstein primary source
+            physical item, typed. Example of instance: Ts-213; Ts-310. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Bemerkung">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Bemerkung</rdfs:label>
+        <rdfs:comment>Bemerkung, subclass of Wittgenstein Primary source: Corresponding roughly to a
+            single remark in a Wittgenstein primary source physical item, identified by the
+            Wittgenstein Archives through a “siglum” which is composed of item identifier, page
+            identifier(s) and position identifier(s). Example of instance: Ts-310,21[2]et22[1].
+        </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Werk">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Werk</rdfs:label>
+        <rdfs:comment>Werk, subclass of Wittgenstein Primary source: A publication of a Wittgenstein
+            primary source which has become standard, a “work”. Example of instance: W-CV; W-TLP.
+        </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Part">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Part</rdfs:label>
+        <rdfs:comment>Part</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Letter">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Letter</rdfs:label>
+        <rdfs:comment>Letter</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Chapter">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Chapter</rdfs:label>
+        <rdfs:comment>Chapter, subclass of Wittgenstein Primary source: A single chapter in a
+            Wittgenstein primary source physical item. Example of instance: Ts-213,ch-i.
+        </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&base;Sentence">
+        <rdfs:subClassOf rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:label rdf:datatype="&xsd;string">Sentence</rdfs:label>
+        <rdfs:comment>Sentence, subclass of Wittgenstein Primary source: A single sentence in a
+            Wittgenstein primary source physical item. Example of instance: Ts-310,21[2]et22[1]_1;
+            Ts-310,21[2]et22[1]_2. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Field">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Field</rdfs:label>
+        <rdfs:comment>Field, subclass of Subject: A field of philosophical discussion. Has
+            subclasses: Metaphysics; Epistemology a.o. Example of subclass structure: Field >
+            Epistemology > Scepticism > Rule-FollowingScepticism. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Date">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Date</rdfs:label>
+        <rdfs:comment>Date, subclass of Subject: A date, either day-exact or estimated date span.
+            Example of instance: 19361105; 19450101-19451231. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Place">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Place</rdfs:label>
+        <rdfs:comment>Place, subclass of Subject: A place. Example of instance: Skjolden; Cambridge.
+        </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Perspective">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Perspective</rdfs:label>
+        <rdfs:comment>Perspective, subclass of Subject: A philosophical perspective. Has subclasses:
+            APichler_Course_TLP; APichler_Course_PI a.o. Example of subclass structure: Perspective
+            > APichler_Course_TLP > [Instances] contradiction; state_of_affairs.</rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Issue">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Issue</rdfs:label>
+        <rdfs:comment>Issue, subclass of Subject: A philosophical issue. Example of instance:
+            philosophy; logical analysis. </rdfs:comment>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="&scho;Point">
+        <rdfs:subClassOf rdf:resource="&scho;Subject"/>
+        <rdfs:label rdf:datatype="&xsd;string">Point</rdfs:label>
+        <rdfs:comment>Point, subclass of Subject: A philosophical statement. Example of instance:
+            Logical analysis is essential to philosophy. </rdfs:comment>
+    </rdfs:Class>
+    <owl:ObjectProperty rdf:about="&base;hasPart">
+        <rdfs:domain rdf:resource="&base;WittgensteinSource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;Bemerkung"/>
+                    <rdfs:Class rdf:about="&base;Part"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isPartOf"/>
+        </owl:inverseOf>
+        <rdfs:label rdf:datatype="&xsd;string">hasPart</rdfs:label>
+        <rdfs:comment>hasPart</rdfs:comment>
+        <!-- <rdfs:subPropertyOf rdf:resource="&scho;hasPart"/>-->
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isPartOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;Bemerkung"/>
+                    <rdfs:Class rdf:about="&base;Part"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <!--
+            <rdfs:subPropertyOf rdf:resource="&scho;isPartOf"/>-->
+        <rdfs:range rdf:resource="&base;WittgensteinSource"/>
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;hasPart"/>
+        </owl:inverseOf>
+        <rdfs:label rdf:datatype="&xsd;string">isPartOf</rdfs:label>
+        <rdfs:comment>isPartOf</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isWorkPublishedFrom">
+        <rdfs:range rdf:resource="&base;Bemerkung"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;Werk"/>
+                    <rdfs:Class rdf:about="&base;Part"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isPublishedInWork"/>
+        </owl:inverseOf>
+        <rdfs:label rdf:datatype="&xsd;string">isWorkPublishedFrom</rdfs:label>
+        <rdfs:comment>isWorkPublishedFrom</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isPublishedInWork">
+        <rdfs:domain rdf:resource="&base;Bemerkung"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;Werk"/>
+                    <rdfs:Class rdf:about="&base;Part"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:inverseOf rdf:resource="&base;isWorkPublishedFrom"/>
+        <rdfs:label rdf:datatype="&xsd;string">isPublishedInWork</rdfs:label>
+        <rdfs:comment>isPublishedInWork</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isReferredToIn">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;refersTo"/>
+        </owl:inverseOf>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;Person"/>
+                    <rdfs:Class rdf:about="&base;WittgensteinExternalSource"/>
+                    <rdfs:Class rdf:about="&base;Bemerkung"/>
+                    <rdfs:Class rdf:about="&base;Werk"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;WittgensteinSource"/>
+                    <rdfs:Class rdf:about="&scho;SecondarySource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label rdf:datatype="&xsd;string">isReferredToIn</rdfs:label>
+        <rdfs:comment>isReferredToIn</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isContra">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isArguedAgainstIn"/>
+        </owl:inverseOf>
+        <rdfs:domain rdf:resource="&base;Bemerkung"/>
+        <rdfs:range rdf:resource="&scho;Point"/>
+        <rdfs:label rdf:datatype="&xsd;string">isContra</rdfs:label>
+        <rdfs:comment>isContra</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isArguedAgainstIn">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isContra"/>
+        </owl:inverseOf>
+        <rdfs:domain rdf:resource="&scho;Point"/>
+        <rdfs:range rdf:resource="&base;Bemerkung"/>
+        <rdfs:label rdf:datatype="&xsd;string">isArguedAgainstIn</rdfs:label>
+        <rdfs:comment>isArguedAgainstIn</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isPro">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isArguedForIn"/>
+        </owl:inverseOf>
+        <rdfs:domain rdf:resource="&base;Bemerkung"/>
+        <rdfs:range rdf:resource="&scho;Point"/>
+        <rdfs:label rdf:datatype="&xsd;string">isPro</rdfs:label>
+        <rdfs:comment>isPro</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isArguedForIn">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;isPro"/>
+        </owl:inverseOf>
+        <rdfs:domain rdf:resource="&scho;Point"/>
+        <rdfs:range rdf:resource="&base;Bemerkung"/>
+        <rdfs:label rdf:datatype="&xsd;string">isArguedForIn</rdfs:label>
+        <rdfs:comment>isArguedForIn</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;refersTo">
+        <owl:inverseOf rdf:resource="&base;isReferredToIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&base;WittgensteinSource"/>
+                    <rdfs:Class rdf:about="&scho;SecondarySource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;Person"/>
+                    <rdfs:Class rdf:about="&base;Bemerkung"/>
+                    <rdfs:Class rdf:about="&base;Werk"/>
+                    <rdfs:Class rdf:about="&base;WittgensteinExternalSource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label rdf:datatype="&xsd;string">refersTo</rdfs:label>
+        <rdfs:comment>refersTo</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;hasDate">
+        <rdfs:domain rdf:resource="&base;Bemerkung"/>
+        <rdfs:range rdf:resource="&scho;Date"/>
+        <owl:inverseOf rdf:resource="&base;isDateOf"/>
+        <!--    <rdfs:subPropertyOf>
+           <owl:ObjectProperty rdf:about="&scho;hasSubject"/>
+       </rdfs:subPropertyOf>-->
+        <rdfs:label rdf:datatype="&xsd;string">hasDate</rdfs:label>
+        <rdfs:comment>hasDate</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isDateOf">
+        <rdfs:domain rdf:resource="&scho;Date"/>
+        <rdfs:range rdf:resource="&base;Bemerkung"/>
+        <owl:inverseOf rdf:resource="&base;hasDate"/>
+        <rdfs:label rdf:datatype="&xsd;string">isDateOf</rdfs:label>
+        <rdfs:comment>isDateOf</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;discusses">
+        <owl:inverseOf rdf:resource="&base;isDiscussedIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;SecondarySource"/>
+                    <rdfs:Class rdf:about="&scho;PrimarySource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;Field"/>
+                    <rdfs:Class rdf:about="&scho;Issue"/>
+                    <rdfs:Class rdf:about="&scho;Perspective"/>
+                    <rdfs:Class rdf:about="&scho;Place"/>
+                    <rdfs:Class rdf:about="&scho;Point"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label rdf:datatype="&xsd;string">discusses</rdfs:label>
+        <rdfs:comment>Discusses</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;isDiscussedIn">
+        <owl:inverseOf>
+            <owl:ObjectProperty rdf:about="&base;discusses"/>
+        </owl:inverseOf>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;Field"/>
+                    <rdfs:Class rdf:about="&scho;Issue"/>
+                    <rdfs:Class rdf:about="&scho;Perspective"/>
+                    <rdfs:Class rdf:about="&scho;Place"/>
+                    <rdfs:Class rdf:about="&scho;Point"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;SecondarySource"/>
+                    <rdfs:Class rdf:about="&scho;PrimarySource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label rdf:datatype="&xsd;string">isDiscussedIn</rdfs:label>
+        <rdfs:comment>isDiscussedIn</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&scho;hasAuthor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Class rdf:about="&scho;SecondarySource"/>
+                    <rdfs:Class rdf:about="&base;Bemerkung"/>
+                    <rdfs:Class rdf:about="&base;WittgensteinExternalSource"/>
+                    <rdfs:Class rdf:about="&base;Werk"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="&scho;Person"/>
+        <rdfs:label rdf:datatype="&xsd;string">hasAuthor</rdfs:label>
+        <rdfs:comment>hasAuthor</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&base;hasOtherVersion">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&base;Bemerkung"/>
+        <owl:inverseOf rdf:resource="&base;hasOtherVersion"/>
+        <rdfs:domain rdf:resource="&base;Bemerkung"/>
+        <rdfs:label rdf:datatype="&xsd;string">hasOtherVersion</rdfs:label>
+        <rdfs:comment>hasOtherVersion</rdfs:comment>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

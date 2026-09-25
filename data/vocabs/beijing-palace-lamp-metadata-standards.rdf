@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/Hz"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Beijing Palace lamp metadata standards -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz">
+  <dc:title xml:lang="en">Beijing Palace lamp metadata standards</dc:title>
+  <skos:note  xml:lang="en">We are constructing the Beijing Palace Lamp Metadata Standard to try to protect the cultural heritage resources of Beijing Palace Lamp</skos:note>
+</rdf:Description>
+
+<!-- Classes -->
+
+<!-- Class: time -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100001">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">time</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">time</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/time.en" />
+  <skos:definition xml:lang="en">A point in time or time period related to an event in the resource's lifecycle
+</skos:definition>
+</rdf:Description>
+
+
+<!-- Properties -->
+
+<!-- Property: Acquisition accuracy -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100035">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Acquisition accuracy</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">AcquisitionAccuracy</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/AcquisitionAccuracy.en" />
+  <skos:definition xml:lang="en">Resolution and accuracy information of Beijing Palace Lamp digitization
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Acquisition equipment -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100032">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Acquisition equipment</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">AcquisitionEquipment</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/AcquisitionEquipment.en" />
+  <skos:definition xml:lang="en">Beijing Palace lamp digital collection equipment and its model
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Acquisition time -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100029">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Acquisition time</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">AcquisitionTime</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/AcquisitionTime.en" />
+  <skos:definition xml:lang="en">Beijing Palace lamp digital collection time
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Call time -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100038">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Call time</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">CallTime</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/CallTime.en" />
+  <skos:definition xml:lang="en">Call time information
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: classification -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100007">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">classification</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">classification</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/classification.en" />
+  <skos:definition xml:lang="en">Categorize by the kind of resource content entity
+</skos:definition>
+</rdf:Description>
+
+<!-- Property:  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100016">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">cultureElements</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/cultureElements.en" />
+  <skos:definition xml:lang="en">The cultural connotations contained in the resources, folklore, history and culture, and legends and allusions
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: description -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100006">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">description</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">description</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/description.en" />
+  <skos:definition xml:lang="en">Interpretation of the content of the resource</skos:definition>
+</rdf:Description>
+
+<!-- Property: Digital licensing purposes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100040">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Digital licensing purposes</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">DigitalLicensingPurposes</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/DigitalLicensingPurposes.en" />
+  <skos:definition xml:lang="en">Permission information
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Digitally collect people -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100027">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Digitally collect people</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">DigitallyCollectPeople</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/DigitallyCollectPeople.en" />
+  <skos:definition xml:lang="en">Beijing Palace Lamp Digital Collector
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: digital measurements -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100024">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">digital measurements</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">digitalMeasurements</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/digitalMeasurements.en" />
+  <skos:definition xml:lang="en">Digital dimensional information of Beijing Palace Lamps
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: digital method -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100030">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">digital method</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">digitalMethod</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/digitalMethod.en" />
+  <skos:definition xml:lang="en">The digital collection method of Beijing Palace lamp
+</skos:definition>
+</rdf:Description>
+
+<!-- Property:  digital name  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100023">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en"> digital name </rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">digitalName</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/digitalName.en" />
+  <skos:definition xml:lang="en">The digital name of beijing palace lamp
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Digitized categories -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100022">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Digitized categories</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">DigitizedCategories</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/DigitizedCategories.en" />
+  <skos:definition xml:lang="en">Category of Beijing Palace Lamp Digitalization
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Digitized views -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100025">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Digitized views</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">DigitizedViews</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/DigitizedViews.en" />
+  <skos:definition xml:lang="en">Digital view information of Beijing Palace Lamp
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: format information -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100033">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">format information</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">formatInformation</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/formatInformation.en" />
+  <skos:definition xml:lang="en">Beijing Palace Lamp digitized format information
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: function -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100008">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">function</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">function</reg:name>
+  <reg:lexicalAlias rdf:resource="function.en" />
+  <skos:definition xml:lang="en">The purpose of the resource
+
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: material -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100009">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">material</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">material</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/material.en" />
+  <skos:definition xml:lang="en">The materials needed to create assets
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: measurements -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100017">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">measurements</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">measurements</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/measurements.en" />
+  <skos:definition xml:lang="en">The volume, area, and weight of the asset
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: name -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100005">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">name</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">name</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/name.en" />
+  <skos:definition xml:lang="en">The name of the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: number -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100021">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">number</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">number</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/number.en" />
+  <skos:definition xml:lang="en">Number of the digitized results of the Beijing Palace Lamp
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: occasions -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100012">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">occasions</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">occasions</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/occasions.en" />
+  <skos:definition xml:lang="en">Applicable to different occasions
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: patterns -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100015">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">patterns</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">patterns</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/patterns.en" />
+  <skos:definition xml:lang="en">Decorative pattern on the surface of the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: People and institutions -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100003">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">People and institutions</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">PeopleAndInstitutions</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/PeopleAndInstitutions.en" />
+  <skos:definition xml:lang="en">The person or entity associated with the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: place -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100002">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">place</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">place</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/place.en" />
+  <skos:definition xml:lang="en">Spatially related locations to the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: relations -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100018">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">relations</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relations</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/relations.en" />
+  <skos:definition xml:lang="en">Related resources
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: rights -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100019">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">rights</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">rights</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/rights.en" />
+  <skos:definition xml:lang="en">Information about the permissions you have on and on the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: sculpt -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100014">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">sculpt</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">sculpt</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/sculpt.en" />
+  <skos:definition xml:lang="en">The morphology of the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: source -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100004">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">source</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">source</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/source.en" />
+  <skos:definition xml:lang="en">Describes the source of the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: statistics -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100041">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">statistics</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">statistics</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/statistics.en" />
+  <skos:definition xml:lang="en">The number of resources or the amount of data collected
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: Storage path -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100026">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Storage path</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">StoragePath</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/StoragePath.en" />
+  <skos:definition xml:lang="en">Beijing Palace Lamp digital storage path information
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: techniques -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/1000010">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">techniques</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">techniques</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/techniques.en" />
+  <skos:definition xml:lang="en">Techniques required to create resources
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: The caller -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100036">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">The caller</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">TheCaller</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/TheCaller.en" />
+  <skos:definition xml:lang="en">Caller information
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: tools -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100013">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">tools</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">tools</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/tools.en" />
+  <skos:definition xml:lang="en">Tools needed to create resources</skos:definition>
+</rdf:Description>
+
+<!-- Property: users -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/1000011">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">users</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">users</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/users.en" />
+  <skos:definition xml:lang="en">The user group of the resource
+</skos:definition>
+</rdf:Description>
+
+<!-- Property: values -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/Hz/100020">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/Hz" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">values</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">values</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/Hz/values.en" />
+  <skos:definition xml:lang="en">The historical, scientific, artistic and economic value of resources</skos:definition>
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

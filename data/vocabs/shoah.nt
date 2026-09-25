@@ -1,0 +1,243 @@
+<http://dati.cdec.it/lod/shoah/auntOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/auntOf> <http://www.w3.org/2000/01/rdf-schema#label> "Aunt of"@en .
+<http://dati.cdec.it/lod/shoah/auntOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/auntOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/Liberation> <http://www.w3.org/2000/01/rdf-schema#label> "Liberation"@en .
+<http://dati.cdec.it/lod/shoah/Liberation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/convoy> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Convoy> .
+<http://dati.cdec.it/lod/shoah/convoy> <http://www.w3.org/2000/01/rdf-schema#label> "Convoy"@en .
+<http://dati.cdec.it/lod/shoah/convoy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/convoy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/parentPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/parentPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Parent Place"@en .
+<http://dati.cdec.it/lod/shoah/parentPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Place> .
+<http://dati.cdec.it/lod/shoah/parentPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/arrestedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/arrestedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Arrested By"@en .
+<http://dati.cdec.it/lod/shoah/arrestedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/arrestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/placeOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Place> .
+<http://dati.cdec.it/lod/shoah/placeOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "Place of Birth"@en .
+<http://dati.cdec.it/lod/shoah/placeOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/placeOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/NaziCampTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Nazi Camp Transfer"@en .
+<http://dati.cdec.it/lod/shoah/NaziCampTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/widowOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/widowOf> <http://www.w3.org/2000/01/rdf-schema#label> "Widow of"@en .
+<http://dati.cdec.it/lod/shoah/widowOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/widowOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/transferDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/transferDate> <http://www.w3.org/2000/01/rdf-schema#label> "Transfer Date"@en .
+<http://dati.cdec.it/lod/shoah/transferDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/NaziCampTransfer> .
+<http://dati.cdec.it/lod/shoah/transferDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/deathInItaly> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://dati.cdec.it/lod/shoah/deathInItaly> <http://www.w3.org/2000/01/rdf-schema#label> "Death in Italy"@en .
+<http://dati.cdec.it/lod/shoah/deathInItaly> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/deathInItaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/returnPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/returnPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Return Place"@en .
+<http://dati.cdec.it/lod/shoah/returnPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Liberation> .
+<http://dati.cdec.it/lod/shoah/returnPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/Massacre> <http://www.w3.org/2000/01/rdf-schema#label> "Massacre"@en .
+<http://dati.cdec.it/lod/shoah/Massacre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/fatherOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/fatherOf> <http://www.w3.org/2000/01/rdf-schema#label> "Father of"@en .
+<http://dati.cdec.it/lod/shoah/fatherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/fatherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/parentReligion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/parentReligion> <http://www.w3.org/2000/01/rdf-schema#label> "Parent Religion"@en .
+<http://dati.cdec.it/lod/shoah/parentReligion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/parentReligion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/arrestDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/arrestDate> <http://www.w3.org/2000/01/rdf-schema#label> "Arrest Date"@en .
+<http://dati.cdec.it/lod/shoah/arrestDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/arrestDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/NaziCamp> <http://www.w3.org/2000/01/rdf-schema#label> "Nazi Camp"@en .
+<http://dati.cdec.it/lod/shoah/NaziCamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/detentionPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/DetentionPlace> .
+<http://dati.cdec.it/lod/shoah/detentionPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Detention Place"@en .
+<http://dati.cdec.it/lod/shoah/detentionPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/detentionPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/sisterOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/sisterOf> <http://www.w3.org/2000/01/rdf-schema#label> "Sister of"@en .
+<http://dati.cdec.it/lod/shoah/sisterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/sisterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://dati.cdec.it/lod/shoah/country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Place> .
+<http://dati.cdec.it/lod/shoah/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/convoyDeparturePlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/DetentionPlace> .
+<http://dati.cdec.it/lod/shoah/convoyDeparturePlace> <http://www.w3.org/2000/01/rdf-schema#label> "Last Place before Deportation"@en .
+<http://dati.cdec.it/lod/shoah/convoyDeparturePlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/convoyDeparturePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/placeOfDeath> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Place> .
+<http://dati.cdec.it/lod/shoah/placeOfDeath> <http://www.w3.org/2000/01/rdf-schema#label> "Place of Death"@en .
+<http://dati.cdec.it/lod/shoah/placeOfDeath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/placeOfDeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/Persecution> <http://www.w3.org/2000/01/rdf-schema#label> "Persecution"@en .
+<http://dati.cdec.it/lod/shoah/Persecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/arrestPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Place> .
+<http://dati.cdec.it/lod/shoah/arrestPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Arrest Place"@en .
+<http://dati.cdec.it/lod/shoah/arrestPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/arrestPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/motherName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/motherName> <http://www.w3.org/2000/01/rdf-schema#label> "Mother Name"@en .
+<http://dati.cdec.it/lod/shoah/motherName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/motherName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/widowerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/widowerOf> <http://www.w3.org/2000/01/rdf-schema#label> "Widower of"@en .
+<http://dati.cdec.it/lod/shoah/widowerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/widowerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/consortReligion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/consortReligion> <http://www.w3.org/2000/01/rdf-schema#label> "Consort Religion"@en .
+<http://dati.cdec.it/lod/shoah/consortReligion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/consortReligion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Detention Place Transfer"@en .
+<http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/convoyNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Convoy Number"@en .
+<http://dati.cdec.it/lod/shoah/convoyNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/convoyNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/dateOfDeath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/dateOfDeath> <http://www.w3.org/2000/01/rdf-schema#label> "Date of Death"@en .
+<http://dati.cdec.it/lod/shoah/dateOfDeath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/dateOfDeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/> <http://www.w3.org/2002/07/owl#versionIRI> <http://dati.cdec.it/lod/shoah/0.1> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/elements/1.1/creator> "Laura Brazzo" .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/elements/1.1/description> "The ontology describing the Shoah domain, proposed here in beta version, aims to formally describe concepts and relationships that characterize the process of persecution and deportation of Jews in Italy between 1943 and 1945."@en .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dati.cdec.it/lod/shoah/" .
+<http://dati.cdec.it/lod/shoah/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/vocab/bio/0.1/> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/terms/creator> <https://plus.google.com/+silviamazzini_lod/> .
+<http://dati.cdec.it/lod/shoah/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/terms/creator> <http://dati.cdec.it/lod/shoah/www.cdec.it> .
+<http://dati.cdec.it/lod/shoah/> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://dati.cdec.it/lod/shoah/> <http://www.w3.org/2002/07/owl#versionInfo> "beta version"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/terms/creator> <http://dati.cdec.it/lod/shoah/www.regesta.com> .
+<http://dati.cdec.it/lod/shoah/> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/dc/terms/issued> "2014-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dati.cdec.it/lod/shoah/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "shoah" .
+<http://dati.cdec.it/lod/shoah/naziCampTransfer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/NaziCampTransfer> .
+<http://dati.cdec.it/lod/shoah/naziCampTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Nazi Camp Transfer"@en .
+<http://dati.cdec.it/lod/shoah/naziCampTransfer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/naziCampTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "Date of Birth"@en .
+<http://dati.cdec.it/lod/shoah/dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/dateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/campSerialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/campSerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Camp Serial Number"@en .
+<http://dati.cdec.it/lod/shoah/campSerialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/campSerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/consortFirstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/consortFirstName> <http://www.w3.org/2000/01/rdf-schema#label> "Consort First Name"@en .
+<http://dati.cdec.it/lod/shoah/consortFirstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/consortFirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/persecution> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/persecution> <http://www.w3.org/2000/01/rdf-schema#label> "Persecution"@en .
+<http://dati.cdec.it/lod/shoah/persecution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/persecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/fatherName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/fatherName> <http://www.w3.org/2000/01/rdf-schema#label> "Father Name"@en .
+<http://dati.cdec.it/lod/shoah/fatherName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/fatherName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/uncleOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/uncleOf> <http://www.w3.org/2000/01/rdf-schema#label> "Uncle of"@en .
+<http://dati.cdec.it/lod/shoah/uncleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/uncleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/toPrison> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/DetentionPlace> .
+<http://dati.cdec.it/lod/shoah/toPrison> <http://www.w3.org/2000/01/rdf-schema#label> "to Prison"@en .
+<http://dati.cdec.it/lod/shoah/toPrison> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> .
+<http://dati.cdec.it/lod/shoah/toPrison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/DetentionPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Detention Place"@en .
+<http://dati.cdec.it/lod/shoah/DetentionPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/brotherOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/brotherOf> <http://www.w3.org/2000/01/rdf-schema#label> "Brother of"@en .
+<http://dati.cdec.it/lod/shoah/brotherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/brotherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/persecutionCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/persecutionCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Reason of Deportation"@en .
+<http://dati.cdec.it/lod/shoah/persecutionCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/persecutionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/districtOfResidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/districtOfResidence> <http://www.w3.org/2000/01/rdf-schema#label> "District of Residence"@en .
+<http://dati.cdec.it/lod/shoah/districtOfResidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/districtOfResidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/motherMaidenName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/motherMaidenName> <http://www.w3.org/2000/01/rdf-schema#label> "Mother Maiden Name"@en .
+<http://dati.cdec.it/lod/shoah/motherMaidenName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/motherMaidenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/fromPrison> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/DetentionPlace> .
+<http://dati.cdec.it/lod/shoah/fromPrison> <http://www.w3.org/2000/01/rdf-schema#label> "from Prison"@en .
+<http://dati.cdec.it/lod/shoah/fromPrison> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> .
+<http://dati.cdec.it/lod/shoah/fromPrison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/fromNaziCamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/NaziCamp> .
+<http://dati.cdec.it/lod/shoah/fromNaziCamp> <http://www.w3.org/2000/01/rdf-schema#label> "from Camp"@en .
+<http://dati.cdec.it/lod/shoah/fromNaziCamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/NaziCampTransfer> .
+<http://dati.cdec.it/lod/shoah/fromNaziCamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/liberation> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Liberation> .
+<http://dati.cdec.it/lod/shoah/liberation> <http://www.w3.org/2000/01/rdf-schema#label> "Liberation"@en .
+<http://dati.cdec.it/lod/shoah/liberation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/liberation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/consortFamilyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/consortFamilyName> <http://www.w3.org/2000/01/rdf-schema#label> "Consort Family Name"@en .
+<http://dati.cdec.it/lod/shoah/consortFamilyName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/consortFamilyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/departureDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/departureDate> <http://www.w3.org/2000/01/rdf-schema#label> "Departure Date"@en .
+<http://dati.cdec.it/lod/shoah/departureDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/departureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/liberationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/liberationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Liberation Date"@en .
+<http://dati.cdec.it/lod/shoah/liberationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Liberation> .
+<http://dati.cdec.it/lod/shoah/liberationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/consortOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/consortOf> <http://www.w3.org/2000/01/rdf-schema#label> "Consort of"@en .
+<http://dati.cdec.it/lod/shoah/consortOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/consortOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/motherOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/motherOf> <http://www.w3.org/2000/01/rdf-schema#label> "Mother of"@en .
+<http://dati.cdec.it/lod/shoah/motherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/motherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/Convoy> <http://www.w3.org/2000/01/rdf-schema#label> "Convoy"@en .
+<http://dati.cdec.it/lod/shoah/Convoy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/deathDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://dati.cdec.it/lod/shoah/deathDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Death Description"@en .
+<http://dati.cdec.it/lod/shoah/deathDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/deathDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/subCampOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/NaziCamp> .
+<http://dati.cdec.it/lod/shoah/subCampOf> <http://www.w3.org/2000/01/rdf-schema#label> "Sub Camp of"@en .
+<http://dati.cdec.it/lod/shoah/subCampOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/NaziCamp> .
+<http://dati.cdec.it/lod/shoah/subCampOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/grandmotherOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/grandmotherOf> <http://www.w3.org/2000/01/rdf-schema#label> "Grandmother of"@en .
+<http://dati.cdec.it/lod/shoah/grandmotherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/grandmotherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/shoahSurvivor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://dati.cdec.it/lod/shoah/shoahSurvivor> <http://www.w3.org/2000/01/rdf-schema#label> "Shoah Survivor"@en .
+<http://dati.cdec.it/lod/shoah/shoahSurvivor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/shoahSurvivor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/massacre> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/Massacre> .
+<http://dati.cdec.it/lod/shoah/massacre> <http://www.w3.org/2000/01/rdf-schema#label> "Massacre in Italy"@en .
+<http://dati.cdec.it/lod/shoah/massacre> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/massacre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/toNaziCamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/NaziCamp> .
+<http://dati.cdec.it/lod/shoah/toNaziCamp> <http://www.w3.org/2000/01/rdf-schema#label> "to Camp"@en .
+<http://dati.cdec.it/lod/shoah/toNaziCamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/NaziCampTransfer> .
+<http://dati.cdec.it/lod/shoah/toNaziCamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/toNaziCamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/returnDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://dati.cdec.it/lod/shoah/returnDate> <http://www.w3.org/2000/01/rdf-schema#label> "Return Date"@en .
+<http://dati.cdec.it/lod/shoah/returnDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Liberation> .
+<http://dati.cdec.it/lod/shoah/returnDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+<http://dati.cdec.it/lod/shoah/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.cdec.it/lod/shoah/grandfatherOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/grandfatherOf> <http://www.w3.org/2000/01/rdf-schema#label> "Grandfather of"@en .
+<http://dati.cdec.it/lod/shoah/grandfatherOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://dati.cdec.it/lod/shoah/grandfatherOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dati.cdec.it/lod/shoah/arrivalDate> <http://www.w3.org/2000/01/rdf-schema#label> "Arrival Date"@en .
+<http://dati.cdec.it/lod/shoah/arrivalDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Convoy> .
+<http://dati.cdec.it/lod/shoah/arrivalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.cdec.it/lod/shoah/detentionPlaceTransfer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> .
+<http://dati.cdec.it/lod/shoah/detentionPlaceTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Detention Place Transfer"@en .
+<http://dati.cdec.it/lod/shoah/detentionPlaceTransfer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.cdec.it/lod/shoah/Persecution> .
+<http://dati.cdec.it/lod/shoah/detentionPlaceTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

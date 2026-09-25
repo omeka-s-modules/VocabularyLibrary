@@ -1,0 +1,1178 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://sparql.cwrc.ca/ontologies/ii#> .
+@prefix loc: <http://id.loc.gov/vocabulary/relators/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cwrc: <http://sparql.cwrc.ca/ontologies/cwrc#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+<http://orcid.org/0000-0002-0267-7344>
+    a owl:NamedIndividual ;
+    owl:sameAs :SusanBrown .
+
+cwrc:NaturalPerson
+    a owl:Class .
+
+<http://sparql.cwrc.ca/ontologies/ii>
+    loc:ctb :ConstanceCrompton, :originalOrlandoAuthor ;
+    loc:fnd :sshrc ;
+    loc:pdr :SusanBrown ;
+    dcterms:creator :AbigelLemak, :AlliyyaMo, :ColinFaulkner, :DebStacey, :GurjapSingh, :JadePenancier, :JasmineDrudgeWillson, :JoelCummings, :KimMartin, :SusanBrown ;
+    dcterms:date "2018-09-30"^^xsd:date ;
+    dcterms:description "L'Ontologie II est l'ontologie du Collaboratoire scientifique des Ã©crits du Canada."@fr, "The CWRC Illness and Injury Ontology is an ontology developed and used by the Canadian Writing Research Collaboratory."@en ;
+    dcterms:publisher :cwrc ;
+    dcterms:rights <https://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:subject <http://id.loc.gov/authorities/subjects/sh2009007122>, <http://id.loc.gov/authorities/subjects/sh85013838>, <http://id.loc.gov/authorities/subjects/sh85019388>, <http://id.loc.gov/authorities/subjects/sh85043777>, <http://id.loc.gov/authorities/subjects/sh85077519> ;
+    dcterms:title "L'Ontologie II"@fr, "The CWRC Illness and Injury Ontology"@en ;
+    vann:preferredNamespacePrefix "ii" ;
+    vann:preferredNamespaceUri "http://sparql.cwrc.ca/ontologies/ii#" ;
+    void:inDataset :datasetdefinition ;
+    a owl:Ontology ;
+    rdfs:comment "The CWRC Illness and Injury Ontology is an ontology developed and used by the Canadian Writing Research Collaboratory."@en ;
+    rdfs:label "The CWRC Illness and Injury Ontology"@en ;
+    owl:priorVersion <http://sparql.cwrc.ca/ontologies/ii-2018-08-31> ;
+    owl:versionInfo "1.1" ;
+    vs:term_status "Testing"@en ;
+    skos:definition "The CWRC Illness and Injury Ontology is an ontology developed and used by the Canadian Writing Research Collaboratory."@en ;
+    foaf:logo <http://sparql.cwrc.ca/images/CWRCLogo-Horz-FullColour.png> ;
+    foaf:name "The CWRC Illness and Injury Ontology"@en .
+
+<http://sparql.cwrc.ca/ontologies/ii#5861ef3d-5655-415c-a382-4720e336a347>
+    dcterms:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    dcterms:title "World Health Organization" ;
+    bibo:uri <http://www.who.int/classifications/icd/en/> ;
+    a bibo:Document .
+
+<http://sparql.cwrc.ca/ontologies/ii#6a6cf41d-b309-4696-bcf1-49f95d0db119>
+    dcterms:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    dcterms:publisher <http://sparql.cwrc.ca/ontologies/ii#6a6cf41d-b309-4696-bcf1-49f95d0db119-d292a22202> ;
+    dcterms:title "WHO Application of ICD-10 for low-resource settings initial cause of death collection" ;
+    bibo:uri <http://www.who.int/healthinfo/civil_registration/ICD_10_SMoL.pdf?ua=1> ;
+    a bibo:Document .
+
+<http://sparql.cwrc.ca/ontologies/ii#6a6cf41d-b309-4696-bcf1-49f95d0db119-d292a22202>
+    a foaf:Organization ;
+    foaf:name "World Health Organization" .
+
+:AbigelLemak
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Abigel Lemak" .
+
+:Abortion
+    :hasCWRCCode "15.1"^^xsd:string ;
+    :hasWHOCode "5-79"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Abortion"@en .
+
+:Addisons_disease
+    :hasCWRCCode "4.2"^^xsd:string ;
+    a :Endocrine_nutritional_and_metabolic_diseases, owl:NamedIndividual ;
+    rdfs:label "Addison's disease"@en ;
+    skos:note """Description from the Mayo Clinic
+(https://www.mayoclinic.org/diseases-conditions/addisons-disease/symptoms-causes/syc-20350293)
+
+\"Addison's disease is a disorder that occurs when your body produces insufficient amounts of certain hormones produced by your adrenal glands. In Addison's disease, your adrenal glands produce too little cortisol and often insufficient levels of aldosterone as well.
+
+Also called adrenal insufficiency, Addison's disease occurs in all age groups and affects both sexes. Addison's disease can be life-threatening.\"""" .
+
+:Alcohol_poisoning
+    :hasCWRCCode "20.8"^^xsd:string ;
+    :hasWHOCode "5-102-1"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Alcohol poisoning"@en .
+
+:Alcohol_use_disorders
+    :hasCWRCCode "5.1"^^xsd:string ;
+    :hasWHOCode "5-52"^^xsd:string ;
+    a :Mental_and_behavioural_disorders, owl:NamedIndividual ;
+    rdfs:label "Alcohol use disorders"@en ;
+    skos:note """Orlando terms include
+   - delirium tremens""" .
+
+:AlliyyaMo
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Alliyya Mo" .
+
+:Alzheimers_disease_dementias
+    :hasCWRCCode "6.2"^^xsd:string ;
+    :hasWHOCode "5-56"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Alzheimer's disease, dementias"@en .
+
+:Anaemia
+    :hasCWRCCode "3.1"^^xsd:string ;
+    :hasWHOCode "5-47"^^xsd:string ;
+    a :Diseases_of_the_blood, owl:NamedIndividual ;
+    rdfs:label "Anaemia"@en .
+
+:Appendicitis
+    :hasCWRCCode "11.2"^^xsd:string ;
+    :hasWHOCode "5-72"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual ;
+    rdfs:label "Appendicitis"@en .
+
+:Asphyxia
+    :hasCWRCCode "19.9"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Asphyxia"@en .
+
+:Asphyxiation
+    :hasCWRCCode "20.14"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Asphyxiation"@en .
+
+:Assault
+    :hasCWRCCode "20.11"^^xsd:string ;
+    :hasWHOCode "5-104"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Assault"@en .
+
+:Asthma
+    :hasCWRCCode "10.3"^^xsd:string ;
+    :hasWHOCode "5-69"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Asthma"@en .
+
+:Benign_tumours
+    :hasCWRCCode "2.20"^^xsd:string ;
+    :hasWHOCode "5-46"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Benign tumours"@en .
+
+:Birth_trauma
+    :hasCWRCCode "16.3"^^xsd:string ;
+    :hasWHOCode "5-88"^^xsd:string ;
+    a :Infant_death, owl:NamedIndividual ;
+    rdfs:label "Birth trauma"@en .
+
+:Broken_bones
+    :hasCWRCCode "19.3"^^xsd:string ;
+    a :Injuries, owl:NamedIndividual ;
+    rdfs:label "Broken bones"@en .
+
+:Cancer
+    :hasCWRCCode "2"^^xsd:string ;
+    :hasWHOChapter "2"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer"@en .
+
+:Cancer_of_bladder
+    :hasCWRCCode "2.15"^^xsd:string ;
+    :hasWHOCode "5-40"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the bladder"@en .
+
+:Cancer_of_breast
+    :hasCWRCCode "2.10"^^xsd:string ;
+    :hasWHOCode "5-35"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the breast"@en .
+
+:Cancer_of_central_nervous_system
+    :hasCWRCCode "2.16"^^xsd:string ;
+    :hasWHOCode "5-41"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the central nervous system"@en .
+
+:Cancer_of_cervix
+    :hasCWRCCode "2.11"^^xsd:string ;
+    :hasWHOCode "5-36"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the cervix"@en .
+
+:Cancer_of_colon_rectum_anus
+    :hasCWRCCode "2.4"^^xsd:string ;
+    :hasWHOCode "5-29"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the colon, rectum, anus"@en .
+
+:Cancer_of_larynx
+    :hasCWRCCode "2.7"^^xsd:string ;
+    :hasWHOCode "5-32"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the larynx"@en .
+
+:Cancer_of_lip_oral_cavity_and_pharynx
+    :hasCWRCCode "2.1"^^xsd:string ;
+    :hasWHOCode "5-26"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the lip, oral cavity and pharynx"@en .
+
+:Cancer_of_liver
+    :hasCWRCCode "2.5"^^xsd:string ;
+    :hasWHOCode "5-30"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the liver"@en .
+
+:Cancer_of_oesophagus
+    :hasCWRCCode "2.2"^^xsd:string ;
+    :hasWHOCode "5-27"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the oesophagus"@en .
+
+:Cancer_of_ovary
+    :hasCWRCCode "2.13"^^xsd:string ;
+    :hasWHOCode "5-38"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the ovary"@en .
+
+:Cancer_of_pancreas
+    :hasCWRCCode "2.6"^^xsd:string ;
+    :hasWHOCode "5-31"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the pancreas"@en .
+
+:Cancer_of_prostate
+    :hasCWRCCode "2.14"^^xsd:string ;
+    :hasWHOCode "5-39"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the prostate"@en .
+
+:Cancer_of_skin
+    :hasCWRCCode "2.9"^^xsd:string ;
+    :hasWHOCode "5-34"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the skin"@en .
+
+:Cancer_of_stomach
+    :hasCWRCCode "2.3"^^xsd:string ;
+    :hasWHOCode "5-28"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the stomach"@en .
+
+:Cancer_of_trachea_bronchus_and_lung
+    :hasCWRCCode "2.8"^^xsd:string ;
+    :hasWHOCode "5-33"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of trachea, bronchus and lung"@en .
+
+:Cancer_of_uterus
+    :hasCWRCCode "2.12"^^xsd:string ;
+    :hasWHOCode "5-37"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Cancer of the uterus"@en .
+
+:Cancers
+    a owl:Class ;
+    rdfs:label "Cancers"@en ;
+    rdfs:subClassOf :IllnessInjury ;
+    owl:disjointWith :Congenital_malformations_deformations_and_chromosomal_abnormalities, :Diseases_of_the_blood, :Diseases_of_the_circulatory_system, :Diseases_of_the_digestive_system, :Diseases_of_the_ear, :Diseases_of_the_eye, :Diseases_of_the_genitourinary_system, :Diseases_of_the_musculoskeletal_system, :Diseases_of_the_nervous_system, :Diseases_of_the_respiratory_system, :Diseases_of_the_skin, :Endocrine_nutritional_and_metabolic_diseases, :External_causes, :Infant_death, :Infectious_diseases, :Mental_and_behavioural_disorders, :Pregnancy_childbirth ;
+    skos:altLabel "Neoplasms"^^xsd:string ;
+    skos:closeMatch <http://purl.bioontology.org/ontology/ICD10/C00-D48.9> ;
+    skos:note "Notes from ICD-10-SMoL: Includes all neoplasms of all organ systems, including cancer."^^xsd:string ;
+    skos:prefLabel "Cancers"^^xsd:string .
+
+:Celiac_disease
+    :hasWHOCode "11.5"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual ;
+    rdfs:label "Celiac disease"@en ;
+    skos:altLabel "Coeliac disease", "Sprue" ;
+    skos:note """Description from Mayo Clinic 
+(https://www.mayoclinic.org/diseases-conditions/celiac-disease/symptoms-causes/syc-20352220)
+
+\"Celiac disease (gluten-sensitive enteropathy), sometimes called sprue or coeliac, is an immune reaction to eating gluten, a protein found in wheat, barley and rye.
+
+If you have celiac disease, eating gluten triggers an immune response in your small intestine. Over time, this reaction damages your small intestine's lining and prevents absorption of some nutrients (malabsorption). The intestinal damage often causes diarrhea, fatigue, weight loss, bloating and anemia, and can lead to serious complications.\"""" .
+
+:Cerebrovascular_diseases_stroke
+    :hasCWRCCode "9.4"^^xsd:string ;
+    :hasWHOCode "5-64"^^xsd:string ;
+    a :Diseases_of_the_circulatory_system, owl:NamedIndividual ;
+    rdfs:label "Cerebrovascular diseases, stroke"@en .
+
+:Chill
+    :hasCWRCCode "18.6"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Chill"@en .
+
+:Cholera
+    :hasCWRCCode "1.1"^^xsd:string ;
+    :hasWHOCode "5-1"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Cholera"@en .
+
+:Cold
+    :hasCWRCCode "10.4"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Cold"@en .
+
+:ColinFaulkner
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Colin Faulkner" .
+
+:Coma
+    :hasCWRCCode "18.7"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Coma"@en .
+
+:Complications_of_pregnancy_labour_delivery
+    :hasCWRCCode "16.1"^^xsd:string ;
+    :hasWHOCode "5-86"^^xsd:string ;
+    a :Infant_death, owl:NamedIndividual ;
+    rdfs:label "Complications of pregnancy, labour, delivery"@en .
+
+:Complications_of_surgery
+    :hasCWRCCode "19.2"^^xsd:string ;
+    a :Injuries, owl:NamedIndividual ;
+    rdfs:label "Complications of surgery"@en .
+
+:Concussion
+    :hasCWRCCode "19.1"^^xsd:string ;
+    a :Injuries, owl:NamedIndividual ;
+    rdfs:label "Concussion"@en .
+
+:Conflict_and_war
+    :hasCWRCCode "20.12"^^xsd:string ;
+    :hasWHOCode "5-105"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Conflict and war"@en .
+
+:Congenital_hydrocephalus_spina_bifida
+    :hasCWRCCode "17.1"^^xsd:string ;
+    :hasWHOCode "5-91"^^xsd:string ;
+    a :Congenital_malformations_deformations_and_chromosomal_abnormalities, owl:NamedIndividual ;
+    rdfs:label "Congenital hydrocephalus, spina bifida"@en .
+
+:Congenital_malformation_deformation_or_chromosomal_abnormality
+    :hasCWRCCode "17"^^xsd:string ;
+    a :Congenital_malformations_deformations_and_chromosomal_abnormalities, owl:NamedIndividual .
+
+:Congenital_malformations_deformations_and_chromosomal_abnormalities
+    a owl:Class ;
+    rdfs:label "Congenital malformations, deformations and chromosomal abnormalities"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Congenital_malformations_of_the_heart
+    :hasCWRCCode "17.2"^^xsd:string ;
+    :hasWHOCode "5-92"^^xsd:string ;
+    a :Congenital_malformations_deformations_and_chromosomal_abnormalities, owl:NamedIndividual ;
+    rdfs:label "Congenital malformations of the heart"@en .
+
+:ConstanceCrompton
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Constance Crompton" .
+
+:Convulsions
+    :hasCWRCCode "18.4"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Convulsions"@en .
+
+:DebStacey
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:homepage <http://ontology.socs.uoguelph.ca/> ;
+    foaf:name "Deborah Stacey" .
+
+:Dengue
+    :hasCWRCCode "1.16"^^xsd:string ;
+    :hasWHOCode "5-15"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Dengue"@en .
+
+:Diabetes
+    :hasCWRCCode "4.1"^^xsd:string ;
+    :hasWHOCode "5-49"^^xsd:string ;
+    a :Endocrine_nutritional_and_metabolic_diseases, owl:NamedIndividual ;
+    rdfs:label "Diabetes"@en .
+
+:Diarrhoeal_diseases
+    :hasCWRCCode "1.3"^^xsd:string ;
+    :hasWHOCode "5-3"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Diarrhoeal diseases"@en .
+
+:Diphtheria
+    :hasCWRCCode "1.8"^^xsd:string ;
+    :hasWHOCode "5-8"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Diphtheria"@en .
+
+:Disease_of_the_blood
+    :hasCWRCCode "3"^^xsd:string ;
+    a :Diseases_of_the_blood, owl:NamedIndividual .
+
+:Disease_of_the_circulatory_system
+    :hasCWRCCode "9"^^xsd:string ;
+    a :Diseases_of_the_circulatory_system, owl:NamedIndividual .
+
+:Disease_of_the_digestive_system
+    :hasCWRCCode "11"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual .
+
+:Disease_of_the_ear
+    :hasCWRCCode "7"^^xsd:string ;
+    :hasWHOCode "5-59"^^xsd:string ;
+    a :Diseases_of_the_ear, owl:NamedIndividual .
+
+:Disease_of_the_eye
+    :hasCWRCCode "8"^^xsd:string ;
+    :hasWHOCode "5-58"^^xsd:string ;
+    a :Diseases_of_the_eye, owl:NamedIndividual .
+
+:Disease_of_the_genitourinary_system
+    :hasCWRCCode "14"^^xsd:string ;
+    a :Diseases_of_the_genitourinary_system, owl:NamedIndividual .
+
+:Disease_of_the_musculoskeletal_system
+    :hasCWRCCode "13"^^xsd:string ;
+    :hasWHOCode "5-76"^^xsd:string ;
+    a :Diseases_of_the_musculoskeletal_system, owl:NamedIndividual .
+
+:Disease_of_the_nervous_system
+    :hasCWRCCode "6"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual .
+
+:Disease_of_the_respiratory_system
+    :hasCWRCCode "10"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual .
+
+:Disease_of_the_skin
+    :hasCWRCCode "12"^^xsd:string ;
+    :hasWHOCode "5-75"^^xsd:string ;
+    a :Diseases_of_the_skin, owl:NamedIndividual .
+
+:Diseases_of_the_blood
+    a owl:Class ;
+    rdfs:label "Diseases of the blood"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_circulatory_system
+    a owl:Class ;
+    rdfs:label "Diseases of the circulatory system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_digestive_system
+    a owl:Class ;
+    rdfs:label "Diseases of the digestive system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_ear
+    a owl:Class ;
+    rdfs:label "Diseases of the ear"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_eye
+    a owl:Class ;
+    rdfs:label "Diseases of the eye"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_genitourinary_system
+    a owl:Class ;
+    rdfs:label "Diseases of the genitourinary system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_musculoskeletal_system
+    a owl:Class ;
+    rdfs:label "Diseases of the musculoskeletal system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_nervous_system
+    a owl:Class ;
+    rdfs:label "Diseases of the nervous system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_respiratory_system
+    a owl:Class ;
+    rdfs:label "Diseases of the respiratory system"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Diseases_of_the_skin
+    a owl:Class ;
+    rdfs:label "Diseases of the skin"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Down_syndrome
+    :hasCWRCCode "17.3"^^xsd:string ;
+    :hasWHOCode "5-93"^^xsd:string ;
+    a :Congenital_malformations_deformations_and_chromosomal_abnormalities, owl:NamedIndividual ;
+    rdfs:label "Down syndrome"@en .
+
+:Drowning
+    :hasCWRCCode "20.4"^^xsd:string ;
+    :hasWHOCode "5-99"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Drowning"@en .
+
+:Drug_poisoning
+    :hasCWRCCode "20.9"^^xsd:string ;
+    :hasWHOCode "5-102-2"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Drug poisoning"@en ;
+    skos:note """In Orlando there is a reference to Cause of Death from Dr. James's Powder.
+Dr James's powder was a  patent remedy.  It was also called Dr. Jamesâs Fever Powder, circa 1746.
+
+(https://www.the-scientist.com/uncategorized/dr-james-fever-powder-circa-1746-43055)
+\"Dr. Jamesâs fever powder, patented by English physician Robert James, claimed to cure fevers and various other maladies, from gout and scurvy to distemper in cattle. Though its efficacy was often questioned, the powder had 'a long tradition of usage', from its introduction in 1746 well into the 20th century, says John Crellin, a professor of medical humanities at Memorial University of Newfoundland. It was even prescribed to King George III when he was suffering from cataracts, rheumatism and dementia at the end of his life.\"""" .
+
+:Drug_use_disorders
+    :hasCWRCCode "5.2"^^xsd:string ;
+    :hasWHOCode "5-53"^^xsd:string ;
+    a :Mental_and_behavioural_disorders, owl:NamedIndividual ;
+    rdfs:label "Drug use disorders"@en .
+
+:Eating_disorders
+    :hasCWRCCode "5.4"^^xsd:string ;
+    a :Mental_and_behavioural_disorders, owl:NamedIndividual ;
+    rdfs:label "Eating disorders"@en ;
+    skos:note "This classification is for self-imposed starvation and not to be used when the starvation/malnutrition is not voluntary." .
+
+:Endocrine_nutritional_and_metabolic_diseases
+    a owl:Class ;
+    rdfs:label "Endocrine, nutritional and metabolic diseases"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Endocrine_nutritional_or_metabolic_disease
+    :hasCWRCCode "4"^^xsd:string ;
+    a :Endocrine_nutritional_and_metabolic_diseases, owl:NamedIndividual .
+
+:Epilepsy
+    :hasCWRCCode "6.3"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Epilepsy"@en .
+
+:Erysipelas
+    :hasCWRCCode "1.25"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Erysipelas"@en ;
+    skos:note """Description from Wikipedia
+(https://en.wikipedia.org/wiki/Erysipelas)
+
+\"Erysipelas is an acute infection typically with a skin rash, usually on any of the legs and toes, face, arms, and fingers. It is an infection of the upper dermis and superficial lymphatics, usually caused by beta-hemolytic group A Streptococcus bacteria on scratches or otherwise infected areas.\""""^^xsd:string .
+
+:External_cause
+    :hasCWRCCode "20"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual .
+
+:External_causes
+    a owl:Class ;
+    rdfs:label "External causes"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Falls
+    :hasCWRCCode "20.3"^^xsd:string ;
+    :hasWHOCode "5-98"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Falls"@en .
+
+:Female_infertility
+    :hasCWRCCode "14.2"^^xsd:string ;
+    a :Diseases_of_the_genitourinary_system, owl:NamedIndividual ;
+    rdfs:label "Female infertility"@en ;
+    skos:altLabel "Sterility"^^xsd:string .
+
+:Fever
+    :hasCWRCCode "18.1"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Fever"@en .
+
+:Fire
+    :hasCWRCCode "20.5"^^xsd:string ;
+    :hasWHOCode "5-100"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Fire"@en .
+
+:Forces_of_nature
+    :hasCWRCCode "20.6"^^xsd:string ;
+    :hasWHOCode "5-101"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Forces of nature"@en .
+
+:Gangrene
+    :hasCWRCCode "18.5"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Gangrene"@en .
+
+:Gastric_and_duodenal_ulcer
+    :hasCWRCCode "11.1"^^xsd:string ;
+    :hasWHOCode "5-71"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual ;
+    rdfs:label "Gastric and duodenal ulcer"@en .
+
+:Gravess_disease
+    :hasCWRCCode "4.3"^^xsd:string ;
+    a :Endocrine_nutritional_and_metabolic_diseases, owl:NamedIndividual ;
+    rdfs:label "Graves' disease"@en ;
+    skos:note """Description from the Mayo Clinic
+(https://www.mayoclinic.org/diseases-conditions/graves-disease/symptoms-causes/syc-20356240)
+
+\"Graves' disease is an immune system disorder that results in the overproduction of thyroid hormones (hyperthyroidism). Although a number of disorders may result in hyperthyroidism, Graves' disease is a common cause.
+
+Because thyroid hormones affect a number of different body systems, signs and symptoms associated with Graves' disease can be wide ranging and significantly influence your overall well-being. Although Graves' disease may affect anyone, it's more common among women and before the age of 40.\"""" .
+
+:GurjapSingh
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Gurjap Singh" .
+
+:HIV
+    :hasCWRCCode "1.22"^^xsd:string ;
+    :hasWHOCode "5-20"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "HIV"@en .
+
+:Hepatitis
+    :hasCWRCCode "1.19"^^xsd:string ;
+    :hasWHOCode "5-19"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Hepatitis"@en .
+
+:Hepatitis_A
+    :hasCWRCCode "1.20"^^xsd:string ;
+    :hasWHOCode "5-19"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Hepatitis A"@en .
+
+:Hepatitis_B
+    :hasCWRCCode "1.21"^^xsd:string ;
+    :hasWHOCode "5-19-1"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Hepatitis B"@en .
+
+:Hodgkins_lymphoma
+    :hasCWRCCode "2.21"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Hodgkin's lymphoma"@en ;
+    skos:altLabel "Hodgkin's disease" .
+
+:Hypertensive_heart_diseases
+    :hasCWRCCode "9.2"^^xsd:string ;
+    :hasWHOCode "5-61"^^xsd:string ;
+    a :Diseases_of_the_circulatory_system, owl:NamedIndividual ;
+    rdfs:label "Hypertensive heart diseases"@en .
+
+:IllnessInjury
+    a owl:Class ;
+    skos:altLabel "Morbidity and Mortality" ;
+    skos:note """This list of Illness and Injury (Morbidity and Mortality) classifications is an abbreviated version of the World Health Organization's (WHO) Startup Mortality List (ICD-10-SMoL).  ICD-10-SMoL is the WHO's application of ICD-10 for low-resource settings initial cause of death collection.
+
+ICD-10-SMoL was chosen because it is a simplified version of the ICD-10.
+ICD (International Classification of Diseases) \"is the foundation for the identification of health trends and statistics globally, and the international standard for reporting diseases and health conditions. It is the diagnostic classification standard for all clinical and research purposes. ICD defines the universe of diseases, disorders, injuries and other related health conditions\" [http://www.who.int/classifications/icd/en/].
+
+Version 1.0 of this ontology was compiled for the CWRC ontology project and reflects the need to have causes of death and health issues organized in a way to allow for analysis of cultural data.  A simplified list was deemed sufficient since the domain under study (cultural documents) will not have detailed medical information with regards to cause of death or health issues.  But instead of accepting a list of general usage terms for causes of death or health issues that appear in some sources (e.g. Wikipedia, Wikidata, etc.), a standardized, medical classification was selected so that it could be of use for future analysis regarding questions involving the intersection of health and culture.
+
+ICD-10-SMoL was chosen since it was the latest version of this list (June, 2018).  A stable version of ICD-11 was to be available in June 2018 but there was no ICD-11-SMoL available at this time.
+
+To obtain the ICD10-SMoL:
+http://www.who.int/healthinfo/civil_registration/ICD_10_SMoL.pdf?ua=1""" ;
+    skos:prefLabel "Illness and Injury" .
+
+:Indirect_obstetric_deaths
+    :hasCWRCCode "15.7"^^xsd:string ;
+    :hasWHOCode "5-85"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Indirect obstetric deaths"@en ;
+    skos:note """From ICD-10:
+
+\"Death from any obstetric cause (direct or indirect) occurring one year or more after delivery\""""^^xsd:string .
+
+:InfantDeath
+    :hasCWRCCode "16"^^xsd:string ;
+    a :Infant_death, owl:NamedIndividual .
+
+:Infant_death
+    a owl:Class ;
+    rdfs:label "Infant death"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Infectious_disease
+    :hasCWRCCode "1"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual .
+
+:Infectious_diseases
+    a owl:Class ;
+    rdfs:label "Infectious diseases"@en ;
+    rdfs:subClassOf :IllnessInjury ;
+    skos:closeMatch <http://purl.bioontology.org/ontology/ICD10/A00-B99.9> ;
+    skos:prefLabel "Infectious diseases"^^xsd:string .
+
+:Influenza
+    :hasCWRCCode "10.1"^^xsd:string ;
+    :hasWHOCode "5-66"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Influenza"@en .
+
+:Injuries
+    a owl:Class ;
+    rdfs:label "Injuries"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Injury
+    :hasCWRCCode "19"^^xsd:string ;
+    a :Injuries, owl:NamedIndividual .
+
+:Intentional_self-harm
+    :hasCWRCCode "20.10"^^xsd:string ;
+    :hasWHOCode "5-103"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Intentional self-harm"@en ;
+    skos:prefLabel "Suicide"@en .
+
+:Intestinal_malabsorption
+    :hasCWRCCode "11.4"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual ;
+    rdfs:label "Intestinal malabsorption"@en ;
+    skos:note "Orlando term - malabsorption disease" .
+
+:JadePenancier
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Jade Penancier" .
+
+:JasmineDrudgeWillson
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Jasmine Drudge-Willson" .
+
+:Jaundice
+    :hasCWRCCode "18.3"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Jaundice"@en .
+
+:JoelCummings
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Joel Cummings" .
+
+:Kidney_stones
+    :hasCWRCCode "14.1"^^xsd:string ;
+    a :Diseases_of_the_genitourinary_system, owl:NamedIndividual ;
+    rdfs:label "Kidney stones"@en ;
+    skos:note """In Orlando, there is a reference to 'gravel'.  This is an older medical term for kidney stones.
+
+As described in 'GLOSSARY OF MEDICAL TERMS USED IN THE 18TH AND 19TH CENTURIES'
+(https://www.thornber.net/medicine/html/medgloss.html)
+
+\"Gravel:  a disease characterised by small stones which are formed in the kidneys, passed along the ureters to the bladder, and expelled with the urine.  See also stranguary.  Synonym: kidney stone.  Sandy matter concreted in the kidneys.\"""" .
+
+:KimMartin
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:name "Kim Martin" .
+
+:Leprosy
+    :hasCWRCCode "1.6"^^xsd:string ;
+    :hasWHOCode "5-6"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Leprosy"@en .
+
+:Leukaemia
+    :hasCWRCCode "2.19"^^xsd:string ;
+    :hasWHOCode "5-44"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Leukaemia"@en .
+
+:Liver_cirrhosis
+    :hasCWRCCode "11.3"^^xsd:string ;
+    :hasWHOCode "5-73"^^xsd:string ;
+    a :Diseases_of_the_digestive_system, owl:NamedIndividual ;
+    rdfs:label "Liver cirrhosis"@en .
+
+:Malaise_and_fatigue
+    :hasCWRCCode "18.10"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Malaise and fatigue"@en .
+
+:Malaria
+    :hasCWRCCode "1.23"^^xsd:string ;
+    :hasWHOCode "5-21"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Malaria"@en .
+
+:Male_infertility
+    :hasCWRCCode "14.3"^^xsd:string ;
+    a :Diseases_of_the_genitourinary_system, owl:NamedIndividual ;
+    rdfs:label "Male infertility"@en ;
+    skos:altLabel "Sterility"^^xsd:string .
+
+:Malnutrition
+    :hasCWRCCode "4.4"^^xsd:string ;
+    :hasWHOCode "5-50"^^xsd:string ;
+    a :Endocrine_nutritional_and_metabolic_diseases, owl:NamedIndividual ;
+    rdfs:label "Malnutrition"@en .
+
+:Maternal_haemorrhage
+    :hasCWRCCode "15.4"^^xsd:string ;
+    :hasWHOCode "5-82"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Maternal haemorrhage"@en .
+
+:Maternal_hypertensive_disorders
+    :hasCWRCCode "15.2"^^xsd:string ;
+    :hasWHOCode "5-80"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Maternal hypertensive disorders"@en .
+
+:Maternal_sepsis
+    :hasCWRCCode "15.5"^^xsd:string ;
+    :hasWHOCode "5-83"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Maternal sepsis"@en .
+
+:Measles
+    :hasCWRCCode "1.18"^^xsd:string ;
+    :hasWHOCode "5-18"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Measles"@en .
+
+:Meningitis
+    :hasCWRCCode "6.1"^^xsd:string ;
+    :hasWHOCode "5-55"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Meningitis"@en .
+
+:Meningococcal_infection
+    :hasCWRCCode "1.10"^^xsd:string ;
+    :hasWHOCode "5-10"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Meningococcal infection"@en .
+
+:Mental_and_behavioural_disorder
+    :hasCWRCCode "5"^^xsd:string ;
+    a :Mental_and_behavioural_disorders, owl:NamedIndividual .
+
+:Mental_and_behavioural_disorders
+    a owl:Class ;
+    rdfs:label "Mental and behavioural disorders"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Miscarriage
+    :hasCWRCCode "15.7"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Miscarriage"@en .
+
+:Multiple_myeloma
+    :hasCWRCCode "2.18"^^xsd:string ;
+    :hasWHOCode "5-43"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Multiple myeloma"@en .
+
+:Multiple_sclerosis
+    :hasWHOCode "6.6"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Multiple sclerosis"@en .
+
+:Myocardial_infarction_heart_attack
+    :hasCWRCCode "9.3"^^xsd:string ;
+    :hasWHOCode "5-62"^^xsd:string ;
+    a :Diseases_of_the_circulatory_system, owl:NamedIndividual ;
+    rdfs:label "Myocardial infarction, heart attack"@en .
+
+:Non-Hodgkin_lymphoma
+    :hasCWRCCode "2.17"^^xsd:string ;
+    :hasWHOCode "5-42"^^xsd:string ;
+    a :Cancers, owl:NamedIndividual ;
+    rdfs:label "Non-Hodgkin lymphoma"@en .
+
+:Obstructed_labour
+    :hasCWRCCode "15.3"^^xsd:string ;
+    :hasWHOCode "5-81"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual ;
+    rdfs:label "Obstructed labour"@en .
+
+:Other_transport_accidents
+    :hasCWRCCode "20.2"^^xsd:string ;
+    :hasWHOCode "5-97"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Other transport accidents"@en .
+
+:Paralysis
+    :hasCWRCCode "6.5"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Paralysis"@en .
+
+:Parkinson_disease
+    :hasCWRCCode "6.4"^^xsd:string ;
+    a :Diseases_of_the_nervous_system, owl:NamedIndividual ;
+    rdfs:label "Parkinson disease"@en ;
+    skos:altLabel "Parkinson's disease" ;
+    skos:prefLabel "Parkinson disease" .
+
+:Plague
+    :hasCWRCCode "1.5"^^xsd:string ;
+    :hasWHOCode "5-5"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Plague"@en .
+
+:Pleurisy
+    :hasCWRCCode "10.5"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Pleurisy"@en ;
+    skos:altLabel "Pleuritis" ;
+    skos:note """Description from (http://www.pleuritis.net/)
+
+\"Pleurisy, also known as pleuritus, is an inflammation of the pleura, or the lining of the lungs. This can often be very painful and can be debilitating to a point where a person cannot do much activity because of the pain. This can cause problems breathing and may even make a person run out of breath to a point in which they could pass out. The complications from this disorder can be very serious and in some cases it can be fatal.\""""^^xsd:string .
+
+:Pneumonia
+    :hasCWRCCode "10.2"^^xsd:string ;
+    :hasWHOCode "5-67"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Pneumonia"@en .
+
+:Poisoning
+    :hasCWRCCode "20.7"^^xsd:string ;
+    :hasWHOCode "5-102"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Poisoning"@en .
+
+:Poliomyelitis
+    :hasCWRCCode "1.14"^^xsd:string ;
+    :hasWHOCode "5-13"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Poliomyelitis"@en .
+
+:Pregnancy_childbirth
+    a owl:Class ;
+    rdfs:label "Pregnancy, childbirth"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Pregnancy_or_childbirth
+    :hasCWRCCode "15"^^xsd:string ;
+    a :Pregnancy_childbirth, owl:NamedIndividual .
+
+:Prematurity_low_birth_weight
+    :hasCWRCCode "16.2"^^xsd:string ;
+    :hasWHOCode "5-87"^^xsd:string ;
+    a :Infant_death, owl:NamedIndividual ;
+    rdfs:label "Prematurity, low birth weight"@en .
+
+:Rabies
+    :hasCWRCCode "1.15"^^xsd:string ;
+    :hasWHOCode "5-14"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Rabies"@en .
+
+:Rheumatic_fever
+    :hasCWRCCode "9.1"^^xsd:string ;
+    :hasWHOCode "5-60"^^xsd:string ;
+    a :Diseases_of_the_circulatory_system, owl:NamedIndividual ;
+    rdfs:label "Rheumatic fever"@en .
+
+:Rheumatoid_Arthritis
+    :hasCWRCCode "13.1"^^xsd:string ;
+    a :Diseases_of_the_musculoskeletal_system, owl:NamedIndividual ;
+    rdfs:label "Rheumatoid Arthritis"@en ;
+    skos:note "In Orlando, this is a considered a Cause of Death even though it technically is not a fatal condition.  It does, though, make sufferers susceptible to other illness that are fatal." .
+
+:Road_traffic_accidents
+    :hasCWRCCode "20.1"^^xsd:string ;
+    :hasWHOCode "5-96"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Road traffic accidents"@en .
+
+:Septicaemia
+    :hasCWRCCode "1.11"^^xsd:string ;
+    :hasWHOCode "5-11"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Septicaemia"@en .
+
+:Severe_stress_and_adjustment_disorders
+    :hasCWRCCode "5.3"^^xsd:string ;
+    a :Mental_and_behavioural_disorders, owl:NamedIndividual ;
+    rdfs:label "Severe stress and adjustment disorders"@en ;
+    skos:closeMatch <http://purl.bioontology.org/ontology/ICD10/F40-F48.9> ;
+    skos:note """This category is not in the ICD-10-SMoL.  It is in ICD-10 as category F43 and includes:
+   F43.0   Acute stress reaction
+   F43.1   Post-traumatic stress disorder
+   F43.2   Adjustment disorders
+
+This category will be used for Causes of Death such as:
+   - grief
+   - nervous shock 
+
+Note about \"nervous shock\" - this is a legal term NOT a medical term.
+Definitions include:
+   - from LawTeacher   
+(https://www.lawteacher.net/free-law-essays/common-law/what-is-nervous-shock.php)
+\"Nervous shock is the onset of a psychiatric illness caused by witnessing the negligent action, or the results thereof, of another. For the purposes of succeeding in a suit it must be diagnosed as more than grief or sorrow i.e. an actual psychiatric illness.\"
+   - from Wikipedia
+(https://en.wikipedia.org/wiki/Nervous_shock_in_English_law)
+\"In English law, a nervous shock is a psychiatric illness or injury inflicted upon a person by intentional or negligent actions or omissions of another. Often it is a psychiatric disorder triggered by witnessing an accident, for example an injury caused to one's parents or spouse. Although the term \"nervous shock\" has been described as \"inaccurate\" and \"misleading\", it continues to be applied as a useful abbreviation for a complex concept. The possibility of recovering damages for nervous shock, particularly caused by negligence, is strongly limited in English law.\"""" .
+
+:Sexually_transmitted_diseases
+    :hasCWRCCode "1.12"^^xsd:string ;
+    :hasWHOCode "5-12"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Sexually transmitted diseases"@en ;
+    skos:altLabel "Venereal diseases"^^xsd:string .
+
+:Shock
+    :hasCWRCCode "18.2"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Shock"@en .
+
+:Smallpox
+    :hasCWRCCode "1.24"^^xsd:string ;
+    :hasWHOCode "Eradicated (ICD10 code = B03)"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Smallpox"@en ;
+    skos:note """\"Smallpox is an acute contagious disease caused by the variola virus, a member of the orthopoxvirus family. It was one of the world's most devastating diseases known to humanity. The last known natural case was in Somalia in 1977. It was declared eradicated in 1980 following a global immunization campaign led by the World Health Organization.\"
+
+\"Smallpox is a devastating disease caused by the variola virus. In 1980, following an historic global campaign of surveillance and vaccination, the World Health Assembly declared smallpox eradicated â the only infectious disease to achieve this distinction.\"
+
+Reference: World Health Organization
+http://www.who.int/csr/disease/smallpox/en/
+
+The Smallpox Eradication Programme - SEP (1966-1980)
+http://www.who.int/features/2010/smallpox/en/""" .
+
+:Stillbirth
+    :hasCWRCCode "16.4"^^xsd:string ;
+    a :Infant_death, owl:NamedIndividual ;
+    rdfs:label "Stillbirth"@en ;
+    skos:altLabel "Fetal death"^^xsd:string .
+
+:Stings
+    :hasCWRCCode "20.13"^^xsd:string ;
+    a :External_causes, owl:NamedIndividual ;
+    rdfs:label "Stings"@en .
+
+:SusanBrown
+    a cwrc:NaturalPerson, owl:NamedIndividual ;
+    foaf:homepage <http://www.uoguelph.ca/~sbrown/> ;
+    foaf:name "Susan Brown" .
+
+:Symptoms_unspecified_unknown
+    a owl:Class ;
+    rdfs:label "Symptoms, unspecified, unknown"@en ;
+    rdfs:subClassOf :IllnessInjury .
+
+:Syphilis
+    :hasCWRCCode "1.13"^^xsd:string ;
+    :hasWHOCode "5-12-1"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Syphilis"@en .
+
+:Tachycardia
+    :hasCWRCCode "18.11"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Tachycardia"@en ;
+    skos:altLabel "Rapid heart beat"^^xsd:string ;
+    skos:note "Rapid heart beat - many causes." .
+
+:Tetanus
+    :hasCWRCCode "1.7"^^xsd:string ;
+    :hasWHOCode "5-7"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Tetanus"@en .
+
+:Throat_infection
+    :hasCWRCCode "10.6"^^xsd:string ;
+    a :Diseases_of_the_respiratory_system, owl:NamedIndividual ;
+    rdfs:label "Throat infection"@en .
+
+:Tuberculosis
+    :hasCWRCCode "1.4"^^xsd:string ;
+    :hasWHOCode "5-4"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Tuberculosis"@en ;
+    skos:altLabel "Consumption"^^xsd:string .
+
+:Typhoid
+    :hasCWRCCode "1.2"^^xsd:string ;
+    :hasWHOCode "5-2"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Typhoid"@en .
+
+:Typhus
+    :hasCWRCCode "1.26"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Typhus"@en .
+
+:Unspecified_Unknown_Cause_of_Death
+    :hasCWRCCode "18.8"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual ;
+    rdfs:label "Unspecified, Unknown Cause of Death"@en .
+
+:Unspecified_unknown
+    :hasCWRCCode "18"^^xsd:string ;
+    :hasWHOChapter "18"^^xsd:string ;
+    a :Symptoms_unspecified_unknown, owl:NamedIndividual .
+
+:Whooping_cough
+    :hasCWRCCode "1.9"^^xsd:string ;
+    :hasWHOCode "5-9"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Whooping cough"@en .
+
+:Yellow_fever
+    :hasCWRCCode "1.17"^^xsd:string ;
+    :hasWHOCode "5-16"^^xsd:string ;
+    a :Infectious_diseases, owl:NamedIndividual ;
+    rdfs:label "Yellow fever"@en .
+
+:c08b8d7d-982f-4011-960f-50de18eafe82
+    loc:Author :c08b8d7d-982f-4011-960f-50de18eafe82-1b817441cd ;
+    dcterms:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    dcterms:title "GLOSSARY OF MEDICAL TERMS USED IN THE 18TH AND 19TH CENTURIES" ;
+    bibo:uri <https://www.thornber.net/medicine/html/medgloss.html> ;
+    a bibo:Webpage .
+
+:c08b8d7d-982f-4011-960f-50de18eafe82-1b817441cd
+    dcterms:firstName "Craig" ;
+    dcterms:lastName "Thornber" ;
+    a foaf:Person ;
+    foaf:name "Craig Thornber" .
+
+:cwrc
+    a owl:NamedIndividual, foaf:Organization ;
+    foaf:homepage <http://www.cwrc.ca/> ;
+    foaf:logo <http://sparql.cwrc.ca/images/CWRCLogo-Horz-FullColour.png> ;
+    foaf:name "Le Collaboratoire scientifique des Ã©crits du Canada"@fr, "The Canadian Writing Research Collaboratory"@en .
+
+:hasCWRCCode
+    a owl:DatatypeProperty ;
+    rdfs:label "has CWRC Code"@en ;
+    skos:note "Since both ICD-10 and ICD-10-SMoL (WHO) assign codes to entries, there is an unique code assigned to each entry in Illness and Injury."^^xsd:string .
+
+:hasWHOChapter
+    a owl:DatatypeProperty ;
+    rdfs:label "has WHO Chapter"@en ;
+    skos:note """This code refers to the chapter in the ICS-10-SMoL (WHO) documentation that the illness or injury entry is in.
+
+Not yet used in the ontology."""^^xsd:string .
+
+:hasWHOCode
+    a owl:DatatypeProperty ;
+    rdfs:label "has WHO Code"@en ;
+    rdfs:range xsd:string ;
+    skos:note """Each entry in the ICD-10-SMoL (WHO) is assigned a code and we include it here for reference.
+
+Not yet entered for all of our entries.  Some of our entries will not have a WHO code since they do not appear in the ICD-10-SMoL  Some of these entries do have an ICD-10 code or they are not in either ICD-10 or ICD-10-SMoL and are unique to CWRC."""^^xsd:string .
+
+:sshrc
+    a owl:NamedIndividual, foaf:Organization ;
+    foaf:name "Conseil de recherches en sciences humaines"@fr, "Social Sciences and Humanities Research Council"@en ;
+    foaf:nick "SSHRC" .
+
+skos:altLabel
+    a owl:AnnotationProperty .
+
+skos:closeMatch
+    a owl:AnnotationProperty .
+
+skos:notation
+    a owl:AnnotationProperty .
+
+skos:note
+    a owl:AnnotationProperty .
+
+skos:prefLabel
+    a owl:AnnotationProperty .
+
+foaf:Organization
+    a owl:Class .
+
+foaf:homepage
+    a owl:AnnotationProperty .
+
+foaf:logo
+    a owl:AnnotationProperty .
+
+foaf:name
+    a owl:AnnotationProperty .
+
+foaf:nick
+    a owl:AnnotationProperty .
+
+

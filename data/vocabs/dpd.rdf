@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="./ns-schema.xsl" type="text/xsl" media="screen"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:wn="http://xmlns.com/wordnet/1.6/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:ex="http://purl.org/net/ns/ex#"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.kanzaki.com/ns/dpd#"
+  xmlns:ont="http://purl.org/net/ns/ontology-annot#"
+  xml:base="http://www.kanzaki.com/ns/dpd"
+  >
+
+ <owl:Ontology rdf:about="">
+  <owl:imports rdf:resource="http://www.kanzaki.com/ns/dliser.rdf"/>
+  <rdfs:label>Digital Picture/Document Description vocabulary</rdfs:label>
+  <rdfs:comment>An experimental vocabulary to describe a digital document (originally aimed at picture, such as DSC photograph and digitally scanned image), especially to distinguish the attributes of its original form (when generated), those of published digital file and those of what is depicted.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">デジタル文書を（もともとは画像を、特に撮影に関するデータ、被写体のデータ、デジタルファイルのデータなどをきちんと区別して）記述するための実験ボキャブラリ。</rdfs:comment>
+  <ont:created>2004-02-20</ont:created>
+  <ont:modified>2008-11-22</ont:modified>
+  <owl:versionInfo>Version 0.5.2. OWL DL version, added dpd:granularity. Expanded target from pictuire to any digital document.</owl:versionInfo>
+  <ont:creator>
+   <foaf:Person rdf:about="urn:pin:MK705">
+    <foaf:name xml:lang="ja">神崎正英</foaf:name>
+    <foaf:homepage rdf:resource="http://www.kanzaki.com/"/>
+    <rdfs:seeAlso rdf:resource="http://www.kanzaki.com/info/webwho.rdf"/>
+   </foaf:Person>
+  </ont:creator>
+ </owl:Ontology>
+
+<!-- ==== Class definitions ==== -->
+
+ <owl:Class rdf:ID="GenerationEvent">
+  <rdfs:label>Generation Event</rdfs:label>
+  <rdfs:comment>An event on which a state of the picture/document was generated. Can have properties describing spatial and temporal attributes.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">画像/文書が作成されたり編集されたりする状況（イベント）。場所、時間に関するプロパティを持つことができる。</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Place">
+  <rdfs:label>Place</rdfs:label>
+  <rdfs:comment>A place (or an area), described using a pair of geo:lat and geo:long, with varied granularity. This is a place with (some ambiguous) spatial extent, not a point.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">ある緯度、経度を用いて、ある粒度で表現される場所。点ではなく、（粒度に応じた）広がりある場所で、一定の曖昧さを含む。</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+
+<!-- ==== Property definitions ==== -->
+ <owl:ObjectProperty rdf:ID="generated">
+  <rdfs:label>generated</rdfs:label>
+  <rdfs:comment>Describes an event when/where the picture/document was generated. Super property of 'exposed' and 'digitized'.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">画像/文書が作成された状況（イベント）を記述する。</rdfs:comment>
+  <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  <rdfs:range rdf:resource="#GenerationEvent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="exposed">
+  <rdfs:label>Exposed</rdfs:label>
+  <rdfs:comment>Describes an event when/where the photograph was taken.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">写真が撮影された状況（イベント）を記述する。</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#generated"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="digitized">
+  <rdfs:label>Digitized</rdfs:label>
+  <rdfs:comment>Describes an event when/where the image/document was digitized (e.g. scanned from the origial picture, or digitized with OCR). Has the same GenerationEvent as 'exposed' (and thus 'generated') if the picture was tekan with DSC.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">画像/文書がデジタル化された状況（イベント）を記述する。デジカメの場合は撮影イベントと同じイベントを示す。</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#generated"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="edited">
+  <rdfs:label>Edited</rdfs:label>
+  <rdfs:comment>Describes an event when/where the image/document file was edited, retouched, resized etc.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">画像/文書が編集、レタッチされた状況（イベント）を記述する。</rdfs:comment>
+  <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  <rdfs:range rdf:resource="#GenerationEvent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="published">
+  <rdfs:label>Pulished</rdfs:label>
+  <rdfs:comment>Describes an event when/where the image/document file was published (on the net).</rdfs:comment>
+  <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  <rdfs:range rdf:resource="#GenerationEvent"/>
+  <rdfs:comment xml:lang="ja">画像/文書が（ネットワーク上に）公開された状況（イベント）を記述する。</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="developed">
+  <rdfs:label>Developed</rdfs:label>
+  <rdfs:comment>Describes an event when/where the photograph was developed.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">写真の現像に関する状況（イベント）を記述する。</rdfs:comment>
+  <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+  <rdfs:range rdf:resource="#GenerationEvent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="location">
+  <rdfs:label>Location</rdfs:label>
+  <rdfs:comment>The subject thing is located at the object place.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">主語が目的語の場所に位置していることを表す。</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="near">
+  <rdfs:label>Near</rdfs:label>
+  <rdfs:comment>The subject generation event occured at some location near the object place (e.g. for privacy).</rdfs:comment>
+  <rdfs:comment xml:lang="ja">生成イベントが目的語の場所の近くで起こったことを表す。プライバシーに配慮する場合などに用いる。</rdfs:comment>
+  <rdfs:domain rdf:resource="#GenerationEvent"/>
+  <rdfs:range rdf:resource="#Place"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<foaf:Image rdf:about="...">
+ <dpd:generated rdf:parseType="Resource">
+  <dc:date>2007-02-01T10:00:00+09:00</dc:date>
+  <dpd:near rdf:parseType="Resource">
+   <geo:lat>35.571331</geo:lat>
+   <geo:long>139.86557</geo:long>
+  </dpd:near>
+ </dpd:generated>
+</foaf:Image>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+ <owl:DatatypeProperty rdf:ID="granularity">
+  <rdfs:label>Granularity</rdfs:label>
+  <rdfs:comment>Level of granularity to indicate the subject location. This is expressed as number of digits after decimal point of the geo code (geo:lat/geo:long), but can also be used to indicate lower granularity against heigh precision values, such as GPS data, for privacy concern. If the levels of precision of geo:lat and geo:long are different, use the lower number. Roughly, granularity 2 corresponds to accuracy of 1km square, 4 corresponds to 10m square, etc.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">位置の粒度を、緯度経度の精細度（小数点以下の桁数）で表す。また、GPSデータのような精細な値を、プライバシーなどの観点から、より低い粒度のものとして示すためにも用いることができる。緯度と経度の精細度が異なる場合は、低い方にあわせる。granularity 2 はおよそ1km四方レベル、granularity 4はおよそ10m四方レベルの粒度に相当する。</rdfs:comment>
+  <rdfs:domain rdf:resource="#Place"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+
+  <ont:relation rdf:resource="http://esw.w3.org/topic/GeoOnion" rdfs:label="GeoOnion" rdf:type="http://xmlns.com/foaf/0.1/Document"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<dpd:Place>
+ <geo:lat>35.571331</geo:lat>
+ <geo:long>139.86557</geo:long>
+ <dpd:granularity>2</dpd:granularity>
+ <!-- normal granularity is 5, but can state 2 for privacy -->
+</dpd:Place>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+
+ </owl:DatatypeProperty>
+
+ <owl:DeprecatedProperty rdf:ID="accuracy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdfs:label>Accuracy</rdfs:label>
+  <rdfs:comment>Level of granularity to indicate the subject location. This corresponds to Flickr's accuracy value for a photo's geocode. This property is deprecated; use dpd:granularity instead. (accuracy is roughly 19 - GeoOnion's power. ie, if accuracy = 9, it seems almost go:within_3_power_10_metres. Thus, granularity is given by: round(5 - log(3^(19 - accuracy))) , which leads accuracy 9 = granularity 0, accuracy 16 = granularity 4, etc.)</rdfs:comment>
+  <rdfs:domain rdf:resource="#Place"/>
+ </owl:DeprecatedProperty>
+
+<!-- ==== External names ==== -->
+ <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+ <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+ <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Image"/>
+ <owl:Thing rdf:about="http://www.kanzaki.com/works/2003/imagedesc/031229_1639-s.jpg"/>
+
+
+<!-- ==== Examples ==== -->
+<ex:Example>
+ <rdfs:comment>A picture, taken at a highway parking area, depicting a mountain.</rdfs:comment>
+ <rdfs:comment xml:lang="ja">高速道路のパーキングエリアから富士山を撮影した写真を記述する例。</rdfs:comment>
+ <h:img rdf:resource="http://www.kanzaki.com/works/2003/imagedesc/031229_1639-s.jpg"/>
+ <ex:image rdf:resource="http://www.kanzaki.com/works/2007/misc/dpd-vocab-sample1.png"/>
+ <ex:pfx>dpd:</ex:pfx>
+ <ex:code><![CDATA[
+<foaf:Image>
+ <dc:title>Viewing Mt. Fuji from a highway parking area</dc:title>
+ <img:width>640</img:width>
+ <img:height>480</img:height>
+ ...
+ <dpd:generated rdf:parseType='Resource'>
+  <rdfs:label>Fujigawa service area, Tomei Highway</rdfs:label>
+  <geo:lat>35.647488888889</geo:lat>
+  <geo:long>139.73964166667</geo:long>
+  <dc:date>2003-12-29T16:39:39+09:00</dc:date>
+ </dpd:generated>
+
+ <foaf:depicts>
+  <wn:Mountain>
+   <rdfs:label>Mt. Fuji</rdfs:label>
+   <geo:lat>35.54139</geo:lat>
+   <geo:long>138.99799</geo:long>
+  </wn:Mountain>
+ </foaf:depicts>
+
+</foaf:Image>
+ ]]></ex:code>
+ <ex:exampleOf rdf:resource=""/>
+</ex:Example>
+
+<ex:Example>
+ <rdfs:comment>If a picture was edited, the original information may be described with 'dc:source'. This photo was taken as 640x480 pixels image, and then resized to 128x96.</rdfs:comment>
+ <rdfs:comment xml:lang="ja">写真が編集されてオリジナルデータとは異なってくる場合、もとの情報はdc:sourceで記述できる。写真は640x480のサイズで撮影され、128x96にリサイズされている。</rdfs:comment>
+ <ex:pfx>dpd:</ex:pfx>
+ <ex:code><![CDATA[
+<foaf:Image>
+ <dc:title>Viewing Mt. Fuji from a highway parking area</dc:title>
+ <dc:creator>Masahide Kanzaki</dc:creator>
+ <img:width>128</img:width>
+ <img:height>96</img:height>
+
+ <dpd:generated rdf:parseType='Resource'>
+  <rdfs:label>Fujigawa service area, Tomei Highway</rdfs:label>
+  <geo:lat>35.647488888889</geo:lat>
+  <geo:long>139.73964166667</geo:long>
+  <dc:date>2003-12-29T16:39:39+09:00</dc:date>
+ </dpd:generated>
+
+ <dc:source>
+  <foaf:Image>
+   <exif:exposureTime>0.0388</exif:exposureTime>
+   <exif:exposureMode>Auto exposure</exif:exposureMode>
+   <exif:pixelXDimension>640</exif:pixelXDimension>
+   <exif:pixelYDimension>480</exif:pixelYDimension>
+  </foaf:Image>
+ </dc:source>
+
+ <dpd:edited rdf:parseType='Resource'>
+  <dc:date>2004-01-06T21:48+09:00</dc:date>
+ </dpd:edited>
+
+ <foaf:depicts>
+  <wn:Mountain>
+   <rdfs:label>Mt. Fuji</rdfs:label>
+   <geo:lat>35.54139</geo:lat>
+   <geo:long>138.99799</geo:long>
+  </wn:Mountain>
+ </foaf:depicts>
+
+</foaf:Image>
+ ]]></ex:code>
+ <ex:exampleOf rdf:resource=""/>
+</ex:Example>
+
+
+</rdf:RDF>

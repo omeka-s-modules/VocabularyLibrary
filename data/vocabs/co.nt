@@ -1,0 +1,472 @@
+_:B4d793122b89abb2dcda76bf60b1409f4 <http://www.w3.org/2003/11/swrl#head> _:B16a9229dca02c46d493e0cbdb107ec54 .
+_:B4d793122b89abb2dcda76bf60b1409f4 <http://www.w3.org/2003/11/swrl#body> _:B8075d30a0d40ec7927226fe1789f0b5a .
+_:B4d793122b89abb2dcda76bf60b1409f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:Bbd29543967f4b44cb001ddbceae2ad81 <http://www.w3.org/2003/11/swrl#head> _:Bd7e3a1f261ac0a6a6fee9eabc2a09837 .
+_:Bbd29543967f4b44cb001ddbceae2ad81 <http://www.w3.org/2003/11/swrl#body> _:Bdddc5310f262b28e256f3fefdc85c3b8 .
+_:Bbd29543967f4b44cb001ddbceae2ad81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:B72eb7262471f57cfd28b99cd9ba2b972 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bf285c0a3c4d3b6455eade09ab6160726 .
+_:B72eb7262471f57cfd28b99cd9ba2b972 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B72eb7262471f57cfd28b99cd9ba2b972 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bcf5ed83df52e431bb446f6211888f10b <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#x> .
+_:Bcf5ed83df52e431bb446f6211888f10b <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.essepuntato.it/2009/10/error/hasError> .
+_:Bcf5ed83df52e431bb446f6211888f10b <http://www.w3.org/2003/11/swrl#argument2> "A list item cannot be followed by itself" .
+_:Bcf5ed83df52e431bb446f6211888f10b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:B876d7b7139569330c1825b6ac372ca64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B5bda33eb091c3f678a2780506bccb5f7 .
+_:B876d7b7139569330c1825b6ac372ca64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/Bag> .
+_:Be8c27b79d2067a0c3c7bbc2e225b6828 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Be8c27b79d2067a0c3c7bbc2e225b6828 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/size> .
+_:Be8c27b79d2067a0c3c7bbc2e225b6828 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bff87ddfeaef442afa48ac4389a9aa909 <http://www.w3.org/2002/07/owl#cardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bff87ddfeaef442afa48ac4389a9aa909 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/previousItem> .
+_:Bff87ddfeaef442afa48ac4389a9aa909 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ba461afb43504a4c9e5985721f75a457d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf59164867c5778cdf94aee6b85a8d75e .
+_:Ba461afb43504a4c9e5985721f75a457d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl#r1> .
+_:Ba461afb43504a4c9e5985721f75a457d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B5a0bbe070e73275e3c39a34f796b47cf <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/co/Item> .
+_:B5a0bbe070e73275e3c39a34f796b47cf <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/lastItem> .
+_:B5a0bbe070e73275e3c39a34f796b47cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<urn:swrl#current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:Be17ad146753bdd29997ca22c175b8173 <http://www.w3.org/2002/07/owl#intersectionOf> _:Bec00e8651bfde6b8959a5030503fad50 .
+_:Be17ad146753bdd29997ca22c175b8173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bb446db1f3a7e1de25fdb561fc6d30c62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B05dbdd0b739064429a7e08c2e63dc836 .
+_:Bb446db1f3a7e1de25fdb561fc6d30c62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bb446db1f3a7e1de25fdb561fc6d30c62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B29b7de8f625666fb2a321ff4216eb202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B46bdcb263e547d19cd75d851785c591b .
+_:B29b7de8f625666fb2a321ff4216eb202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd004210634c3699facb7569c085fdf2e .
+_:B29b7de8f625666fb2a321ff4216eb202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B8a3e2c9087a633e6a8193e429579e489 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B3f4c1ff9d7524fa1480bff76d9eb9403 .
+_:B8a3e2c9087a633e6a8193e429579e489 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B2716922912d8fb60a6e653a41e42f918 .
+_:Bb0351517625951698fa26c4bd21c7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Be88c201b52462f4db2d86f7e977f2b77 .
+_:Bb0351517625951698fa26c4bd21c7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb54b4d5ab93141d9e9a091b806407cfc .
+_:Bb0351517625951698fa26c4bd21c7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B05dbdd0b739064429a7e08c2e63dc836 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#nextR> .
+_:B05dbdd0b739064429a7e08c2e63dc836 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#next> .
+_:B05dbdd0b739064429a7e08c2e63dc836 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:B05dbdd0b739064429a7e08c2e63dc836 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:B8075d30a0d40ec7927226fe1789f0b5a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bf56a7f958d4f6e34ae46d18084ea9ce5 .
+_:B8075d30a0d40ec7927226fe1789f0b5a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B8075d30a0d40ec7927226fe1789f0b5a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<urn:swrl#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B3f4c1ff9d7524fa1480bff76d9eb9403 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B3f4c1ff9d7524fa1480bff76d9eb9403 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B5a0bbe070e73275e3c39a34f796b47cf .
+_:B0c055d19e214f1e00bfe347fd24e9da1 <http://www.w3.org/2003/11/swrl#body> _:Bb6b4dfdac6c778759bc13815d8b0c323 .
+_:B0c055d19e214f1e00bfe347fd24e9da1 <http://www.w3.org/2003/11/swrl#head> _:B42fd1a95a7ad356be8ebb90f3054b06c .
+_:B0c055d19e214f1e00bfe347fd24e9da1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:B681c8f4e80d02ec5a479f829fe6f8574 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/co/ListItem> .
+_:B681c8f4e80d02ec5a479f829fe6f8574 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/item> .
+_:B681c8f4e80d02ec5a479f829fe6f8574 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B329267606d1cd4cebcd1dc1d534d1f48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Baae4a23bb909b3725b5d61e20069cb25 .
+_:B329267606d1cd4cebcd1dc1d534d1f48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl#nextR> .
+_:B329267606d1cd4cebcd1dc1d534d1f48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B2f2189320b42b2cd0efec2674b2037b2 <http://www.w3.org/2002/07/owl#intersectionOf> _:B876d7b7139569330c1825b6ac372ca64 .
+_:B2f2189320b42b2cd0efec2674b2037b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Ba74ac676ed11bcaf9e3650ba3385b6ca <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ba74ac676ed11bcaf9e3650ba3385b6ca <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bcdbfb5306f4a24d44bfa1e997314ae68 .
+_:B64e75d1ce35328717079fb4a0202818d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bcd5a868b6ef4411ea9c91a0a7d0d05e4 .
+_:B64e75d1ce35328717079fb4a0202818d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B64e75d1ce35328717079fb4a0202818d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bd2b8f5e78823216ab671c6d8e9861b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bcf5ed83df52e431bb446f6211888f10b .
+_:Bd2b8f5e78823216ab671c6d8e9861b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bd2b8f5e78823216ab671c6d8e9861b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Baae4a23bb909b3725b5d61e20069cb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B89637112b9d5a2a97b76836c94bf0864 .
+_:Baae4a23bb909b3725b5d61e20069cb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl#r> .
+_:Baae4a23bb909b3725b5d61e20069cb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/co/lastItem> <http://www.w3.org/2000/01/rdf-schema#range> _:Be17ad146753bdd29997ca22c175b8173 .
+<http://purl.org/co/lastItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/item> .
+<http://purl.org/co/lastItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/List> .
+<http://purl.org/co/lastItem> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the last item of the list."@en .
+<http://purl.org/co/lastItem> <http://www.w3.org/2000/01/rdf-schema#label> "has last item"@en .
+<http://purl.org/co/lastItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/co/lastItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/co/ListItem> <http://www.w3.org/2000/01/rdf-schema#comment> "element belonging to a list"@en .
+<http://purl.org/co/ListItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcde2b3cb505a0ddab18b698f638348cc .
+<http://purl.org/co/ListItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/co/Item> .
+<http://purl.org/co/ListItem> <http://www.w3.org/2000/01/rdf-schema#label> "list item"@en .
+<http://purl.org/co/ListItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B352ee5b31100a74bc607388854e39d23 <http://www.w3.org/2003/11/swrl#arguments> _:B329267606d1cd4cebcd1dc1d534d1f48 .
+_:B352ee5b31100a74bc607388854e39d23 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> .
+_:B352ee5b31100a74bc607388854e39d23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:B8654b8b2a52fd61e6ffb223c39864e7a <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#x> .
+_:B8654b8b2a52fd61e6ffb223c39864e7a <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#x> .
+_:B8654b8b2a52fd61e6ffb223c39864e7a <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/followedBy> .
+_:B8654b8b2a52fd61e6ffb223c39864e7a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:Bec00e8651bfde6b8959a5030503fad50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba7992ea8de659cea08e9fb76edd2e1c8 .
+_:Bec00e8651bfde6b8959a5030503fad50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/ListItem> .
+<urn:swrl#list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered array of items, that can be present in multiple copies"@en .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2f2189320b42b2cd0efec2674b2037b2 .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B53b4fe27178ff2afaa9f5250bd0e93c1 .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb98d2090a4df11c0c443a4b451d6ac00 .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#label> "list"@en .
+<http://purl.org/co/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:swrl#x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B4f3af22aab61d923d3aab16291cefc29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/co/ListItem> .
+_:B4f3af22aab61d923d3aab16291cefc29 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/item> .
+_:B4f3af22aab61d923d3aab16291cefc29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B710c6cfc5c99ef89ce6c9a8ec9622c27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B710c6cfc5c99ef89ce6c9a8ec9622c27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/itemContent> .
+<http://purl.org/co/itemOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/item> .
+<http://purl.org/co/itemOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to a bag in which the item is member."@en .
+<http://purl.org/co/itemOf> <http://www.w3.org/2000/01/rdf-schema#label> "is item of"@en .
+<http://purl.org/co/itemOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B42fd1a95a7ad356be8ebb90f3054b06c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B5bf2549d4637b61b3464d71b7ac07f1d .
+_:B42fd1a95a7ad356be8ebb90f3054b06c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B42fd1a95a7ad356be8ebb90f3054b06c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B89637112b9d5a2a97b76836c94bf0864 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B89637112b9d5a2a97b76836c94bf0864 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:B89637112b9d5a2a97b76836c94bf0864 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B4e5942aaffb7025af573888fda6e2a30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B120a652ba490312907009bfc993f76ff .
+_:B4e5942aaffb7025af573888fda6e2a30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/item> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B6ba593200baba9a646e175f4d2b5deab <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B8654b8b2a52fd61e6ffb223c39864e7a .
+_:B6ba593200baba9a646e175f4d2b5deab <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B6ba593200baba9a646e175f4d2b5deab <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B6add9470d19ff028a9e17813d82d878d <http://www.w3.org/2002/07/owl#cardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B6add9470d19ff028a9e17813d82d878d <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/nextItem> .
+_:B6add9470d19ff028a9e17813d82d878d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/co/precededBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/followedBy> .
+<http://purl.org/co/precededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the preceding item in a list."@en .
+<http://purl.org/co/precededBy> <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is preceded by I[i-1], ... , I[2] and I[1]."@en .
+<http://purl.org/co/precededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is preceded by"@en .
+<http://purl.org/co/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/co/precededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:swrl#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/co/firstItem> <http://www.w3.org/2000/01/rdf-schema#range> _:Bae3d4ea0799cbc0c244f04ccd08ff1fd .
+<http://purl.org/co/firstItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/item> .
+<http://purl.org/co/firstItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/List> .
+<http://purl.org/co/firstItem> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the first item of the list."@en .
+<http://purl.org/co/firstItem> <http://www.w3.org/2000/01/rdf-schema#label> "has first item"@en .
+<http://purl.org/co/firstItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/co/firstItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bae3d4ea0799cbc0c244f04ccd08ff1fd <http://www.w3.org/2002/07/owl#intersectionOf> _:Bad13dfb0797bb66f94fc60c7574b5aef .
+_:Bae3d4ea0799cbc0c244f04ccd08ff1fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B9a692511e6e325bb96443dc4e87fcff5 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
+_:B9a692511e6e325bb96443dc4e87fcff5 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#last> .
+_:B9a692511e6e325bb96443dc4e87fcff5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:B9a692511e6e325bb96443dc4e87fcff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Bdddc5310f262b28e256f3fefdc85c3b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8c1d1fc061c622d17c5bcc9d92235da9 .
+_:Bdddc5310f262b28e256f3fefdc85c3b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bbc1aa6ec2958b3a18b2abd7cb7640359 .
+_:Bdddc5310f262b28e256f3fefdc85c3b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B04c5d6fc71bd6926b23a73ec0fc7a6b6 <http://www.w3.org/2002/07/owl#intersectionOf> _:Bffda70b90236bbb9d69a6b119822a1ba .
+_:B04c5d6fc71bd6926b23a73ec0fc7a6b6 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4d543141c771917a644151e783b42e60 .
+_:B04c5d6fc71bd6926b23a73ec0fc7a6b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/co> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/creator> <http://www.paolociccarese.info> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://purl.org/co> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2009/10/error> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/date> "March 19, 2012"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/contributor> "Silvio Peroni"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/contributor> "Paolo Ciccarese"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/title> "The Collections Ontology\n(CO)"@en .
+<http://purl.org/co> <http://purl.org/dc/elements/1.1/contributor> "Marco Ocana"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/co> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/co/Bag> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection that can have a number of copies of each object"@en .
+<http://purl.org/co/Bag> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/co/Set> .
+<http://purl.org/co/Bag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/co/Collection> .
+<http://purl.org/co/Bag> <http://www.w3.org/2000/01/rdf-schema#label> "bag"@en .
+<http://purl.org/co/Bag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5bf2549d4637b61b3464d71b7ac07f1d <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#l> .
+_:B5bf2549d4637b61b3464d71b7ac07f1d <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#i> .
+_:B5bf2549d4637b61b3464d71b7ac07f1d <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/lastItem> .
+_:B5bf2549d4637b61b3464d71b7ac07f1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:Bf285c0a3c4d3b6455eade09ab6160726 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#value> .
+_:Bf285c0a3c4d3b6455eade09ab6160726 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#l> .
+_:Bf285c0a3c4d3b6455eade09ab6160726 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/size> .
+_:Bf285c0a3c4d3b6455eade09ab6160726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+<urn:swrl#l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B3c95077b76126285947dfdc63d624be2 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li> .
+_:B3c95077b76126285947dfdc63d624be2 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#l> .
+_:B3c95077b76126285947dfdc63d624be2 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/itemOf> .
+_:B3c95077b76126285947dfdc63d624be2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:Bcd5a868b6ef4411ea9c91a0a7d0d05e4 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
+_:Bcd5a868b6ef4411ea9c91a0a7d0d05e4 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#list> .
+_:Bcd5a868b6ef4411ea9c91a0a7d0d05e4 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/size> .
+_:Bcd5a868b6ef4411ea9c91a0a7d0d05e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B8e27a5bd3c68ee6e122d12d5f65e57d0 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
+_:B8e27a5bd3c68ee6e122d12d5f65e57d0 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#current> .
+_:B8e27a5bd3c68ee6e122d12d5f65e57d0 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:B8e27a5bd3c68ee6e122d12d5f65e57d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+<http://purl.org/co/index> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://purl.org/co/index> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/ListItem> .
+<http://purl.org/co/index> <http://www.w3.org/2000/01/rdf-schema#comment> "A number identifying the position, starting from 1, of a particular list item within a list."@en .
+<http://purl.org/co/index> <http://www.w3.org/2000/01/rdf-schema#label> "has index"@en .
+<http://purl.org/co/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B7ec7278dc4171dcd6d6be02d41b1ba45 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#li> .
+_:B7ec7278dc4171dcd6d6be02d41b1ba45 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#l> .
+_:B7ec7278dc4171dcd6d6be02d41b1ba45 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/firstItem> .
+_:B7ec7278dc4171dcd6d6be02d41b1ba45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<urn:swrl#li2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:Bf59164867c5778cdf94aee6b85a8d75e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bf59164867c5778cdf94aee6b85a8d75e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Bf59164867c5778cdf94aee6b85a8d75e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/co/followedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/ListItem> .
+<http://purl.org/co/followedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/ListItem> .
+<http://purl.org/co/followedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the following item in a list."@en .
+<http://purl.org/co/followedBy> <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is followed by I[i+1], ... , I[n-1] and I[n]."@en .
+<http://purl.org/co/followedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is followed by"@en .
+<http://purl.org/co/followedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/co/followedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bdcd9c2a4332a89692380737a10a9bc5e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8a3e2c9087a633e6a8193e429579e489 .
+_:Bdcd9c2a4332a89692380737a10a9bc5e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/List> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bfe3f12aa066d9c91ab4929964db9253d <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#value> .
+_:Bfe3f12aa066d9c91ab4929964db9253d <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#i> .
+_:Bfe3f12aa066d9c91ab4929964db9253d <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:Bfe3f12aa066d9c91ab4929964db9253d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Bcdbfb5306f4a24d44bfa1e997314ae68 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:Bcdbfb5306f4a24d44bfa1e997314ae68 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/index> .
+_:Bcdbfb5306f4a24d44bfa1e997314ae68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bac2411a015d3a4fef1f1679804c191c2 <http://www.w3.org/2003/11/swrl#head> _:B072fd0d8b2527ffd665f5017b8a40f55 .
+_:Bac2411a015d3a4fef1f1679804c191c2 <http://www.w3.org/2003/11/swrl#body> _:B3034121cf44a59909d8f53fc410b5f1b .
+_:Bac2411a015d3a4fef1f1679804c191c2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:B3034121cf44a59909d8f53fc410b5f1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B3c95077b76126285947dfdc63d624be2 .
+_:B3034121cf44a59909d8f53fc410b5f1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc6093bc4d47170d10005359d4236674b .
+_:B3034121cf44a59909d8f53fc410b5f1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bf807b8f939ffaa26ce0c6444450977c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B352ee5b31100a74bc607388854e39d23 .
+_:Bf807b8f939ffaa26ce0c6444450977c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bf807b8f939ffaa26ce0c6444450977c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B13bc59e17d3b9e09d2415b2096043c53 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#l> .
+_:B13bc59e17d3b9e09d2415b2096043c53 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#i> .
+_:B13bc59e17d3b9e09d2415b2096043c53 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/itemOf> .
+_:B13bc59e17d3b9e09d2415b2096043c53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:B120a652ba490312907009bfc993f76ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B120a652ba490312907009bfc993f76ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/nextItem> .
+<http://purl.org/co/lastItemOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/lastItem> .
+<http://purl.org/co/lastItemOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/itemOf> .
+<http://purl.org/co/lastItemOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to a list in which the item is last item."@en .
+<http://purl.org/co/lastItemOf> <http://www.w3.org/2000/01/rdf-schema#label> "is last item of"@en .
+<http://purl.org/co/lastItemOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ba886d8ae80dadedcd4860a11a99b3c5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B5e52a4555ef143fa843ea6a6d01f9703 .
+_:Ba886d8ae80dadedcd4860a11a99b3c5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb0351517625951698fa26c4bd21c7ff0 .
+_:Ba886d8ae80dadedcd4860a11a99b3c5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bb98d2090a4df11c0c443a4b451d6ac00 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bb98d2090a4df11c0c443a4b451d6ac00 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/lastItem> .
+_:Bb98d2090a4df11c0c443a4b451d6ac00 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5941d1b46a94419cccc522e7588bea0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B9a692511e6e325bb96443dc4e87fcff5 .
+_:B5941d1b46a94419cccc522e7588bea0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B5941d1b46a94419cccc522e7588bea0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B12fea68495a3cce78eff729b65d44d6e <http://www.w3.org/2003/11/swrl#body> _:Bf673285a622cb0f7f6e00f2cdf493baa .
+_:B12fea68495a3cce78eff729b65d44d6e <http://www.w3.org/2003/11/swrl#head> _:B64e75d1ce35328717079fb4a0202818d .
+_:B12fea68495a3cce78eff729b65d44d6e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+<urn:swrl#last> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B8c1d1fc061c622d17c5bcc9d92235da9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba886d8ae80dadedcd4860a11a99b3c5f .
+_:B8c1d1fc061c622d17c5bcc9d92235da9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B82e5ba23ef11da6f3c6c1855c34c1d16 .
+_:B8c1d1fc061c622d17c5bcc9d92235da9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B8ef22f2d14c407be957e042c1e04ee68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B81d460877c1543274d093151df22dfdb .
+_:B8ef22f2d14c407be957e042c1e04ee68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B61b5205070b3d3a2e67b1f2f576e8a68 .
+_:B8ef22f2d14c407be957e042c1e04ee68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bffda70b90236bbb9d69a6b119822a1ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B306256759710ea6d58d7a43034b47f58 .
+_:Bffda70b90236bbb9d69a6b119822a1ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/List> .
+_:B61b5205070b3d3a2e67b1f2f576e8a68 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#next> .
+_:B61b5205070b3d3a2e67b1f2f576e8a68 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#current> .
+_:B61b5205070b3d3a2e67b1f2f576e8a68 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/nextItem> .
+_:B61b5205070b3d3a2e67b1f2f576e8a68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<http://purl.org/co/nextItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/followedBy> .
+<http://purl.org/co/nextItem> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the next item in a list."@en .
+<http://purl.org/co/nextItem> <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the next item of I[i] is I[i+1]."@en .
+<http://purl.org/co/nextItem> <http://www.w3.org/2000/01/rdf-schema#label> "has next item"@en .
+<http://purl.org/co/nextItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/co/nextItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bf673285a622cb0f7f6e00f2cdf493baa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B5941d1b46a94419cccc522e7588bea0e .
+_:Bf673285a622cb0f7f6e00f2cdf493baa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B31f09259ac7a6156d667b9b120e6babd .
+_:Bf673285a622cb0f7f6e00f2cdf493baa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bc192d73c1b38f4c466a0108e6793d3cc <http://www.w3.org/2003/11/swrl#arguments> _:B89a9fd07da0ae2d2f80d004fb3b9fbbe .
+_:Bc192d73c1b38f4c466a0108e6793d3cc <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> .
+_:Bc192d73c1b38f4c466a0108e6793d3cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:Bbc1aa6ec2958b3a18b2abd7cb7640359 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li1> .
+_:Bbc1aa6ec2958b3a18b2abd7cb7640359 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#l> .
+_:Bbc1aa6ec2958b3a18b2abd7cb7640359 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/itemOf> .
+_:Bbc1aa6ec2958b3a18b2abd7cb7640359 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<urn:swrl#li1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B030956028db754f0dbe13b8271005b97 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/item> .
+_:B7303b9572693c9a43d2555ab2a30247c <http://www.w3.org/2002/07/owl#complementOf> <http://purl.org/co/Item> .
+_:B7303b9572693c9a43d2555ab2a30247c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bad13dfb0797bb66f94fc60c7574b5aef <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc3d3d15ad6f1065cfb74768d8a715dee .
+_:Bad13dfb0797bb66f94fc60c7574b5aef <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/ListItem> .
+_:Bb54b4d5ab93141d9e9a091b806407cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bc192d73c1b38f4c466a0108e6793d3cc .
+_:Bb54b4d5ab93141d9e9a091b806407cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bb54b4d5ab93141d9e9a091b806407cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/co/Set> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection that cannot contain duplicate elements."@en .
+<http://purl.org/co/Set> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/co/Collection> .
+<http://purl.org/co/Set> <http://www.w3.org/2000/01/rdf-schema#label> "set"@en .
+<http://purl.org/co/Set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B46bdcb263e547d19cd75d851785c591b <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#value> .
+_:B46bdcb263e547d19cd75d851785c591b <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#i> .
+_:B46bdcb263e547d19cd75d851785c591b <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:B46bdcb263e547d19cd75d851785c591b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Bcde2b3cb505a0ddab18b698f638348cc <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bcde2b3cb505a0ddab18b698f638348cc <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/index> .
+_:Bcde2b3cb505a0ddab18b698f638348cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/co/firstItemOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/itemOf> .
+<http://purl.org/co/firstItemOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/firstItem> .
+<http://purl.org/co/firstItemOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to a list in which the item is first item."@en .
+<http://purl.org/co/firstItemOf> <http://www.w3.org/2000/01/rdf-schema#label> "is first item of"@en .
+<http://purl.org/co/firstItemOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B47ba1643dd0d02f36587d0063e89167d <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#value> .
+_:B47ba1643dd0d02f36587d0063e89167d <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#l> .
+_:B47ba1643dd0d02f36587d0063e89167d <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/size> .
+_:B47ba1643dd0d02f36587d0063e89167d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Bfa9a8d0c4590c546e96804740c93ff76 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:Bfa9a8d0c4590c546e96804740c93ff76 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/element> .
+_:Bfa9a8d0c4590c546e96804740c93ff76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5e52a4555ef143fa843ea6a6d01f9703 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r1> .
+_:B5e52a4555ef143fa843ea6a6d01f9703 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li1> .
+_:B5e52a4555ef143fa843ea6a6d01f9703 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:B5e52a4555ef143fa843ea6a6d01f9703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:B90422c394ad0437241ea111ac118208e <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#l> .
+_:B90422c394ad0437241ea111ac118208e <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#i> .
+_:B90422c394ad0437241ea111ac118208e <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/lastItem> .
+_:B90422c394ad0437241ea111ac118208e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<http://purl.org/co/item> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B4e5942aaffb7025af573888fda6e2a30 .
+<http://purl.org/co/item> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/Item> .
+<http://purl.org/co/item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/Bag> .
+<http://purl.org/co/item> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to every item of the bag"@en .
+<http://purl.org/co/item> <http://www.w3.org/2000/01/rdf-schema#label> "has item"@en .
+<http://purl.org/co/item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B2f2145b089abd4b974dfc4dd8e28a479 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/co/Bag> .
+_:B2f2145b089abd4b974dfc4dd8e28a479 <http://www.w3.org/2002/07/owl#onProperty> _:B030956028db754f0dbe13b8271005b97 .
+_:B2f2145b089abd4b974dfc4dd8e28a479 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bd7e3a1f261ac0a6a6fee9eabc2a09837 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B505246690e331000cda5d85edb156799 .
+_:Bd7e3a1f261ac0a6a6fee9eabc2a09837 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bd7e3a1f261ac0a6a6fee9eabc2a09837 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/co/Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Element belonging to a bag"@en .
+<http://purl.org/co/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2f2145b089abd4b974dfc4dd8e28a479 .
+<http://purl.org/co/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/co/Item> <http://www.w3.org/2000/01/rdf-schema#label> "item"@en .
+<http://purl.org/co/Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B82e5ba23ef11da6f3c6c1855c34c1d16 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li2> .
+_:B82e5ba23ef11da6f3c6c1855c34c1d16 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#l> .
+_:B82e5ba23ef11da6f3c6c1855c34c1d16 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/itemOf> .
+_:B82e5ba23ef11da6f3c6c1855c34c1d16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:Bcbf11f8f0f31d0653fb2a11d3f9698e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B90422c394ad0437241ea111ac118208e .
+_:Bcbf11f8f0f31d0653fb2a11d3f9698e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B72eb7262471f57cfd28b99cd9ba2b972 .
+_:Bcbf11f8f0f31d0653fb2a11d3f9698e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Bf56a7f958d4f6e34ae46d18084ea9ce5 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#x> .
+_:Bf56a7f958d4f6e34ae46d18084ea9ce5 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#x> .
+_:Bf56a7f958d4f6e34ae46d18084ea9ce5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/precededBy> .
+_:Bf56a7f958d4f6e34ae46d18084ea9ce5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:B937b5cf90c8a3efab663bc3ef9cf3309 <http://www.w3.org/2003/11/swrl#body> _:B6ba593200baba9a646e175f4d2b5deab .
+_:B937b5cf90c8a3efab663bc3ef9cf3309 <http://www.w3.org/2003/11/swrl#head> _:Bd2b8f5e78823216ab671c6d8e9861b17 .
+_:B937b5cf90c8a3efab663bc3ef9cf3309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+<urn:swrl#r2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/co/itemContentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/itemContent> .
+<http://purl.org/co/itemContentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the item that refers to the resource."@en .
+<http://purl.org/co/itemContentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is item content of"@en .
+<http://purl.org/co/itemContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bb6b4dfdac6c778759bc13815d8b0c323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B29b7de8f625666fb2a321ff4216eb202 .
+_:Bb6b4dfdac6c778759bc13815d8b0c323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B13bc59e17d3b9e09d2415b2096043c53 .
+_:Bb6b4dfdac6c778759bc13815d8b0c323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B505246690e331000cda5d85edb156799 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#li2> .
+_:B505246690e331000cda5d85edb156799 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li1> .
+_:B505246690e331000cda5d85edb156799 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/nextItem> .
+_:B505246690e331000cda5d85edb156799 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:Bc3d3d15ad6f1065cfb74768d8a715dee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba74ac676ed11bcaf9e3650ba3385b6ca .
+_:Bc3d3d15ad6f1065cfb74768d8a715dee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bff87ddfeaef442afa48ac4389a9aa909 .
+_:Ba7992ea8de659cea08e9fb76edd2e1c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ba7992ea8de659cea08e9fb76edd2e1c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B6add9470d19ff028a9e17813d82d878d .
+_:B89a9fd07da0ae2d2f80d004fb3b9fbbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba461afb43504a4c9e5985721f75a457d .
+_:B89a9fd07da0ae2d2f80d004fb3b9fbbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl#r2> .
+_:B89a9fd07da0ae2d2f80d004fb3b9fbbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<urn:swrl#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#li> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:Bfeefe4867efad7ee2c77281c9fd78009 <http://www.w3.org/2003/11/swrl#head> _:B57880a6636e86983d86b4e0ddbc23e1b .
+_:Bfeefe4867efad7ee2c77281c9fd78009 <http://www.w3.org/2003/11/swrl#body> _:Bcbf11f8f0f31d0653fb2a11d3f9698e5 .
+_:Bfeefe4867efad7ee2c77281c9fd78009 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:B31f09259ac7a6156d667b9b120e6babd <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#list> .
+_:B31f09259ac7a6156d667b9b120e6babd <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#last> .
+_:B31f09259ac7a6156d667b9b120e6babd <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/lastItem> .
+_:B31f09259ac7a6156d667b9b120e6babd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:B81d460877c1543274d093151df22dfdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B8e27a5bd3c68ee6e122d12d5f65e57d0 .
+_:B81d460877c1543274d093151df22dfdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf807b8f939ffaa26ce0c6444450977c9 .
+_:B81d460877c1543274d093151df22dfdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/co/Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of objects that can be considered as a whole."@en .
+<http://purl.org/co/Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/co/Item> .
+<http://purl.org/co/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be8c27b79d2067a0c3c7bbc2e225b6828 .
+<http://purl.org/co/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfa9a8d0c4590c546e96804740c93ff76 .
+<http://purl.org/co/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/co/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "collection"@en .
+<http://purl.org/co/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bd004210634c3699facb7569c085fdf2e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B47ba1643dd0d02f36587d0063e89167d .
+_:Bd004210634c3699facb7569c085fdf2e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bd004210634c3699facb7569c085fdf2e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<urn:swrl#nextR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B53b4fe27178ff2afaa9f5250bd0e93c1 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B53b4fe27178ff2afaa9f5250bd0e93c1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/firstItem> .
+_:B53b4fe27178ff2afaa9f5250bd0e93c1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/co/elementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/element> .
+<http://purl.org/co/elementOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to a collection in which the object is member."@en .
+<http://purl.org/co/elementOf> <http://www.w3.org/2000/01/rdf-schema#label> "is element of"@en .
+<http://purl.org/co/elementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:swrl#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B4d543141c771917a644151e783b42e60 <http://www.w3.org/2002/07/owl#intersectionOf> _:Bdcd9c2a4332a89692380737a10a9bc5e .
+_:B4d543141c771917a644151e783b42e60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/co/size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/co/size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/Collection> .
+<http://purl.org/co/size> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of item belonging to a collection."@en .
+<http://purl.org/co/size> <http://purl.org/dc/elements/1.1/description> "CO defines the size of a collection as the sum of the number of times entities that are part of the collection appear in it. This means that co:size considers how much each entity is involved by a particular collection, i.e.:\n- the size of the set {a, b, c} is three\n- the size of the bag [a, a, b, b, b, c] is five\n- the size of the list (a, b, c, b, a, b, c, c) is seven"@en .
+<http://purl.org/co/size> <http://www.w3.org/2000/01/rdf-schema#label> "has size"@en .
+<http://purl.org/co/size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B462110e332141a77f7be34c37355ce4c <http://www.w3.org/2003/11/swrl#body> _:B8ef22f2d14c407be957e042c1e04ee68 .
+_:B462110e332141a77f7be34c37355ce4c <http://www.w3.org/2003/11/swrl#head> _:Bb446db1f3a7e1de25fdb561fc6d30c62 .
+_:B462110e332141a77f7be34c37355ce4c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:B16a9229dca02c46d493e0cbdb107ec54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B8e7948c089219bf8a01c501d071f2cd5 .
+_:B16a9229dca02c46d493e0cbdb107ec54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B16a9229dca02c46d493e0cbdb107ec54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Be376c93265b89c2c61d349ffe89194af <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li> .
+_:Be376c93265b89c2c61d349ffe89194af <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:Be376c93265b89c2c61d349ffe89194af <http://www.w3.org/2003/11/swrl#argument2> "1" .
+_:Be376c93265b89c2c61d349ffe89194af <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Bb1c3b97416250b9128c7dc3d8c45c056 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B710c6cfc5c99ef89ce6c9a8ec9622c27 .
+_:Bb1c3b97416250b9128c7dc3d8c45c056 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/co/item> .
+_:B306256759710ea6d58d7a43034b47f58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B306256759710ea6d58d7a43034b47f58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B681c8f4e80d02ec5a479f829fe6f8574 .
+_:Bc6093bc4d47170d10005359d4236674b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Be376c93265b89c2c61d349ffe89194af .
+_:Bc6093bc4d47170d10005359d4236674b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bc6093bc4d47170d10005359d4236674b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:B8e7948c089219bf8a01c501d071f2cd5 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#x> .
+_:B8e7948c089219bf8a01c501d071f2cd5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.essepuntato.it/2009/10/error/hasError> .
+_:B8e7948c089219bf8a01c501d071f2cd5 <http://www.w3.org/2003/11/swrl#argument2> "A list item cannot be preceded by itself" .
+_:B8e7948c089219bf8a01c501d071f2cd5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+<urn:swrl#r1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:B57880a6636e86983d86b4e0ddbc23e1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bfe3f12aa066d9c91ab4929964db9253d .
+_:B57880a6636e86983d86b4e0ddbc23e1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B57880a6636e86983d86b4e0ddbc23e1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B2716922912d8fb60a6e653a41e42f918 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/co/Item> .
+_:B2716922912d8fb60a6e653a41e42f918 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/co/firstItem> .
+_:B2716922912d8fb60a6e653a41e42f918 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/co/previousItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/co/precededBy> .
+<http://purl.org/co/previousItem> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/co/nextItem> .
+<http://purl.org/co/previousItem> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the previous item in a list."@en .
+<http://purl.org/co/previousItem> <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the previous item of I[i] is I[i-1]."@en .
+<http://purl.org/co/previousItem> <http://www.w3.org/2000/01/rdf-schema#label> "has previous item"@en .
+<http://purl.org/co/previousItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/co/previousItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/co/element> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bb1c3b97416250b9128c7dc3d8c45c056 .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/Collection> .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the members of a collection"@en .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#label> "has element"@en .
+<http://purl.org/co/element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/co/itemContent> <http://www.w3.org/2000/01/rdf-schema#range> _:B7303b9572693c9a43d2555ab2a30247c .
+<http://purl.org/co/itemContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/Item> .
+<http://purl.org/co/itemContent> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the actual resource to which the item refers."@en .
+<http://purl.org/co/itemContent> <http://www.w3.org/2000/01/rdf-schema#label> "has item content"@en .
+<http://purl.org/co/itemContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/co/itemContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Be88c201b52462f4db2d86f7e977f2b77 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r2> .
+_:Be88c201b52462f4db2d86f7e977f2b77 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#li2> .
+_:Be88c201b52462f4db2d86f7e977f2b77 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/co/index> .
+_:Be88c201b52462f4db2d86f7e977f2b77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:B5bda33eb091c3f678a2780506bccb5f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B5bda33eb091c3f678a2780506bccb5f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B4f3af22aab61d923d3aab16291cefc29 .
+_:B072fd0d8b2527ffd665f5017b8a40f55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B7ec7278dc4171dcd6d6be02d41b1ba45 .
+_:B072fd0d8b2527ffd665f5017b8a40f55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B072fd0d8b2527ffd665f5017b8a40f55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .

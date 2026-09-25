@@ -1,0 +1,519 @@
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/2000/01/rdf-schema#label> "Curriculum Vitae" .
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/2000/01/rdf-schema#comment> "Curriculum Vitae" .
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/2000/01/rdf-schema#label> "Acronym" .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/2000/01/rdf-schema#comment> "Acronym of a given Project or an Organisation Unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#acronym> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ruizrube> <http://xmlns.com/foaf/0.1/name> "Iván Ruiz Rube" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ruizrube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/2000/01/rdf-schema#label> "Money" .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/2000/01/rdf-schema#comment> "This property embraces all Currency-dependent properties " .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eurocris.org/ontologies/cerif/1.3#headcount> <http://www.w3.org/2000/01/rdf-schema#label> "Headcount" .
+<http://www.eurocris.org/ontologies/cerif/1.3#headcount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#headcount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> .
+<http://www.eurocris.org/ontologies/cerif/1.3#headcount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of persons enrolled in a Organisation Unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#headcount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#link> <http://www.w3.org/2000/01/rdf-schema#label> "Link" .
+<http://www.eurocris.org/ontologies/cerif/1.3#link> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#link> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a generalisation for relationship and classification properties" .
+<http://www.eurocris.org/ontologies/cerif/1.3#link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Registration Date" .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Patent> .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Registration Date of a patent" .
+<http://www.eurocris.org/ontologies/cerif/1.3#registrationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person (cfPers)" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A given person" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Links To a Organisation Unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a entity with a given Organisation Unit through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToOrganisationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#productNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://www.eurocris.org/ontologies/cerif/1.3#productNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Product Number" .
+<http://www.eurocris.org/ontologies/cerif/1.3#productNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#productNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of a Product" .
+<http://www.eurocris.org/ontologies/cerif/1.3#productNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Price Currency Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#link> .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Relationship> .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a role for the association or composition between two CERIF entities indicated by a term from a suitable external vocabulary" .
+<http://www.eurocris.org/ontologies/cerif/1.3#role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/2000/01/rdf-schema#label> "Fraction" .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Fractional value to indicate a classification reference or a % allocation in the relationship between entities." .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic Address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "ElectronicAddress" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ElectronicAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#code> <http://www.w3.org/2000/01/rdf-schema#label> "Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#code> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#code> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic property for represent international and shared codes" .
+<http://www.eurocris.org/ontologies/cerif/1.3#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal Address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#abstract> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract" .
+<http://www.eurocris.org/ontologies/cerif/1.3#abstract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#abstract> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract of a given Project" .
+<http://www.eurocris.org/ontologies/cerif/1.3#abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/2000/01/rdf-schema#label> "Qualification" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualification" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Organizational Unit (cfOrgUnit)" .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A given organizational unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Result Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a research result" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#geert> <http://xmlns.com/foaf/0.1/name> "Geert van Grootel" .
+<http://www.eurocris.org/ontologies/cerif/1.3#geert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Entity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Common superclass of all non-link entities, as an aid in querying." .
+<http://www.eurocris.org/ontologies/cerif/1.3#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Classification> <http://www.w3.org/2000/01/rdf-schema#label> "Classification" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Classification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the classification of a given entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPerson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked By a Person" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPerson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "A given Person is related with a entity through a time-stamped link. " .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked By a Organisation Unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByOrganisationUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A given Organisation Unit is related with a entity through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByOrganisationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToFunding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToFunding> <http://www.w3.org/2000/01/rdf-schema#label> "Links to Funding" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToFunding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToFunding> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a entity with a given Funding entity through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToFunding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#money> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#label> "Price" .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantity of payment or compensation given by one party to another in return for goods or service (measured in a specific currency)" .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#money> .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/2000/01/rdf-schema#label> "Funding" .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Funding> .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of a given Funding (measured in a specific currency)" .
+<http://www.eurocris.org/ontologies/cerif/1.3#funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "A research project" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#feeOrFree> <http://www.w3.org/2000/01/rdf-schema#label> "Fee Or Free" .
+<http://www.eurocris.org/ontologies/cerif/1.3#feeOrFree> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#feeOrFree> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Event> .
+<http://www.eurocris.org/ontologies/cerif/1.3#feeOrFree> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag indicating if the event is fee or free" .
+<http://www.eurocris.org/ontologies/cerif/1.3#feeOrFree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/birthday> .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/2000/01/rdf-schema#label> "Birthdate" .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/2000/01/rdf-schema#comment> "BirthDate of a Person" .
+<http://www.eurocris.org/ontologies/cerif/1.3#birthdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer Identifier" .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Equipment> .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The equipment manufacturer's ID." .
+<http://www.eurocris.org/ontologies/cerif/1.3#manufacturerIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#agrovoc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+<http://www.eurocris.org/ontologies/cerif/1.3#agrovoc> <http://www.w3.org/2000/01/rdf-schema#label> "Agrovoc Classification" .
+<http://www.eurocris.org/ontologies/cerif/1.3#agrovoc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#agrovoc> <http://www.w3.org/2000/01/rdf-schema#comment> "External Classification Scheme according to Agrovoc Vocabulary" .
+<http://www.eurocris.org/ontologies/cerif/1.3#agrovoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keith> <http://xmlns.com/foaf/0.1/name> "Keith G Jeffery" .
+<http://www.eurocris.org/ontologies/cerif/1.3#keith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnoverCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnoverCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Turnover Currency Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnoverCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnoverCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Currency Code used to denote turnovers" .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnoverCurrencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eurocris.org/ontologies/cerif/1.3#Relationship> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked by Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an abstract property to group all properties that inversely relate a entity with other through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#Entity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Second-level Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "The 2nd level entities allow for the representation of the research context by linking to them from the base and result entities." .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency" .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific currency used for denote amounts, prices and turnovers. Linking with http://dbpedia.org/ontology/Language" .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/2000/01/rdf-schema#comment> "A research result that is classified neither as a patent nor as a publication." .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/2000/01/rdf-schema#label> "Cite" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/2000/01/rdf-schema#comment> "Cite" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Cite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "End of a period of time" .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Relationship> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "End Date" .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Funding> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Event> .
+<http://www.eurocris.org/ontologies/cerif/1.3#endDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByProject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByProject> <http://www.w3.org/2000/01/rdf-schema#label> "is Linked By Project" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByProject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A given Project is related with a entity through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/2000/01/rdf-schema#label> "Publication" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a scientific or academic publication " .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/homepage> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#label> "URI" .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Identifier related with a given CERIF entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#code> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Currency Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Code of a specific currency used for denote amounts, prices and turnovers." .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Event" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#patentNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://www.eurocris.org/ontologies/cerif/1.3#patentNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Patent Number" .
+<http://www.eurocris.org/ontologies/cerif/1.3#patentNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#patentNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of a Registered Patent" .
+<http://www.eurocris.org/ontologies/cerif/1.3#patentNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#code> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#label> "Country Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Patent> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Event> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/2000/01/rdf-schema#comment> "International code of a given country " .
+<http://www.eurocris.org/ontologies/cerif/1.3#countryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#Entity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Base Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class brings together the main entities of the CERIF model." .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#digitalCV> <http://www.w3.org/2000/01/rdf-schema#label> "Digital CV" .
+<http://www.eurocris.org/ontologies/cerif/1.3#digitalCV> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#digitalCV> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#CurriculumVitae> .
+<http://www.eurocris.org/ontologies/cerif/1.3#digitalCV> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital CV" .
+<http://www.eurocris.org/ontologies/cerif/1.3#digitalCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/gender> .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender" .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/2000/01/rdf-schema#comment> "Gender of a CERIF person" .
+<http://www.eurocris.org/ontologies/cerif/1.3#gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPublication> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPublication> <http://www.w3.org/2000/01/rdf-schema#label> "Links To a Publication" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPublication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPublication> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a entity with a given Publication through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#label> "Price Award" .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#comment> "Price Award" .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#brigitte> <http://xmlns.com/foaf/0.1/name> "Brigitte Joerg" .
+<http://www.eurocris.org/ontologies/cerif/1.3#brigitte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#country> <http://www.w3.org/2000/01/rdf-schema#label> "Country " .
+<http://www.eurocris.org/ontologies/cerif/1.3#country> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#country> <http://www.w3.org/2000/01/rdf-schema#comment> "A given country - http://dbpedia.org/ontology/Country" .
+<http://www.eurocris.org/ontologies/cerif/1.3#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Event> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Funding> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beginning of a period of time" .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "Start Date" .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Relationship> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Classification> .
+<http://www.eurocris.org/ontologies/cerif/1.3#startDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPerson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked By a Person" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPerson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a entity with a given Person through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/name> .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#label> "Name" .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Project> .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a CERIF entity, e.g.: Person, or Organization Unit" .
+<http://www.eurocris.org/ontologies/cerif/1.3#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/description> "The <em>Common European Research Information Format (CERIF) Ontology Specification</em> provides basic concepts and properties for describing research information as semantic data. This document contains a friendly description of the <em>Common European Research Information Format (CERIF) Ontology</em> developed by EuroCRIS." .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#msicilia> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#keith> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.eurocris.org/ontologies/cerif/1.3#" .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#jan> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/title> "CERIF Ontology 1.3" .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://xmlns.com/foaf/0.1/page> <http://www.eurocris.org/ontologies/cerif/1.3.html> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#brigitte> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#ruizrube> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/modified> "2015-03-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cerif" .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://purl.org/dc/elements/1.1/creator> <http://www.eurocris.org/ontologies/cerif/1.3#geert> .
+<http://www.eurocris.org/ontologies/cerif/1.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.eurocris.org/ontologies/cerif/1.3#jan> <http://xmlns.com/foaf/0.1/name> "Jan Dvorak" .
+<http://www.eurocris.org/ontologies/cerif/1.3#jan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/2000/01/rdf-schema#label> "Approval Date" .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Patent> .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Approval Date of a patent" .
+<http://www.eurocris.org/ontologies/cerif/1.3#approvalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#addressLine> <http://www.w3.org/2000/01/rdf-schema#label> "Address Line" .
+<http://www.eurocris.org/ontologies/cerif/1.3#addressLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#addressLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> .
+<http://www.eurocris.org/ontologies/cerif/1.3#addressLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Numbered line of a given postal address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#addressLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/2000/01/rdf-schema#label> "Metrics" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/2000/01/rdf-schema#comment> "Metrics" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Metrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Relationship> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Relationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Relationship> <http://www.w3.org/2000/01/rdf-schema#comment> "intermediate entity between two entities." .
+<http://www.eurocris.org/ontologies/cerif/1.3#Relationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Relationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#language> <http://www.w3.org/2000/01/rdf-schema#label> "Language" .
+<http://www.eurocris.org/ontologies/cerif/1.3#language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#language> <http://www.w3.org/2000/01/rdf-schema#comment> "A given language. Linking to http://dbpedia.org/ontology/Language" .
+<http://www.eurocris.org/ontologies/cerif/1.3#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Patent> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/2000/01/rdf-schema#label> "Patent" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/2000/01/rdf-schema#comment> "A registered patent as a research result" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Patent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/2000/01/rdf-schema#label> "City Town" .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Event> .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/2000/01/rdf-schema#comment> "City Town of an physical localisation" .
+<http://www.eurocris.org/ontologies/cerif/1.3#cityTown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchInterests> <http://www.w3.org/2000/01/rdf-schema#label> "Research Interests" .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchInterests> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchInterests> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchInterests> <http://www.w3.org/2000/01/rdf-schema#comment> "Research Interests" .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchInterests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/2000/01/rdf-schema#label> "Funding" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/2000/01/rdf-schema#comment> "Funding" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Inventory Identifier" .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Equipment> .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The equipment owner's inventory identifier." .
+<http://www.eurocris.org/ontologies/cerif/1.3#inventoryIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPostalAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Links to a Postal Address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPostalAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a entity with a given Postal Address through a time-stamped link. Used, for example, in Persons and Organisation Units" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToPostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eurocris.org/ontologies/cerif/1.3#Classification> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is Classified By" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A entity is classified within a time interval according to CERIF Semantic Vocabulary." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/2000/01/rdf-schema#label> "Expertise and skills" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/2000/01/rdf-schema#comment> "Expertise and skills" .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#ExpSkill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#money> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/2000/01/rdf-schema#label> "Turnover" .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/2000/01/rdf-schema#comment> "Turnover of a Organisation Unit (measured in a specific currency)" .
+<http://www.eurocris.org/ontologies/cerif/1.3#turnover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#Entity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract entity for representing infrastructures" .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eurocris.org/ontologies/cerif/1.3#Relationship> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Links to Entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an abstract property to group all properties that directly relate a entity with other through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#msicilia> <http://xmlns.com/foaf/0.1/name> "Miguel Ángel Sicilia" .
+<http://www.eurocris.org/ontologies/cerif/1.3#msicilia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#label> "Keyword" .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "Keywords of a given entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Identifier" .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#ResultEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#BaseEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal Identifier for a research entity. It fits with the primary key in the corresponding table from the internal database" .
+<http://www.eurocris.org/ontologies/cerif/1.3#internalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Facility" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Facility" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#code> .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/2000/01/rdf-schema#label> "Post Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#PostalAddress> .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal Code of a given Address" .
+<http://www.eurocris.org/ontologies/cerif/1.3#postCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByFunding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByFunding> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked By Funding" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByFunding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByFunding> <http://www.w3.org/2000/01/rdf-schema#comment> "A given Funding is related with a entity through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByFunding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#languageCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#code> .
+<http://www.eurocris.org/ontologies/cerif/1.3#languageCode> <http://www.w3.org/2000/01/rdf-schema#label> "Language Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#languageCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#languageCode> <http://www.w3.org/2000/01/rdf-schema#comment> "International code of a given language" .
+<http://www.eurocris.org/ontologies/cerif/1.3#languageCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#link> .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#label> "Classification" .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#Classification> .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a classification for a entity according to a suitable external vocabulary" .
+<http://www.eurocris.org/ontologies/cerif/1.3#classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#InfrastructureEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "Service" .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToProject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#linksToEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToProject> <http://www.w3.org/2000/01/rdf-schema#label> "Links To a Project" .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToProject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToProject> <http://www.w3.org/2000/01/rdf-schema#comment> "It relates a  entity with a given Project through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#linksToProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchActivities> <http://www.w3.org/2000/01/rdf-schema#label> "Research Activities" .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchActivities> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchActivities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eurocris.org/ontologies/cerif/1.3#OrganizationalUnit> .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchActivities> <http://www.w3.org/2000/01/rdf-schema#comment> "Research Activities" .
+<http://www.eurocris.org/ontologies/cerif/1.3#researchActivities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<http://www.eurocris.org/ontologies/cerif/1.3#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" .
+<http://www.eurocris.org/ontologies/cerif/1.3#title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of a given CERIF entity" .
+<http://www.eurocris.org/ontologies/cerif/1.3#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fundingCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fundingCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Currency Code" .
+<http://www.eurocris.org/ontologies/cerif/1.3#fundingCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#fundingCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Currency code used to denote the funding amount" .
+<http://www.eurocris.org/ontologies/cerif/1.3#fundingCurrencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPublication> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByEntity> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPublication> <http://www.w3.org/2000/01/rdf-schema#label> "is Linked By Publication" .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPublication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPublication> <http://www.w3.org/2000/01/rdf-schema#comment> "A given Publication is related with a entity through a time-stamped link." .
+<http://www.eurocris.org/ontologies/cerif/1.3#isLinkedByPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

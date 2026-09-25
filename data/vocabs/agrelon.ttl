@@ -1,0 +1,1319 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://d-nb.info/standards/elementset/agrelon#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+
+<https://d-nb.info/standards/elementset/agrelon#>
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:description """
+Die Ontology of Agent Relationships (AgRelOn) definiert Beziehungen von Personen zu anderen Personen
+und zu Körperschaften, da Agenten (Personen und Körperschaften) und ihre Beziehungen wichtig sind
+im Kulturerbeberech. AgRelOn wurde entwickelt, um die Erschließung von und die semantische Suche nach 
+Beziehungen zwischen Agenten zu verbessern. Dazu wurden etwa 70 verschiedene Beziehungstypen definiert.
+AgRelOn umfasst private Bekanntschaften, Zugehörigkeit zu Gruppen, Korrespondenzen, berufliche Beziehungen,
+Verwandschaftsrelationen, spirituelle und vitale/letale Kontakte. Für diese Arten von Beziehungen sind
+auch spezifische Subtypen von Relationen vorhanden.
+Um weitere Informationen wie z. B. Provenance und Konfidenzwerte transportieren zu können, sind in
+AgRelOn auch Meta-Statements vorgesehen.
+Die modellierten Beziehungen basieren sowohl auf beispielhafte Suchen in verschiedenen Wissensbasen, als
+auch auf zugängliche Datenquellen. Insofern ist das Modell bewusst unvollständig und bezogen auf einen 
+bestimmten zeitlichen und räumlichen kulturellen Raum.
+"""@de, """
+The ontology of agent relationships (AgRelOn) defines relations of persons to other persons
+and to organisations, since agents (persons, organisations) and their interconnections are important 
+in the cultural heritage domain. AgRelOn is developed to foster uniform cataloging as well as 
+semantic searchability of and via relations between agents. Therefore, a general set of nearly 
+70 relationship types is provided. AgRelOn discerns private acquaintanceship, group affiliation, 
+correspondence, occupational contact, kinship, spiritual contact, and vital/lethal contact. 
+For these kinds of relations more specific sub-relations are formulated.
+Meta statements are supported to obtain transparency of reliability and provenance as well as validity 
+period of facts.
+The modelled relations are determined on the one hand by exemplary knowledge base searches, on the other 
+hand by available data sources. Hence, the model consciously is incomplete and pertinent to a cultural 
+area and period."""@en ;
+    dc:title "AgRelOn, an Agent Relationship Ontology"@en ;
+    dct:available "2024-08-07"^^xsd:date ;
+    dct:contributor :berenikeLitz, :larsGSvensson ;
+    dct:creator :aenneLoehden ;
+    dct:issued "2011-06-30"^^xsd:date ;
+    dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:modified "2024-08-05T16:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://ld.zdb-services.de/resource/organisations/DE-101> ;
+    dct:rights "Copyright 2013-2024 Deutsche Nationalbibliothek" ;
+    vann:preferredNamespacePrefix "agrelon" ;
+    vann:preferredNamespaceUri "https://d-nb.info/standards/elementset/agrelon#" ;
+    a voaf:Vocabulary, owl:Ontology ;
+    rdfs:comment """Modelling Guidelines: 
+Vocabulary elements (properties and concepts) are conceived gender neutral.
+The identifiers of properties are preferably hasProperty and invers isPropertyOf or hasInverseProperty. 
+Domains and ranges of properties are mostly not fixed.
+Instance relations (object properties) are mostly specified bidirectionally.
+Implicit, deducible instance relations are explicitly formulated.
+Properties partly allow imperfect information (e.g. fragmentary dates, names instead of object URIs).
+Correlations between instance relations, like inversity, transitivity, symmetry, hierarchy, are marked.
+Meta statements are exhibited by modelling person relations as n-ary concepts as well as as properties, corresponding n-ary concepts and properties are correlated.
+"""@en ;
+    owl:priorVersion <https://d-nb.info/standards/elementset/agrelon_20190618> ;
+    owl:versionIRI <https://d-nb.info/standards/elementset/agrelon_20240807> ;
+    owl:versionInfo "1.5.1" ;
+    adms:versionNotes """
+Changes from 2024-06-01 to 2024-08-05
+
+Fix Typos
+
+*Changes from 2019-06-18 to 2019-10-15
+
+All d-nb.info-URIs changed from http to https
+			
+Changes from 2018-10-16
+	Updated labels in agrelon:hasGrandParent, agrelon:hasStepParent,
+				agrelon:HasAdoptiveChildParent, agrelon:HasChildParentInlaw, 
+				agrelon:hasFosterParent, agrelon:HasStepChildParent,
+				agrelon:HasFosterChildParent, agrelon:hasAdoptiveParent,
+				agrelon:HasGrandChildParent, agrelon:HasFosterParent,
+				agrelon:HasBiologicalChildParent, agrelon:hasIllegitimateParent,
+				agrelon:hasBiologicalParent, agrelon:HasIllegitimateChildParent
+			
+Changes from 2018-05-15
+	Minor terminology changes in labels
+			Added alignments to GNDO:
+			agrelon:relatedAgent rdfs:subPropertyOf gndo:relatedTerm
+			agrelon:hasAcquaintance owl:equivalentProperty gndo:acquaintanceshipOrFriendship (beza)
+			agrelon:hasAssociate owl:equivalentProperty gndo:affiliation (affi)
+			agrelon:hasCorrespondent owl:equivalentProperty gndo:correspondent (gndo:correspondent == corr -- in AgRelOn zu ergänzen)
+			agrelon:hasProfessionalContact owl:equivalentProperty gndo:professionalRelationship (bezb)
+			agrelon:hasPatron rdfs:subPropertyOf gndo:sponsorOrPatron
+			agrelon:hasRelative owl:equivalentProperty gndo:familialRelationship (bezf)
+			agrelon:hasBeginDate rdfs:subPropertyOf gndo:associatedDate
+			agrelon:hasEndDate rdfs:subPropertyOf gndo:associatedDate
+			
+Changes from 2017-01-17
+            agrelon:hasGodChild and agrelon:hasGodParent are now subproperties of agrelon:hasRelative and not of agrelon:hasNieceOrNephew resp. agrelon:hasAuntOrUncle  
+			
+Changes from 2013-06-30
+			agrelon:hasGndCode is now an annotation property
+			minor bugfix to ensure that the correct datatype is used for dates.
+		"""@en .
+
+:HasAcquaintance
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasAcquaintance"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha conoscente"@it, "has acquaintance"@en, "hat Bekannte(n)"@de, "tiene conocido(a)"@es ;
+    rdfs:seeAlso :hasAcquaintance ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasAdoptiveChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasAdoptiveChild and hasAdoptiveParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) / genitore adottivo(a)"@it, "has adoptive child / adoptive parent"@en, "hat Adoptivkind / Adoptivelternteil"@de, "tiene hijo(a) / padre / madre adoptivo(a)"@es ;
+    rdfs:seeAlso :hasAdoptiveChild, :hasAdoptiveParent ;
+    rdfs:subClassOf :HasChildParent ;
+    vs:term_status "stable" .
+
+:HasAdoptiveSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasAdoptiveSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello adottato o sorella adottata"@it, "has adoptive sibling"@en, "hat Adoptivgeschwister"@de, "tiene hermano(a) adoptivo(a)"@es ;
+    rdfs:seeAlso :hasAdoptiveSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasAssociate
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasAssociate"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha gruppo di appartenenza"@it, "has group affiliation"@en, "hat Gruppenzugehörigkeit"@de, "tiene grupo de afiliación"@es ;
+    rdfs:seeAlso :hasAssociate ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasBiologicalChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasBiologicalChild and hasBiologicalParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) / genitore biologico(a)"@it, "has biological child / parent"@en, "hat biologisches Kind / biologischen Elternteil"@de, "tiene hijo(a) / padre / madre biológico(a)"@es ;
+    rdfs:seeAlso :hasBiologicalChild, :hasBiologicalParent ;
+    rdfs:subClassOf :HasChildParent ;
+    vs:term_status "stable" .
+
+:HasBiologicalSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasBiologicalSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello biologico o sorella biologica"@it, "has biological sibling"@en, "hat biologisches Geschwister"@de, "tiene hermano(a) biológico(a)"@es ;
+    rdfs:seeAlso :hasBiologicalSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasChild and hasParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) / genitore"@it, "has child / parent"@en, "hat Kind / Elternteil"@de, "tiene hijo(a) / padre o madre"@es ;
+    rdfs:seeAlso :hasChild, :hasParent ;
+    rdfs:subClassOf :HasOffspringAncestor ;
+    vs:term_status "stable" .
+
+:HasChildParentInlaw
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasChildInlaw and hasParentInlaw"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genero o nuora / suocero(a)"@it, "has child/parent-in-law"@en, "hat Schwiegerkind / -elternteil"@de, "tiene yerno o nuera / suegro(a)"@es ;
+    rdfs:seeAlso :hasChildInlaw, :hasParentInlaw ;
+    rdfs:subClassOf :HasInlaw ;
+    vs:term_status "stable" .
+
+:HasCohabitee
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasCohabitee"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha compagno(a) di vita"@it, "has cohabitee"@en, "hat Lebensgefährte"@de, "tiene cohabitante"@es ;
+    rdfs:seeAlso :hasCohabitee ;
+    rdfs:subClassOf :HasAcquaintance ;
+    vs:term_status "stable" .
+
+:HasColleague
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasColleague"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha collega"@it, "has colleague"@en, "hat Kollege"@de, "tiene colega"@es ;
+    rdfs:seeAlso :hasColleague ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasCooperator
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasCooperator"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha collaboratore o collaboratrice"@it, "has collaborator"@en, "hat Kollaborator"@de, "tiene colaborador(a)"@es ;
+    rdfs:seeAlso :hasCooperator ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasCorrespondent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasCorrespondent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha corrispondente"@it, "has correspondent"@en, "hat Korrespondent"@de, "tiene correspondente"@es ;
+    rdfs:seeAlso :hasCorrespondent ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasCousin
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasCousin"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha cugino(a)"@it, "has cousin"@en, "hat Cousin"@de, "tiene primo o prima"@es ;
+    rdfs:seeAlso :hasCousin ;
+    rdfs:subClassOf :HasRelative ;
+    vs:term_status "stable" .
+
+:HasEmployeeEmployer
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasEmployee and hasEmployer"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha impiegato(a) / datore di lavoro"@it, "has employee / employer"@en, "hat Arbeitnehmer / Arbeitgeber"@de, "tiene empleado(a) / empleador(a)"@es ;
+    rdfs:seeAlso :hasEmployee, :hasEmployer ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasFianceeFiance
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasFianceeFiance"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fidanzato(a)"@it, "has fiancee  or fiance"@en, "hat Verlobte(n)"@de, "tiene prometido(a)"@es ;
+    rdfs:seeAlso :hasFianceeFiance ;
+    rdfs:subClassOf :HasInlaw ;
+    vs:term_status "stable" .
+
+:HasFosterChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasFosterChild and hasFosterParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha pupillo(a) / genitore"@it, "has foster child / parent"@en, "hat Pflegekind / -elternteil"@de, "tiene hijo(a) / padre o madre de crianza"@es ;
+    rdfs:seeAlso :hasFosterChild, :hasFosterParent ;
+    rdfs:subClassOf :HasChildParent ;
+    vs:term_status "stable" .
+
+:HasFosterSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasFosterSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella di latte"@it, "has foster sibling"@en, "hat Pflegegeschwister"@de, "tiene hermano(a) de crianza"@es ;
+    rdfs:seeAlso :hasFosterSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasFriend
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasFriend"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha amico(a)"@it, "has friend"@en, "hat Freund"@de, "tiene amigo(a)"@es ;
+    rdfs:seeAlso :hasFriend ;
+    rdfs:subClassOf :HasAcquaintance ;
+    vs:term_status "stable" .
+
+:HasGodChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasGodChild and hasGodParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlioccio o figlioccia / padrino o padrina"@it, "has godchild / godparent"@en, "hat Patenkind / Pate"@de, "tiene ahijado(a) / padrino o madrina"@es ;
+    rdfs:seeAlso :hasGodChild, :hasGodParent ;
+    rdfs:subClassOf :HasNieceNephewAuntUncle ;
+    vs:term_status "stable" .
+
+:HasGrandChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasGrandChild and hasGrandParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha nipote (di nonni) / nonno(a)"@it, "has grandchild / grandparent"@en, "hat Enkel / Großelternteil"@de, "tiene nieto(a) / abuelo(a)"@es ;
+    rdfs:seeAlso :hasGrandChild, :hasGrandParent ;
+    rdfs:subClassOf :HasOffspringAncestor ;
+    vs:term_status "stable" .
+
+:HasHalfSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasHalfSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratellastro a sorellastra"@it, "has half sibling"@en, "hat Halbgeschwister"@de, "tiene medio hermano(a)"@es ;
+    rdfs:seeAlso :hasHalfSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasIllegitimateChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasIllegitimateChild / hasIllegitimateParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) / genitore illegittimo(a)"@it, "has illegitimate child / parent"@en, "hat illegitimes Kind / illegitimen Elternteil"@de, "tiene hijo(a) / padre o madre illegítimo(a)"@es ;
+    rdfs:seeAlso :hasIllegitimateChild, :hasIllegitimateParent ;
+    rdfs:subClassOf :HasBiologicalChildParent ;
+    vs:term_status "stable" .
+
+:HasInfluenceDoneeDonor
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasInfluenceDonee / hasInfluenceDonor"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha influenza su / è influenzato(a) da"@it, "has influence on / is influenced by"@en, "hat Einfluss auf / ist beeinflusst durch"@de, "tiene influencia sobre / es influenciado(a) por"@es ;
+    rdfs:seeAlso :hasInfluenceDonee, :hasInfluenceDonor ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasInlaw
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasInlaw"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha parente per matrimonio"@it, "has in-law"@en, "hat angeheiratete(n) Verwandte(n)"@de, "tiene pariente político"@es ;
+    rdfs:seeAlso :hasInlaw ;
+    rdfs:subClassOf :HasRelative ;
+    vs:term_status "stable" .
+
+:HasIsChannel
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasChannel / isChannelOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha sensitivo(a) / è sensitivo(a) di"@it, "has channel / is channel of"@en, "hat Medium / ist Medium von"@de, "tiene médium / es médium de"@es ;
+    rdfs:seeAlso :hasChannel, :isChannelOf ;
+    rdfs:subClassOf :HasSpiritualContact ;
+    vs:term_status "stable" .
+
+:HasIsChief
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasChief / isChiefOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha capo / è capo di"@it, "has chief / is chief of"@en, "hat Chef / ist Chef von"@de, "tiene jefe / es jefe de"@es ;
+    rdfs:seeAlso :hasChief, :isChiefOf ;
+    rdfs:subClassOf :HasAssociate ;
+    vs:term_status "stable" .
+
+:HasIsFounder
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasFounder / isFounderOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fondatore o fondatrice / è fondatore o fondatrice di"@it, "has founder / is founder of"@en, "hat Gründer / ist Gründer von"@de, "tiene fundador(a) / es fundador(a) de"@es ;
+    rdfs:seeAlso :hasFounder, :isFounderOf ;
+    rdfs:subClassOf :HasAssociate ;
+    vs:term_status "stable" .
+
+:HasIsMember
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasMember / isMemberOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha membro / è membro di"@it, "has member / is member of"@en, "hat Mitglied / ist Mitglied von"@de, "tiene membrio / es miembro de"@es ;
+    rdfs:seeAlso :hasMember, :isMemberOf ;
+    rdfs:subClassOf :HasAssociate ;
+    vs:term_status "stable" .
+
+:HasIsMuse
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasMuse / isMuseOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha musa / è musa di"@it, "has muse / is muse of"@en, "hat Muse / ist Muse von"@de, "tiene musa / es musa de"@es ;
+    rdfs:seeAlso :hasMuse, :isMuseOf ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasLover
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasLover"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha amante"@it, "has lover"@en, "hat Geliebte(n)"@de, "tiene amante"@es ;
+    rdfs:seeAlso :hasLover ;
+    rdfs:subClassOf :HasAcquaintance ;
+    vs:term_status "stable" .
+
+:HasMultipleBirthSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasMultipleBirthSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella plurigemellare"@it, "has multiple birth sibling"@en, "hat Mehrlingsgeschwister"@de, "tiene hermano(a) gemelo(a)"@es ;
+    rdfs:seeAlso :hasMultipleBirthSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasMurdereeMurderer
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasMurderee / hasMurderer"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha vittima domicidio / assassino(a)"@it, "has murder victim / murderer"@en, "hat Mordopfer / Mörder"@de, "tiene víctima / asesino(a)"@es ;
+    rdfs:seeAlso :hasMurderee, :hasMurderer ;
+    rdfs:subClassOf :HasVitalLethalContact ;
+    vs:term_status "stable" .
+
+:HasNieceNephewAuntUncle
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasAuntUncle / hasNieceNephew"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha zia o zio / nipote (di zii)"@it, "has aunt or uncle / niece or nephew"@en, "hat Tante oder Onkel / Nichte oder Neffe"@de, "tiene tío o tía / sobrino(a)"@es ;
+    rdfs:seeAlso :hasAuntUncle, :hasNieceNephew ;
+    rdfs:subClassOf :HasRelative ;
+    vs:term_status "stable" .
+
+:HasOffspringAncestor
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasAncestor / hasOffspring"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha antenato / discendente"@it, "has ancestor / offspring"@en, "hat Vorfahr / Nachkomme"@de, "tiene ancestro / heredero(a)"@es ;
+    rdfs:seeAlso :hasAncestor, :hasOffspring ;
+    rdfs:subClassOf :HasRelative ;
+    vs:term_status "stable" .
+
+:HasProfessionalContact
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasProfessionalContact"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto professionale"@it, "has professional contact"@en, "hat Berufskontakt"@de, "tiene relación profesional"@es ;
+    rdfs:seeAlso :hasProfessionalContact ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasRelative
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasRelative"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha parente"@it, "has relative"@en, "hat Verwandte(n)"@de, "tiene pariente"@es ;
+    rdfs:seeAlso :hasRelative ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella"@it, "has sibling"@en, "hat Geschwister"@de, "tiene hermano(a)"@es ;
+    rdfs:seeAlso :hasSibling ;
+    rdfs:subClassOf :HasRelative ;
+    vs:term_status "stable" .
+
+:HasSiblingInlaw
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasSiblingInlaw"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha cognato(a)"@it, "has sibling-in-law"@en, "hat Schwager oder Schwägerin"@de, "tiene cuñado(a)"@es ;
+    rdfs:seeAlso :hasSiblingInlaw ;
+    rdfs:subClassOf :HasInlaw ;
+    vs:term_status "stable" .
+
+:HasSpiritualContact
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasSpiritualContact"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto spirituale"@it, "has spiritual contact"@en, "hat spirituellen Kontakt"@de, "tiene guía espiritual"@es ;
+    rdfs:seeAlso :hasSpiritualContact ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:HasSpouse
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasSpouse"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha coniuge"@it, "has spouse"@en, "hat Ehepartner"@de, "tiene esposo(a)"@es ;
+    rdfs:seeAlso :hasSpouse ;
+    rdfs:subClassOf :HasInlaw ;
+    vs:term_status "stable" .
+
+:HasStepChildParent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasStepChild / hasStepParent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figliastro(a) / padrigno o madrigna"@it, "has stepchild / stepparent"@en, "hat Stiefkind / Stiefelternteil"@de, "tiene hijo(a) / padre o madre adoptivo(a)"@es ;
+    rdfs:seeAlso :hasStepChild, :hasStepParent ;
+    rdfs:subClassOf :HasChildParent ;
+    vs:term_status "stable" .
+
+:HasStepSibling
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasStepSibling"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratellastro o sorellastra"@it, "has stepsibling"@en, "hat Stiefgeschwister"@de, "tiene hermano(a) adoptivo(a)"@es ;
+    rdfs:seeAlso :hasStepSibling ;
+    rdfs:subClassOf :HasSibling ;
+    vs:term_status "stable" .
+
+:HasStudentTeacher
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasStudent / hasTeacher"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha scolaro(a) / insegnante"@it, "has student / teacher"@en, "hat Schüler / Lehrer"@de, "tiene estudiante / maestro(a)"@es ;
+    rdfs:seeAlso :hasStudent, :hasTeacher ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:HasVitalLethalContact
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property hasVitalLethalContact"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto vitale o letale"@it, "has vital or lethal contact"@en, "hat vitalen oder letalen Kontakt"@de, "tiene contacto vital o letal"@es ;
+    rdfs:seeAlso :hasVitalLethalContact ;
+    rdfs:subClassOf :RelatedAgent ;
+    vs:term_status "stable" .
+
+:IsHasPatron
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasPatron / isPatronOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha mecenateè mecenate di"@it, "has patron / is patron of"@en, "hat Mäzen / ist Mäzen von"@de, "tiene mecenas / es mecenas de"@es ;
+    rdfs:seeAlso :hasPatron, :isPatronOf ;
+    rdfs:subClassOf :HasProfessionalContact ;
+    vs:term_status "stable" .
+
+:IsHasPhysician
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the properties hasPhysician / isPhysicianOf"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha medico / è medico di"@it, "has physician / is physician of"@en, "hat Arzt / ist Arzt von"@de, "tiene médico / es médico de"@es ;
+    rdfs:seeAlso :hasPhysician, :isPhysicianOf ;
+    rdfs:subClassOf :HasVitalLethalContact ;
+    vs:term_status "stable" .
+
+:NAries
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the top class for all n-ary classes"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "n-ary Klassen"@de, "n-ary classes"@en ;
+    vs:term_status "stable" .
+
+:RelatedAgent
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "This is the n-ary concept for the property relatedAgent"@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "agente connesso"@it, "agente relacionado"@es, "related Agent"@en, "verknüpfter Agent"@de ;
+    rdfs:seeAlso :relatedAgent ;
+    rdfs:subClassOf :NAries ;
+    vs:term_status "stable" .
+
+:aenneLoehden
+    a foaf:Person ;
+    rdfs:label "Aenne Löhden" .
+
+:berenikeLitz
+    a foaf:Person ;
+    rdfs:label "Berenike Litz" ;
+    owl:sameAs <https://d-nb.info/gnd/141919701> .
+
+:correspondsTo
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment """A normal property's (type rdf:Property) to-direction matches an n-ary concept (type rdfs:Class). 
+2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. 
+The normal property's fro-direction is related to the n-ary concept via correspondsToInverse."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "corresponde con"@es, "corresponds to"@en, "corrisponde a"@it, "korrespondiert mit"@de ;
+    vs:term_status "stable" .
+
+:correspondsToInverse
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment """A normal property's (type rdf:Property) fro-direction matches an n-ary concept (type rdfs:Class). 
+2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. 
+The normal property's to-direction is related to the n-ary concept via correspondsTo."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "corresponde inversamente con"@es, "corresponds to inverse"@en, "corrisponde inversamente a"@it, "korrespondiert invers mit"@de ;
+    vs:term_status "stable" .
+
+:hasAcquaintance
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) privately knows a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha conoscente"@it, "has acquaintance"@en, "hat Bekannte(n)"@de, "tiene conocido(a)"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    owl:equivalentProperty <https://d-nb.info/standards/elementset/gnd#acquaintanceshipOrFriendship> ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasAcquaintance ;
+    :hasGndCode "beza" .
+
+:hasAdoptiveChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) adopted a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) adottivo(a)"@it, "has adoptive child"@en, "hat Adoptivkind"@de, "tiene hijo(a) adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasChild ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasAdoptiveChildParent .
+
+:hasAdoptiveParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) was adopted by a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genitore adottivo"@it, "has adoptive parent"@en, "hat Adoptivelternteil"@de, "tiene padre o madre adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasParent ;
+    owl:inverseOf :hasAdoptiveChild ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasAdoptiveChildParent .
+
+:hasAdoptiveSibling
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where at least one of the two siblings is adoptive child of a joint parent."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello adottato o sorella adottata"@it, "has adoptive sibling"@en, "hat Adoptivgeschwister"@de, "tiene hermano(a) adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasAdoptiveSibling .
+
+:hasAncestor
+    a rdf:Property, owl:TransitiveProperty ;
+    rdfs:comment "A person (subject) has an ancestor (object), where the chain of parent-relations might include adoptive, foster, illegitimate, step relations."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha antenato"@it, "has ancestor"@en, "hat Vorfahr"@de, "tiene ancestro"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    owl:inverseOf :hasOffspring ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasOffspringAncestor .
+
+:hasAssociate
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) is associated with a group (object), or a group (subject) is associated with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha gruppo di appartenenza"@it, "has group affiliation"@en, "hat Gruppenzugehörigkeit"@de, "tiene grupo de afiliación"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    owl:equivalentProperty <https://d-nb.info/standards/elementset/gnd#affiliation> ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasAssociate ;
+    :hasGndCode "affi" .
+
+:hasAuntUncle
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has an aunt or uncle (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha zia o zio"@it, "has aunt or uncle"@en, "hat Tante oder Onkel"@de, "tiene tío o tía"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasNieceNephewAuntUncle .
+
+:hasBeginDate
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A metadata period or phase (subject) has a temporal start (date). The phase might e.g. concern a relationship between agents."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha data dinizio"@it, "has begin date"@en, "hat Anfangsdatum"@de, "tiene fecha inicial"@es ;
+    rdfs:subPropertyOf <https://d-nb.info/standards/elementset/gnd#associatedDate> ;
+    vs:term_status "stable" .
+
+:hasBiologicalChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) begot/conceived a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) biologico(a)"@it, "has biological child"@en, "hat biologisches Kind"@de, "tiene hijo(a) biológico(a)"@es ;
+    rdfs:subPropertyOf :hasChild ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasBiologicalChildParent .
+
+:hasBiologicalParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) was begotten/conceived by a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genitore biologico"@it, "has biological parent"@en, "hat biologischen Elternteil"@de, "tiene padre o madre biológico(a)"@es ;
+    rdfs:subPropertyOf :hasParent ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasBiologicalChildParent .
+
+:hasBiologicalSibling
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where the two siblings share both biological parents."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello biologico o sorella biologica"@it, "has biological sibling"@en, "hat biologisches Geschwister"@de, "tiene hermano(a) biológico(a)"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasBiologicalSibling .
+
+:hasChannel
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or spiritual entity (subject), e.g. a dead person, spirit, angel etc. has as a channel or medium a person or spiritual entity (object). I.e. the subject transmits messages to the object."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha sensitivo(a)"@it, "has channel"@en, "hat Medium"@de, "tiene médium"@es ;
+    rdfs:subPropertyOf :hasSpiritualContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIsChannel .
+
+:hasChief
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A group (subject) has as a chief a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha capo"@it, "has chief"@en, "hat Chef"@de, "tiene jefe"@es ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIsChief .
+
+:hasChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person has as some kind of child a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a)"@it, "has child"@en, "hat Kind"@de, "tiene hijo(a)"@es ;
+    rdfs:subPropertyOf :hasOffspring ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasChildParent .
+
+:hasChildInlaw
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person's (subject) child is married with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genero o nuora"@it, "has child-in-law"@en, "hat Schwiegerkind"@de, "tiene yerno o nuera"@es ;
+    rdfs:subPropertyOf :hasInlaw ;
+    owl:inverseOf :hasParentInlaw ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasChildParentInlaw .
+
+:hasCohabitee
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) lives together with and/or is companion of a person (object), without being married."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha compagno(a) di vita"@it, "has cohabitee"@en, "hat Lebensgefährte"@de, "tiene cohabitante"@es ;
+    rdfs:subPropertyOf :hasAcquaintance ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasCohabitee .
+
+:hasColleague
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) works together with a person (object) at the same corporation."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha collega"@it, "has colleague"@en, "hat Kollege"@de, "tiene colega"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasColleague .
+
+:hasCooperator
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) works together with a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha collaboratore o collaboratrice"@it, "has collaborator"@en, "hat Kollaborator"@de, "tiene colaborador(a)"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasCooperator .
+
+:hasCorrespondent
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person or corporation (subject) exchanges letters with a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha corrispondente"@it, "has correspondent"@en, "hat Korrespondent"@de, "tiene correspondente"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    owl:equivalentProperty <https://d-nb.info/standards/elementset/gnd#correspondent> ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasCorrespondent ;
+    :hasGndCode "corr" .
+
+:hasCousin
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has a cousin (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha cugino(a)"@it, "has cousin"@en, "hat Cousin"@de, "tiene primo o prima"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasCousin .
+
+:hasEmployee
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject) for whom/which a person (object) works."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha impiegato(a)"@it, "has employee"@en, "hat Arbeitnehmer"@de, "tiene empleado(a)"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasEmployeeEmployer .
+
+:hasEmployer
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) works for a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha datore di lavoro"@it, "has employer"@en, "hat Arbeitgeber"@de, "tiene empleador(a)"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    owl:inverseOf :hasEmployee ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasEmployeeEmployer .
+
+:hasEndDate
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A metadata period or phase (subject) has a temporal end (date). The phase might e.g. concern a relationship between agents."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha data finale"@it, "has end date"@en, "hat Enddatum"@de, "tiene fecha final"@es ;
+    rdfs:subPropertyOf <https://d-nb.info/standards/elementset/gnd#associatedDate> ;
+    vs:term_status "stable" .
+
+:hasFianceeFiance
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) is engaged with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fidanzato(a)"@it, "has fiancee  or fiance"@en, "hat Verlobte(n)"@de, "tiene prometido(a)"@es ;
+    rdfs:subPropertyOf :hasInlaw ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasFianceeFiance .
+
+:hasFosterChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) fostered a person (object), without being a biological parent."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha pupillo(a)"@it, "has foster child"@en, "hat Pflegekind"@de, "tiene hijo(a) de crianza"@es ;
+    rdfs:subPropertyOf :hasChild ;
+    owl:inverseOf :hasFosterParent ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasFosterChildParent .
+
+:hasFosterParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) was fostered by a person (object), without being a biological child."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha foster genitore"@it, "has foster parent"@en, "hat Pflegeelternteil"@de, "tiene padre o madre de crianza"@es ;
+    rdfs:subPropertyOf :hasParent ;
+    owl:inverseOf :hasFosterChild ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasFosterChildParent .
+
+:hasFosterSibling
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where at least one of the two siblings is foster child of a joint parent."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella di latte"@it, "has foster sibling"@en, "hat Pflegegeschwister"@de, "tiene hermano(a) de crianza"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasFosterSibling .
+
+:hasFounder
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A group (subject) has as a founder a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fondatore o fondatrice"@it, "has founder"@en, "hat Gründer"@de, "tiene fundador(a)"@es ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIsFounder .
+
+:hasFriend
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) is friends with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha amico(a)"@it, "has friend"@en, "hat Freund"@de, "tiene amigo(a)"@es ;
+    rdfs:subPropertyOf :hasAcquaintance ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasFriend .
+
+:hasGndCode
+    a rdf:Property, owl:AnnotationProperty ;
+    rdfs:comment "A relationship type (subject) has a correlating GND code (literal). In the context of the project GND (Gemeinsame Normdatei), codes for agent relations correlating to AgRelOn are successively determined in cooperation with the Library of Congress or rather NDMSO (Network Development and MARC Standards Office) to supplement MARC. The codes will be indicated in AgRelOn when they are available."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha chiave di accesso GND"@it, "has GND code"@en, "hat GND Code"@de, "tiene código de GND"@es ;
+    rdfs:range xsd:string ;
+    vs:term_status "stable" .
+
+:hasGodChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) obtains as godchild a person (object) at the godchild's christening."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlioccio o figlioccia"@it, "has godchild"@en, "hat Patenkind"@de, "tiene ahijado(a)"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    owl:inverseOf :hasGodParent ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasGodChildParent .
+
+:hasGodParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) obtains as godparent a person (object) at the godchild's christening."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha padrino o padrina"@it, "has godparent"@en, "hat Pate"@de, "tiene padrino o madrina"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasGodChildParent .
+
+:hasGrandChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person's (subject) child has a child (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha nipote (di nonni)"@it, "has grandchild"@en, "hat Enkel"@de, "tiene nieto(a)"@es ;
+    rdfs:subPropertyOf :hasOffspring ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasGrandChildParent .
+
+:hasGrandParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has as grandparent a person (object), where the two parent-relations might include adoptive, foster, illegitimate, step relations."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha nonno(a)"@it, "has grandparent"@en, "hat Großelternteil"@de, "tiene abuelo(a)"@es ;
+    rdfs:subPropertyOf :hasAncestor ;
+    owl:inverseOf :hasGrandChild ;
+    owl:propertyChainAxiom (:hasParent
+        :hasParent
+    ) ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasGrandChildParent .
+
+:hasHalfSibling
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where the two siblings share only one biological parent."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratellastro a sorellastra"@it, "has half sibling"@en, "hat Halbgeschwister"@de, "tiene medio hermano(a)"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasHalfSibling .
+
+:hasIllegitimateChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) begot/conceived a person (object), without the two biological parents being married at the child's day of birth."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figlio(a) illegittimo(a)"@it, "has illegitimate child"@en, "hat illegitimes Kind"@de, "tiene hijo(a) illegítimo(a)"@es ;
+    rdfs:subPropertyOf :hasBiologicalChild ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIllegitimateChildParent .
+
+:hasIllegitimateParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) was begotten/conceived by a person (object), without the two biological parents being married at the child's day of birth."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genitore illegittimo"@it, "has illegitimate parent"@en, "hat illegitimen Elternteil"@de, "tiene padre o madre ilegítimo(a)"@es ;
+    rdfs:subPropertyOf :hasBiologicalParent ;
+    owl:inverseOf :hasIllegitimateChild ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIllegitimateChildParent .
+
+:hasInfluenceDonee
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject) who influences a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha influenza su"@it, "has influence on"@en, "hat Einfluss auf"@de, "tiene influencia sobre"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasInfluenceDoneeDonor .
+
+:hasInfluenceDonor
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject) who is influenced by a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es influenciado(a) por"@es, "is influenced by"@en, "ist beeinflusst durch"@de, "è influenzato(a) da"@it ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    owl:inverseOf :hasInfluenceDonee ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasInfluenceDoneeDonor .
+
+:hasInlaw
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) is related with a person (object) by a marriage between themselves or between relatives."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha parente per matrimonio"@it, "has in-law"@en, "hat angeheiratete(n) Verwandte(n)"@de, "tiene pariente político"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasInlaw .
+
+:hasLover
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has a liaison with a person (object), without being married."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha amante"@it, "has lover"@en, "hat Geliebte(n)"@de, "tiene amante"@es ;
+    rdfs:subPropertyOf :hasAcquaintance ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasLover .
+
+:hasMember
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A goup (subject) has as a member a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha membro"@it, "has member"@en, "hat Mitglied"@de, "tiene membrio"@es ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIsMember .
+
+:hasMultipleBirthSibling
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where both siblings where carried together in a joint pregnancy. This denotes not only twins, but also triplets etc.. Mostly, multiple birth siblings are biolological siblings, i.e. share both biological parents, but this doesn't have to be the case."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella plurigemellare"@it, "has multiple birth sibling"@en, "hat Mehrlingsgeschwister"@de, "tiene hermano(a) gemelo(a)"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasMultipleBirthSibling .
+
+:hasMurderee
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporate body (subject) murders a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha vittima domicidio"@it, "has murder victim"@en, "hat Mordopfer"@de, "tiene víctima"@es ;
+    rdfs:subPropertyOf :hasVitalLethalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasMurdereeMurderer .
+
+:hasMurderer
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) is murdered by a person or corporate body (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha assassino(a)"@it, "has murderer"@en, "hat Mörder"@de, "tiene asesino(a)"@es ;
+    rdfs:subPropertyOf :hasVitalLethalContact ;
+    owl:inverseOf :hasMurderee ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasMurdereeMurderer .
+
+:hasMuse
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject; e.g. an artist or group of artists) who is inspired by a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha musa"@it, "has muse"@en, "hat Muse"@de, "tiene musa"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    owl:inverseOf :isMuseOf ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasIsMuse .
+
+:hasNieceNephew
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has a niece or nephew (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha nipote (di zii)"@it, "has niece or nephew"@en, "hat Nichte oder Neffe"@de, "tiene sobrino(a)"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    owl:inverseOf :hasAuntUncle ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasNieceNephewAuntUncle .
+
+:hasObject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """At an n-ary concept's instance (subject), something (object) takes the object role of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:domain :NAries ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha oggetto"@it, "has object"@en, "hat Objekt"@de, "tiene objeto"@es ;
+    owl:inverseOf :isObject ;
+    vs:term_status "stable" .
+
+:hasOffspring
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) has an offspring (object), where the chain of child-relations might include adoptive, foster, illegitimate, step relations."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha discendente"@it, "has offspring"@en, "hat Nachkomme"@de, "tiene heredero(a)"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasOffspringAncestor .
+
+:hasParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person has as some kind of parent a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha genitore"@it, "has parent"@en, "hat Elternteil"@de, "tiene padre o madre"@es ;
+    rdfs:subPropertyOf :hasAncestor ;
+    owl:inverseOf :hasChild ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasChildParent .
+
+:hasParentInlaw
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person's (subject) spouse has a parent (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha suocero(a)"@it, "has parent-in-law"@en, "hat Schwiegerelternteil"@de, "tiene suegro(a)"@es ;
+    rdfs:subPropertyOf :hasInlaw ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasChildParentInlaw .
+
+:hasPatron
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject; e.g. an artist or group of artists) who is sponsored/favoured by a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha mecenate"@it, "has patron"@en, "hat Mäzen"@de, "tiene mecenas"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact, <https://d-nb.info/standards/elementset/gnd#sponsorOrPatron> ;
+    owl:inverseOf :isPatronOf ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :IsHasPatron .
+
+:hasPhysician
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporate body (subject) has as physician a person or corporate body (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha medico"@it, "has physician"@en, "hat Arzt"@de, "tiene médico"@es ;
+    rdfs:subPropertyOf :hasVitalLethalContact ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :IsHasPhysician .
+
+:hasProfessionalContact
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person or corporation (subject) has some business/profession/occupation related relation with a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto professionale"@it, "has professional contact"@en, "hat Berufskontakt"@de, "tiene relación profesional"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    owl:equivalentProperty <https://d-nb.info/standards/elementset/gnd#professionalRelationship> ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasProfessionalContact ;
+    :hasGndCode "bezb" .
+
+:hasRelative
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) is kin to a person (object). This denotes not only biological kinship, but also inlaw, adoptive, step, foster relationships."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha parente"@it, "has relative"@en, "hat Verwandte(n)"@de, "tiene pariente"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    owl:equivalentProperty <https://d-nb.info/standards/elementset/gnd#familialRelationship> ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasRelative ;
+    :hasGndCode "bezf" .
+
+:hasSibling
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person has as some kind of sibling a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratello o sorella"@it, "has sibling"@en, "hat Geschwister"@de, "tiene hermano(a)"@es ;
+    rdfs:subPropertyOf :hasRelative ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasSibling .
+
+:hasSiblingInlaw
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person's (subject) spouse has a sibling (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha cognato(a)"@it, "has sibling-in-law"@en, "hat Schwager oder Schwägerin"@de, "tiene cuñado(a)"@es ;
+    rdfs:subPropertyOf :hasInlaw ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasSiblingInlaw .
+
+:hasSpiritualContact
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person or spiritual entity (subject) has some kind of spiritual relation with a person or spiritual entity (object). The relationship may e.g. be channelling, guru-devotee, or a psychoanalyst-patient."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto spirituale"@it, "has spiritual contact"@en, "hat spirituellen Kontakt"@de, "tiene guía espiritual"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasSpiritualContact .
+
+:hasSpouse
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) is married with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha coniuge"@it, "has spouse"@en, "hat Ehepartner"@de, "tiene esposo(a)"@es ;
+    rdfs:subPropertyOf :hasInlaw ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasSpouse .
+
+:hasStepChild
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person's (subject) spouse has a child (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha figliastro(a)"@it, "has stepchild"@en, "hat Stiefkind"@de, "tiene hijo(a) adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasChild ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasStepChildParent .
+
+:hasStepParent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person's (subject) biological parent is married with or cohabits with a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha padrigno o madrigna"@it, "has stepparent"@en, "hat Stiefelternteil"@de, "tiene padre o madre adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasParent ;
+    owl:inverseOf :hasStepChild ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasStepChildParent .
+
+:hasStepSibling
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person (subject) has as sibling a person (object), where at least one of the two siblings is step child of a joint parent."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha fratellastro o sorellastra"@it, "has stepsibling"@en, "hat Stiefgeschwister"@de, "tiene hermano(a) adoptivo(a)"@es ;
+    rdfs:subPropertyOf :hasSibling ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasStepSibling .
+
+:hasStudent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) trains a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha scolaro(a)"@it, "has student"@en, "hat Schüler"@de, "tiene estudiante"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    owl:inverseOf :hasTeacher ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasStudentTeacher .
+
+:hasSubject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """At an n-ary concept's instance (subject), something (object) takes the subject role of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:domain :NAries ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha soggetto"@it, "has subject"@en, "hat Subjekt"@de, "tiene sujeto"@es ;
+    vs:term_status "stable" .
+
+:hasSubjectObject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """At an n-ary concept's instance (subject), something (object) takes the subject or object role of the symmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha soggetto o oggetto"@it, "has subject or object"@en, "hat Subjekt oder Objekt"@de, "tiene sujeto u objeto"@es ;
+    owl:inverseOf :isSubjectObject ;
+    vs:term_status "stable" .
+
+:hasTeacher
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) who is trained by a person (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha insegnante"@it, "has teacher"@en, "hat Lehrer"@de, "tiene maestro(a)"@es ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasStudentTeacher .
+
+:hasVitalLethalContact
+    a rdf:Property, owl:SymmetricProperty ;
+    rdfs:comment "A person or corporate body (subject) has som kind of vital or lethal relation with a person or corporate body (object). The relationship may e.g. include healing, mutilating, life saving, killing."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha contatto vitale o letale"@it, "has vital or lethal contact"@en, "hat vitalen oder letalen Kontakt"@de, "tiene contacto vital o letal"@es ;
+    rdfs:subPropertyOf :relatedAgent ;
+    vs:term_status "stable" ;
+    :correspondsTo :HasVitalLethalContact .
+
+:isChannelOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or spiritual entity (subject) is a channel or medium of a person or spiritual entity (object), e.g. a dead person, spirit, angel etc. I.e. the subject receives messages from the object."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es médium de"@es, "is channel of"@en, "ist Medium von"@de, "è sensitivo(a) di"@it ;
+    rdfs:subPropertyOf :hasSpiritualContact ;
+    owl:inverseOf :hasChannel ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIsChannel .
+
+:isChiefOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) ist chief of a group (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es jefe de"@es, "is chief of"@en, "ist Chef von"@de, "è capo di"@it ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIsChief .
+
+:isFounderOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) ist founder of a group (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es fundador(a) de"@es, "is founder of"@en, "ist Gründer von"@de, "è fondatore o fondatrice di"@it ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIsFounder .
+
+:isMemberOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) ist member of a group (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es miembro de"@es, "is member of"@en, "ist Mitglied von"@de, "è membro di"@it ;
+    rdfs:subPropertyOf :hasAssociate ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIsMember .
+
+:isMuseOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person (subject) inspires a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es musa de"@es, "is muse of"@en, "ist Muse von"@de, "è musa di"@it ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsToInverse :HasIsMuse .
+
+:isObject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Something (subject) takes the object role at an n-ary concept's instance (object) of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es objeto"@es, "is object"@en, "ist Objekt"@de, "è oggetto"@it ;
+    vs:term_status "stable" .
+
+:isPatronOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject) sponsors/favours a person or corporation (object; e.g. an artist or group of artists)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es mecenas de"@es, "is patron of"@en, "ist Mäzen von"@de, "è mecenate di"@it ;
+    rdfs:subPropertyOf :hasProfessionalContact ;
+    vs:term_status "stable" ;
+    :correspondsTo :IsHasPatron .
+
+:isPhysicianOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporate body (subject) is physician of a person or corporate body (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es médico de"@es, "is physician of"@en, "ist Arzt von"@de, "è medico di"@it ;
+    rdfs:subPropertyOf :hasVitalLethalContact ;
+    owl:inverseOf :hasPhysician ;
+    vs:term_status "stable" ;
+    :correspondsTo :IsHasPhysician .
+
+:isSubject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Something (subject) takes the subject role at an n-ary concept's instance (object) of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es sujeto"@es, "is subject"@en, "ist Subjekt"@de, "è soggetto di"@it ;
+    owl:inverseOf :hasSubject ;
+    vs:term_status "stable" .
+
+:isSubjectObject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment """Something (subject) takes the subject or object role at an n-ary concept's instance (object) of the symmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "es sujeto u objeto"@es, "is subject or object"@en, "ist Subjekt oder Objekt"@de, "è soggetto o oggetto"@it ;
+    vs:term_status "stable" .
+
+:larsGSvensson
+    a foaf:Person ;
+    rdfs:label "Lars G. Svensson" ;
+    owl:sameAs <https://d-nb.info/gnd/124903959> .
+
+:metadataConfidence
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A statement or fact (subject) has a value indicating the statement's confidence or trustworthiness."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha valore di fiducia"@it, "has confidence value"@en, "hat Konfidenzwert"@de, "valor de confianza"@es ;
+    vs:term_status "stable" .
+
+:metadataPeriod
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "An n−ary instance (subject) is valid/true in a period (object). The period should be manifested in a blank node, with data properties hasBeginDate or/and hasEndDate set."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha tempo di validità"@it, "has validity period"@en, "hat Gültigkeitszeitraum"@de, "tiene periodo de validez"@es ;
+    vs:term_status "stable" .
+
+:metadataProvenance
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A statement or fact (subject) originates from a source."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "ha provenienza"@it, "has provenance"@en, "hat Herkunft"@de, "tiene origen"@es ;
+    vs:term_status "stable" .
+
+:relatedAgent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person or corporation (subject) has some kind of relation with a person or corporation (object)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/agrelon#> ;
+    rdfs:label "agente connesso"@it, "agente relacionado"@es, "related Agent"@en, "verknüpfter Agent"@de ;
+    rdfs:subPropertyOf <https://d-nb.info/standards/elementset/gnd#relatedTerm> ;
+    vs:term_status "stable" ;
+    :correspondsTo :RelatedAgent .
+

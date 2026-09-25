@@ -1,0 +1,651 @@
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/2000/01/rdf-schema#comment> "subproperty of :at, having xsd:float as a range" .
+<http://purl.org/NET/c4dm/timeline.owl#atReal> <http://www.w3.org/2000/01/rdf-schema#label> "at (real)" .
+_:Bf48b3c07fa1679a9b9b3eecf78ed96fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bf48b3c07fa1679a9b9b3eecf78ed96fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> .
+_:B64dca500503b2e3f8e84e529db7a3f7a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0496dcf6066bbf873398aa4cb929ddd9 .
+_:B64dca500503b2e3f8e84e529db7a3f7a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B861ba489d1f8766a8bf414e3400dcf97 .
+<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B861ba489d1f8766a8bf414e3400dcf97 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B861ba489d1f8766a8bf414e3400dcf97 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+_:B861ba489d1f8766a8bf414e3400dcf97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#end> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A property enabling to adress an end time point P of an interval [S,P] through the duration of the interval [0,P] on a continuous timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> <http://www.w3.org/2000/01/rdf-schema#label> "ends at (xsd:duration)" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Semi infinite time line...canonical coordinate system --> adressed through xsd:duration since the instant 0." .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "relative timeline" .
+_:Bd6c7b49258d27bf6ee5987eba9123879 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bd6c7b49258d27bf6ee5987eba9123879 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#endsAtDuration> .
+_:Bd6c7b49258d27bf6ee5987eba9123879 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B08fa33f620bacfcd3cf19be8f52f7464 <http://www.w3.org/2002/07/owl#intersectionOf> _:B37ad1c0c1761ca420c123b8aaf78a538 .
+_:B08fa33f620bacfcd3cf19be8f52f7464 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#start> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :beginsAt, allowing to address the beginning of an interval as a date/time" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "begins at (date/time)" .
+_:Ba4cb9aa0793a022f2faff5994f5a80d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba7176ebcfa76fd53dea3d9110222943e .
+_:Ba4cb9aa0793a022f2faff5994f5a80d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bb08c60b21e30984a8a87088f08ba862f .
+_:B3c40570b25e3dbbed9725d7806a9cb52 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#durationXSD> .
+_:B3c40570b25e3dbbed9725d7806a9cb52 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B3c40570b25e3dbbed9725d7806a9cb52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5134bde21759d3cbc0aaa713332e351f <http://www.w3.org/2002/07/owl#intersectionOf> _:B7e7501032a4d224fdb014153cb6b7085 .
+_:B5134bde21759d3cbc0aaa713332e351f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#ShiftMap> .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/2000/01/rdf-schema#comment> "associate a shift map to a particular delay" .
+<http://purl.org/NET/c4dm/timeline.owl#delay> <http://www.w3.org/2000/01/rdf-schema#label> "delay" .
+_:B36090eda3f2cc13a718aaef9d6b8e2e0 <http://www.w3.org/2002/07/owl#intersectionOf> _:B6c7b619858cb9d6ebbfac53e52817321 .
+_:B36090eda3f2cc13a718aaef9d6b8e2e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :duration, having xsd:int as a range" .
+<http://purl.org/NET/c4dm/timeline.owl#durationInt> <http://www.w3.org/2000/01/rdf-schema#label> "duration (integer)" .
+_:Bb85a6398fd58fee7d7a156e84bba1273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B365f5eb3029d161c126cbde47676f9a5 .
+_:Bb85a6398fd58fee7d7a156e84bba1273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bf0888bd3ac40b6432f9f5a65eedf7fa2 .
+_:Bb532f959edc278f31e56b93e0a6711b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B679ba644359b8eaa507ed0c5bcaa53db .
+_:Bb532f959edc278f31e56b93e0a6711b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A discrete time line (like the time line backing a digital signal" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "discrete time line" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0573a82335f3123129490e3a5d50eb2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B517367fd3bc1f8fd8c634159064964c4 .
+_:B0573a82335f3123129490e3a5d50eb2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B75844222a768ee4c96975e663140b720 .
+_:Bdc14249de356b00646b973bedaafe5e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bdc14249de356b00646b973bedaafe5e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bb883c59639b627ff74e40396a29548db .
+<http://purl.org/NET/c4dm/timeline.owl#starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#starts> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalStarts> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:B3f4a4b9d3ce12d9c5985ebe2365c83f8 .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tAn interval defined on an abstract time-line.\n    " .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/2000/01/rdf-schema#label> "abstract interval" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#during> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalDuring> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/2002/07/owl#equivalentClass> _:Ba70b69aaf0bfaf6572e4d3296300b3ec .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B17237278c9d85634e46d82cfcfadbc88 .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant defined on a relative timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInstant> <http://www.w3.org/2000/01/rdf-schema#label> "relative instant" .
+_:Bbbfeb8c657fdaed06fcb78ad04a45bb6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bbbfeb8c657fdaed06fcb78ad04a45bb6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#durationXSD> .
+_:Bbbfeb8c657fdaed06fcb78ad04a45bb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :at, having as a specific range xsd:int" .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/2000/01/rdf-schema#label> "at (integer)" .
+<http://purl.org/NET/c4dm/timeline.owl#atInt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B8f9fba215510a3a17a9e523ffc678d33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B8f9fba215510a3a17a9e523ffc678d33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#finishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#finishedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalFinishedBy> .
+_:Baa5274b5709c6ddea843fcb8d29770a4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B36207fd6b559c754b599f5e6dd1b0331 .
+_:Baa5274b5709c6ddea843fcb8d29770a4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B503236c9837e7ac0801e63cb5f9ac3c2 .
+_:Bd75fba80e5af6863e3a5cf3d5e863b0d <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bd75fba80e5af6863e3a5cf3d5e863b0d <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atInt> .
+_:Bd75fba80e5af6863e3a5cf3d5e863b0d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B82b6c51603f1a9d863848119233f28b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B19c62cad7248e019d464241bc0b95b71 .
+_:B82b6c51603f1a9d863848119233f28b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+_:Bc180f5283ebfa424d07733427aa309c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bc180f5283ebfa424d07733427aa309c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+_:Bdd1e6ea6cdcb43a2243328d89080533e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb0e3f14bcc2e7e3531548ce2bcf848ad .
+_:Bdd1e6ea6cdcb43a2243328d89080533e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B042025d943d4c4c6f443dcdd52e7288b .
+_:Bd96014beb7882c02a85d6d1d9ee37de6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B7f8223006e0a659dbde17a989a188c39 .
+_:Bd96014beb7882c02a85d6d1d9ee37de6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> .
+_:B9e334184879a4d3c9827fcef79b12844 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba4cb9aa0793a022f2faff5994f5a80d1 .
+_:B9e334184879a4d3c9827fcef79b12844 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bdf439729b9127fa3e1670b1601ba6e51 .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd75fba80e5af6863e3a5cf3d5e863b0d .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/2002/07/owl#equivalentClass> _:B0d23883e5344cb1e1e1857184fd99664 .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant defined on a discrete timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/2000/01/rdf-schema#label> "discrete instant" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B01de4f3b797c670e0d94afc7e1bcceda <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8028de20d2af5463fe28b186021fa53d .
+_:B01de4f3b797c670e0d94afc7e1bcceda <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B08b02bcc70d069f0f0bdbfa1f06db3fb .
+_:Ba30b8da74ef0c3834c44c4e0a9b0b262 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#sampleRate> .
+_:Ba30b8da74ef0c3834c44c4e0a9b0b262 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Ba30b8da74ef0c3834c44c4e0a9b0b262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bed7461cf439b9096df2d40d161011d93 <http://www.w3.org/2002/07/owl#intersectionOf> _:Be02fdfeba4b3eb7d48fe55e23003f85d .
+_:Bed7461cf439b9096df2d40d161011d93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B60a33e5b9368c116a82609bea7075224 <http://www.w3.org/2002/07/owl#intersectionOf> _:B2b94a97d292c38fd9edc55eba2509b5d .
+_:B60a33e5b9368c116a82609bea7075224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B679ba644359b8eaa507ed0c5bcaa53db <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B679ba644359b8eaa507ed0c5bcaa53db <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/2002/07/owl#equivalentClass> _:B36090eda3f2cc13a718aaef9d6b8e2e0 .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B258c05112b931e5aa844c689dfda6ec3 .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "This concept expresses that an instant defined on the universal timeline must be associated to a dateTime value" .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/2000/01/rdf-schema#label> "instant on the universal timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#UTInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#equals> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalEquals> .
+_:Bbe5bd4d60a65cf8ac01e690f4075abe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bea929c3f6d3f41782a08204490c75a0f .
+_:Bbe5bd4d60a65cf8ac01e690f4075abe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B00ce7c5f764c5f1f35538d7e1fce6602 .
+_:Ba817499e182885de451d3d4031f7dd30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ba817499e182885de451d3d4031f7dd30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> .
+_:B093786aee338831874f29199e36a7b7c <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> .
+_:B093786aee338831874f29199e36a7b7c <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> .
+_:B093786aee338831874f29199e36a7b7c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bef7800cdb6f8bd6efad2bebb71ba06da <http://www.w3.org/2002/07/owl#unionOf> _:B36b93e265ab79ac206bf184131fce2d4 .
+_:Bef7800cdb6f8bd6efad2bebb71ba06da <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#ShiftMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#ShiftMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#ShiftMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#ShiftMap> <http://www.w3.org/2000/01/rdf-schema#label> "shift map" .
+<http://purl.org/NET/c4dm/timeline.owl#ShiftMap> <http://www.w3.org/2000/01/rdf-schema#comment> "a map just shifting one timeline to another" .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the end of a time interval, through an explicit datatype. time:hasEnd can be used as well, if you want to associate the end of the interval to an explicit time point resource" .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#label> "ends at" .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links an instant defined on the universal time line to an XSD date/time value" .
+<http://purl.org/NET/c4dm/timeline.owl#atDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "at date/time" .
+_:B10cd3e42c7351bc7beef14bb8fe79cc9 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B10cd3e42c7351bc7beef14bb8fe79cc9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atYearMonth> .
+_:B10cd3e42c7351bc7beef14bb8fe79cc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#onTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#onTimeLine> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :at, allowing to address a year (beginning of it for an instant, all of it for an interval)" .
+<http://purl.org/NET/c4dm/timeline.owl#atYear> <http://www.w3.org/2000/01/rdf-schema#label> "at (year)" .
+_:B08b02bcc70d069f0f0bdbfa1f06db3fb <http://www.w3.org/2002/07/owl#intersectionOf> _:B0f220947034b992e4495c19d84e8e418 .
+_:B08b02bcc70d069f0f0bdbfa1f06db3fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#end> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :endsAt, having xsd:int as a range" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/2000/01/rdf-schema#label> "ends at (integer)" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtInt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#before> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalBefore> .
+_:Bb08c60b21e30984a8a87088f08ba862f <http://www.w3.org/2002/07/owl#intersectionOf> _:B35558acaa68f14c642cb67120f096680 .
+_:Bb08c60b21e30984a8a87088f08ba862f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0ef58fc37e1c7988f0f55b0f79bdd239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc489baa19e12f8aa1ac5d44138bd6ac7 .
+_:B0ef58fc37e1c7988f0f55b0f79bdd239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B29b7805b810873f1cbdce55ca5ea83ce .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be7558662e5b1f3f8c3f3e079ee11eb7b .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6039069cf28c7df3a6395d43431d55ae .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B199dc060752e4f6f323e35bcf03ff344 .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe the relation between a continuous time-line and its sampled equivalent" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> <http://www.w3.org/2000/01/rdf-schema#label> "uniform sampling map" .
+<http://purl.org/NET/c4dm/timeline.owl#overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#overlappedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalOverlappedBy> .
+_:B75c67643fa1fc188e577bc12928aafb5 <http://www.w3.org/2002/07/owl#unionOf> _:Bdd1e6ea6cdcb43a2243328d89080533e .
+_:B75c67643fa1fc188e577bc12928aafb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B7f8223006e0a659dbde17a989a188c39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B7f8223006e0a659dbde17a989a188c39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> .
+_:Ba70b69aaf0bfaf6572e4d3296300b3ec <http://www.w3.org/2002/07/owl#intersectionOf> _:B9503ea8420fec892ed7e679ea19a6d64 .
+_:Ba70b69aaf0bfaf6572e4d3296300b3ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :duration, having xsd:duration as a range" .
+<http://purl.org/NET/c4dm/timeline.owl#durationXSD> <http://www.w3.org/2000/01/rdf-schema#label> "duration (xsd:duration)" .
+_:Be7558662e5b1f3f8c3f3e079ee11eb7b <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+_:Be7558662e5b1f3f8c3f3e079ee11eb7b <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> .
+_:Be7558662e5b1f3f8c3f3e079ee11eb7b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B30166bf7fc21135d6aaa066bfa699d6e <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> .
+_:B30166bf7fc21135d6aaa066bfa699d6e <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+_:B30166bf7fc21135d6aaa066bfa699d6e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B35558acaa68f14c642cb67120f096680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bdc14249de356b00646b973bedaafe5e2 .
+_:B35558acaa68f14c642cb67120f096680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B1fd9f6fbdc7033562bbb9b8436328455 .
+_:B00ce7c5f764c5f1f35538d7e1fce6602 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B00ce7c5f764c5f1f35538d7e1fce6602 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasBeginning> .
+_:B00ce7c5f764c5f1f35538d7e1fce6602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A \"physical\" time-line (the universal time line (UTC)) is an instance of this class. Other time zones consists in instances of this class as well, with a \"shifting\" time line map relating them to the universal time line map." .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "physical timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B9bf2af42a9a2922d11f8b0c6fd1da445 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B9bf2af42a9a2922d11f8b0c6fd1da445 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasEnd> .
+_:B9bf2af42a9a2922d11f8b0c6fd1da445 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bc3cfa385452487d04fa69defbd70d039 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:Bc3cfa385452487d04fa69defbd70d039 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:Bc3cfa385452487d04fa69defbd70d039 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B2497d01cec22ec35ea1cdde48045ba4a <http://www.w3.org/2002/07/owl#intersectionOf> _:Ba33f3bfe4a42f912ebd6366d15e8961c .
+_:B2497d01cec22ec35ea1cdde48045ba4a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B503236c9837e7ac0801e63cb5f9ac3c2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B503236c9837e7ac0801e63cb5f9ac3c2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> .
+_:B503236c9837e7ac0801e63cb5f9ac3c2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bea929c3f6d3f41782a08204490c75a0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bea929c3f6d3f41782a08204490c75a0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B9bf2af42a9a2922d11f8b0c6fd1da445 .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/2000/01/rdf-schema#domain> _:B2953d99480e22e21004543a8e5568e40 .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a point or an interval on the time line, through an explicit datatype" .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/2000/01/rdf-schema#label> "at" .
+<http://purl.org/NET/c4dm/timeline.owl#at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:Bf3d45aa5b71027e9a516aeca6bff9e6d <http://www.w3.org/2002/07/owl#intersectionOf> _:B64dca500503b2e3f8e84e529db7a3f7a .
+_:Bf3d45aa5b71027e9a516aeca6bff9e6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B199dc060752e4f6f323e35bcf03ff344 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:B199dc060752e4f6f323e35bcf03ff344 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> .
+_:B199dc060752e4f6f323e35bcf03ff344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#startedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#startedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalStartedBy> .
+_:Ba14e7123c91c5ca90444193c7f8e621a <http://www.w3.org/2002/07/owl#unionOf> _:B9e334184879a4d3c9827fcef79b12844 .
+_:Ba14e7123c91c5ca90444193c7f8e621a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bbdaa27eef49dd2126b88624d7cb27447 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> .
+_:Bbdaa27eef49dd2126b88624d7cb27447 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> .
+_:Bbdaa27eef49dd2126b88624d7cb27447 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :at, allowing to address a date (beginning of it for an instant, all of it for an interval)" .
+<http://purl.org/NET/c4dm/timeline.owl#atDate> <http://www.w3.org/2000/01/rdf-schema#label> "at (date)" .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYearMonth> .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :at, allowing to address a year/month (beginning of it for an instant, all of it for an interval)" .
+<http://purl.org/NET/c4dm/timeline.owl#atYearMonth> <http://www.w3.org/2000/01/rdf-schema#label> "at (year/month)" .
+<http://purl.org/NET/c4dm/timeline.owl#overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#overlaps> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalOverlaps> .
+_:B855f49074b6475888b8179637bcf9d4f <http://www.w3.org/2002/07/owl#unionOf> _:Bb85a6398fd58fee7d7a156e84bba1273 .
+_:B855f49074b6475888b8179637bcf9d4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Be9c5c9501eea374bbd30de30ed10da3e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B01de4f3b797c670e0d94afc7e1bcceda .
+_:Be9c5c9501eea374bbd30de30ed10da3e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B77455fb3f9a41be7e505b80f09017970 .
+_:B521dab773974a27abb30c569f8d03ebe <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#windowLength> .
+_:B521dab773974a27abb30c569f8d03ebe <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B521dab773974a27abb30c569f8d03ebe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B7a747d918c8b93e08ee48093125ec845 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B7a747d918c8b93e08ee48093125ec845 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/NET/c4dm/timeline.owl#universaltimeline> .
+_:B7a747d918c8b93e08ee48093125ec845 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B8028de20d2af5463fe28b186021fa53d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd744d0dd3aee30fef86b3558c1c56b01 .
+_:B8028de20d2af5463fe28b186021fa53d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B06fe3337eae3aeb2cc61367fe19864fd .
+_:B08757a28834156e8b2e361a3fa9ba10b <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasEnd> .
+_:B08757a28834156e8b2e361a3fa9ba10b <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B08757a28834156e8b2e361a3fa9ba10b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#after> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#after> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalAfter> .
+_:B9503ea8420fec892ed7e679ea19a6d64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc180f5283ebfa424d07733427aa309c9 .
+_:B9503ea8420fec892ed7e679ea19a6d64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B462758c3aeeeebe3c550aa80d5386d23 .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "associates a timeline map to its range timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "range timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#start> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A property enabling to adress a start time point P of an interval [P,E] through the duration of the interval [0,P] on a continuous timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> <http://www.w3.org/2000/01/rdf-schema#label> "begins at (xsd:duration)" .
+_:B22518265ad54a5d3ec13baa73165b434 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B22518265ad54a5d3ec13baa73165b434 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#OriginMap> .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/2000/01/rdf-schema#comment> "associate an origin map to its origin on the domain physical timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#origin> <http://www.w3.org/2000/01/rdf-schema#label> "origin" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bb79936e6aebdcfdcfd6a5d9b653115e0 .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant defined on an abstract timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractInstant> <http://www.w3.org/2000/01/rdf-schema#label> "abstract instant" .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time-entry> .
+<http://purl.org/NET/c4dm/timeline.owl> <http://xmlns.com/foaf/0.1/maker> <http://moustaki.org/foaf.rdf#moustaki> .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    \tExtends owl-time ontology (http://www.w3.org/2006/time) with  \n\tsupport for several timelines, acting as a backbone to adress \n\ttime interval/instants. \n\n\tMainly designed with a multimedia use-case in mind.\n\n\tCopyright (c) Yves Raimond, Samer Abdallah, Centre for Digital Music, Queen Mary, University of London\n\t" .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/2000/01/rdf-schema#label> "The Timeline ontology" .
+<http://purl.org/NET/c4dm/timeline.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:B1fd9f6fbdc7033562bbb9b8436328455 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> .
+_:B1fd9f6fbdc7033562bbb9b8436328455 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B1fd9f6fbdc7033562bbb9b8436328455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B855f49074b6475888b8179637bcf9d4f .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bed7461cf439b9096df2d40d161011d93 .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "an interval defined on the universal time line" .
+<http://purl.org/NET/c4dm/timeline.owl#UTInterval> <http://www.w3.org/2000/01/rdf-schema#label> "universal timeline interval" .
+_:Bcae34a513dd6c4347a718c263bffad21 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bcae34a513dd6c4347a718c263bffad21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> .
+_:Bcae34a513dd6c4347a718c263bffad21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ba33f3bfe4a42f912ebd6366d15e8961c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B54fb61211381c6c81209f9b0144840d0 .
+_:Ba33f3bfe4a42f912ebd6366d15e8961c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Be9b0160eb855924304de0c91b94a62de .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0ee8ba25bb7fd42e12cb8f00c100f8f0 .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/2000/01/rdf-schema#comment> "window length, associated to a uniform windowing map" .
+<http://purl.org/NET/c4dm/timeline.owl#windowLength> <http://www.w3.org/2000/01/rdf-schema#label> "window length" .
+_:Bd0617513d05604477c157069cb3f730d <http://www.w3.org/2002/07/owl#unionOf> _:B79268d25a9c5056a3c661c01900d2d04 .
+_:Bd0617513d05604477c157069cb3f730d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0f220947034b992e4495c19d84e8e418 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B99cbbab2deb4acc8edad5004b5fb889e .
+_:B0f220947034b992e4495c19d84e8e418 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bb1ffadf51285f728b29b3733106fa5da .
+_:Be9b0160eb855924304de0c91b94a62de <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtDuration> .
+_:Be9b0160eb855924304de0c91b94a62de <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Be9b0160eb855924304de0c91b94a62de <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bf3d45aa5b71027e9a516aeca6bff9e6d .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B75c67643fa1fc188e577bc12928aafb5 .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "an interval defined on a relative timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "relative interval" .
+<http://purl.org/NET/c4dm/timeline.owl#RelativeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bf37de10e83941168909aaae49adbf969 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bf37de10e83941168909aaae49adbf969 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#durationInt> .
+_:Bf37de10e83941168909aaae49adbf969 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B517367fd3bc1f8fd8c634159064964c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B517367fd3bc1f8fd8c634159064964c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Instant> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a linear and coherent piece of time -- can be either abstract (such as the one behind a score) or concrete (such as the universal time line).\nTwo timelines can be mapped using timeline maps." .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B462758c3aeeeebe3c550aa80d5386d23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B462758c3aeeeebe3c550aa80d5386d23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+_:B462758c3aeeeebe3c550aa80d5386d23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bd744d0dd3aee30fef86b3558c1c56b01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bd744d0dd3aee30fef86b3558c1c56b01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B5134bde21759d3cbc0aaa713332e351f .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Allows to map two time lines together" .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> <http://www.w3.org/2000/01/rdf-schema#label> "timeline map" .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B29b7805b810873f1cbdce55ca5ea83ce <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasBeginning> .
+_:B29b7805b810873f1cbdce55ca5ea83ce <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B29b7805b810873f1cbdce55ca5ea83ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#end> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :endsAt, allowing to address the end of an interval as a date/time" .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "ends at (date/time)" .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/2000/01/rdf-schema#domain> _:B01f0fc2b92b505af2b08b01161e56442 .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tRelates an interval or an instant to the timeline on which it is defined.\n\n\tThe 29th of August, 2007 would be linked through this property to the universal timeline, whereas\n\t\"from 2s to 5s on this particular signal\" would be defined on the signal' timeline.\n\n    " .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/2000/01/rdf-schema#label> "on timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:B22ce1707f6b06bf02026e43e98f2c34e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B22ce1707f6b06bf02026e43e98f2c34e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bf37de10e83941168909aaae49adbf969 .
+_:B77455fb3f9a41be7e505b80f09017970 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atDate> .
+_:B77455fb3f9a41be7e505b80f09017970 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B77455fb3f9a41be7e505b80f09017970 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    \tAbstract time lines may be used as a backbone for Score, Works, ... \n\tThis allows for TimeLine maps to relate works to a given \n\tperformance (this part was played at this time)." .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "abstract timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#finishes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalFinishes> .
+_:B258c05112b931e5aa844c689dfda6ec3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atDateTime> .
+_:B258c05112b931e5aa844c689dfda6ec3 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B258c05112b931e5aa844c689dfda6ec3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B3698898cdd5e466728052ac6b8b6f8e7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasEnd> .
+_:B3698898cdd5e466728052ac6b8b6f8e7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B3698898cdd5e466728052ac6b8b6f8e7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#metBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalMetBy> .
+_:Bf3fa5e1e8b6417bcd0e114ad01dbb6cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bf3fa5e1e8b6417bcd0e114ad01dbb6cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B2497d01cec22ec35ea1cdde48045ba4a .
+_:B01f0fc2b92b505af2b08b01161e56442 <http://www.w3.org/2002/07/owl#unionOf> _:B82b6c51603f1a9d863848119233f28b5 .
+_:B01f0fc2b92b505af2b08b01161e56442 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "associates a timeline map to its domain timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "domain timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:B08fa33f620bacfcd3cf19be8f52f7464 .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba14e7123c91c5ca90444193c7f8e621a .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval defined on a discrete timeline, like the one backing a digital signal" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "discrete interval" .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#Interval> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2006/time#ProperInterval> .
+<http://purl.org/NET/c4dm/timeline.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval (same as in OWL-Time). Allen's relationships are defined in OWL-Time." .
+<http://purl.org/NET/c4dm/timeline.owl#Interval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "interval" .
+<http://purl.org/NET/c4dm/timeline.owl#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#label> "uniform windowing map" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1f00ded7ba259579da77c434a21d0b2d .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B61995991acc76e890b4043c61c44bbe2 .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the relation between a discrete time line and its windowed equivalent" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B406bbffd32f3d721bb9d3d959c41c26a .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4c3bcc713dd7279d777aba57bfbf541d .
+_:Bdf439729b9127fa3e1670b1601ba6e51 <http://www.w3.org/2002/07/owl#intersectionOf> _:Bbe5bd4d60a65cf8ac01e690f4075abe1 .
+_:Bdf439729b9127fa3e1670b1601ba6e51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B19c62cad7248e019d464241bc0b95b71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B19c62cad7248e019d464241bc0b95b71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+_:B993ff84c011b7d0bba1bce27abc361f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B993ff84c011b7d0bba1bce27abc361f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B3698898cdd5e466728052ac6b8b6f8e7 .
+_:B406bbffd32f3d721bb9d3d959c41c26a <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:B406bbffd32f3d721bb9d3d959c41c26a <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#domainTimeLine> .
+_:B406bbffd32f3d721bb9d3d959c41c26a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B4c3bcc713dd7279d777aba57bfbf541d <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#hopSize> .
+_:B4c3bcc713dd7279d777aba57bfbf541d <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B4c3bcc713dd7279d777aba57bfbf541d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb9708271d51459376103ae16ef89b6dc <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#hopSize> .
+_:Bb9708271d51459376103ae16ef89b6dc <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bb9708271d51459376103ae16ef89b6dc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5abd5c95a929f780dc35e27011f9bc32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B5abd5c95a929f780dc35e27011f9bc32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAt> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/NET/c4dm/timeline.owl#start> .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A property enabling to adress a time point P through the duration of the interval [0,P] on a continuous timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#at> .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#atDuration> <http://www.w3.org/2000/01/rdf-schema#label> "at (duration)" .
+_:Bb1ffadf51285f728b29b3733106fa5da <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bb1ffadf51285f728b29b3733106fa5da <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> .
+_:Bb1ffadf51285f728b29b3733106fa5da <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B0b3df8202ab4131a5101796490e9542a <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> .
+_:B0b3df8202ab4131a5101796490e9542a <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:B0b3df8202ab4131a5101796490e9542a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B0d23883e5344cb1e1e1857184fd99664 <http://www.w3.org/2002/07/owl#intersectionOf> _:B0573a82335f3123129490e3a5d50eb2b .
+_:B0d23883e5344cb1e1e1857184fd99664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0496dcf6066bbf873398aa4cb929ddd9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B0496dcf6066bbf873398aa4cb929ddd9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+_:Bc489baa19e12f8aa1ac5d44138bd6ac7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bc489baa19e12f8aa1ac5d44138bd6ac7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B08757a28834156e8b2e361a3fa9ba10b .
+_:B06fe3337eae3aeb2cc61367fe19864fd <http://www.w3.org/2002/07/owl#intersectionOf> _:B0ef58fc37e1c7988f0f55b0f79bdd239 .
+_:B06fe3337eae3aeb2cc61367fe19864fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B2b94a97d292c38fd9edc55eba2509b5d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B22ce1707f6b06bf02026e43e98f2c34e .
+_:B2b94a97d292c38fd9edc55eba2509b5d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B45fd1f12958cf0222d3609ff33245df1 .
+<http://purl.org/NET/c4dm/timeline.owl#universaltimeline> <http://www.w3.org/2000/01/rdf-schema#comment> "this is the `universal' time line -- can adress time intervals on it using date/dateTime -- UTC" .
+<http://purl.org/NET/c4dm/timeline.owl#universaltimeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#universaltimeline> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#universaltimeline> <http://purl.org/dc/elements/1.1/description> "The timeline one can addresss \"the 1st of July, 2007\"" .
+<http://purl.org/NET/c4dm/timeline.owl#universaltimeline> <http://purl.org/dc/elements/1.1/title> "the universal time line" .
+_:B37ad1c0c1761ca420c123b8aaf78a538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B5abd5c95a929f780dc35e27011f9bc32 .
+_:B37ad1c0c1761ca420c123b8aaf78a538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bc3cfa385452487d04fa69defbd70d039 .
+<http://purl.org/NET/c4dm/timeline.owl#endsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAt> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/NET/c4dm/timeline.owl#end> .
+_:B02ecc9ac2f2b0db8bbf8ff3eb2bea75e <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B02ecc9ac2f2b0db8bbf8ff3eb2bea75e <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtDateTime> .
+_:B02ecc9ac2f2b0db8bbf8ff3eb2bea75e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bf0888bd3ac40b6432f9f5a65eedf7fa2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bf0888bd3ac40b6432f9f5a65eedf7fa2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atYear> .
+_:Bf0888bd3ac40b6432f9f5a65eedf7fa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ba7176ebcfa76fd53dea3d9110222943e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ba7176ebcfa76fd53dea3d9110222943e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B60a33e5b9368c116a82609bea7075224 .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd0617513d05604477c157069cb3f730d .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/2000/01/rdf-schema#comment> "hop size, associated to a uniform windowing map" .
+<http://purl.org/NET/c4dm/timeline.owl#hopSize> <http://www.w3.org/2000/01/rdf-schema#label> "hop size" .
+<http://moustaki.org/foaf.rdf#moustaki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/NET/c4dm/timeline.owl#Instant> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2006/time#Instant> .
+<http://purl.org/NET/c4dm/timeline.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "An instant (same as in OWL-Time)" .
+<http://purl.org/NET/c4dm/timeline.owl#Instant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "instant" .
+<http://purl.org/NET/c4dm/timeline.owl#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B6039069cf28c7df3a6395d43431d55ae <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#sampleRate> .
+_:B6039069cf28c7df3a6395d43431d55ae <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B6039069cf28c7df3a6395d43431d55ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb0e3f14bcc2e7e3531548ce2bcf848ad <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf3fa5e1e8b6417bcd0e114ad01dbb6cf .
+_:Bb0e3f14bcc2e7e3531548ce2bcf848ad <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B19b7469a84f8c2f9893d023057374286 .
+_:B5197b79030ba2833e4464ec07a003738 <http://www.w3.org/2002/07/owl#unionOf> _:Bd96014beb7882c02a85d6d1d9ee37de6 .
+_:B5197b79030ba2833e4464ec07a003738 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba30b8da74ef0c3834c44c4e0a9b0b262 .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0b3df8202ab4131a5101796490e9542a .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B521dab773974a27abb30c569f8d03ebe .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the relation between a continuous time-line, and a time-line that corresponds to its sampled and windowed equivalent" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B093786aee338831874f29199e36a7b7c .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#label> "Uniform sampling and windowing map" .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb9708271d51459376103ae16ef89b6dc .
+<http://purl.org/NET/c4dm/timeline.owl#UniformSamplingWindowingMap> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#UniformSamplingMap> .
+_:B36b93e265ab79ac206bf184131fce2d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B09aaa0ab5ed037324b8eaa6236f134f9 .
+_:B36b93e265ab79ac206bf184131fce2d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#PhysicalTimeLine> .
+_:B54fb61211381c6c81209f9b0144840d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B54fb61211381c6c81209f9b0144840d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bd6c7b49258d27bf6ee5987eba9123879 .
+_:Bf156ca20a68cb02b750864ca74f2514f <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasBeginning> .
+_:Bf156ca20a68cb02b750864ca74f2514f <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bf156ca20a68cb02b750864ca74f2514f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B3f4a4b9d3ce12d9c5985ebe2365c83f8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B3f4a4b9d3ce12d9c5985ebe2365c83f8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> .
+_:B3f4a4b9d3ce12d9c5985ebe2365c83f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#start> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#start> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the beginning of a time interval, through an explicit datatype. time:hasBeginning can be used as well, if you want to associate the beginning of the interval to an explicit time point resource" .
+<http://purl.org/NET/c4dm/timeline.owl#start> <http://www.w3.org/2000/01/rdf-schema#label> "begins at" .
+_:Bd56d3c39eaa28d96d555c6c906075e04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B993ff84c011b7d0bba1bce27abc361f7 .
+_:Bd56d3c39eaa28d96d555c6c906075e04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bf156ca20a68cb02b750864ca74f2514f .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/2000/01/rdf-schema#domain> _:B5197b79030ba2833e4464ec07a003738 .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/2000/01/rdf-schema#comment> "associates a sample rate value to a uniform sampling map" .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/2000/01/rdf-schema#label> "sample rate" .
+<http://purl.org/NET/c4dm/timeline.owl#sampleRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:B19b7469a84f8c2f9893d023057374286 <http://www.w3.org/2002/07/owl#intersectionOf> _:Baa5274b5709c6ddea843fcb8d29770a4 .
+_:B19b7469a84f8c2f9893d023057374286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B99cbbab2deb4acc8edad5004b5fb889e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B99cbbab2deb4acc8edad5004b5fb889e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B3c40570b25e3dbbed9725d7806a9cb52 .
+_:B0ee8ba25bb7fd42e12cb8f00c100f8f0 <http://www.w3.org/2002/07/owl#unionOf> _:B06b861759a05f6733141da2f2ff43361 .
+_:B0ee8ba25bb7fd42e12cb8f00c100f8f0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B61995991acc76e890b4043c61c44bbe2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#rangeTimeLine> .
+_:B61995991acc76e890b4043c61c44bbe2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:B61995991acc76e890b4043c61c44bbe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B75844222a768ee4c96975e663140b720 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+_:B75844222a768ee4c96975e663140b720 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B75844222a768ee4c96975e663140b720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb883c59639b627ff74e40396a29548db <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bb883c59639b627ff74e40396a29548db <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#endsAtInt> .
+_:Bb883c59639b627ff74e40396a29548db <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B6b95d811bfed5dd6f30b617e8d3176c6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B6b95d811bfed5dd6f30b617e8d3176c6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bcae34a513dd6c4347a718c263bffad21 .
+_:B79268d25a9c5056a3c661c01900d2d04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf48b3c07fa1679a9b9b3eecf78ed96fb .
+_:B79268d25a9c5056a3c661c01900d2d04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> .
+_:B09aaa0ab5ed037324b8eaa6236f134f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B09aaa0ab5ed037324b8eaa6236f134f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine> .
+_:Bb79936e6aebdcfdcfd6a5d9b653115e0 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:Bb79936e6aebdcfdcfd6a5d9b653115e0 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/NET/c4dm/timeline.owl#AbstractTimeLine> .
+_:Bb79936e6aebdcfdcfd6a5d9b653115e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B365f5eb3029d161c126cbde47676f9a5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Be9c5c9501eea374bbd30de30ed10da3e .
+_:B365f5eb3029d161c126cbde47676f9a5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B10cd3e42c7351bc7beef14bb8fe79cc9 .
+<http://purl.org/NET/c4dm/timeline.owl#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#Interval> .
+<http://purl.org/NET/c4dm/timeline.owl#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#duration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "the duration of a time interval" .
+<http://purl.org/NET/c4dm/timeline.owl#duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration" .
+_:B17237278c9d85634e46d82cfcfadbc88 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#atDuration> .
+_:B17237278c9d85634e46d82cfcfadbc88 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B17237278c9d85634e46d82cfcfadbc88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B2953d99480e22e21004543a8e5568e40 <http://www.w3.org/2002/07/owl#unionOf> _:Bb532f959edc278f31e56b93e0a6711b5 .
+_:B2953d99480e22e21004543a8e5568e40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bef7800cdb6f8bd6efad2bebb71ba06da .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A continuous timeline, like the universal one, or the one backing an analog signal" .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "continuous timeline" .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B45fd1f12958cf0222d3609ff33245df1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> .
+_:B45fd1f12958cf0222d3609ff33245df1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B45fd1f12958cf0222d3609ff33245df1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#start> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :beginsAt, having xsd:int as a range" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/2000/01/rdf-schema#label> "begins at (integer)" .
+<http://purl.org/NET/c4dm/timeline.owl#beginsAtInt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B7e7501032a4d224fdb014153cb6b7085 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B6b95d811bfed5dd6f30b617e8d3176c6 .
+_:B7e7501032a4d224fdb014153cb6b7085 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B02ecc9ac2f2b0db8bbf8ff3eb2bea75e .
+<http://purl.org/NET/c4dm/timeline.owl#meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#meets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalMeets> .
+_:B06b861759a05f6733141da2f2ff43361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba817499e182885de451d3d4031f7dd30 .
+_:B06b861759a05f6733141da2f2ff43361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/NET/c4dm/timeline.owl#UniformWindowingMap> .
+_:B36207fd6b559c754b599f5e6dd1b0331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B36207fd6b559c754b599f5e6dd1b0331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Bbbfeb8c657fdaed06fcb78ad04a45bb6 .
+_:B042025d943d4c4c6f443dcdd52e7288b <http://www.w3.org/2002/07/owl#intersectionOf> _:Bd56d3c39eaa28d96d555c6c906075e04 .
+_:B042025d943d4c4c6f443dcdd52e7288b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLineMap> .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbdaa27eef49dd2126b88624d7cb27447 .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B30166bf7fc21135d6aaa066bfa699d6e .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A timeline map linking a physical timeline to a relative one (originating at some point on the physical timeline)" .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/2000/01/rdf-schema#label> "origin map" .
+<http://purl.org/NET/c4dm/timeline.owl#OriginMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B6c7b619858cb9d6ebbfac53e52817321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B22518265ad54a5d3ec13baa73165b434 .
+_:B6c7b619858cb9d6ebbfac53e52817321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B7a747d918c8b93e08ee48093125ec845 .
+<http://purl.org/NET/c4dm/timeline.owl#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/NET/c4dm/timeline.owl#contains> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2006/time#intervalContains> .
+_:B163ae9f057f5ddcd95412ba28383f9ef <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/NET/c4dm/timeline.owl#universaltimeline> .
+_:B163ae9f057f5ddcd95412ba28383f9ef <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#timeline> .
+_:B163ae9f057f5ddcd95412ba28383f9ef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B1f00ded7ba259579da77c434a21d0b2d <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/NET/c4dm/timeline.owl#windowLength> .
+_:B1f00ded7ba259579da77c434a21d0b2d <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:B1f00ded7ba259579da77c434a21d0b2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Be02fdfeba4b3eb7d48fe55e23003f85d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8f9fba215510a3a17a9e523ffc678d33 .
+_:Be02fdfeba4b3eb7d48fe55e23003f85d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:B163ae9f057f5ddcd95412ba28383f9ef .

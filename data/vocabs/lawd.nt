@@ -1,0 +1,199 @@
+<http://lawd.info/ontology/interpolation> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/variant> .
+<http://lawd.info/ontology/interpolation> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/interpolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/interpolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/EditorialComment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/CollationItem> .
+<http://lawd.info/ontology/EditorialComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B156e38f53246b5bb399d2145f4508a1f <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lawd.info/ontology/Agent> .
+_:B156e38f53246b5bb399d2145f4508a1f <http://www.w3.org/2002/07/owl#onProperty> <http://lawd.info/ontology/responsibleAgent> .
+_:B156e38f53246b5bb399d2145f4508a1f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lawd.info/ontology/where> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Place> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where an artifact originated."@en .
+<http://lawd.info/ontology/origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/agreement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://erlangen-crm.org/current/E21_Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://lawd.info/ontology/Person> .
+<http://lawd.info/ontology/Translation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Written Work that translates one or more other Written Works that embody the same Conceptual Work."@en .
+<http://lawd.info/ontology/Translation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/Translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/primaryForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/Name> .
+<http://lawd.info/ontology/primaryForm> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the primary form of a lawd:Name"@en .
+<http://lawd.info/ontology/primaryForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B222846c197a0a85b3ab7e3d304126553 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lawd.info/ontology/Agent> .
+_:B222846c197a0a85b3ab7e3d304126553 <http://www.w3.org/2002/07/owl#onProperty> <http://lawd.info/ontology/responsibleAgent> .
+_:B222846c197a0a85b3ab7e3d304126553 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lawd.info/ontology/conjecture> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/conjecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/conjecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Citation models a bibliographic reference as a resource."@en .
+<http://lawd.info/ontology/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/MythologicalCreature> <http://www.w3.org/2000/01/rdf-schema#comment> "Class for non-human, non-divine Agents, e.g. Polyphemus or Medusa." .
+<http://lawd.info/ontology/MythologicalCreature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Agent> .
+<http://lawd.info/ontology/MythologicalCreature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/correction> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/correction> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/intervention> .
+<http://lawd.info/ontology/correction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/correction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/ConceptualWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A Conceptual Work groups together one or more Written Works which\n      have the same intellectual source. E.g. The Iliad, as opposed to a particular manuscript witness or edition of the Iliad."@en .
+<http://lawd.info/ontology/ConceptualWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/Name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name is a resource providing a name for some thing. It may be specialized with subclasses like PersonalName or PlaceName"@en .
+<http://lawd.info/ontology/Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geovocab.org/spatial#Feature> <http://www.w3.org/2002/07/owl#equivalentClass> <http://lawd.info/ontology/Place> .
+<http://geovocab.org/spatial#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/variant> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/variant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/variant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/PersonalName> <http://www.w3.org/2000/01/rdf-schema#comment> "A name belonging to a lawd:Person"@en .
+<http://lawd.info/ontology/PersonalName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Name> .
+<http://lawd.info/ontology/PersonalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/readingType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/readingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lawd.info/ontology/where> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Place> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where an artifact was discovered."@en .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/variantForm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://lawd.info/ontology/variantForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/Name> .
+<http://lawd.info/ontology/variantForm> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a variant form of a lawd:Name"@en .
+<http://lawd.info/ontology/variantForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lawd.info/ontology/representedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/representedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Citation> .
+<http://lawd.info/ontology/representedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/deletion> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/deletion> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/intervention> .
+<http://lawd.info/ontology/deletion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/deletion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/witness> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Siglum> .
+<http://lawd.info/ontology/witness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/CollationItem> .
+<http://lawd.info/ontology/witness> <http://www.w3.org/2000/01/rdf-schema#comment> "(Experimental) Connects an item in a collation to the witness it derives from."@en .
+<http://lawd.info/ontology/witness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/hasAttestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Attestation> .
+<http://lawd.info/ontology/hasAttestation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a lawd:Attestation providing evidence for a name, etc."@en .
+<http://lawd.info/ontology/hasAttestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/where> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Place> .
+<http://lawd.info/ontology/where> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic location relation."@en .
+<http://lawd.info/ontology/where> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An Agent is an abstract entity which has agency or is considered capable of acting in some way. Current subclasses include Deities and Persons."@en .
+<http://lawd.info/ontology/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://erlangen-crm.org/current/E27_Site> <http://www.w3.org/2002/07/owl#equivalentClass> <http://lawd.info/ontology/Place> .
+<http://lawd.info/ontology/uncertainReading> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/uncertainReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/uncertainReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/WrittenWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A written work, whether extant or not. May be considered to embody a Conceptual Work."@en .
+<http://lawd.info/ontology/WrittenWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/readingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "(Experimental) The SKOS scheme for classifying types of lawd:Reading."@en .
+<http://lawd.info/ontology/readingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/PlaceName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a lawd:Place"@en .
+<http://lawd.info/ontology/PlaceName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Name> .
+<http://lawd.info/ontology/PlaceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/intervention> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/variant> .
+<http://lawd.info/ontology/intervention> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/intervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/intervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/addition> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/variant> .
+<http://lawd.info/ontology/addition> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/addition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/addition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/Sigla> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered collection that maps Written Works used as sources for an\n      Edition to symbols used to represent them in the context of that Edition."@en .
+<http://lawd.info/ontology/Sigla> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#OrderedList> .
+<http://lawd.info/ontology/Sigla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/collation> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/oa#commenting> .
+<http://lawd.info/ontology/collation> <http://www.w3.org/2000/01/rdf-schema#comment> "a Motivation that represents the addition of a critical apparatus\n      comment upon a text"@en .
+<http://lawd.info/ontology/collation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> .
+<http://lawd.info/ontology/collation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/Siglum> <http://www.w3.org/2000/01/rdf-schema#comment> "A Siglum represents a witness (a Written Work of some kind) and\n      associates it with a symbol used to represent that work in the context of an\n      Edition."@en .
+<http://lawd.info/ontology/Siglum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Citation> .
+<http://lawd.info/ontology/Siglum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Attestation models a piece of evidence for something in a text (e.g. the mention of a person in a document). Typically it is the conjunction of a Citation and an entity like a name or person."@en .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/EvidentiaryItem> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/Hand> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of a Written Work in a distinct hand. Written Works may\n      consist of one or more hands."@en .
+<http://lawd.info/ontology/Hand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/Hand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/> <http://creativecommons.org/ns#license> <http://creativecommons.org/license/by/3.0/> .
+<http://lawd.info/ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <http://lawd.info/ontology/1.0/> .
+<http://lawd.info/ontology/> <http://purl.org/dc/terms/description> "The goal of LAWD is to fill in the cracks between the data used and published by projects with a focus on the ancient world and the standard Linked Data vocablary schemes, like Dublin Core, the Open Annotation Collaboration, and CIDOC-CRM." .
+<http://lawd.info/ontology/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/ontology/olo/core#> .
+<http://lawd.info/ontology/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://lawd.info/ontology/" .
+<http://lawd.info/ontology/> <http://www.w3.org/2002/07/owl#imports> <http://erlangen-crm.org/current/> .
+<http://lawd.info/ontology/> <http://purl.org/dc/terms/modified> "2014-09-03" .
+<http://lawd.info/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://lawd.info/ontology/> <http://purl.org/dc/terms/title> "Linking Ancient World Data Ontology" .
+<http://lawd.info/ontology/> <http://purl.org/dc/terms/issued> "2013-03-28" .
+<http://lawd.info/ontology/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lawd" .
+<http://lawd.info/ontology/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://lawd.info/ontology/> <http://purl.org/dc/terms/rights> "Copyright © 2013 Hugh A. Cayless" .
+<http://lawd.info/ontology/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/oa#> .
+<http://lawd.info/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://lawd.info/ontology/represents> <http://www.w3.org/2002/07/owl#inverseOf> <http://lawd.info/ontology/representedBy> .
+<http://lawd.info/ontology/represents> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/represents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/Citation> .
+<http://lawd.info/ontology/represents> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the relationship between a Citation or Siglum and the\n      Written Work it indicates."@en .
+<http://lawd.info/ontology/represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Any person, whether historical, mythological, or fictional" .
+<http://lawd.info/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Agent> .
+<http://lawd.info/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/CollationItem> <http://www.w3.org/2000/01/rdf-schema#comment> "(Experimental) Part of a collation of witnesses to a text." .
+<http://lawd.info/ontology/CollationItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/EvidentiaryItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Superclass for types of evidence that support assertions."@en .
+<http://lawd.info/ontology/EvidentiaryItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/embodies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/embodies> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/ConceptualWork> .
+<http://lawd.info/ontology/embodies> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a Written Work and the abstract Conceptual Work it embodies. For example, the OCT text of Homer's Iliad's relationship to the idea of Homer's Iliad."@en .
+<http://lawd.info/ontology/embodies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/Reference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/CollationItem> .
+<http://lawd.info/ontology/Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/abbreviation> <http://www.w3.org/2000/01/rdf-schema#comment> "A label representing an abbreviated form of a name or title, e.g. of\n      an author or work. E.g. Homer -> Hom.; Odyssey -> Od.;"@en .
+<http://lawd.info/ontology/abbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lawd.info/ontology/responsibleFor> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bab987cafdcac15b794f7c1b3f5d45397 .
+<http://lawd.info/ontology/responsibleFor> <http://www.w3.org/2000/01/rdf-schema#domain> _:B016212297e3210d4bcd383478b388a1a .
+<http://lawd.info/ontology/responsibleFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects any kind of author or creator to the work he/she/it is\n      responsible for creating. The author may be anonymous or fictional."@en .
+<http://lawd.info/ontology/responsibleFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#comment> "Any conceivable place, such as a town, a mountain, or the site of a building."@en .
+<http://lawd.info/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/conjunctOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/EvidentiaryItem> .
+<http://lawd.info/ontology/conjunctOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/EvidentiaryItem> .
+<http://lawd.info/ontology/conjunctOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a piece of evidence (any subclass of lawd:EvidentiaryItem) is joined to another—for example because they co-occur."@en .
+<http://lawd.info/ontology/conjunctOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://lawd.info/ontology/conjunctOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/hasCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Citation> .
+<http://lawd.info/ontology/hasCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lawd.info/ontology/Attestation> .
+<http://lawd.info/ontology/hasCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a Citation that contains the source for a lawd:Attestation"@en .
+<http://lawd.info/ontology/hasCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Name> .
+<http://lawd.info/ontology/hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that (e.g.) a Person or Place has a lawd:Name that is the range of the property."@en .
+<http://lawd.info/ontology/hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/Edition> <http://www.w3.org/2000/01/rdf-schema#comment> "A published (whether officially or not) Written Work that relies on\n      one or more Written Works as sources"@en .
+<http://lawd.info/ontology/Edition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/Edition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/Reading> <http://www.w3.org/2000/01/rdf-schema#comment> "(Experimental) The superclass for members of the readingScheme concept scheme. A Reading is a word, phrase, or larger chunk of text from a witness (or any observation of variance concerning the text, such as an omission or interpolation)."@en .
+<http://lawd.info/ontology/Reading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lawd.info/ontology/Reading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/responsibleAgent> <http://www.w3.org/2000/01/rdf-schema#range> _:B156e38f53246b5bb399d2145f4508a1f .
+<http://lawd.info/ontology/responsibleAgent> <http://www.w3.org/2000/01/rdf-schema#range> _:B222846c197a0a85b3ab7e3d304126553 .
+<http://lawd.info/ontology/responsibleAgent> <http://www.w3.org/2002/07/owl#inverseOf> <http://lawd.info/ontology/responsibleFor> .
+<http://lawd.info/ontology/responsibleAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a work of any type to the person, group, or insitution\n      responsible for the creation of the work."@en .
+<http://lawd.info/ontology/responsibleAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lawd.info/ontology/AssembledWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A Written Work that collects together more than one Written Work.\n      Manuscripts are often AssembledWorks."@en .
+<http://lawd.info/ontology/AssembledWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/WrittenWork> .
+<http://lawd.info/ontology/AssembledWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/Deity> <http://www.w3.org/2000/01/rdf-schema#comment> "Any divine Agent." .
+<http://lawd.info/ontology/Deity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/Agent> .
+<http://lawd.info/ontology/Deity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lawd.info/ontology/omission> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/variant> .
+<http://lawd.info/ontology/omission> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/omission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/omission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lawd.info/ontology/transposition> <http://www.w3.org/2004/02/skos/core#broader> <http://lawd.info/ontology/variant> .
+<http://lawd.info/ontology/transposition> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lawd.info/ontology/readingScheme> .
+<http://lawd.info/ontology/transposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lawd.info/ontology/Reading> .
+<http://lawd.info/ontology/transposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://erlangen-crm.org/current/E33_Linguistic_Object> <http://www.w3.org/2002/07/owl#equivalentClass> <http://lawd.info/ontology/WrittenWork> .
+_:Bab987cafdcac15b794f7c1b3f5d45397 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lawd.info/ontology/Agent> .
+_:Bab987cafdcac15b794f7c1b3f5d45397 <http://www.w3.org/2002/07/owl#onProperty> <http://lawd.info/ontology/responsibleFor> .
+_:Bab987cafdcac15b794f7c1b3f5d45397 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B016212297e3210d4bcd383478b388a1a <http://www.w3.org/2002/07/owl#someValuesFrom> <http://lawd.info/ontology/Agent> .
+_:B016212297e3210d4bcd383478b388a1a <http://www.w3.org/2002/07/owl#onProperty> <http://lawd.info/ontology/responsibleFor> .
+_:B016212297e3210d4bcd383478b388a1a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

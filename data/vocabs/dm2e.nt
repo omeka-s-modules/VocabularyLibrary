@@ -1,0 +1,204 @@
+<http://onto.dm2e.eu/schemas/dm2e/Page> <http://www.w3.org/2000/01/rdf-schema#label> "Page" .
+<http://onto.dm2e.eu/schemas/dm2e/Page> <http://www.w3.org/2000/01/rdf-schema#comment> "One side of a sheet of paper. Can be part of another CHO, e.g. dm2e:Manuscript." .
+<http://onto.dm2e.eu/schemas/dm2e/Page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/support> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/support> <http://www.w3.org/2000/01/rdf-schema#label> "support" .
+<http://onto.dm2e.eu/schemas/dm2e/support> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/callNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://onto.dm2e.eu/schemas/dm2e/callNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/callNumber> <http://www.w3.org/2000/01/rdf-schema#label> "callNumber" .
+<http://onto.dm2e.eu/schemas/dm2e/callNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/callNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/holdingInstitution> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://onto.dm2e.eu/schemas/dm2e/holdingInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "holdingInstitution" .
+<http://onto.dm2e.eu/schemas/dm2e/holdingInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#ttl> <http://purl.org/dc/terms/FileFormat> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e/DataResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+<http://onto.dm2e.eu/schemas/dm2e/DataResource> <http://www.w3.org/2000/01/rdf-schema#label> "DataResource" .
+<http://onto.dm2e.eu/schemas/dm2e/DataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset that contains the RDF statements provided in via this data resource." .
+<http://onto.dm2e.eu/schemas/dm2e/DataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/DataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/scopeNote> <http://www.w3.org/2000/01/rdf-schema#label> "scopeNote" .
+<http://onto.dm2e.eu/schemas/dm2e/scopeNote> <http://www.w3.org/2000/01/rdf-schema#comment> "This property describes the dm2e-specific usage of the resource." .
+<http://onto.dm2e.eu/schemas/dm2e/scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/cover> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/cover> <http://www.w3.org/2000/01/rdf-schema#label> "cover" .
+<http://onto.dm2e.eu/schemas/dm2e/cover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/Poster> <http://www.w3.org/2000/01/rdf-schema#label> "Poster" .
+<http://onto.dm2e.eu/schemas/dm2e/Poster> <http://www.w3.org/2000/01/rdf-schema#comment> "ProvidedCHO of type poster. Basically any piece of printed paper (often on a large sheet) that can be attached to a wall. dm2e:Poster does also include, but is not restricted to, conference posters." .
+<http://onto.dm2e.eu/schemas/dm2e/Poster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Poster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection" .
+<http://onto.dm2e.eu/schemas/dm2e/Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "The collection of CHOs as provided by a data provider." .
+<http://onto.dm2e.eu/schemas/dm2e/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document" .
+<http://onto.dm2e.eu/schemas/dm2e/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "ProvidedCHO of type document. Unlike foaf:Document, dm2e:Document refers to a physical document." .
+<http://onto.dm2e.eu/schemas/dm2e/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/artist> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/creator> .
+<http://onto.dm2e.eu/schemas/dm2e/artist> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/artist> <http://www.w3.org/2000/01/rdf-schema#label> "artist" .
+<http://onto.dm2e.eu/schemas/dm2e/artist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/writer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/creator> .
+<http://onto.dm2e.eu/schemas/dm2e/writer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/writer> <http://www.w3.org/2000/01/rdf-schema#label> "writer" .
+<http://onto.dm2e.eu/schemas/dm2e/writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/subtitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<http://onto.dm2e.eu/schemas/dm2e/subtitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/subtitle> <http://www.w3.org/2000/01/rdf-schema#label> "subtitle" .
+<http://onto.dm2e.eu/schemas/dm2e/subtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/subtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/sponsor> <http://www.w3.org/2000/01/rdf-schema#label> "sponsor" .
+<http://onto.dm2e.eu/schemas/dm2e/sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/principal> <http://www.w3.org/2000/01/rdf-schema#label> "principal" .
+<http://onto.dm2e.eu/schemas/dm2e/principal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/2000/01/rdf-schema#label> "explicit" .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "Final words of a manuscript. A language tag in ISO 639-2 should be added to the Literal." .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/elements/1.1/creator> <http://onto.dm2e.eu/schemas/dm2e#s.hennicke> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e.html> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/partOf> <http://onto.dm2e.eu> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/elements/1.1/creator> <http://onto.dm2e.eu/schemas/dm2e#JIwanowa> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/elements/1.1/creator> <http://onto.dm2e.eu/schemas/dm2e#Evelyn> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://onto.dm2e.eu/schemas/dm2e/" .
+<http://onto.dm2e.eu/schemas/dm2e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/publisher> "http://onto.dm2e.eu/schemas/dm2e#School%20for%20Library%20and%20Information%20Science" .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/title> "DM2E model" .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dm2e" .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/created> "2015-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/elements/1.1/creator> <http://onto.dm2e.eu/schemas/dm2e#konstantin> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/modified> "2015-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://onto.dm2e.eu/schemas/dm2e> <http://purl.org/dc/terms/description> "The DM2E model is a specialisation of the Europeana Data Model (EDM) and can be used for the description of manuscripts in the cultural heritage domain." .
+<http://onto.dm2e.eu/schemas/dm2e/levelOfHierarchy> <http://www.w3.org/2000/01/rdf-schema#label> "levelOfHierarchy" .
+<http://onto.dm2e.eu/schemas/dm2e/levelOfHierarchy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#Evelyn> <http://xmlns.com/foaf/0.1/name> "Evelyn Dröge" .
+<http://onto.dm2e.eu/schemas/dm2e#Evelyn> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e#Evelyn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/printedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/spatial> .
+<http://onto.dm2e.eu/schemas/dm2e/printedAt> <http://www.w3.org/2000/01/rdf-schema#label> "printed at" .
+<http://onto.dm2e.eu/schemas/dm2e/printedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/shelfmarkLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/shelfmarkLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/shelfmarkLocation> <http://www.w3.org/2000/01/rdf-schema#label> "shelfmarkLocation" .
+<http://onto.dm2e.eu/schemas/dm2e/shelfmarkLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/shelfmarkLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/hasAnnotatableVersionAt> <http://www.w3.org/2000/01/rdf-schema#label> "hasAnnotatableVersionAt" .
+<http://onto.dm2e.eu/schemas/dm2e/hasAnnotatableVersionAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/File> <http://www.w3.org/2000/01/rdf-schema#label> "File" .
+<http://onto.dm2e.eu/schemas/dm2e/File> <http://www.w3.org/2000/01/rdf-schema#comment> "Archival Item." .
+<http://onto.dm2e.eu/schemas/dm2e/File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/composer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/creator> .
+<http://onto.dm2e.eu/schemas/dm2e/composer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/composer> <http://www.w3.org/2000/01/rdf-schema#label> "composer" .
+<http://onto.dm2e.eu/schemas/dm2e/composer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/previousOwner> <http://www.w3.org/2000/01/rdf-schema#label> "previous owner" .
+<http://onto.dm2e.eu/schemas/dm2e/previousOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/displayLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://onto.dm2e.eu/schemas/dm2e/displayLevel> <http://www.w3.org/2000/01/rdf-schema#label> "displayLevel" .
+<http://onto.dm2e.eu/schemas/dm2e/displayLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/displayLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e#IBI> <http://xmlns.com/foaf/0.1/name> "IBI" .
+<http://onto.dm2e.eu/schemas/dm2e#IBI> <http://xmlns.com/foaf/0.1/member> <http://onto.dm2e.eu/schemas/dm2e#s.hennicke> .
+<http://onto.dm2e.eu/schemas/dm2e#IBI> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e#IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Agent> .
+<http://onto.dm2e.eu/schemas/dm2e#JIwanowa> <http://xmlns.com/foaf/0.1/name> "Julia Iwanowa" .
+<http://onto.dm2e.eu/schemas/dm2e#JIwanowa> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e#JIwanowa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/modeOfAcquisition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/provenance> .
+<http://onto.dm2e.eu/schemas/dm2e/modeOfAcquisition> <http://www.w3.org/2000/01/rdf-schema#label> "modeOfAcquisition" .
+<http://onto.dm2e.eu/schemas/dm2e/modeOfAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/2000/01/rdf-schema#label> "incipit" .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/2000/01/rdf-schema#comment> "Opening words of a manuscript. A language tag in ISO 639-2 should be added to the Literal." .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/incipit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/illustration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/illustration> <http://www.w3.org/2000/01/rdf-schema#label> "illustration" .
+<http://onto.dm2e.eu/schemas/dm2e/illustration> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic description of illustrations in the CHO." .
+<http://onto.dm2e.eu/schemas/dm2e/illustration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#rdf> <http://purl.org/dc/terms/FileFormat> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e/owner> <http://www.w3.org/2000/01/rdf-schema#label> "owner" .
+<http://onto.dm2e.eu/schemas/dm2e/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#School%20for%20Library%20and%20Information%20Science> <http://xmlns.com/foaf/0.1/name> "School for Library and Information Science" .
+<http://onto.dm2e.eu/schemas/dm2e#School%20for%20Library%20and%20Information%20Science> <http://xmlns.com/foaf/0.1/member> <http://onto.dm2e.eu/schemas/dm2e#JIwanowa> .
+<http://onto.dm2e.eu/schemas/dm2e#School%20for%20Library%20and%20Information%20Science> <http://xmlns.com/foaf/0.1/homepage> <http://www.ibi.hu-berlin.de> .
+<http://onto.dm2e.eu/schemas/dm2e#School%20for%20Library%20and%20Information%20Science> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Agent> .
+<http://onto.dm2e.eu/schemas/dm2e/portrayed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://onto.dm2e.eu/schemas/dm2e/mentioned> .
+<http://onto.dm2e.eu/schemas/dm2e/portrayed> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/portrayed> <http://www.w3.org/2000/01/rdf-schema#label> "portrayed" .
+<http://onto.dm2e.eu/schemas/dm2e/portrayed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/watermark> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+<http://onto.dm2e.eu/schemas/dm2e/watermark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/watermark> <http://www.w3.org/2000/01/rdf-schema#label> "watermark" .
+<http://onto.dm2e.eu/schemas/dm2e/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAreaDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/extent> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAreaDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAreaDimension> <http://www.w3.org/2000/01/rdf-schema#label> "written area dimension" .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAreaDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAreaDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/copyist> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/copyist> <http://www.w3.org/2000/01/rdf-schema#label> "copyist" .
+<http://onto.dm2e.eu/schemas/dm2e/copyist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#konstantin> <http://xmlns.com/foaf/0.1/name> "Konstantin Baierer" .
+<http://onto.dm2e.eu/schemas/dm2e#konstantin> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e#konstantin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/publishedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/spatial> .
+<http://onto.dm2e.eu/schemas/dm2e/publishedAt> <http://www.w3.org/2000/01/rdf-schema#label> "published at" .
+<http://onto.dm2e.eu/schemas/dm2e/publishedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/Photo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Image> .
+<http://onto.dm2e.eu/schemas/dm2e/Photo> <http://www.w3.org/2000/01/rdf-schema#label> "Photo" .
+<http://onto.dm2e.eu/schemas/dm2e/Photo> <http://www.w3.org/2000/01/rdf-schema#comment> "ProvidedCHO of type photo." .
+<http://onto.dm2e.eu/schemas/dm2e/Photo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Photo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment" .
+<http://onto.dm2e.eu/schemas/dm2e/Fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical fragment of a document, e.g. a collection of pages of a manuscript." .
+<http://onto.dm2e.eu/schemas/dm2e/Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/painter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
+<http://onto.dm2e.eu/schemas/dm2e/painter> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/painter> <http://www.w3.org/2000/01/rdf-schema#label> "painter" .
+<http://onto.dm2e.eu/schemas/dm2e/painter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e#s.hennicke> <http://xmlns.com/foaf/0.1/name> "Steffen Hennicke" .
+<http://onto.dm2e.eu/schemas/dm2e#s.hennicke> <http://xmlns.com/foaf/0.1/homepage> <http://onto.dm2e.eu/schemas/dm2e> .
+<http://onto.dm2e.eu/schemas/dm2e#s.hennicke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/Manuscript> <http://www.w3.org/2000/01/rdf-schema#label> "Manuscript" .
+<http://onto.dm2e.eu/schemas/dm2e/Manuscript> <http://www.w3.org/2000/01/rdf-schema#comment> "ProvidedCHO of type manuscript, e.g. Wittgensteins brown book. Not equivalent to bibo:Manuscript. Not equivalent to bibo:Manuscript." .
+<http://onto.dm2e.eu/schemas/dm2e/Manuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Manuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Paragraph> <http://www.w3.org/2000/01/rdf-schema#label> "Paragraph" .
+<http://onto.dm2e.eu/schemas/dm2e/Paragraph> <http://www.w3.org/2000/01/rdf-schema#comment> "ProvidedCHO of type paragraph. Can be part of another (textual) CHO, e.g. dm2e:Manuscript." .
+<http://onto.dm2e.eu/schemas/dm2e/Paragraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Paragraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work" .
+<http://onto.dm2e.eu/schemas/dm2e/Work> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-physical piece of work of an agent, e.g. the theoretical concept of a manuscript." .
+<http://onto.dm2e.eu/schemas/dm2e/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://onto.dm2e.eu/schemas/dm2e/mentioned> <http://www.w3.org/2000/01/rdf-schema#label> "mentioned" .
+<http://onto.dm2e.eu/schemas/dm2e/mentioned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/genre> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/type> .
+<http://onto.dm2e.eu/schemas/dm2e/genre> <http://www.w3.org/2000/01/rdf-schema#label> "genre" .
+<http://onto.dm2e.eu/schemas/dm2e/genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/refersTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/references> .
+<http://onto.dm2e.eu/schemas/dm2e/refersTo> <http://www.w3.org/2000/01/rdf-schema#label> "refers to" .
+<http://onto.dm2e.eu/schemas/dm2e/refersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/honoree> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://onto.dm2e.eu/schemas/dm2e/honoree> <http://www.w3.org/2000/01/rdf-schema#label> "honoree" .
+<http://onto.dm2e.eu/schemas/dm2e/honoree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/pageDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/extent> .
+<http://onto.dm2e.eu/schemas/dm2e/pageDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://onto.dm2e.eu/schemas/dm2e/pageDimension> <http://www.w3.org/2000/01/rdf-schema#label> "page dimension" .
+<http://onto.dm2e.eu/schemas/dm2e/pageDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://onto.dm2e.eu/schemas/dm2e/pageDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/spatial> .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAt> <http://www.w3.org/2000/01/rdf-schema#label> "written at" .
+<http://onto.dm2e.eu/schemas/dm2e/writtenAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

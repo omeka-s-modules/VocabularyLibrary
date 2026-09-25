@@ -1,0 +1,1593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY bibo "http://purl.org/ontology/bibo/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY txn "http://lod.taxonconcept.org/ontology/txn.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY status "http://purl.org/ontology/bibo/status/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY schema "http://schemas.talis.com/2005/address/schema#" >
+    <!ENTITY ns "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY dbo "http://dbpedia.org/ontology/" >
+    <!ENTITY rdam "http://rdaregistry.info/Elements/m/" >
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+ 
+<rdf:Description rdf:about="http://data.persee.fr/ontology/persee-ontology/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Ontology for Persee stuff.</rdfs:label>
+    <dc:description xml:lang="en">Ontology Persee stuff.</dc:description>
+    <vs:term_status>stable</vs:term_status>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-12</dc:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-16</dcterms:modified>
+    <owl:versionInfo>http://data.persee.fr/ontology/persee-ontology/1.4/</owl:versionInfo>
+    <dc:creator>Viviane Boulétreau (Viviane.Bouletreau@persee.fr)</dc:creator>
+    <rdfs:comment xml:lang="en">2015-12-12 - draft version</rdfs:comment>
+    <rdfs:comment xml:lang="en">2016-02-09 - addition document typology</rdfs:comment>
+    <rdfs:comment xml:lang="en">2016-03-12 - Release 1.0 (data.persee.fr first run)</rdfs:comment>
+    <rdfs:comment xml:lang="en">2016-05-06 - Release 1.1 - addition illustration typology</rdfs:comment>
+    <rdfs:comment xml:lang="en">2016-09-22 - Release 1.1.1 - minor changes (correspondences, collected document management)</rdfs:comment>
+    <rdfs:comment xml:lang="en">2017-03-17 - Release 1.1.2 - typos</rdfs:comment>
+    <rdfs:comment xml:lang="en">2017-03-17 - Release 1.1.3 - dropped draft evolutions</rdfs:comment>
+    <rdfs:comment xml:lang="en">2017-09-25 - Release 1.1.4 - bibo:Image subcategories management</rdfs:comment>
+    <rdfs:comment xml:lang="en">2018-01-20 - Release 1.1.5 - management of entities from bio (ranks from taxonConcept)</rdfs:comment>
+    <rdfs:comment xml:lang="en">2018-05-18 - Release 1.2 - management of correspondences (typology and properties)</rdfs:comment>
+    <rdfs:comment xml:lang="en">2020-08-26 - Release 1.3 - management of typologies and properties devoted to the National Assembly works and Education History projects</rdfs:comment>
+    <rdfs:comment xml:lang="en">2024-09-26 - Release 1.4 - addition of typologies and properties</rdfs:comment>
+</rdf:Description>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+<!-- Typologie des documents Persée -->
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Article -->
+    
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Article">
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+        <rdfs:label xml:lang="fr">Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <owl:equivalentClass rdf:resource="&bibo;Article"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">A scientific written composition, forming an independent part of a publication, as a journal, proceedings...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Unité formant un élément distinct et faisant partie d’une publication plus large (numéro, actes, antologie, etc). Sont qualifiés d’article les unités documentaires suivantes : article scientifique, échanges de réflexions d’un numéro à l’autre ou au sein d’un même numéro, droit de réponses, interview, portrait, biographie ou hommage... </rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Review -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Review">
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+        <rdfs:label xml:lang="fr">Compte-rendu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Review of a book, publication, exhibition</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Compte rendus d'ouvrage, de publication, d’exposition... </rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Editorial -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Editorial">
+        <rdfs:label xml:lang="en">Editorial</rdfs:label>
+        <rdfs:label xml:lang="fr">Éditorial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Document originating from the board of the journal and defining a general approach</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Document émanant de la rédaction de la revue et définissant une orientation générale</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Liminary -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Liminary">
+        <rdfs:label xml:lang="en">Liminary</rdfs:label>
+        <rdfs:label xml:lang="fr">Liminaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Introductory document of an issue or book</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Document liminaire d’un numéro, d’un dossier ou d’un ouvrage</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/SourceData -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/SourceData">
+        <rdfs:label xml:lang="en">Sources and primary data</rdfs:label>
+        <rdfs:label xml:lang="fr">Sources et données primaires</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Elements used as a basis for research (statistical data, archives, survey results, etc.), tools, methods</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Eléments servant de base à la recherche (données statistiques, archives, résultats d’enquêtes...), outils, méthodes</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/CriticalNote -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/CriticalNote">
+        <rdfs:label xml:lang="en">Critical note</rdfs:label>
+        <rdfs:label xml:lang="fr">Note critique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Extensive analysis of sources, logical value, content of one or more publications</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Analyse poussée des sources, de la valeur logique, du contenu d’une ou de plusieurs publications</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Abstracts -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Abstracts">
+        <rdfs:label xml:lang="en">Abstracts</rdfs:label>
+        <rdfs:label xml:lang="fr">Résumés</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Section summarizing the articles published in the issue / book. They can be in several languages</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Section regroupant les résumés des articles publiés dans le numéro/l'ouvrage. Ils peuvent être en plusieurs langues</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/TableDoc -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/TableDoc">
+        <rdfs:label xml:lang="en">Table and index</rdfs:label>
+        <rdfs:label xml:lang="fr">Tables et index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Documents such as tables of contents, of illustrations, index and alphabetical table of authors, subjects treated ...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Documents tels que tables des matières, des illustrations, index et table alphabétique d’auteurs, de sujets traités... </rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/IllustrationDoc -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/IllustrationDoc">
+        <rdfs:label xml:lang="en">Illustration document</rdfs:label>
+        <rdfs:label xml:lang="fr">Illustration document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Document or group of document of a graphic nature. Maps, reproduction of paintings, sculptures, photographs, buildings ...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Document ou groupe de document de nature graphique. Cartes, reproduction de peintures, de sculptures, de photographies, de bâtiments...</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/BibliographicalNote -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/BibliographicalNote">
+        <rdfs:label xml:lang="en">Bibliographical note(s)</rdfs:label>
+        <rdfs:label xml:lang="fr">Note(s) bibliographique(s)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Information or group of information of a bibliographical nature. Short publications reviews</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Information ou groupe d'informations de nature bibliographiques. Recensions courtes de publications</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/BiographicalNote -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/BiographicalNote">
+        <rdfs:label xml:lang="en">Biographical note</rdfs:label>
+        <rdfs:label xml:lang="fr">Note biographique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Biographical note, portrait, obituary, ...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Note biographique, portrait, nécrologie,...</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/ReceivedBooks -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/ReceivedBooks">
+        <rdfs:label xml:lang="en">Received books</rdfs:label>
+        <rdfs:label xml:lang="fr">Ouvrages reçus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">List of books received by the editorial staff</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Liste d'ouvrages reçus par la rédaction de la revue</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Appendix -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Appendix">
+        <rdfs:label xml:lang="en">Appendix</rdfs:label>
+        <rdfs:label xml:lang="fr">Annexe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Supplementary/Accompanying document of an issue or book</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Document annexe d’un numéro, d’un dossier ou d’un ouvrage</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Erratum -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Erratum">
+        <rdfs:label xml:lang="en">Erratum</rdfs:label>
+        <rdfs:label xml:lang="fr">Erratum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Correction of a published text</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Faute signalée dans un ouvrage imprimé</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Addendum -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Addendum">
+        <rdfs:label xml:lang="en">Addendum</rdfs:label>
+        <rdfs:label xml:lang="fr">Addendum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Addition made to a document by its author subsequent to its printing or publication</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Ajout fait à un document après son impression ou sa publication</rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Chronicle -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Chronicle">
+        <rdfs:label xml:lang="en">Chronicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Chronique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">A written account of events and when they happened, ordered by time</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Récit des faits et événements classés par ordre chronologique</rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/OtherDocument -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/OtherDocument">
+        <rdfs:label xml:lang="en">Other type of document</rdfs:label>
+        <rdfs:label xml:lang="fr">Autre type de document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Used to qualify any documentary unit not qualified in the Persee typology</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Utilisé pour qualifier toute unité documentaire non qualifiable dans la typologie Persée</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Correspondence -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Correspondence">
+        <rdfs:label xml:lang="en">Correspondence</rdfs:label>
+        <rdfs:label xml:lang="fr">Correspondance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+		<owl:equivalentClass rdf:resource="&bibo;Letter"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Letter, piece of correspondence</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Lettre, extrait de correspondance</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Grievance -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Grievance">
+        <rdfs:label xml:lang="en">Grievance(s)</rdfs:label>
+        <rdfs:label xml:lang="fr">Doléance(s)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Grievance or grievance book</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Doléance ou cahier de doléances. Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/AssemblyWork -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/AssemblyWork">
+        <rdfs:label xml:lang="en">Work of the assembly</rdfs:label>
+        <rdfs:label xml:lang="fr">Travaux de l'assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Questions, discussions, votes, etc. of an assembly. Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Déroulement de séances, questions, discussions, votes, etc. Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/LawText -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/LawText">
+        <rdfs:label xml:lang="en">Law text</rdfs:label>
+        <rdfs:label xml:lang="fr">Texte législatif</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Decrees, laws and orders. Published or draft releases</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Décrets, lois et arrêtés, projets de lois et décrets, etc.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/NominativeDecision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/NominativeDecision">
+        <rdfs:label xml:lang="en">Nominative decision</rdfs:label>
+        <rdfs:label xml:lang="fr">Mesure nominative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="fr">Mesure nominative : nomination, promotion, révocation...</rdfs:comment>
+        <rdfs:comment xml:lang="en">Nominative decision : nomination, promotion, radiation,...</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/AcademicProgram -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/AcademicProgram">
+        <rdfs:label xml:lang="en">Academic program</rdfs:label>
+        <rdfs:label xml:lang="fr">Programme académique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Any piece of document defining the academic program</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Tout document définissant le programme académique</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/DictionaryEntry -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/DictionaryEntry">
+        <rdfs:label xml:lang="en">Dictionary entry</rdfs:label>
+        <rdfs:label xml:lang="fr">Entrée de dictionnaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Dictionary entry</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Entrée de dictionnaire ou d'encyclopédie</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Report -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Report">
+        <rdfs:label xml:lang="en">Report</rdfs:label>
+        <rdfs:label xml:lang="fr">Rapport</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Document"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Report of an excavation, a study,...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Rapport de fouille, de commission, d'étude, etc.</rdfs:comment>
+    </owl:Class>
+
+
+<!-- Specific sub-types for Education History -->
+<!-- Nominative decisions -->
+    <!-- http://data.persee.fr/ontology/persee-ontology/Revocation -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Revocation">
+        <rdfs:label xml:lang="en">Revocation</rdfs:label>
+        <rdfs:label xml:lang="fr">Révocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/NominativeDecision"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/StrikeOff -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/StrikeOff">
+        <rdfs:label xml:lang="en">Strike off</rdfs:label>
+        <rdfs:label xml:lang="fr">Radiation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/NominativeDecision"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Convocation -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Convocation">
+        <rdfs:label xml:lang="en">Convocation</rdfs:label>
+        <rdfs:label xml:lang="fr">Convocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/NominativeDecision"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>    
+
+
+<!-- Law Text -->
+	<!-- http://data.persee.fr/ontology/persee-ontology/Circular -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Circular">
+        <rdfs:label xml:lang="en">Circular</rdfs:label>
+        <rdfs:label xml:lang="fr">Circulaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Decision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Decision">
+        <rdfs:label xml:lang="en">Decision</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrêté</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Ordinance -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Ordinance">
+        <rdfs:label xml:lang="en">Ordinance</rdfs:label>
+        <rdfs:label xml:lang="fr">Ordonnance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Instruction -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Instruction">
+        <rdfs:label xml:lang="en">Instruction, directive</rdfs:label>
+        <rdfs:label xml:lang="fr">Instruction, directive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Regulation -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Regulation">
+        <rdfs:label xml:lang="en">Regulation</rdfs:label>
+        <rdfs:label xml:lang="fr">Règlement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+<!-- Academic program -->
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/BookAdmission -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/BookAdmission">
+        <rdfs:label xml:lang="en">Book admission</rdfs:label>
+        <rdfs:label xml:lang="fr">Admission d'ouvrages</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AcademicProgram"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/TeachingMaterial -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/TeachingMaterial">
+        <rdfs:label xml:lang="en">Teaching material</rdfs:label>
+        <rdfs:label xml:lang="fr">Matériel pédagogique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AcademicProgram"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the education history project</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre au projet Bibliothèque Historique de l'Education.</rdfs:comment>
+    </owl:Class>
+
+
+
+
+
+
+<!-- Specific sub-types for parliamentary archives -->
+<!-- Assembly Works -->
+    <!-- http://data.persee.fr/ontology/persee-ontology/StatementsToAssembly -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/StatementsToAssembly">
+        <rdfs:label xml:lang="en">Statements to the Assembly</rdfs:label>
+        <rdfs:label xml:lang="fr">Adresse, pétition et lettre envoyée à l'Assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/StatementsOfAssembly -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/KingsCouncilDecision">
+        <rdfs:label xml:lang="en">Statements of the Assembly</rdfs:label>
+        <rdfs:label xml:lang="fr">Déclaration et adresse de l'Assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Amendment -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Amendment">
+        <rdfs:label xml:lang="en">Amendment</rdfs:label>
+        <rdfs:label xml:lang="fr">Amendement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/RollCallVote -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/RollCallVote">
+        <rdfs:label xml:lang="en">Roll-call vote</rdfs:label>
+        <rdfs:label xml:lang="fr">Appel nominal de question</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/KingsCouncilDecision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/KingsCouncilDecision">
+        <rdfs:label xml:lang="en">King's Council Decision</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrêt, correspondance et discours du roi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/LeaveRequest -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/LeaveRequest">
+        <rdfs:label xml:lang="en">Leave request</rdfs:label>
+        <rdfs:label xml:lang="fr">Demande de congés</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/MinistersSpeech -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/MinistersSpeech">
+        <rdfs:label xml:lang="en">Minister's speech</rdfs:label>
+        <rdfs:label xml:lang="fr">Discours et production des ministres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+   
+    <!-- http://data.persee.fr/ontology/persee-ontology/AssemblyMeetings -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/AssemblyMeetings">
+        <rdfs:label xml:lang="en">Conduct of the Assembly Meetings</rdfs:label>
+        <rdfs:label xml:lang="fr">Déroulement des séances de l'Assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Speech -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Speech">
+        <rdfs:label xml:lang="en">Deputations or citizens speech</rdfs:label>
+        <rdfs:label xml:lang="fr">Discours de députations ou de citoyens</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/UnsaidSpeech -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/UnsaidSpeech">
+        <rdfs:label xml:lang="en">Unsaid speech</rdfs:label>
+        <rdfs:label xml:lang="fr">Discours non prononcé</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Debate -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Debate">
+        <rdfs:label xml:lang="en">Debate</rdfs:label>
+        <rdfs:label xml:lang="fr">Débat, discussion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/PatrioticDonation -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/PatrioticDonation">
+        <rdfs:label xml:lang="en">Patriotic donation and tributes</rdfs:label>
+        <rdfs:label xml:lang="fr">Don patriotique et hommage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/ComitteesElection -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/ComitteesElection">
+        <rdfs:label xml:lang="en">Election for comittees</rdfs:label>
+        <rdfs:label xml:lang="fr">Election et nominations aux fonctions de l'Assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/AccountsReview -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/AccountsReview">
+        <rdfs:label xml:lang="en">Review and accounts</rdfs:label>
+        <rdfs:label xml:lang="fr">Etat et comptes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Memorandum -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Memorandum">
+        <rdfs:label xml:lang="en">Memorandum</rdfs:label>
+        <rdfs:label xml:lang="fr">Mémoire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    <!-- http://data.persee.fr/ontology/persee-ontology/Motion -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Motion">
+        <rdfs:label xml:lang="en">Motion and point of order</rdfs:label>
+        <rdfs:label xml:lang="fr">Motion et motion d'ordre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Referral -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Referral">
+        <rdfs:label xml:lang="en">Referral</rdfs:label>
+        <rdfs:label xml:lang="fr">Renvoi aux comités</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/NewspaperExtract -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/NewspaperExtract">
+        <rdfs:label xml:lang="en">Newspaper extract</rdfs:label>
+        <rdfs:label xml:lang="fr">Extrait de journal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Account -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Account">
+        <rdfs:label xml:lang="en">Account</rdfs:label>
+        <rdfs:label xml:lang="fr">Compte</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/Letter -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Letter">
+        <rdfs:label xml:lang="en">Letter</rdfs:label>
+        <rdfs:label xml:lang="fr">Lettre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/AssemblyWork"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+<!-- Decrees, laws and orders -->
+    <!-- http://data.persee.fr/ontology/persee-ontology/LocalAssemblyDecision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/LocalAssemblyDecision">
+        <rdfs:label xml:lang="en">Local assembly decision</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrêté de collectivité</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/ComitteesDecision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/ComitteesDecision">
+        <rdfs:label xml:lang="en">Decision of the comittees and representations</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrêtés des comités et représentants en mission</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/AssemblyComitteesDecision -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/AssemblyComitteesDecision">
+        <rdfs:label xml:lang="en">Decision of the comittees of the National Assembly</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrêtés des comités de l'Assemblée</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://data.persee.fr/ontology/persee-ontology/LegislativeDecree -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/LegislativeDecree">
+        <rdfs:label xml:lang="en">Legislative decree</rdfs:label>
+        <rdfs:label xml:lang="fr">Décret</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Deliberation -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Deliberation">
+        <rdfs:label xml:lang="en">Local authorities deliberation and minutes</rdfs:label>
+        <rdfs:label xml:lang="fr">Délibération ou procès verbal de collectivité</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/MandatoryInstruction -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/MandatoryInstruction">
+        <rdfs:label xml:lang="en">Mandatory instruction</rdfs:label>
+        <rdfs:label xml:lang="fr">Instruction, ordre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>    
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/Law -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Law">
+        <rdfs:label xml:lang="en">Law</rdfs:label>
+        <rdfs:label xml:lang="fr">Loi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>    
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/DraftLaw -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/DraftLaw">
+        <rdfs:label xml:lang="en">Draft law</rdfs:label>
+        <rdfs:label xml:lang="fr">Projet de loi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>    
+    
+    <!-- http://data.persee.fr/ontology/persee-ontology/DraftDecree -->
+    <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/DraftDecree">
+        <rdfs:label xml:lang="en">Draft decree</rdfs:label>
+        <rdfs:label xml:lang="fr">Projet de décret</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/LawText"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI"
+            >http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Typology used for the parliamentary archives</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Typlogie documentaire propre à la collection des archives parlementaires.</rdfs:comment>
+    </owl:Class>
+    
+
+<!-- Typologie des ouvrages Persée -->
+
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Issue -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Issue">
+        <rdfs:label xml:lang="en">Issue</rdfs:label>
+        <rdfs:label xml:lang="fr">Numéro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Something that is printed or published and distributed, esp. a given number of a periodical</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Volume publié dans le cadre d'une revue</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Proceedings -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Proceedings">
+        <rdfs:label xml:lang="en">Proceedings</rdfs:label>
+        <rdfs:label xml:lang="fr">Actes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Proceedings"/>
+       <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Conference proceedings</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Actes de conférence</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Table -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Table">
+        <rdfs:label xml:lang="en">Table Issue</rdfs:label>
+        <rdfs:label xml:lang="fr">Volume de tables</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Table issue</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Volume de tables</rdfs:comment>
+    </owl:Class>
+
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Index -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Index">
+        <rdfs:label xml:lang="en">Index issue</rdfs:label>
+        <rdfs:label xml:lang="fr">Volume d'index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Index volume</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Volume d'index</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Catalog -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Catalog">
+        <rdfs:label xml:lang="en">Catalog</rdfs:label>
+        <rdfs:label xml:lang="fr">Catalogue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Inventory classified according to a given order (catalog of exhibition, inventory of excavation, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Inventaire classé selon un ordre déterminé (catalogue d'exposition, inventaire de fouille, etc)</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/SpecialIssue -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/SpecialIssue">
+        <rdfs:label xml:lang="en">Special issue</rdfs:label>
+        <rdfs:label xml:lang="fr">Hors-série</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Special issue published within a periodical publication</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Numéro spécial publié dans une série à caractère périodique</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Monograph -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Monograph">
+        <rdfs:label xml:lang="en">Monograph</rdfs:label>
+        <rdfs:label xml:lang="fr">Monographie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Detailed study on a special point of history, science, about a person, his life, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Étude détaillée sur un point spécial d'histoire, de science, sur une personne, sa vie, etc.</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Bibliography -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Bibliography">
+        <rdfs:label xml:lang="en">Bibliography</rdfs:label>
+        <rdfs:label xml:lang="fr">Bibliographie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Volume constituted mainly of bibliographic notes</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Volume principalement constitué de notes bibliographiques</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/SupplementIssue -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/SupplementIssue">
+        <rdfs:label xml:lang="en">Supplement issue</rdfs:label>
+        <rdfs:label xml:lang="fr">Numéro supplément</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Issue"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Volume of supplement published in addition to the regular issues of a periodical</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Volume de supplément publié en complément des numéros normaux d'une publication périodique</rdfs:comment>
+    </owl:Class>
+
+	<!-- sous-classes pour les Book -->
+   <!-- http://data.persee.fr/ontology/persee-ontology/Anthology -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Anthology">
+        <rdfs:label xml:lang="en">Anthology</rdfs:label>
+        <rdfs:label xml:lang="fr">Anthologie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Collection of selected / collected documents around a theme or author</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Recueil de documents choisis rassemblés autour d'un thème ou d'un auteur</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Blends -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Blends">
+        <rdfs:label xml:lang="en">Blends</rdfs:label>
+        <rdfs:label xml:lang="fr">Mélanges</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Collection of documents produced and / or collected in tribute to a person</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Recueil de documents produits et/ou rassemblés en hommage à une personne</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Atlas -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Atlas">
+        <rdfs:label xml:lang="en">Atlas</rdfs:label>
+        <rdfs:label xml:lang="fr">Atlas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Ordered collection of documents and maps designed to represent a given space and to present one or more themes</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Recueil ordonné de documents et de cartes, conçu pour représenter un espace donné et exposer un ou plusieurs thèmes</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/ArcheologicalChronicle -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/ArcheologicalChronicle">
+        <rdfs:label xml:lang="en">Archeological chronicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Chronique de fouille</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Chronicles of archaeological excavations</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Chroniques de fouilles archéologiques</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/CriticalEdition -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/CriticalEdition">
+        <rdfs:label xml:lang="en">Critical edition</rdfs:label>
+        <rdfs:label xml:lang="fr">Edition critique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Critical edition of texts</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Edition critique de textes</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Dictionary -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Dictionary">
+        <rdfs:label xml:lang="en">Dictionary</rdfs:label>
+        <rdfs:label xml:lang="fr">Dictionnaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Dictionary</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Dictionnaire</rdfs:comment>
+    </owl:Class>
+
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Thesis -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Thesis">
+        <rdfs:label xml:lang="en">Thesis</rdfs:label>
+        <rdfs:label xml:lang="fr">Thèse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Thesis or dissertation</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Thèse</rdfs:comment>
+    </owl:Class>
+
+   <!-- http://data.persee.fr/ontology/persee-ontology/Textbook -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Textbook">
+        <rdfs:label xml:lang="en">Textbook</rdfs:label>
+        <rdfs:label xml:lang="fr">Manuel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Texbook</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Manuel</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Seminar -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Seminar">
+        <rdfs:label xml:lang="en">Seminar</rdfs:label>
+        <rdfs:label xml:lang="fr">Séminaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Proceedings"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Proceedings of a seminar (equivalent to conferences, but often without peer reviewing)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Actes d'un séminaire (équivalent d'une conférence, mais dont l'audience est moins ouverte et sans évaluation par les pairs)</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/CollectiveWork -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/CollectiveWork">
+        <rdfs:label xml:lang="en">Collective work</rdfs:label>
+        <rdfs:label xml:lang="fr">Ouvrage collectif</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+         <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Monograph whose parts may be attributed to different authors</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Monographie dont les parties peuvent être attribuées à des auteurs différents</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/MissionReport -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/MissionReport">
+        <rdfs:label xml:lang="en">Mission report</rdfs:label>
+        <rdfs:label xml:lang="fr">Rapport de mission</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Mission report</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Rapport de mission</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Correspondences -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Correspondences">
+        <rdfs:label xml:lang="en">Correspondences</rdfs:label>
+        <rdfs:label xml:lang="fr">Correspondances</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Collection of correspondences</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Recueil de correspondances</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/ResearchTopic -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/ResearchTopic">
+        <rdfs:label xml:lang="en">Research topic</rdfs:label>
+        <rdfs:label xml:lang="fr">Thème de recherche</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Book"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Collection of documents focusing on a research theme (eg. issued after a workshop)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Recueil de documents centrés sur un thème de recherche (en général, fruit de journées de travail ou workshop)</rdfs:comment>
+    </owl:Class>
+
+  <!-- typologie des illustrations -->
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Illustration -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Illustration">
+        <rdfs:label xml:lang="en">Illustration</rdfs:label>
+        <rdfs:label xml:lang="fr">Illustration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Illustration</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Illustration</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Map -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Map">
+        <rdfs:label xml:lang="en">Map</rdfs:label>
+        <rdfs:label xml:lang="fr">Carte</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Map</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Carte</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Plan -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Plan">
+        <rdfs:label xml:lang="en">Plan</rdfs:label>
+        <rdfs:label xml:lang="fr">Plan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Planar representation of a building, area, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Représentation 2D d'un bâtiment, d'un site, etc.</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Photography -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Photography">
+        <rdfs:label xml:lang="en">Photography</rdfs:label>
+        <rdfs:label xml:lang="fr">Photographie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Photography</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Photographie</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Plate -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Plate">
+        <rdfs:label xml:lang="en">Plate</rdfs:label>
+        <rdfs:label xml:lang="fr">Planche</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Page of illustrations</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Page regroupant des illustrations (généralement en dehors du texte)</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Drawing -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Drawing">
+        <rdfs:label xml:lang="en">Drawing</rdfs:label>
+        <rdfs:label xml:lang="fr">Dessin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Manual drawing</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Dessin</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Diagram -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Diagram">
+        <rdfs:label xml:lang="en">Diagram</rdfs:label>
+        <rdfs:label xml:lang="fr">Diagramme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Symbolic representation of information</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Représentation symbolique d'informations</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Graphic -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Drawing">
+        <rdfs:label xml:lang="en">Graphic</rdfs:label>
+        <rdfs:label xml:lang="fr">Graphique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Graphical representation of data</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Représentation graphique associée à des données</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/DataArray -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/DataArray">
+        <rdfs:label xml:lang="en">Array of data</rdfs:label>
+        <rdfs:label xml:lang="fr">Tableau de données</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Image of an array of data</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Image d'un tableau de données</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/OtherIllustration -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/OtherIllustration">
+        <rdfs:label xml:lang="en">Other illustration</rdfs:label>
+        <rdfs:label xml:lang="fr">Autre illustration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Image"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:comment xml:lang="en">Other type of illustration</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Autre type d'illustration</rdfs:comment>
+    </owl:Class>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/dateOfPrintPublication">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:label xml:lang="en">has date of print publication</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>stable</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Année de parution de la version imprimé du document dont est issu le document électonique</rdfs:comment>
+  </owl:DatatypeProperty>
+
+
+<owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/dateOfSession">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:label xml:lang="en">has date of session</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>stable</ns:term_status>
+    <rdfs:comment xml:lang="en">Date of the session when the content was presented</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Date de la séance au cours de laquel le discours/débat/etc a eu lieu (Archives parlementaires de la Révolution Française)</rdfs:comment>
+  </owl:DatatypeProperty>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    //                   BIODIVERSITY MANAGEMENT
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+	<!-- Classes : rangs -->
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSpecies">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSubspecies">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankGenus">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSubgenus">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSuperfamily">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankFamily">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSubfamily">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSuperorder">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankOrder">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSuborder">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankInfraorder">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSuperclass">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankClass">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSubclass">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSuperphylum">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankPhylum">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankSubphylum">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankKingdom">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankDomain">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankTribe">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#RankVariety">
+        <rdfs:subClassOf rdf:resource="&dbo;Species"/>
+   </owl:Class>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    //                   CORRESPONDENCE MANAGEMENT
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+	<!-- Classes : typologie documentaire -->
+
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Letter -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Letter">
+        <rdfs:label xml:lang="en">Letter</rdfs:label>
+        <rdfs:label xml:lang="fr">Lettre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Letter"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>draft</ns:term_status>
+        <rdfs:comment xml:lang="en">Letter, extract of correspondence</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Lettre, élément de correspondance</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Memo -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Memo">
+        <rdfs:label xml:lang="en">Memo</rdfs:label>
+        <rdfs:label xml:lang="fr">Mémo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Letter"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>draft</ns:term_status>
+        <rdfs:comment xml:lang="en">Memo</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Mémo (interne, diplomatique,...)</rdfs:comment>
+    </owl:Class>
+
+  <!-- http://data.persee.fr/ontology/persee-ontology/Note -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Note">
+        <rdfs:label xml:lang="en">Note</rdfs:label>
+        <rdfs:label xml:lang="fr">Note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Letter"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>draft</ns:term_status>
+        <rdfs:comment xml:lang="en">Note</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Note</rdfs:comment>
+    </owl:Class>
+  <!-- http://data.persee.fr/ontology/persee-ontology/Instruction -->
+   <owl:Class rdf:about="http://data.persee.fr/ontology/persee-ontology/Instruction">
+        <rdfs:label xml:lang="en">Instruction</rdfs:label>
+        <rdfs:label xml:lang="fr">Instruction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bibo;Letter"/>
+        <rdfs:subClassOf rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+        <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+        <ns:term_status>draft</ns:term_status>
+        <rdfs:comment xml:lang="en">Instruction, directive or order</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Instruction, directive, consigne, ordre</rdfs:comment>
+    </owl:Class>
+
+
+	<!-- propriétés : information relatives à la rédaction, l'envoi et la réception de la correspondance -->
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/sendingDate">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:label xml:lang="en">date of sending</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Date d'envoi d'une lettre</rdfs:comment>
+  </owl:DatatypeProperty>
+  
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/sendingPlace">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&dbo;Place"/>
+    <rdfs:label xml:lang="en">sending place</rdfs:label>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Lieu d'envoi d'une lettre</rdfs:comment>
+  </owl:DatatypeProperty>
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/writingDate">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:label xml:lang="en">date of writing</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Date de rédaction d'une lettre</rdfs:comment>
+  </owl:DatatypeProperty>
+  
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/writingPlace">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&dbo;Place"/>
+    <rdfs:label xml:lang="en">writing place</rdfs:label>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Lieu de rédaction</rdfs:comment>
+  </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/senderRole">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:label xml:lang="en">function of the sender</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dbo;personFunction"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en">Personal function of the sender</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Fonction de l'expéditeur</rdfs:comment>
+  </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/receiptDate">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:label xml:lang="en">date of receipt</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Date de réception d'une lettre</rdfs:comment>
+  </owl:DatatypeProperty>
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/receiptPlace">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&dbo;Place"/>
+    <rdfs:label xml:lang="en">receipt place</rdfs:label>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Lieu de réception</rdfs:comment>
+  </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/recipientRole">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:label xml:lang="en">function of the recipient</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dbo;personFunction"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Fonction du destinataire</rdfs:comment>
+  </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="http://data.persee.fr/ontology/persee-ontology/answers">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:range rdf:resource="http://data.persee.fr/ontology/persee-ontology/Correspondence"/>
+    <rdfs:label xml:lang="en">answers to</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="&dbo;personFunction"/>
+    <rdfs:isDefinedBy>http://data.persee.fr/ontology/persee-ontology/</rdfs:isDefinedBy>
+    <ns:term_status>draft</ns:term_status>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="fr">Notion de réponse liant deux courriers</rdfs:comment>
+  </owl:DatatypeProperty>
+
+
+<!-- Complément d'information sur modèles extérieurs -->
+<!-- documentation marcrel (http://id.loc.gov/vocabulary/relators.html) -->
+
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/aut">
+	<rdfs:label xml:lang="en">Author</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/pht">
+	<rdfs:label xml:lang="en">Photographer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/trl">
+	<rdfs:label xml:lang="en">Translator</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/lse">
+	<rdfs:label xml:lang="en">Licensee</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/pbl">
+	<rdfs:label xml:lang="en">Publisher</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/dto">
+	<rdfs:label xml:lang="en">Dedicator</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/rev">
+	<rdfs:label xml:lang="en">Reviewer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ctg">
+	<rdfs:label xml:lang="en">Cartographer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/sad">
+	<rdfs:label xml:lang="en">Scientific advisor</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/bkd">
+	<rdfs:label xml:lang="en">Book designer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/dub">
+	<rdfs:label xml:lang="en">Dubious author</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/adp">
+	<rdfs:label xml:lang="en">Adapter</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/edt">
+	<rdfs:label xml:lang="en">Editor</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ivr">
+	<rdfs:label xml:lang="en">Interviewer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/nrt">
+	<rdfs:label xml:lang="en">Narrator</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/act">
+	<rdfs:label xml:lang="en">Actor</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/pfr">
+	<rdfs:label xml:lang="en">Proofreader</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/aui">
+	<rdfs:label xml:lang="en">Author of introduction</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/res">
+	<rdfs:label xml:lang="en">Researcher</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/pbd">
+	<rdfs:label xml:lang="en">Publishing director</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ive">
+	<rdfs:label xml:lang="en">Interviewee</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/rcp">
+	<rdfs:label xml:lang="en">Recipient</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/rth">
+	<rdfs:label xml:lang="en">Research team head</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ill">
+	<rdfs:label xml:lang="en">Illustrator</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/cph">
+	<rdfs:label xml:lang="en">Copyright holder</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/sgn">
+	<rdfs:label xml:lang="en">Signer</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/aqt">
+	<rdfs:label xml:lang="en">Author in quotation</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ann">
+	<rdfs:label xml:lang="en">Annotator</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/oth">
+	<rdfs:label xml:lang="en">Other contributive role</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/aft">
+	<rdfs:label xml:lang="en">Author of afterwords</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/art">
+	<rdfs:label xml:lang="en">Artist</rdfs:label>
+</rdf:Description>
+
+
+</rdf:RDF>

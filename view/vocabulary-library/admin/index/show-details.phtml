@@ -1,0 +1,115 @@
+<?php
+$translate = $this->plugin('translate');
+$escape = $this->plugin('escapeHtml');
+$paragraphs = array_values(array_filter(explode("\n\n", (string) $entry['description']), 'strlen'));
+// About 200 characters of the description show, ending with a sentence where
+// one ends in time; the rest continues under Full description. A first
+// sentence much longer than that is cut at a word.
+$excerpt = null;
+$rest = [];
+if ($paragraphs) {
+    $sentences = preg_split('/(?<=[.!?])\s+(?=[\p{Lu}\p{N}"“(])/u', array_shift($paragraphs));
+    $excerpt = array_shift($sentences);
+    while ($sentences && mb_strlen($excerpt . ' ' . $sentences[0]) <= 200) {
+        $excerpt .= ' ' . array_shift($sentences);
+    }
+    if (mb_strlen($excerpt) > 250) {
+        $cut = mb_strrpos(mb_substr($excerpt, 0, 200), ' ') ?: 200;
+        array_unshift($sentences, '…' . ltrim(mb_substr($excerpt, $cut)));
+        $excerpt = rtrim(mb_substr($excerpt, 0, $cut)) . '…';
+    }
+    $rest = array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs);
+}
+$license = $entry['license'];
+// Publisher text is shown as text: HTML markup in some term comments is
+// removed, and everything else is escaped.
+$text = function ($value) use ($escape) {
+    $value = preg_replace(\VocabularyLibrary\Controller\Admin\IndexController::HTML_TAG, '', (string) $value);
+    return $escape(html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+};
+$terms = [
+    ['label' => $translate('Classes'), 'members' => $classes],
+    ['label' => $translate('Properties'), 'members' => $properties],
+];
+$file = basename($entry['file']);
+?>
+<h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($title); ?></h3>
+
+<div class="meta-group">
+    <h4><?php echo $translate('Status'); ?></h4>
+    <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true]); ?></div>
+</div>
+<?php if ($installed): ?>
+<div class="meta-group">
+    <h4><?php echo $translate('Vocabulary in Omeka'); ?></h4>
+    <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
+    <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
+</div>
+<?php endif; ?>
+<?php if ($excerpt !== null): ?>
+<div class="meta-group">
+    <h4><?php echo $translate('Description'); ?></h4>
+    <div class="value">
+        <?php echo $text($excerpt); ?>
+        <?php if ($rest): ?>
+        <div class="vocabulary-library-more">
+            <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
+            <div class="collapsible">
+                <?php foreach ($rest as $paragraph): ?>
+                <p><?php echo $text($paragraph); ?></p>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>
+<div class="meta-group">
+    <h4><?php echo $translate('Namespace URI'); ?></h4>
+    <div class="value"><?php echo $escape($entry['namespace']); ?></div>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('Namespace prefix'); ?></h4>
+    <div class="value"><?php echo $escape($entry['prefix']); ?></div>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('Tags'); ?></h4>
+    <?php foreach ($tags as $tag => $label): ?>
+    <div class="value"><?php echo $this->hyperlink($translate($label), $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
+    <?php endforeach; ?>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('License'); ?></h4>
+    <div class="value">
+        <?php if ($license === null): ?>
+        <?php echo $translate('Not stated in the file'); ?>
+        <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
+        <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
+        <?php else: ?>
+        <?php echo $text($license); ?>
+        <?php endif; ?>
+    </div>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('File'); ?></h4>
+    <div class="value"><?php echo $this->hyperlink($file, $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug]), ['title' => $translate('Download file')]); ?></div>
+</div>
+
+<?php foreach ($terms as $group): ?>
+<?php if ($group['members']): ?>
+<div class="meta-group vocabulary-library-terms">
+    <a href="#" class="expand" aria-expanded="false"><h4><?php echo $escape(sprintf('%s (%s)', $group['label'], count($group['members']))); ?></h4></a>
+    <div class="collapsible">
+        <?php foreach ($group['members'] as $localName => $member): ?>
+        <div class="value">
+            <span class="vocabulary-library-term-label"><?php echo $text($member['label']); ?></span>
+            <span class="field-term"><?php echo $escape($entry['prefix'] . ':' . $localName); ?></span>
+            <?php if ($member['comment'] !== null && trim($member['comment']) !== ''): ?>
+            <span class="vocabulary-library-term-comment"><?php echo $text($member['comment']); ?></span>
+            <?php endif; ?>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<?php endif; ?>
+<?php endforeach; ?>

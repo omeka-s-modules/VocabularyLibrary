@@ -1,0 +1,87 @@
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/refersTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/relatesTo> .
+<http://purl.org/swan/2.0/discourse-relationships/refersTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It connects an entity with another entity in an \n\t\t\t\tunidirectional way"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/refersTo> <http://www.w3.org/2000/01/rdf-schema#label> "refersTo" .
+<http://purl.org/swan/2.0/discourse-relationships/refersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/date> "October 12, 2010"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/publisher> "Massachusetts General Hospital" .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Tim Clark"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/language> "en" .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "David Shotton"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Paolo Ciccarese"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/format> "rdf/xml"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2000/01/rdf-schema#comment> "These relationships don't have range and domains defined as they are meant to be reused in different contexts"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2000/01/rdf-schema#label> "Discourse relationships vocabulary v. 3.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/title> "Discourse relationships vocabulary"@en .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2002/07/owl#versionInfo> "3.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Gwen Wong"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/creator> <http://www.hcklab.org/foaf.rdf#me> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Elizabeth Wu"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "June Kinoshita"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Marco Ocana"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses the fact that a resource is \n\t    \t\trelevant for another one and vice-versa"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/relatesTo> .
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo> <http://www.w3.org/2000/01/rdf-schema#label> "relevantTo" .
+<http://purl.org/swan/2.0/discourse-relationships/relevantTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/arisesFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Something (question, doubt...) that arises because of something else"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/arisesFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/arisesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "arisesFrom" .
+<http://purl.org/swan/2.0/discourse-relationships/arisesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It connects two different resources that can be \n\t    \t\tconsidered alternative interpretations of the same experimental results"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/relatesTo> .
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "alternativeTo" .
+<http://purl.org/swan/2.0/discourse-relationships/alternativeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsRelevantEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> ""^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsRelevantEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsRelevantEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "referencesAsRelevantEvidence" .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsRelevantEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsPositivelyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses the fact that one entity is talking \n\t\t\t\t    \t\tabout another one expressing agreement"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsPositivelyTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/respondsTo> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsPositivelyTo> <http://www.w3.org/2000/01/rdf-schema#label> "respondsPositivelyTo" .
+<http://purl.org/swan/2.0/discourse-relationships/respondsPositivelyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/motivates> <http://www.w3.org/2000/01/rdf-schema#comment> "Something (hypothesis, doubt...) that motivates something else like an experiment"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/motivates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/motivates> <http://www.w3.org/2000/01/rdf-schema#label> "motivates" .
+<http://purl.org/swan/2.0/discourse-relationships/motivates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses inconsistency between two resources. \n\t    \t\tIt is a bidirectional relationship"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/relatesTo> .
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith> <http://www.w3.org/2000/01/rdf-schema#label> "inconsistentWith" .
+<http://purl.org/swan/2.0/discourse-relationships/inconsistentWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNeutrallyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses the fact that one entity is \n\t\t\t\t    \t\ttalking about another one without expressing agreement or disagreement"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNeutrallyTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/respondsTo> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNeutrallyTo> <http://www.w3.org/2000/01/rdf-schema#label> "respondsNeutrallyTo" .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNeutrallyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsSupportiveEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> ""^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsSupportiveEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsSupportiveEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "referencesAsSupportiveEvidence" .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsSupportiveEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "respondsTo" .
+<http://purl.org/swan/2.0/discourse-relationships/respondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsInconsistentEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> ""^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsInconsistentEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/refersTo> .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsInconsistentEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "referencesAsInconsistentEvidence" .
+<http://purl.org/swan/2.0/discourse-relationships/referencesAsInconsistentEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The most generic relationship: it expresses connection \n\t\t\tbetween two resources without specifying the nature of such connection"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relatesTo" .
+<http://purl.org/swan/2.0/discourse-relationships/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses consistency between two resources. \n\t    \t\tIt is a bidirectional relationship"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/relatesTo> .
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith> <http://www.w3.org/2000/01/rdf-schema#label> "consistentWith" .
+<http://purl.org/swan/2.0/discourse-relationships/consistentWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNegativelyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It expresses the fact that one entity is talking \n\t\t\t\t    \t\tabout another one expressing disagreement"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNegativelyTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/swan/2.0/discourse-relationships/respondsTo> .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNegativelyTo> <http://www.w3.org/2000/01/rdf-schema#label> "respondsNegativelyTo" .
+<http://purl.org/swan/2.0/discourse-relationships/respondsNegativelyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

@@ -1,0 +1,101 @@
+_:Ba1939e8bbe733c85a01e45b294c1a0d0 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/olo/core#ordered_list> .
+_:Ba1939e8bbe733c85a01e45b294c1a0d0 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Ba1939e8bbe733c85a01e45b294c1a0d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf15913d60fc46260c621d9f78125c664 .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2000/01/rdf-schema#label> "Ordered List"@en .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list with a given length an indexed items."@en .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/olo/core#OrderedList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfc01c228a957dd3fe54a9edfabfdb125 .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba1939e8bbe733c85a01e45b294c1a0d0 .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B12697632cbbddbcb56b45f260a1ea032 .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B65890709aa41b90b004460c178ff91a6 .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#comment> "A slot in an ordered list with a fixed index."@en .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/2000/01/rdf-schema#label> "Slot"@en .
+<http://purl.org/ontology/olo/core#Slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+_:B12697632cbbddbcb56b45f260a1ea032 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/olo/core#index> .
+_:B12697632cbbddbcb56b45f260a1ea032 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B12697632cbbddbcb56b45f260a1ea032 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2000/01/rdf-schema#label> "has length"@en .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#OrderedList> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/2000/01/rdf-schema#comment> "The length of an ordered list."@en .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/2000/01/rdf-schema#label> "has item"@en .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/2000/01/rdf-schema#comment> "An item of a slot in an ordered list."@en .
+<http://purl.org/ontology/olo/core#item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#> <http://www.w3.org/2002/07/owl#versionInfo> "0.72"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://purl.org/ontology/olo/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2003/06/sw-vocab-status/ns> .
+<http://purl.org/ontology/olo/core#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/elements/1.1/> .
+<http://purl.org/ontology/olo/core#> <http://purl.org/dc/elements/1.1/title> "The Ordered Lists Ontology"@en .
+<http://purl.org/ontology/olo/core#> <http://purl.org/dc/elements/1.1/description> "The Ordered Lists Ontology Specification provides basic concepts and properties \nfor describing ordered lists as semantic graph. This document contains a RDF description of the Ordered Lists Ontology\nas proposed by Samer Abdallah."@en .
+<http://purl.org/ontology/olo/core#> <http://purl.org/dc/elements/1.1/date> "2010-07-23T13:30:52+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/ontology/olo/core#> <http://purl.org/dc/elements/1.1/creator> "Samer Abdallah"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/ontology/olo/core#> <http://purl.org/dc/elements/1.1/creator> <http://foaf.me/zazi#me> .
+<http://purl.org/ontology/olo/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/olo/core#next> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2000/01/rdf-schema#label> "has previous"@en .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates the previous slot in an ordered list"@en .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#previous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+_:B65890709aa41b90b004460c178ff91a6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/olo/core#next> .
+_:B65890709aa41b90b004460c178ff91a6 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B65890709aa41b90b004460c178ff91a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bfc01c228a957dd3fe54a9edfabfdb125 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/olo/core#previous> .
+_:Bfc01c228a957dd3fe54a9edfabfdb125 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bfc01c228a957dd3fe54a9edfabfdb125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2000/01/rdf-schema#label> "has next"@en .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates the next slot in an ordered list."@en .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2000/01/rdf-schema#label> "has index"@en .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/2000/01/rdf-schema#comment> "An index of a slot in an ordered list."@en .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:Bf15913d60fc46260c621d9f78125c664 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/olo/core#length> .
+_:Bf15913d60fc46260c621d9f78125c664 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bf15913d60fc46260c621d9f78125c664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/olo/core#slot> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/olo/core#OrderedList> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2000/01/rdf-schema#label> "has ordered list"@en .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list of an slot."@en .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#ordered_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/olo/core#Slot> .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2000/01/rdf-schema#label> "has slot"@en .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/olo/core#> .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/olo/core#OrderedList> .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/2000/01/rdf-schema#comment> "A slot in an ordered list."@en .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/ontology/olo/core#slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

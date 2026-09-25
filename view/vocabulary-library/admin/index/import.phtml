@@ -1,0 +1,61 @@
+<?php
+$translate = $this->plugin('translate');
+$escape = $this->plugin('escapeHtml');
+$this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
+$this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
+$this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import');
+$browseUrl = $this->url('admin/vocabulary-library');
+?>
+
+<?php echo $this->pageTitle($title, 1, $translate('Vocabulary Library'), $translate('Import')); ?>
+
+<?php if ($installed): ?>
+
+<div id="page-actions">
+    <?php echo $this->hyperlink($translate('Back to the library'), $browseUrl, ['class' => 'button']); ?>
+</div>
+<p>
+    <?php echo $translate('Omeka already has a vocabulary with this namespace.'); ?>
+    <?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed]); ?>
+</p>
+
+<?php else: ?>
+
+<?php $form->prepare(); ?>
+<?php echo $this->form()->openTag($form); ?>
+<div id="page-actions">
+    <?php echo $this->hyperlink($translate('Cancel'), $browseUrl, ['class' => 'button']); ?>
+    <button type="submit"><?php echo $translate('Import'); ?></button>
+</div>
+
+<p><?php echo $escape(sprintf($translate('Adds %1$s classes and %2$s properties.'), $entry['classes'], $entry['properties'])); ?></p>
+
+<?php echo $this->formRow($form->get('o:prefix')); ?>
+<div id="vocabulary-library-prefix-warnings" class="vocabulary-library-prefix-warnings" aria-live="polite"
+    data-installed-prefixes="<?php echo $escape(json_encode($installedPrefixes ?: new \stdClass)); ?>">
+    <p class="vocabulary-library-prefix-taken" hidden>
+        <?php echo $translate('This prefix is already used in Omeka by:'); ?>
+        <span class="vocabulary-library-prefix-holder"></span>
+    </p>
+    <p class="vocabulary-library-prefix-reserved" hidden>
+        <?php echo $translate('Omeka reserves the prefix "o" and prefixes beginning "o-".'); ?>
+    </p>
+</div>
+<?php echo $this->formRow($form->get('o:label')); ?>
+<?php echo $this->formRow($form->get('o:comment')); ?>
+<?php if ($form->has('lang')): ?>
+<?php echo $this->formRow($form->get('lang')); ?>
+<?php endif; ?>
+
+<div class="field">
+    <div class="field-meta">
+        <label><?php echo $translate('Namespace URI'); ?></label>
+        <div class="field-description"><?php echo $translate('Tested with this file, and set by the library.'); ?></div>
+    </div>
+    <div class="inputs"><?php echo $escape($entry['namespace']); ?></div>
+</div>
+
+<?php echo $this->formHidden($form->get('csrf')); ?>
+<?php echo $this->form()->closeTag(); ?>
+
+<?php endif; ?>

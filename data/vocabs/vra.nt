@@ -1,0 +1,1033 @@
+<http://purl.org/vra/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://purl.org/vra/> <http://schema.org/description> "Vocabulary for representing entities in the VRA data model." .
+<http://purl.org/vra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vra> <http://schema.org/creator> <http://viaf.org/viaf/315998461> .
+<http://purl.org/vra> <http://schema.org/creator> _:genid1 .
+<http://purl.org/vra> <http://schema.org/creator> _:genid2 .
+<http://purl.org/vra> <http://schema.org/creator> _:genid3 .
+<http://purl.org/vra> <http://schema.org/creator> _:genid4 .
+<http://viaf.org/viaf/315998461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://viaf.org/viaf/315998461> <http://schema.org/name> "\r\nJeff Mixter,\r\n				" .
+<http://viaf.org/viaf/315998461> <http://schema.org/url> <https://www.linkedin.com/pub/jeff-mixter/51/565/1b9> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid1 <http://schema.org/name> "\r\n Rebecca Guenther,\r\n				" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid2 <http://schema.org/name> "\r\n Trish Rose-Sandler,\r\n				" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid3 <http://schema.org/name> "\r\n Michael Dulock and\r\n				" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid4 <http://schema.org/name> "\r\n Esme Cowles\r\n" .
+<http://purl.org/vra/AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative Area" .
+<http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Place> .
+<http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/AdminstrativeArea> .
+<http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<http://purl.org/vra/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to describe the person or organization that was responsible for creating a schema:CreativeWork" .
+<http://purl.org/vra/Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/vra/Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://purl.org/vra/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/AdministrativeArea> .
+<http://purl.org/vra/City> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/City> .
+<http://purl.org/vra/City> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/CivicStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Civic Structure" .
+<http://purl.org/vra/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Place> .
+<http://purl.org/vra/CivicStructure> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CivicStructure> .
+<http://purl.org/vra/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection" .
+<http://purl.org/vra/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/Collection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Continent> <http://www.w3.org/2000/01/rdf-schema#label> "Continent" .
+<http://purl.org/vra/Continent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Place> .
+<http://purl.org/vra/Continent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Continent> .
+<http://purl.org/vra/Continent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Culture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Culture> <http://www.w3.org/2000/01/rdf-schema#label> "Culture" .
+<http://purl.org/vra/Culture> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:culture and vra:culturalContext" .
+<http://purl.org/vra/Culture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/vra/Culture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://rdfs.org/ns/void#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdfs.org/ns/void#DataSet> <http://www.w3.org/2000/01/rdf-schema#label> "Data Set" .
+<http://rdfs.org/ns/void#DataSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to represent a collection of VRA records.  derived from the vra:collection" .
+<http://rdfs.org/ns/void#DataSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration" .
+<http://purl.org/vra/Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type runningTime" .
+<http://purl.org/vra/Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Quantity> .
+<http://purl.org/vra/Duration> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Duration> .
+<http://purl.org/vra/Duration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+<http://purl.org/vra/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "used to represent the timespan during what a CreativeWork was created, displayed, broadcast etc.  derived from the vra:date. Also used to represent a vra:Agent activityDate" .
+<http://purl.org/vra/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/vra/Event> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Event> .
+<http://purl.org/vra/Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image" .
+<http://purl.org/vra/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/Image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Inscription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Inscription> <http://www.w3.org/2000/01/rdf-schema#label> "Inscription" .
+<http://purl.org/vra/Inscription> <http://www.w3.org/2000/01/rdf-schema#comment> "used to represent vra:Inscription" .
+<http://purl.org/vra/Inscription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/Inscription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Intangible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Intangible> <http://www.w3.org/2000/01/rdf-schema#label> "Intangible" .
+<http://purl.org/vra/Intangible> <http://www.w3.org/2000/01/rdf-schema#comment> "intangible entities" .
+<http://purl.org/vra/Intangible> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Intangible> .
+<http://purl.org/vra/Intangible> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+<http://purl.org/vra/Material> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:material" .
+<http://purl.org/vra/Material> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<http://purl.org/vra/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to represent a vra:corporate NameType" .
+<http://purl.org/vra/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/vra/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Organization> .
+<http://purl.org/vra/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+<http://purl.org/vra/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to represent a vra:personal or vra:family NameType" .
+<http://purl.org/vra/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Agent> .
+<http://purl.org/vra/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Person> .
+<http://purl.org/vra/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+<http://purl.org/vra/Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/vra/Place> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Place> .
+<http://purl.org/vra/Place> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantitative Value" .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "quantitative values" .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/StructuredValue> .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/QUantitativeValue> .
+<http://purl.org/vra/QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity" .
+<http://purl.org/vra/Quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type count" .
+<http://purl.org/vra/Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Intangible> .
+<http://purl.org/vra/Quantity> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/Quantity> .
+<http://purl.org/vra/Quantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/State> <http://www.w3.org/2000/01/rdf-schema#label> "State" .
+<http://purl.org/vra/State> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/AdministrativeArea> .
+<http://purl.org/vra/State> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/State> .
+<http://purl.org/vra/State> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/2000/01/rdf-schema#label> "Structured Value" .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/2000/01/rdf-schema#comment> "structured values" .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Intangible> .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/StructuredValue> .
+<http://purl.org/vra/StructuredValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/StylePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/StylePeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Style Period" .
+<http://purl.org/vra/StylePeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:stylePeriod" .
+<http://purl.org/vra/StylePeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Intangible> .
+<http://purl.org/vra/StylePeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Technique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Technique> <http://www.w3.org/2000/01/rdf-schema#label> "Technique" .
+<http://purl.org/vra/Technique> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:technique" .
+<http://purl.org/vra/Technique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Intangible> .
+<http://purl.org/vra/Technique> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vra/Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work" .
+<http://purl.org/vra/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/Work> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/area> <http://www.w3.org/2000/01/rdf-schema#label> "area" .
+<http://purl.org/vra/area> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type area" .
+<http://purl.org/vra/area> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/area> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/area> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/author> <http://www.w3.org/2000/01/rdf-schema#label> "author" .
+<http://purl.org/vra/author> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:Agent assigned to creating a vra:Inscription" .
+<http://purl.org/vra/author> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/author> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Agent> .
+<http://purl.org/vra/author> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/author> .
+<http://purl.org/vra/author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/base> <http://www.w3.org/2000/01/rdf-schema#label> "base" .
+<http://purl.org/vra/base> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type base" .
+<http://purl.org/vra/base> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#label> "based on" .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type basedOn" .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/preparatoryFor> .
+<http://purl.org/vra/basedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/builder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/builder> <http://www.w3.org/2000/01/rdf-schema#label> "builder" .
+<http://purl.org/vra/builder> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/builder> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/builder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#label> "cartoon for" .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type cartoonFor" .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/cartoonFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/circumference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/circumference> <http://www.w3.org/2000/01/rdf-schema#label> "circumference" .
+<http://purl.org/vra/circumference> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type circumference" .
+<http://purl.org/vra/circumference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/circumference> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/circumference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/collector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/collector> <http://www.w3.org/2000/01/rdf-schema#label> "collector" .
+<http://purl.org/vra/collector> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/collector> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/collector> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/commissioner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/commissioner> <http://www.w3.org/2000/01/rdf-schema#label> "commissioner" .
+<http://purl.org/vra/commissioner> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/commissioner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/commissioner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/componentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/componentOf> <http://www.w3.org/2000/01/rdf-schema#label> "component of" .
+<http://purl.org/vra/componentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type componentOf" .
+<http://purl.org/vra/componentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/componentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/componentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/composer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/composer> <http://www.w3.org/2000/01/rdf-schema#label> "composer" .
+<http://purl.org/vra/composer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/composer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/composer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/contractor> <http://www.w3.org/2000/01/rdf-schema#label> "contractor" .
+<http://purl.org/vra/contractor> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/contractor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/contractor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/copyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#label> "copy of" .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type copyAfter" .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/copyOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/count> <http://www.w3.org/2000/01/rdf-schema#label> "count" .
+<http://purl.org/vra/count> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/count> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/count> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/inventoryLevel> .
+<http://purl.org/vra/count> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#label> "counter proof for" .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type counterProofFor" .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/counterProofFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/creativeActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/creativeActivity> <http://www.w3.org/2000/01/rdf-schema#label> "creative activity" .
+<http://purl.org/vra/creativeActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:agentDate type life (activity)" .
+<http://purl.org/vra/creativeActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/creativeActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+<http://purl.org/vra/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:Agent responsible for creating a CreativeWork" .
+<http://purl.org/vra/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Agent> .
+<http://purl.org/vra/creator> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/creator> .
+<http://purl.org/vra/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/culturalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/culturalContext> <http://www.w3.org/2000/01/rdf-schema#label> "cultural context" .
+<http://purl.org/vra/culturalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Culture> .
+<http://purl.org/vra/culturalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/dealer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/dealer> <http://www.w3.org/2000/01/rdf-schema#label> "dealer" .
+<http://purl.org/vra/dealer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/dealer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/dealer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/decorator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/decorator> <http://www.w3.org/2000/01/rdf-schema#label> "decorator" .
+<http://purl.org/vra/decorator> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/decorator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/decorator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#label> "depicted in" .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type depictedIn" .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/depicts> .
+<http://purl.org/vra/depictedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/depicts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type depicts" .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/depicts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/depth> <http://www.w3.org/2000/01/rdf-schema#label> "depth" .
+<http://purl.org/vra/depth> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type depth" .
+<http://purl.org/vra/depth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/depth> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/depth> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/depth> .
+<http://purl.org/vra/depth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derived from" .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type derivedFrom" .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/designedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#label> "designed for" .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type designedFor" .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/designedFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/designer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/designer> <http://www.w3.org/2000/01/rdf-schema#label> "designer" .
+<http://purl.org/vra/designer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/designer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/designer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/developer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/developer> <http://www.w3.org/2000/01/rdf-schema#label> "developer" .
+<http://purl.org/vra/developer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/developer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/developer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/diameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/diameter> <http://www.w3.org/2000/01/rdf-schema#label> "diameter" .
+<http://purl.org/vra/diameter> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type diameter" .
+<http://purl.org/vra/diameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/diameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/diameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/director> <http://www.w3.org/2000/01/rdf-schema#label> "director" .
+<http://purl.org/vra/director> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/director> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/director> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/director> .
+<http://purl.org/vra/director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/2000/01/rdf-schema#label> "distance between" .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type distanceBetween" .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/distanceBetween> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/donator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/donator> <http://www.w3.org/2000/01/rdf-schema#label> "donator" .
+<http://purl.org/vra/donator> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/donator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/donator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/drafter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/drafter> <http://www.w3.org/2000/01/rdf-schema#label> "drafter" .
+<http://purl.org/vra/drafter> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/drafter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/drafter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/drawer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/drawer> <http://www.w3.org/2000/01/rdf-schema#label> "drawer" .
+<http://purl.org/vra/drawer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/drawer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/drawer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration" .
+<http://purl.org/vra/duration> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type duration" .
+<http://purl.org/vra/duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/duration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/editor> <http://www.w3.org/2000/01/rdf-schema#label> "editor" .
+<http://purl.org/vra/editor> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/editor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/engineer> <http://www.w3.org/2000/01/rdf-schema#label> "engineer" .
+<http://purl.org/vra/engineer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/engineer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/engineer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#label> "exhibited at" .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type exhibitedAt" .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/exhibitedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#label> "facsimile of" .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type facsimileOf" .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/facsimileOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/financier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/financier> <http://www.w3.org/2000/01/rdf-schema#label> "financier" .
+<http://purl.org/vra/financier> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/financier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/financier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2000/01/rdf-schema#label> "formerly larger context for" .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type formerlyLargerContextFor" .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Collection> .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/formerlyPartOf> .
+<http://purl.org/vra/formerlyLargerContextFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "formerly part of" .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type formerlyPartOf" .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Collection> .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/formerlyPartOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#label> "former owner" .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type formerOwner " .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/formerOwner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#label> "former repository" .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type formerRepository" .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/formerRepository> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/formerSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#label> "former site" .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type formerSite" .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/formerSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#label> "has cartoon" .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type cartoonIs" .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/cartoonFor> .
+<http://purl.org/vra/hasCartoon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component" .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type componentIs" .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/componentOf> .
+<http://purl.org/vra/hasComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#label> "has context" .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type contextIs" .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/designedFor> .
+<http://purl.org/vra/hasContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#label> "has copy" .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type copyIs" .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/copyOf> .
+<http://purl.org/vra/hasCopy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#label> "counter proof is" .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#comment> "counterProofIs" .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/counterProofFor> .
+<http://purl.org/vra/hasCounterProof> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/2000/01/rdf-schema#label> "has culture" .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:Agent type culture" .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Agent> .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Culture> .
+<http://purl.org/vra/hasCulture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#label> "has facsimile" .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type facsimileIs" .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/facsimileOf> .
+<http://purl.org/vra/hasFacsimile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#label> "has image" .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type imageIs" .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Image> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/imageOf> .
+<http://purl.org/vra/hasImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#label> "has impression" .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type impressionIs" .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/reliefFor> .
+<http://purl.org/vra/hasImpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/2000/01/rdf-schema#label> "has inscription" .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:inscription" .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Inscription> .
+<http://purl.org/vra/hasInscription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#label> "has model" .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type modelIs" .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#label> "has plan" .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type planIs" .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#label> "has printing plate" .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type printingPlateIs" .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/printingPlateFor> .
+<http://purl.org/vra/hasPrintingPlate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#label> "has prototype" .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type prototypeIs" .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasPrototype> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#label> "has replica" .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type replicaIs" .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/replicaOf> .
+<http://purl.org/vra/hasReplica> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#label> "has study" .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type studyIs" .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/studyFor> .
+<http://purl.org/vra/hasStudy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has style period" .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:stylePeriod" .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/StylePeriod> .
+<http://purl.org/vra/hasStylePeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "has technique" .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:technique" .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Technique> .
+<http://purl.org/vra/hasTechnique> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version" .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type versionIs" .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/versionOf> .
+<http://purl.org/vra/hasVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/height> <http://www.w3.org/2000/01/rdf-schema#label> "height" .
+<http://purl.org/vra/height> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type height" .
+<http://purl.org/vra/height> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/height> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/height> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/height> .
+<http://purl.org/vra/height> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/imageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#label> "image of" .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type imageOf" .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Image> .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/imageOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/2000/01/rdf-schema#label> "inventory level" .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/inventoryLevel> .
+<http://purl.org/vra/inventoryLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/isRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is related to" .
+<http://purl.org/vra/isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation" .
+<http://purl.org/vra/isRelatedTo> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/isRelatedto> .
+<http://purl.org/vra/isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2000/01/rdf-schema#label> "larger context for" .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type largerContextFor" .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Collection> .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/partOf> .
+<http://purl.org/vra/largerContextFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/length> <http://www.w3.org/2000/01/rdf-schema#label> "length" .
+<http://purl.org/vra/length> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type length" .
+<http://purl.org/vra/length> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/length> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/length> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/locationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/locationOf> <http://www.w3.org/2000/01/rdf-schema#label> "location of" .
+<http://purl.org/vra/locationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location" .
+<http://purl.org/vra/locationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/locationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/locationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer" .
+<http://purl.org/vra/manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/manufacturer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/manufacturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/mateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#label> "mate of" .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type mateOf" .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/mateOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/material> <http://www.w3.org/2000/01/rdf-schema#label> "material" .
+<http://purl.org/vra/material> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:material" .
+<http://purl.org/vra/material> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/material> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Material> .
+<http://purl.org/vra/material> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#label> "model for" .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type modelFor" .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/hasModel> .
+<http://purl.org/vra/modelFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/owner> <http://www.w3.org/2000/01/rdf-schema#label> "owner" .
+<http://purl.org/vra/owner> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/owner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/owner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/painter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/painter> <http://www.w3.org/2000/01/rdf-schema#label> "painter" .
+<http://purl.org/vra/painter> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/painter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/painter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/2000/01/rdf-schema#label> "partner in set with" .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type partnerInSetWith" .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/partnerInSetWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/partOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of" .
+<http://purl.org/vra/partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type partOf" .
+<http://purl.org/vra/partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Collection> .
+<http://purl.org/vra/partOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/partOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#label> "pendant of" .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type pendentOf" .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/pendantOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/performer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/performer> <http://www.w3.org/2000/01/rdf-schema#label> "performer" .
+<http://purl.org/vra/performer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/performer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/performer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/photographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/photographer> <http://www.w3.org/2000/01/rdf-schema#label> "photographer" .
+<http://purl.org/vra/photographer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/photographer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/photographer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#label> "place of creation" .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type creation" .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfCreation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#label> "place of discovery" .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type discovery" .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfDiscovery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#label> "place of exhibition" .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type exhibition" .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfExhibition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#label> "place of installation" .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type installation" .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfInstallation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#label> "place of intention" .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type intention" .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfIntention> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#label> "place of ownership" .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type owner" .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfOwnership> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "place of performance" .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type performance" .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfPerformance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#label> "place of publication" .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type publication" .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#label> "place of repository" .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type repository" .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfRepository> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#label> "place of site" .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:location type site" .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/locationOf> .
+<http://purl.org/vra/placeOfSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/planFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#label> "plan for" .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type planFor" .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/planFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/hasPlan> .
+<http://purl.org/vra/planFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#label> "preparatory for" .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type prepatoryFor" .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/preparatoryFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/printer> <http://www.w3.org/2000/01/rdf-schema#label> "printer" .
+<http://purl.org/vra/printer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/printer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/printer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#label> "printing plate for" .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type printingPlateFor" .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/printingPlateFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer" .
+<http://purl.org/vra/producer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/producer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/producer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/programmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/programmer> <http://www.w3.org/2000/01/rdf-schema#label> "programmer" .
+<http://purl.org/vra/programmer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/programmer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/programmer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#label> "prototype for" .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type prototypeFor" .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/hasPrototype> .
+<http://purl.org/vra/prototypeFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#label> "relief for" .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type reliefFor" .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/reliefFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#label> "replica of" .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type replicaOf" .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/replicaOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/restorer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/restorer> <http://www.w3.org/2000/01/rdf-schema#label> "restorer" .
+<http://purl.org/vra/restorer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/restorer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/restorer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/runningTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/runningTime> <http://www.w3.org/2000/01/rdf-schema#label> "running time" .
+<http://purl.org/vra/runningTime> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type runningTime" .
+<http://purl.org/vra/runningTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/runningTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/runningTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "source for" .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type sourceFor" .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/derivedFrom> .
+<http://purl.org/vra/sourceFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/studyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#label> "study for" .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type studyFor" .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/studyFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#label> "venue for" .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type venueFor" .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Place> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vra/exhibitedAt> .
+<http://purl.org/vra/venueFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/versionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#label> "version of" .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:relation type versionOf" .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Work> .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Work> .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/isRelatedTo> .
+<http://purl.org/vra/versionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/2000/01/rdf-schema#label> "was alteration" .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type alteration" .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasAlteration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/2000/01/rdf-schema#label> "was broadcast" .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type broadcast" .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasBroadcast> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/2000/01/rdf-schema#label> "was commission" .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type commission" .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasCommission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/2000/01/rdf-schema#label> "was created" .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type created" .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/2000/01/rdf-schema#label> "was designed" .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type designed" .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasDesigned> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/2000/01/rdf-schema#label> "was destroyed" .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type destroyed" .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasDestroyed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/2000/01/rdf-schema#label> "was discovered" .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type discovered" .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasDiscovered> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/2000/01/rdf-schema#label> "was performed" .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type performed" .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasPerformed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/2000/01/rdf-schema#label> "was presented" .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type presented" .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasPresented> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/2000/01/rdf-schema#label> "was produced" .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type produced" .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasProduced> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/2000/01/rdf-schema#label> "was published" .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type published" .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasPublished> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/2000/01/rdf-schema#label> "was restored" .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:date type restored" .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/Event> .
+<http://purl.org/vra/wasRestored> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/weight> <http://www.w3.org/2000/01/rdf-schema#label> "weight" .
+<http://purl.org/vra/weight> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type weight" .
+<http://purl.org/vra/weight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/weight> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/weight> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/weight> .
+<http://purl.org/vra/weight> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/width> <http://www.w3.org/2000/01/rdf-schema#label> "width" .
+<http://purl.org/vra/width> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type width" .
+<http://purl.org/vra/width> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/width> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/width> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/width> .
+<http://purl.org/vra/width> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vra/writer> <http://www.w3.org/2000/01/rdf-schema#label> "writer" .
+<http://purl.org/vra/writer> <http://www.w3.org/2000/01/rdf-schema#comment> "derived from ULAN list of Artist Roles" .
+<http://purl.org/vra/writer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/creator> .
+<http://purl.org/vra/writer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "birth date" .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:agentDate type life (earliestDate)" .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Person> .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/birthDate> .
+<http://purl.org/vra/birthDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/bitrate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2000/01/rdf-schema#label> "bit rate" .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type bitDepth" .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/bitrate> .
+<http://purl.org/vra/bitrate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/caption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/caption> <http://www.w3.org/2000/01/rdf-schema#label> "caption" .
+<http://purl.org/vra/caption> <http://www.w3.org/2000/01/rdf-schema#comment> "caption value for a vra:inscription" .
+<http://purl.org/vra/caption> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/text> .
+<http://purl.org/vra/caption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/contentSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2000/01/rdf-schema#label> "content size" .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type:fileSize" .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/contentSize> .
+<http://purl.org/vra/contentSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "date created" .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "date of creation" .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/dateCreated> .
+<http://purl.org/vra/dateCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#label> "death date" .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:agentDate type life (latestDate)" .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Person> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/deathDate> .
+<http://purl.org/vra/deathDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+<http://purl.org/vra/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/vra/description> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/description> .
+<http://purl.org/vra/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date" .
+<http://purl.org/vra/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "endDate of a schema:Event" .
+<http://purl.org/vra/endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Event> .
+<http://purl.org/vra/endDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/vra/endDate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/endDate> .
+<http://purl.org/vra/endDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/mark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/mark> <http://www.w3.org/2000/01/rdf-schema#label> "mark" .
+<http://purl.org/vra/mark> <http://www.w3.org/2000/01/rdf-schema#comment> "mark value of a vra:inscription" .
+<http://purl.org/vra/mark> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/text> .
+<http://purl.org/vra/mark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+<http://purl.org/vra/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/vra/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/name> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/name> .
+<http://purl.org/vra/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/position> <http://www.w3.org/2000/01/rdf-schema#label> "position" .
+<http://purl.org/vra/position> <http://www.w3.org/2000/01/rdf-schema#comment> "position value for a vra:inscription" .
+<http://purl.org/vra/position> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/description> .
+<http://purl.org/vra/position> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/resolution> <http://www.w3.org/2000/01/rdf-schema#label> "resolution" .
+<http://purl.org/vra/resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "vra:measurement type resolution" .
+<http://purl.org/vra/resolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/resolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/resolution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/signature> <http://www.w3.org/2000/01/rdf-schema#label> "signature" .
+<http://purl.org/vra/signature> <http://www.w3.org/2000/01/rdf-schema#comment> "signature value of a vra:inscription" .
+<http://purl.org/vra/signature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/text> .
+<http://purl.org/vra/signature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date" .
+<http://purl.org/vra/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "startDate value of a schema:Event" .
+<http://purl.org/vra/startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/Event> .
+<http://purl.org/vra/startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/vra/startDate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/startDate> .
+<http://purl.org/vra/startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/text> <http://www.w3.org/2000/01/rdf-schema#label> "text" .
+<http://purl.org/vra/text> <http://www.w3.org/2000/01/rdf-schema#comment> "Text" .
+<http://purl.org/vra/text> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/text> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/text> .
+<http://purl.org/vra/text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of a CreativeWork" .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/name> .
+<http://purl.org/vra/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/translation> <http://www.w3.org/2000/01/rdf-schema#label> "translation" .
+<http://purl.org/vra/translation> <http://www.w3.org/2000/01/rdf-schema#comment> "tranaslation value of a vra:inscription" .
+<http://purl.org/vra/translation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vra/text> .
+<http://purl.org/vra/translation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/unitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2000/01/rdf-schema#label> "unit code" .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2000/01/rdf-schema#comment> "3 value code for unit of measures used in schema:QuantitativeValue" .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/unitCode> .
+<http://purl.org/vra/unitCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .
+<http://purl.org/vra/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vra/value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+<http://purl.org/vra/value> <http://www.w3.org/2000/01/rdf-schema#comment> "numeric value used in schema:QuantitativeValue" .
+<http://purl.org/vra/value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vra/QuantitativeValue> .
+<http://purl.org/vra/value> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/value> .
+<http://purl.org/vra/value> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vra/> .

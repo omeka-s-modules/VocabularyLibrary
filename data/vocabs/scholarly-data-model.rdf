@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://standard.k-history.kr/resource/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Scholarly Data Model -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/">
+  <dc:title xml:lang="en">Scholarly Data Model</dc:title>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: affiliation -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/affiliation">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">affiliation</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">affiliation</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/affiliation.en" />
+  <rdfs:comment xml:lang="en">소속관계 1저자 및 공저자들의 소속기관을 연결, affiliationIn과 Symmetric 관계에 있다.</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:ResponsiblePeople" />
+  <rdfs:range rdf:resource="sdm:Affiliation" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: artMovement  -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/artMovement ">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">artMovement </rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">artMovement </reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/artMovement.en" />
+  <rdfs:comment xml:lang="en">어떤 예술작품의 사조 (인상파 등) artMovementOf와 Symmetric 관계에 있다.</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:ArtisticWork" />
+  <rdfs:range rdf:resource="sdm:Art_Movement" />
+  <skos:scopeNote xml:lang="en">rdfs:inverseOf =&gt; sdm:artMovementOf</skos:scopeNote>
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: associate -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/associate">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">associate</reg:name>
+  <skos:definition xml:lang="en">학회에서 발간한 학회지를 연결. associateOf와 Symmetric 관계에 있다.</skos:definition>
+  <rdfs:domain rdf:resource="sdm:Association" />
+  <rdfs:range rdf:resource="bibo:Periodical" />
+  <rdfs:label xml:lang="en">associate</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/associate.en" />
+  <skos:scopeNote xml:lang="en">rdfs:inverseOf =&gt; sdm:associateOf</skos:scopeNote>
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+<owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: associateOf -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/associateOf">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">associateOf</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">associateOf</reg:name>
+  <skos:definition xml:lang="en">학회에서 발간한 학회지를 연결. associateOf와 Symmetric 관계에 있다.</skos:definition>
+  <rdfs:domain rdf:resource="bibo:Periodical" />
+  <rdfs:range rdf:resource="sdm:Association" />
+</rdf:Description>
+
+<!-- Property: attend -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/attend">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">attend</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">attend</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/attend.en" />
+  <rdfs:comment xml:lang="en">이벤트의 참석관계.공저자나 공연구자가 참여한 학술회의 등의 이벤트, attendees와 Symmetric 관계에 있다. 어떤 학회 등에 참석한 사람이 참석한 다른 학회 등도 알 수 있게 해준다. 
+</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Co_ResponsibleEntity or sdm:Co_author or sdm:Co_Investigator" />
+  <rdfs:range rdf:resource="sdm:Event" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+<owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: cites -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/cites">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">cites</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">cites </reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/cites.en" />
+  <rdfs:comment xml:lang="en">이 저작에 언급하고 있는  다른 저작. 주로 그 해당 article의 말미에 열거된 것을 말함. citedBy와 Symmetric 관계에 있다. 어떤 Journal에서 인용된 그 저작이 또 다른 곳에서 인용된 것도 보여줄 수 있다. </rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="sdm:Work" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="http://standard.k-history.kr/resource/citedBy" />
+</rdf:Description>
+
+<!-- Property: classfication -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/classfication">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">classfication</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">classfication</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/classfication.en" />
+  <rdfs:comment xml:lang="en">Classification </rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="rdfs:Literal" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: co_author -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/co_author">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">co_author</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">co_author</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/co_author.en" />
+  <skos:definition xml:lang="en">공저자관계 </skos:definition>
+  <rdfs:domain rdf:resource="sdm:ResponsibleEntity" />
+  <rdfs:range rdf:resource="sdm:Co_ResponsibleEntity" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="sdm:Co_ResponsibleEntity" />
+</rdf:Description>
+
+<!-- Property: creator -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/creator">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">creator</reg:name>
+  <rdfs:label xml:lang="en">creator</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/creator.en" />
+  <rdfs:comment xml:lang="en">어떤 저작과 저자의 관계. Symmetric 관계에 있다. 이 저작의 저자는 누구이며 이 저자의 다른 저작은 무엇이 있다.</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="sdm:ResponsibleEntity" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="sdm:creatorOf" />
+</rdf:Description>
+
+<!-- Property: dataProvider -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/dataProvider">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">dataProvider</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">DataProvider</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/dataProvider.en" />
+  <rdfs:comment xml:lang="en">이 데이터를 제공한 단체들. 주로 대학이나 기록관, 박물관, 갤러리, 미술관 등. dataProviderOf와 Symmetric 관계에 있다. 따라서 그 단체에서 제공한 자료를 추론을 통해서 볼 수 있다.</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work or ore:Aggregation" />
+  <rdfs:range rdf:resource="sdm:DataProvider" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="http://standard.k-history.kr/resource/dataProviderOf" />
+</rdf:Description>
+
+<!-- Property: dataSet -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/dataSet">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">dataSet</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dataSet</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/dataSet.en" />
+  <rdfs:comment xml:lang="en">어떤 연구자의 연구물에 사용된 데이터 셋. 실제 데이터 셋으로의 연결은 그 해당 데이터셋에서 클릭으로 연결</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="sdm:DataSet" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="http://standard.k-history.kr/resource/dataSetOf" />
+</rdf:Description>
+
+<!-- Property: degree -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/degree">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">degree</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">degree</reg:name>
+  <rdfs:comment xml:lang="en">해당 저작의 학위 논문이 석사인지  박사인지를 나타냄 </rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="sdm:ThesisDegree" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="http://standard.k-history.kr/resource/degreeOf" />
+</rdf:Description>
+
+<!-- Property: doi -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/doi">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">doi</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">doi</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/doi.en" />
+  <rdfs:comment xml:lang="en">doi 가 있다면 번호를 보여줄 뿐만 아니라 원하면 그곳으로 바로 연결. 
+어떤 object에 doi 번호 하나가 주어지면 그 대상의 이름이 약간 변형되게 표현되어 있어도 그것의 실제는 다 같다. 
+상호운용성 확보의 한 방법이다. 
+
+가령, sdm:doi rdf:type owl:inverseFunctionalProperty 
+GVFS metadata: Shellbags for Linux sdm:doi http://dx.doi.org/10.1016/j.diin.2015.11.001
+http://computer.com/meta/title/12345678 sdm:doi http://dx.doi.org/10.1016/j.diin.2015.11.001
+
+conclusion: GVFS metadata: Shellbags for Linux
+owl:sameAs http://computer.com/meta/title/12345678</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="rdfs:Literal" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: domain -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/domain">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">domain</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">domain</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/domain.en" />
+  <rdfs:domain rdf:resource="sdm:Work" />
+  <rdfs:range rdf:resource="sdm:Main_Domain" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="http://standard.k-history.kr/resource/domainOf" />
+</rdf:Description>
+
+<!-- Property: domainConvergence -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/domainConvergence">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">domainConvergence</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">domainConvergence</reg:name>
+  <reg:lexicalAlias rdf:resource="http://standard.k-history.kr/resource/domainConvergence.en" />
+  <rdfs:comment xml:lang="en">주 영역과 다른 영역 사이의 융합관계</rdfs:comment>
+  <rdfs:domain rdf:resource="sdm:Main_Domain" />
+  <rdfs:range rdf:resource="sdm:Neighboring_Area" />
+<owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+</rdf:Description>
+
+<!-- Property: editor -->
+<rdf:Description rdf:about="http://standard.k-history.kr/resource/editor ">
+  <rdfs:isDefinedBy rdf:resource="http://standard.k-history.kr/resource/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">editor</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">editor</reg:name>
+  <rdfs:domain rdf:resource="bibo:Periodical" />
+  <rdfs:comment xml:lang="en">이 간행물의 편집자는 누구이며 그 편집자가 편집한 다른 저작은?</rdfs:comment>
+  <rdfs:range rdf:resource="sdm:Editor" />
+<owl:objectProperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10334" />
+  <owl:inverseOf rdf:resource="sdm:editorOf" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

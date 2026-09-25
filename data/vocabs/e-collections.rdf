@@ -1,0 +1,1985 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY eco "http://purl.org/ceu/eco#" >
+    <!ENTITY eco2 "http://purl.org/ceu/eco/1.0#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/ceu/lco#"
+     xml:base="http://purl.org/ceu/lco"
+     xmlns:eco="http://purl.org/ceu/eco#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eco2="http://purl.org/ceu/eco/1.0#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.org/ceu/eco">
+        <rdfs:label xml:lang="en">E-Collections Ontology</rdfs:label>
+        <rdfs:label xml:lang="es">Ontología E-Collections</rdfs:label>
+        <owl:versionInfo xml:lang="de">Versión 1.0 01/02/2015</owl:versionInfo>
+        <dc:rights xml:lang="en">E-Collections ontology is released under Attribution-ShareAlike 4.0 International Creative Commons license: http://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+        <rdfs:comment xml:lang="en">The E-Collections ontology defines a collections taxonomy for different collection types based on the structural properties of homogeneity, uniqueness, order and cardinality.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Version 1.0 2015/02/01</owl:versionInfo>
+        <dc:creator xml:lang="es">Alfredo Sánchez Alberca (asalber@ceu.es) &lt;http://aprendeconalf.es/foaf.rdf&gt;</dc:creator>
+        <rdfs:comment xml:lang="es">La ontología E-Collections define una clasificación taxonómica de distintos tipos de colecciones de acuerdo a las características de homogeneidad, unicidad, orden y cardinalidad.</rdfs:comment>
+        <dc:rights xml:lang="es">La ontología E-Collections está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional ( http://creativecommons.org/licenses/by-sa/4.0/).</dc:rights>
+        <owl:versionIRI rdf:resource="http://purl.org/ceu/eco/1.0"/>
+        <owl:imports rdf:resource="http://www.essepuntato.it/2009/10/error"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
+
+    <rdfs:Datatype rdf:about="&rdf;PlainLiteral"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="&xsd;integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#nonNegativeInteger -->
+
+    <rdfs:Datatype rdf:about="&xsd;nonNegativeInteger"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#positiveInteger -->
+
+    <rdfs:Datatype rdf:about="&xsd;positiveInteger"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ceu/eco#followedByItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;followedByItem">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">followed by item</rdfs:label>
+        <rdfs:label xml:lang="es">seguido por item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with another that follows it after in the same ordered collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con otro que le sigue después en una misma colección ordenada.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;OrderedItem"/>
+        <rdfs:range rdf:resource="&eco;OrderedItem"/>
+        <owl:inverseOf rdf:resource="&eco;precededByItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasContent -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasContent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has content</rdfs:label>
+        <rdfs:label xml:lang="es">contiene</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an item with the element or object that contains.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un Item con el elemento u objecto que contiene.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;Item"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&eco;Item"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasElement -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasElement">
+        <rdfs:label xml:lang="en">has element</rdfs:label>
+        <rdfs:label xml:lang="es">tiene elemento</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates a collection with an element that belongs to it.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección con un elemento que pertenece a ella.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;Collection"/>
+        <owl:inverseOf rdf:resource="&eco;isElementOf"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&eco;hasItem"/>
+            <rdf:Description rdf:about="&eco;hasContent"/>
+        </owl:propertyChainAxiom>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&eco;Item"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasElementsOfType -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasElementsOfType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has elements of type</rdfs:label>
+        <rdfs:label xml:lang="es">tiene elementos de tipo</rdfs:label>
+        <rdfs:domain rdf:resource="&eco;HomogeneousCollection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasFirstItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasFirstItem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has first item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene primer item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered collection with its first item.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección ordenada con su primer item.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&eco;hasOrderedItem"/>
+        <owl:inverseOf rdf:resource="&eco;isFirstItemOf"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;OrderedItem"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasPreviousItem"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasIndex"/>
+                        <owl:hasValue rdf:datatype="&xsd;positiveInteger">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasItem">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">has item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates a collection with an item that is part of it.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección con un item que forma parte de ella.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;Collection"/>
+        <rdfs:range rdf:resource="&eco;Item"/>
+        <owl:inverseOf rdf:resource="&eco;isItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasLastItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasLastItem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has last item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene último item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered collection with its last item.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección ordenada con su último item.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&eco;hasOrderedItem"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;OrderedItem"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasNextItem"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasNextItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasNextItem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">has next item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene siguiente item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with other that follows it immediately in the same ordered collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con otro que le sigue inmediatamente en un misma colección ordenada.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&eco;followedByItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasOrderedItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasOrderedItem">
+        <rdfs:label xml:lang="en">has ordered item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene item ordenado</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered collection with an ordered item that is part of it.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección ordenada con un item ordenado que forma parte de ella.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;OrderedCollection"/>
+        <rdfs:range rdf:resource="&eco;OrderedItem"/>
+        <rdfs:subPropertyOf rdf:resource="&eco;hasItem"/>
+        <owl:inverseOf rdf:resource="&eco;isOrderedItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasPreviousItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;hasPreviousItem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">has previous item</rdfs:label>
+        <rdfs:label xml:lang="es">tiene previo item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with another that precedes it immediately in the same ordered collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con otro que le precede inmediatamente en una misma colección ordenada.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&eco;hasNextItem"/>
+        <rdfs:subPropertyOf rdf:resource="&eco;precededByItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#isElementOf -->
+
+    <owl:ObjectProperty rdf:about="&eco;isElementOf">
+        <rdfs:label xml:lang="en">is element of</rdfs:label>
+        <rdfs:label xml:lang="es">es elemento de</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an element or object with a collection that belongs to.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un elemento u objeto con una colección a la que pertenece.</rdfs:comment>
+        <rdfs:range rdf:resource="&eco;Collection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#isFirstItemOf -->
+
+    <owl:ObjectProperty rdf:about="&eco;isFirstItemOf">
+        <rdfs:label xml:lang="en">is first item of</rdfs:label>
+        <rdfs:label xml:lang="es">es primer item de</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with an ordered collection in which the item occupies the first position.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con una colección ordenada en la que el item ocupa la primera posición.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&eco;isOrderedItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#isItemOf -->
+
+    <owl:ObjectProperty rdf:about="&eco;isItemOf">
+        <rdfs:label xml:lang="en">is item of</rdfs:label>
+        <rdfs:label xml:lang="es">es item de</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an item with the collection that is part of.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item con la colección de la que forma parte.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#isLastItemOf -->
+
+    <owl:ObjectProperty rdf:about="&eco;isLastItemOf">
+        <rdfs:label xml:lang="en">is last item of</rdfs:label>
+        <rdfs:label xml:lang="es">es último item de</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with an ordered collection in which the item occupies the last position.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con una colección ordenada en la que el item ocupa la última posición.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&eco;hasLastItem"/>
+        <rdfs:subPropertyOf rdf:resource="&eco;isOrderedItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#isOrderedItemOf -->
+
+    <owl:ObjectProperty rdf:about="&eco;isOrderedItemOf">
+        <rdfs:label xml:lang="en">is ordered item of</rdfs:label>
+        <rdfs:label xml:lang="es">es item ordenado de</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with the ordered collection that belongs to.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con la colección ordenada a la que pertenece.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&eco;isItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#precededByItem -->
+
+    <owl:ObjectProperty rdf:about="&eco;precededByItem">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">preceded by item</rdfs:label>
+        <rdfs:label xml:lang="es">precedido por item</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with another that precedes it in the same ordered collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con otro que le precede en una misma colección ordenada.</rdfs:comment>
+        <rdfs:range rdf:resource="&eco;OrderedItem"/>
+        <rdfs:domain rdf:resource="&eco;OrderedItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasCardinality -->
+
+    <owl:DatatypeProperty rdf:about="&eco;hasCardinality">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has cardinality</rdfs:label>
+        <rdfs:label xml:lang="es">tiene cardinalidad</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates a collection with the number of elements or objects that contains.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona una colección con el número de elementos que contiene.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;Collection"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ceu/eco#hasIndex -->
+
+    <owl:DatatypeProperty rdf:about="&eco;hasIndex">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has index</rdfs:label>
+        <rdfs:label xml:lang="es">tiene índice</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that relates an ordered item with its position in an ordered collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que relaciona un item ordenado con su posición en una colección ordenada.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eco;OrderedItem"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2009/10/error/hasError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.essepuntato.it/2009/10/error/hasError"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ceu/eco#Box -->
+
+    <owl:Class rdf:about="&eco;Box">
+        <rdfs:subClassOf rdf:resource="&eco;FixedCardinalityCollection"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multiheteroset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Collection -->
+
+    <owl:Class rdf:about="&eco;Collection">
+        <owl:disjointWith rdf:resource="&eco;Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Combination -->
+
+    <owl:Class rdf:about="&eco;Combination">
+        <rdfs:subClassOf rdf:resource="&eco;Heterocombination"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multicombination"/>
+        <rdfs:subClassOf rdf:resource="&eco;Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Element -->
+
+    <owl:Class rdf:about="&eco;Element">
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+        <rdfs:label xml:lang="es">Elemento</rdfs:label>
+        <rdfs:comment xml:lang="en">Element or object beloging to a collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Elemento u objeto perteneciente a una colección.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#FixedCardinalityCollection -->
+
+    <owl:Class rdf:about="&eco;FixedCardinalityCollection">
+        <rdfs:label xml:lang="en">Fixed cardinality collection</rdfs:label>
+        <rdfs:label xml:lang="es">Colección de cardinalidad fija</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&eco;Collection"/>
+        <rdfs:comment xml:lang="en">A fixed cardiality collection is a collection of a fixed number of elements.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una colección de cardinalidad fija es una colección con un número fijo de elementos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heterocombination -->
+
+    <owl:Class rdf:about="&eco;Heterocombination">
+        <rdfs:subClassOf rdf:resource="&eco;Box"/>
+        <rdfs:subClassOf rdf:resource="&eco;Heteroset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heteroranking -->
+
+    <owl:Class rdf:about="&eco;Heteroranking">
+        <rdfs:subClassOf rdf:resource="&eco;Heteroset"/>
+        <rdfs:subClassOf rdf:resource="&eco;List"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heteroset -->
+
+    <owl:Class rdf:about="&eco;Heteroset">
+        <rdfs:subClassOf rdf:resource="&eco;Multiheteroset"/>
+        <rdfs:subClassOf rdf:resource="&eco;UniquenessCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heterovariation -->
+
+    <owl:Class rdf:about="&eco;Heterovariation">
+        <rdfs:subClassOf rdf:resource="&eco;Heterocombination"/>
+        <rdfs:subClassOf rdf:resource="&eco;Heteroranking"/>
+        <rdfs:subClassOf rdf:resource="&eco;Tuple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#HomogeneousCollection -->
+
+    <owl:Class rdf:about="&eco;HomogeneousCollection">
+        <rdfs:label xml:lang="en">Homogeneous collection</rdfs:label>
+        <rdfs:label xml:lang="es">Colección homogénea</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;Collection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasElementsOfType"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">An homogeneous collection is a collection with all its element of the same type.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una coleccion homogénea es una colección donde todos los elementos son del mismo tipo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Item -->
+
+    <owl:Class rdf:about="&eco;Item">
+        <rdfs:label xml:lang="en">Item</rdfs:label>
+        <rdfs:label xml:lang="es">Item</rdfs:label>
+        <rdfs:comment xml:lang="en">An item is a container for elements of collections. It&apos;s a workaround to allow duplicate elements in a collections.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un item es un contenedor para los elementos de las colecciones. Es un rodeo para permitir la duplicidad de elementos en la colecciones.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#List -->
+
+    <owl:Class rdf:about="&eco;List">
+        <rdfs:subClassOf rdf:resource="&eco;Multiheteroset"/>
+        <rdfs:subClassOf rdf:resource="&eco;OrderedCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multicombination -->
+
+    <owl:Class rdf:about="&eco;Multicombination">
+        <rdfs:subClassOf rdf:resource="&eco;Box"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multiset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multiheteroset -->
+
+    <owl:Class rdf:about="&eco;Multiheteroset">
+        <rdfs:subClassOf rdf:resource="&eco;Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multiset -->
+
+    <owl:Class rdf:about="&eco;Multiset">
+        <rdfs:subClassOf rdf:resource="&eco;HomogeneousCollection"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multiheteroset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#OrderedCollection -->
+
+    <owl:Class rdf:about="&eco;OrderedCollection">
+        <rdfs:label xml:lang="en">Ordered collection</rdfs:label>
+        <rdfs:label xml:lang="es">Colección ordenada</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;Collection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasItem"/>
+                        <owl:allValuesFrom rdf:resource="&eco;OrderedItem"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasFirstItem"/>
+                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasLastItem"/>
+                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">An ordered collection is a collection where elements follow a sequential order.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una colección ordenada es una colección donde los elementos siguen un orden secuencial.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#OrderedItem -->
+
+    <owl:Class rdf:about="&eco;OrderedItem">
+        <rdfs:label xml:lang="en">Ordered item</rdfs:label>
+        <rdfs:label xml:lang="es">Item ordenado</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;Item"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasNextItem"/>
+                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasPreviousItem"/>
+                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;positiveInteger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">An ordered item is an item that is part of an ordered sequence of items.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un item ordenado es un item que forma parte de una secuencia ordenada de items.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Ranking -->
+
+    <owl:Class rdf:about="&eco;Ranking">
+        <rdfs:subClassOf rdf:resource="&eco;Heteroranking"/>
+        <rdfs:subClassOf rdf:resource="&eco;Sequence"/>
+        <rdfs:subClassOf rdf:resource="&eco;Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Sequence -->
+
+    <owl:Class rdf:about="&eco;Sequence">
+        <rdfs:subClassOf rdf:resource="&eco;List"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multiset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Set -->
+
+    <owl:Class rdf:about="&eco;Set">
+        <rdfs:subClassOf rdf:resource="&eco;Heteroset"/>
+        <rdfs:subClassOf rdf:resource="&eco;Multiset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Tuple -->
+
+    <owl:Class rdf:about="&eco;Tuple">
+        <rdfs:subClassOf rdf:resource="&eco;Box"/>
+        <rdfs:subClassOf rdf:resource="&eco;List"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#UniquenessCollection -->
+
+    <owl:Class rdf:about="&eco;UniquenessCollection">
+        <rdfs:label xml:lang="en">Uniqueness collection</rdfs:label>
+        <rdfs:label xml:lang="es">Colección con unicidad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&eco;Collection"/>
+        <rdfs:comment xml:lang="en">An uniqueness collection is a collection where each element appears at most one time, that is, element repetitions are not allowed.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una colección con unicidad es una colección donde cada elemento aparece a lo sumo una vez, es decir, donde no se permiten las repeticiones de elementos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Variation -->
+
+    <owl:Class rdf:about="&eco;Variation">
+        <rdfs:subClassOf rdf:resource="&eco;Combination"/>
+        <rdfs:subClassOf rdf:resource="&eco;Heterovariation"/>
+        <rdfs:subClassOf rdf:resource="&eco;Ranking"/>
+        <rdfs:subClassOf rdf:resource="&eco;Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Vector -->
+
+    <owl:Class rdf:about="&eco;Vector">
+        <rdfs:subClassOf rdf:resource="&eco;Multicombination"/>
+        <rdfs:subClassOf rdf:resource="&eco;Sequence"/>
+        <rdfs:subClassOf rdf:resource="&eco;Tuple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#1CardinalityCollection -->
+
+    <owl:Class rdf:about="&eco;1CardinalityCollection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;FixedCardinalityCollection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasItem"/>
+                        <owl:onClass rdf:resource="&eco;Item"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#2CardinalityCollection -->
+
+    <owl:Class rdf:about="&eco;2CardinalityCollection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;FixedCardinalityCollection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasItem"/>
+                        <owl:onClass rdf:resource="&eco;Item"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/eco#3CardinalityCollection -->
+
+    <owl:Class rdf:about="&eco;3CardinalityCollection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&eco;FixedCardinalityCollection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&eco;hasItem"/>
+                        <owl:onClass rdf:resource="&eco;Item"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ceu/eco#Box -->
+
+    <owl:NamedIndividual rdf:about="&eco;Box">
+        <rdf:type rdf:resource="&eco;Box"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Collection -->
+
+    <owl:NamedIndividual rdf:about="&eco;Collection">
+        <rdf:type rdf:resource="&eco;Collection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Combination -->
+
+    <owl:NamedIndividual rdf:about="&eco;Combination">
+        <rdf:type rdf:resource="&eco;Combination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heterocombination -->
+
+    <owl:NamedIndividual rdf:about="&eco;Heterocombination">
+        <rdf:type rdf:resource="&eco;Heterocombination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heteroranking -->
+
+    <owl:NamedIndividual rdf:about="&eco;Heteroranking">
+        <rdf:type rdf:resource="&eco;Heteroranking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heteroset -->
+
+    <owl:NamedIndividual rdf:about="&eco;Heteroset">
+        <rdf:type rdf:resource="&eco;Heteroset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Heterovariation -->
+
+    <owl:NamedIndividual rdf:about="&eco;Heterovariation">
+        <rdf:type rdf:resource="&eco;Heterovariation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#List -->
+
+    <owl:NamedIndividual rdf:about="&eco;List">
+        <rdf:type rdf:resource="&eco;List"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multicombination -->
+
+    <owl:NamedIndividual rdf:about="&eco;Multicombination">
+        <rdf:type rdf:resource="&eco;Multicombination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multiheteroset -->
+
+    <owl:NamedIndividual rdf:about="&eco;Multiheteroset">
+        <rdf:type rdf:resource="&eco;Multiheteroset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Multiset -->
+
+    <owl:NamedIndividual rdf:about="&eco;Multiset">
+        <rdf:type rdf:resource="&eco;Multiset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Ranking -->
+
+    <owl:NamedIndividual rdf:about="&eco;Ranking">
+        <rdf:type rdf:resource="&eco;Ranking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Sequence -->
+
+    <owl:NamedIndividual rdf:about="&eco;Sequence">
+        <rdf:type rdf:resource="&eco;Sequence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Set -->
+
+    <owl:NamedIndividual rdf:about="&eco;Set">
+        <rdf:type rdf:resource="&eco;Set"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Tuple -->
+
+    <owl:NamedIndividual rdf:about="&eco;Tuple">
+        <rdf:type rdf:resource="&eco;Tuple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Variation -->
+
+    <owl:NamedIndividual rdf:about="&eco;Variation">
+        <rdf:type rdf:resource="&eco;Variation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#Vector -->
+
+    <owl:NamedIndividual rdf:about="&eco;Vector">
+        <rdf:type rdf:resource="&eco;Vector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#col1 -->
+
+    <owl:NamedIndividual rdf:about="&eco;col1">
+        <rdf:type rdf:resource="&eco;FixedCardinalityCollection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#col2 -->
+
+    <owl:NamedIndividual rdf:about="&eco;col2">
+        <rdf:type rdf:resource="&eco;HomogeneousCollection"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&eco;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&eco;Element"/>
+            </owl:Restriction>
+        </rdf:type>
+        <eco:hasElementsOfType rdf:resource="&eco;elemento1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ceu/eco#elemento1 -->
+
+    <owl:NamedIndividual rdf:about="&eco;elemento1">
+        <rdf:type rdf:resource="&eco;Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&eco;Variation">
+        <rdfs:label xml:lang="en">Variation</rdfs:label>
+        <rdfs:label xml:lang="es">Variación</rdfs:label>
+        <rdfs:comment xml:lang="en">A variation is an homogeneous, with uniqueness, ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una variación es una colección homogénea, con unicidad, ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Vector">
+        <rdfs:label xml:lang="en">Vector</rdfs:label>
+        <rdfs:label xml:lang="es">Vector</rdfs:label>
+        <rdfs:comment xml:lang="en">A vector is an homogeneous, without uniqueness, ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un vector es una colección homogénea, sin unicidad, ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Set">
+        <rdfs:label xml:lang="en">Set</rdfs:label>
+        <rdfs:label xml:lang="es">Conjunto</rdfs:label>
+        <rdfs:comment xml:lang="en">A set is an homogeneous, with uniqueness, non ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un conjunto es una colección homogénea, con unicidad, no ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;List">
+        <rdfs:label xml:lang="en">List</rdfs:label>
+        <rdfs:label xml:lang="es">Lista</rdfs:label>
+        <rdfs:comment xml:lang="en">A list is an heterogeneous, without uniqueness, ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una lista es una colección heterogénea, sin unicidad, ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Heterovariation">
+        <rdfs:label xml:lang="en">Heterovariation</rdfs:label>
+        <rdfs:label xml:lang="es">Heterovariación</rdfs:label>
+        <rdfs:comment xml:lang="en">An heterovariation is an heterogeneous, with uniqueness, ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una heterovariación es una colección heterogénea, con unicidad, ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Heteroranking">
+        <rdfs:label xml:lang="en">Heteroranking</rdfs:label>
+        <rdfs:label xml:lang="es">Heteroranking</rdfs:label>
+        <rdfs:comment xml:lang="en">An heteroranking is an heterogeneous, with uniqueness, ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un heteroranking es una colección heterogénea, con unicidad, ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Multicombination">
+        <rdfs:label xml:lang="en">Multicombination</rdfs:label>
+        <rdfs:label xml:lang="es">Multicombinación</rdfs:label>
+        <rdfs:comment xml:lang="en">A multicombination is an homogeneous, without uniqueness, non ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una multicombinación es una colección homogénea, sin unicidad, no ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Tuple">
+        <rdfs:label xml:lang="en">Tuple</rdfs:label>
+        <rdfs:label xml:lang="es">Tupla</rdfs:label>
+        <rdfs:comment xml:lang="en">A tuple is an heterogeneous, without uniqueness, ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una tupla es una colección heterogénea, sin unicidad, ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Ranking">
+        <rdfs:label xml:lang="en">Ranking</rdfs:label>
+        <rdfs:label xml:lang="es">Ranking</rdfs:label>
+        <rdfs:comment xml:lang="en">A ranking is an homogeneous, with uniqueness, ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un ranking es una colección homogénea, con unicidad, ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Heterocombination">
+        <rdfs:label xml:lang="en">Heterocombination</rdfs:label>
+        <rdfs:label xml:lang="es">Heterocombinación</rdfs:label>
+        <rdfs:comment xml:lang="en">An heterocombination is an heterogeneous, with uniqueness, non ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una heterocombinación es una colección heterogénea, con unicidad, no ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Multiset">
+        <rdfs:label xml:lang="en">Multiset</rdfs:label>
+        <rdfs:label xml:lang="es">Multiconjunto</rdfs:label>
+        <rdfs:comment xml:lang="en">A multiset is an homogeneous, without uniqueness, non ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un multiconjunto es una colección homogenea, sin unicidad, no ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Sequence">
+        <rdfs:label xml:lang="en">Sequence</rdfs:label>
+        <rdfs:label xml:lang="es">Secuencia</rdfs:label>
+        <rdfs:comment xml:lang="en">A sequence is an homogeneous, without uniqueness, ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una secuencia es una colección homogenea, sin unicidad, ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Collection">
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+        <rdfs:label xml:lang="es">Colección</rdfs:label>
+        <rdfs:comment xml:lang="en">A collection is a group of objects or elements.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una colección es una agrupación de objetos o elementos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Combination">
+        <rdfs:label xml:lang="en">Combination</rdfs:label>
+        <rdfs:label xml:lang="es">Combinación</rdfs:label>
+        <rdfs:comment xml:lang="en">A combination is an homogeneous, with uniqueness, non ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una combinación es una colección homogénea, con unicidad, no ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Multiheteroset">
+        <rdfs:label xml:lang="en">Multiheteroset</rdfs:label>
+        <rdfs:label xml:lang="es">Multiheteroconjunto</rdfs:label>
+        <rdfs:comment xml:lang="en">A multiheteroset is an heterogeneous, without uniqueness, non ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un multiheteroconjunto es una colección heterogénea, sin unicidad, no ordenada y de cardilnalidad variable.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Box">
+        <rdfs:label xml:lang="en">Box</rdfs:label>
+        <rdfs:label xml:lang="es">Caja</rdfs:label>
+        <rdfs:comment xml:lang="en">A box is an heterogeneous, without uniqueness, non ordered and with fixed cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una caja es una colección heterogénea, sin unicidad, no ordenada y de cardinalidad fija.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&eco;Heteroset">
+        <rdfs:label xml:lang="en">Heteroset</rdfs:label>
+        <rdfs:label xml:lang="es">Heteroconjunto</rdfs:label>
+        <rdfs:comment xml:lang="en">A heteroset is an heterogeneous, with uniqueness, non ordered and with variable cardinality collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un heteroconjunto es una colección heterogénea, con unicidad, no ordenada y de cardinalidad variable.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#collection">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#item">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#n">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#last">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#collecction">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#item1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#item2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#x">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#collectionl">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#j">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#i">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#index">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#nextitem">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#nextindex">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#current">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#next">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#element1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#element2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:argument2 rdf:datatype="&xsd;integer">2</swrl:argument2>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&eco;FixedCardinalityCollection"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:classPredicate>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&eco;hasItem"/>
+                                <owl:onClass rdf:resource="&eco;Item"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </swrl:classPredicate>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#last"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasLastItem"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#last"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collecction"/>
+                        <swrl:classPredicate>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="&eco;UniquenessCollection"/>
+                            </owl:Class>
+                        </swrl:classPredicate>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasLastItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#item"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#last"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&eco;hasLastItem"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#last"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collecction"/>
+                                <swrl:classPredicate>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="&eco;UniquenessCollection"/>
+                                    </owl:Class>
+                                </swrl:classPredicate>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:argument2>1</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#item"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasFirstItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collectionl"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;followedByItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#item1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#current"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#index"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="&swrlb;add"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:resource="urn:swrl#nextindex"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:resource="urn:swrl#index"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasNextItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#current"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#next"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#next"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#nextindex"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;followedByItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;followedByItem"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#item1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#item2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:argument2>An ordered item can not be followed and preceded at the same time by another item</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2009/10/error/hasError"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:argument2>An ordered item cannot be followed by itself</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2009/10/error/hasError"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;followedByItem"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasNextItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#i"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="&swrlb;add"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:resource="urn:swrl#j"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:resource="urn:swrl#i"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
+                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&eco;hasOrderedItem"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#item1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#item2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#j"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:argument2>A colllection with uniqueness has repeated elements</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2009/10/error/hasError"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&eco;UniquenessCollection"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&eco;hasContent"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#element2"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#item2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;SameIndividualAtom"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#element1"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#element2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&eco;hasItem"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#item2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&eco;hasItem"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#item1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasContent"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#element1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#item1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:argument2 rdf:datatype="&xsd;integer">1</swrl:argument2>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&eco;FixedCardinalityCollection"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:classPredicate>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&eco;hasItem"/>
+                                <owl:onClass rdf:resource="&eco;Item"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </swrl:classPredicate>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&eco;FixedCardinalityCollection"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:argument2 rdf:datatype="&xsd;integer">3</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasCardinality"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#collection"/>
+                        <swrl:classPredicate>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&eco;hasItem"/>
+                                <owl:onClass rdf:resource="&eco;Item"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </swrl:classPredicate>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&eco;hasNextItem"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#item"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#nextitem"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="&swrlb;add"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:resource="urn:swrl#nextindex"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:resource="urn:swrl#index"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#index"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#item"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&eco;hasIndex"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#nextindex"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#nextitem"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

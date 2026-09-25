@@ -1,0 +1,149 @@
+#################################
+# Filmportal Relations Ontology #
+#################################
+
+@prefix fpr: <http://www.filmstandards.org/schemas/filmportal_relations#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdac: <http://rdaregistry.info/Elements/c/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm: <http://erlangen-crm.org/170309/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+
+
+<http://www.filmstandards.org/schemas/filmportal_relations#> a owl:Ontology ;
+rdfs:label "Filmportal Relations Ontology (FPR)"@en ;
+rdfs:comment "This ontology defines properties for the description of relations between film work authority records or agent authority records on the one hand, and cultural heritage objects on the other. The ontology was developed for the description of relations used for filmportal.de but is not limited to this context."@en ;
+rdfs:comment "Created by Eleonore Emsbach (DFF - Deutsches Filminstitut & Filmmuseum)"@en ;
+rdfs:comment "Turtle syntax alignment 30-Sep-2020 Detlev Balzer"@en ;
+owl:versionInfo "2020-09-29 (version 1.3)" .
+
+
+##############
+# Properties #
+##############
+
+fpr:hasFilm a owl:ObjectProperty ;
+rdfs:label "hasFilm"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dcterms:references ;
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to a manifestation of the film work (edm:ProvidedCHO edm:type "VIDEO")."""@en.
+
+fpr:hasTrailer a owl:ObjectProperty ;
+rdfs:label "hasTrailer"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dcterms:references;
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to an audio-visual advertisement (edm:ProvidedCHO edm:type "VIDEO") of specific type 'trailer' , used for promoting the film work."""@en ;
+rdfs:seeAlso aat:300263866.
+
+fpr:hasTeaser a owl:ObjectProperty ;
+rdfs:label "hasTeaser"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dcterms:references ;
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to audio-visual advertisement (edm:ProvidedCHO edm:type "VIDEO") of specific type 'teaser trailer' , meant to 'tease' the film work."""@en .
+
+fpr:hasExtract a owl:ObjectProperty ;
+rdfs:label "hasExtract"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dcterms:references ;
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to an extract, i.e. a short clip, from a manifestation of the film work (edm:ProvidedCHO edm:type "VIDEO")."""@en .
+
+fpr:hasIncipit a owl:ObjectProperty ;
+rdfs:label "hasIncipit"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dcterms:references ;
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to a clip containing the first few minutes of a manifestation of the film work (edm:ProvidedCHO edm:type "VIDEO")."""@en .
+
+fpr:hasPoster a owl:ObjectProperty ;
+rdfs:label "hasPoster"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dc:subject , dcterms:references ; 
+rdfs:domain rdac:C10001 ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates a film work to an image object (edm:ProvidedCHO edm:type "IMAGE") of specific type 'poster' used to advertise the film work."""@en .
+
+fpr:hasImage a owl:ObjectProperty ;
+rdfs:label "hasImage"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dc:subject , dcterms:references ; 
+rdfs:domain rdac:C10001 , edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Describes a general relation between a film work or an agent on the one hand and an image object (edm:ProvidedCHO edm:type "IMAGE") on the other."""@en .
+
+fpr:hasText a owl:ObjectProperty ;
+rdfs:label "hasText"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dc:subject , dcterms:references ; 
+rdfs:domain rdac:C10001 , edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Describes a general relation between a film work or an agent on the one hand and a text object (edm:ProvidedCHO edm:type "TEXT")on the other."""@en .
+
+fpr:hasSound a owl:ObjectProperty ;
+rdfs:label "hasSound"@en ;
+rdfs:subPropertyOf dc:relation ;
+owl:inverseOf dc:subject , dcterms:references ; 
+rdfs:domain rdac:C10001 , edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Describes a general relation between a film work or an agent on the one hand and an audio object (edm:ProvidedCHO edm:type "SOUND") on the other."""@en .
+
+fpr:isSubjectOf a owl:ObjectProperty ;
+rdfs:label "isSubjectOf"@en ;
+rdfs:subPropertyOf dc:relation , crm:P129i_is_subject_of , rdau:P60806 ;
+owl:inverseOf dc:subject ;
+rdfs:domain rdac:C10001 , edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment """Relates either a film work or an agent to an image, text or video object that is about the film work or the agent."""@en .
+
+fpr:isDepictedIn a owl:ObjectProperty ;
+rdfs:label "isDepictedIn"@en ;
+rdfs:subPropertyOf dc:relation , fpr:isSubjectOf , crm:P62i_is_depicted_by , foaf:depiction ;
+owl:inverseOf dc:subject ;
+rdfs:domain edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment "Relates an agent to an image or video object that depicts the agent."@en .
+
+fpr:isCreatorOf a owl:ObjectProperty ;
+rdfs:label "isCreatorOf"@en ;
+rdfs:subPropertyOf dc:relation , rdau:P60672, foaf:made ;
+owl:inverseOf dc:creator ;
+rdfs:domain edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment "Relates an agent to an image, text or video object the agent has created."@en .
+
+fpr:isContributorTo a owl:ObjectProperty ;
+rdfs:label "isContributorTo"@en ;
+rdfs:subPropertyOf dc:relation , rdau:P60626 ;
+owl:inverseOf dc:contributor ;
+rdfs:domain edm:Agent ;
+rdfs:range edm:ProvidedCHO ;
+rdfs:isDefinedBy <http://www.filmstandards.org/schemas/filmportal_relations#> ;
+rdfs:comment "Relates an agent to an image, text or video object the agent has contributed to."@en .
+

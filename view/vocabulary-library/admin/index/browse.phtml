@@ -1,0 +1,159 @@
+<?php
+$translate = $this->plugin('translate');
+$escape = $this->plugin('escapeHtml');
+$this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
+$this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
+$this->htmlElement('body')->appendAttribute('class', 'vocabs browse vocabulary-library');
+$total = count($rows);
+$aboutUrl = 'https://github.com/omeka-s-modules/VocabularyLibrary#about-the-collection';
+// Tags in alphabetical order of their translated labels.
+$tagLabels = array_map($translate, $tags);
+uasort($tagLabels, 'strnatcasecmp');
+$sortBy = [
+    'title' => $translate('Title'),
+    'prefix' => $translate('Prefix'),
+    'classes' => $translate('Classes'),
+    'properties' => $translate('Properties'),
+];
+// Label languages by name in the admin's language, where PHP's intl
+// extension can name them; otherwise by code.
+$languageNames = [];
+foreach (array_keys($languageCounts) as $code) {
+    $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $this->lang()) : $code;
+    $languageNames[$code] = ($name === '' || $name === $code) ? $code : $name;
+}
+uasort($languageNames, 'strnatcasecmp');
+$selected = function ($name, $value) use ($query) {
+    return ($query[$name] ?? null) === $value ? ' selected' : '';
+};
+?>
+
+<?php echo $this->pageTitle($translate('Vocabulary Library')); ?>
+
+<div id="page-actions">
+    <?php echo $this->hyperlink($translate('About this collection'), $aboutUrl, ['class' => 'button', 'target' => '_blank']); ?>
+</div>
+
+<form id="vocabulary-library-filters" class="browse-controls" role="search"
+    data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>">
+    <div class="vocabulary-library-search">
+        <input type="text" name="q"
+            value="<?php echo $escape($query['q'] ?? ''); ?>"
+            placeholder="<?php echo $escape($translate('Filter vocabularies')); ?>"
+            aria-label="<?php echo $escape($translate('Filter vocabularies')); ?>">
+        <label>
+            <input type="checkbox" name="terms" value="1"<?php echo empty($query['terms']) ? '' : ' checked'; ?>>
+            <?php echo $translate('Also search class and property names'); ?>
+        </label>
+    </div>
+    <div class="filtering">
+        <select name="tag" aria-label="<?php echo $escape($translate('Tag')); ?>">
+            <option value=""><?php echo $translate('All tags'); ?></option>
+            <?php foreach ($tagLabels as $tag => $label): ?>
+            <option value="<?php echo $escape($tag); ?>"<?php echo $selected('tag', $tag); ?>><?php echo $escape(sprintf('%s (%s)', $label, $tagCounts[$tag])); ?></option>
+            <?php endforeach; ?>
+        </select>
+        <select name="lang" aria-label="<?php echo $escape($translate('Label language')); ?>">
+            <option value=""><?php echo $translate('Any label language'); ?></option>
+            <?php foreach ($languageNames as $code => $name): ?>
+            <option value="<?php echo $escape($code); ?>"<?php echo $selected('lang', $code); ?>><?php echo $escape(sprintf('%s (%s)', $name, $languageCounts[$code])); ?></option>
+            <?php endforeach; ?>
+        </select>
+        <select name="show" aria-label="<?php echo $escape($translate('Show')); ?>">
+            <option value=""><?php echo $translate('All vocabularies'); ?></option>
+            <option value="installed"<?php echo $selected('show', 'installed'); ?>><?php echo $translate('Namespace in use'); ?></option>
+            <option value="not-installed"<?php echo $selected('show', 'not-installed'); ?>><?php echo $translate('Namespace not in use'); ?></option>
+        </select>
+    </div>
+    <div class="sorting">
+        <select name="sort_by" aria-label="<?php echo $escape($translate('Sort by')); ?>">
+            <?php foreach ($sortBy as $value => $label): ?>
+            <option value="<?php echo $value; ?>"<?php echo $selected('sort_by', $value); ?>><?php echo $escape($label); ?></option>
+            <?php endforeach; ?>
+        </select>
+        <select name="sort_order" aria-label="<?php echo $escape($translate('Sort order')); ?>">
+            <option value="asc"<?php echo $selected('sort_order', 'asc'); ?>><?php echo $translate('Ascending'); ?></option>
+            <option value="desc"<?php echo $selected('sort_order', 'desc'); ?>><?php echo $translate('Descending'); ?></option>
+        </select>
+    </div>
+</form>
+
+<p class="vocabulary-library-count" aria-live="polite" aria-atomic="true">
+    <?php echo sprintf($escape($translate('Showing %1$s of %2$s')), '<span class="vocabulary-library-shown">' . $total . '</span>', $total); ?>
+</p>
+
+<table id="vocabulary-library-table" class="tablesaw" data-tablesaw-mode="stack">
+    <thead>
+        <tr>
+            <th class="vocabulary-library-title-column"><?php echo $translate('Title'); ?></th>
+            <th class="vocabulary-library-tags-column"><?php echo $translate('Tags'); ?></th>
+            <th class="vocabulary-library-prefix-column"><?php echo $translate('Prefix'); ?></th>
+            <th class="vocabulary-library-count-column"><?php echo $translate('Classes'); ?></th>
+            <th class="vocabulary-library-count-column"><?php echo $translate('Properties'); ?></th>
+            <th class="vocabulary-library-status-column"><?php echo $translate('Status'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($rows as $row): ?>
+        <?php
+        $entry = $row['entry'];
+        $description = explode("\n\n", (string) $entry['description'])[0];
+        $detailsUrl = $this->url('admin/vocabulary-library', ['action' => 'show-details', 'slug' => $row['slug']]);
+        ?>
+        <tr data-slug="<?php echo $escape($row['slug']); ?>"
+            data-search="<?php echo $escape(implode(' ', [$row['title'], $entry['prefix'], $entry['namespace'], $entry['description']])); ?>"
+            data-title="<?php echo $escape($row['title']); ?>"
+            data-prefix="<?php echo $escape($entry['prefix']); ?>"
+            data-classes="<?php echo $entry['classes']; ?>"
+            data-properties="<?php echo $entry['properties']; ?>"
+            data-tags="<?php echo $escape(implode(' ', $entry['tags'])); ?>"
+            data-installed="<?php echo $row['installed'] ? '1' : '0'; ?>"
+            data-languages="<?php echo $escape(implode(' ', $row['languages'])); ?>">
+            <td>
+                <div class="vocabulary-library-title">
+                    <?php echo $this->hyperlink($row['title'], '#', [
+                        'class' => 'sidebar-content',
+                        'data-sidebar-content-url' => $detailsUrl,
+                    ]); ?>
+                    <?php if ($description !== ''): ?>
+                    <p class="vocabulary-library-description"><?php echo $escape($description); ?></p>
+                    <?php endif; ?>
+                    <p class="vocabulary-library-term-matches" hidden>
+                        <strong><?php echo $translate('Matching terms:'); ?></strong> <span class="vocabulary-library-term-list"></span>
+                    </p>
+                </div>
+                <ul class="actions">
+                    <li><?php echo $this->hyperlink('', '#', [
+                        'data-sidebar-content-url' => $detailsUrl,
+                        'class' => 'o-icon-more sidebar-content',
+                        'title' => $translate('Details'),
+                    ]); ?></li>
+                </ul>
+            </td>
+            <td class="column-value vocabulary-library-tags">
+                <ul>
+                    <?php foreach (array_intersect_key($tagLabels, array_flip($entry['tags'])) as $tag => $label): ?>
+                    <li><?php echo $escape($label); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </td>
+            <td><?php echo $escape($entry['prefix']); ?></td>
+            <td><?php echo $entry['classes']; ?></td>
+            <td><?php echo $entry['properties']; ?></td>
+            <td><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $row['slug'], 'installed' => $row['installed'], 'prefixTakenBy' => $row['prefixTakenBy']]); ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<div class="no-resources vocabulary-library-empty" hidden>
+    <p><?php echo $translate('No vocabularies match.'); ?></p>
+</div>
+
+<div class="sidebar">
+    <?php echo $this->hyperlink('', '#', [
+        'class' => 'sidebar-close o-icon-close',
+        'title' => $translate('Close'),
+    ]); ?>
+    <div class="sidebar-content"></div>
+</div>

@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+    xmlns:xtypes="http://purl.org/xtypes/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+<owl:Ontology rdf:about="http://purl.org/xtypes/">
+  <vann:preferredNamespaceUri>xtypes</vann:preferredNamespaceUri>
+  <rdfs:label>Extra Types Namespace</rdfs:label>
+  <dcterms:title>Extra Types Namespace</dcterms:title>
+  <owl:versionInfo>1.0</owl:versionInfo>
+  <dcterms:date rdf:datatype="xsd:date">2012-04-23</dcterms:date>
+  <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+  <dcterms:hasFormat>
+    <xtypes:Document-HTML rdf:about="http://purl.org/xtypes/?format=HTML" rdfs:label="Extra Types Namespace described as HTML" />
+  </dcterms:hasFormat>
+  <dcterms:hasFormat>
+    <xtypes:Document-RDFXML rdf:about="http://purl.org/xtypes/?format=RDFXML" rdfs:label="Extra Types Namespace described as RDF+XML" />
+  </dcterms:hasFormat>
+  <dcterms:creator>
+     <foaf:Person rdf:about="http://id.ecs.soton.ac.uk/person/1248">
+       <foaf:name>Christopher Gutteridge</foaf:name>
+       <foaf:mbox rdf:resource="mailto:cjg@ecs.soton.ac.uk" />
+       <foaf:homepage rdf:resource="http://users.ecs.soton.ac.uk/cjg/" />
+     </foaf:Person>
+  </dcterms:creator>
+  <dcterms:description>This namespace provides identifiers for many common formats and encodings, and also for documents in that format and for (RDF) literals containing fragments of these formats. 
+
+The Format-XXX and Encoding-XXX classes are intended for use with dcterms:format or similar predicates.
+
+The Document-XXX and DocumentEncoded-XXX classes are intended for use with rdf:type to indicate the format and character encoding of the Document available at a URL.
+
+The Fragment-XXX classes are intended for use as the datatype of literals in RDF. 
+
+In some cases you might use Fragment-XXX as the type of a URL to indicate the URL resolves to a fragment, not a valid document. You might also use Document-XXX as a datatype if you had an entire valid document in a literal for some whacky reason.
+
+Sub-versions of formats, document types and fragments: If you want to specifically indicate a version of a document, fragment or format, you can refer to it in the form Fragment-HTML-4.1 - this will resolve to an RDF class telling you it's version 4.1 of Fragment-HTML.
+
+If you resolve Fragment-MyCrazyFormat that will resolve to a fragment class, and a format class. Use at your own risk. 
+
+Motivation: This was actually just created due to the lack of a good datatype to indicate that a literal is a fragment of HTML rather than plain text. We brainstromed a list of useful formats and got the encodings from wikipedia, feedback welcome.
+
+'blessing' new formats or encodings: If there's a format or encoding which really should be in the main list, and not 'unstable' tell me why at cjg@ecs.soton.ac.uk
+
+This Ontology is public domain in the hope it will be useful by Christopher Gutteridge, University of Southampton, 2012.
+</dcterms:description> 
+</owl:Ontology>
+<owl:Ontology rdf:about="http://xmlns.com/foaf/0.1/">
+  <vann:preferredNamespaceUri>foaf</vann:preferredNamespaceUri>
+</owl:Ontology>
+<owl:Ontology rdf:about="http://purl.org/dc/terms/">
+  <vann:preferredNamespaceUri>dcterms</vann:preferredNamespaceUri>
+</owl:Ontology>
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PlainText'>
+  <rdfs:label>Plain Text Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.txt</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/plain</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PlainText'>
+  <rdfs:label>Plain Text Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PlainText' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-PlainText'>
+  <rdfs:label>Plain Text Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PlainText' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-JPEG'>
+  <rdfs:label>JPEG Image Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.jpg</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>image/jpeg</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-JPEG'>
+  <rdfs:label>JPEG Image Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JPEG' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Image' />
+</rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-GIF'>
+  <rdfs:label>GIF Image Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.gif</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>image/gif</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-GIF'>
+  <rdfs:label>GIF Image Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-GIF' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Image' />
+</rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PNG'>
+  <rdfs:label>PNG Image Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.png</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>image/png</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PNG'>
+  <rdfs:label>PNG Image Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PNG' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Image' />
+</rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PostScript'>
+  <rdfs:label>Postscript Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.ps</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/postscript</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PostScript'>
+  <rdfs:label>Postscript Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PostScript' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-PostScript'>
+  <rdfs:label>Postscript Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PostScript' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-EPS'>
+  <rdfs:label>Encapsulated Postscript Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.eps</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-EPS'>
+  <rdfs:label>Encapsulated Postscript Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-EPS' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PDF'>
+  <rdfs:label>PDF Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.pdf</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/pdf</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PDF'>
+  <rdfs:label>PDF Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PDF' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-SVG'>
+  <rdfs:label>Scalable Vector Graphics Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.svg</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>image/svg+xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-SVG'>
+  <rdfs:label>Scalable Vector Graphics Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-SVG' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-SVG'>
+  <rdfs:label>Scalable Vector Graphics Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-SVG' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-TextArt'>
+  <rdfs:label>Text Art (aka ASCII Art) Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.txt</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/plain</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-TextArt'>
+  <rdfs:label>Text Art (aka ASCII Art) Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-TextArt' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-TextArt'>
+  <rdfs:label>Text Art (aka ASCII Art) Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-TextArt' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Word'>
+  <rdfs:label>Microsoft Word Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.doc</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/msword</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Word'>
+  <rdfs:label>Microsoft Word Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Word' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PowerPoint'>
+  <rdfs:label>Microsoft Powerpoint Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.ppt</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.ms-powerpoint</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PowerPoint'>
+  <rdfs:label>Microsoft Powerpoint Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PowerPoint' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Excel'>
+  <rdfs:label>Microsoft Excel Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.xls</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.ms-excel</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Excel'>
+  <rdfs:label>Microsoft Excel Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Excel' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-WordX'>
+  <rdfs:label>Microsoft Word (Open XML) Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.doc</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-WordX'>
+  <rdfs:label>Microsoft Word (Open XML) Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-WordX' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PowerPointX'>
+  <rdfs:label>Microsoft Powerpoint (Open XML) Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.pptx</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.openxmlformats-officedocument.presentationml.presentation</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PowerPointX'>
+  <rdfs:label>Microsoft Powerpoint (Open XML) Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PowerPointX' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-ExcelX'>
+  <rdfs:label>Microsoft Excel (Open XML) Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.xlsx</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-ExcelX'>
+  <rdfs:label>Microsoft Excel (Open XML) Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-ExcelX' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Office' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-ZIP'>
+  <rdfs:label>Zip Archive Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.zip</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/zip</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-ZIP'>
+  <rdfs:label>Zip Archive Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-ZIP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Archive' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-LHA'>
+  <rdfs:label>LHA Archive Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.lha</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-LHA'>
+  <rdfs:label>LHA Archive Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-LHA' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Archive' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Tar'>
+  <rdfs:label>Tar Archive Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.tar</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/x-tar</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Tar'>
+  <rdfs:label>Tar Archive Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Tar' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Archive' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-TGZ'>
+  <rdfs:label>TGZ Archive Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.tgz</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-TGZ'>
+  <rdfs:label>TGZ Archive Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-TGZ' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Archive' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-RPM'>
+  <rdfs:label>Redhat Package Module Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.rpm</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-RPM'>
+  <rdfs:label>Redhat Package Module Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RPM' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Package' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-DBM'>
+  <rdfs:label>Debian Package Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.deb</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-DBM'>
+  <rdfs:label>Debian Package Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-DBM' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Package' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-DMG'>
+  <rdfs:label>OS X Package Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.dmg</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-DMG'>
+  <rdfs:label>OS X Package Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-DMG' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Package' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-C'>
+  <rdfs:label>C Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.c</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-C'>
+  <rdfs:label>C Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-C' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-C'>
+  <rdfs:label>C Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-C' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Java'>
+  <rdfs:label>Java Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.java</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Java'>
+  <rdfs:label>Java Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Java' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Java'>
+  <rdfs:label>Java Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Java' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-CPP'>
+  <rdfs:label>C++ Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.cpp</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-CPP'>
+  <rdfs:label>C++ Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CPP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-CPP'>
+  <rdfs:label>C++ Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CPP' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-CS'>
+  <rdfs:label>C# Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.cs</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-CS'>
+  <rdfs:label>C# Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CS' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-CS'>
+  <rdfs:label>C# Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CS' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-PHP'>
+  <rdfs:label>PHP Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.php</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-PHP'>
+  <rdfs:label>PHP Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PHP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-PHP'>
+  <rdfs:label>PHP Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-PHP' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Scheme'>
+  <rdfs:label>Scheme Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Scheme'>
+  <rdfs:label>Scheme Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Scheme' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Scheme'>
+  <rdfs:label>Scheme Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Scheme' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Perl'>
+  <rdfs:label>Perl Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.pl</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Perl'>
+  <rdfs:label>Perl Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Perl' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Perl'>
+  <rdfs:label>Perl Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Perl' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Python'>
+  <rdfs:label>Python Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.py</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Python'>
+  <rdfs:label>Python Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Python' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Python'>
+  <rdfs:label>Python Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Python' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Ruby'>
+  <rdfs:label>Ruby Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Ruby'>
+  <rdfs:label>Ruby Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Ruby' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Ruby'>
+  <rdfs:label>Ruby Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Ruby' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-JavaScript'>
+  <rdfs:label>JavaScript Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.js</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-JavaScript'>
+  <rdfs:label>JavaScript Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JavaScript' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Code' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-JavaScript'>
+  <rdfs:label>JavaScript Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JavaScript' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-Code' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-AVI'>
+  <rdfs:label>AVI Video Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.avi</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-AVI'>
+  <rdfs:label>AVI Video Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-AVI' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Video' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Real'>
+  <rdfs:label>Real Media Video Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.rm</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Real'>
+  <rdfs:label>Real Media Video Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Real' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Video' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-MPG'>
+  <rdfs:label>MPG Video Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.mpg</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-MPG'>
+  <rdfs:label>MPG Video Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MPG' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Video' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-FlashVideo'>
+  <rdfs:label>Flash Video Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.flv</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-FlashVideo'>
+  <rdfs:label>Flash Video Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-FlashVideo' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Video' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-RDFXML'>
+  <rdfs:label>RDF in XML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <owl:sameAs rdf:resource='http://www.w3.org/ns/formats/RDF_XML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.rdf</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/rdf+xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-RDFXML'>
+  <rdfs:label>RDF in XML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RDFXML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-RDFSerialisation' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-RDFXML'>
+  <rdfs:label>RDF in XML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RDFXML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-RDFSerialisation' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-N3'>
+  <rdfs:label>RDF in N3 Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <owl:sameAs rdf:resource='http://www.w3.org/ns/formats/N3' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.n3</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/n3</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-N3'>
+  <rdfs:label>RDF in N3 Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-N3' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-RDFSerialisation' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-N3'>
+  <rdfs:label>RDF in N3 Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-N3' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-RDFSerialisation' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-NTriples'>
+  <rdfs:label>RDF in Triples Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <owl:sameAs rdf:resource='http://www.w3.org/ns/formats/N-Triples' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasMimeType>text/plain</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-NTriples'>
+  <rdfs:label>RDF in Triples Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-NTriples' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-RDFSerialisation' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-NTriples'>
+  <rdfs:label>RDF in Triples Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-NTriples' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-RDFSerialisation' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Turtle'>
+  <rdfs:label>RDF in Turtle Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <owl:sameAs rdf:resource='http://www.w3.org/ns/formats/Turtle' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.ttl</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/turtle</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Turtle'>
+  <rdfs:label>RDF in Turtle Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Turtle' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-RDFSerialisation' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Turtle'>
+  <rdfs:label>RDF in Turtle Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Turtle' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment-RDFSerialisation' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-JSON'>
+  <rdfs:label>JavaScript Object Notation Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.js</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/json</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-JSON'>
+  <rdfs:label>JavaScript Object Notation Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JSON' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-JSON'>
+  <rdfs:label>JavaScript Object Notation Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JSON' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-JSONP'>
+  <rdfs:label>JSONP Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.js</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-JSONP'>
+  <rdfs:label>JSONP Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-JSONP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-XML'>
+  <rdfs:label>XML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.xml</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-XML'>
+  <rdfs:label>XML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-XML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-XML'>
+  <rdfs:label>XML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-XML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-YAML'>
+  <rdfs:label>YAML Ain't Markup Language Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-YAML'>
+  <rdfs:label>YAML Ain't Markup Language Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-YAML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-YAML'>
+  <rdfs:label>YAML Ain't Markup Language Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-YAML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-HTML'>
+  <rdfs:label>HTML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.html</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/html</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-HTML'>
+  <rdfs:label>HTML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-HTML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-HTML'>
+  <rdfs:label>HTML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-HTML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-XHTML'>
+  <rdfs:label>XHTML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.html</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/html</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-XHTML'>
+  <rdfs:label>XHTML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-XHTML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-XHTML'>
+  <rdfs:label>XHTML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-XHTML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-MediawikiMarkup'>
+  <rdfs:label>Mediawiki Markup Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-MediawikiMarkup'>
+  <rdfs:label>Mediawiki Markup Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MediawikiMarkup' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-MediawikiMarkup'>
+  <rdfs:label>Mediawiki Markup Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MediawikiMarkup' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-CSS'>
+  <rdfs:label>Cascading Style Sheet Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.css</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/css</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-CSS'>
+  <rdfs:label>Cascading Style Sheet Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CSS' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-CSS'>
+  <rdfs:label>Cascading Style Sheet Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-CSS' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Markdown'>
+  <rdfs:label>Markdown plain text formatting syntax Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.md</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/x-web-markdown</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Markdown'>
+  <rdfs:label>Markdown plain text formatting syntax Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Markdown' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Markdown'>
+  <rdfs:label>Markdown plain text formatting syntax Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Markdown' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-KML'>
+  <rdfs:label>KML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.kml</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/vnd.google-earth.kml+xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-KML'>
+  <rdfs:label>KML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-KML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-KML'>
+  <rdfs:label>KML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-KML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-MathML'>
+  <rdfs:label>MathML Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-MathML'>
+  <rdfs:label>MathML Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MathML' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-MathML'>
+  <rdfs:label>MathML Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MathML' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-BBCode'>
+  <rdfs:label>Bulletin Board Code Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-BBCode'>
+  <rdfs:label>Bulletin Board Code Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-BBCode' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-BBCode'>
+  <rdfs:label>Bulletin Board Code Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-BBCode' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-RTF'>
+  <rdfs:label>Rich Text Format Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.rtf</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-RTF'>
+  <rdfs:label>Rich Text Format Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RTF' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-RTF'>
+  <rdfs:label>Rich Text Format Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RTF' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-LaTeX'>
+  <rdfs:label>LaTeX Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.tex</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/x-latex</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-LaTeX'>
+  <rdfs:label>LaTeX Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-LaTeX' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-LaTeX'>
+  <rdfs:label>LaTeX Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-LaTeX' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-iCalendar'>
+  <rdfs:label>iCalendar Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.ics</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>text/calendar</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-iCalendar'>
+  <rdfs:label>iCalendar Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-iCalendar' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-iCalendar'>
+  <rdfs:label>iCalendar Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-iCalendar' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-RSS'>
+  <rdfs:label>.rss Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasMimeType>application/rss+xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-RSS'>
+  <rdfs:label>.rss Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RSS' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-RSS'>
+  <rdfs:label>.rss Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-RSS' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Atom'>
+  <rdfs:label>Atom Feed Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.atom</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/atom+xml</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Atom'>
+  <rdfs:label>Atom Feed Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Atom' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Atom'>
+  <rdfs:label>Atom Feed Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Atom' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Endnote'>
+  <rdfs:label>Endnote Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' /></dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Endnote'>
+  <rdfs:label>Endnote Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Endnote' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Endnote'>
+  <rdfs:label>Endnote Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Endnote' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-BibTeX'>
+  <rdfs:label>BibTeX Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.bib</xtypes:hasFileExtension>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-BibTeX'>
+  <rdfs:label>BibTeX Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-BibTeX' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-BibTeX'>
+  <rdfs:label>BibTeX Fragment</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-BibTeX' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-WAV'>
+  <rdfs:label>WAV Audio Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.wav</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>audio/wav</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-WAV'>
+  <rdfs:label>WAV Audio Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-WAV' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Audio' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-MP3'>
+  <rdfs:label>MP3 Audio Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.wav</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>audio/wav</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-MP3'>
+  <rdfs:label>MP3 Audio Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-MP3' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Audio' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Ogg'>
+  <rdfs:label>Ogg Vorbis Audio Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.ogg</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>audio/ogg</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Ogg'>
+  <rdfs:label>Ogg Vorbis Audio Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-Ogg' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Audio' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-FLAC'>
+  <rdfs:label>FLAC Audio Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.flac</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>audio/x-flac</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-FLAC'>
+  <rdfs:label>FLAC Audio Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-FLAC' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' />  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Document-Audio' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-ISOImage'>
+  <rdfs:label>ISO Disk Image Format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Format' />  <xtypes:hasFileExtension>.iso</xtypes:hasFileExtension>
+  <xtypes:hasMimeType>application/x-iso9660-image</xtypes:hasMimeType>
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-ISOImage'>
+  <rdfs:label>ISO Disk Image Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <dcterms:format rdf:resource='http://purl.org/xtypes/Format-ISOImage' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Image'>
+  <rdfs:label>Image Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://xmlns.com/foaf/0.1/Image'>
+  <rdfs:label>Image Document (Generic)</rdfs:label>
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Office'>
+  <rdfs:label>Office Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Office'>
+  <rdfs:label>Office Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Archive'>
+  <rdfs:label>Archive Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Archive'>
+  <rdfs:label>Archive Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Package'>
+  <rdfs:label>Package Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Package'>
+  <rdfs:label>Package Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Code'>
+  <rdfs:label>Code Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Code'>
+  <rdfs:label>Code Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-Code'>
+  <rdfs:label>Code Fragment (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Video'>
+  <rdfs:label>Video Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Video'>
+  <rdfs:label>Video Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-RDFSerialisation'>
+  <rdfs:label>RDFSerialisation Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-RDFSerialisation'>
+  <rdfs:label>RDFSerialisation Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment-RDFSerialisation'>
+  <rdfs:label>RDFSerialisation Fragment (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://purl.org/xtypes/Fragment' /></rdfs:Datatype>
+
+<dcterms:MediaType rdf:about='http://purl.org/xtypes/Format-Audio'>
+  <rdfs:label>Audio Format (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</dcterms:MediaType>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Document-Audio'>
+  <rdfs:label>Audio Document (Generic)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document' /></rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ASCII'>
+  <rdfs:label>ASCII Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ASCII'>
+  <rdfs:label>Document encoded as ASCII</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ASCII' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP37'>
+  <rdfs:label>CP37 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP37'>
+  <rdfs:label>Document encoded as CP37</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP37' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP930'>
+  <rdfs:label>CP930 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP930'>
+  <rdfs:label>Document encoded as CP930</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP930' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP1047'>
+  <rdfs:label>CP1047 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP1047'>
+  <rdfs:label>Document encoded as CP1047</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP1047' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-1'>
+  <rdfs:label>ISO 8859-1 Western Europe Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-1'>
+  <rdfs:label>Document encoded as ISO 8859-1 Western Europe</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-1' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-2'>
+  <rdfs:label>ISO 8859-2 Western and Central Europe Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-2'>
+  <rdfs:label>Document encoded as ISO 8859-2 Western and Central Europe</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-2' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-3'>
+  <rdfs:label>ISO 8859-3 Western Europe and South European (Turkish, Maltese plus Esperanto) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-3'>
+  <rdfs:label>Document encoded as ISO 8859-3 Western Europe and South European (Turkish, Maltese plus Esperanto)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-3' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-4'>
+  <rdfs:label>ISO 8859-4 Western Europe and Baltic countries (Lithuania, Estonia and Lapp) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-4'>
+  <rdfs:label>Document encoded as ISO 8859-4 Western Europe and Baltic countries (Lithuania, Estonia and Lapp)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-4' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-5'>
+  <rdfs:label>ISO 8859-5 Cyrillic alphabet Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-5'>
+  <rdfs:label>Document encoded as ISO 8859-5 Cyrillic alphabet</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-5' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-6'>
+  <rdfs:label>ISO 8859-6 Arabic Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-6'>
+  <rdfs:label>Document encoded as ISO 8859-6 Arabic</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-6' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-7'>
+  <rdfs:label>ISO 8859-7 Greek Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-7'>
+  <rdfs:label>Document encoded as ISO 8859-7 Greek</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-7' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-8'>
+  <rdfs:label>ISO 8859-8 Hebrew Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-8'>
+  <rdfs:label>Document encoded as ISO 8859-8 Hebrew</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-8' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-9'>
+  <rdfs:label>ISO 8859-9 Western Europe with amended Turkish character set Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-9'>
+  <rdfs:label>Document encoded as ISO 8859-9 Western Europe with amended Turkish character set</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-9' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-10'>
+  <rdfs:label>ISO 8859-10 Western Europe with rationalised character set for Nordic languages, including complete Icelandic set Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-10'>
+  <rdfs:label>Document encoded as ISO 8859-10 Western Europe with rationalised character set for Nordic languages, including complete Icelandic set</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-10' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-11'>
+  <rdfs:label>ISO 8859-11 Thai Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-11'>
+  <rdfs:label>Document encoded as ISO 8859-11 Thai</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-11' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-13'>
+  <rdfs:label>ISO 8859-13 Baltic languages plus Polish Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-13'>
+  <rdfs:label>Document encoded as ISO 8859-13 Baltic languages plus Polish</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-13' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-14'>
+  <rdfs:label>ISO 8859-14 Celtic languages (Irish Gaelic, Scottish, Welsh) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-14'>
+  <rdfs:label>Document encoded as ISO 8859-14 Celtic languages (Irish Gaelic, Scottish, Welsh)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-14' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-15'>
+  <rdfs:label>ISO 8859-15 Added the Euro sign and other rationalisations to ISO 8859-1 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-15'>
+  <rdfs:label>Document encoded as ISO 8859-15 Added the Euro sign and other rationalisations to ISO 8859-1</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-15' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO8859-16'>
+  <rdfs:label>ISO 8859-16 Central, Eastern and Southern European languages (Polish, Czech, Slovak, Serbian, Croatian, Slovene, Hungarian, Albanian, Romanian, German, Italian) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO8859-16'>
+  <rdfs:label>Document encoded as ISO 8859-16 Central, Eastern and Southern European languages (Polish, Czech, Slovak, Serbian, Croatian, Slovene, Hungarian, Albanian, Romanian, German, Italian)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO8859-16' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP437'>
+  <rdfs:label>CP437 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP437'>
+  <rdfs:label>Document encoded as CP437</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP437' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP737'>
+  <rdfs:label>CP737 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP737'>
+  <rdfs:label>Document encoded as CP737</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP737' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP850'>
+  <rdfs:label>CP850 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP850'>
+  <rdfs:label>Document encoded as CP850</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP850' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP852'>
+  <rdfs:label>CP852 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP852'>
+  <rdfs:label>Document encoded as CP852</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP852' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP855'>
+  <rdfs:label>CP855 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP855'>
+  <rdfs:label>Document encoded as CP855</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP855' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP857'>
+  <rdfs:label>CP857 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP857'>
+  <rdfs:label>Document encoded as CP857</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP857' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP858'>
+  <rdfs:label>CP858 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP858'>
+  <rdfs:label>Document encoded as CP858</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP858' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP860'>
+  <rdfs:label>CP860 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP860'>
+  <rdfs:label>Document encoded as CP860</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP860' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP861'>
+  <rdfs:label>CP861 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP861'>
+  <rdfs:label>Document encoded as CP861</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP861' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP863'>
+  <rdfs:label>CP863 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP863'>
+  <rdfs:label>Document encoded as CP863</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP863' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP865'>
+  <rdfs:label>CP865 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP865'>
+  <rdfs:label>Document encoded as CP865</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP865' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP866'>
+  <rdfs:label>CP866 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP866'>
+  <rdfs:label>Document encoded as CP866</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP866' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-CP869'>
+  <rdfs:label>CP869 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-CP869'>
+  <rdfs:label>Document encoded as CP869</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-CP869' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1250'>
+  <rdfs:label>Windows-1250 for Central European languages that use Latin script, (Polish, Czech, Slovak, Hungarian, Slovene, Serbian, Croatian, Romanian and Albanian) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1250'>
+  <rdfs:label>Document encoded as Windows-1250 for Central European languages that use Latin script, (Polish, Czech, Slovak, Hungarian, Slovene, Serbian, Croatian, Romanian and Albanian)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1250' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1251'>
+  <rdfs:label>Windows-1251 for Cyrillic alphabets Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1251'>
+  <rdfs:label>Document encoded as Windows-1251 for Cyrillic alphabets</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1251' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1252'>
+  <rdfs:label>Windows-1252 for Western languages Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1252'>
+  <rdfs:label>Document encoded as Windows-1252 for Western languages</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1252' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1253'>
+  <rdfs:label>Windows-1253 for Greek Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1253'>
+  <rdfs:label>Document encoded as Windows-1253 for Greek</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1253' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1254'>
+  <rdfs:label>Windows-1254 for Turkish Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1254'>
+  <rdfs:label>Document encoded as Windows-1254 for Turkish</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1254' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1255'>
+  <rdfs:label>Windows-1255 for Hebrew Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1255'>
+  <rdfs:label>Document encoded as Windows-1255 for Hebrew</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1255' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1256'>
+  <rdfs:label>Windows-1256 for Arabic Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1256'>
+  <rdfs:label>Document encoded as Windows-1256 for Arabic</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1256' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1257'>
+  <rdfs:label>Windows-1257 for Baltic languages Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1257'>
+  <rdfs:label>Document encoded as Windows-1257 for Baltic languages</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1257' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-Windows-1258'>
+  <rdfs:label>Windows-1258 for Vietnamese Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-Windows-1258'>
+  <rdfs:label>Document encoded as Windows-1258 for Vietnamese</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-Windows-1258' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-MacOSRoman'>
+  <rdfs:label>Mac OS Roman Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-MacOSRoman'>
+  <rdfs:label>Document encoded as Mac OS Roman</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-MacOSRoman' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-KOI8-R'>
+  <rdfs:label>KOI8-R Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-KOI8-R'>
+  <rdfs:label>Document encoded as KOI8-R</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-KOI8-R' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-KOI8-U'>
+  <rdfs:label>KOI8-U Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-KOI8-U'>
+  <rdfs:label>Document encoded as KOI8-U</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-KOI8-U' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-KOI7'>
+  <rdfs:label>KOI7 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-KOI7'>
+  <rdfs:label>Document encoded as KOI7</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-KOI7' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-MIK'>
+  <rdfs:label>MIK Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-MIK'>
+  <rdfs:label>Document encoded as MIK</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-MIK' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISCII'>
+  <rdfs:label>ISCII Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISCII'>
+  <rdfs:label>Document encoded as ISCII</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISCII' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-TSCII'>
+  <rdfs:label>TSCII Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-TSCII'>
+  <rdfs:label>Document encoded as TSCII</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-TSCII' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-VISCII'>
+  <rdfs:label>VISCII Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-VISCII'>
+  <rdfs:label>Document encoded as VISCII</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-VISCII' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ShiftJIS'>
+  <rdfs:label>Shift JIS Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ShiftJIS'>
+  <rdfs:label>Document encoded as Shift JIS</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ShiftJIS' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-EUC-JP'>
+  <rdfs:label>EUC-JP Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-EUC-JP'>
+  <rdfs:label>Document encoded as EUC-JP</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-EUC-JP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO-2022-JP'>
+  <rdfs:label>ISO-2022-JP Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO-2022-JP'>
+  <rdfs:label>Document encoded as ISO-2022-JP</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO-2022-JP' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ShiftJIS-2004'>
+  <rdfs:label>Shift_JIS-2004 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ShiftJIS-2004'>
+  <rdfs:label>Document encoded as Shift_JIS-2004</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ShiftJIS-2004' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-EUC-JIS-2004'>
+  <rdfs:label>EUC-JIS-2004 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-EUC-JIS-2004'>
+  <rdfs:label>Document encoded as EUC-JIS-2004</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-EUC-JIS-2004' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO-2022-JP-2004'>
+  <rdfs:label>ISO-2022-JP-2004 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO-2022-JP-2004'>
+  <rdfs:label>Document encoded as ISO-2022-JP-2004</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO-2022-JP-2004' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-GB2312'>
+  <rdfs:label>GB 2312 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-GB2312'>
+  <rdfs:label>Document encoded as GB 2312</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-GB2312' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-GBK'>
+  <rdfs:label>GBK (Microsoft Code page 936) Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-GBK'>
+  <rdfs:label>Document encoded as GBK (Microsoft Code page 936)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-GBK' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-GB18030'>
+  <rdfs:label>GB 18030 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-GB18030'>
+  <rdfs:label>Document encoded as GB 18030</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-GB18030' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-KSX1001'>
+  <rdfs:label>KS X 1001 is a Korean double-byte character encoding standard Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-KSX1001'>
+  <rdfs:label>Document encoded as KS X 1001 is a Korean double-byte character encoding standard</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-KSX1001' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-EUC-KR'>
+  <rdfs:label>EUC-KR Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-EUC-KR'>
+  <rdfs:label>Document encoded as EUC-KR</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-EUC-KR' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-ISO-2022-KR'>
+  <rdfs:label>ISO-2022-KR Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-ISO-2022-KR'>
+  <rdfs:label>Document encoded as ISO-2022-KR</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-ISO-2022-KR' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-UTF-8'>
+  <rdfs:label>UTF-8 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-UTF-8'>
+  <rdfs:label>Document encoded as UTF-8</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-UTF-8' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-UTF-16'>
+  <rdfs:label>UTF-16 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-UTF-16'>
+  <rdfs:label>Document encoded as UTF-16</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-UTF-16' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<xtypes:Encoding rdf:about='http://purl.org/xtypes/Encoding-UTF-32'>
+  <rdfs:label>UTF-32 Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</xtypes:Encoding>
+<rdfs:Class rdf:about='http://purl.org/xtypes/DocumentEncoded-UTF-32'>
+  <rdfs:label>Document encoded as UTF-32</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <xtypes:hasEncoding rdf:resource='http://purl.org/xtypes/Encoding-UTF-32' />
+  <rdfs:subClassOf rdf:resource='http://xmlns.com/foaf/0.1/Document'/>
+</rdfs:Class>
+
+<rdfs:Datatype rdf:about='http://purl.org/xtypes/Fragment'>
+  <rdfs:label>Fragment</rdfs:label>
+  <rdfs:comment>A fragment of a document which may not be a valid document by iteslf.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</rdfs:Datatype>
+<rdfs:Class rdf:about='http://xmlns.com/foaf/0.1/Document'>
+  <rdfs:label>Document</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://xmlns.com/foaf/0.1/' />
+</rdfs:Class>
+<rdfs:Class rdf:about='http://purl.org/xtypes/Encoding'>
+  <rdfs:label>Encoding Scheme</rdfs:label>
+  <rdfs:comment>A scheme used to encode a series of characters, such as ASCII or UTF-8.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+</rdfs:Class>
+<rdf:Property rdf:about='http://purl.org/xtypes/hasFileExtension'>
+  <rdfs:label>File Extension</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:comment>Describes a file extension commonly associated with a format, such as .xml or .zip</rdfs:comment>
+  <rdfs:domain rdf:resource='http://purl.org/dc/terms/MediaType' />
+</rdf:Property>
+<rdf:Property rdf:about='http://purl.org/xtypes/hasMimeType'>
+  <rdfs:label>Mime Type</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:comment>Describes MIME type commonly associated with a format, such as image/png or text/html</rdfs:comment>
+  <rdfs:domain rdf:resource='http://purl.org/dc/terms/MediaType' />
+  <rdfs:subPropertyOf rdf:resource='http://purl.org/dc/terms/format' />
+</rdf:Property>
+<rdf:Property rdf:about='http://purl.org/xtypes/hasEncoding'>
+  <rdfs:label>Encoding</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource='http://purl.org/xtypes/' />
+  <rdfs:comment>Links the class of all documents encoded with a scheme to the encoding scheme that they are encoded with. [try saying that three times quickly...] </rdfs:comment>
+</rdf:Property>
+</rdf:RDF>

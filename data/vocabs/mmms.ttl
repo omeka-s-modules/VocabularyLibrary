@@ -1,0 +1,531 @@
+@prefix :      <http://ldf.fi/schema/tour-rdf/> .
+@prefix m_schema: <http://ldf.fi/schema/narc-menehtyneet1939-45/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix l_talvisota: <http://ldf.fi/narc-luovutetut1939-55/talvisota/> .
+@prefix l_schema: <http://ldf.fi/schema/narc-luovutetut1939-55/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix kulsa: <http://kulttuurisampo.fi/annotaatio#> .
+@prefix void-ext: <http://ldf.fi/void-ext#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix poi:   <http://schema.onki.fi/poi#> .
+@prefix saha3: <http://seco.tkk.fi/saha3/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/> .
+@prefix s_lisat: <http://ldf.fi/narc-sotasurmat1918-22/lisatieto/> .
+@prefix s_schema: <http://ldf.fi/schema/narc-sotasurmat1918-22/> .
+@prefix l_miehikkala: <http://ldf.fi/narc-luovutetut1939-55/miehikkala/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix adms-status: <http://www.w3.org/ns/adms/status/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix s_lahde: <http://ldf.fi/narc-sotasurmat1918-22/lahde/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix adms:  <http://www.w3.org/ns/adms#> .
+@prefix l_jatkosota: <http://ldf.fi/narc-luovutetut1939-55/jatkosota/> .
+@prefix gr:    <http://purl.org/goodrelations/v1> .
+@prefix m:     <http://ldf.fi/narc-menehtyneet1939-45/> .
+@prefix time-schema: <http://www.yso.fi/onto/time-schema#> .
+@prefix s:     <http://ldf.fi/narc-sotasurmat1918-22/> .
+@prefix l_internoidut: <http://ldf.fi/narc-luovutetut1939-55/internoidut/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix blue_route: <http://ldf.fi/poi/suomenlinna/blue_route/> .
+@prefix l_saksalais: <http://ldf.fi/narc-luovutetut1939-55/saksalais/> .
+@prefix koko:  <http://www.yso.fi/onto/koko/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://ldf.fi/schema/mmm/place_type>
+        a               rdfs:Property ;
+        skos:prefLabel  "Bibale place type" .
+
+rdfs:domain  a            rdf:Property ;
+        rdfs:comment      "A domain of the subject property." ;
+        rdfs:domain       rdf:Property ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "domain" ;
+        rdfs:range        rdfs:Class .
+
+owl:DatatypeProperty  a   rdfs:Class ;
+        rdfs:comment      "The class of data properties." ;
+        rdfs:isDefinedBy  owl: ;
+        rdfs:label        "DatatypeProperty" ;
+        rdfs:subClassOf   rdf:Property .
+
+<http://ldf.fi/schema/mmm/>
+        a                     owl:Ontology ;
+        dcterms:creator       <http://seco.cs.aalto.fi> ;
+        dcterms:license       <https://creativecommons.org/licenses/by-nc/4.0/> ;
+        dcterms:modified      "2020-01-29"^^xsd:date ;
+        dcterms:publisher     <http://seco.cs.aalto.fi> ;
+        dcterms:rightsHolder  <http://seco.cs.aalto.fi> ;
+        skos:prefLabel        "Mapping Manuscript Migrations Metadata Schema" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_selling_agent>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by selling agent" .
+
+skos:definition  a          owl:AnnotationProperty , rdf:Property ;
+        rdfs:isDefinedBy    <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label          "definition" ;
+        rdfs:subPropertyOf  skos:note ;
+        skos:definition     "A statement or formal explanation of the meaning of a concept."@en .
+
+owl:AnnotationProperty
+        a                 rdfs:Class ;
+        rdfs:comment      "The class of annotation properties." ;
+        rdfs:isDefinedBy  owl: ;
+        rdfs:label        "AnnotationProperty" ;
+        rdfs:subClassOf   rdf:Property .
+
+owl:ObjectProperty  a     rdfs:Class ;
+        rdfs:comment      "The class of object properties." ;
+        rdfs:isDefinedBy  owl: ;
+        rdfs:label        "ObjectProperty" ;
+        rdfs:subClassOf   rdf:Property .
+
+rdfs:comment  a           rdf:Property ;
+        rdfs:comment      "A description of the subject resource." ;
+        rdfs:domain       rdfs:Resource ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "comment" ;
+        rdfs:range        rdfs:Literal .
+
+<http://ldf.fi/schema/mmm/Database>
+        a               rdfs:Class ;
+        skos:prefLabel  "A database containing source information" .
+
+<http://ldf.fi/schema/mmm/shelfmark_bnf_hebreu>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Bibliothèque nationale de France hébreu collection shelfmark" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_signer>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by signer" .
+
+<http://ldf.fi/schema/mmm/ownership_attributed_to>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P11_had_participant> ;
+        skos:prefLabel      "Observed manuscript owner" .
+
+<http://ldf.fi/schema/mmm/bibale_type_country>
+        a               <http://ldf.fi/schema/mmm/Bibale_place_type> ;
+        skos:prefLabel  "Country" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_author>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by author" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_dedicatee>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by dedicatee" .
+
+<http://ldf.fi/schema/mmm/decorated_initials>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Decorated initials" .
+
+<http://ldf.fi/schema/mmm/shelfmark_arsenal>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Bibliothèque de l'Arsenal collection shelfmark" .
+
+skos:hiddenLabel  a         owl:AnnotationProperty , rdf:Property ;
+        rdfs:comment        "The range of skos:hiddenLabel is the class of RDF plain literals."@en , "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+        rdfs:isDefinedBy    <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label          "hidden label" ;
+        rdfs:subPropertyOf  rdfs:label ;
+        skos:definition     "A lexical label for a resource that should be hidden when generating visual\n      displays of the resource, but should still be accessible to free text search operations."@en .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_formerOwner>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by former owner" .
+
+<http://ldf.fi/schema/mmm/Height>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Height" .
+
+<http://ldf.fi/schema/mmm/Miniatures>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Miniature count" .
+
+<http://ldf.fi/schema/mmm/shelfmark_bnf_latin>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Bibliothèque nationale de France latin collection shelfmark" .
+
+skos:note  a              owl:AnnotationProperty , rdf:Property ;
+        rdfs:isDefinedBy  <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label        "note" ;
+        skos:definition   "A general note, for any purpose."@en ;
+        skos:scopeNote    "This property may be used directly, or as a super-property for more specific note types."@en .
+
+owl:Class  a              rdfs:Class ;
+        rdfs:comment      "The class of OWL classes." ;
+        rdfs:isDefinedBy  owl: ;
+        rdfs:label        "Class" ;
+        rdfs:subClassOf   rdfs:Class .
+
+<http://ldf.fi/schema/mmm/folios>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Folios" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_printer>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by printer" .
+
+<http://ldf.fi/schema/mmm/manuscript_author>
+        a               rdfs:Property ;
+        skos:prefLabel  "Author related to a physical manuscript" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_illuminator>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by illuminator" .
+
+<http://ldf.fi/schema/mmm/binding>
+        a               rdf:Property ;
+        skos:prefLabel  "Description of manuscript binding" .
+
+skos:ConceptScheme  a     owl:Class ;
+        rdfs:isDefinedBy  <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label        "Concept Scheme" ;
+        owl:disjointWith  skos:Concept ;
+        skos:definition   "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+        skos:example      "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en ;
+        skos:scopeNote    "A concept scheme may be defined to include concepts from different sources."@en .
+
+<http://ldf.fi/schema/mmm/SDBM>
+        a               <http://ldf.fi/schema/mmm/Database> ;
+        <http://ldf.fi/schema/mmm/data_provider_url>
+                <https://sdbm.library.upenn.edu/> ;
+        skos:prefLabel  "Schoenberg Database of Manuscripts" .
+
+<http://ldf.fi/schema/mmm/columns>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Columns" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_possible_author>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Possibly carried out by author" .
+
+rdf:Property  a           rdfs:Class ;
+        rdfs:comment      "The class of RDF properties." ;
+        rdfs:isDefinedBy  rdf: ;
+        rdfs:label        "Property" ;
+        rdfs:subClassOf   rdfs:Resource .
+
+<http://ldf.fi/schema/mmm/biblissima_id>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Biblissima identifier" .
+
+<http://ldf.fi/schema/mmm/bibale_type_region>
+        a               <http://ldf.fi/schema/mmm/Bibale_place_type> ;
+        skos:prefLabel  "Region" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_creator>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by creator" .
+
+<http://ldf.fi/schema/mmm/shelfmark_christ_church>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Christ Church collection shelfmark" .
+
+<http://ldf.fi/schema/mmm/Bodleian_collection>
+        a               <http://erlangen-crm.org/current/E78_Collection> ;
+        <http://ldf.fi/schema/mmm/collection_location>
+                <http://ldf.fi/mmm/place/tgn_7011931> ;
+        skos:prefLabel  "Bodleian Library collections in Oxford" .
+
+<http://ldf.fi/schema/mmm/external_url>
+        a               rdfs:Property ;
+        skos:prefLabel  "External URL link to find more information from" .
+
+skos:altLabel  a            owl:AnnotationProperty , rdf:Property ;
+        rdfs:comment        "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en , "The range of skos:altLabel is the class of RDF plain literals."@en ;
+        rdfs:isDefinedBy    <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label          "alternative label" ;
+        rdfs:subPropertyOf  rdfs:label ;
+        skos:definition     "An alternative lexical label for a resource."@en ;
+        skos:example        "Acronyms, abbreviations, spelling variants, and irregular plural/singular\n      forms may be included among the alternative labels for a concept. Mis-spelled terms\n      are normally included as hidden labels (see skos:hiddenLabel)."@en .
+
+rdfs:range  a             rdf:Property ;
+        rdfs:comment      "A range of the subject property." ;
+        rdfs:domain       rdf:Property ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "range" ;
+        rdfs:range        rdfs:Class .
+
+<http://ldf.fi/schema/mmm/observed_manuscript>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P12_occured_in_the_presence_of> ;
+        skos:prefLabel      "Observed manuscript" .
+
+<http://ldf.fi/schema/mmm/shelfmark_barocci>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Barocci collection shelfmark" .
+
+<http://ldf.fi/schema/mmm/Millimetre>
+        a               <http://erlangen-crm.org/current/E58_Measurement_Unit> ;
+        skos:prefLabel  "mm" .
+
+skos:Concept  a           owl:Class ;
+        rdfs:isDefinedBy  <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label        "Concept" ;
+        skos:definition   "An idea or notion; a unit of thought."@en .
+
+<http://ldf.fi/schema/mmm/Source>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E31_Document> ;
+        skos:prefLabel   "Source document" .
+
+<http://ldf.fi/schema/mmm/bibale_type_settlement>
+        a               <http://ldf.fi/schema/mmm/Bibale_place_type> ;
+        skos:prefLabel  "Settlement" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_patron>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by patron" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_binder>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by binder" .
+
+rdfs:label  a             rdf:Property ;
+        rdfs:comment      "A human-readable name for the subject." ;
+        rdfs:domain       rdfs:Resource ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "label" ;
+        rdfs:range        rdfs:Literal .
+
+<http://ldf.fi/schema/mmm/Columns>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Column count" .
+
+<http://ldf.fi/schema/mmm/entry>
+        a                   rdfs:Property , rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "SDBM manuscript entry URL" , "Source entry in SDBM" .
+
+<http://ldf.fi/schema/mmm/Bibale_place_type>
+        a               rdfs:Class ;
+        skos:prefLabel  "Bibale place type class" .
+
+<http://ldf.fi/schema/mmm/phillipps_number>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Phillipps number" .
+
+<http://ldf.fi/schema/mmm/data_provider_url>
+        a               rdfs:Property ;
+        skos:prefLabel  "URL link to find more information from" .
+
+<http://ldf.fi/schema/mmm/manuscript_work>
+        a               rdfs:Property ;
+        skos:prefLabel  "Work contained in a physical manuscript" .
+
+<http://ldf.fi/schema/mmm/Width>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Width" .
+
+<http://ldf.fi/schema/mmm/Bibale>
+        a               <http://ldf.fi/schema/mmm/Database> ;
+        <http://ldf.fi/schema/mmm/data_provider_url>
+                <http://bibale.irht.cnrs.fr/> ;
+        skos:prefLabel  "Bibale Database" .
+
+<http://ldf.fi/schema/mmm/Bodley>
+        a               <http://ldf.fi/schema/mmm/Database> ;
+        <http://ldf.fi/schema/mmm/data_provider_url>
+                <https://medieval.bodleian.ox.ac.uk/> ;
+        skos:prefLabel  "Medieval Manuscripts in Oxford Libraries" .
+
+<http://ldf.fi/schema/mmm/shelfmark_buchanan>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Bodley's Buchanan collection shelfmark" .
+
+<http://ldf.fi/schema/mmm/width>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Width" .
+
+skos:prefLabel  a           owl:AnnotationProperty , rdf:Property ;
+        rdfs:comment        "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise\n      disjoint properties."@en , "The range of skos:prefLabel is the class of RDF plain literals."@en , "A resource has no more than one value of skos:prefLabel per\n      language tag, and no more than one value of skos:prefLabel without language tag."@en ;
+        rdfs:isDefinedBy    <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label          "preferred label" ;
+        rdfs:subPropertyOf  rdfs:label ;
+        skos:definition     "The preferred lexical label for a resource, in a given language."@en .
+
+rdfs:subClassOf  a        rdf:Property ;
+        rdfs:comment      "The subject is a subclass of a class." ;
+        rdfs:domain       rdfs:Class ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "subClassOf" ;
+        rdfs:range        rdfs:Class .
+
+<http://ldf.fi/schema/mmm/ActorActivity>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E7_Activity> ;
+        skos:prefLabel   "Actor activity" .
+
+rdfs:Resource  a          rdfs:Class ;
+        rdfs:comment      "The class resource, everything." ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "Resource" .
+
+<http://ldf.fi/schema/mmm/Folios>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Folio count" .
+
+<http://ldf.fi/schema/mmm/had_sales_price>
+        a               rdfs:Property ;
+        skos:prefLabel  "had sales price" .
+
+<http://ldf.fi/schema/mmm/HistoriatedInitials>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Number of historiated initials" .
+
+skos:example  a             owl:AnnotationProperty , rdf:Property ;
+        rdfs:isDefinedBy    <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label          "example" ;
+        rdfs:subPropertyOf  skos:note ;
+        skos:definition     "An example of the use of a concept."@en .
+
+<http://ldf.fi/schema/mmm/historiated_initials>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Historiated initials" .
+
+<http://ldf.fi/schema/mmm/PlaceNationality>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://ldf.fi/schema/mmm/ActorActivity> ;
+        skos:prefLabel   "Nationality / residence / permanent location" .
+
+<http://ldf.fi/schema/mmm/ManuscriptActivity>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E7_Activity> ;
+        skos:prefLabel   "Manuscript related activity" .
+
+rdf:type  a               rdf:Property ;
+        rdfs:comment      "The subject is an instance of a class." ;
+        rdfs:domain       rdfs:Resource ;
+        rdfs:isDefinedBy  rdf: ;
+        rdfs:label        "type" ;
+        rdfs:range        rdfs:Class .
+
+rdfs:Class  a             rdfs:Class ;
+        rdfs:comment      "The class of classes." ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "Class" ;
+        rdfs:subClassOf   rdfs:Resource .
+
+<http://ldf.fi/schema/mmm/height>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Height" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_scribe>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by scribe" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_commissioner>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by commissioner" .
+
+skos:hasTopConcept  a     rdf:Property , owl:ObjectProperty ;
+        rdfs:domain       skos:ConceptScheme ;
+        rdfs:isDefinedBy  <http://www.w3.org/2004/02/skos/core> ;
+        rdfs:label        "has top concept" ;
+        rdfs:range        skos:Concept ;
+        owl:inverseOf     skos:topConceptOf ;
+        skos:definition   "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en .
+
+<http://ldf.fi/schema/mmm/order>
+        a               rdf:Property ;
+        rdfs:comment    "Used, e.g., for ordering of provenance information" ;
+        rdfs:domain     rdf:Statement ;
+        skos:prefLabel  "Ordering number" .
+
+<http://ldf.fi/schema/mmm/shelfmark_bnf_nal>
+        a                   rdfs:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "Bibliothèque nationale de France NAL collection shelfmark" .
+
+<http://ldf.fi/schema/mmm/miniatures>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Miniatures" .
+
+<http://ldf.fi/schema/mmm/DecoratedInitials>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Number of decorated initials" .
+
+rdfs:Literal  a           rdfs:Class ;
+        rdfs:comment      "The class of literal values, eg. textual strings and integers." ;
+        rdfs:isDefinedBy  rdfs: ;
+        rdfs:label        "Literal" ;
+        rdfs:subClassOf   rdfs:Resource .
+
+<http://ldf.fi/schema/mmm/manuscript_record>
+        a                   rdfs:Property , rdf:Property ;
+        rdfs:domain         <http://erlangen-crm.org/efrbroo/F4_Manifestation_Singleton> ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P1_is_identified_by> ;
+        skos:prefLabel      "SDBM manuscript record URL" , "Source manuscript record in SDBM" .
+
+<http://ldf.fi/schema/mmm/collection_location>
+        a               rdfs:Property ;
+        skos:prefLabel  "Location of a manuscript collection at some point during its existence" .
+
+<http://ldf.fi/schema/mmm/carried_out_by_as_artist>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P14_carried_out_by> ;
+        skos:prefLabel      "Carried out by artist" .
+
+<http://ldf.fi/schema/mmm/data_provider>
+        a               rdfs:Property ;
+        rdfs:range      <http://ldf.fi/schema/mmm/Database> ;
+        skos:prefLabel  "The data provider database" .
+
+<http://ldf.fi/schema/mmm/Lines>
+        a                rdfs:Class ;
+        rdfs:subClassOf  <http://erlangen-crm.org/current/E54_Dimension> ;
+        skos:prefLabel   "Line count" .
+
+<http://ldf.fi/schema/mmm/catalog_or_lot_number>
+        a               rdfs:Property ;
+        skos:prefLabel  "Catalog or lot number" .
+
+<http://ldf.fi/schema/mmm/recon_date>
+        a               rdfs:Property ;
+        skos:prefLabel  "Date when the resources has been last reconciled with the Recon tool" .
+
+<http://ldf.fi/schema/mmm/lines>
+        a                   rdf:Property ;
+        rdfs:subPropertyOf  <http://erlangen-crm.org/current/P43_has_dimension> ;
+        skos:prefLabel      "Lines" .

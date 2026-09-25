@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://gamemetadata.org/uri/schema/gamecip"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: GAMECIP - Schema (work-in-process) -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip">
+  <dc:title xml:lang="en">GAMECIP - Schema (work-in-process)</dc:title>
+  <skos:note  xml:lang="en">The RDF for the schema of elements for the GAMECIP project currently resides in the Open Metadata Registry, http://metadataregistry.org/schema/show/id/89.html.  There are also recommended vocabularies for some of the elements in the Open Metadata Registry, the URIs of which are given with the associated element. 
+
+This set of elements accounts for the basic identification and discovery of published video games.  It is  a minimal element set relevant for producers, distributors, and libraries.   Any organization using this element set may wish to add additional information necessary for its  own purposes; the elements below are intended as a core scheme  applicable to all parties.  The manner of implementation is up to the party.  For example, data may be in any of a variety of formats: XML or RDF, MARC, spreadsheet or database, etc.   Some elements may be omitted if redundant within a particular implementation of the scheme, and there may be more than one way to implement an element.  For example, designating an entity as a publisher may involve a data element dedicated to “publisher” or a data element for “name” associated with a role of “publisher.” Many of these elements should have controlled vocabularies, though any party may choose the controlled vocabulary that best suits its needs.  We recommend the use of recognized, published controlled vocabularies and urge users of this scheme to always designate which vocabularies are being used.  This may be accomplished by text strings or through semantic web linkage.   The idea is to be able to easily map data among the various formats in use, thus facilitating the standardization and re-use of data.  To this end, we have provided URIs for comparable properties in schema.org, Dublin Core, MODS, and RDA.  Note that properties specified in these  other schemas may be broader or narrower in definition than ours, so the mapping may only work in one direction for some data elements.
+
+Note that some data elements may be implicit in the metadata of some parties. For example, a collection consisting exclusively of video games may not have the same need to specify the form of content as  a library with metadata for many types of materials.  These implicit assumptions would need to be factored in exporting and mapping data.
+
+Included in this description of metadata elements are the URI for the property, a definition, other comments, some examples  marked up as properties in different schemas (to illustrate different ways in which the same elements may be implemented, sometimes in the context of related data elements).  To facilitate mapping, there are also URIs for similar properties in other schemas.</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Contents -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/contents">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">contents</reg:name>
+  <rdfs:label xml:lang="en">Contents</rdfs:label>
+  <skos:definition xml:lang="en">Naming and/or description of the works contained within a multi-part or compilation resource.  In different schemas, contents may be indicated in different ways, for example, contents could be noted as a series of related work elements.  In schemas where individual works are cataloged separately, it is recommended that the name and/or identifier of the host resource be noted in some manner.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin core (elements)
+&lt;description&gt; Banjo-Kazooie: nuts and bolts -- Viva piÃ±ata.&lt;/description&gt;
+
+MODS
+&lt;tableOfContents&gt;Banjo-Kazooie: nuts and bolts -- Viva piÃ±ata.&lt;tableOfContents&gt;
+or
+&lt;relatedItem type="constituent"&gt;
+&lt;titleInfo&gt;
+&lt;title&gt; Banjo-kazooie: nuts and bolts &lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;/relatedItem&gt;
+&lt;relatedItem type="constituent"&gt;
+&lt;titleInfo&gt;
+&lt;title&gt;Viva piÃ±ata&lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;/relatedItem&gt;
+Note that in MODS any element may be embedded in a relatedItem field, so more specific information on constituent works could be included.
+
+MARC/RDA
+505 0  Banjo-Kazooie: nuts and bolts -- Viva piÃ±ata.
+and/or
+730 02 $i Contains (work): $a Banjo-Kazooie: nuts and bolts.
+730 02 $i Contains (work): $a Viva piÃ±ata.</rdfs:comment>
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/description" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#tableOfContents" />
+</rdf:Description>
+
+<!-- Property: Content type -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/contentType">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">contentType</reg:name>
+  <rdfs:label xml:lang="en">Content type</rdfs:label>
+  <skos:definition xml:lang="en">This is intended as an identification of the high-level type of content, such as digital or, software.  Each schema should use a controlled vocabulary for this field. The value should be given for the main content if there is more than one content type i.e. the game itself rather than the accompanying materials. In some schemas, this information may be implicit (i.e. all resources are software), in which case this field would need added if such records were exported for ingest into a system for a more generalized collection consisting of many types of materials.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Exampless
+
+Dublin Core (elements)
+&lt;type&gt;Software&lt;type&gt;
+
+MODS
+&lt;typeOfResource&gt;software, multimedia&lt;/typeOfResource&gt;
+
+MARC/RDA
+Leader/06  m
+336    computer program$2rdacontent
+[note, RDA designates two-dimensional moving image for video games and says nothing about the digital aspect]
+
+Schema.org
+&lt;rdf:type rdf:resource="http://schema.org/SoftwareApplication "/&gt;
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60049" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/type" />
+  <skos:closeMatch rdf:resource="http://schema.org/SoftwareApplication" />
+</rdf:Description>
+
+<!-- Property: Copyright Date -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/copyrightDate">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">copyrightDate</reg:name>
+  <rdfs:label xml:lang="en">Copyright Date</rdfs:label>
+  <skos:definition xml:lang="en">Date of copyright.  If there are multiple dates, generally use the latest one, unless the schema allows different dates to be associated with different parts of the resource.  Includes phonogram dates.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;dat&gt;2006&lt;/date&gt;
+
+MODS
+&lt;originInfo&gt;
+     &lt;copyrightDate&gt;2006&lt;/&gt;
+&lt;/originInfo&gt;
+
+MARC/RDA
+264  4 $c ©2006
+
+Schema.org
+
+&lt;schema:copyrightYear&gt;1999&lt;/schema:copyrightYear&gt;
+
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60069" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/date" />
+  <skos:closeMatch rdf:resource="http://schema.org/copyrightYear" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#dateOfCopyright" />
+</rdf:Description>
+
+<!-- Property: Credits -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/credits">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">credits</reg:name>
+  <rdfs:label xml:lang="en">Credits</rdfs:label>
+  <skos:definition xml:lang="en">Names associated with the creation of the resource should be noted in some fashion. This may be accomplished through an explicit element such as a list of credits in a "credits" element, individual elements for various functions such as "developer," "game artist" etc., or may be accomplished by associating an Agent name with the resource and providing a role term such as "Developer."  Or both methods may be used, particularly when it is desired to have consistent formulation of names for indexing purposes.  In such cases, names may be taken from or linked to a name authority file such as id.loc.gov or viaf.org</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples
+
+Dublin Core (elements)
+&lt;contributor&gt;Ubisoft&lt;/contributor&gt;
+&lt;contributor&gt;Clancy, Tom&lt;/contributor&gt;
+
+MODS
+&lt;note&gt;Developed by Ubisoft, ; characters created by Tom Clancy.&lt;/note&gt;
+ and/or
+&lt;name type="corporate" authority="naf" valueURI=â€http://id.loc.gov/authorities/names/n2010072429"&gt;
+  	&lt;namePart&gt;Ubisoft (Firm)&lt;/namePart&gt;
+        &lt;role&gt;
+  	  	&lt;roleTerm type="code" authority="marcrelator"&gt;contributor&lt;/roleTerm&gt;
+  	&lt;/role&gt;
+&lt;/name&gt;
+ and/or
+&lt;name type="personal" authority="naf" valueURI=http://id.loc.gov/authorities/names/n84030721"&gt;
+  	&lt;namePart&gt;Clancy, Tom, $d 1947-2013&lt;/namePart&gt;
+         &lt;role&gt;
+  	  	&lt;roleTerm type="code" authority="marcrelator"&gt;contributor&lt;/roleTerm&gt;
+  	&lt;/role&gt;
+&lt;/name&gt;
+
+MARC/RDA  
+508  Developed by Ubisoft; characters created by Tom Clancy.
+and optionally
+700 10 Clancy, Tom, $d 1947-2013 
+710   2 Ubisoft (Firm).
+
+Schema.org
+&lt;schema:contributor&gt;Ubisoft (Firm)&lt;/schema:contributor&gt;
+</rdfs:comment>
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60105" />
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60339" />
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60398" />
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60447" />
+  <skos:narrowMatch rdf:resource="http://purl.org/dc/elements/1.1/creator" />
+  <skos:narrowMatch rdf:resource="http://purl.org/dc/elements/1.1/contributor" />
+  <skos:narrowMatch rdf:resource="http://schema.org/creator" />
+  <skos:narrowMatch rdf:resource="http://schema.org/contributor" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#name" />
+</rdf:Description>
+
+<!-- Property: Developer -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/developer">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">developer</reg:name>
+  <rdfs:label xml:lang="en">Developer</rdfs:label>
+  <skos:definition xml:lang="en">May be used instead of or in addition to credits.  If used as a separate element, it is desirable to have a consistent form of the name.  In such cases, names may be taken from or linked to a name authority file such as id.loc.gov or viaf.org or be linked to a URI for that particular name. For a text string in  a library setting, a personal name should be in the form Last, First.
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Note, neither RDA nor the MARC relator terms have a term for game developer, nor is it certain that RDA would consider a developer as a "creator," so these examples are tentative.
+
+Examples:
+
+Dublin Core (elements)
+&lt;contributor&gt;Ubisoft&lt;/contributor&gt;
+
+MODS
+&lt;name type="corporate" authority="naf" valueURI=”http://id.loc.gov/authorities/names/n2010072429&gt;
+  	&lt;namePart&gt;Ubisoft (Firm)&lt;/namePart&gt;
+        &lt;role&gt;
+  	  	&lt;roleTerm type="code" authority="marcrelator"&gt;contributor&lt;/roleTerm&gt;
+  	&lt;/role&gt;
+&lt;/name&gt;
+
+
+MARC/RDA  (note in first element the credit is embedded in the title statement where it is transcribed verbatim from the resource)
+245 00 Tom Clancy's splinter cell essentials / $c developed and published by Ubisoft 
+or
+508      Developed by Ubisoft; characters created by Tom Clancy.
+and optionally
+710   2 Ubisoft (Firm).
+</rdfs:comment>
+  <skos:broadMatch rdf:resource="http://rdaregistry.info/Elements/u/P60447" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/creator" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#name" />
+  <skos:broadMatch rdf:resource="http://schema.org/creator" />
+  <skos:broadMatch rdf:resource="http://schema.org/contributor" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/contributor" />
+</rdf:Description>
+
+<!-- Property: Extent -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/extent">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">extent</reg:name>
+  <rdfs:label xml:lang="en">Extent</rdfs:label>
+  <skos:definition xml:lang="en">Definition:  For games distributed in a physical media format. This may be a separate element or concatenated with Media Format. In either case it is desirable to use a recognized list of terms for media formats. GAMECIPhas published a suggested list of formats at http://gamemetadata.org/uri/media </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;format&gt;1 Nintendo Game Boy Advance Game Pak&lt;/format&gt;
+
+MODS
+&lt;extent&gt;1 Nintendo Game Boy Advance Game Pak&lt;/extent&gt;
+
+MARC/RDA (embedded with other characteristics)
+300    1 computer chip cartridge : $b sound, color ; $c 6 cm</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60550" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/format" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#physicalExtent" />
+</rdf:Description>
+
+<!-- Property: Form of Content -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/formOfContent">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">formOfContent</reg:name>
+  <rdfs:label xml:lang="en">Form of Content</rdfs:label>
+  <skos:definition xml:lang="en">There should be something in a record to identify the resource as a game.  This data may be implicit in a given schema, as for a collection consisting entirely of games,  in which case this data would need added if such records were exported for ingest into a system for a more generalized collection consisting of many types of materials.  This data should be recorded systematically, but its form may vary widely between schemas, possibly having a specific element of its own or possibly being given as part of the genre element.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples
+
+Dublin Core (elements)
+&lt;type&gt;game&lt;/type&gt;
+
+MODS
+&lt;genre&gt;game&lt;/genre&gt;
+
+MARC/RDA
+008/26  g
+and optionally 
+380    Video game.
+and optionally
+655  0 Video game.
+
+Schema.org
+&lt;schema:applicationCategory&gt; Game, Multimedia&lt;/schema:applicationCategory&gt;
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60584" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/type" />
+  <skos:closeMatch rdf:resource="http://schema.org/applicationCategory" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#genre" />
+</rdf:Description>
+
+<!-- Property: Genre -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/genre">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">genre</reg:name>
+  <rdfs:label xml:lang="en">Genre</rdfs:label>
+  <skos:definition xml:lang="en">The genre of game.  It is recommended to use a recognized published list of genres.  When using a self-developed or in-house list, it is recommended that the list be registered or published. The genre of game. The genre could be recorded as a text string or linked to a URI for the particular term.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin core (elements)
+&lt;type&gt;First-person shooter&lt;/type&gt;
+
+MODS
+&lt;genre authority="lcsh" valueURI="http://id.loc.gov/authorities/subjects/sh85029475"&gt;Computer adventure games&lt;/genre&gt; 
+
+MARC/LCSH
+655  0  Computer adventure games.
+
+Schema.org
+&lt;schema:genre xml:lang="en"&gt;Computer adventure games&lt;/schema:genre&gt;
+</rdfs:comment>
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/type" />
+  <skos:closeMatch rdf:resource="http://schema.org/genre" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#genre" />
+</rdf:Description>
+
+<!-- Property: Identifier -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/identifier">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">identifier</reg:name>
+  <rdfs:label xml:lang="en">Identifier</rdfs:label>
+  <skos:definition xml:lang="en">An identifier for the resource, such as a UPC, ISBN, publisher-supplied number, or other standard identifier.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Record a standard identifier as it appears on the resource.  Some systems may require omission of internal punctuation.
+
+Examples:
+
+Dublin Core (elements)
+ &lt;identifier"&gt;0-7849-2784-7&lt;/identifier&gt;
+ &lt;identifier&gt;008888333036&lt;/identifier&gt;
+ &lt;identifier&gt;333036&lt;/identifier&gt;
+ &lt;identifier&gt;ULUS 10070&lt;/identifier&gt;
+
+MODS
+ &lt;identifier type="isbn"&gt;0784927847&lt;/identifier&gt;
+ &lt;identifier type="upc"&gt;008888333036&lt;/identifier&gt;
+ &lt;identifier&gt;333036&lt;/identifier&gt;
+ &lt;identifier&gt;ULUS 10070&lt;/identifier&gt;
+
+MARC/RDA
+020      0784927847
+024 1   008888333036
+028 52 333036 $b Ubisoft
+024 8  ULUS 10070</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://purl.org/dc/elements/1.1/identifier" />
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60052" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#identifier" />
+</rdf:Description>
+
+<!-- Property: Language -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/language">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">language</reg:name>
+  <rdfs:label xml:lang="en">Language</rdfs:label>
+  <skos:definition xml:lang="en">The predominant language of the resource.  Some schemas may allow for the recording of languages of subtitles or other supported languages.  It is desirable to use the form of language from a controlled list, use a recognized code, or link to a URI for a particular term</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples
+
+Dublin Core (elements)
+&lt;language&gt;English&lt;/language&gt;
+
+MODS
+&lt;language&gt;&lt;languageTerm type="code" authority="iso639-2b"&gt;eng&lt;/languageTerm&gt;
+&lt;languageTerm type="text"&gt;english&lt;/languageTerm&gt;&lt;/language&gt;
+
+MARC RDA
+008/35-37  eng
+041 1 eng $a jpn $j eng $jpn
+546  English and Japanese with optional English subtitles.
+
+Schema.org
+&lt;schema:inLanguage&gt;en&lt;/schema:inLanguage&gt;
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60099" />
+  <skos:closeMatch rdf:resource="http://purl.org/dc/elements/1.1/language" />
+  <skos:closeMatch rdf:resource="http://schema.org/inLanguage" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#languageOfResource" />
+</rdf:Description>
+
+<!-- Property: Media Format -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/mediaFormat">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">mediaFormat</reg:name>
+  <rdfs:label xml:lang="en">Media Format</rdfs:label>
+  <skos:definition xml:lang="en">For games distributed in a physical media format. This may be a separate element or concatenated with Extent. If used as a separate element, it should be from a recognized list of terms for media. GAMECIP has published a suggested list of formats at http://gamemetadata.org/uri/media
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:closeMatch rdf:resource="http://www.rdaregistry.info/Elements/u/#P60048" />
+  <skos:closeMatch rdf:resource="http://purl.org/dc/elements/1.1/format" />
+  <rdfs:comment xml:lang="en">Example:
+
+Dublin Core (elements)
+&lt;format&gt;Nintendo Game Boy Advance Game Pak&lt;/format&gt;
+
+MARC/RDA
+338 computer chip cartridge $2rdacarrier</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Platform -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/platform">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">platform</reg:name>
+  <rdfs:label xml:lang="en">Platform</rdfs:label>
+  <skos:definition xml:lang="en">Name of the platform should be from a recognized list of terms for media formats, or may be linked to a URI for a particular term.  GAMECIP has published a suggested list of formats at http://gamemetadata.org/uri/platform. Detailed information about system requirements, peripherals, etc., should be input in the System Requirements field</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;relation&gt;Sony PlayStation 2 (NTSC-U/C)&lt;/relation&gt;
+or
+&lt;relation&gt;http://gamemetadata.org/uri/platform/1068&lt;/relation&gt;
+
+MODS
+&lt;note&gt;Sony PlayStation 2 (NTSC-U/C)&lt;/note&gt;
+or
+&lt;note.Playstation 2 with the NTSC/UC designation&lt;/note&gt;
+
+MARC/RDA
+538  System requirements: Playstation 2 with the NTSC/UC designation.
+753  Sony PlayStation 2 (NTSC-U/C)
+
+Schema.org
+ &lt;schema:gamePlatform&gt;Sony PlayStation 2 (NTSC-U/C)&lt;/gamePlatform&gt;
+</rdfs:comment>
+  <skos:broadMatch rdf:resource="http://www.rdaregistry.info/Elements/u/#P60528" />
+  <skos:closeMatch rdf:resource="http://schema.org/gamePlatform" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#note" />
+</rdf:Description>
+
+<!-- Property: Publication Date -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/publicationDate">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">publicationDate</reg:name>
+  <rdfs:label xml:lang="en">Publication Date</rdfs:label>
+  <skos:definition xml:lang="en">Date of publication or release.  This is usually not noted on the packaging.  A particular schema may opt to infer a year of publication based on the copyright date or to use secondary sources to find a release date.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;date&gt;1999&lt;/date&gt;
+
+MODS
+&lt;originInfo&gt;
+    	&lt;publisher&gt;Interplay Productions&lt;/publisher&gt;
+  	&lt;dateIssued&gt;[1999]&lt;/dateIssued&gt;
+&lt;/originInfo&gt;
+
+MARC/RDA  [note, date is embedded in publication statement]
+264  1 Irvine, CA :$bInterplay Productions,$c[1999]
+
+Schema.org
+&lt;schema:datePublished&gt;1999&lt;/schema:datePublished&gt;
+
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60073" />
+  <skos:closeMatch rdf:resource="http://schema.org/datePublished" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/date" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#dateCreated" />
+</rdf:Description>
+
+<!-- Property: Publisher -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/publisher">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">publisher</reg:name>
+  <rdfs:label xml:lang="en">Publisher</rdfs:label>
+  <skos:definition xml:lang="en">For published games, the publisher should be identified in some fashion.  The publisher name may be transcribed from the resource itself (most commonly the container for physical games), or the publisher name may be taken from or linked to a name authority file such as id.loc.gov or viaf.org, or be linked to a URI for that particular name in order to insure consistency in the form of the name.  In some schemas, it may be desirable to employ both methods.
+
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;publisher&gt;THQ&lt;/publisher&gt;
+
+MODS
+&lt;originInfo&gt;
+    	&lt;publisher&gt;THQ&lt;/publisher&gt;
+  	&lt;dateIssued&gt;[2008]&lt;/dateIssued&gt;
+&lt;/originInfo&gt;
+and optionally
+&lt;name type="corporate" authority="naf" valueURI="http://id.loc.gov/authorities/names/no2002081840"&gt;
+  	&lt;namePart&gt;THQ (Firm)&lt;/namePart&gt;
+        &lt;role&gt;
+  	  	&lt;roleTerm type="code" authority="rda"&gt;publisher&lt;/roleTerm&gt;
+  	&lt;/role&gt;
+&lt;/name&gt;
+
+MARC/RDA  [note, publisher is embedded in publication statement]
+264  1 Irvine, CA :$bTHQ,$c[2008]
+and optionally
+710  2 THQ (Firm),$epublisher.
+
+Schema.org
+&lt;schema:publisher&gt;THQ&lt;schema:publisher&gt;
+And optionally
+&lt;schema:contributor&gt;THQ (Firm),&lt;/schema:contributor&gt;
+
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60444" />
+  <skos:closeMatch rdf:resource="http://purl.org/dc/elements/1.1/publisher" />
+  <skos:closeMatch rdf:resource="http://schema.org/publisher" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#publisher" />
+</rdf:Description>
+
+<!-- Property: Related Work -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/relatedWork">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">relatedWork</reg:name>
+  <rdfs:label xml:lang="en">Related Work</rdfs:label>
+  <skos:definition xml:lang="en">A work related to the resource in some manner, such as a work upon which it is based, etc.  In some schemas, the contents of a compilation work may be expressed as related works.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples:
+
+Dublin Core (elements)
+&lt;relation&gt;Camp Lazlo&lt;/relation&gt;
+
+MODS
+&lt;relatedItem&gt;
+     &lt;titleInfo&gt;
+           &lt;title&gt;Camp Lazlo&lt;/title&gt;
+     &lt;/titleInfo&gt;
+&lt;/relatedItem&gt;
+
+&lt;relatedItem type="constituent"&gt;
+&lt;titleInfo&gt;
+&lt;title&gt; Banjo-Kazooie: nuts and bolts &lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;/relatedItem&gt;
+&lt;relatedItem type="constituent"&gt;
+&lt;titleInfo&gt;
+&lt;title&gt;Viva piÃ±ata&lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;/relatedItem&gt;
+
+MARC/RDA
+730 00 $i Based on (work): $a Camp Lazlo.
+730 02 $i Contains (work): $a Banjo-kazooie: Nuts and bolts.
+730 02 $i Contains (work): $a Viva piÃ±ata.
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60313" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+  <skos:narrowMatch rdf:resource="http://schema.org/isBasedOnUrl" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#relatedItem" />
+</rdf:Description>
+
+<!-- Property: Standardized Title -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/standardizedTitle">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">standardizedTitle</reg:name>
+  <rdfs:label xml:lang="en">Standardized Title</rdfs:label>
+  <skos:definition xml:lang="en">If the resource has previously appeared under a different title, including a version in a different language (when it is not considered a different work), use this field to record the original title. In some schemas (such as RDA) the title may have additions to it to distinguish it from other works with the same title.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples
+
+Dublin Core (elements)
+&lt;title&gt;Bushidō burēdo ni &lt;/title&gt;
+
+MODS
+&lt;titleInfo&gt;
+     &lt;title type="uniform"&gt;Bushidō burēdo ni&lt;/title&gt;
+&lt;/titleInfo&gt;
+
+MARC/RDA
+130 0  Bushidō burēdo ni.
+130 0  Dragon Quest (Game)
+
+Schema.org
+&lt;schema:alternateName xml:lang="ja"&gt;Bushidō burēdo ni&lt;/schema:alternateName&gt;
+</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60588" />
+  <skos:broadMatch rdf:resource="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements#elements-title" />
+  <skos:broadMatch rdf:resource="http://schema.org/alternateName" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#titleUniform" />
+</rdf:Description>
+
+<!-- Property: System Requirements -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/systemRequirements">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">systemRequirements</reg:name>
+  <rdfs:label xml:lang="en">System Requirements</rdfs:label>
+  <skos:definition xml:lang="en">Detailed information about the system requirements, additional requirements, peripherals, or anything needed to play the game beyond the simple statement of platform.  In some schemas, this note may include the platform statement.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples in other schemas:
+
+Dublin Core (elements)
+&lt;relation&gt;PlayStation 2 with NTSC U/C designation ; 191 KB memory; EyeToy USB camera.&lt;/relation&gt;
+
+MODS
+&lt;note&gt;System requirements: PlayStation 2 with NTSC U/C designation ; 191 KB memory; EyeToy USB camera.&lt;/note&gt;
+
+MARC/RDA
+538  System requirements: PlayStation 2 with NTSC U/C designation ; 191 KB memory; EyeToy USB camera.
+
+538  System requirements: IBM PC or compatible ; 386 processor with 33 MHz minimum or higher ; Windows 95 ; hard disk with 20 MB free space ; 4 MB RAM minimum (8 MB recommended) ; VGA graphics ; joystick, mouse optional ; supports SoundBlaster and AdLib sound cards or compatible; CD-ROM drive (150 KB per second minimum).  
+
+538  Xbox Live system requirements: high-speed Internet service (cable or DSL); Ethernet cable (not included); subscription to Xbox Live service (sold separately). 
+
+538    System requirements: Xbox 360 with NTSC designation ; 600 KB memory. Guitar controller. XBox Live enabled.
+
+Schema.org
+
+ &lt;schema:memoryRequirements&gt;4 MB RAM minimum (8 MB recommended)&lt;/schema:memoryRequirements&gt;
+
+ &lt;schema:operatingSystem&gt;Windows 95&lt;/schema:operatingSystem&gt;
+
+ &lt;schema:processorRequirements&gt;System requirements: IBM PC or compatible ; 386 processor with 33 MHz minimum or higher &lt;/schema:processorRequirements&gt;
+
+ &lt;schema:softwareRequirements&gt; VGA graphics ; joystick, mouse optional ; supports SoundBlaster and AdLib sound cards or compatible; CD-ROM drive (150 KB per second minimum&lt;/schema:softwareRequirements&gt;
+
+ &lt;schema:storageRequirements&gt;hard disk with 20 MB free space&lt;/schema:storageRequirements&gt;
+</rdfs:comment>
+  <skos:narrowMatch rdf:resource="http://schema.org/memoryRequirements" />
+  <skos:narrowMatch rdf:resource="http://schema.org/operatingSystem" />
+  <skos:narrowMatch rdf:resource="http://schema.org/processorRequirements" />
+  <skos:narrowMatch rdf:resource="http://schema.org/softwareRequirements" />
+  <skos:narrowMatch rdf:resource="http://schema.org/storageRequirements" />
+  <skos:broadMatch rdf:resource="http://www.rdaregistry.info/Elements/u/#P60528" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#note" />
+</rdf:Description>
+
+<!-- Property: Title -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/title">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">title</reg:name>
+  <rdfs:label xml:lang="en">Title</rdfs:label>
+  <skos:definition xml:lang="en">This is the title on the resource itself--screen, menu, label, packaging. If these are different, pick one and record the others as variant titles using hasAlternativeTitle. If your system allows it, record the source from which you took the title. 
+
+Some systems may designate a part of the title string as a subtitle, however, game titles seldom have true subtitles, so the colon and string following the colon should be included as part of the title.
+
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Some systems require the separation of a subtitle.  However, best practice is to follow the convention on the resource and be selective about recording something as a subtitle when it is intended to be part of the title.
+
+Examples: 
+Dublin Core (elements)
+&lt;title&gt;Camp Lazlo: Leaky Lake games.&lt;/title&gt;
+&lt;title&gt;PES 2014 : pro evolution soccer&lt;/title&gt;
+&lt;title&gt;Pro evolution soccer 2014&lt;/title&gt;
+&lt;title&gt;The con&lt;/title&gt;
+
+MODS
+&lt;titleInfo&gt;
+  	&lt;title&gt;Camp Lazlo: Leaky Lake games.&lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;titleInfo&gt;
+   	&lt;title&gt;PES 2014&lt;/title&gt;
+  	&lt;subTitle&gt;pro evolution soccer&lt;/subTitle&gt;
+&lt;/titleInfo&gt;
+&lt;titleInfo type="alternative" displayLabel="Title on container spine:"&gt;
+   	&lt;title&gt;Pro evolution soccer 2014&lt;/title&gt;
+&lt;/titleInfo&gt;
+&lt;titleInfo&gt;
+  	&lt;nonSort&gt;The&lt;/nonSort&gt;
+  	&lt;title&gt;con&lt;/title&gt;
+  &lt;/titleInfo&gt;
+
+MARC/RDA
+245 00 Camp Lazlo: Leaky Lake games.
+500      Title from cartridge label.
+245 00 PES 2014 : $b pro evolution soccer
+246 1   $iTitle on container spine:$aPro evolution soccer 2014
+500      Title from disc label.
+245 04 The con.
+500      Title from disc label.
+
+Schema.org
+&lt;schema:name&gt;Camp Lazlo: Leaky Lake games&lt;/schema:name&gt;
+</rdfs:comment>
+  <skos:narrowMatch rdf:resource="http://rdaregistry.info/Elements/u/P60515" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/title" />
+  <skos:closeMatch rdf:resource="http://schema.org/name" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#title" />
+</rdf:Description>
+
+<!-- Property: Variant Title -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/variantTitle">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">variantTitle</reg:name>
+  <rdfs:label xml:lang="en">Variant Title</rdfs:label>
+  <skos:definition xml:lang="en">Use for a title which either appears on the resource or is a title by which the resource is known, which is not chosen for the Title element.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples: 
+Dublin Core (elements)
+&lt;title&gt;Pro evolution soccer 2014&lt;/title&gt;
+
+MODS
+&lt;titleInfo type="alternative" displayLabel="Title on container spine:"&gt;
+   	&lt;title&gt;Pro evolution soccer 2014&lt;/title&gt;
+&lt;/titleInfo&gt;
+
+MARC/RDA
+245 00 PES 2014 : $b pro evolution soccer
+246 1   $iTitle on container spine:$aPro evolution soccer 2014
+
+Schema.org
+&lt;schema:alternateName xml:lang="en"&gt; Pro evolution soccer 2014&lt;/schema:alternateName&gt;</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60355" />
+  <skos:closeMatch rdf:resource="http://schema.org/alternateName" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/title" />
+  <skos:broadMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#title" />
+</rdf:Description>
+
+<!-- Property: Version -->
+<rdf:Description rdf:about="http://gamemetadata.org/uri/schema/gamecip/version">
+  <rdfs:isDefinedBy rdf:resource="http://gamemetadata.org/uri/schema/gamecip" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1005" />
+  <reg:name xml:lang="en">version</reg:name>
+  <rdfs:label xml:lang="en">Version</rdfs:label>
+  <skos:definition xml:lang="en">The version or edition.  May be a commercial edition such as "Collector's edition" or may be a version number.  Archival collections may need more detailed version information.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Examples
+
+Dublin Core (element)
+&lt;relation&gt;Collector's edition&lt;/relation&gt;
+&lt;relation&gt;Ver. 1.1&lt;/relation&gt;
+
+MODS
+&lt;originInfo&gt;
+&lt;edition&gt;Collector's edition&lt;/edition&gt;
+&lt;/originInfo&gt;
+
+&lt;originInfo&gt;
+&lt;edition&gt;Ver 1.1&lt;/edition&gt;
+&lt;/originInfo&gt;
+
+MARC/RDA
+250    Collector's edition.
+250    Ver. 1.1.</rdfs:comment>
+  <skos:closeMatch rdf:resource="http://rdaregistry.info/Elements/u/P60329" />
+  <skos:narrowMatch rdf:resource="http://schema.org/softwareVersion" />
+  <skos:narrowMatch rdf:resource="http://schema.org/version" />
+  <skos:broadMatch rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+  <skos:closeMatch rdf:resource="http://www.loc.gov/standards/mods/modsrdf/v1/#edition" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1005">
+        <skos:prefLabel xml:lang="en">New-Under Review</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

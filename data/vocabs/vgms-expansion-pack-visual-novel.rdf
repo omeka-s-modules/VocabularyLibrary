@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/vgms-vn"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: VGMS Expansion Pack: Visual Novel Metadata Schema -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn">
+  <dc:title xml:lang="en">VGMS Expansion Pack: Visual Novel Metadata Schema</dc:title>
+  <skos:note  xml:lang="en">A metadata schema to organize and describe visual novels more accurately in the UW GAMER Group's Video Game Metadata Schema (VGMS). By Doreen Chen, Alex Heller, Emilie Hoy, and Joe Lollo, students in Professor Jin Ha Lee's LIS 536 (Metadata for Interactive Media) course at the University of Washington.</skos:note>
+</rdf:Description>
+
+<!-- Classes -->
+
+<!-- Class: Gameplay Genre -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/gameplay-genre">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Gameplay Genre</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">gameplayGenre</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/gameplayGenre.en" />
+  <rdfs:subClassOf rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/genre" />
+</rdf:Description>
+
+<!-- Class: Genre -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/genre">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Genre</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">genre</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/genre.en" />
+</rdf:Description>
+
+<!-- Class: Mechanics -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/mechanics">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Mechanics</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">mechanics</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/mechanics.en" />
+  <skos:definition xml:lang="en">Actions a player performs to progress in the game.</skos:definition>
+</rdf:Description>
+
+<!-- Class: Narrative Genre -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/narrative-genre">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Narrative Genre</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">narrativeGenre</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/narrativeGenre.en" />
+  <rdfs:subClassOf rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/genre" />
+</rdf:Description>
+
+<!-- Class: Relationships -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/relationships">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Relationships</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">relationships</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/relationships.en" />
+  <skos:definition xml:lang="en">For games in which relationships are available to the protagonist, determine which of the possible relationships are available to the protagonist during gameplay. If the nature of protagonist relationships can vary based on gameplay choices, select multiple terms. </skos:definition>
+</rdf:Description>
+
+<!-- Class: Voice Acting -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/voice-acting">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Voice Acting</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <reg:name xml:lang="en">voiceActing</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/voiceActing.en" />
+  <skos:definition xml:lang="en">The classification code for the language(s) in which the video game conveys audible information. Identify the primary language(s) in which the video game conveys audible information. When users can change language settings, provide all the available language options. Use the appropriate language code from ISO 639-2. If no language code is available or applicable, use “OT” for “other”.</skos:definition>
+</rdf:Description>
+
+
+<!-- Properties -->
+
+<!-- Property: Dating Simulator -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/dating-sim">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Dating Simulator</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">datingSimulator</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/datingSimulator.en" />
+  <skos:definition xml:lang="en">A game that simulates the elements of romantic relationships between the player and different characters.
+</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Social Simulator (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/doujinshi">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+</rdf:Description>
+
+<!-- Property: Exploration -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/exploration">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Exploration</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">exploration</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/exploration.en" />
+  <skos:definition xml:lang="en">Moving through and discovering a new, unknown, or unfamiliar world.</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Positioning (Core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Fan Game -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/fan-game">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Fan Game</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">fanGame</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/fanGame.en" />
+  <skos:definition xml:lang="en">A game using characters, settings, and assets from an existing media franchise, created and disseminated by that franchise’s fans.</skos:definition>
+  <rdfs:comment xml:lang="en">USE FOR: Doujinshi</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Grimdark -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/grimdark">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Grimdark</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">grimdark</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/grimdark.en" />
+  <skos:definition xml:lang="en">A form of speculative fiction featuring a dystopian, “dark,” or particularly bleak setting.
+BT: Speculative Fiction
+RT: Dark Fantasy (core VGMS), Noir</skos:definition>
+</rdf:Description>
+
+<!-- Property: Isekai -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/isekai">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Isekai</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">isekai</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/isekai.en" />
+  <skos:definition xml:lang="en">A style of portal fantasy surrounding the protagonist’s survival in a new or unfamiliar world.</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Portal Fantasy
+RT: Adventure (core VGMS)</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/portal-fantasy" />
+</rdf:Description>
+
+<!-- Property: Noir -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/noir">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Noir</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noir</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/noir.en" />
+  <skos:definition xml:lang="en">A subgenre of mystery emphasizing a “dark” atmosphere, featuring more violent crimes (often murder), a bleak or dreary setting, and cynical or morally ambiguous protagonists.</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Mystery (core VGMS)
+RT: Crime (core VGMS), Grimdark</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Otome -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/otome">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Otome</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">otome</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/otome.en" />
+  <skos:definition xml:lang="en">A story-based game where the protagonist, usually female, explores romantic relationships with male love interests over a main storyline.</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Romance (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Parody -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/parody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Parody</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">parody</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/parody.en" />
+  <skos:definition xml:lang="en">A game featuring a humorously exaggerated version of an existing universe or character.
+</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Comedy (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Portal Fantasy -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/portal-fantasy">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Portal Fantasy</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">portalFantasy</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/portalFantasy.en" />
+  <skos:definition xml:lang="en">A fantasy genre where the protagonist is transported to another world.</skos:definition>
+  <rdfs:comment xml:lang="en">BT: Fantasy (core VGMS)
+NT: Isekai
+RT: Adventure (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Realistic Fiction -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/realistic-fiction">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Realistic Fiction</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">realisticFiction</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/realisticFiction.en" />
+  <skos:definition xml:lang="en">A fictional narrative set in the real world, where the plot could believably occur.</skos:definition>
+</rdf:Description>
+
+<!-- Property: Speculative Fiction -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/speculative-fiction">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Speculative Fiction</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">speculativeFiction</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/speculativeFiction.en" />
+  <skos:definition xml:lang="en">A narrative featuring supernatural, futuristic, or imagined elements in a realistic setting.</skos:definition>
+  <rdfs:comment xml:lang="en">NT: Grimdark
+RT: Fantasy, Science Fiction (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Visual Novel -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/vgms-vn/visual-novel">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Visual Novel</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">visualNovel</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/vgms-vn/visualNovel.en" />
+  <skos:definition xml:lang="en">A game combining a textual narrative with player choices and interactions with non-player characters, featuring static illustrations and a first-person perspective.</skos:definition>
+  <rdfs:comment xml:lang="en">RT: Adventure (core VGMS), Social Simulator (core VGMS)</rdfs:comment>
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

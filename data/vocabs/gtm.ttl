@@ -1,0 +1,1672 @@
+@prefix : <https://www.goudatijdmachine.nl/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.goudatijdmachine.nl/def#> .
+
+<https://www.goudatijdmachine.nl/def> rdf:type owl:Ontology ;
+                                       owl:versionIRI <https://www.goudatijdmachine.nl/def/0.14> ;
+                                       <http://purl.org/dc/terms/abstract> "De Gouda Tijdmachine beschrijft en linkt geo-temporele objecten die betrekking hebben op plaats (en personen in) Gouda.<br>Deze ontologie beschrijft de generieke klasse GeoTemporeelObject, de subklassen structuur, constructie, adressering, registratie en gebeurtenis, en de eigenschappen die in de data van de Gouda Tijdmachine gebruikt worden. De ontologie is opgezet in het Nederlands."@nl ,
+                                                                           "The Gouda Time Machine describes and links geo-temporal objects related to the city (and people) of Gouda.<br>This ontology describes the generic GeoTemporalObject class, its subclasses structure, construction, addressing, registration and event, and the properties used in the data of the Gouda Time Machine. The ontology is set up in Dutch."@en ;
+                                       <http://purl.org/dc/terms/bibliographicCitation> "Gouda Tijdmachine Ontologie, versie 0.14, https://www.goudatijdmachine.nl/def/"@nl ,
+                                                                                        "Gouda Time Machine Ontology, version 0.14, https://www.goudatijdmachine.nl/def/"@en ;
+                                       <http://purl.org/dc/terms/contributor> <https://www.diegoude.nl/> ,
+                                                                              <https://www.samh.nl/> ;
+                                       <http://purl.org/dc/terms/created> "2021-11-25"^^xsd:date ;
+                                       <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-7328-1312> ;
+                                       <http://purl.org/dc/terms/hasVersion> "0.14" ;
+                                       <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
+                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                       <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
+                                       <http://purl.org/dc/terms/publisher> <https://n2t.net/ark:/60537/by6gvD> ;
+                                       <http://purl.org/dc/terms/title> "Gouda Tijdmachine Ontologie"@nl ,
+                                                                        "Gouda Time Machine Ontology"@en ;
+                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "gtm" ;
+                                       <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                       rdfs:comment "De Gouda Tijdmachine Ontologie beschrijft de geo-temporele klasses en eigenschappen die gebruikt worden binnen de Gouda Tijdmachine. De voorkeursprefix voor deze ontologie is <strong>gtm</strong>.<br>Het diagram hieronder wordt uit de ontologie gegenereerd: blauwe blokken zijn klasses, blauwe pijlen subklasse-relaties, rode pijlen en rode tekst zijn de eigenschappen van een klasse (een pijl naar een andere klasse, of een lijst in het blok). Vanaf versie 0.14 bevat de ontologie ook de registraties, gebeurtenissen en eigenschappen die in de data van de Gouda Tijdmachine voorkomen. <img alt=\"Klassendiagram van de Gouda Tijdmachine Ontologie\" title=\"Diagram van de Gouda Tijdmachine Ontologie\" src=\"diagram-nl.svg\" />"@nl ,
+                                                    "The Gouda Time Machine Ontology describes the geo-temporal classes and properties used within the Gouda Time Machine. The preferred prefix for this ontology is <strong>gtm</strong>.<br>The diagram below is generated from the ontology: blue blocks are classes, blue arrows subclass relations, red arrows and red text are the properties of a class (an arrow to another class, or a list inside the block). From version 0.14 onwards the ontology also contains the registrations, events and properties that occur in the data of the Gouda Time Machine. <img alt=\"Class diagram of the Gouda Time Machine Ontology\" title=\"Diagram of the Gouda Time Machine Ontology\" src=\"diagram-en.svg\" />"@en ;
+                                       owl:priorVersion <https://www.goudatijdmachine.nl/def/0.13> ;
+                                       owl:versionInfo "0.14" ;
+                                       <http://xmlns.com/foaf/0.1/logo> <https://www.goudatijdmachine.nl/wp-content/uploads/sites/7/2021/08/wapen.png> ;
+                                       <https://schema.org/creativeWorkStatus> "Gepubliceerd"@nl ,
+                                                                               "Published"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/org#memberOf
+<http://www.w3.org/ns/org#memberOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> rdf:type owl:AnnotationProperty ;
+                                    rdfs:comment "Class whose instances use this property (documentation, no inference)."@en ,
+                                                 "Klasse waarvan instanties deze eigenschap gebruiken (documentatie, geen inferentie)."@nl ;
+                                    rdfs:isDefinedBy <https://schema.org/> ;
+                                    rdfs:label "domain includes"@en ,
+                                               "domein omvat"@nl .
+
+
+###  https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty ;
+                                   rdfs:comment "Class or datatype of the values of this property (documentation, no inference)."@en ,
+                                                "Klasse of datatype van de waarden van deze eigenschap (documentatie, geen inferentie)."@nl ;
+                                   rdfs:isDefinedBy <https://schema.org/> ;
+                                   rdfs:label "bereik omvat"@nl ,
+                                              "range includes"@en .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment "Koppelt een geo-temporeel object aan zijn geometrie."@nl ,
+                                                                "Links a geo-temporal object to its geometry."@en ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                                   rdfs:label "has geometry"@en ,
+                                                              "heeft geometrie"@nl ;
+                                                   <https://schema.org/domainIncludes> :GeoTemporeelObject ;
+                                                   <https://schema.org/rangeIncludes> <http://www.opengis.net/ont/geosparql#Geometry> .
+
+
+###  https://www.goudatijdmachine.nl/def#adres
+:adres rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :heeftAdressering ;
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                   :GeoTemporeelObject
+                                 )
+                   ] ;
+       rdfs:range :StraatNummerAanduiding ;
+       rdfs:comment "Koppelt een gebouw, vergunning, gevelsteen of persoonsvermelding aan het adres (straatnaam en huisnummer) waar het zich bevindt of bevond."@nl ,
+                    "Links a building, permit, façade stone or person observation to the address (street name and house number) where it is or was located."@en ;
+       rdfs:label "address"@en ,
+                  "adres"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#adresseert
+:adresseert rdf:type owl:ObjectProperty ;
+            rdfs:domain :Adressering ;
+            rdfs:range :Gebouw ;
+            rdfs:comment "Deprecated: the inverse of 'has address'; the data only uses the direction from building to address ('adres')."@en ,
+                         "Verouderd: de inverse van 'heeft adres'; in de data wordt alleen de richting gebouw naar adres ('adres') gebruikt."@nl ;
+            rdfs:label "addresses"@en ,
+                       "adresseert"@nl ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#architect
+:architect rdf:type owl:ObjectProperty ;
+           rdfs:domain :Gebouw ;
+           rdfs:range <https://schema.org/Person> ;
+           rdfs:comment "De architect die het gebouw heeft ontworpen."@nl ,
+                        "The architect who designed the building."@en ;
+           rdfs:label "architect"@en ,
+                      "architect"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#betreftGebouw
+:betreftGebouw rdf:type owl:ObjectProperty ;
+               rdfs:domain :Gebouw ;
+               rdfs:range :Gebouw ;
+               rdfs:comment "Koppelt een monumentregistratie (rijks- of gemeentelijk monument) aan het gebouw waarop de aanwijzing betrekking heeft."@nl ,
+                            "Links a monument registration (national or municipal monument) to the building to which the designation relates."@en ;
+               rdfs:label "betreft gebouw"@nl ,
+                          "concerns building"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#buurLinks
+:buurLinks rdf:type owl:ObjectProperty ;
+           rdfs:domain :Transport ;
+           rdfs:range <https://personsincontext.org/model#PersonObservation> ;
+           rdfs:comment "De in de transportakte genoemde belender (buur) aan de linkerzijde van het overgedragen goed."@nl ,
+                        "The adjoining owner (neighbour) on the left side of the conveyed property, as named in the deed."@en ;
+           rdfs:label "buur linkerzijde"@nl ,
+                      "neighbour on the left"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#buurRechts
+:buurRechts rdf:type owl:ObjectProperty ;
+            rdfs:domain :Transport ;
+            rdfs:range <https://personsincontext.org/model#PersonObservation> ;
+            rdfs:comment "De in de transportakte genoemde belender (buur) aan de rechterzijde van het overgedragen goed."@nl ,
+                         "The adjoining owner (neighbour) on the right side of the conveyed property, as named in the deed."@en ;
+            rdfs:label "buur rechterzijde"@nl ,
+                       "neighbour on the right"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#gekoppeldPerceel
+:gekoppeldPerceel rdf:type owl:ObjectProperty ;
+                  rdfs:domain :GeoTemporeelObject ;
+                  rdfs:range :Perceel ;
+                  rdfs:comment "Deprecated: replaced by 'kadastraalPerceel'. Linked an addressing or permit to the plot on which the building with this address stands."@en ,
+                               "Verouderd: vervangen door 'kadastraal perceel'. Koppelde een adressering of vergunning aan het perceel waarop het gebouw met dit adres staat."@nl ;
+                  rdfs:label "gekoppeld perceel"@nl ,
+                             "linked plot"@en ;
+                  owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#gerelateerdeVerponding
+:gerelateerdeVerponding rdf:type owl:ObjectProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                                    :GeoTemporeelObject
+                                                  )
+                                    ] ;
+                        rdfs:range :Verponding ;
+                        rdfs:comment "Koppelt een gebouw, pand of persoonsvermelding aan een verponding die erop betrekking heeft."@nl ,
+                                     "Links a building, building unit or person observation to a verponding record that relates to it."@en ;
+                        rdfs:label "gerelateerde verponding"@nl ,
+                                   "related verponding record"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#heeftAdres
+:heeftAdres rdf:type owl:ObjectProperty ;
+            owl:inverseOf :adresseert ;
+            rdfs:domain :Gebouw ;
+            rdfs:range :Adressering ;
+            rdfs:comment "Deprecated: replaced by 'adres' (address). Linked a building to an addressing by which it was known in a certain period."@en ,
+                         "Verouderd: vervangen door 'adres'. Koppelde een gebouw aan een adressering waaronder het in een bepaalde periode bekend stond."@nl ;
+            rdfs:label "has address"@en ,
+                       "heeft adres"@nl ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#heeftAdressering
+:heeftAdressering rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                              :GeoTemporeelObject
+                                            )
+                              ] ;
+                  rdfs:range :Adressering ;
+                  rdfs:comment "Generic link from an object or person observation to an addressing (street number, local designation, district number or house name) by which it was known in a certain period. 'adres' and 'plaatselijkeAanduiding' are specialisations."@en ,
+                               "Generieke koppeling van een object of persoonsvermelding aan een adressering (straatnummer, plaatselijke aanduiding, wijknummer of huisnaam) waaronder het in een bepaalde periode bekend stond. 'adres' en 'plaatselijke aanduiding' zijn specialisaties."@nl ;
+                  rdfs:label "has addressing"@en ,
+                             "heeft adressering"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#heeftOnderdeel
+:heeftOnderdeel rdf:type owl:ObjectProperty ;
+                owl:inverseOf :onderdeelVan ;
+                rdfs:domain :Gebouw ;
+                rdfs:range :Constructie ;
+                rdfs:comment "Koppelt een gebouw aan een onderdeel ervan, zoals een kelder of gevelsteen. Inverse van 'onderdeel van'."@nl ,
+                             "Links a building to one of its parts, such as a cellar or façade stone. Inverse of 'part of'."@en ;
+                rdfs:label "has part"@en ,
+                           "heeft onderdeel"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#heeftPand
+:heeftPand rdf:type owl:ObjectProperty ;
+           rdfs:domain :Gebouw ;
+           rdfs:range :Pand ;
+           rdfs:comment "Koppelt een gebouw aan een pand waaruit het (in een bepaalde periode) bestaat. Een gebouw kan meerdere panden hebben, naast elkaar of opeenvolgend in de tijd."@nl ,
+                        "Links a building to a building unit (pand) of which it consists (in a certain period). A building can have several building units, side by side or successive in time."@en ;
+           rdfs:label "has building unit"@en ,
+                      "heeft pand"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#hofstedegeld
+:hofstedegeld rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+              rdfs:range :Hofstedegeld ;
+              rdfs:comment "Koppelt een persoonsvermelding aan de hofstedegeld-registratie waarin de persoon als betaler voorkomt."@nl ,
+                           "Links a person observation to the hofstedegeld record in which the person appears as payer."@en ;
+              rdfs:label "hofstedegeld"@nl ,
+                         "hofstedegeld record"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#kadastraalPerceel
+:kadastraalPerceel rdf:type owl:ObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                               :GeoTemporeelObject
+                                             )
+                               ] ;
+                   rdfs:range :Perceel ;
+                   rdfs:comment "Koppelt een gebouw, adressering, vergunning, verponding of persoonsvermelding aan het kadastrale perceel waarop het betrekking heeft of waarop het gebouw met dit adres staat."@nl ,
+                                "Links a building, addressing, permit, verponding record or person observation to the cadastral plot to which it relates or on which the building with this address stands."@en ;
+                   rdfs:label "cadastral plot"@en ,
+                              "kadastraal perceel"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#kadastraleSectie
+:kadastraleSectie rdf:type owl:ObjectProperty ;
+                  rdfs:domain :GeoTemporeelObject ;
+                  rdfs:range :Sectie ;
+                  rdfs:comment "Koppelt een perceel (of een OAT-pagina) aan de kadastrale sectie waartoe het behoort."@nl ,
+                               "Links a plot (or an OAT page) to the cadastral section to which it belongs."@en ;
+                  rdfs:label "cadastral section"@en ,
+                             "kadastrale sectie"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#koper
+:koper rdf:type owl:ObjectProperty ;
+       rdfs:domain :Transport ;
+       rdfs:range <https://personsincontext.org/model#PersonObservation> ;
+       rdfs:comment "De persoon (persoonsvermelding) die bij het transport het onroerend goed verwerft."@nl ,
+                    "The person (person observation) who acquires the real property in the conveyance."@en ;
+       rdfs:label "buyer"@en ,
+                  "koper"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#ligtIn
+:ligtIn rdf:type owl:ObjectProperty ;
+        rdfs:domain :GeoTemporeelObject ;
+        rdfs:range :Structuur ;
+        rdfs:comment "De eigenschap 'ligt in' geeft aan dat een geo-temporeel object ruimtelijk binnen een structuur (zoals een straat, wijk, buurt, kwartier, sectie of plaats) valt. Voor de koppeling van adressen en persoonsvermeldingen aan een straat of wijk worden de eigenschappen 'straat' en 'wijk' gebruikt. In de data komt daarnaast hg:liesIn (histograph) voor met dezelfde betekenis."@nl ,
+                     "The property 'located in' indicates that a geo-temporal object is spatially contained within a structure (such as a street, district, neighbourhood, quarter, section or place). For linking addresses and person observations to a street or district the properties 'straat' and 'wijk' are used. The data also uses hg:liesIn (histograph) with the same meaning."@en ;
+        rdfs:label "ligt in"@nl ,
+                   "located in"@en ;
+        rdfs:seeAlso <http://rdf.histograph.io/liesIn> .
+
+
+###  https://www.goudatijdmachine.nl/def#ligtInStraat
+:ligtInStraat rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :ligtIn ;
+              rdfs:domain :StraatNummerAanduiding ;
+              rdfs:range :Straat ;
+              rdfs:comment "Deprecated: replaced by 'straat' (street). Linked a street number designation to the street in which the house number was issued."@en ,
+                           "Verouderd: vervangen door 'straat'. Koppelde een straatnummeraanduiding aan de straat waarin het huisnummer is uitgegeven."@nl ;
+              rdfs:label "is located in street"@en ,
+                         "ligt in straat"@nl ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#ligtInWijk
+:ligtInWijk rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :ligtIn ;
+            rdfs:domain :Buurt ;
+            rdfs:range :Wijk ;
+            rdfs:comment "Deprecated: replaced by 'wijk' (district). Indicated that a neighbourhood is situated within a specific district."@en ,
+                         "Verouderd: vervangen door 'wijk'. Gaf aan dat een buurt zich binnen een specifieke wijk bevindt."@nl ;
+            rdfs:label "is located in district"@en ,
+                       "ligt in wijk"@nl ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#onderdeelVan
+:onderdeelVan rdf:type owl:ObjectProperty ;
+              rdfs:domain :Constructie ;
+              rdfs:range :Gebouw ;
+              rdfs:comment "Koppelt een gebouwonderdeel, zoals een kelder of gevelsteen, aan het gebouw waarvan het deel uitmaakt. Inverse van 'heeft onderdeel'."@nl ,
+                           "Links a building part, such as a cellar or façade stone, to the building of which it is part. Inverse of 'has part'."@en ;
+              rdfs:label "onderdeel van"@nl ,
+                         "part of"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#oorspronkelijkAanwijzendeTafelPagina
+:oorspronkelijkAanwijzendeTafelPagina rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :OorspronkelijkeAanwijzendeTafelRegel ;
+                                      rdfs:range :OorspronkelijkeAanwijzendeTafelPagina ;
+                                      rdfs:comment "Koppelt een regel uit de Oorspronkelijke Aanwijzende Tafel aan de pagina waarop die regel staat."@nl ,
+                                                   "Links a row of the Oorspronkelijke Aanwijzende Tafel to the page on which that row appears."@en ;
+                                      rdfs:label "OAT page"@en ,
+                                                 "Oorspronkelijk Aanwijzende Tafel pagina"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#opvolgerVan
+:opvolgerVan rdf:type owl:ObjectProperty ;
+             rdfs:domain :FunctieBekleding ;
+             rdfs:range :FunctieBekleding ;
+             rdfs:comment "De functiebekleding die door deze functiebekleding werd opgevolgd: de vacature die met deze benoeming werd vervuld."@nl ,
+                          "The office holding that this office holding succeeded: the vacancy that was filled by this appointment."@en ;
+             rdfs:label "opvolger van"@nl ,
+                        "successor of"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#pandVan
+:pandVan rdf:type owl:ObjectProperty ;
+         owl:inverseOf :heeftPand ;
+         rdfs:domain :Pand ;
+         rdfs:range :Gebouw ;
+         rdfs:comment "Koppelt een pand aan het gebouw waarvan het deel uitmaakt. Inverse van 'heeft pand'."@nl ,
+                      "Links a building unit (pand) to the building of which it is part. Inverse of 'has building unit'."@en ;
+         rdfs:label "building unit of"@en ,
+                    "pand van"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#plaatsBegraven
+:plaatsBegraven rdf:type owl:ObjectProperty ;
+                rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+                rdfs:range :GeoTemporeelObject ;
+                rdfs:comment "Koppelt een persoonsvermelding aan het grafmonument of de begraafplaats waar de persoon is begraven."@nl ,
+                             "Links a person observation to the grave monument or cemetery where the person is buried."@en ;
+                rdfs:label "plaats waar begraven"@nl ,
+                           "place of burial"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#plaatselijkeAanduiding
+:plaatselijkeAanduiding rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :heeftAdressering ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                                    :GeoTemporeelObject
+                                                  )
+                                    ] ;
+                        rdfs:range :PlaatselijkeAanduiding ;
+                        rdfs:comment "Koppelt een object of persoonsvermelding aan de plaatselijke aanduiding (wijkletter en nummer) waaronder het bekend stond."@nl ,
+                                     "Links an object or person observation to the local designation (district letter and number) by which it was known."@en ;
+                        rdfs:label "local designation"@en ,
+                                   "plaatselijke aanduiding"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#staatOpPerceel
+:staatOpPerceel rdf:type owl:ObjectProperty ;
+                rdfs:domain :Adressering ;
+                rdfs:range :Perceel ;
+                rdfs:comment "Deprecated: replaced by 'gekoppeldPerceel' (linked plot). Indicated that an addressing belongs to a specific cadastral plot."@en ,
+                             "Verouderd: vervangen door 'gekoppeld perceel'. Gaf aan dat een adressering hoort bij een specifiek kadastraal perceel."@nl ;
+                rdfs:label "located on plot"@en ,
+                           "staat op perceel"@nl ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#straat
+:straat rdf:type owl:ObjectProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                    :GeoTemporeelObject
+                                  )
+                    ] ;
+        rdfs:range :Straat ;
+        rdfs:comment "Koppelt een object (zoals een adres, vergunning of gebouw) of een persoonsvermelding aan de straat waarin het ligt of waar de persoon woonde."@nl ,
+                     "Links an object (such as an address, permit or building) or a person observation to the street in which it is located or where the person lived."@en ;
+        rdfs:label "straat"@nl ,
+                   "street"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#verkoper
+:verkoper rdf:type owl:ObjectProperty ;
+          rdfs:domain :Transport ;
+          rdfs:range <https://personsincontext.org/model#PersonObservation> ;
+          rdfs:comment "De persoon (persoonsvermelding) die bij het transport het onroerend goed overdraagt."@nl ,
+                       "The person (person observation) who transfers the real property in the conveyance."@en ;
+          rdfs:label "seller"@en ,
+                     "verkoper"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#verponding
+:verponding rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                        :Registratie
+                                      )
+                        ] ;
+            rdfs:range :Verponding ;
+            rdfs:comment "Koppelt een persoonsvermelding of index-regel aan de verponding (belastingregistratie op onroerend goed) waarin deze voorkomt."@nl ,
+                         "Links a person observation or index row to the verponding record (property tax registration) in which it occurs."@en ;
+            rdfs:label "verponding"@nl ,
+                       "verponding record"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#volgendePlaats
+:volgendePlaats rdf:type owl:ObjectProperty ;
+                rdfs:domain :FunctieBekleding ;
+                rdfs:range <https://schema.org/Place> ;
+                rdfs:comment "De plaats waar de functionaris naartoe ging na het beëindigen van de functie in Gouda."@nl ,
+                             "The place the office holder went to after ending the office in Gouda."@en ;
+                rdfs:label "next place (to)"@en ,
+                           "volgende plaats (naar)"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#vorigePlaats
+:vorigePlaats rdf:type owl:ObjectProperty ;
+              rdfs:domain :FunctieBekleding ;
+              rdfs:range <https://schema.org/Place> ;
+              rdfs:comment "De plaats waar de functionaris vandaan kwam voordat hij of zij de functie in Gouda bekleedde."@nl ,
+                           "The place the office holder came from before holding the office in Gouda."@en ;
+              rdfs:label "previous place (from)"@en ,
+                         "vorige plaats (van)"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#wijk
+:wijk rdf:type owl:ObjectProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                  :GeoTemporeelObject
+                                )
+                  ] ;
+      rdfs:range :Wijk ;
+      rdfs:comment "Koppelt een object (zoals een plaatselijke aanduiding of een regel uit de OAT) of een persoonsvermelding aan de wijk waarin het ligt of waar de persoon woonde."@nl ,
+                   "Links an object (such as a local designation or an OAT row) or a person observation to the district in which it is located or where the person lived."@en ;
+      rdfs:label "district"@en ,
+                 "wijk"@nl .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty ;
+                                             rdfs:comment "De geometrie als well-known text."@nl ,
+                                                          "The geometry as well-known text."@en ;
+                                             rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                             rdfs:label "geometrie als well-known text (WKT)"@nl ,
+                                                        "geometry as well-known text (WKT)"@en ;
+                                             <https://schema.org/domainIncludes> <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             <https://schema.org/rangeIncludes> <http://www.opengis.net/ont/geosparql#wktLiteral> .
+
+
+###  https://schema.org/endDate
+<https://schema.org/endDate> rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Einde van de periode waarin het geo-temporele object bestond. De waarde is een jaartal (bijv. 1470), een datum of een datum-tijd; onzekere of onvolledige dateringen volgen bij voorkeur EDTF."@nl ,
+                                          "End of the period in which the geo-temporal object existed. The value is a year (e.g. 1470), a date or a date-time; uncertain or incomplete dates preferably follow EDTF."@en ;
+                             rdfs:isDefinedBy <https://schema.org/> ;
+                             rdfs:label "einddatum"@nl ,
+                                        "end date"@en ;
+                             <https://schema.org/domainIncludes> :GeoTemporeelObject ;
+                             <https://schema.org/rangeIncludes> rdfs:Literal .
+
+
+###  https://schema.org/identifier
+<https://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                                rdfs:comment "Identificatie van het object, bij voorkeur een persistente URI."@nl ,
+                                             "Identifier of the object, preferably a persistent URI."@en ;
+                                rdfs:isDefinedBy <https://schema.org/> ;
+                                rdfs:label "identificatie"@nl ,
+                                           "identifier"@en ;
+                                <https://schema.org/domainIncludes> :GeoTemporeelObject ;
+                                <https://schema.org/rangeIncludes> xsd:string .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "Naam van het object."@nl ,
+                                       "Name of the object."@en ;
+                          rdfs:isDefinedBy <https://schema.org/> ;
+                          rdfs:label "naam"@nl ,
+                                     "name"@en ;
+                          <https://schema.org/domainIncludes> :GeoTemporeelObject ;
+                          <https://schema.org/rangeIncludes> xsd:string .
+
+
+###  https://schema.org/startDate
+<https://schema.org/startDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "Begin van de periode waarin het geo-temporele object bestond. De waarde is een jaartal (bijv. 1381), een datum (bijv. 1381-05-12) of een datum-tijd; onzekere of onvolledige dateringen volgen bij voorkeur EDTF."@nl ,
+                                            "Start of the period in which the geo-temporal object existed. The value is a year (e.g. 1381), a date (e.g. 1381-05-12) or a date-time; uncertain or incomplete dates preferably follow EDTF."@en ;
+                               rdfs:isDefinedBy <https://schema.org/> ;
+                               rdfs:label "begindatum"@nl ,
+                                          "start date"@en ;
+                               <https://schema.org/domainIncludes> :GeoTemporeelObject ;
+                               <https://schema.org/rangeIncludes> rdfs:Literal .
+
+
+###  https://www.goudatijdmachine.nl/def#achternaamDoorHuwelijk
+:achternaamDoorHuwelijk rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Achternaam die de vermelde persoon door huwelijk voert."@nl ,
+                                     "Surname the person mentioned bears through marriage."@en ;
+                        rdfs:label "achternaam door huwelijk"@nl ,
+                                   "married surname"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#afgebrokenJaar
+:afgebrokenJaar rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Pand ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "Deprecated: replaced by schema:endDate. Year in which the building unit was demolished."@en ,
+                             "Verouderd: vervangen door schema:endDate. Jaar waarin het pand is afgebroken."@nl ;
+                rdfs:label "jaar afgebroken"@nl ,
+                           "year demolished"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#akteNummer
+:akteNummer rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Transport ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Number of the deed of conveyance."@en ,
+                         "Nummer van de transportakte."@nl ;
+            rdfs:label "aktenummer"@nl ,
+                       "deed number"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#artikelLegger
+:artikelLegger rdf:type owl:DatatypeProperty ;
+               rdfs:domain :OorspronkelijkeAanwijzendeTafelRegel ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Het artikelnummer van de eigenaar in de kadastrale legger, zoals vermeld in de OAT."@nl ,
+                            "The article number of the owner in the cadastral register (legger), as stated in the OAT."@en ;
+               rdfs:label "artikel legger"@nl ,
+                          "register article"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#blad
+:blad rdf:type owl:DatatypeProperty ;
+      rdfs:domain :OorspronkelijkeAanwijzendeTafelPagina ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Het bladnummer van de pagina in de Oorspronkelijke Aanwijzende Tafel."@nl ,
+                   "The sheet number of the page in the Oorspronkelijke Aanwijzende Tafel."@en ;
+      rdfs:label "blad"@nl ,
+                 "sheet"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#breedte
+:breedte rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Gebouw
+                                     :Kelder
+                                   )
+                     ] ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Breedte van het gebouw of de kelder, in meters tenzij anders vermeld."@nl ,
+                      "Width of the building or cellar, in metres unless stated otherwise."@en ;
+         rdfs:label "breedte"@nl ,
+                    "width"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#breedteStraat
+:breedteStraat rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Index ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Breedte van de straat voor het huis, in de eenheid van de geïndexeerde bron (meestal voeten of meters)."@nl ,
+                            "Width of the street in front of the house, in the unit of the indexed source (usually feet or metres)."@en ;
+               rdfs:label "breedte van de straat voor het huis"@nl ,
+                          "width of the street in front of the house"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#cbsWijkcode
+:cbsWijkcode rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Wijk ;
+             rdfs:range xsd:string ;
+             rdfs:comment "De code van de wijk volgens het Centraal Bureau voor de Statistiek."@nl ,
+                          "The code of the district according to Statistics Netherlands (CBS)."@en ;
+             rdfs:label "CBS district code"@en ,
+                        "CBS-wijkcode"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#datumAkte
+:datumAkte rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Transport ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "Date on which the deed of conveyance was executed. The value is a year, a date (YYYY-MM-DD) or a date-time; uncertain or incomplete dates preferably follow EDTF."@en ,
+                        "Datum waarop de transportakte is gepasseerd. De waarde is een jaartal, een datum (JJJJ-MM-DD) of een datum-tijd; onzekere of onvolledige dateringen volgen bij voorkeur EDTF."@nl ;
+           rdfs:label "aktedatum"@nl ,
+                      "deed date"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#datumBegraven
+:datumBegraven rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Date on which the person mentioned was buried. The value is a year, a date (YYYY-MM-DD) or a date-time; uncertain or incomplete dates preferably follow EDTF."@en ,
+                            "Datum waarop de vermelde persoon is begraven. De waarde is een jaartal, een datum (JJJJ-MM-DD) of een datum-tijd; onzekere of onvolledige dateringen volgen bij voorkeur EDTF."@nl ;
+               rdfs:label "begraafdatum"@nl ,
+                          "burial date"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#datumBesluit
+:datumBesluit rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Gebouw ;
+              rdfs:range xsd:date ;
+              rdfs:comment "Date of the decision to designate as a (municipal) monument."@en ,
+                           "Datum van het besluit tot aanwijzing als (gemeentelijk) monument."@nl ;
+              rdfs:label "datum besluit"@nl ,
+                         "decision date"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#datumEigendomsoverdracht
+:datumEigendomsoverdracht rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Transport ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:comment "Date on which ownership was transferred. The value is a year, a date (YYYY-MM-DD) or a date-time; uncertain or incomplete dates preferably follow EDTF."@en ,
+                                       "Datum waarop het eigendom is overgedragen. De waarde is een jaartal, een datum (JJJJ-MM-DD) of een datum-tijd; onzekere of onvolledige dateringen volgen bij voorkeur EDTF."@nl ;
+                          rdfs:label "date of transfer of ownership"@en ,
+                                     "datum eigendomsoverdracht"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#datumInwerkingtreding
+:datumInwerkingtreding rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Gebouw ;
+                       rdfs:range xsd:date ;
+                       rdfs:comment "Date on which the designation as a (municipal) monument came into force."@en ,
+                                    "Datum waarop de aanwijzing als (gemeentelijk) monument in werking trad."@nl ;
+                       rdfs:label "date of entry into force"@en ,
+                                  "datum inwerkingtreding"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#denominatie
+:denominatie rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Gebouw ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A specific religious movement, church community or philosophical basis, for example of a religious building."@en ,
+                          "Een specifieke geloofsrichting, kerkgenootschap of levensbeschouwelijke grondslag, bijvoorbeeld van een religieus gebouw."@nl ;
+             rdfs:label "denominatie"@nl ,
+                        "denomination"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#folio
+:folio rdf:type owl:DatatypeProperty ;
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                   :Index
+                                 )
+                   ] ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Blad (folio) van het register waarop de vermelding staat."@nl ,
+                    "Sheet (folio) of the register on which the entry appears."@en ;
+       rdfs:label "folio"@en ,
+                  "folio"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#genoemdNaar
+:genoemdNaar rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Structuur ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A description of who or what the street or courtyard is named after. The description starts with 'Genoemd naar' (named after)."@en ,
+                          "Een beschrijving naar wie of wat de straat of het hofje is genoemd. De beschrijving begint met 'Genoemd naar'."@nl ;
+             rdfs:label "genoemd naar"@nl ,
+                        "named after"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#gewelfvorm
+:gewelfvorm rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Gebouw
+                                        :Kelder
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Shape of the vault of a cellar, for example barrel vault or cross vault."@en ,
+                         "Vorm van het gewelf van een kelder, bijvoorbeeld tongewelf of kruisgewelf."@nl ;
+            rdfs:label "gewelfvorm"@nl ,
+                       "vault type"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#hadEigenaar
+:hadEigenaar rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Index ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Naam van de eigenaar zoals vermeld in de geïndexeerde bron."@nl ,
+                          "Name of the owner as mentioned in the indexed source."@en ;
+             rdfs:label "had eigenaar"@nl ,
+                        "had owner"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#historischeWaarde
+:historischeWaarde rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Gebouw
+                                               :Kelder
+                                             )
+                               ] ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Description of the historical value of the building or cellar."@en ,
+                                "Omschrijving van de historische waarde van het gebouw of de kelder."@nl ;
+                   rdfs:label "historical value"@en ,
+                              "historische waarde"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#hoofdvorm
+:hoofdvorm rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Gebouw
+                                       :Kelder
+                                     )
+                       ] ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Hoofdvorm (plattegrond) van een kelder of gebouw, bijvoorbeeld rechthoekig of L-vormig."@nl ,
+                        "Main form (floor plan) of a cellar or building, for example rectangular or L-shaped."@en ;
+           rdfs:label "hoofdvorm"@nl ,
+                      "main form"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#hoogte
+:hoogte rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Gebouw
+                                    :Kelder
+                                  )
+                    ] ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Height of the building or cellar, in metres unless stated otherwise."@en ,
+                     "Hoogte van het gebouw of de kelder, in meters tenzij anders vermeld."@nl ;
+        rdfs:label "height"@en ,
+                   "hoogte"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#huisLetter
+:huisLetter rdf:type owl:DatatypeProperty ;
+            rdfs:domain :StraatNummerAanduiding ;
+            rdfs:range xsd:string ;
+            rdfs:comment "De huisletter die aan het huisnummer is toegevoegd."@nl ,
+                         "The house letter added to the house number."@en ;
+            rdfs:label "house letter"@en ,
+                       "huisletter"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#huisNummer
+:huisNummer rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                        :GeoTemporeelObject
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Het huisnummer, met eventueel huisletter en toevoeging, van een plaatselijke aanduiding of adres."@nl ,
+                         "The house number, possibly with house letter and suffix, of a local designation or address."@en ;
+            rdfs:label "house number"@en ,
+                       "huisnummer"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#huisNummerToevoeging
+:huisNummerToevoeging rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :StraatNummerAanduiding ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "De toevoeging bij het huisnummer."@nl ,
+                                   "The suffix to the house number."@en ;
+                      rdfs:label "house number suffix"@en ,
+                                 "huisnummer toevoeging"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#inCombinatieMet
+:inCombinatieMet rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Aanduiding van de persoon of het object waarmee de vermelding in combinatie voorkomt."@nl ,
+                              "Designation of the person or object with which the entry occurs in combination."@en ;
+                 rdfs:label "in combinatie met"@nl ,
+                            "in combination with"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#informatieAuteursRechten
+:informatieAuteursRechten rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :GeoTemporeelObject ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Deprecated: not used in the data. Copyright information according to the classification at https://samh.nl/auteursrechten."@en ,
+                                       "Verouderd: niet in gebruik in de data. Auteursrechten volgens de indeling op https://samh.nl/auteursrechten."@nl ;
+                          rdfs:label "copyright information"@en ,
+                                     "informatie over auteursrechten"@nl ;
+                          owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#kadastraalNummer
+:kadastraalNummer rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Perceel ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Het nummer van het perceel binnen de kadastrale sectie."@nl ,
+                               "The number of the plot within the cadastral section."@en ;
+                  rdfs:label "cadastral number"@en ,
+                             "kadastraal nummer"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#kadastraleAanduiding
+:kadastraleAanduiding rdf:type owl:DatatypeProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :OorspronkelijkeAanwijzendeTafelRegel
+                                                  :Perceel
+                                                )
+                                  ] ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Aanduiding waaronder een perceel bekend is: kadastrale gemeente, sectie en nummer (bijvoorbeeld 'Gouda A 123')."@nl ,
+                                   "Designation by which a plot is known: cadastral municipality, section and number (for example 'Gouda A 123')."@en ;
+                      rdfs:label "cadastral designation"@en ,
+                                 "kadastrale aanduiding"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#lengte
+:lengte rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Gebouw
+                                    :Kelder
+                                  )
+                    ] ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Lengte van het gebouw of de kelder, in meters tenzij anders vermeld."@nl ,
+                     "Length of the building or cellar, in metres unless stated otherwise."@en ;
+        rdfs:label "lengte"@nl ,
+                   "length"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#lengteGevel
+:lengteGevel rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Index ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Lengte van de gevel aan de straat, in de eenheid van de geïndexeerde bron (meestal voeten of meters)."@nl ,
+                          "Length of the façade facing the street, in the unit of the indexed source (usually feet or metres)."@en ;
+             rdfs:label "lengte van de gevel aan de straat"@nl ,
+                        "length of the street façade"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#ligging
+:ligging rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Gebouw
+                                     :Kelder
+                                     :Straat
+                                   )
+                     ] ;
+         rdfs:range xsd:string ;
+         rdfs:comment "De beschrijving van de ligging in de trant van 'van ... naar ...'."@nl ,
+                      "Description of the situation in the form 'from ... to ...'."@en ;
+         rdfs:label "ligging"@nl ,
+                    "situation"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#oatInkomenGebouwd
+:oatInkomenGebouwd rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :OorspronkelijkeAanwijzendeTafelRegel ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Het belastbaar inkomen van het gebouwde deel van het perceel volgens de OAT."@nl ,
+                                "The taxable income of the built part of the plot according to the OAT."@en ;
+                   rdfs:label "OAT income (built)"@en ,
+                              "OAT inkomen (gebouwd)"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#oatInkomenOngebouwd
+:oatInkomenOngebouwd rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :OorspronkelijkeAanwijzendeTafelRegel ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Het belastbaar inkomen van het ongebouwde deel van het perceel volgens de OAT."@nl ,
+                                  "The taxable income of the unbuilt part of the plot according to the OAT."@en ;
+                     rdfs:label "OAT income (unbuilt)"@en ,
+                                "OAT inkomen (ongebouwd)"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#oatKlasse
+:oatKlasse rdf:type owl:DatatypeProperty ;
+           rdfs:domain :OorspronkelijkeAanwijzendeTafelRegel ;
+           rdfs:range xsd:string ;
+           rdfs:comment "De belastingklasse van het perceel in de Oorspronkelijke Aanwijzende Tafel."@nl ,
+                        "The tax class of the plot in the Oorspronkelijke Aanwijzende Tafel."@en ;
+           rdfs:label "OAT class"@en ,
+                      "OAT klasse"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#oppervlakte
+:oppervlakte rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :OorspronkelijkeAanwijzendeTafelRegel
+                                         :Perceel
+                                       )
+                         ] ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "Area of an object such as a plot, in square metres (cadastral plots) or in the unit of the source (OAT)."@en ,
+                          "Oppervlakte van een object zoals een perceel, in vierkante meters (kadastrale percelen) of in de eenheid van de bron (OAT)."@nl ;
+             rdfs:label "area"@en ,
+                        "oppervlakte"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#perceelSoort
+:perceelSoort rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :OorspronkelijkeAanwijzendeTafelRegel
+                                          :Perceel
+                                        )
+                          ] ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Type of the plot, such as 'house and yard', 'garden' or 'meadow'."@en ,
+                           "Typering van het perceel, zoals 'huis en erf', 'tuin' of 'weiland'."@nl ;
+              rdfs:label "perceelsoort"@nl ,
+                         "plot type"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#problematischeStraatnaam
+:problematischeStraatnaam rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Straat ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Explanation of why the street name is problematic, for example because of a colonial or controversial namesake."@en ,
+                                       "Toelichting waarom de straatnaam problematisch is, bijvoorbeeld vanwege een koloniale of omstreden naamgever."@nl ;
+                          rdfs:label "problematic street name"@en ,
+                                     "problematische straatnaam"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#rang
+:rang rdf:type owl:DatatypeProperty ;
+      rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Rang of graad van de vermelde persoon, bijvoorbeeld een militaire rang."@nl ,
+                   "Rank or grade of the person mentioned, for example a military rank."@en ;
+      rdfs:label "rang"@nl ,
+                 "rank"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#redenEinde
+:redenEinde rdf:type owl:DatatypeProperty ;
+            rdfs:domain :FunctieBekleding ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Reason why the office holding ended, for example death, dismissal or departure."@en ,
+                         "Reden waarom de functiebekleding eindigde, bijvoorbeeld overlijden, ontslag of vertrek."@nl ;
+            rdfs:label "reason for ending"@en ,
+                       "reden einde"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#religie
+:religie rdf:type owl:DatatypeProperty ;
+         rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Religie of godsdienst die door de vermelde persoon wordt aangehangen."@nl ,
+                      "Religion or denomination adhered to by the person mentioned."@en ;
+         rdfs:label "religie"@nl ,
+                    "religion"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#rente
+:rente rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Transport ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Interest or ground rent charged on the conveyed property, as stated in the deed."@en ,
+                    "Rente of (erf)cijns die op het overgedragen goed rust, zoals vermeld in de transportakte."@nl ;
+       rdfs:label "interest"@en ,
+                  "rente"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#sectie
+:sectie rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :GrafMonument
+                                    :OorspronkelijkeAanwijzendeTafelPagina
+                                    :Sectie
+                                  )
+                    ] ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Aanduiding van een sectie of vak, bijvoorbeeld het grafvak op een begraafplaats of de sectieletter op een OAT-pagina."@nl ,
+                     "Designation of a section or block, for example the grave section in a cemetery or the section letter on an OAT page."@en ;
+        rdfs:label "sectie"@nl ,
+                   "section"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#sonneveldIndex
+:sonneveldIndex rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Gebouw ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Reference to the Sonneveld index, an index of Gouda houses and their owners and residents."@en ,
+                             "Verwijzing naar de Sonneveld-index, een index op Goudse huizen en hun eigenaren en bewoners."@nl ;
+                rdfs:label "Sonneveld index"@en ,
+                           "Sonneveld-index"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                    :Begraafplaats
+                                    :Constructie
+                                  )
+                    ] ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Status of the object, for example 'existing', 'disappeared' or 'filled in'."@en ,
+                     "Status van het object, bijvoorbeeld 'bestaand', 'verdwenen' of 'gedempt'."@nl ;
+        rdfs:label "status"@en ,
+                   "status"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#straatNaam
+:straatNaam rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                        :GeoTemporeelObject
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "De naam waaronder de straat bekend is, als tekst (bijvoorbeeld op een gevelsteen, naambord of in een volkstelling)."@nl ,
+                         "The name by which the street is known, as text (for example on a façade stone, name plate or in a census)."@en ;
+            rdfs:label "straatnaam"@nl ,
+                       "street name"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#straatNummer
+:straatNummer rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( <https://personsincontext.org/model#PersonObservation>
+                                          :GeoTemporeelObject
+                                        )
+                          ] ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Het nummer van een adres binnen de straat, als tekst."@nl ,
+                           "The number of an address within the street, as text."@en ;
+              rdfs:label "number in street"@en ,
+                         "nummer in straat"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#termijn
+:termijn rdf:type owl:DatatypeProperty ;
+         rdfs:domain <https://personsincontext.org/model#PersonObservation> ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Term in years for which the mentioned arrangement or appointment applies."@en ,
+                      "Termijn in jaren waarvoor de vermelde afspraak of aanstelling geldt."@nl ;
+         rdfs:label "term"@en ,
+                    "termijn"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#verpondingsNummer
+:verpondingsNummer rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Huisnaam
+                                               :Pand
+                                               :Verponding
+                                             )
+                               ] ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Number of the verponding assessment on a building unit, as recorded in the verponding register."@en ,
+                                "Nummer van de verponding op een pand, zoals vermeld in het verpondingskohier."@nl ;
+                   rdfs:label "verponding number"@en ,
+                              "verpondingsnummer"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#volgnummer
+:volgnummer rdf:type owl:DatatypeProperty ;
+            rdfs:domain :GeoTemporeelObject ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Deprecated: not used in the data. Original sequence of the object within the source."@en ,
+                         "Verouderd: niet in gebruik in de data. Volgorde (oorspronkelijk) van het object binnen de bron."@nl ;
+            rdfs:label "sequence number"@en ,
+                       "volgnummer"@nl ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:comment "A GeoSPARQL Feature: an object with a spatial extent."@en ,
+                                                            "Een GeoSPARQL Feature: een object met een ruimtelijke uitbreiding."@nl ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                               rdfs:label "Feature"@en ,
+                                                          "Feature"@nl .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:comment "A GeoSPARQL Geometry: the spatial shape of a feature, for example as WKT."@en ,
+                                                             "Een GeoSPARQL Geometry: de ruimtelijke vorm van een feature, bijvoorbeeld als WKT."@nl ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                                rdfs:label "Geometrie"@nl ,
+                                                           "Geometry"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://personsincontext.org/model#PersonObservation
+<https://personsincontext.org/model#PersonObservation> rdf:type owl:Class ;
+                                                       rdfs:comment "A person observation according to the Persons in Context (PiCo) model: the mention of a person in a source."@en ,
+                                                                    "Een persoonsvermelding volgens het Persons in Context (PiCo) model: de vermelding van een persoon in een bron."@nl ;
+                                                       rdfs:isDefinedBy <https://personsincontext.org/model> ;
+                                                       rdfs:label "Person observation"@en ,
+                                                                  "Persoonsvermelding"@nl .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class ;
+                            rdfs:comment "A person (schema.org)."@en ,
+                                         "Een persoon (schema.org)."@nl ;
+                            rdfs:isDefinedBy <https://schema.org/> ;
+                            rdfs:label "Person"@en ,
+                                       "Persoon"@nl .
+
+
+###  https://schema.org/Place
+<https://schema.org/Place> rdf:type owl:Class ;
+                           rdfs:comment "A place outside the Gouda Time Machine, for example another town (schema.org)."@en ,
+                                        "Een plaats buiten de Gouda Tijdmachine, bijvoorbeeld een andere stad (schema.org)."@nl ;
+                           rdfs:isDefinedBy <https://schema.org/> ;
+                           rdfs:label "Plaats (schema.org)"@nl ,
+                                      "Place (schema.org)"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Adressering
+:Adressering rdf:type owl:Class ;
+             rdfs:subClassOf :GeoTemporeelObject ;
+             rdfs:comment "Addressing is the way in which a building or location was designated in a certain period: by street name and house number, by a number issued per district, by a district letter with number, or by a house name. An addressing uniquely identifies an object within a geographic area."@en ,
+                          "Adressering is de wijze waarop een gebouw of locatie in een bepaalde periode werd aangeduid: via straatnaam en huisnummer, via een per wijk uitgegeven nummer, via een wijkletter met nummer, of via een huisnaam. Een adressering identificeert een object uniek binnen een geografisch gebied."@nl ;
+             rdfs:label "Addressing"@en ,
+                        "Adressering"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Begraafplaats
+:Begraafplaats rdf:type owl:Class ;
+               rdfs:subClassOf :Structuur ;
+               rdfs:comment "A cemetery is a demarcated area that is or was intended for the burial of the dead, such as a churchyard, a Jewish cemetery or a plague burial ground."@en ,
+                            "Een begraafplaats is een afgebakend terrein dat bestemd is of was voor het begraven van overledenen, zoals een kerkhof, een joodse begraafplaats of een pestkerkhof."@nl ;
+               rdfs:label "Begraafplaats"@nl ,
+                          "Cemetery"@en ;
+               rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/bb70464c-b05e-45f7-a5ef-bfb3c5dcdb8c> .
+
+
+###  https://www.goudatijdmachine.nl/def#Brug
+:Brug rdf:type owl:Class ;
+      rdfs:subClassOf :Kunstwerk ;
+      rdfs:comment "A bridge is a structural construction designed to provide a passage or connection over an obstacle, such as a river, canal, road, railway or other natural or man-made barrier."@en ,
+                   "Een brug is een bouwkundige constructie die ontworpen is om een doorgang of verbinding te bieden over een obstakel, zoals een rivier, kanaal, weg, spoorlijn of andere natuurlijke of door mensen gemaakte barrières."@nl ;
+      rdfs:label "Bridge"@en ,
+                 "Brug"@nl ;
+      rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/6a7899a2-3306-458e-90e6-6370afe541db> .
+
+
+###  https://www.goudatijdmachine.nl/def#Buurt
+:Buurt rdf:type owl:Class ;
+       rdfs:subClassOf :Structuur ;
+       rdfs:comment "Onderdeel van een gemeente, dat op basis van historische dan wel stedenbouwkundige kenmerken homogeen is afgebakend. Homogeen wil zeggen dat één functie dominant is, bijvoorbeeld woonfunctie (woongebied), werkfunctie (industriegebied) of recreatieve functie (natuurgebied). Functies kunnen echter ook gemengd voorkomen. De gemeenten in Nederland zijn onderverdeeld in wijken en buurten. Buurten vormen het laagste regionale niveau. Wijken zijn optellingen van één of meer aaneengesloten buurten. De gemeente bepaalt zelf de indeling in wijken en buurten."@nl ,
+                    "Part of a municipality that is homogeneously demarcated on the basis of historical or urban development characteristics. Homogeneous means that one function is dominant, for example residential function (residential area), work function (industrial area) or recreational function (nature area). However, functions can also be mixed. The municipalities in the Netherlands are divided into districts and neighbourhoods. Neighbourhoods are the lowest regional level. Districts are sums of one or more contiguous neighbourhoods. The municipality itself determines the division into districts and neighbourhoods."@en ;
+       rdfs:label "Buurt"@nl ,
+                  "Neighbourhood"@en ;
+       rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/805be952-ff77-4ae1-96f6-6e0b6cb078b6> ,
+                    <https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/buurt> .
+
+
+###  https://www.goudatijdmachine.nl/def#Constructie
+:Constructie rdf:type owl:Class ;
+             rdfs:subClassOf :GeoTemporeelObject ;
+             rdfs:comment "A construction is a human-made or naturally created object or ensemble that has a physical form and function within a specific area. Subclasses are building, building unit (pand), engineering structure, nature, façade stone, historical name plate and grave monument."@en ,
+                          "Een constructie is een door mensen gemaakt of natuurlijk gecreëerd object of geheel, dat een fysieke vorm en functie heeft binnen een bepaald gebied. Subklassen zijn gebouw, pand, kunstwerk (civiel-technisch werk), natuur, gevelsteen, historisch naambord en grafmonument."@nl ;
+             rdfs:label "Constructie"@nl ,
+                        "Construction"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#FunctieBekleding
+:FunctieBekleding rdf:type owl:Class ;
+                  rdfs:subClassOf :Gebeurtenis ;
+                  rdfs:comment "Het bekleden van een bepaalde functie, zoals burgemeester of predikant, gedurende een bepaalde periode."@nl ,
+                               "The holding of a certain office, such as mayor or minister, during a certain period."@en ;
+                  rdfs:label "Functiebekleding"@nl ,
+                             "Office holding"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Gebeurtenis
+:Gebeurtenis rdf:type owl:Class ;
+             rdfs:subClassOf :GeoTemporeelObject ;
+             rdfs:comment "An event is something that took place at a certain moment or in a certain period at a location in Gouda, such as a transfer of ownership, a marriage banns registration or the holding of an office."@en ,
+                          "Een gebeurtenis is iets dat op een bepaald moment of in een bepaalde periode op een plaats in Gouda plaatsvond, zoals een eigendomsoverdracht, een ondertrouw of het bekleden van een functie."@nl ;
+             rdfs:label "Event"@en ,
+                        "Gebeurtenis"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Gebouw
+:Gebouw rdf:type owl:Class ;
+        rdfs:subClassOf :Constructie ;
+        owl:disjointWith :Kunstwerk ,
+                         :Natuur ;
+        rdfs:comment "A building is a permanent or semi-permanent construction with a covered, enclosed space designed to be used for habitation, work, storage or other human activities. Within the Gouda Time Machine a building is the named, historically or functionally recognisable unit (such as a church, monastery, mill or monument) to which stories, addresses, functions and monument statuses relate. A building can consist of one or more building units (panden) and, over time, of successive building units; see the property 'has building unit'. A monument status (national or municipal monument) is a property of a building: sdo:additionalType with the CHT concept, datumBesluit, datumInwerkingtreding and ceo:rijksmonumentnummer. Parts of a building, such as a cellar, refer to the building with 'part of'."@en ,
+                     "Een gebouw is een permanente of semi-permanente constructie met een overdekte, afgesloten ruimte die is ontworpen om te worden gebruikt voor bewoning, werk, opslag, of andere menselijke activiteiten. Binnen de Gouda Tijdmachine is een gebouw de benoemde, historisch of functioneel herkenbare eenheid (zoals een kerk, klooster, molen of monument) waarover verhalen, adressen, functies en monumentstatussen gaan. Een gebouw kan uit één of meer panden bestaan en in de loop van de tijd uit opeenvolgende panden; zie de eigenschap 'heeft pand'. Een monumentstatus (rijks- of gemeentelijk monument) is een eigenschap van een gebouw: sdo:additionalType met het CHT-begrip, datumBesluit, datumInwerkingtreding en ceo:rijksmonumentnummer. Onderdelen van een gebouw, zoals een kelder, verwijzen met 'onderdeel van' naar het gebouw."@nl ;
+        rdfs:label "Building"@en ,
+                   "Gebouw"@nl ;
+        rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/d648c14d-3493-4003-8aaa-11a7786f8c32> .
+
+
+###  https://www.goudatijdmachine.nl/def#Gemaal
+:Gemaal rdf:type owl:Class ;
+        rdfs:subClassOf :Kunstwerk ;
+        rdfs:comment "A pumping station is a hydraulic installation used to move water from a lower to a higher level, usually to drain excess water from a low-lying area or to regulate water levels in canals and waterways."@en ,
+                     "Een gemaal is een hydraulische installatie die wordt gebruikt om water van een lager naar een hoger niveau te verplaatsen, meestal om overtollig water uit een lagergelegen gebied af te voeren of om waterpeilen in kanalen en waterwegen te reguleren."@nl ;
+        rdfs:label "Gemaal"@nl ,
+                   "Pumping station"@en ;
+        rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/63e3cea6-22d0-4d8a-b79b-2b8c3d049587> .
+
+
+###  https://www.goudatijdmachine.nl/def#GemeentelijkMonument
+:GemeentelijkMonument rdf:type owl:Class ;
+                      rdfs:subClassOf :Gebouw ;
+                      rdfs:comment "Deprecated: a monument status is not a kind of building but a property of a building. Use Gebouw with sdo:additionalType (CHT concept national or municipal monument), datumBesluit, datumInwerkingtreding and ceo:rijksmonumentnummer. A municipal monument is a building of regional or local importance; municipalities decide themselves which buildings they place on the municipal list of monuments."@en ,
+                                   "Verouderd: een monumentstatus is geen soort gebouw maar een eigenschap van een gebouw. Gebruik Gebouw met sdo:additionalType (CHT-begrip rijksmonument of gemeentelijk monument), datumBesluit, datumInwerkingtreding en ceo:rijksmonumentnummer. Een gemeentelijk monument is een pand van regionaal of plaatselijk belang; gemeenten bepalen zelf welke gebouwen ze op de gemeentelijke monumentenlijst zetten."@nl ;
+                      rdfs:label "Gemeentelijk monument"@nl ,
+                                 "Municipal monument"@en ;
+                      owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.goudatijdmachine.nl/def#GeoTemporeelObject
+:GeoTemporeelObject rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                    rdfs:comment "A geo-temporal object is an entity that has both geographical and temporal characteristics, enabling the specification and analysis of the location and time period of events or objects in space. It is the base class for all objects within the Gouda Time Machine that have a spatial and temporal aspect: spatial structures and constructions, but also addressings, registrations and events that are tied to a location in Gouda."@en ,
+                                 "Een geo-temporeel object is een entiteit die zowel geografische als temporele kenmerken heeft, waardoor het mogelijk is om de locatie en tijdsperiode van gebeurtenissen of objecten in de ruimte te specificeren en te analyseren. Het is de basisklasse voor alle objecten binnen de Gouda Tijdmachine die een plaats- en tijdsaspect in zich hebben: ruimtelijke structuren en constructies, maar ook adresseringen, registraties en gebeurtenissen die aan een plaats in Gouda gebonden zijn."@nl ;
+                    rdfs:label "Geo-temporal object"@en ,
+                               "Geo-temporeel object"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Gevelsteen
+:Gevelsteen rdf:type owl:Class ;
+            rdfs:subClassOf :Constructie ;
+            rdfs:comment "A stone slab or block with an inscription and often an emblematic representation in relief that adorns the front façade of a building. The façade stone gives the building its own recognisable identity."@en ,
+                         "Een stenen plaat of blok met een inscriptie en vaak een emblematische voorstelling in reliëf die de voorgevel van een gebouw siert. De gevelsteen verleent het gebouw een eigen, herkenbare identiteit."@nl ;
+            rdfs:label "Façade stone"@en ,
+                       "Gevelsteen"@nl ;
+            rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/dc6e2a8d-5f85-4076-a67a-271eb74136d0> .
+
+
+###  https://www.goudatijdmachine.nl/def#GrafMonument
+:GrafMonument rdf:type owl:Class ;
+              rdfs:subClassOf :Constructie ;
+              rdfs:comment "A grave monument is a type of monument placed on a grave. It is erected in memory or in honour of one or more deceased persons. A memorial or cenotaph refers to someone who is not buried on the spot."@en ,
+                           "Een grafmonument is een type monument dat geplaatst wordt op een graf. Het wordt opgericht ter herinnering aan of ter ere van een overledene of overledenen. Een gedenkteken of cenotaaf verwijst naar iemand die niet ter plekke begraven is."@nl ;
+              rdfs:label "Grafmonument"@nl ,
+                         "Grave monument"@en ;
+              rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/7e081e30-ebe0-4a34-99fe-2ef63e71d38e> .
+
+
+###  https://www.goudatijdmachine.nl/def#HistorischNaambord
+:HistorischNaambord rdf:type owl:Class ;
+                    rdfs:subClassOf :Constructie ;
+                    rdfs:comment "A historical name plate is a small sign on a façade that states the historical name of a street, house or building, often with a short explanation and the year of first mention."@en ,
+                                 "Een historisch naambord is een bordje aan een gevel dat de historische naam van een straat, huis of gebouw vermeldt, vaak met een korte toelichting en het jaar van eerste vermelding."@nl ;
+                    rdfs:label "Historical name plate"@en ,
+                               "Historisch naambord"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Hofje
+:Hofje rdf:type owl:Class ;
+       rdfs:subClassOf :Structuur ;
+       rdfs:comment "Courtyards (hofjes) are pieces of land enclosed by walls or buildings, planted with trees, flowers and grass; in Gouda usually a partly private community intended for the needy, consisting of a number of small houses around an inner court."@en ,
+                    "Hofjes zijn stukken grond, door muren of gebouwen omsloten, met bomen, bloemen en gras beplant; in Gouda meestal een deels besloten leefgemeenschap bedoeld voor behoeftigen, bestaande uit een aantal huisjes rond een binnenplaats."@nl ;
+       rdfs:label "Courtyard"@en ,
+                  "Hofje"@nl ;
+       rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/8528f737-ab2b-4566-8d22-65d076b018e1> .
+
+
+###  https://www.goudatijdmachine.nl/def#Hofstedegeld
+:Hofstedegeld rdf:type owl:Class ;
+              rdfs:subClassOf :Registratie ;
+              rdfs:comment "Steden in het middeleeuwse Holland ontstonden vaak op grond die het eigendom was van een stadsheer, de graaf of één van zijn leenmannen. Om de stedelijke ontwikkeling te bevorderen, gaf de stadsheer zijn grond uit in kleine percelen tegen een eeuwigdurende erfcijns, het hofstedengeld. Het ging daarbij om een klein bedragje, dat in de loop van de eeuwen ook niet werd aangepast. Hofstedengelden zijn daarom uitstekende gidsfossielen, die veel informatie verschaffen over de stedebouwkundige ontwikkelingen van historische stadskernen. Van de hofstedengelden werd administratie bijgehouden."@nl ,
+                           "Towns in medieval Holland often arose on land owned by a lord, the count or one of his vassals. To promote urban development the lord issued his land in small plots against a perpetual hereditary rent, the hofstedegeld. This was a small amount that was never adjusted over the centuries. Hofstedegeld records are therefore excellent guide fossils that provide much information about the urban development of historical town centres."@en ;
+              rdfs:label "Hofstedegeld"@nl ,
+                         "Hofstedegeld (ground rent record)"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Huisnaam
+:Huisnaam rdf:type owl:Class ;
+          rdfs:subClassOf :Adressering ;
+          owl:disjointWith :NummerAanduiding ,
+                           :PlaatselijkeAanduiding ,
+                           :StraatNummerAanduiding ;
+          rdfs:comment "A name of a house used to identify it, for example in tax registers."@en ,
+                       "Een naam van een huis om dit te identificeren, bijvoorbeeld in belastingregisters."@nl ;
+          rdfs:label "House name"@en ,
+                     "Huisnaam"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Index
+:Index rdf:type owl:Class ;
+       rdfs:subClassOf :Registratie ;
+       rdfs:comment "An index (transcription) on an archival source, such as a register of owners or residents, in which each row mentions a location in Gouda."@en ,
+                    "Een index (transcriptie) op een archiefbron, zoals een register van eigenaren of bewoners, waarin per regel een plaats in Gouda wordt genoemd."@nl ;
+       rdfs:label "Index"@en ,
+                  "Index"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Kelder
+:Kelder rdf:type owl:Class ;
+        rdfs:subClassOf :Constructie ;
+        rdfs:comment "A cellar is an underground room or construction, usually located beneath a building or dwelling, used for storage, utilities, protection or other purposes. A cellar is a building part and refers with 'part of' to the building beneath which it lies."@en ,
+                     "Een kelder is een ondergrondse ruimte of constructie, meestal gelegen onder een gebouw of woning, die wordt gebruikt voor opslag, nutsvoorzieningen, bescherming of andere doeleinden. Een kelder is een gebouwonderdeel en verwijst met 'onderdeel van' naar het gebouw waaronder hij ligt."@nl ;
+        rdfs:label "Cellar"@en ,
+                   "Kelder"@nl ;
+        rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/176e2bc9-63ef-4998-aa5f-20af01e96640> .
+
+
+###  https://www.goudatijdmachine.nl/def#Kunstwerk
+:Kunstwerk rdf:type owl:Class ;
+           rdfs:subClassOf :Constructie ;
+           owl:disjointWith :Natuur ;
+           rdfs:comment "An engineering structure (kunstwerk) is a civil engineering work for the infrastructure of roads, water, railways, flood defences and/or pipes and is not intended for permanent human residence, such as bridges, locks, pumping stations and tunnels."@en ,
+                        "Een kunstwerk is een civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen en niet bedoeld voor permanent menselijk verblijf, zoals bruggen, sluizen, gemalen en tunnels."@nl ;
+           rdfs:label "Engineering structure"@en ,
+                      "Kunstwerk"@nl ;
+           rdfs:seeAlso <http://bag.basisregistraties.overheid.nl/id/begrip/Kunstwerk> .
+
+
+###  https://www.goudatijdmachine.nl/def#Kwartier
+:Kwartier rdf:type owl:Class ;
+          rdfs:subClassOf :Structuur ;
+          rdfs:comment "A quarter is one of the six administrative districts into which Gouda was divided between 1611 and 1718: four quarters within the canals and two outer quarters. The division into quarters was used for taxation and supervision, among other things, and was replaced by the division into districts (wijken) in 1718 (see Wijk)."@en ,
+                       "Een kwartier is een van de zes bestuurlijke stadsdelen waarin Gouda tussen 1611 en 1718 was ingedeeld: vier kwartieren binnen de singels en twee buitenkwartieren. De kwartierindeling werd gebruikt voor onder meer belastingheffing en toezicht en ging in 1718 over in de wijkindeling (zie Wijk)."@nl ;
+          rdfs:label "Kwartier"@nl ,
+                     "Quarter"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Molen
+:Molen rdf:type owl:Class ;
+       rdfs:subClassOf :Gebouw ;
+       rdfs:comment "A mill is a construction or machine designed to harness energy, usually wind, water or muscle power, to process materials or perform mechanical work."@en ,
+                    "Een molen is een constructie of machine die is ontworpen om energie te benutten - meestal wind-, water- of spierkracht - om materialen te verwerken of mechanische arbeid te verrichten."@nl ;
+       rdfs:label "Mill"@en ,
+                  "Molen"@nl ;
+       rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/0198a25a-3469-469e-8103-a613e32fcdc6> .
+
+
+###  https://www.goudatijdmachine.nl/def#Natuur
+:Natuur rdf:type owl:Class ;
+        rdfs:subClassOf :Constructie ;
+        rdfs:comment "Nature is everything in the physical world that is not made by humans, including plants, trees, landscapes, waterways and other elements of the Earth; natural constructions that arose within the area."@en ,
+                     "Natuur is alles in de fysieke wereld dat niet door mensen is gemaakt, inclusief planten, bomen, landschappen, waterwegen en andere elementen van de aarde; binnen het gebied ontstane natuurlijke constructies."@nl ;
+        rdfs:label "Nature"@en ,
+                   "Natuur"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#NummerAanduiding
+:NummerAanduiding rdf:type owl:Class ;
+                  rdfs:subClassOf :Adressering ;
+                  owl:disjointWith :PlaatselijkeAanduiding ,
+                                   :StraatNummerAanduiding ;
+                  rdfs:comment "A number issued per district: a numbering of building units to identify them in, for example, tax registers."@en ,
+                               "Een per wijk uitgegeven nummer: een nummering van panden om deze te identificeren in bijvoorbeeld belastingregisters."@nl ;
+                  rdfs:label "Number designation"@en ,
+                             "Nummeraanduiding"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Ondertrouw
+:Ondertrouw rdf:type owl:Class ;
+            rdfs:subClassOf :Gebeurtenis ;
+            rdfs:comment "Ondertrouw (marriage banns registration) is the term used for declaring the intention to marry."@en ,
+                         "Ondertrouw of huwelijksaangifte is de benaming die gebruikt wordt voor het aangeven van het voornemen om te trouwen."@nl ;
+            rdfs:label "Marriage banns"@en ,
+                       "Ondertrouw"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#OorspronkelijkeAanwijzendeTafelPagina
+:OorspronkelijkeAanwijzendeTafelPagina rdf:type owl:Class ;
+                                       rdfs:subClassOf :Registratie ;
+                                       rdfs:comment "A page (sheet) of the Oorspronkelijke Aanwijzende Tafel (OAT), the 1832 register listing, per cadastral section, the plots with owner, type and area."@en ,
+                                                    "Een pagina (blad) van de Oorspronkelijke Aanwijzende Tafel (OAT), het register uit 1832 waarin per kadastrale sectie de percelen met eigenaar, soort en oppervlakte zijn opgenomen."@nl ;
+                                       rdfs:label "Oorspronkelijke Aanwijzende Tafel pagina"@nl ,
+                                                  "Original cadastral table (OAT) page"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#OorspronkelijkeAanwijzendeTafelRegel
+:OorspronkelijkeAanwijzendeTafelRegel rdf:type owl:Class ;
+                                      rdfs:subClassOf :Registratie ;
+                                      rdfs:comment "A row from the Oorspronkelijke Aanwijzende Tafel (OAT): one plot with cadastral designation, owner, plot type, area, class and taxable income."@en ,
+                                                   "Een regel uit de Oorspronkelijke Aanwijzende Tafel (OAT): één perceel met kadastrale aanduiding, eigenaar, perceelsoort, oppervlakte, klasse en belastbaar inkomen."@nl ;
+                                      rdfs:label "Oorspronkelijke Aanwijzende Tafel regel"@nl ,
+                                                 "Original cadastral table (OAT) row"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Pand
+:Pand rdf:type owl:Class ;
+      rdfs:subClassOf :Constructie ;
+      rdfs:comment "A building unit (pand) is the smallest functionally and architecturally-constructively independent unit at the time of its creation that is directly and permanently connected to the earth and can be entered and locked. Within the Gouda Time Machine a building unit is the physical, structural unit with a geometry and a period of existence, reconstructed from sources such as the 1832 cadastral map or the verponding tax registers. It needs no name and can originate from or merge into other building units."@en ,
+                   "Een pand is de kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. Binnen de Gouda Tijdmachine is een pand de fysieke, bouwkundige eenheid met een geometrie en een bestaansperiode, gereconstrueerd uit bronnen zoals de kadastrale kaart van 1832 of de verpondingskohieren. Een pand heeft geen naam nodig en kan voortkomen uit of opgaan in andere panden."@nl ;
+      rdfs:label "Building unit (pand)"@en ,
+                 "Pand"@nl ;
+      rdfs:seeAlso <http://bag.basisregistraties.overheid.nl/id/begrip/Pand> .
+
+
+###  https://www.goudatijdmachine.nl/def#Perceel
+:Perceel rdf:type owl:Class ;
+         rdfs:subClassOf :Structuur ;
+         rdfs:comment "A plot is a limited part of Dutch territory that is cadastrally identified and bounded by cadastral boundaries."@en ,
+                      "Een perceel is een begrensd deel van het Nederlands grondgebied dat kadastraal geïdentificeerd is en met kadastrale grenzen begrensd is."@nl ;
+         rdfs:label "Perceel"@nl ,
+                    "Plot"@en ;
+         rdfs:seeAlso <http://brk.basisregistraties.overheid.nl/id/begrip/Perceel> .
+
+
+###  https://www.goudatijdmachine.nl/def#Plaats
+:Plaats rdf:type owl:Class ;
+        rdfs:subClassOf :Structuur ;
+        rdfs:comment "A place or settlement is a location where a cluster of buildings is found and where several people live together, such as a city, town or other settlement."@en ,
+                     "Een plaats of woonplaats is een locatie waar een groepering van bebouwing wordt gevonden en waar meerdere mensen bij elkaar wonen, zoals een stad, dorp of andere nederzetting."@nl ;
+        rdfs:label "Plaats"@nl ,
+                   "Place"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#PlaatselijkeAanduiding
+:PlaatselijkeAanduiding rdf:type owl:Class ;
+                        rdfs:subClassOf :Adressering ;
+                        owl:disjointWith :StraatNummerAanduiding ;
+                        rdfs:comment "Combinatie van de wijkletter en een per wijk uitgegeven nummer, zoals die in Gouda vanaf het einde van de achttiende eeuw tot de invoering van straatnummering werd gebruikt."@nl ,
+                                     "Combination of the district letter and a number issued per district, as used in Gouda from the end of the eighteenth century until the introduction of street numbering."@en ;
+                        rdfs:label "Local designation"@en ,
+                                   "Plaatselijke aanduiding"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Registratie
+:Registratie rdf:type owl:Class ;
+             rdfs:subClassOf :GeoTemporeelObject ;
+             rdfs:comment "A registration is an entry in a (historical) administrative source, such as a tax register, a cadastral table, a permit register or an index on an archival source, that relates to a location in Gouda and is valid in a certain period."@en ,
+                          "Een registratie is een vastlegging in een (historische) administratieve bron, zoals een belastingkohier, een kadastrale tafel, een vergunningenregister of een index op een archiefbron, die betrekking heeft op een plaats in Gouda en geldig is in een bepaalde periode."@nl ;
+             rdfs:label "Registratie"@nl ,
+                        "Registration"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Sectie
+:Sectie rdf:type owl:Class ;
+        rdfs:subClassOf :Structuur ;
+        rdfs:comment "A section is a subdivision of a cadastral municipality. A cadastral section is designated by one or two capital letters and is part of the cadastral designation."@en ,
+                     "Een sectie is een onderdeel van een kadastrale gemeente. Een kadastrale sectie wordt aangeduid met één of twee hoofdletters en is een onderdeel van de kadastrale aanduiding."@nl ;
+        rdfs:label "Sectie"@nl ,
+                   "Section"@en ;
+        rdfs:seeAlso <http://brk.basisregistraties.overheid.nl/id/begrip/Sectie> .
+
+
+###  https://www.goudatijdmachine.nl/def#Sluis
+:Sluis rdf:type owl:Class ;
+       rdfs:subClassOf :Kunstwerk ;
+       rdfs:comment "A lock is a hydraulic engineering construction used to regulate the water level and water flow between two different parts of a waterway."@en ,
+                    "Een sluis is een waterbouwkundige constructie die wordt gebruikt om de waterstand en waterstroom tussen twee verschillende delen van een waterweg te reguleren."@nl ;
+       rdfs:label "Lock"@en ,
+                  "Sluis"@nl ;
+       rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/88326f50-39d4-42c8-bec3-28a44ff3e472> .
+
+
+###  https://www.goudatijdmachine.nl/def#Straat
+:Straat rdf:type owl:Class ;
+        rdfs:subClassOf :Structuur ;
+        rdfs:comment "A street is a public road in a village, town, or other inhabited area. Streets are usually used by vehicles and pedestrians and can have houses, businesses, and other buildings on either side."@en ,
+                     "Een straat is een openbare weg in een dorp, stad of ander bewoond gebied. Straten worden meestal gebruikt door voertuigen en voetgangers en kunnen huizen, bedrijven en andere gebouwen aan weerszijden hebben."@nl ;
+        rdfs:label "Straat"@nl ,
+                   "Street"@en ;
+        rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/aacd0332-a005-41ba-834e-c125e6590e0a> .
+
+
+###  https://www.goudatijdmachine.nl/def#StraatNummerAanduiding
+:StraatNummerAanduiding rdf:type owl:Class ;
+                        rdfs:subClassOf :Adressering ;
+                        rdfs:comment "(Modern) addressing based on street and house number: a number issued per street, possibly with a house letter and suffix."@en ,
+                                     "(Moderne) adressering op basis van straat en huisnummer: een per straat uitgegeven nummer, eventueel met huisletter en toevoeging."@nl ;
+                        rdfs:label "Straatnummeraanduiding"@nl ,
+                                   "Street number designation"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Structuur
+:Structuur rdf:type owl:Class ;
+           rdfs:subClassOf :GeoTemporeelObject ;
+           rdfs:comment "A structure is a spatial subdivision of the area: an organized collection of interconnected elements within a geographic area, such as a parcel, district, street, neighbourhood, section, place or cemetery, that together form the physical and functional composition of a region."@en ,
+                        "Een structuur is een ruimtelijke indeling van het gebied: een georganiseerde verzameling van onderling verbonden elementen binnen een geografisch gebied, zoals een perceel, wijk, straat, buurt, sectie, plaats of begraafplaats, die gezamenlijk de fysieke en functionele samenstelling van een regio vormen."@nl ;
+           rdfs:label "Structure"@en ,
+                      "Structuur"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Tramweg
+:Tramweg rdf:type owl:Class ;
+         rdfs:subClassOf :Kunstwerk ;
+         rdfs:comment "A tramway is the route of a (steam or horse) tram line, including its tracks and stops, as it existed in and around Gouda. As infrastructure it is an engineering structure."@en ,
+                      "Een tramweg is het tracé van een (stoom- of paarden)tramlijn, inclusief sporen en haltes, zoals dat in en om Gouda heeft bestaan. Als infrastructuur is het een civiel-technisch kunstwerk."@nl ;
+         rdfs:label "Tramway"@en ,
+                    "Tramweg"@nl ;
+         rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/628356c1-e122-4cd3-a359-6e051b1c281c> .
+
+
+###  https://www.goudatijdmachine.nl/def#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf :Gebeurtenis ;
+           rdfs:comment "Met transport wordt bedoeld het passeren van de transportakte bij de notaris. Anders gezegd: het juridisch overdragen van het onroerend goed van verkoper(s) aan koper(s)."@nl ,
+                        "Transport refers to the passing of the deed of conveyance before the notary: the legal transfer of real property from seller(s) to buyer(s)."@en ;
+           rdfs:label "Conveyance (transport)"@en ,
+                      "Transport"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Vergunning
+:Vergunning rdf:type owl:Class ;
+            rdfs:subClassOf :Registratie ;
+            rdfs:comment "A permit is a permission granted by the municipality, such as a building or nuisance act permit, for an activity at an address or plot."@en ,
+                         "Een vergunning is een door de gemeente verleende toestemming, zoals een bouw- of hinderwetvergunning, voor een activiteit op een adres of perceel."@nl ;
+            rdfs:label "Permit"@en ,
+                       "Vergunning"@nl .
+
+
+###  https://www.goudatijdmachine.nl/def#Verponding
+:Verponding rdf:type owl:Class ;
+            rdfs:subClassOf :Registratie ;
+            rdfs:comment "De verponding was een vorm van grondbelasting, die tussen de 17e eeuw en 19e eeuw in Nederland werd geheven. Op 1 oktober 1832 werd de verponding opgevolgd door de invoering van de grondbelasting die op het kadaster was gebaseerd. De gegevens die nodig waren om de hoeveelheid te betalen verponding voor een bepaalde eigenaar van onroerend goed uit te rekenen, werden opgetekend in zogenaamde verpondingskohieren. De kohieren waren gebaseerd op maatboeken."@nl ,
+                         "The verponding was a form of land tax levied in the Netherlands between the 17th and 19th centuries. On 1 October 1832 it was succeeded by the land tax based on the cadastre. The data needed to calculate the verponding due by a property owner were recorded in verponding registers (kohieren), which were based on survey books."@en ;
+            rdfs:label "Verponding"@nl ,
+                       "Verponding (property tax record)"@en .
+
+
+###  https://www.goudatijdmachine.nl/def#Waterloop
+:Waterloop rdf:type owl:Class ;
+           rdfs:subClassOf :Constructie ;
+           rdfs:comment "A watercourse is a natural or artificial flow of water that moves over the surface of the earth or underground, such as a canal, ditch or river. In Gouda most watercourses are man-made, which is why the class sits directly under construction rather than nature."@en ,
+                        "Een waterloop is een natuurlijke of kunstmatige stroming van water die zich over het aardoppervlak of ondergronds verplaatst, zoals een gracht, sloot, vaart of rivier. In Gouda zijn de meeste waterlopen gegraven; daarom staat de klasse direct onder constructie en niet onder natuur."@nl ;
+           rdfs:label "Watercourse"@en ,
+                      "Waterloop"@nl ;
+           rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/0470207a-e317-4891-96dd-461e0ae8a63f> .
+
+
+###  https://www.goudatijdmachine.nl/def#Wijk
+:Wijk rdf:type owl:Class ;
+      rdfs:subClassOf :Structuur ;
+      rdfs:comment "Onderdeel van een gemeente en cluster van één of meerdere buurten, dat op basis van historische dan wel stedenbouwkundige kenmerken homogeen is afgebakend. In het historische Gouda werden wijken aangeduid met een wijkletter; een wijk bestaat uit één of meerdere buurten."@nl ,
+                   "Part of a municipality and cluster of one or more neighbourhoods, which is homogeneously demarcated on the basis of historical or urban development characteristics. In historical Gouda districts were designated by a district letter; a district consists of one or more neighbourhoods."@en ;
+      rdfs:label "District"@en ,
+                 "Wijk"@nl ;
+      rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/35948653-d8ad-4e86-9368-d8b618776452> ,
+                   <https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/wijk> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://n2t.net/ark:/60537/by6gvD
+<https://n2t.net/ark:/60537/by6gvD> rdf:type owl:NamedIndividual ,
+                                             <http://xmlns.com/foaf/0.1/Organization> ;
+                                    <http://xmlns.com/foaf/0.1/homepage> <https://www.goudatijdmachine.nl> ;
+                                    <http://xmlns.com/foaf/0.1/name> "Gouda Tijdmachine"@nl ,
+                                                                     "Gouda Time Machine"@en .
+
+
+###  https://orcid.org/0000-0002-7328-1312
+<https://orcid.org/0000-0002-7328-1312> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://www.w3.org/ns/org#memberOf> <https://n2t.net/ark:/60537/by6gvD> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Bob Coret" .
+
+
+###  https://www.diegoude.nl/
+<https://www.diegoude.nl/> rdf:type owl:NamedIndividual ,
+                                    <http://xmlns.com/foaf/0.1/Organization> ;
+                           <http://xmlns.com/foaf/0.1/homepage> <https://www.diegoude.nl/> ;
+                           <http://xmlns.com/foaf/0.1/name> "Historical Society Die Goude"@en ,
+                                                            "Historische Vereniging Die Goude"@nl .
+
+
+###  https://www.samh.nl/
+<https://www.samh.nl/> rdf:type owl:NamedIndividual ,
+                                <http://xmlns.com/foaf/0.1/Organization> ;
+                       <http://xmlns.com/foaf/0.1/homepage> <https://www.samh.nl/> ;
+                       <http://xmlns.com/foaf/0.1/name> "Streekarchief Midden-Holland"@nl ,
+                                                        "Streekarchief Midden-Holland (regional archive)"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Adressering
+                :Constructie
+                :Gebeurtenis
+                :Registratie
+                :Structuur
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

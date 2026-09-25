@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="https://w3id.org/dba/ontology/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:vann="http://purl.org/vocab/vann/">
+  <owl:Ontology rdf:about="https://w3id.org/dba/ontology/">
+	<rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dc:creator>Federica Brambilla</dc:creator>
+    <dc:creator>Giovanni Bruno</dc:creator>
+    <dc:creator>Fabiana Guernaccini</dc:creator>
+	<dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+	<cc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+	<vann:preferredNamespacePrefix>dba</vann:preferredNamespacePrefix> 
+	<vann:preferredNamespaceUri>https://w3id.org/dba/ontology/</vann:preferredNamespaceUri>
+	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dc:issued>
+    <rdfs:label xml:lang="it">Ontologia per la descrizione delle pratiche bancarie e della documentazione correlata</rdfs:label>
+	<dc:title xml:lang="it">Ontologia per la descrizione delle pratiche bancarie e della documentazione correlata</dc:title>
+    <dc:description xml:lang="it">L'ontologia, presentata qui in versione beta, è derivata dall'analisi della documentazione e delle esigenze descrittive dell'Archivio Storico di Intesa Sanpaolo ed è finalizzata alla descrizione del contenuto dei documenti storici bancari e di parte dell’attività svolta dalla banca, soprattutto verso soggetti terzi (finanziamenti, beneficenza, sequestri e confische...), che comporta l’istruzione di pratiche o la produzione di documenti.
+
+Il punto focale del modello descrittivo è la banca - soggetto che istruisce delle pratiche di diversa natura, accomunate dalla loro articolazione in fasi/eventi - e il rapporto con la documentazione realizzata e le informazioni in essa contenute. Questa ontologia si basa infatti sui dati raccolti dai documenti d’archivio che descrivono vari processi e attività eseguiti dagli istituti bancari: punto di partenza per la sua costruzione sono stati gli inventari e le banche dati della documentazione conservata dall’Archivio Storico, prodotta dalle diverse banche che nel tempo si sono via via fuse in Intesa Sanpaolo.
+
+L’ontologia nasce con l’obiettivo di fornire una rappresentazione e un modello sufficientemente astratto per la descrizione del processo di diverse attività bancarie da cui deriva la produzione di documentazione – dalla richiesta di finanziamento da parte di un'impresa e il suo esito, alla disposizione di pratiche di sequestro, confisca e restituzione di beni, fino alle erogazioni di beneficenza, per citare qualche esempio - riutilizzando modelli già consolidati e ampiamente diffusi. La struttura dell’ontologia proposta vuole infatti adattarsi alle diverse azioni, descritte nelle varie pratiche d’archivio, che un istituto bancario compie verso soggetti terzi. Quella proposta non è dunque una ontologia sull’attività bancaria in generale, ma sul rapporto tra questa e i documenti prodotti. Non ha altresì come obiettivo la descrizione dei documenti in senso stretto, per cui si rimanda alla OAD ontology.
+
+Con questo lavoro si intende porre un primo fondamentale tassello per la descrizione del dominio sulle pratiche archivistiche bancarie nella loro complessità, varietà e interezza, e sui dati in esse contenuti. Pur potendo disporre di dati provenienti da diverse banche e pertinenti a differenti attività e avendo già predisposto l’integrazione di dataset e ontologie di terzi, per procedere al completamento sarà necessario attendere l’elaborazione di rappresentazioni basate su altre tipologie documentarie e istituti bancari, anche non italiani.</dc:description>
+	<dc:description xml:lang="en">The ontology, presented here in a beta version, is based on the analysis of the documentation and descriptive requirements of the Intesa Sanpaolo Historical Archive and is intended to describe the content of historical banking documents and of some of the activities carried out by the bank, particularly in relation to third parties (loans, charity donations, seizures and confiscations, etc.), which involve the initiation of processes or the production of documents. The focal point of the descriptive model is the bank - an entity that initiates different types of processes, whose common feature is that they are structured into various stages/events - and the relationship between the documentation produced and the information it contains. In fact, this ontology is based on information collected from archived documents which describe various processes and activities carried out by banking institutions: the starting point for its construction were the inventories and databases of documentation stored in the Historical Archive which was produced by the various banks that over time were merged into Intesa Sanpaolo. The ontology was created to provide a sufficiently abstract representation and model for describing the processes of various banking activities from which the documentation was produced - from a company's request for financing and its outcome, to the preparation of seizure, confiscation and asset restitution filings, to charitable contributions, just to mention a few examples - reusing models that were already well established and widely used. The structure of the proposed ontology is in fact intended to adapt to the various activities, described in the archive files that a banking institution performs in relation to third parties. The proposed ontology is therefore not an ontology on banking activity in general, but on the relationship between this activity and the documents that are produced. Moreover, its objective is not to describe the documents in the strict sense of the term, for which reference is made to OAD ontology. The purpose of this project is to lay the initial, and fundamental, building blocks for describing the complexity, variety, and breadth of the domain of archiving bank records and the data they contain. Despite having data from different banks relating to different activities and having already made arrangements for the integration of third-party datasets and ontologies, before completing the project we will have to wait for the processing of representations based on other types of documents and banking institutions, including non-Italian ones.
+</dc:description>
+    <rdfs:label xml:lang="en">Description Banking Archives Ontology</rdfs:label>
+    <dc:title xml:lang="en">Description Banking Archives Ontology</dc:title>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Minutes">
+    <rdfs:comment xml:lang="it">Documento redatto da chi è investito di questa specifica funzione o da un pubblico ufficiale, allo scopo di attestare e ricordare, in forma sintetica, ma completa ed esauriente nei dati essenziali, fatti, procedimenti e avvenimenti di varia natura e quanto detto durante una riunione o un'assemblea.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">document drawn up by whoever is vested with this specific function or by a public official, in order to certify and remember - in a concise but complete and exhaustive form as regards the key data - facts, proceedings and events of various kinds and the matters discussed during a meeting or a shareholders’ meeting.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Verbale</rdfs:label>
+    <rdfs:label xml:lang="en">Minutes</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://linkedevents.org/ontology/Event">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Inspection">
+    <rdfs:comment xml:lang="it">La visita e il complesso delle verifiche compiute da un ispettore.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The visit and the set of checks carried out by an inspector.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Ispezione</rdfs:label>
+    <rdfs:label xml:lang="en">Inspection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Contract">
+    <rdfs:comment xml:lang="it">Il contratto è definito dall’art. 1321 c.c. come “l’accordo di due o più parti per costituire, regolare o estinguere tra loro un rapporto giuridico patrimoniale”</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The contract is defined by art. 1321 of the Italian Civil Code as “the agreement of two or more parties to establish, govern or terminate a legal patrimonial relationship between them”.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:label xml:lang="it">Contratto</rdfs:label>
+    <rdfs:label xml:lang="en">Contract</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/CreditLine">
+    <rdfs:comment xml:lang="it">Credito concesso da una banca, sotto qualunque forma, a un cliente che ne abbia fatto richiesta, dopo aver accertato le sue capacità reddituali, la consistenza patrimoniale e le sue doti morali, o, quando si tratti di un’impresa, quelle delle persone che la dirigono. La nozione va distinta da quella di prestito</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Credit granted by a bank, in any form, to a customer who has requested it, after having ascertained the customer’s income capacity, assets and moral qualities, or, in the case of a company, those of the individuals managing it. The concept must be distinguished from that of a loan.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Financing"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Fido</rdfs:label>
+    <rdfs:label xml:lang="en">Credit line</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/DeedOfResolution">
+    <rdfs:comment xml:lang="it">Verbale che documenta la conclusione di un processo decisionale.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Minutes documenting the conclusion of a decision-making process.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:label xml:lang="it">Atto deliberativo</rdfs:label>
+    <rdfs:label xml:lang="en">Deed of resolution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Seizure">
+    <rdfs:comment xml:lang="it">Nel linguaggio giuridico, misura cautelare, che fa sorgere un vincolo di indisponibilità sui beni colpiti, mobili o immobili, tendente ad assicurare una certa situazione di fatto o di diritto. Provvedimento diretto a sottrarre la libera disponibilità di beni mobili e immobili, di aziende e simili, ai loro detentori.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">In legal jargon, a precautionary measure, which gives rise to a restriction of unavailability on the affected movable or immovable property, in order to ensure a certain factual or legal situation. Provision aimed at removing the free availability of movable and immovable property, of companies and the like, from their holders.</rdfs:comment>
+    <rdfs:label xml:lang="it">Sequestro</rdfs:label>
+    <rdfs:label xml:lang="en">Seizure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/spar/pro/RoleInTime"/>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Report">
+    <rdfs:comment xml:lang="it">La relazione è un testo che riferisce in modo dettagliato e oggettivo su un'attività, uno studio o una analisi, oppure espone un argomento su cui si è raccolta un'apposita documentazione.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">A report is a text which reports in detailed and objective manner on an activity, a study or an analysis, or illustrates a topic on which appropriate documentation has been collected.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:label xml:lang="it">Relazione</rdfs:label>
+    <rdfs:label xml:lang="en">Report</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Alienation">
+    <rdfs:comment xml:lang="it">Atto giuridico con cui si trasferiscono ad altri soggetti una proprietà o un diritto su beni del proprio patrimonio, mediante vendita, donazione, mutuo, ecc.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Legal deed by which a property or a right on the goods comprising one’s own assets is transferred to other entities, through sale, donation, mortgage, etc.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Alienazione</rdfs:label>
+    <rdfs:label xml:lang="en">Alienation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Audit">
+    <rdfs:comment xml:lang="it">Accertamento della regolarità formale o sostanziale di un documento, di una situazione di fatto o di un diritto. La verifica può riferirsi, nell’ambito delle aziende, a controlli di carattere economico, di natura giuridica, di natura contabile, di natura finanziaria, di carattere tecnico, ecc.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Verification of the formal or substantive regularity of a document, a factual situation or a right. The audit may refer, within the scope of companies, to checks of an economic nature, of a legal nature, of an accounting nature, of a financial nature, of a technical nature, etc.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Verifica</rdfs:label>
+    <rdfs:label xml:lang="en">Audit</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/File">
+    <rdfs:comment xml:lang="it">L’insieme degli atti o dei documenti necessari per avviare e portare a termine un affare, e necessari per chiedere autorizzazioni, concessioni e simili. In senso concreto, l’insieme delle carte relative al singolo, a un determinato oggetto, e l’inserto, il fascicolo che le raccoglie.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The set of deeds or documents required to start and conclude a business, and necessary to request authorisations, concessions and the suchlike. In a concrete sense, the set of papers relating to the individual, to a specific object, and the insert, the file that binds them together.</rdfs:comment>
+    <rdfs:label xml:lang="it">Pratica bancaria</rdfs:label>
+    <rdfs:label xml:lang="en">File</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Property">
+    <rdfs:comment xml:lang="it">Nell’accezione generale, i beni sono prodotti o risorse che possono essere direttamente indirizzati al soddisfacimento di bisogni, oppure venire utilizzati per produrre altri beni. In quanto risorse o prodotti tangibili, i beni si distinguono dai servizi, che sono invece prestazioni erogate nel tempo.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">In the general sense, goods are products or resources that can be destined directly to the satisfaction of needs, or be used to produce other goods. As tangible resources or products, goods are distinguished from services, which are performances rendered over time.</rdfs:comment>
+    <rdfs:label xml:lang="it">Bene</rdfs:label>
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Restitution">
+    <rdfs:comment xml:lang="it">L’azione personale di restituzione è destinata a ottenere l’adempimento dell’obbligazione di ritrasferire una cosa che è stata in precedenza volontariamente trasmessa dall’attore al convenuto, in forza di negozi quali la locazione, il comodato, il deposito e così via, che non presuppongono necessariamente nel tradens la qualità di proprietario, La restituzione mira ad ottenere il ritrasferimento di un bene in precedenza volontariamente trasmesso dall’attore al convenuto. l titolare di un diritto reale su un bene (mobile o immobile) può infatti chiedere la restituzione del bene da parte di chiunque si sia appropriato del bene (esercitando il mero possesso) o da chiunque detiene il bene (esercitando la detenzione per conto altrui).</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The personal act of restitution is intended to obtain the fulfilment of the obligation to retransfer something that has previously been voluntarily transmitted by the plaintiff to the defendant, by virtue of transactions such as lease, loan, deposit and so on, which do not necessarily require the title of ownership. The restitution aims to obtain the retransfer of an asset previously voluntarily transmitted by the plaintiff to the defendant. The holder of right in rem on an asset (whether movable or immovable) can thus request the restitution of the asset from anyone who has appropriated the asset (exercising mere possession) or from anyone who owns the asset (exercising possession on account of others).</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Restituzione</rdfs:label>
+    <rdfs:label xml:lang="en">Restitution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/MovableProperty">
+    <rdfs:comment xml:lang="it">I beni mobili possono essere tali per natura o per determinazione di legge. Sono mobili per natura le cose che si possono trasportare da un luogo all’altro, sia per forza estranea che per proprietà intrinseca. Sono mobili per determinazione di legge, anzitutto i diritti reali su cose mobili, poi tutti i diritti di credito. Sono mobili le quote di partecipazione alle società commerciali, cioè il complesso dei diritti che competono al socio finché la società dura, cioè fin quando la liquidazione non è chiusa.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Movable property can be such by nature or by law. Things that can be transported from one place to another are movable by nature, either by extraneous force or by intrinsic property. The rights in rem on movable property are first and foremost movable by law, then all credit rights. The shares in trading companies are movable, that is, the set of rights that accrue to the shareholder for the entire duration of the company, that is, until closing of the liquidation.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Property"/>
+    <rdfs:label xml:lang="it">Bene mobile</rdfs:label>
+    <rdfs:label xml:lang="en">Movable property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Guarantee">
+    <rdfs:comment xml:lang="it">Da un punto di vista giuridico, mezzi idonei ad assicurare l’adempimento di un’obbligazione, l’esercizio di una funzione o, in genere, l’osservanza di un precetto legislativo o di un determinato impegno. Da un punto di vista economico, la g. è un trasferimento di rischio: chi la presta si assume un rischio che il beneficiario non sopporta più, sempre che la garanzia venga onorata.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">From a legal point of view, suitable means to ensure the fulfilment of an obligation, the exercise of a function or, in general, the observance of a legislative precept or a specific commitment. From an economic point of view, the guarantee is a transfer of risk: the lender assumes a risk that the beneficiary no longer bears, provided that the guarantee is honoured.</rdfs:comment>
+    <rdfs:label xml:lang="it">Garanzia</rdfs:label>
+    <rdfs:label xml:lang="en">Guarantee</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Credit">
+    <rdfs:comment xml:lang="it">Anticipazione di risorse, nella forma di prestazione di beni o servizi o cessione di somme di denaro, che un agente economico concede ad altro a fronte di una promessa di restituzione futura in una o più soluzioni, secondo modalità e tempi specificati contrattualmente. Il c. può nascere direttamente da rapporti commerciali fra due imprese o fra un’impresa (un imprenditore) e una famiglia, oppure coinvolgere un intermediario finanziario abilitato a operare nel settore del credito [per esempio una banca].</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Advance of resources, in the form of the provision of goods or services or the transfer of sums of money, which an economic agent grants to another against a promise of future restitution in one or more tranches, according to the methods and times specified in the contract. A credit can arise directly from commercial relationships between two companies or between a company (an entrepreneur) and a family, or involve a financial intermediary qualified to trade in the credit sector [for example a bank].</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Financing"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Crediti</rdfs:label>
+    <rdfs:label xml:lang="en">Credit</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/ReportDocument">
+    <rdfs:comment xml:lang="it">Documento riepilogativo o di prospetto</rdfs:comment>
+    <rdfs:comment xml:lang="en">Summary or prospectus document</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:label xml:lang="it">Report</rdfs:label>
+    <rdfs:label xml:lang="en">Report document</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Outcome">
+    <rdfs:comment xml:lang="it">Modalità di estinzione dell’attività creditizia e di chiusura della pratica</rdfs:comment>
+    <vs:term_status xml:lang="en">Unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Method of extinguishing the loan and closing the file</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Esito</rdfs:label>
+    <rdfs:label xml:lang="en">Outcome</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Subsidy">
+    <rdfs:comment xml:lang="it">Aiuto finanziario concesso a persone, imprese, comunità e istituzioni varie. In generale è complementare e integrativo, e finalizzato alla realizzazione di determinate attività e obiettivi.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Financial aid granted to individuals, businesses, communities and miscellaneous institutions. In general, it is complementary and supplementary, and aimed at achieving certain activities and objectives.</rdfs:comment>
+    <rdfs:label xml:lang="it">Sussidio</rdfs:label>
+    <rdfs:label xml:lang="en">Subsidy</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Application">
+    <rdfs:comment xml:lang="it">Formulazione di una richiesta di un servizio, ad esempio l’erogazione di un mutuo o un finanziamento, da parte di un cliente all’azienda bancaria.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Formulation of a request for a service, for example the disbursement of a mortgage or a loan, from a customer to the banking company.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Domanda</rdfs:label>
+    <rdfs:label xml:lang="en">Application</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Loan">
+    <rdfs:comment xml:lang="it">Cessione di un quantitativo di beni presenti contro l’impegno di restituire un quantitativo analogo (p. gratuito) o maggiore (p. a interesse) di beni futuri, secondo modalità diverse. I p. possono essere: in natura o monetari; concessi da privati a privati (p. privati), da banche a privati e ad altre banche (p. bancari), dai privati e dalle banche allo Stato (p. pubblici o nazionali), da altri Stati o da cittadini e banche di altri Stati a uno Stato o a enti e imprese esistenti nello stesso (p. esteri o internazionali). Possono inoltre distinguersi: a seconda della durata, in p. a breve, a medio e a lungo termine; a seconda della garanzia, in p. ipotecari, su pegno, fideiussori, cambiari, fiduciari, allo scoperto; a seconda dell’impiego che ne fa il mutuatario, in p. consuntivi o produttivi.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Transfer of a quantity of existing goods against the commitment to return the same quantity (free loan) or a greater quantity (interest-bearing loan) of future goods, according to different methods. Loans can be: in kind or monetary; granted by individuals to individuals (personal loans), by banks to individuals and other banks (bank loans), by individuals and banks to the State (public or national loans), by other States or by citizens and banks of other States to a State or to entities and companies present therein (foreign or international loans). They can also be distinguished: depending on the duration, in short-, medium- and long-term loans; depending on the guarantee, in mortgage loans, pledges, personal guarantee loans, bills of exchange, fiduciary loans, overdrafts; depending on the use made by the borrower, in consumption or commercial loans.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Financing"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Prestito</rdfs:label>
+    <rdfs:label xml:lang="en">Loan</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Financing">
+    <rdfs:comment xml:lang="it">Il fatto di provvedere con i mezzi necessari al compimento di un’opera, allo svolgimento di un’attività, oppure la somma fornita o ottenuta. In ambito privato è concesso da enti privati (banche e altri istituti finanziari, grosse industrie ecc.), o anche da cittadini singoli con la sottoscrizione di azioni, l’acquisto di obbligazioni, la concessione di credito e di garanzie, o con atti di mecenatismo (per es. sponsorizzazioni), per lo più come aiuto per la realizzazione di opere o per lo svolgimento di attività di interesse collettivo. Il finanziamento delle imprese può avvenire tramite concessione di credito a breve termine per l’attività corrente e a medio e lungo termine per fornire alle imprese i capitali necessari per l’impianto iniziale e il suo successivo ampliamento, oppure tramite ricorso diretto delle imprese stesse al mercato dei capitali con l’emissione di obbligazioni, o di azioni, oppure ancora attraverso l’opera di società finanziarie.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The act of providing the necessary means for the completion of a work, for the performance of an activity, or the sum provided or obtained. In the private sector it is granted by private entities (banks and other financial institutions, large industries, etc.), or even by individual citizens with the underwriting of shares, the purchase of bonds, the granting of credit and guarantees, or with deeds of patronage (e.g. sponsorships), mostly as an aid for the completion of works or for the performance of activities of common interest. The financing of enterprises can take place through the granting of short-term credit for current activities and medium and long-term credit to provide the enterprises with the necessary capital for the initial set-up and their subsequent expansion, or through direct recourse by the same enterprises to the capital market with the issue of bonds, or shares, or even through the intermediation of financial companies.</rdfs:comment>
+    <rdfs:label xml:lang="it">Finanziamento</rdfs:label>
+    <rdfs:label xml:lang="en">Financing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/PreliminaryAssessment">
+    <vs:term_status xml:lang="it">Indica la fase di indagine preliminare relativa all’acquisizione di informazioni atte a definire possibilità e modalità di intervento sul mercato da parte di un’azienda.</vs:term_status>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Indicates the preliminary investigation phase relating to the acquisition of information aimed at defining the possibilities and methods of intervention on the market by a company.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Istruttoria</rdfs:label>
+    <rdfs:label xml:lang="en">Preliminary assessment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/ConfiscationEvent">
+    <rdfs:comment xml:lang="it">Esecuzione della confisca</rdfs:comment>
+    <vs:term_status xml:lang="en">Unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Execution of the confiscation</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/dba/ontology/Event"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="it">Confisca</rdfs:label>
+    <rdfs:label xml:lang="en">Confiscation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Sponsorships">
+    <rdfs:comment xml:lang="it">Si definisce contratto di sponsorizzazione (o sponsorship) quel contratto con il quale una parte – detta “sponsor” – si obbliga a versare un corrispettivo a favore di un’altra parte – detta “sponsee” o “sponsorizzato” – la quale, a sua volta, si obbliga a divulgare il nome o il marchio dello sponsor nel corso delle proprie attività, nell’intento di ottenere un ritorno positivo in termini di notorietà e immagine, beneficiando delle potenzialità comunicazionali dell’evento stesso. 
+La sponsorizzazione identifica il rapporto tra un’azienda, o un brand, e un’iniziativa culturale, sportiva, musicale, etica, che viene finanziata in tutto o in parte grazie a un accordo economico di durata variabile.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">A sponsorship contract is defined as the contract by which a party - called the “sponsor” - undertakes to pay a fee in favour of another party - called the “sponsee” - which, in turn, undertakes to disclose the sponsor’s name or brand in the course of its activities, with the aim of obtaining a positive return in terms of notoriety and image, thereby benefiting from the promotional potential of the event itself. 
+The sponsorship identifies the relationship between a company, or a brand, and a cultural, sporting, musical or ethical initiative, which is financed in whole or in part thanks to an economic agreement of variable duration.</rdfs:comment>
+    <rdfs:label xml:lang="it">Sponsorizzazioni</rdfs:label>
+    <rdfs:label xml:lang="en">Sponsorships</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Bank">
+    <rdfs:comment xml:lang="it">Impresa che compie operazioni di raccolta di fondi ed eroga crediti non trasferibili sul mercato</rdfs:comment>
+    <rdfs:comment xml:lang="en">Company that carries out fundraising transactions and disburses non-transferable loans on the market.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:label xml:lang="it">Banca</rdfs:label>
+    <rdfs:label xml:lang="en">Bank</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Event">
+    <rdfs:comment xml:lang="it">Una cosa che succede; un azione fatta dalla banca durante la propria attività</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">A thing that happens or takes place; an action made by the Bank during the banking</rdfs:comment>
+    <rdfs:label xml:lang="it">Evento</rdfs:label>
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Mortage">
+    <rdfs:comment xml:lang="it">Il mutuo (artt. 1813-1822 c.c.) è il contratto con il quale una parte (mutuante) consegna una determinata quantità di danaro o di altre cose fungibili all’altra parte (mutuatario), che ne acquista la proprietà e si obbliga a restituire altrettante cose della stessa specie e qualità. Il mutuo è un contratto reale: per il suo perfezionamento è pertanto necessaria la consegna del danaro o delle cose mutuate (nella pratica, il mutuo ha per oggetto, in genere, una somma di danaro).</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">A mortgage (articles 1813-1822 of the Italian Civil Code) is the contract with which a party (lender) delivers a certain amount of money or other fungible things to the other party (borrower), who acquires the ownership thereof and undertakes to return as many things of the same kind and quality. The mortgage is a real contract: for its completion it is therefore necessary to deliver the money or the borrowed property (in practice, the mortgage generally has as its object a sum of money).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Financing"/>
+    <rdfs:label xml:lang="it">Mutuo</rdfs:label>
+    <rdfs:label xml:lang="en">Mortage</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Conclusion">
+    <rdfs:comment xml:lang="it">L'atto dello stipulare, cioè del concludere un contratto, e talora il contratto stesso.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">The act of concluding, that is, finalising a contract, and sometimes the contract itself.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Event"/>
+    <rdfs:label xml:lang="it">Stipula</rdfs:label>
+    <rdfs:label xml:lang="en">Conclusion</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/ImmovableProperty">
+    <rdfs:comment xml:lang="it">I beni immobili possono essere tali per natura, per destinazione del proprietario e per legge. Sono immobili per natura, oltre al suolo, quei beni che sono infissi nel suolo o su di essi poggiano saldamente, sono immobili gli edifici e tutte le costruzioni infisse nel suolo, in muratura o no, i natanti solidamente ancorati alla riva, come ponti di barche, pontili, traghetti, stabilimenti di bagni. Sono immobili per destinazione tutte quelle cose che sono accessorie rispetto alla cosa principale immobile: queste accessioni si sogliono chiamare pertinenze: cose autonome che però si trovano in rapporto di dipendenza alla cosa principale. Le pertinenze si distinguono in rurali e urbane, civili e industriali o aziendali. Sono immobili per determinazione di legge i diritti reali su cose immobili (es. diritti di uso, usufrutto, servitù…)</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">immovable property can be such by nature, by the owner’s intended use and by law. In addition to the ground, property that is fixed into the ground or rests firmly on it is immovable by nature, as are buildings and all constructions fixed into the ground, whether in masonry or otherwise, boats solidly anchored to the shore, such as the decks of boats, piers, ferries, bathing establishments. All those things that are ancillary to the main immovable property are immovable by intended use: these ancillary elements are usually called appurtenances: autonomous things that however are in a relationship of dependence upon the main thing. Appurtenances are divided into rural and urban, civil and industrial or corporate. Rights in rem over immovable property are immovable by law (e.g. rights of use, usufruct, easement...)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Property"/>
+    <rdfs:label xml:lang="it">Bene immobile</rdfs:label>
+    <rdfs:label xml:lang="en">Immovable property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Confiscation">
+    <rdfs:comment xml:lang="it">La confisca consiste in una pena accessoria che viene comminata a seguito di condanna e che consiste in una vera e propria espropriazione a favore dello Stato. E’ infatti una misura di sicurezza a carattere patrimoniale consistente nell'espropriazione forzata e gratuita a favore dello Stato ed, in materia urbanistica, a favore del patrimonio del Comune, di tutte le cose che costituiscono il prezzo del reato, che sono servite a commettere il reato, di quelle che ne sono il prodotto e il profitto, nonchè di quelle che sono di per sè criminose. Tale misura può essere facoltativa o obbligatoria.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Confiscation consists of an ancillary penalty which is imposed following a conviction and which consists of an actual expropriation in favour of the State. It is therefore a security measure of a patrimonial nature consisting of the forced and free expropriation in favour of the State and, in an urban context, in favour of a Municipality’s assets, of all the things that comprise the price of the crime, which were used to commit the crime, those which constitute the product and the profit of such crime, as well as those which are criminal by nature. This measure can be optional or mandatory.</rdfs:comment>
+    <rdfs:label xml:lang="it">Confisca</rdfs:label>
+    <rdfs:label xml:lang="en">Confiscation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://culturalis.org/oad#ArchivalInstance"/>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/SeizureEvent">
+    <rdfs:comment xml:lang="it">Esecuzione del sequestro</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Execution of the seizure</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Event"/>
+    <rdfs:label xml:lang="it">Sequestro</rdfs:label>
+    <rdfs:label xml:lang="en">Seizure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/dba/ontology/Resolution">
+    <rdfs:comment xml:lang="it">Decisione di un organo collegiale e provvedimento che ne scaturisce. Termine con cui si indica la decisione presa da un organo collegiale (es. assemblea). Esprime la volontà dell'ente. Solitamente la delibera è documentata in un verbale, cioè in un atto pubblico.</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Decision of a board and the resulting provision. Term used to indicate the decision taken by a board (e.g. shareholders’ meeting). It expresses the will of the entity. Usually the resolution is documented in a set of minutes, that is, in a public document.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dba/ontology/Event"/>
+    <rdfs:label xml:lang="it">Delibera</rdfs:label>
+    <rdfs:label xml:lang="en">Resolution</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/hasSubject">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isSubjectOf"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="it">Proprietà inversa di "is subject of"</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Inverse property of "is subject of"</rdfs:comment>
+    <rdfs:label xml:lang="it">ha soggetto</rdfs:label>
+    <rdfs:label xml:lang="en">has subject</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isPreparedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/prepares"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un documento e l'agent che lo ha redatto</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a document and the agent who wrote it</rdfs:comment>
+    <rdfs:label xml:lang="it">preparato da</rdfs:label>
+    <rdfs:label xml:lang="en">prepared by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isGuaranteedBy">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Guarantee"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra una garanzia e un agent</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a guarantee and an agent</rdfs:comment>
+    <rdfs:label xml:lang="it">è garantito da</rdfs:label>
+    <rdfs:label xml:lang="en">is guaranteed by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isInvolvedIn">
+    <rdfs:comment xml:lang="it">Proprietà inversa di involves</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Inverse property of involves</rdfs:comment>
+    <rdfs:label xml:lang="it">coinvolto in</rdfs:label>
+    <rdfs:label xml:lang="en">involved in</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/mentions">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="it">Proprietà utilizzata per descrivere la relazione tra un documento e il soggetto citato in esso</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property used to describe the relationship between a document and the agent mentioned in it</rdfs:comment>
+    <rdfs:label xml:lang="it">cita</rdfs:label>
+    <rdfs:label xml:lang="en">mentions</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isDocumentedBy">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:range rdf:resource="http://culturalis.org/oad#ArchivalInstance"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra una pratica bancaria o un evento e una risorsa archivistica</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a banking file or event and an archival instance</rdfs:comment>
+    <rdfs:label xml:lang="it">documentato da</rdfs:label>
+    <rdfs:label xml:lang="en">documented by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/includes">
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Guarantee"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un documento e una garanzia</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a document and a guarantee</rdfs:comment>
+    <rdfs:label xml:lang="it">Include o richiede</rdfs:label>
+    <rdfs:label xml:lang="en">Includes</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/regards">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un documento e un agent</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a document and an agent</rdfs:comment>
+    <rdfs:label xml:lang="it">riguarda</rdfs:label>
+    <rdfs:label xml:lang="en">regards</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/prepares">
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Bank"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra una banca e una pratica bancaria</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a bank and a banking file</rdfs:comment>
+    <rdfs:label xml:lang="it">istruisce</rdfs:label>
+    <rdfs:label xml:lang="en">prepares</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/appliesFor">
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Sponsorships"/>
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Subsidy"/>
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Financing"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un agent e un servizio bancario</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between an agent and a bank service</rdfs:comment>
+    <rdfs:label xml:lang="it">presenta domanda di</rdfs:label>
+    <rdfs:label xml:lang="en">applies for</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isSubjectOf">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Confiscation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Sponsorships"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Subsidy"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Financing"/>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a banking service, suche as loan, receivables mortgage creditline, or a property and a banking file</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Property"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un servizio bancario o un bene e una pratica bancaria</rdfs:comment>
+    <rdfs:label xml:lang="it">soggetto di</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Seizure"/>
+    <rdfs:label xml:lang="en">subjectOf</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isBasedOn">
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Guarantee"/>
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un evento e una garanzia che può essere richiesta durante l'evento</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between an event and a guarantee that can be requested during the event</rdfs:comment>
+    <rdfs:label xml:lang="it">si basa su</rdfs:label>
+    <rdfs:label xml:lang="en">based on</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/hasSubEvent">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:range rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:comment xml:lang="it">Questa proprietà fornisce un modo per suddividere un evento complesso in eventi più semplici. Descrive la relazione tra più eventi</rdfs:comment>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:comment xml:lang="en">This property provides a way to split a complex event into simpler ones. It decribes the relationship between more events</rdfs:comment>
+    <rdfs:label xml:lang="it">sotto evento</rdfs:label>
+    <rdfs:label xml:lang="en">subevent</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/consistsOf">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:range rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra una pratica bancaria e gli eventi in cui si articola</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a banking file and the events in which it is divided</rdfs:comment>
+    <rdfs:label xml:lang="it">si compone di</rdfs:label>
+    <rdfs:label xml:lang="en">consists of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/spar/pro/relatesToEntity">
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Event"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isApprovedBy">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="it">Proprietà utilizzata per descrivere la relazione tra una delibera e il soggetto che la autorizza</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property used to describe the relationship between an approval and the person who authorizes it</rdfs:comment>
+    <rdfs:label xml:lang="it">approvato da</rdfs:label>
+    <rdfs:label xml:lang="en">is approved by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/relation"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/hasFollowingEvent">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:range rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:comment xml:lang="it">Proprietà che desccrive la relazione tra una successione di eventi</rdfs:comment>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:comment xml:lang="en">An event that starts at some time after this event.</rdfs:comment>
+    <rdfs:label xml:lang="it">evento successivo</rdfs:label>
+    <rdfs:label xml:lang="en">following event</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://culturalis.org/oad#isContainedIn">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://culturalis.org/oad#ArchivalInstance"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/approves">
+    <owl:inverseOf rdf:resource="https://w3id.org/dba/ontology/isApprovedBy"/>
+    <rdfs:comment xml:lang="it">Proprietà inversa di "approvato da"</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Inverse property of "approved by"</rdfs:comment>
+    <rdfs:label xml:lang="it">approva</rdfs:label>
+    <rdfs:label xml:lang="en">approves</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/involves">
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Property"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/dba/ontology/isInvolvedIn"/>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between an event and a property</rdfs:comment>
+    <rdfs:label xml:lang="it">coinvolge</rdfs:label>
+    <rdfs:label xml:lang="en">involves</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Event"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un evento e un bene</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dba/ontology/isSubjectTo">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Property"/>
+    <rdfs:range rdf:resource="https://w3id.org/dba/ontology/Guarantee"/>
+    <rdfs:comment xml:lang="it">Proprietà che descrive la relazione tra un bene e la garanzia a cui è soggetto</rdfs:comment>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:comment xml:lang="en">Property that describes the relationship between a property and the guarantee to which it is subject</rdfs:comment>
+    <rdfs:label xml:lang="it">è soggetto a</rdfs:label>
+    <rdfs:label xml:lang="en">is subject to</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/endDate">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    </rdfs:subPropertyOf>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:label xml:lang="it">data di fine</rdfs:label>
+    <rdfs:label xml:lang="en">end date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/restitutionDate">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    </rdfs:subPropertyOf>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:label xml:lang="it">data di restituzione</rdfs:label>
+    <rdfs:label xml:lang="en">restitution date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/requiredDuration">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/duration"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Application"/>
+    <vs:term_status xml:lang="it">durata richiesta</vs:term_status>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <vs:term_status xml:lang="en">required duration</vs:term_status>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/fileNumber">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">numero di pratica</rdfs:label>
+    <rdfs:label xml:lang="en">file number</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/interestRate">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/PreliminaryAssessment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">tasso</rdfs:label>
+    <rdfs:label xml:lang="en">interest rate</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/approvedDuration">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/duration"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <vs:term_status>unstable</vs:term_status>
+    <rdfs:label xml:lang="it">durata deliberata</rdfs:label>
+    <rdfs:label xml:lang="en">approval duration</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/purpose">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">scopo</rdfs:label>
+    <rdfs:label xml:lang="en">purpose</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/amount">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">importo</rdfs:label>
+    <rdfs:label xml:lang="en">amount</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/outcome">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">esito</rdfs:label>
+    <rdfs:label xml:lang="en">outcome</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/approvedAmount">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/dba/ontology/amount"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">importo deliberato</rdfs:label>
+    <rdfs:label xml:lang="en">approved amount</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/specifications">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">specifiche</rdfs:label>
+    <rdfs:label xml:lang="en">specifications</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/startDate">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    </rdfs:subPropertyOf>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:label xml:lang="it">data di inizio</rdfs:label>
+    <rdfs:label xml:lang="en">start date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/requiredAmount">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/dba/ontology/amount"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Application"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">importo richiesto</rdfs:label>
+    <rdfs:label xml:lang="en">required amount</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Contract"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Restitution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/ConfiscationEvent"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Audit"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Guarantee"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/DeedOfResolution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/PreliminaryAssessment"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/SeizureEvent"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/File"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Alienation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Application"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Outcome"/>
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Minutes"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Inspection"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Report"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/duration">
+    <rdfs:domain rdf:resource="https://linkedevents.org/ontology/Event"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">durata</rdfs:label>
+    <rdfs:label xml:lang="en">duration</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/localIdentifier">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">identificativo locale</rdfs:label>
+    <rdfs:label xml:lang="en">local identifier</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/seizureDate">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:label xml:lang="it">data di sequestro</rdfs:label>
+    <rdfs:label xml:lang="en">seizure date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://dati.cdec.it/lod/bio-ext/fatherName">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/currency">
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Resolution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/DeedOfResolution"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dba/ontology/Application"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+    <rdfs:label xml:lang="it">valuta</rdfs:label>
+    <rdfs:label xml:lang="en">currency</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://dati.cdec.it/lod/bio-ext/motherName">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/dba/ontology/note"/>
+  <owl:DatatypeProperty rdf:about="http://purl.org/vocab/bio/0.1/position">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Check"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Guarantee"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Verbal"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#PreliminaryAssessment"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#ImmovableProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Donations"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Mortage"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Sponsorships"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Report"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#CreditLine"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Loan"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Approval"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Application"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#ApprovalRecord"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#MovableProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#SeizureOrConfiscation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Disposal"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Seizure"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Contract"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Restitution"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Receivables"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Inspection"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Outcome"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Property"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/intesa#Confiscation"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+</rdf:RDF>

@@ -1,0 +1,135 @@
+<http://data.lirmm.fr/ontologies/passim#snake> <http://xmlns.com/foaf/0.1/name> "Julien PLU" .
+<http://data.lirmm.fr/ontologies/passim#snake> <http://xmlns.com/foaf/0.1/homepage> <http://jplu.developpez.com> .
+<http://data.lirmm.fr/ontologies/passim#snake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.lirmm.fr/ontologies/passim#Coverage> <http://www.w3.org/2000/01/rdf-schema#label> "Coverage" .
+<http://data.lirmm.fr/ontologies/passim#Coverage> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the coverage of a service of transport." .
+<http://data.lirmm.fr/ontologies/passim#Coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://data.lirmm.fr/ontologies/passim#Coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.lirmm.fr/ontologies/passim#postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postalCode" .
+<http://data.lirmm.fr/ontologies/passim#postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"postalCode\" represents the the postal code of the main town of the transport." .
+<http://data.lirmm.fr/ontologies/passim#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/2000/01/rdf-schema#label> "webSite" .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"webSite\" represents the Web site of the transport." .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#webSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
+<http://data.lirmm.fr/ontologies/passim#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the services of transport." .
+<http://data.lirmm.fr/ontologies/passim#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://data.lirmm.fr/ontologies/passim#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/2000/01/rdf-schema#label> "mobileApplication" .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"mobileApplication\" represents the mobile application of the transport." .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#mobileApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/2000/01/rdf-schema#label> "SMSInformation" .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"SMSInformation\" represents the SMS service of the transport." .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#SMSInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#Mode> <http://www.w3.org/2000/01/rdf-schema#label> "Mode" .
+<http://data.lirmm.fr/ontologies/passim#Mode> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the differents modes of transport." .
+<http://data.lirmm.fr/ontologies/passim#Mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://data.lirmm.fr/ontologies/passim#Mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.lirmm.fr/ontologies/passim#region> <http://www.w3.org/2000/01/rdf-schema#label> "region" .
+<http://data.lirmm.fr/ontologies/passim#region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#region> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"region\" represents the region of the transport." .
+<http://data.lirmm.fr/ontologies/passim#region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#serviceCoverage> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.lirmm.fr/ontologies/passim#Coverage> .
+<http://data.lirmm.fr/ontologies/passim#serviceCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "serviceCoverage" .
+<http://data.lirmm.fr/ontologies/passim#serviceCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#serviceCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"serviceCoverage\" represents the coverage of the transport." .
+<http://data.lirmm.fr/ontologies/passim#serviceCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#rdf> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> .
+<http://data.lirmm.fr/ontologies/passim#rdf> <http://www.w3.org/ns/adms#accessURL> "http://data.lirmm.fr/ontologies/passim.rdf" .
+<http://data.lirmm.fr/ontologies/passim#rdf> <http://purl.org/dc/terms/FileFormat> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticDistribution> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#label> "isAccessibilityForDisabledPerson" .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"isAccessibilityForDisabledPerson\" represents if the transport is for the disabled person or not." .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#department> <http://www.w3.org/2000/01/rdf-schema#label> "department" .
+<http://data.lirmm.fr/ontologies/passim#department> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#department> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"department\" represents the department of the transport." .
+<http://data.lirmm.fr/ontologies/passim#department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/2000/01/rdf-schema#label> "serviceName" .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"serviceName\" represents the name of the service." .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#serviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#cityThrough> <http://www.w3.org/2000/01/rdf-schema#label> "cityThrough" .
+<http://data.lirmm.fr/ontologies/passim#cityThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#cityThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"cityThrough\" represents a city through by the transport. This property will be instanciate as many times as there is city through by the transport." .
+<http://data.lirmm.fr/ontologies/passim#cityThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#ttl> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> .
+<http://data.lirmm.fr/ontologies/passim#ttl> <http://www.w3.org/ns/adms#accessURL> "http://data.lirmm.fr/ontologies/passim.ttl" .
+<http://data.lirmm.fr/ontologies/passim#ttl> <http://purl.org/dc/terms/FileFormat> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticDistribution> .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/2000/01/rdf-schema#label> "infoPoint" .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"infoPoint\" represents the point of information." .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#infoPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.lirmm.fr/ontologies/passim#Mode> .
+<http://data.lirmm.fr/ontologies/passim#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#label> "modeOfTransport" .
+<http://data.lirmm.fr/ontologies/passim#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"modeOfTransport\" represents a mode of transport. This property will be instanciate as many times as there is mode of transport." .
+<http://data.lirmm.fr/ontologies/passim#modeOfTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://www.w3.org/2000/01/rdf-schema#label> "TransportServiceInformation" .
+<http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an information service of transport." .
+<http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.lirmm.fr/ontologies/passim#centerTown> <http://www.w3.org/2000/01/rdf-schema#label> "centerTown" .
+<http://data.lirmm.fr/ontologies/passim#centerTown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#centerTown> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"centerTown\" represents the main town of the transport." .
+<http://data.lirmm.fr/ontologies/passim#centerTown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#label> "isWebSiteAccessibilityForDisabledPerson" .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"isWebSiteAccessibilityForDisabledPerson\" represents if the website of the transport is for the disabled person or not." .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#typeOfService> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.lirmm.fr/ontologies/passim#Service> .
+<http://data.lirmm.fr/ontologies/passim#typeOfService> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfService" .
+<http://data.lirmm.fr/ontologies/passim#typeOfService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#typeOfService> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"typeOfService\" represents a type of service." .
+<http://data.lirmm.fr/ontologies/passim#typeOfService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/elements/1.1/creator> <http://data.lirmm.fr/ontologies/passim#snake> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/modified> "2014-07-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/partOf> <http://data.lirmm.fr/ontologies> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/created> "2011-06-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/description> "This ontology is the description of the operation of a transport information service." .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/title> "PASSIM ontology" .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocab/vann/preferredNamespacePrefix> "passim" .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> .
+<http://data.lirmm.fr/ontologies/passim> <http://xmlns.com/foaf/0.1/homepage> <http://data.lirmm.fr/ontologies/passim.html> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.lirmm.fr/ontologies/passim#" .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"comment\" represents the comments about the transport." .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/2000/01/rdf-schema#label> "remark" .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"remark\" represents the remarks about the transport." .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#remark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/2000/01/rdf-schema#label> "landInformation" .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"landInformation\" represents the informations about the land through by the transport." .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data.lirmm.fr/ontologies/passim#landInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

@@ -1,0 +1,78 @@
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date the\n            media recording was published."@en .
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media/audio> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://purl.org/media/audio> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/1999/xhtml/vocab#> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "The description\n            associated with the media recording."@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/vcard-rdf/3.0> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary\n            creator or performer of the media recording."@en .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#Recording> <http://www.w3.org/2000/01/rdf-schema#label> "<a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://purl.org/media#Recording\" xml:lang=\"en\">media:Recording</a>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/media#Recording> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#Recording> <http://www.w3.org/2000/01/rdf-schema#comment> "A recording of an item of interest in any form."@en .
+<http://purl.org/media#Recording> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/media#Recording> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/media#position> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/media#position> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#position> <http://www.w3.org/2000/01/rdf-schema#comment> "The position of\n            the media recording in an album, LP, playlist, top 10 list,\n            podcast history or other ordered list of media recordings."@en .
+<http://purl.org/media#position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/vcard-rdf/3.0> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that\n            helped create the media recording."@en .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#rating> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+<http://purl.org/media#rating> <http://www.w3.org/2000/01/rdf-schema#comment> "A standards-body\n            rating such as PG-13, M, 18-SX, 15, AV15+, Explicit Lyrics, \n            etc."@en .
+<http://purl.org/media#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/commerce#costs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/commerce#costs> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            method of paying for a full version of the media recording."@en .
+<http://purl.org/commerce#costs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://payswarm.com/vocabs/media> <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/licenses/publicdomain/> .
+<http://payswarm.com/vocabs/media> <http://creativecommons.org/ns#attributionName> "Digital Bazaar, Inc."@en .
+<http://payswarm.com/vocabs/media> <http://creativecommons.org/ns#attributionURL> <http://digitalbazaar.com/> .
+<http://payswarm.com/vocabs/media> <http://www.w3.org/1999/xhtml/vocab#stylesheet> <http://payswarm.com/css/vocabulary.css> .
+<http://www.w3.org/1999/xhtml/vocab#license> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://www.w3.org/1999/xhtml/vocab#license> <http://www.w3.org/2000/01/rdf-schema#comment> "The license under\n            which the media recording is distributed."@en .
+<http://www.w3.org/1999/xhtml/vocab#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#depiction> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#depiction> <http://www.w3.org/2000/01/rdf-schema#comment> "An image summary\n            of the media recording."@en .
+<http://purl.org/media#depiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#sample> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#sample> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            sample file or stream of the media recording."@en .
+<http://purl.org/media#sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#contains> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship for\n            linking singular media recordings to collections or media recordings. Also used to denote pieces of a media recording that constitute a larger media recording.."@en .
+<http://purl.org/media#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "title of the\n            media recording"@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#comment> "A genre that\n            should be associated with the media recording."@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media> <http://purl.org/dc/terms/description> "The Media RDF vocabulary is not meant to be used by itself if you are marking up audio or video. If the media that you are marking up falls outside of audio/video, you should use the Media RDF Vocabulary if there is no other way to mark up the information. You may want to use the <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://purl.org/media/audio\" xml:lang=\"en\">Audio RDF Vocabulary</a> or <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://purl.org/media/video\" xml:lang=\"en\">Video RDF Vocabulary</a> if you are marking up audio or video."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/media> <http://purl.org/dc/terms/title> "The Media Vocabulary"@en .
+<http://purl.org/media> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/media#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "<a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://purl.org/media#Collection\" xml:lang=\"en\">media:Collection</a>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/media#Collection> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of\n            one or more media recordings."@en .
+<http://purl.org/media#Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Collection> .
+<http://purl.org/media#Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/media/media#Recording> .
+<http://purl.org/media#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/media#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/media#duration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "The length of the\n            media recording encoded in ISO-8601 time duration format."@en .
+<http://purl.org/media#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/commerce#payment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/commerce#payment> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            method of paying for a full version of the media recording."@en .
+<http://purl.org/commerce#payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/media#download> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/media#download> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            complete audio file representation of the media recording."@en .
+<http://purl.org/media#download> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

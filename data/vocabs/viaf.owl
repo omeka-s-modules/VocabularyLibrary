@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<!-- Locating the viaf.owl document under the server root creates a potential
+	collision between its name and names of other kinds of things residing
+	there. This name is strong enough, though,
+	that we can safely assume this will never happen. Ideally,
+	this document SHOULD be content-negotiable from the server root,
+	but this isn't required. -->
+	
+<!-- http://viaf.org/viaf.owl -->
+
+<rdf:RDF
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xml:base="http://viaf.org/">
+	
+	<owl:Ontology rdf:about="">
+		<rdfs:label xml:lang="en">The VIAF ontology</rdfs:label>
+	</owl:Ontology>
+
+	<!-- owl:Class AuthorityAgency -->
+	<owl:Class rdf:about="#AuthorityAgency">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		
+		<rdfs:comment xml:lang="en">
+			Note that instances of this class live under
+			http://viaf.org/authorityAgency/*
+		</rdfs:comment>
+	</owl:Class>
+
+	<!-- owl:Class NameAuthority -->	
+	<owl:Class rdf:about="#NameAuthority">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		
+		<rdfs:comment xml:lang="en">
+			Note that instances of this class live under
+			http://viaf.org/viaf/*
+		</rdfs:comment>
+	</owl:Class>
+
+	<!-- owl:Class NameAuthorityCluster -->
+	<owl:Class rdf:about="#NameAuthorityCluster">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		
+		<rdfs:comment xml:lang="en">
+			Note that instancess of this class live under
+			http://viaf.org/nameAuthorityCluster/*
+		</rdfs:comment>
+	</owl:Class>
+
+	<!-- owl:Class Heading -->
+	<owl:Class rdf:about="#Heading">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+	</owl:Class>
+
+	<!-- owl:Class EstablishedHeading -->
+	<owl:Class rdf:about="#EstablishedHeading">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:subClassOf rdf:resource="#Heading" />
+		
+		<owl:disjointWith rdf:resource="#XRef4xx" />
+		<owl:disjointWith rdf:resource="#XRef5xx" />
+	</owl:Class>
+
+	<!-- owl:Class XRef4xx -->
+	<owl:Class rdf:about="#XRef4xx">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:subClassOf rdf:resource="#Heading" />
+		
+		<owl:disjointWith rdf:resource="#EstablishedHeading" />
+		<owl:disjointWith rdf:resource="#XRef5xx" />
+	</owl:Class>
+
+	<!-- owl:Class XRef5xx -->
+	<owl:Class rdf:about="#XRef5xx">
+	
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:subClassOf rdf:resource="#Heading" />
+		
+		<owl:disjointWith rdf:resource="#EstablishedHeading" />
+		<owl:disjointWith rdf:resource="#XRef4xx" />
+	</owl:Class>
+
+	<!-- owl:DatatypeProperty abbreviation -->
+	<owl:DatatypeProperty rdf:about="#abbreviation">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#AuthorityAgency" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#NMTOKEN" />
+	</owl:DatatypeProperty>
+	
+	<!-- owl:DatatypeProperty name -->
+	<owl:DatatypeProperty rdf:about="#name">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#AuthorityAgency" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+	</owl:DatatypeProperty>
+	
+	<!-- owl:ObjectProperty wasCreatedBy -->
+	<owl:ObjectProperty rdf:about="#wasCreatedBy">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#NameAuthority" />
+		<rdfs:range rdf:resource="#AuthorityAgency" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty clusters -->
+	<owl:ObjectProperty rdf:about="#clusters">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#NameAuthorityCluster" />
+		<rdfs:range rdf:resource="#NameAuthority" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty originatesIn -->
+	<owl:ObjectProperty rdf:about="#originatesIn">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#Heading" />
+		<rdfs:range rdf:resource="#AuthorityAgency" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty hasEstablishedForm -->
+	<owl:ObjectProperty rdf:about="#hasEstablishedForm">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#NameAuthorityCluster" />
+		<rdfs:range rdf:resource="#EstablishedHeading" />
+		<owl:inverseOf rdf:resource="#establishedIn" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty establishedIn -->
+	<owl:ObjectProperty rdf:about="#establishedIn">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#EstablishedHeading" />
+		<rdfs:range rdf:resource="#NameAuthorityCluster" />
+		<owl:inverseOf rdf:resource="#hasEstablishedForm" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty hasXref4xx -->
+	<owl:ObjectProperty rdf:about="#hasXref4xx">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#NameAuthorityCluster" />
+		<rdfs:range rdf:resource="#XRef4xx" />
+		<owl:inverseOf rdf:resource="#xref4xxIn" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty xref4xxIn -->
+	<owl:ObjectProperty rdf:about="#xref4xxIn">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#XRef4xx" />
+		<rdfs:range rdf:resource="#NameAuthorityCluster" />
+		<owl:inverseOf rdf:resource="#hasXref4xx" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty hasXref5xx -->
+	<owl:ObjectProperty rdf:about="#hasXref5xx">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#NameAuthorityCluster" />
+		<rdfs:range rdf:resource="#XRef5xx" />
+		<owl:inverseOf rdf:resource="#xref5xxIn" />
+	</owl:ObjectProperty>
+	
+	<!-- owl:ObjectProperty xref5xxIn -->
+	<owl:ObjectProperty rdf:about="#xref5xxIn">
+		<rdfs:isDefinedBy rdf:resource="" />
+		<rdfs:domain rdf:resource="#XRef5xx" />
+		<rdfs:range rdf:resource="#NameAuthorityCluster" />
+		<owl:inverseOf rdf:resource="#hasXref5xx" />
+	</owl:ObjectProperty>
+	
+</rdf:RDF>

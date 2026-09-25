@@ -1,0 +1,203 @@
+<http://purl.org/library/ComputerFile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/ComputerFile> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/ComputerFile> .
+<http://purl.org/library/ComputerFile> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/ComputerFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/ComputerFile> <http://www.w3.org/2000/01/rdf-schema#label> "Computer File"@en .
+<http://purl.org/library/ComputerFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Audiobook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Audiobook> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Audiobook> <http://www.w3.org/2000/01/rdf-schema#label> "Audio Book"@en .
+<http://purl.org/library/Audiobook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/BookFormatType> .
+<http://purl.org/library/Audiobook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/InteractiveMultimedia> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#label> "Interactive Multimedia"@en .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/ArchiveMaterial> .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "ArchiveMaterial"@en .
+<http://purl.org/library/ArchiveMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/VideoGame> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/VideoGame> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/VideoGame> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/VideoGame> .
+<http://purl.org/library/VideoGame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/library/Game> .
+<http://purl.org/library/VideoGame> <http://www.w3.org/2000/01/rdf-schema#label> "VideoGame"@en .
+<http://purl.org/library/VideoGame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Image> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Image> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Image> .
+<http://purl.org/library/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image"@en .
+<http://purl.org/library/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/BrailleBook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/BrailleBook> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/BrailleBook> <http://www.w3.org/2000/01/rdf-schema#label> "Braille Book"@en .
+<http://purl.org/library/BrailleBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/BookFormatType> .
+<http://purl.org/library/BrailleBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/BlurayDisk> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/BlurayDisk> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/BlurayDisk> <http://www.w3.org/2000/01/rdf-schema#label> "Bluray Disk"@en .
+<http://purl.org/library/BlurayDisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/BlurayDisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/Game> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Game> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Game> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Game> .
+<http://purl.org/library/Game> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Game> <http://www.w3.org/2000/01/rdf-schema#label> "Game"@en .
+<http://purl.org/library/Game> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/LP> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/LP> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/LP> <http://www.w3.org/2000/01/rdf-schema#label> "LP"@en .
+<http://purl.org/library/LP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/LP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/FilmReel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/FilmReel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/FilmReel> <http://www.w3.org/2000/01/rdf-schema#label> "Film Reel"@en .
+<http://purl.org/library/FilmReel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/FilmReel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/CassetteTape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/CassetteTape> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/CassetteTape> <http://www.w3.org/2000/01/rdf-schema#label> "Cassette Tape"@en .
+<http://purl.org/library/CassetteTape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/CassetteTape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the number of identifiable \"library\" collections that \"hold\" one or more exemplars (aka copies or \"Items\")." .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/2000/01/rdf-schema#label> "holdings count" .
+<http://purl.org/library/holdingsCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/library/WWW> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/WWW> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/WWW> <http://www.w3.org/2000/01/rdf-schema#label> "World Wide Web"@en .
+<http://purl.org/library/WWW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/WWW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/VisualMaterial> .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Visual Material"@en .
+<http://purl.org/library/VisualMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Newspaper> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Newspaper> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Newspaper> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Newspaper> .
+<http://purl.org/library/Newspaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Newspaper> <http://www.w3.org/2000/01/rdf-schema#label> "Newspaper"@en .
+<http://purl.org/library/Newspaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/library/ContinuallyUpdatedBook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/ContinuallyUpdatedBook> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/ContinuallyUpdatedBook> <http://www.w3.org/2000/01/rdf-schema#label> "Continually Updated Book"@en .
+<http://purl.org/library/ContinuallyUpdatedBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/BookFormatType> .
+<http://purl.org/library/ContinuallyUpdatedBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/CD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/CD> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/CD> <http://www.w3.org/2000/01/rdf-schema#label> "Compact Disk"@en .
+<http://purl.org/library/CD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/CD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/WebSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/WebSite> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/WebSite> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/WebSite> .
+<http://purl.org/library/WebSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/WebSite> <http://www.w3.org/2000/01/rdf-schema#label> "Web Site"@en .
+<http://purl.org/library/WebSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/library/Kit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Kit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Kit> <http://www.w3.org/2000/01/rdf-schema#comment> "a mixture of various components issued as a unit and intended primarily for instructional purposes. No one component is identifiable as the predominant component of the item. Examples are packages of assorted materials, such as a set of K-12 social studies curriculum material (books, workbooks, guides, activities, etc.), or packages of educational test materials (tests, answer sheets, scoring guides, score charts, interpretative manuals, etc.)."@en .
+<http://purl.org/library/Kit> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Kit> .
+<http://purl.org/library/Kit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Kit> <http://www.w3.org/2000/01/rdf-schema#label> "Kit"@en .
+<http://purl.org/library/Kit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Carrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Carrier> <http://www.w3.org/2000/01/rdf-schema#comment> "This class contains a controlled list of \"carriers\" that can be used to contain a schema:CreativeWork."@en .
+<http://purl.org/library/Carrier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Carrier> <http://www.w3.org/2000/01/rdf-schema#label> "Carrier"@en .
+<http://purl.org/library/Carrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/oclcnum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.org/library/oclcnum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/library/oclcnum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/oclcnum> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/oclcnum> <http://www.w3.org/2000/01/rdf-schema#label> "oclcnum"@en .
+<http://purl.org/library/oclcnum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/library/Toy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Toy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Toy> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Toy> .
+<http://purl.org/library/Toy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Toy> <http://www.w3.org/2000/01/rdf-schema#label> "Toy"@en .
+<http://purl.org/library/Toy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Periodical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Periodical> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Periodical> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Periodical> .
+<http://purl.org/library/Periodical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Periodical> <http://www.w3.org/2000/01/rdf-schema#label> "Periodical"@en .
+<http://purl.org/library/Periodical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Video> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Video> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Video> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Video> .
+<http://purl.org/library/Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video"@en .
+<http://purl.org/library/Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://viaf.org/viaf/136069274> <http://www.w3.org/2000/01/rdf-schema#label> "OCLC Research"@en .
+<http://viaf.org/viaf/136069274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://viaf.org/viaf/136069274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/MusicalScore> .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/2000/01/rdf-schema#label> "Musical Score"@en .
+<http://purl.org/library/MusicalScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/Thesis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Thesis> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Thesis> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/Book/Thesis> .
+<http://purl.org/library/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Book> .
+<http://purl.org/library/Thesis> <http://www.w3.org/2000/01/rdf-schema#label> "Thesis"@en .
+<http://purl.org/library/Thesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Place> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the place where the schema:CreativeWork was published."@en .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#label> "place of publication"@en .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/library/Volume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Volume> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Volume> <http://www.w3.org/2000/01/rdf-schema#label> "Volume"@en .
+<http://purl.org/library/Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/DVD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/DVD> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/DVD> <http://www.w3.org/2000/01/rdf-schema#label> "DVD"@en .
+<http://purl.org/library/DVD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/DVD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/> <http://purl.org/dc/elements/1.1/creator> <http://viaf.org/viaf/136069274> .
+<http://purl.org/library/> <http://purl.org/dc/elements/1.1/description> "These are \"library\" extension terms intended for use with Schema.org" .
+<http://purl.org/library/> <http://purl.org/dc/elements/1.1/title> "Experimental \"library\" extension vocabulary for use with Schema.org"@en .
+<http://purl.org/library/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/library/Carrier> .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/2000/01/rdf-schema#label> "has carrier"@en .
+<http://purl.org/library/hasCarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/library/LargePrintBook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/LargePrintBook> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/LargePrintBook> <http://www.w3.org/2000/01/rdf-schema#label> "Large Print Book"@en .
+<http://purl.org/library/LargePrintBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/BookFormatType> .
+<http://purl.org/library/LargePrintBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/library/Microform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/Microform> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/Microform> <http://www.w3.org/2000/01/rdf-schema#label> "Microform"@en .
+<http://purl.org/library/Microform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/Microform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/library/VHSTape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> .
+<http://purl.org/library/VHSTape> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<http://purl.org/library/VHSTape> <http://www.w3.org/2000/01/rdf-schema#label> "VHS Tape"@en .
+<http://purl.org/library/VHSTape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/library/Carrier> .
+<http://purl.org/library/VHSTape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

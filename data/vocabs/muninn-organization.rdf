@@ -1,0 +1,1279 @@
+
+<rdf:RDF
+    xmlns       ="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdaGr2="http://RDVocab.info/ElementsGr2/"
+    xmlns:foaf="http://xmlns.com/foaf/spec/"
+    xmlns:cidoc="http://www.cidoc-crm.org/rdfs/5.0.4/cidoc-crm#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:rel="http://purl.org/vocab/relationship/"
+    xmlns:rnews="http://iptc.org/std/rNews/2011-10-07#"
+    xmlns:gnd="http://d-nb.info/gnd/"
+    xmlns:lode="http://linkedevents.org/ontology/"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:mugshots="http://rdf.muninn-project.org/ontologies/mugshots#"
+    xmlns:fao="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://rdf.muninn-project.org/ontologies/organization">
+
+
+  <owl:Ontology rdf:about="">
+   <dc:title>The Muninn Organization Ontology</dc:title> 
+   <dc:description>The Muninn Organization Ontology is meant to deal with organizations, people and the relationships that bind them all.</dc:description>
+   <rdfs:label xml:lang="en">The Muninn Organization Ontology</rdfs:label>
+   <rdfs:comment xml:lang="en">The Muninn Organization Ontology is meant to deal with organizations, people and the relationships that bind them all.</rdfs:comment>
+   <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+  </owl:Ontology>
+
+<!-- Historical Era -->
+
+  <owl:Class rdf:ID="Era">
+   <foaf:name>Era</foaf:name>
+   <rdfs:label xml:lang="en">Era (Historical)</rdfs:label>
+   <rdfs:label xml:lang="fr">Époque historique</rdfs:label>
+   <rdfs:label xml:lang="de">Periodisierung</rdfs:label>
+   <rdfs:comment xml:lang="en">An loosely defined historical era to which objects can belong.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="time:ProperInterval"/>
+   <owl:sameAs rdf:resource="cidoc:E4.Period"/>
+   <owl:sameAs rdf:resource="http://fr.wikipedia.org/wiki/P%C3%A9riodes_de_l%27histoire"/>
+   <owl:sameAs rdf:resource="http://en.wikipedia.org/wiki/Era"/>
+   <owl:sameAs rdf:resource="http://fr.wikipedia.org/wiki/%C3%88re"/>
+  </owl:Class>
+
+<owl:ObjectProperty rdf:ID="eraContains">
+   <foaf:name>Contains</foaf:name>
+   <rdfs:label xml:lang="en">Contains</rdfs:label>
+   <rdfs:label xml:lang="fr">Contient</rdfs:label>
+   <rdfs:label xml:lang="de">enthält</rdfs:label>
+   <rdfs:comment xml:lang="en">Indicates that the Era contains the Class, Property or Instances belongs to this perticular Era.</rdfs:comment>
+   <rdfs:domain rdf:resource="org:Era"/>
+   <owl:inverseOf rdf:resource="#inEra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="inEra">
+   <foaf:name>inEra</foaf:name>
+   <rdfs:label xml:lang="en">In Era</rdfs:label>
+   <rdfs:label xml:lang="fr">Contenue par L'Ere</rdfs:label>
+   <rdfs:label xml:lang="de">enthält Periodisierung</rdfs:label>
+   <rdfs:comment xml:lang="en">Indicates that the Class, Property or Instances belongs to this perticular Era.</rdfs:comment>
+ <rdfs:range rdf:resource="org:Era"/>
+</owl:ObjectProperty>
+
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraAncienRegimeFrance">
+    <rdfs:label xml:lang="en">Ancien Régime in France</rdfs:label>
+    <rdfs:label xml:lang="ru">Старый порядок</rdfs:label>
+    <rdfs:label xml:lang="sv">Ancien régime</rdfs:label>
+    <rdfs:label xml:lang="en">Ancien Régime in France</rdfs:label>
+    <rdfs:label xml:lang="fi">Ancien régime</rdfs:label>
+    <rdfs:label xml:lang="nl">Ancien Régime</rdfs:label>
+    <rdfs:label xml:lang="pl">Ancien régime</rdfs:label>
+    <rdfs:label xml:lang="pt">Antigo Regime</rdfs:label>
+    <rdfs:label xml:lang="fr">Ancien Régime</rdfs:label>
+    <rdfs:label xml:lang="it">Ancien Régime</rdfs:label>
+    <rdfs:label xml:lang="de">Ancien Régime</rdfs:label>
+    <rdfs:label xml:lang="es">Antiguo Régimen</rdfs:label>
+    <rdfs:comment xml:lang="en">The Ancien Régime (Old Regime) refers primarily to the aristocratic, social and political system established in France from (roughly) the 15th century to the 18th century under the late Valois and Bourbon dynasties. (Wikipedia)</rdfs:comment>
+    <owl:sameAs>dbpedia:Ancien_R%C3%A9gime_in_France</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraBritishEmpire">
+    <rdfs:label xml:lang="en">British Empire</rdfs:label>
+    <rdfs:label xml:lang="pt">Império Britânico</rdfs:label>
+    <rdfs:label xml:lang="pl">Imperium brytyjskie</rdfs:label>
+    <rdfs:label xml:lang="nl">Britse Rijk</rdfs:label>
+    <rdfs:label xml:lang="zh">大英帝国</rdfs:label>
+    <rdfs:label xml:lang="fi">Brittiläinen imperiumi</rdfs:label>
+    <rdfs:label xml:lang="de">Britisches Weltreich</rdfs:label>
+    <rdfs:label xml:lang="es">Imperio británico</rdfs:label>
+    <rdfs:label xml:lang="no">Det britiske imperiet</rdfs:label>
+    <rdfs:label xml:lang="ru">Британская империя</rdfs:label>
+    <rdfs:label xml:lang="ja">イギリス帝国</rdfs:label>
+    <rdfs:label xml:lang="sv">Brittiska imperiet</rdfs:label>
+    <rdfs:label xml:lang="it">Impero britannico</rdfs:label>
+    <rdfs:label xml:lang="fr">Empire britannique</rdfs:label>
+<rdfs:comment xml:lang="en">The British Empire comprised the dominions, colonies, protectorates, mandates, and other territories ruled or administered by the United Kingdom. It originated with the overseas colonies and trading posts established by England in the late 16th and early 17th centuries. At its height it was the largest empire in history and, for over a century, was the foremost global power.</rdfs:comment>
+ <!-- <owl:sameAs>dbpedia:British_Empire</owl:sameAs> -->
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraBritishRaj">
+    <rdfs:label xml:lang="en">British Raj</rdfs:label>
+    <rdfs:label xml:lang="no">Britisk India</rdfs:label>
+    <rdfs:label xml:lang="fr">Raj britannique</rdfs:label>
+    <rdfs:label xml:lang="es">Raj británico</rdfs:label>
+    <rdfs:label xml:lang="nl">Brits-Indië</rdfs:label>
+    <rdfs:label xml:lang="sv">Brittiska Indien</rdfs:label>
+    <rdfs:label xml:lang="zh">英属印度</rdfs:label>
+    <rdfs:label xml:lang="ja">イギリス領インド帝国</rdfs:label>
+    <rdfs:label xml:lang="de">Britisch-Indien</rdfs:label>
+    <rdfs:label xml:lang="it">Raj Britannico</rdfs:label>
+    <rdfs:label xml:lang="pl">Indie Brytyjskie</rdfs:label>
+    <rdfs:label xml:lang="pt">Índia britânica</rdfs:label>
+    <rdfs:label xml:lang="fi">Brittiläinen Intia</rdfs:label>
+    <rdfs:label xml:lang="ru">Британская Индия</rdfs:label>
+    <rdfs:comment xml:lang="en">The British Raj is the name given to the period of British colonial rule in South Asia between 1858 and 1947; it can also refer to the dominion itself and even the region under the rule. The region, commonly called India in contemporary usage, included areas directly administered by Britain, as well as the princely states ruled by individual rulers under the paramountcy of the British Crown.</rdfs:comment>
+  <!-- <owl:sameAs>dbpedia:British_Raj</owl:sameAs> -->
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraBronzeAge">
+    <rdfs:label xml:lang="en">Bronze Age</rdfs:label>
+    <rdfs:label xml:lang="zh">青铜时代</rdfs:label>
+    <rdfs:label xml:lang="de">Bronzezeit</rdfs:label>
+    <rdfs:label xml:lang="ja">青銅器時代</rdfs:label>
+    <rdfs:label xml:lang="es">Edad del Bronce</rdfs:label>
+    <rdfs:label xml:lang="fi">Pronssikausi</rdfs:label>
+    <rdfs:label xml:lang="fr">Âge du bronze</rdfs:label>
+    <rdfs:label xml:lang="pt">Idade do Bronze</rdfs:label>
+    <rdfs:label xml:lang="pl">Epoka brązu</rdfs:label>
+    <rdfs:label xml:lang="it">Età del bronzo</rdfs:label>
+    <rdfs:label xml:lang="nl">Bronstijd</rdfs:label>
+    <rdfs:label xml:lang="no">Bronsealderen</rdfs:label>
+    <rdfs:label xml:lang="ru">Бронзовый век</rdfs:label>
+    <rdfs:label xml:lang="sv">Bronsåldern</rdfs:label>
+<rdfs:comment xml:lang="en">The Bronze Age is a period characterized by the use of copper and its alloy bronze as the chief hard materials in the manufacture of some implements and weapons. Chronologically, it stands between the Stone Age and Iron Age. The term Stone Age implies the inability to smelt any ore, the term Bronze Age implies the inability to smelt iron ore and the term Iron Age implies the ability to manufacture artifacts in any of the three types of hard material.</rdfs:comment>
+
+<owl:sameAs>dbpedia:Bronze_Age</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraIndustrialRevolution">
+    <rdfs:label xml:lang="en">Industrial Revolution</rdfs:label>
+    <rdfs:label xml:lang="fi">Teollinen vallankumous</rdfs:label>
+    <rdfs:label xml:lang="zh">工业革命</rdfs:label>
+    <rdfs:label xml:lang="fr">Révolution industrielle</rdfs:label>
+    <rdfs:label xml:lang="ja">産業革命</rdfs:label>
+    <rdfs:label xml:lang="nl">Industriële revolutie</rdfs:label>
+    <rdfs:label xml:lang="ru">Промышленная революция</rdfs:label>
+    <rdfs:label xml:lang="pt">Revolução Industrial</rdfs:label>
+    <rdfs:label xml:lang="sv">Industriella revolutionen</rdfs:label>
+    <rdfs:label xml:lang="de">Industrielle Revolution</rdfs:label>
+    <rdfs:label xml:lang="es">Revolución Industrial</rdfs:label>
+    <rdfs:label xml:lang="pl">Rewolucja przemysłowa</rdfs:label>
+    <rdfs:label xml:lang="it">Rivoluzione industriale</rdfs:label>
+    <rdfs:label xml:lang="no">Den industrielle revolusjon</rdfs:label>
+<rdfs:comment xml:lang="en">The Industrial Revolution was a period from the 18th to the 19th century where major changes in agriculture, manufacturing, mining, transportation, and technology had a profound effect on the socioeconomic and cultural conditions of the times. It began in the United Kingdom, then subsequently spread throughout Europe, North America, and eventually the world. The Industrial Revolution marks a major turning point in human history; almost every aspect of daily life was influenced in some way.</rdfs:comment>
+<owl:sameAs>dbpedia:Industrial_Revolution</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraIronAge">
+    <rdfs:label xml:lang="en">Iron Age</rdfs:label>
+    <rdfs:label xml:lang="es">Edad del Hierro</rdfs:label>
+    <rdfs:label xml:lang="zh">铁器时代</rdfs:label>
+    <rdfs:label xml:lang="nl">IJzertijd</rdfs:label>
+    <rdfs:label xml:lang="sv">Järnåldern</rdfs:label>
+    <rdfs:label xml:lang="no">Jernalderen</rdfs:label>
+    <rdfs:label xml:lang="fi">Rautakausi</rdfs:label>
+    <rdfs:label xml:lang="pt">Idade do Ferro</rdfs:label>
+    <rdfs:label xml:lang="it">Età del ferro</rdfs:label>
+    <rdfs:label xml:lang="fr">Âge du fer</rdfs:label>
+    <rdfs:label xml:lang="ja">鉄器時代</rdfs:label>
+    <rdfs:label xml:lang="pl">Epoka żelaza</rdfs:label>
+    <rdfs:label xml:lang="ru">Железный век</rdfs:label>
+    <rdfs:label xml:lang="de">Eisenzeit</rdfs:label>
+<owl:sameAs>dbpedia:Iron_Age</owl:sameAs>
+<rdfs:comment xml:lang="en">The Iron Age is the archaeological period generally occurring after the Bronze Age, marked by the prevalent use of iron. The early period of the age is characterized by the widespread use of iron or steel. The adoption of such material coincided with other changes in society, including differing agricultural practices, religious beliefs and artistic styles.</rdfs:comment>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraMiddleAges">
+    <rdfs:label xml:lang="en">Middle Ages</rdfs:label>
+    <rdfs:label xml:lang="fi">Keskiaika</rdfs:label>
+    <rdfs:label xml:lang="nl">Middeleeuwen</rdfs:label>
+    <rdfs:label xml:lang="pl">Średniowiecze</rdfs:label>
+    <rdfs:label xml:lang="zh">中世纪</rdfs:label>
+    <rdfs:label xml:lang="sv">Medeltiden</rdfs:label>
+    <rdfs:label xml:lang="es">Edad Media</rdfs:label>
+    <rdfs:label xml:lang="ja">中世</rdfs:label>
+    <rdfs:label xml:lang="de">Mittelalter</rdfs:label>
+    <rdfs:label xml:lang="it">Medioevo</rdfs:label>
+    <rdfs:label xml:lang="ru">Средние века</rdfs:label>
+    <rdfs:label xml:lang="no">Middelalderen</rdfs:label>
+    <rdfs:label xml:lang="fr">Moyen Âge</rdfs:label>
+    <rdfs:label xml:lang="pt">Idade Média</rdfs:label>
+<rdfs:comment xml:lang="en">The Middle Ages was a period of European history from the 5th to the 15th century. The period followed the fall of the Western Roman Empire in 476, and preceded the Early Modern Era. It is the middle period in a three-period division of history: Classic, Medieval, and Modern. The term &quot;Middle Ages&quot; first appears in Latin in the 15th century and reflects the view that this period was a deviation from the path of classical learning, a path supposedly reconnected by Renaissance scholarship.</rdfs:comment>
+
+<owl:sameAs>dbpedia:Middle_Ages</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraModernhistory">
+    <rdfs:label xml:lang="en">Modern history</rdfs:label>
+    <rdfs:label xml:lang="fi">Uusi aika</rdfs:label>
+    <rdfs:label xml:lang="fr">Époque moderne</rdfs:label>
+    <rdfs:label xml:lang="ja">近代</rdfs:label>
+    <rdfs:label xml:lang="sv">Premodernism</rdfs:label>
+    <rdfs:label xml:lang="sv">Modern historia</rdfs:label>
+    <rdfs:label xml:lang="zh">現代史</rdfs:label>
+    <rdfs:label xml:lang="nl">Nieuwe Tijd</rdfs:label>
+    <rdfs:label xml:lang="de">Neuzeit</rdfs:label>
+    <rdfs:comment xml:lang="en">Modern history, or the modern era, describes the historical timeline after the Middle Ages. Modern history can be further broken down into the early modern period and the late modern period after the French Revolution and the Industrial Revolution. Contemporary history describes the span of historic events that are immediately relevant to the present time. The modern era began approximately in the 16th century.</rdfs:comment>
+<owl:sameAs>dbpedia:Modern_history</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraNapoleonic">
+    <rdfs:label xml:lang="en">Napoleonic era</rdfs:label>
+    <rdfs:label xml:lang="nl">Napoleontische tijd</rdfs:label>
+    <rdfs:label xml:lang="no">Napoleonstiden</rdfs:label>
+    <rdfs:label xml:lang="it">Età napoleonica</rdfs:label>
+<rdfs:comment xml:lang="en">The Napoleonic Era is a period in the history of France and Europe. It is generally classified as including the fourth and final stage of the French Revolution, the first being the National Assembly, the second being the Legislative Assembly, and the third being the Directory.</rdfs:comment>
+<owl:sameAs>dbpedia:Napoleonic_era</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraVictorian">
+    <rdfs:label xml:lang="en">Victorian era</rdfs:label>
+    <rdfs:label xml:lang="ru">Викторианская эпоха</rdfs:label>
+    <rdfs:label xml:lang="fi">Viktoriaaninen aikakausi</rdfs:label>
+    <rdfs:label xml:lang="sv">Viktoriansk tid</rdfs:label>
+    <rdfs:label xml:lang="fr">Époque victorienne</rdfs:label>
+    <rdfs:label xml:lang="no">Viktoriansk tid</rdfs:label>
+    <rdfs:label xml:lang="pl">Epoka wiktoriańska</rdfs:label>
+    <rdfs:label xml:lang="pt">Era vitoriana</rdfs:label>
+    <rdfs:label xml:lang="it">Inghilterra vittoriana</rdfs:label>
+    <rdfs:label xml:lang="ja">ヴィクトリア朝</rdfs:label>
+    <rdfs:label xml:lang="zh">维多利亚时代</rdfs:label>
+    <rdfs:label xml:lang="es">Época victoriana</rdfs:label>
+    <rdfs:label xml:lang="nl">Victoriaans tijdperk</rdfs:label>
+    <rdfs:label xml:lang="de">Viktorianisches Zeitalter</rdfs:label>
+<rdfs:comment xml:lang="en">The Victorian era of the United Kingdom was the period of Queen Victoria&#39;s reign from 20 June 1837 until her death on 22 January 1901. It was a long period of prosperity for the British people. Some scholars extend the beginning of the period—as defined by a variety of sensibilities and political concerns that have come to be associated with the Victorians—back five years to the passage of the Reform Act 1832. The era was preceded by the Georgian period and succeeded by the Edwardian period.</rdfs:comment>
+
+<owl:sameAs>dbpedia:Victorian_era</owl:sameAs>
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraGreatWar">
+ <foaf:name>Great War</foaf:name>
+ <rdfs:label xml:lang="en">First World War Era</rdfs:label>
+ <rdfs:label xml:lang="fr">Ére de la Premiére Guerre Mondiale</rdfs:label>
+ <rdfs:label xml:lang="de">Erster Weltkrieg Periodisierung</rdfs:label> 
+ <rdfs:comment xml:lang="en">The First World War Era encompasses all the objects of the war, including events or objects that led to the war and immediate aftermath, such as demobilization.</rdfs:comment>  
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraSecondWorldWar">
+ <foaf:name>Second World War</foaf:name>
+ <rdfs:label xml:lang="en">Second World War Era</rdfs:label>
+ <rdfs:label xml:lang="fr">Ére de la Deuxiéme Guerre Mondiale</rdfs:label>
+ <rdfs:label xml:lang="de">Zweite Weltkrieg Periodisierung</rdfs:label> 
+ <rdfs:comment xml:lang="en">The Second World War Era encompasses all the objects of the war, including events or objects that led to the war and immediate aftermath, such as demobilization.</rdfs:comment>  
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraInterwar">
+ <foaf:name>Interwar</foaf:name>
+ <rdfs:label xml:lang="en">Inter War Era</rdfs:label>
+ <rdfs:label xml:lang="fr">Ére de Entre-deux-guerres</rdfs:label>
+ <rdfs:label xml:lang="de">Zwischenkriegszeit Periodisierung</rdfs:label> 
+ <rdfs:comment xml:lang="en">The Interwar Era encompasses all the objects that link the world wars together.</rdfs:comment>  
+</Era>
+<Era rdf:about="http://rdf.muninn-project.org/ontologies/organization#EraColdWar">
+ <foaf:name>Cold War</foaf:name>
+ <rdfs:label xml:lang="en">Cold War Era</rdfs:label>
+ <rdfs:label xml:lang="fr">Ére de la Guerre Froide</rdfs:label>
+ <rdfs:label xml:lang="de">Kalter Krieg Periodisierung</rdfs:label> 
+ <rdfs:comment xml:lang="en">The Cold War era contains objects from that era, including historical beginnings and consequences.</rdfs:comment>  
+</Era>
+
+<!-- Events -->
+
+  <owl:Class rdf:ID="Event">
+   <foaf:name>Event</foaf:name>
+   <rdfs:label xml:lang="en">Event (Historical)</rdfs:label>
+   <rdfs:label xml:lang="fr">Évenement (Historique)</rdfs:label>
+   <rdfs:label xml:lang="de">Event</rdfs:label>
+   <rdfs:comment xml:lang="en">An event that occurs in space and time.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Era"/>
+   <owl:sameAs rdf:resource="cidoc:E5.Event"/>
+   <owl:sameAs rdf:resource="lode:Event"/> 
+   <owl:sameAs rdf:resource="http://en.wikipedia.org/wiki/Event"/>
+   <!-- Yes, it's a disambiguation page, but the class is fuzzier ontologically than an Era. -->
+  </owl:Class>
+  
+    <owl:ObjectProperty rdf:ID="hasActor">
+   <rdfs:label xml:lang="en">hasActor</rdfs:label>
+   <rdfs:comment xml:lang="en">An Actor in this event.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Event"/>
+   <rdfs:range rdf:resource="#Actor"/>
+   <owl:sameAs rdf:resource="cidoc:P11B.participated_in"/>
+  <!-- Not ="P12F.occurred_in_the_presence_of --> 
+  </owl:ObjectProperty>
+
+
+  <owl:Class rdf:ID="Actor">
+   <rdfs:label xml:lang="en">Actor</rdfs:label>
+   <rdfs:comment xml:lang="en">A person performing a certain role within an event.</rdfs:comment>
+   <owl:sameAs rdf:resource="cidoc:E39.Actor"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="identity">
+   <rdfs:label xml:lang="en">Identity</rdfs:label>
+   <rdfs:comment xml:lang="en">The identity of the person who committed the act.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Actor"/>
+   <rdfs:range rdf:resource="foaf:Agent"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="inRole">
+   <rdfs:label xml:lang="en">In Role</rdfs:label>
+   <rdfs:comment xml:lang="en">The role taken on by this actor.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Actor"/>
+   <rdfs:range rdf:resource="#Role"/>
+  </owl:ObjectProperty>
+ 
+<!-- Top level properties -->
+
+<owl:ObjectProperty rdf:ID="previous_instantiation">
+ <rdfs:domain rdf:resource="owl:Thing"/>
+ <rdfs:range rdf:resource="owl:Thing"/>
+</owl:ObjectProperty>
+ 
+<owl:ObjectProperty rdf:ID="next_instantiation">
+ <rdfs:domain rdf:resource="owl:Thing"/>
+ <rdfs:range rdf:resource="owl:Thing"/>
+ <owl:inverseOf rdf:resource="#previous_instantiation"/>
+</owl:ObjectProperty>
+
+<!-- All about people -->
+  <owl:Class rdf:ID="Person">
+   <rdfs:label xml:lang="en">A natural person</rdfs:label>
+   <rdfs:label xml:lang="fr">Une personne naturelle</rdfs:label>
+   <rdfs:label xml:lang="de"></rdfs:label>
+   <rdfs:comment xml:lang="en">A real person.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+   <owl:sameAs rdf:resource="rnews:Person"/> 
+  </owl:Class>
+
+<owl:DatatypeProperty rdf:ID="name">
+ <rdfs:label xml:lang="en">Name</rdfs:label>  
+ <rdfs:comment xml:lang="en">The name of the person. See namingRuleUsed property for formatting.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Organization"/>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="foaf:name"/>
+ <rdfs:sameProperty rdf:resource="gnd:preferredNameForThePerson"/>
+</owl:DatatypeProperty>
+
+
+
+<owl:DatatypeProperty rdf:ID="middleName1">
+ <foaf:name>Middle Name</foaf:name>
+ <rdfs:label xml:lang="en">Middle Name (First)</rdfs:label>  
+ <rdfs:comment xml:lang="en">The first middle name of the person, in the order that the name is read. </rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="middleName2">
+ <foaf:name>Middle Name</foaf:name>
+ <rdfs:label xml:lang="en">Middle Name (Second)</rdfs:label>  
+ <rdfs:comment xml:lang="en">The second middle name of the person, in the order that the name is read. </rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="middleName3">
+ <foaf:name>Middle Name</foaf:name>
+ <rdfs:label xml:lang="en">Middle Name (Third)</rdfs:label>  
+ <rdfs:comment xml:lang="en">The third middle name of the person, in the order that the name is read. </rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="middleName4">
+ <foaf:name>Middle Name</foaf:name>
+ <rdfs:label xml:lang="en">Middle Name (Fourth)</rdfs:label>  
+ <rdfs:comment xml:lang="en">The fourth middle name of the person, in the order that the name is read. </rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="middleName5">
+ <foaf:name>Middle Name</foaf:name>
+ <rdfs:label xml:lang="en">Middle Name (Fifth)</rdfs:label>  
+ <rdfs:comment xml:lang="en">The fifth middle name of the person, in the order that the name is read. </rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+</owl:DatatypeProperty>
+
+
+<!-- Check these redefinitions -->
+<owl:DatatypeProperty rdf:ID="firstName">
+ <rdfs:label xml:lang="en">First Name</rdfs:label>
+ <rdfs:comment xml:lang="en">The first name of the person.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="foaf:firstName"/>
+ <rdfs:sameProperty rdf:resource="gnd:forename"/>
+ <rdfs:sameProperty rdf:resource="rnews:givenName"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="lastName">
+ <rdfs:label xml:lang="en">Last Name</rdfs:label>
+ <rdfs:comment xml:lang="en">The last name of the person.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="foaf:lastName"/>
+ <rdfs:sameProperty rdf:resource="gnd:surname"/>
+ <rdfs:sameProperty rdf:resource="rnews:familyName"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="nameQualifier">
+ <rdfs:label xml:lang="en">Name Qualifier</rdfs:label>
+ <rdfs:comment xml:lang="en">Used to disambiguate person according to role or era. Use for rdf:label, needs further delegation.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:domain rdf:resource="#Organization"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="gnd:locQualifier"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="honorificPrefix">
+ <rdfs:label xml:lang="en">honorific Prefix</rdfs:label>
+ <rdfs:comment xml:lang="en">Used primarily for Royal titles.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:domain rdf:resource="#Organization"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="foaf:title"/>
+ <rdfs:sameProperty rdf:resource="rnews:honorificPrefix"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="honorificSuffix">
+ <rdfs:label xml:lang="en">Honorific Suffix</rdfs:label>
+ <rdfs:comment xml:lang="en">Used primarily for Royal titles.</rdfs:comment>
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:domain rdf:resource="#Organization"/>
+ <rdfs:range rdf:resource="xsd:string"/>
+ <rdfs:sameProperty rdf:resource="rnews:honorificSuffix"/>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:ID="nameUsedRules">
+  <rdfs:label xml:lang="en">Name used rule</rdfs:label>
+  <rdfs:comment xml:lang="en">This property describes the rules used to create the contents of the name property. Should have a class definition for this.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Person"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:sameProperty rdf:resource="gnd:usedRules"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="birthday">
+  <rdfs:label xml:lang="en">BirthDay</rdfs:label>
+  <rdfs:comment xml:lang="en">The birthday of a natural person or the foundation date of an organization.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Person"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="time:TemporalEntity"/>
+  <rdfs:range rdf:resource="#Era"/>
+  <rdfs:range rdf:resource="#Event"/>
+  <rdfs:sameProperty rdf:resource="rdaGr2:dateOfEstablishment"/>
+  <rdfs:sameProperty rdf:resource="foaf:birthday"/>
+  <rdfs:sameProperty rdf:resource="rdaGr2:dateOfBirth"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="deathday">
+  <rdfs:label xml:lang="en">Death Day</rdfs:label>
+  <rdfs:comment xml:lang="en">The death day of a natural person or the termination date of an organization.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Person"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="time:TemporalEntity"/>
+  <rdfs:range rdf:resource="#Era"/>
+  <rdfs:range rdf:resource="#Event"/>
+  <rdfs:sameProperty rdf:resource="rdaGr2:dateOfTermination"/>
+  <rdfs:sameProperty rdf:resource="rdaGr2:dateOfDeath"/>
+  <!-- TODO: remember add constraints that death occurs after birth -->
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="gender">
+  <rdfs:label xml:lang="en">Gender</rdfs:label>
+  <rdfs:comment xml:lang="en">The gender of person, class or role. Use this for gender hints in roles such as 'Sister'.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Person"/>
+  <rdfs:domain rdf:resource="#Role"/>
+  <rdfs:range rdf:resource="#Gender"/>
+  <rdfs:sameProperty rdf:resource="foaf:gender"/>
+  <rdfs:sameProperty rdf:resource="rdaGr2:gender"/>
+</owl:ObjectProperty>
+
+
+<owl:ObjectProperty rdf:ID="nameChangedTo">
+ <rdfs:domain rdf:resource="#Person"/>                   
+ <rdfs:range rdf:resource="#Person"/>
+ <rdfs:subPropertyOf rdf:resource="#next_instantiation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="nameChangedFrom">
+ <rdfs:domain rdf:resource="#Person"/>                   
+ <rdfs:range rdf:resource="#Person"/>
+ <rdfs:subPropertyOf rdf:resource="#previous_instantiation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="maiden_name">
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="#Person"/>
+ <!-- Should be only for Gender Female in 1918 -->
+ <rdfs:subPropertyOf rdf:resource="#previously_named_as"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="married_name">
+ <rdfs:domain rdf:resource="#Person"/>
+ <rdfs:range rdf:resource="#Person"/>
+ <!-- Should be only for Gender Female in 1918 -->
+ <rdfs:subPropertyOf rdf:resource="#name_change"/>
+</owl:ObjectProperty>
+
+
+ <!-- A special treat, genders -->
+  <owl:Class rdf:ID="Gender">
+   <foaf:name>Gender</foaf:name>
+   <rdfs:label xml:lang="en">Gender</rdfs:label>
+   <rdfs:label xml:lang="fr">Sexe</rdfs:label>
+   <rdfs:label xml:lang="de">Geschlechtsangabe</rdfs:label>
+   <rdfs:comment xml:lang="en">Superclass for different coding of Gender types. Extend as necessary.</rdfs:comment>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="StrictGender">
+    <foaf:name>Gender</foaf:name> 
+   <rdfs:label xml:lang="en">Gender (Strict)</rdfs:label>
+   <rdfs:comment xml:lang="en">Strict F/M coding of Gender types, with restriction.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#SimpleGender"/>
+  </owl:Class>
+
+<SimpleGender rdf:about="http://rdf.muninn-project.org/ontologies/organization#SimpleGender-F">
+ <foaf:name>F</foaf:name> 
+ <rdfs:label xml:lang="en">Woman</rdfs:label>
+ <rdfs:label xml:lang="en">Femme</rdfs:label>
+  <rdfs:label xml:lang="en">Frau</rdfs:label> 
+</SimpleGender>
+
+<SimpleGender rdf:about="http://rdf.muninn-project.org/ontologies/organization#SimpleGender-M">
+ <foaf:name>M</foaf:name>
+ <rdfs:label xml:lang="en">Man</rdfs:label>
+ <rdfs:label xml:lang="en">Homme</rdfs:label>
+ <rdfs:label xml:lang="en">Mann</rdfs:label> 
+</SimpleGender>
+
+
+  <owl:Class rdf:ID="GenderISO5218">
+   <foaf:name>Gender</foaf:name>
+   <rdfs:label xml:lang="en">Gender (ISO/IEC 5218)</rdfs:label>
+   <rdfs:comment xml:lang="en">Strict F/M coding of Gender types, with restriction.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#StrictGender"/>
+   <owl:sameAs rdf:resource="dbpedia:ISO_5218"/> 
+  </owl:Class>
+
+<GenderISO5218 rdf:about="http://rdf.muninn-project.org/ontologies/organization#GenderISO5218-2">
+ <foaf:name>2</foaf:name>
+ <rdfs:label xml:lang="en">Woman</rdfs:label>
+ <rdfs:label xml:lang="en">Femme</rdfs:label>
+ <rdfs:label xml:lang="en">Frau</rdfs:label> 
+</GenderISO5218>
+
+<GenderISO5218 rdf:about="http://rdf.muninn-project.org/ontologies/organization#GenderISO5218-1">
+ <foaf:name>1</foaf:name>
+ <rdfs:label xml:lang="en">Man</rdfs:label>
+ <rdfs:label xml:lang="en">Homme</rdfs:label>
+ <rdfs:label xml:lang="en">Mann</rdfs:label> 
+</GenderISO5218>
+
+<GenderISO5218 rdf:about="http://rdf.muninn-project.org/ontologies/organization#GenderISO5218-0">
+ <foaf:name>0</foaf:name>
+ <rdfs:label xml:lang="en">Gender Unknown</rdfs:label>
+ <rdfs:label xml:lang="en">Sex Inconnu</rdfs:label>
+ <rdfs:label xml:lang="en">Mann</rdfs:label> 
+</GenderISO5218>
+
+<GenderISO5218 rdf:about="http://rdf.muninn-project.org/ontologies/organization#GenderISO5218-9">
+ <foaf:name>9</foaf:name>
+ <rdfs:label xml:lang="en">Not Available</rdfs:label>
+</GenderISO5218>
+
+<owl:Class rdf:ID="SimpleGender">
+    <foaf:name>Gender</foaf:name>
+   <rdfs:label xml:lang="en">SimplebGender</rdfs:label>
+   <rdfs:comment xml:lang="en">Simple F/M coding of Gender types.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Gender"/>
+</owl:Class>
+
+<StrictGender rdf:about="http://rdf.muninn-project.org/ontologies/organization#StrictGender-F">
+ <foaf:name>F</foaf:name>
+ <rdfs:label xml:lang="en">Woman</rdfs:label>
+ <rdfs:label xml:lang="en">Femme</rdfs:label>
+ <rdfs:label xml:lang="en">Frau</rdfs:label> 
+</StrictGender>
+
+<StrictGender rdf:about="http://rdf.muninn-project.org/ontologies/organization#StrictGender-M">
+ <foaf:name>M</foaf:name> 
+ <rdfs:label xml:lang="en">Man</rdfs:label>
+ <rdfs:label xml:lang="en">Homme</rdfs:label>
+ <rdfs:label xml:lang="en">Mann</rdfs:label> 
+</StrictGender>
+
+ <!-- Everything about Roles -->
+ <owl:Class rdf:ID="Role">
+   <rdfs:label xml:lang="en">Role</rdfs:label>
+   <rdfs:label xml:lang="fr">Role</rdfs:label>
+   <rdfs:label xml:lang="de">?</rdfs:label> 
+   <rdfs:comment xml:lang="en">A role or function without a specific organizationa context.</rdfs:comment>
+   <owl:sameAs>dbpedia:Role</owl:sameAs>
+ </owl:Class>
+
+ <!-- Family first -->
+
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleFather">
+    <rdfs:label xml:lang="en">Father</rdfs:label>
+    <rdfs:label xml:lang="fr">Père</rdfs:label>
+    <rdfs:label xml:lang="de">Vater</rdfs:label>
+    <rdfs:comment xml:lang="en">A father is defined as a male parent of any type of offspring. The adjective &quot;paternal&quot; refers to father, parallel to &quot;maternal&quot; for mother. The verb &quot;to father&quot; means to procreate or to sire a child from which also derives the gerund &quot;fathering&quot;.</rdfs:comment>
+<owl:sameAs>dbpedia:Father</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleMother">
+    <rdfs:label xml:lang="en">Mother</rdfs:label>
+    <rdfs:label xml:lang="fr">Mère</rdfs:label>
+    <rdfs:label xml:lang="de">Mutter</rdfs:label>
+    <rdfs:comment xml:lang="en">A mother, mom, mum, momma or mama, is a woman who has conceived, given birth to, or raised a child in the role of a parent. Because of the complexity and differences of a mother&#39;s social, cultural, and religious definitions and roles, it is challenging to define a mother to suit a universally accepted definition. The male equivalent is a father.</rdfs:comment>
+<owl:sameAs>dbpedia:Mother</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleParent">
+    <rdfs:label xml:lang="en">Parent</rdfs:label>
+    <rdfs:label xml:lang="fr">Parent (famille)</rdfs:label>
+    <rdfs:label xml:lang="de">Mutterschaft</rdfs:label>
+    <rdfs:label xml:lang="de">Elternschaft</rdfs:label>
+    <rdfs:comment xml:lang="en">A parent is a caretaker of the offspring in their own species. In humans, a parent is the mother or the father figure of a child (where &quot;child&quot; refers to offspring, not necessarily age). Children can have one or more parents, but they must have two biological parents. Biological parents consist of the male who sired the child and the female who gave birth to the child. In all human societies, the biological mother and father are both responsible for raising their young.</rdfs:comment>
+    <owl:sameAs>dbpedia:Parent</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleWife">
+    <rdfs:label xml:lang="en">Wife</rdfs:label>
+    <rdfs:comment xml:lang="en">A wife is a female partner in a marriage. The rights and obligations of the wife regarding her spouse(s) and others, and her status in the community and in law, varies between cultures and has varied over time.</rdfs:comment>
+<owl:sameAs>dbpedia:Wife</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleHusband">
+    <rdfs:label xml:lang="en">Husband</rdfs:label>
+    <rdfs:label xml:lang="fr">Marié</rdfs:label>
+    <rdfs:comment xml:lang="en">A husband is a male participant in a marriage. The rights and obligations of the husband regarding his spouse and others, and his status in the community and in law, vary between cultures and has varied over time. Four in five American men get married in their lifetime.</rdfs:comment>
+<owl:sameAs>dbpedia:Husband</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleChild">
+    <rdfs:label xml:lang="en">Child</rdfs:label>
+    <rdfs:label xml:lang="fr">Enfant</rdfs:label>
+    <rdfs:label xml:lang="de">Kind</rdfs:label>
+    <rdfs:comment xml:lang="en">Biologically, a child is generally a human between the stages of birth and puberty. Some vernacular definitions of a child include the fetus, as being an unborn child. The legal definition of &quot;child&quot; generally refers to a minor, otherwise known as a person younger than the age of majority.</rdfs:comment>
+<owl:sameAs>dbpedia:Child</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleSon">
+    <rdfs:label xml:lang="en">Son</rdfs:label>
+    <rdfs:label xml:lang="fr">Fils (famille)</rdfs:label>
+    <rdfs:comment xml:lang="en">A son is a male offspring; a boy or man in relation to his parents. The female analogue is a daughter.</rdfs:comment>
+<owl:sameAs>dbpedia:Son</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleDaughter">
+    <rdfs:label xml:lang="en">Daughter</rdfs:label>
+    <rdfs:label xml:lang="fr">Fille (parenté)</rdfs:label>
+    <rdfs:comment xml:lang="en">A daughter is a female offspring; a girl, woman, or female animal in relation to her parents. The male equivalent is a son. Analogously the name is used on several areas to show relations between groups or elements.</rdfs:comment>
+<owl:sameAs>dbpedia:Daughter</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleSibling">
+    <rdfs:label xml:lang="en">Sibling</rdfs:label>
+    <rdfs:label xml:lang="fr">Frères et sœurs</rdfs:label>
+    <rdfs:comment xml:lang="en">Siblings are people who share at least one parent. A male sibling is called a brother; and a female sibling is called a sister. In most societies throughout the world, siblings usually grow up together and spend a good deal of their childhood socializing with one another. This genetic and physical closeness may be marked by the development of strong emotional bonds such as love or hostility.</rdfs:comment>
+<owl:sameAs>dbpedia:Sibling</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleGrandparent">
+    <rdfs:label xml:lang="en">Grandparent</rdfs:label>
+    <rdfs:label xml:lang="fr">Aïeul</rdfs:label>
+    <rdfs:label xml:lang="de">Großeltern</rdfs:label>
+    <rdfs:comment xml:lang="en">Grandparents are the parents of a person&#39;s own parent, whether that be a father or a mother. Every sexually-reproducing creature who is not a genetic chimera has a maximum of four genetic grandparents, eight genetic great-grandparents, sixteen genetic great-great-grandparents, etc. Rarely, such as in the case of sibling or half-sibling incest, these numbers are lower.</rdfs:comment>
+<owl:sameAs>dbpedia:Grandparent</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleAunt">
+    <rdfs:label xml:lang="en">Aunt</rdfs:label>
+    <rdfs:label xml:lang="fr">Tante</rdfs:label>
+    <rdfs:comment xml:lang="en">An aunt or mausi is a person who is the sister or sister-in-law of a parent. A man with an equivalent relationship is an uncle, and the reciprocal relationship is that of a nephew or niece. &quot;Aunt&quot; (or &quot;auntie&quot;) may also be an honorific bestowed upon an individual of fictive kinship.</rdfs:comment>
+<owl:sameAs>dbpedia:Aunt</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleUncle">
+    <rdfs:label xml:lang="en">Uncle</rdfs:label>
+    <rdfs:comment xml:lang="en">Uncle is a family relationship or kinship, the brother or brother-in-law of a parent. A woman with an equivalent relationship is an aunt, and the reciprocal relationship is that of a nephew or niece. In some cultures and families, children may refer to the cousins of their parents as &quot;aunt&quot; or &quot;uncle&quot;.</rdfs:comment>
+<owl:sameAs>dbpedia:Uncle</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleCousin">
+    <rdfs:label xml:lang="en">Cousin</rdfs:label>
+    <rdfs:label xml:lang="fr">Cousin (famille)</rdfs:label>
+    <rdfs:comment xml:lang="en">In kinship terminology, a cousin is a relative with whom one shares one or more common ancestors. The term is rarely used when referring to a relative in one&#39;s immediate family where there is a more specific term to describe the relationship (e.g. , one&#39;s parents, siblings and descendants). The term &quot;blood relative&quot; can be used synonymously and establishes the existence of a genetic link.</rdfs:comment>
+<owl:sameAs>dbpedia:Cousin</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleNephew">
+    <rdfs:label xml:lang="en">Nephew</rdfs:label>
+<owl:sameAs>dbpedia:Nephew</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleNiece">
+    <rdfs:label xml:lang="en">Niece</rdfs:label>
+<owl:sameAs>dbpedia:Niece</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleFriend">
+    <rdfs:label xml:lang="en">Friend</rdfs:label>
+<owl:sameAs>dbpedia:Friend</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleWitness">
+    <rdfs:label xml:lang="en">Witness</rdfs:label>
+    <rdfs:label xml:lang="fr">Témoin</rdfs:label>
+    <rdfs:label xml:lang="de">Zeuge</rdfs:label>
+    <rdfs:comment xml:lang="en">A witness is someone who has firsthand knowledge about an event, or in the criminal justice systems usually a crime, through his or her senses (e.g. seeing, hearing, smelling, touching) and can help certify important considerations about the crime or event. A witness who has seen the event first hand is known as an eyewitness. Witnesses are often called before a court of law to testify in trials. A subpoena commands a person to appear. It is used to compel the testimony of a witness in a trial.</rdfs:comment>
+<owl:sameAs>dbpedia:Witness</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleLeader">
+    <rdfs:label xml:lang="en">Leader</rdfs:label>
+    <rdfs:label xml:lang="fr">Leader</rdfs:label>
+<owl:sameAs>dbpedia:Leader</owl:sameAs>
+</Role>
+<Role rdf:about="http://rdf.muninn-project.org/ontologies/organization#RoleClergy">
+<foaf:name>Clergy</foaf:name>
+    <rdfs:label xml:lang="en">Clergy</rdfs:label>
+    <rdfs:label xml:lang="fr">Clergé</rdfs:label>
+    <rdfs:label xml:lang="de">Klerus</rdfs:label>
+    <rdfs:comment xml:lang="en">Clergy is a generic term used to refer to the formal religious leadership within some religions.</rdfs:comment>
+    <owl:sameAs>dbpedia:Clergy</owl:sameAs>
+    <owl:sameAs>http://dbpedia.org/ontology/Cleric</owl:sameAs>
+</Role>
+
+<!-- Appointments -->
+
+ <owl:Class rdf:ID="Appointment">
+   <rdfs:label xml:lang="en">Appointment</rdfs:label>
+   <rdfs:label xml:lang="fr">Poste</rdfs:label>
+   <rdfs:label xml:lang="de">Termin</rdfs:label>
+   <rdfs:subClassOf rdf:resource="#Role"/>
+   <rdfs:subClassOf rdf:resource="#Trade"/>
+   <rdfs:comment xml:lang="en">An appointment to a specific post or function.</rdfs:comment>
+ </owl:Class>
+<!-- Ranks -->
+ <owl:Class rdf:ID="Rank">
+   <rdfs:label xml:lang="en">Rank</rdfs:label>
+   <rdfs:label xml:lang="fr">Grade</rdfs:label>
+   <rdfs:label xml:lang="de">Rang </rdfs:label>
+   <rdfs:comment xml:lang="en">A rank with a hierarchy.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Role"/>
+   <rdfs:subClassOf rdf:resource="#Trade"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Acting_Rank">
+   <rdfs:label xml:lang="en">Acting Rank</rdfs:label>
+   <rdfs:label xml:lang="fr">Grade Intérimaire</rdfs:label>
+   <rdfs:label xml:lang="de">Handelnden Rang</rdfs:label>
+   <rdfs:comment xml:lang="en">A temporairy rank with a hierarchy.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Rank"/> 
+  </owl:Class>
+
+<owl:ObjectProperty rdf:ID="rankJuniorTo">
+   <foaf:name>Junior to</foaf:name>
+   <rdfs:label xml:lang="en">Rank Junior To</rdfs:label>
+   <rdfs:label xml:lang="fr">Rang Junior A</rdfs:label>
+   <rdfs:label xml:lang="de">nachrangig zu</rdfs:label>
+   <rdfs:comment xml:lang="en">The rank is junior to another rank within the chain of command.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Rank"/>
+   <rdfs:range rdf:resource="#Rank"/>
+   <owl:inverseOf rdf:resource="#rankSeniorTo"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="rankSeniorTo">
+   <foaf:name>Senior to</foaf:name>
+   <rdfs:label xml:lang="en">Rank Senior To</rdfs:label>
+   <rdfs:label xml:lang="fr">Rang Senior A</rdfs:label>
+   <rdfs:label xml:lang="de">vorrangig gegenüber</rdfs:label>
+   <rdfs:comment xml:lang="en">The rank is senior to another rank within the chain of command.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Rank"/>
+   <rdfs:range rdf:resource="#Rank"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="rankJuniorToTransitive">
+   <foaf:name>Junior to</foaf:name>
+   <rdfs:label xml:lang="en">Rank Junior To (Transitive)</rdfs:label>
+   <rdfs:label xml:lang="fr">Rang Junior A (Transitif)</rdfs:label>
+   <rdfs:label xml:lang="de">nachrangig zu (transitiv)</rdfs:label>
+   <rdfs:comment xml:lang="en">The rank is junior to another rank within the chain of command.</rdfs:comment>
+   <rdfs:subPropertyOf rdf:resource="#rankJuniorTo"/>
+   <rdfs:domain rdf:resource="#Rank"/>
+   <rdfs:range rdf:resource="#Rank"/>
+   <owl:inverseOf rdf:resource="#rankSeniorToTransitive"/>
+   <rdf:type rdf:resource="owl:TransitiveProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="rankSeniorToTransitive">
+   <foaf:name>Senior to</foaf:name>
+   <rdfs:label xml:lang="en">Rank Senior To (Transitive)</rdfs:label>
+   <rdfs:label xml:lang="fr">Rang Senior A (Transitif)</rdfs:label>
+   <rdfs:label xml:lang="de">vorrangig gegenüber (transitiv)</rdfs:label>
+   <rdfs:comment xml:lang="en">The rank is senior to another rank within the chain of command.</rdfs:comment>
+   <rdfs:subPropertyOf rdf:resource="#rankSeniorTo"/>
+   <rdfs:domain rdf:resource="#Rank"/>
+   <rdfs:range rdf:resource="#Rank"/>
+   <rdf:type rdf:resource="owl:TransitiveProperty"/>
+</owl:ObjectProperty>
+
+
+ <!-- Trades. God help us all -->
+ 
+  <owl:Class rdf:ID="Trade">
+   <rdfs:label xml:lang="en">Trade</rdfs:label>
+   <rdfs:label xml:lang="fr">Travail</rdfs:label>
+   <rdfs:label xml:lang="de"></rdfs:label>
+   <rdfs:comment xml:lang="en">A job function or specific occupation.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Role"/>
+  </owl:Class>
+
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeChaplain">
+    <foaf:name>Chaplain</foaf:name>
+    <rdfs:label xml:lang="en">Chaplain</rdfs:label>
+    <rdfs:label xml:lang="fr">Chapelain</rdfs:label>
+    <rdfs:label xml:lang="de">Kaplan</rdfs:label>
+    <rdfs:comment xml:lang="en">Traditionally, a Chaplain is a minister in a specialized setting such as a priest, pastor, rabbi, or imam or lay representative of a religion attached to a secular institution such as a hospital, prison, military unit, police department, university, or private chapel.</rdfs:comment>
+    <rdf:type rdf:resource="http://rdf.muninn-project.org/ontologies/organization#RoleClergy"/>
+    <owl:sameAs>dbpedia:Chaplain</owl:sameAs>
+</Trade>
+
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeGroom">
+    <foaf:name>Groom</foaf:name>
+    <rdfs:label xml:lang="en">Groom (Horse)</rdfs:label>
+    <rdfs:label xml:lang="fr">Groom de Cheval</rdfs:label>
+    <rdfs:label xml:lang="de">????</rdfs:label>
+    <rdfs:comment xml:lang="en">A person who works in a stable taking care of horses.</rdfs:comment>
+    <rdf:type rdf:resource="http://rdf.muninn-project.org/ontologies/organization#RoleClergy"/>
+    <owl:differentFrom>dbpedia:Groom</owl:differentFrom>
+    <owl:sameAs>dbpedia:Groom_%28horses%29</owl:sameAs>
+</Trade>
+
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeMatron">
+<foaf:name>Matron</foaf:name>
+    <rdfs:label xml:lang="en">Matron</rdfs:label>
+    <rdfs:label xml:lang="de">Oberin</rdfs:label>
+    <rdfs:comment xml:lang="en">Matron is the job title of a very senior nurse in several countries, including the United Kingdom, its former colonies, including the Republic of Ireland, although the title Clinical Nurse Manager has become acceptable as an alternative.</rdfs:comment>
+    <owl:sameAs>dbpedia:Matron</owl:sameAs>
+    <rdfs:subClassOf rdf:resource="http://rdf.muninn-project.org/ontologies/organization#TradeNurse"/>
+</Trade>
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeNursing_Sister">
+<foaf:name>Nursing Sister</foaf:name>
+    <rdfs:label xml:lang="en">Nursing Sister</rdfs:label>
+    <owl:sameAs>dbpedia:Nursing_Sister</owl:sameAs>
+    <rdfs:subClassOf rdf:resource="http://rdf.muninn-project.org/ontologies/organization#TradeNurse"/>
+    <rdfs:subClassOf rdf:resource="http://rdf.muninn-project.org/ontologies/organization#TradeNun"/>
+</Trade>
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeSailor">
+    <foaf:name>Sailor</foaf:name>
+    <rdfs:label xml:lang="en">Sailor</rdfs:label>
+    <rdfs:label xml:lang="fr">Marin (profession)</rdfs:label>
+    <rdfs:label xml:lang="de">Segler (Schifffahrt)</rdfs:label>
+    <rdfs:comment xml:lang="en">A sailor, mariner, or seaman is a person who navigates water-borne vessels or assists in their operation, maintenance, or service. The term can apply to professional mariners, military personnel, and recreational sailors as well as a plethora of other uses.</rdfs:comment>
+<owl:sameAs>dbpedia:Sailor</owl:sameAs>
+</Trade>
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeSister">
+    <foaf:name>Sister</foaf:name>
+    <rdfs:label xml:lang="en">Sister (Nun)</rdfs:label>
+    <rdfs:label xml:lang="de">Nonne</rdfs:label>
+    <rdfs:label xml:lang="de">Ordensschwester</rdfs:label>
+    <rdfs:comment xml:lang="en">A nun is a woman who has taken vows committing her to live a spiritual life. She may be an ascetic who voluntarily chooses to leave mainstream society and live her life in prayer and contemplation in a monastery or convent. The term &quot;nun&quot; is applicable to Catholics &amp;ndash; both eastern and western traditions &amp;ndash; Orthodox Christians, Anglicans, Lutherans, Jains, Buddhists, and Taoists.</rdfs:comment>
+    <owl:sameAs>dbpedia:Nun</owl:sameAs>
+    <rdf:type rdf:resource="http://rdf.muninn-project.org/ontologies/organization#RoleClergy"/>
+</Trade>
+<Trade rdf:about="http://rdf.muninn-project.org/ontologies/organization#TradeNurse">
+    <foaf:name>Nurse</foaf:name>
+    <rdfs:label xml:lang="en">Nurse (Medical)</rdfs:label>
+    <rdfs:label xml:lang="fr">Infirmier</rdfs:label>
+    <rdfs:label xml:lang="de">Gesundheits- und Krankenpfleger</rdfs:label>
+    <rdfs:comment xml:lang="en">A nurse is a healthcare professional who, in collaboration with other members of a health care team, is responsible for: treatment, safety, and recovery of acutely or chronically ill individuals; health promotion and maintenance within families, communities and populations; and, treatment of life-threatening emergencies in a wide range of health care settings.</rdfs:comment>
+    <owl:sameAs>dbpedia:Nurse</owl:sameAs>
+</Trade>
+
+  <!-- Everything about Organizations -->
+
+  <owl:Class rdf:ID="Organization">
+   <rdfs:label xml:lang="en">A moral person</rdfs:label>
+   <rdfs:label xml:lang="fr">Une personne morale</rdfs:label>
+   <rdfs:label xml:lang="de"></rdfs:label>
+   <rdfs:comment xml:lang="en">An organization or group of people with a common goal, incorporated or not. In the Muninn context use this class for any organised group and the foaf:Group class for any un-organized group.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+   <owl:sameAs rdf:resource="rnews:Organization"/> 
+  </owl:Class>
+
+
+<owl:ObjectProperty rdf:ID="nextIncarnation">
+ <rdfs:label xml:lang="en">Next Incarnation</rdfs:label>
+ <rdfs:domain rdf:resource="#Organization"/>                   
+ <rdfs:range rdf:resource="#Organization"/>
+ <rdfs:subPropertyOf rdf:resource="#next_instantiation"/>
+ <owl:sameAs rdf:resource="fao:isPredecessorOf"/>
+ <owl:sameAs rdf:resource="http://dbpedia.org/ontology/successor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="previousIncarnation">
+ <rdfs:label xml:lang="en">Previous Incarnation</rdfs:label>
+ <rdfs:domain rdf:resource="#Organization"/>                   
+ <rdfs:range rdf:resource="#Organization"/>
+ <rdfs:subPropertyOf rdf:resource="#previous_instantiation"/>
+ <owl:sameAs rdf:resource="fao:isSuccessorOf"/>
+ <owl:sameAs rdf:resource="http://dbpedia.org/ontology/predecessor"/>
+</owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="allegiance">
+  <owl:inverseOf rdf:resource="#sovereign_over"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="sovereign_over">
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="hasPart">
+  <rdfs:label xml:lang="en">has Part</rdfs:label>  
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Organization"/>
+  <rdfs:sameProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="isPartOf">
+  <rdfs:label xml:lang="en">is Part Of</rdfs:label>  
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Organization"/>
+  <rdfs:sameProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+  <owl:inverseOf rdf:resource="#hasPart"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="hasAttached">
+  <rdfs:label xml:lang="en">has Attached</rdfs:label>  
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Organization"/>
+  <rdfs:subProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="isAttachedTo">
+  <rdfs:label xml:lang="en">is Part Of</rdfs:label>  
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:sameProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Organization"/>
+  <owl:inverseOf rdf:resource="#hasPart"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="isLeadBy">
+  <rdfs:label xml:lang="en">is Lead By</rdfs:label>  
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <owl:inverseOf rdf:resource="#Leads"/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="Leads">
+  <rdfs:label xml:lang="en">Leads</rdfs:label>  
+  <rdfs:range rdf:resource="#Organization"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="is_Commanded_By">
+  <rdfs:label xml:lang="en">is Commanded By</rdfs:label>  
+  <rdfs:domain rdf:resource="#Organization"/>
+  <rdfs:range rdf:resource="#Agent"/>
+  <owl:inverseOf rdf:resource="#Leads"/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="Commands">
+  <rdfs:label xml:lang="en">Commands</rdfs:label>  
+  <rdfs:range rdf:resource="#Organization"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+ </owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:ID="nominalSize">
+ <rdfs:label xml:lang="en">Nominal Headcount</rdfs:label>  
+ <rdfs:comment xml:lang="en">The nominal headcount of this organization or class of organization.</rdfs:comment>
+ <rdfs:range rdf:resource="xsd:int"/>
+ <rdfs:domain rdf:resource="#Organization"/>
+  <owl:sameAs rdf:resource="http://dbpedia.org/ontology/numberOfStaff"/>
+</owl:DatatypeProperty>
+
+
+
+
+  <owl:Class rdf:ID="Political_Organization">
+   <rdfs:label xml:lang="en">A Political Organization</rdfs:label>
+   <rdfs:label xml:lang="fr">Une Organisation Politique</rdfs:label>
+   <rdfs:label xml:lang="de"></rdfs:label>
+   <rdfs:comment xml:lang="en">An organization that is political in that it forms its own policy.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Organization"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ground_Based_Organization">
+   <rdfs:label xml:lang="en">Ground Based Organization</rdfs:label>
+   <rdfs:comment xml:lang="en">High level class for people and organizations that live and work on (and under) the ground.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Air_Based_Organization">
+   <rdfs:comment xml:lang="en">High level class for people and organizations that live and work in the air.</rdfs:comment>
+   <rdfs:label xml:lang="en">Air Based Organization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Water_Based_Organization">
+   <rdfs:comment xml:lang="en">High level class for people and organizations that live and work on (and under) water.</rdfs:comment>
+   <rdfs:label xml:lang="en">Water Based Organization</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Spaced_Based_Organization">
+   <rdfs:label xml:lang="en">Space Based Organization</rdfs:label>
+   <rdfs:comment xml:lang="en">High level class for people and organizations that live and work in outer space.</rdfs:comment>
+   <!-- Getting ahead of things here -->
+  </owl:Class>
+
+  <owl:Class rdf:ID="Colony">
+   <rdfs:label xml:lang="en">Colony (Political)</rdfs:label>
+   <rdfs:label xml:lang="fr">Colonie (</rdfs:label>
+   <rdfs:comment xml:lang="en">A colony of some other organization.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Political_Organization"/>
+   <owl:sameAs>dbpedia:Colony</owl:sameAs>
+   <allegiance rdf:resource="#State"/>
+  </owl:Class>
+ 
+  <owl:Class rdf:ID="State">
+   <rdfs:label xml:lang="en">A State</rdfs:label>
+   <rdfs:label xml:lang="fr">Un État</rdfs:label>
+   <rdfs:label xml:lang="de">Staat (Begriffsklärung)</rdfs:label>
+   <rdfs:comment xml:lang="en">A state, wheter sovereign or satelite of another.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Political_Organization"/>
+   <owl:sameAs>dbpedia:State_(polity)</owl:sameAs>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Subject_State">
+   <rdfs:label xml:lang="en">Subject State</rdfs:label>
+   <rdfs:label xml:lang="fr">Un État Depedant</rdfs:label>
+   <rdfs:label xml:lang="de">Staat (Begriffsklärung)</rdfs:label>
+   <rdfs:comment xml:lang="en">A state within another.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Province">
+   <rdfs:label xml:lang="en">Province</rdfs:label>
+   <rdfs:label xml:lang="fr">Province</rdfs:label>
+   <rdfs:comment xml:lang="en">A province of a state.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Subject_State"/>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="Dominion">
+   <rdfs:label xml:lang="en">Dominion</rdfs:label>
+   <rdfs:label xml:lang="fr">Dominion</rdfs:label>
+   <rdfs:comment xml:lang="en">A dominion of a state..</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Subject_State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Satellite_State">
+   <rdfs:label xml:lang="en">Statellite State</rdfs:label>
+   <rdfs:label xml:lang="fr">Un État Satellite</rdfs:label>
+   <rdfs:comment xml:lang="en">A state which is under the sphere of influence of another without being part of it.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sovereign_State">
+   <rdfs:label xml:lang="en">Sovereign State</rdfs:label>
+   <rdfs:label xml:lang="fr">Un État Souverain</rdfs:label>
+   <rdfs:comment xml:lang="en">A state that is sovereign in all aspects.</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Monarchy">
+   <rdfs:label xml:lang="en">Monarchy</rdfs:label>
+   <rdfs:label xml:lang="fr">Monarchie</rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Sovereign_State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Federation">
+   <rdfs:label xml:lang="en">Federation</rdfs:label>
+   <rdfs:label xml:lang="fr">Fédération</rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Sovereign_State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Constitutional_State">
+   <rdfs:label xml:lang="en">Constitutional State</rdfs:label>
+   <rdfs:label xml:lang="fr">État Constitutionelle</rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="Constitutional_Monarchy">
+   <rdfs:label xml:lang="en">Constitutional Monarchy</rdfs:label>
+   <rdfs:label xml:lang="fr">Monarchie Constitutionelle</rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Monarchy"/>
+   <rdfs:subClassOf rdf:resource="#Constitutional_State"/>
+  </owl:Class>
+       
+  <owl:Class rdf:ID="Semi_Presidential_Republic">
+   <rdfs:label xml:lang="en">Semi Presidential Republic</rdfs:label>
+   <rdfs:label xml:lang="fr"></rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Republic"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Republic">
+   <rdfs:label xml:lang="en">Republic</rdfs:label>
+   <rdfs:label xml:lang="fr"></rdfs:label>
+   <rdfs:comment xml:lang="en"></rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#Sovereign_State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Commonwealth">
+   <rdfs:label xml:lang="en">Commonwealth (State)</rdfs:label>
+   <rdfs:label xml:lang="fr">Commonwealth (État)</rdfs:label>
+   <rdfs:comment xml:lang="en">Not British Commonwealth</rdfs:comment>
+   <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+
+<!-- Country
+Republic
+Empire
+Semi_Presidential_Republic
+Kingdom
+Commonwealth
+Constitutional_Republic
+Monarchy
+Coalition
+Province -->
+
+
+<!-- Do Countries here 
+
+  http://en.wikipedia.org/wiki/File:Flag_of_Canada-1868-Red.svg
+
+ New Zealand 26 September 1907
+http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/new_zealand_dom
+http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/australia_dom
+http://rdf.muninn-project.org/ww1/2011/11/11/Country/united_kingdom_gb_ireland
+http://rdf.muninn-project.org/ww1/2011/11/11/Republic/usa
+http://rdf.muninn-project.org/ww1/2011/11/11/Republic/french_third_republic
+http://en.wikipedia.org/wiki/French_Third_Republic
+http://rdf.muninn-project.org/ww1/2011/11/11/Protectorate/british_east_africa
+http://en.wikipedia.org/wiki/East_Africa_Protectorate 
+http://rdf.muninn-project.org/ww1/2011/11/11/Country/state_of_thessaloniki_greece
+http://en.wikipedia.org/wiki/Thessaloniki#20th_century
+http://rdf.muninn-project.org/ww1/2011/11/11/Republic/ireland
+http://rdf.muninn-project.org/ww1/2011/11/11/Kingdom/Nepal
+http://rdf.muninn-project.org/ww1/2011/11/11/Country/scotland_1502
+http://rdf.muninn-project.org/ww1/2011/11/11/Colony/sierra_leone_pre_1924
+http://rdf.muninn-project.org/ww1/2011/11/11/Singapore
+http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/South_African_Union
+http://rdf.muninn-project.org/ww1/2011/11/11/Protectorate/uganda
+http://rdf.muninn-project.org/ww1/2011/11/11/Province/Burma_Province_Of_India
+
+http://en.wikipedia.org/wiki/South_African_Army
+-->
+<Dominion rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada">
+ <rdfs:label xml:lang="en">Canada (Dominion)</rdfs:label>
+ <rdfs:label xml:lang="fr">Canada (Dominion)</rdfs:label>
+ <rdfs:label xml:lang="de">Kanada (Herrschaft)</rdfs:label>
+ <org:name>Canada</org:name>
+ <rdf:type rdf:resource="http://rdf.muninn-project.org/ontology/organization#Federation"/>
+ <rdf:type rdf:resource="http://rdf.muninn-project.org/ontology/organization#Satellite_State"/>
+ <org:logo rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Image/b9744d18c25d645329b18ec81b6540a9"/>
+ <org:birthdate>
+  <time:Instant rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/birth_of_confederation"> 
+   <time:inDateTime>
+    <DateTimeDescription>
+     <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1867</time:year>
+     <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--07</time:month>
+     <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">---01</time:day>
+    </DateTimeDescription>
+   </time:inDateTime>
+  </time:Instant>
+ </org:birthdate>
+ <org:deathdate>
+  <time:Instant rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/canada_and_constitution_1982"> 
+   <time:inDateTime>
+    <DateTimeDescription>
+     <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1982</time:year>
+     <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--03</time:month>
+     <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">---29</time:day>
+    </DateTimeDescription>
+   </time:inDateTime>
+  </time:Instant>
+ </org:deathdate>
+ <nextIncarnation rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Country/canada"/>
+</Dominion>
+
+<Country rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Country/canada">
+ <previousIncarnation rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada"/> 
+ <rdfs:label xml:lang="en">Canada (Autonomous Confederation)</rdfs:label>
+ <rdfs:label xml:lang="fr">Canada (Confédération Autonome)</rdfs:label>
+ <rdfs:label xml:lang="de">Kanada (Bund Autonom)</rdfs:label>
+ <org:name>Canada</org:name>
+ <rdf:type rdf:resource="http://rdf.muninn-project.org/ontology/organization#Federation"/>
+ <rdf:type rdf:resource="http://rdf.muninn-project.org/ontology/organization#Constitutional_Monarchy"/>
+ <org:logo rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Image/26b65ad835217f91ac71d65e80439700"/>
+ <org:birthdate rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/canada_and_constitution_1982"/> 
+ <owl:sameAs rdf:resource="http://sws.geonames.org/6251999/about.rdf"/>
+</Country>
+
+
+<Dominion rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/dnwfoundland">
+ <rdfs:label xml:lang="en">Newfoundland and Labrador (Dominion)</rdfs:label>
+ <rdfs:label xml:lang="fr">Terre-Neuve et Labrador (Dominion)</rdfs:label>
+ <rdfs:label xml:lang="de">Neufundland und Labrador (Herrschaft)</rdfs:label>
+ <org:name>Dominion of Newfoundland and Labrador</org:name>
+ <rdf:type rdf:resource="http://rdf.muninn-project.org/ontology/organization#Satellite_State"/>
+ <foaf:logo rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Image/7d46407cc6258e58946b6e078041a047"/>
+ <org:birthdate>
+  <time:Instant rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/nwfoundland_dominion_status"> 
+   <time:inDateTime>
+    <DateTimeDescription>
+     <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1907</time:year>
+     <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--09</time:month>
+     <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">---26</time:day>
+    </DateTimeDescription>
+   </time:inDateTime>
+  </time:Instant>
+ </org:birthdate>
+ <org:deathdate>
+  <time:Instant rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/nwfoundland_joins_canada"> 
+   <time:inDateTime>
+    <DateTimeDescription>
+     <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1949</time:year>
+     <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--03</time:month>
+     <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">---31</time:day>
+    </DateTimeDescription>
+   </time:inDateTime>
+  </time:Instant>
+ </org:deathdate>
+ <nextIncarnation rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Province/province_of_newfoundland"/>
+</Dominion>
+
+<Province rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Province/province_of_newfoundland">
+ <previousIncarnation rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/dnwfoundland"/>
+ <rdfs:label xml:lang="en">Newfoundland and Labrador (Province)</rdfs:label>
+ <rdfs:label xml:lang="fr">Terre-Neuve et Labrador (Province)</rdfs:label>
+ <rdfs:label xml:lang="de">Neufundland und Labrador (Provinzen)</rdfs:label>
+ <org:name>Newfoundland and Labrador</org:name>
+ <org:nameQualifier>Province of Canada</org:nameQualifier>
+ <org:birthdate rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Instant/nwfoundland_joins_canada"/> 
+ <foaf:logo rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Image/856db0d3e5e0abb3f097eb8a63844282"/>
+ <owl:sameAs rdf:resource="http://sws.geonames.org/6354959/about.rdf"/>
+ Part of
+</Province>
+<!--
+<Province rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Province/punjab">
+<rdfs:label xml:lang="en">Punjab (British India Province)</rdfs:label>
+ <org:name>Punjab</org:name>
+  <org:nameQualifier>Province of British India</org:nameQualifier>
+<org:birthdate>
+1849
+ </org:birthdate>
+<source rdf:resource="dbpedia:Punjab,_India"/>
+</Province>
+
+<Empire rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Empire/british_india">
+<rdfs:label xml:lang="en">Empire of India (British India)</rdfs:label>
+<org:name>India</org:name>
+<org:birthdate>
+1876
+</org:birthdate>
+<org:deathdate>
+1947
+</org:deathdate>
+<source rdf:resource="dbpedia:British_India"/>
+<foaf:logo rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Image/8653b532d0587bcda28a855e98209465"/>
+</Empire>
+
+geography
+institutional
+
+-->  
+
+</rdf:RDF>
+
+ 

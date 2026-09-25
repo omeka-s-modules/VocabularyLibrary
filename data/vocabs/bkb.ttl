@@ -1,0 +1,204 @@
+@prefix bkb: <https://budayakb.cs.ui.ac.id/ns#> .
+@prefix bkbr: <https://budayakb.cs.ui.ac.id/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#############################
+# ontology metadata
+#############################
+
+<https://budayakb.cs.ui.ac.id/ns> a owl:Ontology .
+<https://budayakb.cs.ui.ac.id/ns> dct:title "BudayaKB Ontology"@en .
+<https://budayakb.cs.ui.ac.id/ns> dct:description "An ontology for Indonesian cultural heritage"@en .
+<https://budayakb.cs.ui.ac.id/ns> dct:creator [ rdfs:label "Hadi Syah Putra" ] .
+<https://budayakb.cs.ui.ac.id/ns> dct:creator [ rdfs:label "Rahmad Mahendra" ] .
+<https://budayakb.cs.ui.ac.id/ns> dct:creator [ rdfs:label "Fariz Darari" ] .
+
+#############################
+# ontology classes
+#############################
+
+bkb:WarisanBudaya a rdfs:Class .
+bkb:WarisanBudaya rdfs:label "Cultural Heritage"@en .
+
+bkb:WarisanBudayaBenda rdfs:subClassOf bkb:WarisanBudaya .
+bkb:WarisanBudayaBenda rdfs:label "Tangible Cultural Heritage"@en .
+
+bkb:WarisanBudayaBergerak rdfs:subClassOf bkb:WarisanBudayaBenda .
+bkb:WarisanBudayaBergerak rdfs:label "Movable Cultural Heritage"@en .
+
+bkb:WarisanBudayaTidakBergerak rdfs:subClassOf bkb:WarisanBudayaBenda .
+bkb:WarisanBudayaTidakBergerak rdfs:label "Immovable Cultural Heritage"@en .
+
+bkb:WarisanBudayaTakBenda rdfs:subClassOf bkb:WarisanBudaya .
+bkb:WarisanBudayaTakBenda rdfs:label "Intangible Cultural Heritage"@en .
+
+bkb:WarisanBudayaAbstrak rdfs:subClassOf bkb:WarisanBudayaTakBenda .
+bkb:WarisanBudayaAbstrak rdfs:label "Abstract Cultural Heritage"@en .
+
+bkb:WarisanBudayaNonAbstrak rdfs:subClassOf bkb:WarisanBudayaTakBenda .
+bkb:WarisanBudayaNonAbstrak rdfs:label "Non-Abstract Cultural Heritage"@en .
+
+bkb:AlatMusikTradisional rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:AlatMusikTradisional rdfs:label "Traditional Musical Instrument"@en .
+
+bkb:MakananMinumanTradisional rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:MakananMinumanTradisional rdfs:label "Traditional Food/Beverage"@en .
+
+bkb:NaskahKunoManuskrip rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:NaskahKunoManuskrip rdfs:label "Ancient Script"@en .
+
+bkb:PakaianTradisional rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:PakaianTradisional rdfs:label "Traditional Dress"@en .
+
+bkb:PatungArca rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:PatungArca rdfs:label "Statue"@en .
+
+bkb:Prasasti rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:Prasasti rdfs:label "Historical Inscription"@en .
+
+bkb:SenjataTradisional rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:SenjataTradisional rdfs:label "Traditional Weapon and Battle Equipment"@en .
+
+bkb:RumahTradisional rdfs:subClassOf bkb:WarisanBudayaBergerak .
+bkb:RumahTradisional rdfs:label "Traditional Home"@en .
+
+bkb:Benteng rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Benteng rdfs:label "Fortress"@en .
+
+bkb:Candi rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Candi rdfs:label "Temple"@en .
+
+bkb:Istana rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Istana rdfs:label "Palace"@en .
+
+bkb:Kolam rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Kolam rdfs:label "Pool"@en .
+
+bkb:Kuil rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Kuil rdfs:label "Shrine"@en .
+
+bkb:Makam rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Makam rdfs:label "Tomb"@en .
+
+bkb:Masjid rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Masjid rdfs:label "Mosque"@en .
+
+bkb:Petirtaan rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Petirtaan rdfs:label "Bathing Structure"@en .
+
+bkb:Pura rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:Pura rdfs:label "Hindu Place of Worship"@en .
+
+bkb:SitusPrasejarah rdfs:subClassOf bkb:WarisanBudayaTidakBergerak .
+bkb:SitusPrasejarah rdfs:label "Prehistoric Site"@en .
+
+bkb:AksaraDaerah rdfs:subClassOf bkb:WarisanBudayaAbstrak .
+bkb:AksaraDaerah rdfs:label "Regional Script"@en .
+
+bkb:BahasaDaerah rdfs:subClassOf bkb:WarisanBudayaAbstrak .
+bkb:BahasaDaerah rdfs:label "Local Language"@en .
+
+bkb:Kerajaan rdfs:subClassOf bkb:WarisanBudayaAbstrak .
+bkb:Kerajaan rdfs:label "Kingdom"@en .
+
+bkb:KomunitasAdat rdfs:subClassOf bkb:WarisanBudayaAbstrak .
+bkb:KomunitasAdat rdfs:label "Indigenous Community"@en .
+
+bkb:SukuBangsa rdfs:subClassOf bkb:WarisanBudayaAbstrak .
+bkb:SukuBangsa rdfs:label "Tribe"@en .
+
+bkb:Musik rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:Musik rdfs:label "Traditional Music"@en .
+
+bkb:LaguTradisional rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:LaguTradisional rdfs:label "Folk Song"@en .
+
+bkb:PermainanRakyatTradisional rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:PermainanRakyatTradisional rdfs:label "Traditional Game"@en .
+
+bkb:Ritual rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:Ritual rdfs:label "Ritual"@en .
+
+bkb:SeniPertunjukan rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:SeniPertunjukan rdfs:label "Performing Art"@en .
+
+bkb:TarianTradisional rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:TarianTradisional rdfs:label "Traditional Dance"@en .
+
+bkb:TradisiLisan rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:TradisiLisan rdfs:label "Oral Tradition"@en .
+
+bkb:CeritaRakyat rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:CeritaRakyat rdfs:label "Traditional Folklore"@en .
+
+bkb:MotifKain rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:MotifKain rdfs:label "Fabric Motif"@en .
+
+bkb:Ornamen rdfs:subClassOf bkb:WarisanBudayaNonAbstrak .
+bkb:Ornamen rdfs:label "Ornament"@en .
+
+bkb:Provinsi a rdfs:Class .
+bkb:Provinsi rdfs:label "Province"@en .
+
+bkb:KabupatenKota a rdfs:Class .
+bkb:KabupatenKota rdfs:label "Regency/City"@en .
+
+#############################
+# ontology properties
+#############################
+
+bkb:province a rdf:Property .
+bkb:province rdfs:label "province"@en .
+bkb:province rdfs:range bkb:Provinsi .
+
+bkb:populationPlaceInProvince a rdf:Property .
+bkb:populationPlaceInProvince rdfs:label "population place in province"@en .
+bkb:populationPlaceInProvince rdfs:range bkb:Provinsi .
+
+bkb:populationPlaceInCity a rdf:Property .
+bkb:populationPlaceInCity rdfs:label "population place in city"@en .
+bkb:populationPlaceInCity rdfs:range bkb:KabupatenKota .
+
+bkb:originFromProvince a rdf:Property .
+bkb:originFromProvince rdfs:label "origin from province"@en .
+bkb:originFromProvince rdfs:range bkb:Provinsi .
+
+bkb:originFromCity a rdf:Property .
+bkb:originFromCity rdfs:label "origin from city"@en .
+bkb:originFromCity rdfs:range bkb:KabupatenKota .
+
+bkb:locationInProvince a rdf:Property .
+bkb:locationInProvince rdfs:label "location in province"@en .
+bkb:locationInProvince rdfs:range bkb:Provinsi .
+
+bkb:locationInCity a rdf:Property .
+bkb:locationInCity rdfs:label "location in city"@en .
+bkb:locationInCity rdfs:range bkb:KabupatenKota .
+
+bkb:developedInProvince a rdf:Property .
+bkb:developedInProvince rdfs:label "developed in province"@en .
+bkb:developedInProvince rdfs:range bkb:Provinsi .
+
+bkb:developedInCity a rdf:Property .
+bkb:developedInCity rdfs:label "developed in city"@en .
+bkb:developedInCity rdfs:range bkb:KabupatenKota .
+
+bkb:spokenInProvince a rdf:Property .
+bkb:spokenInProvince rdfs:label "spoken in province"@en .
+bkb:spokenInProvince rdfs:range bkb:Provinsi .
+
+bkb:spokenInCity a rdf:Property .
+bkb:spokenInCity rdfs:label "spoken in city"@en .
+bkb:spokenInCity rdfs:range bkb:KabupatenKota .
+
+bkb:provinceOfDiscovery a rdf:Property .
+bkb:provinceOfDiscovery rdfs:label "province of discovery"@en .
+bkb:provinceOfDiscovery rdfs:range bkb:Provinsi .
+
+bkb:cityOfDiscovery a rdf:Property .
+bkb:cityOfDiscovery rdfs:label "city of discovery"@en .
+bkb:cityOfDiscovery rdfs:range bkb:KabupatenKota .

@@ -1,0 +1,80 @@
+[
+    {
+        "alternates": [],
+        "download": "http://rs.tdwg.org/ac/terms/",
+        "excluded": "All 70 terms are untyped (no rdf:type), so Omeka imports none.",
+        "namespace": "http://rs.tdwg.org/ac/terms/",
+        "prefix": "ac",
+        "slug": "ac",
+        "source": "LOV",
+        "title": "Core terms defined by Audubon Core"
+    },
+    {
+        "alternates": [
+            "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.1.rdfs",
+            "http://www.ics.forth.gr/isl/CRMgeo/"
+        ],
+        "download": "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.rdfs",
+        "excluded": "No RDF file found: the namespace does not resolve and no RDFS file was found on cidoc-crm.org. Not in any rescue source.",
+        "namespace": "http://www.ics.forth.gr/isl/CRMgeo/",
+        "prefix": "crmgeo",
+        "slug": "crmgeo",
+        "source": "added",
+        "title": "CRMgeo (CIDOC CRM extension for spatiotemporal data)"
+    },
+    {
+        "alternates": [],
+        "download": "http://dp.la/about/map/",
+        "excluded": "No RDF file found for DPLA MAP at the namespace. Not in any rescue source.",
+        "namespace": "http://dp.la/about/map/",
+        "prefix": "dpla",
+        "slug": "dpla",
+        "source": "added",
+        "title": "DPLA Metadata Application Profile"
+    },
+    {
+        "alternates": [],
+        "download": "https://purl.org/geojson/vocab",
+        "excluded": "No RDF ontology file found; GeoJSON-LD publishes a JSON-LD context. Not in any rescue source.",
+        "namespace": "https://purl.org/geojson/vocab#",
+        "prefix": "geojson",
+        "role": "utility",
+        "slug": "geojson",
+        "source": "added",
+        "title": "GeoJSON-LD vocabulary"
+    },
+    {
+        "alternates": [
+            "http://linkedpasts.org/ontology/lpo"
+        ],
+        "download": "http://linkedpasts.org/ontology/lpo.ttl",
+        "excluded": "No RDF ontology file found; Linked Places publishes a JSON-LD context. Not in any rescue source.",
+        "namespace": "http://linkedpasts.org/ontology/lpo#",
+        "prefix": "lpo",
+        "slug": "lpo",
+        "source": "added",
+        "title": "Linked Places Ontology"
+    },
+    {
+        "alternates": [],
+        "download": "http://metadataregistry.org/schema/show/id/242.rdf",
+        "excluded": "Namespace contains a space, so it is not a valid URI.",
+        "format": "rdfxml",
+        "namespace": "http://metadataregistry.org/uri/schema/Traditional village/",
+        "omr": 242,
+        "prefix": "",
+        "slug": "omr-242",
+        "source": "OMR",
+        "title": "Traditional village Metadata"
+    },
+    {
+        "alternates": [],
+        "download": "http://metadataregistry.org/schema/show/id/112.rdf",
+        "excluded": "277 of its 599 property labels are longer than the 255 characters Omeka's property.label column holds, so the import fails on strict MySQL or truncates the labels.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/5XX/",
+        "prefix": "unimarc-b-elements-5xx",
+        "slug": "unimarc-b-elements-5xx",
+        "source": "OMR",
+        "title": "UNIMARC/B elements 5XX"
+    }
+]

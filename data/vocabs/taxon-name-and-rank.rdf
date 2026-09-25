@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:voaf="http://labs.mondeca.com/vocab/voaf#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:biol="http://purl.org/NET/biol/ns#"
+     xmlns:dbpedia_owl="http://dbpedia.org/ontology/"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:dwc_area="http://lod.taxonconcept.org/ontology/dwc_area.owl#"
+     xmlns:dwc_terms="http://rs.tdwg.org/dwc/terms/index.htm#"
+     xmlns:eunis="http://eunis.eea.europa.eu/rdf/species-schema.rdf#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+     xmlns:gn="http://www.geonames.org/ontology#"
+     xmlns:gs_void="http://lod.geospecies.org/ontology/void#"
+     xmlns:ia_mdb_void="http://ia_mdb.geospecies.org/ontology/void#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phylo_col="http://lod.taxonconcept.org/ontology/phylo/CoL/CoL_2010_base.owl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:sci_people="http://lod.taxonconcept.org/ontology/sci_people.owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
+     xmlns:txn_phylo="http://lod.taxonconcept.org/ontology/p01/core.owl#"
+     xmlns:txn_nomen="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#"
+     xmlns:txn_people="http://lod.taxonconcept.org/ontology/people.owl#"
+     xmlns:txn_void="http://lod.taxonconcept.org/ontology/void#"
+     xmlns:uniprot_core="http://purl.uniprot.org/core/"
+     xmlns:usda_plants="http://lod.taxonconcept.org/ontology/usda_plants.owl#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:wo="http://purl.org/ontology/wo/"
+     xmlns:taxmeon="http://www.yso.fi/onto/taxmeon/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+     
+    <owl:Ontology rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl">
+        <dc:title xml:lang="en">Taxon Name and Rank Vocabulary</dc:title>
+        <rdf:type rdf:resource="http://labs.mondeca.com/vocab/voaf#Vocabulary"/>
+        <vann:preferredNamespacePrefix>txn_nomen</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://lod.taxonconcept.org/ontology/taxnomen/index.owl#</vann:preferredNamespaceUri> 
+        <dc:description xml:lang="en">This is an ontology for labeling and linking data sets consisting of taxonomic names and ranks. It attempts to link together related vocabularies where appropriate.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-13</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-29</dc:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.37</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Version 0.36 A early beta version. Recently updated to follow Mondeca Recommendations in vocabulary design. Added Parvclass and Magnorder</rdfs:comment>
+        <dc:creator>
+           <foaf:Person rdf:about="http://lod.taxonconcept.org/ontology/people.owl#Peter_J_DeVries"/>
+        </dc:creator>
+        <dc:publisher>
+          <foaf:Organization rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#TaxonConcept_Knowledge_Base_Project"/>
+        </dc:publisher>
+    </owl:Ontology>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+ <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearDescribed -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearDescribed">
+       <rdfs:label xml:lang="en">yearDescribed</rdfs:label>
+       <rdfs:comment>The year that the species was originally described</rdfs:comment>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearBorn -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearBorn">
+       <rdfs:label xml:lang="en">yearBorn</rdfs:label>
+       <rdfs:comment>The year that a person was born</rdfs:comment>
+       <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearDied -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearDied">
+       <rdfs:label xml:lang="en">yearDied</rdfs:label>
+       <rdfs:comment>The year that a person was born</rdfs:comment>
+       <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearPub-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearPub">
+       <rdfs:label xml:lang="en">yearPub</rdfs:label>
+       <rdfs:comment>The year that document was pub</rdfs:comment>
+       <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#pubYearOf-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#pubYearOf">
+       <rdfs:label xml:lang="en">pubYearOf</rdfs:label>
+       <rdfs:comment>The year that document was pub</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#yearPub"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year"/>
+       <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Document"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalFirstAuthor-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalFirstAuthor">
+       <rdfs:label xml:lang="en">original First Author </rdfs:label>
+       <rdfs:comment>The URI to the original first author of the description</rdfs:comment>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxonomist"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalFirstAuthorOf-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalFirstAuthorOf">
+       <rdfs:label xml:lang="en">original First Author Of</rdfs:label>
+       <rdfs:comment>The URI to the original first author of the description</rdfs:comment>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxonomist"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- GNI Names to GNI Name mapping-->
+
+   <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#relatedName-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#relatedName">
+        <rdfs:label>relatedName</rdfs:label>
+        <rdfs:comment>The URI to the Orthochresonym Name String</rdfs:comment>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <vs:term_status>testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl"/>
+    </owl:ObjectProperty>
+
+
+   <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#relatedNameOf-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#relatedNameOf">
+        <rdfs:label>relatedNameOf</rdfs:label>
+        <rdfs:comment>The URI to the Orthochresonym Name String</rdfs:comment>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <owl:inverseOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#relatedName"/>
+        <vs:term_status>testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl"/>
+    </owl:ObjectProperty>
+
+
+   <!-- Forms of Namestrings-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonName">
+       <rdfs:label xml:lang="en">taxon Name</rdfs:label>
+       <rdfs:comment>links to the string form of a taxon name</rdfs:comment>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#acceptedScientificName">
+       <rdfs:label xml:lang="en">accepted Scientific Name</rdfs:label>
+       <rdfs:comment>links to the string form of an accepted scientific taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#altAcceptedScientificName">
+       <rdfs:label xml:lang="en">alt Scientific Name</rdfs:label>
+       <rdfs:comment>links to the string form of an alternative accepted scientific taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName">
+      <rdfs:comment xml:lang="en">Links to the the string form of a ScientificName</rdfs:comment>
+      <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+      <rdfs:label xml:lang="en">scientific name</rdfs:label>
+      <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+      <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonName"/>
+      <vs:term_status>testing</vs:term_status>
+      <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificNameWithAuthor">
+      <rdfs:label xml:lang="en">Scientific name with Author</rdfs:label>
+      <rdfs:comment xml:lang="en">Links to the the string form of a taxon name with an authority string</rdfs:comment>
+      <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+      <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+      <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonName"/>
+      <vs:term_status>testing</vs:term_status>
+      <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#authority">
+      <rdfs:label xml:lang="en">Scientific Authority (Author)</rdfs:label>
+      <rdfs:comment xml:lang="en">Links to the the string form of a taxonomic authority</rdfs:comment>
+      <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+      <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#AuthorshipString"/>
+      <vs:term_status>testing</vs:term_status>
+      <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#acceptedScientificName_Author">
+       <rdfs:label xml:lang="en">accepted Scientific Name with authorship</rdfs:label>
+       <rdfs:comment>links to the string form of an accepted scientific taxon name with the authorship string</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificNameWithAuthor"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#altAcceptedScientificName_Author">
+       <rdfs:label xml:lang="en">accepted Scientific Name with authorship</rdfs:label>
+       <rdfs:comment>inks to the string form of an alternative scientific taxon name with the authorship string</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificNameWithAuthor"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalScientificName">
+       <rdfs:label xml:lang="en">original Scientific Name</rdfs:label>
+       <rdfs:comment>links to the string form of an original scientific Taxon name (basionym)</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalScientificName_Author">
+       <rdfs:label xml:lang="en">original Scientific Name with authorship</rdfs:label>
+       <rdfs:comment>links to the string form of an original Taxon name (basionym) with authorship</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificNameWithAuthor"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#commonName">
+       <rdfs:label xml:lang="en">Common Name</rdfs:label>
+       <rdfs:comment>Links to the the string form of a common name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonName"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#synonymName -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#synonymName">
+      <rdfs:label xml:lang="en">Synonym Name</rdfs:label>
+      <rdfs:comment>Links to the the string form of a synonym name</rdfs:comment>
+      <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+      <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName"/>
+      <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+      <vs:term_status>testing</vs:term_status>
+      <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+   </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#synonymName_Author">
+      <rdfs:label xml:lang="en">Synonym Name Author</rdfs:label>
+      <rdfs:comment>Links to the the string form of a synonym name</rdfs:comment>
+      <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+      <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName"/>
+      <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificNameWithAuthor"/>
+      <vs:term_status>testing</vs:term_status>
+      <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+   </owl:ObjectProperty>
+
+
+   <!-- URI based Name ID's For the Global Names Links-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonNameID">
+       <rdfs:label xml:lang="en">taxonNameID</rdfs:label>
+       <rdfs:comment>links to the URI form of a Taxon name</rdfs:comment>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#acceptedScientificNameID">
+       <rdfs:label xml:lang="en">acceptedScientificNameID</rdfs:label>
+       <rdfs:comment>links to the URI (globalnames.org ) form of the accepted Taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonNameID"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#altAcceptedScientificNameID">
+       <rdfs:label xml:lang="en">alternativeAcceptedNameID</rdfs:label>
+       <rdfs:comment>links to the URI (globalnames.org ) form of an alternative accepted Taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonNameID"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#originalScientificNameID">
+       <rdfs:label xml:lang="en">origScientificNameID</rdfs:label>
+       <rdfs:comment>links to the URI (globalnames.org ) form of the accepted Taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonNameID"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#synonymNameID">
+       <rdfs:label xml:lang="en">synonym name ID</rdfs:label>
+       <rdfs:comment>links to the URI (globalnames.org ) form of synonym Taxon name</rdfs:comment>
+       <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonNameID"/>
+       <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+       <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+       <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- TaxonRank broader and narrower-->
+    
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#narrowerRank">
+        <rdfs:label xml:lang="en">narrowerRank</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#broaderRank">
+        <rdfs:label xml:lang="en">broaderRank</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- Taxa broader and narrower-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#narrowerTaxon">
+        <rdfs:label xml:lang="en">narrowerTaxon</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#broaderTaxon">
+        <rdfs:label xml:lang="en">broaderTaxon</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- Taxon Ranks-->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#taxonRank">
+        <rdfs:label>taxonRank</rdfs:label>
+        <rdfs:comment>Links to the string form of a Taxonomic Rank as a URI</rdfs:comment>
+        <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+        <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- The domain on these should be a Taxon and the range should be a Taxon at the appropriate Rank-->
+ 
+     <!-- inKingdom -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inKingdom">
+        <rdfs:label>inKingdom</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Kingdom</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inPhylum -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inPhylum">
+        <rdfs:label>inPhylum</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Phylum</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inClass -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inClass">
+        <rdfs:label>inClass</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Class</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inSubclass -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inSubclass">
+        <rdfs:label>inSubclass</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Subclass</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inInfraclass -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inInfraclass">
+        <rdfs:label>inInfraclass</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Infraclass</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inSuperorder -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inSuperorder">
+        <rdfs:label>inSuperorder</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Superorder</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inOrder -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inOrder">
+        <rdfs:label>inOrder</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Order</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inSuborder -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inSuborder">
+        <rdfs:label>inSuborder</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Suborder</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inSuperfamily -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inSuperfamily">
+        <rdfs:label>inSuperfamily</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Superfamily</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inFamily -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inFamily">
+        <rdfs:label>inFamily</rdfs:label>
+        <rdfs:comment>Links to the URI for a Biological Family</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inSubfamily -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inSubfamily">
+        <rdfs:label>inSubfamily</rdfs:label>
+        <rdfs:comment>Links to the URI for a Subfamily</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- inTribe -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inTribe">
+        <rdfs:label>inTribe</rdfs:label>
+        <rdfs:comment>Links to the URI for a Tribe</rdfs:comment>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>   
+
+    <!-- inGenus -->
+
+    <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#inGenus">
+        <rdfs:label>inGenus</rdfs:label>
+        <rdfs:comment>Links to the URI for a Genus</rdfs:comment>
+        <owl:equivalentProperty rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl#inGenus"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:ObjectProperty>   
+
+
+ <!-- Taxonomic Clade Names -->
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#domainName">
+    <rdfs:label xml:lang="en">Domain Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a Subdomain Name</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subdomainName">
+    <rdfs:label xml:lang="en">Subdomain Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a Subdomain Name</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#superkingdomName">
+    <rdfs:label xml:lang="en">superkingdom name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a superkingdomName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#kingdomName">
+    <rdfs:label xml:lang="en">kingdom name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a kingdomName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subkingdomName">
+    <rdfs:label xml:lang="en">subkingdom name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a subkingdomName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#superphylumName">
+    <rdfs:label xml:lang="en">superphylum name</rdfs:label>
+    <rdfs:comment xml:lang="en">Used to specify the name of a phylum as part of a Taxon Name</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#phylumName">
+    <rdfs:label xml:lang="en">phylum name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of a phylum or division name</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subphylumName">
+    <rdfs:label xml:lang="en">subphylum name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of subphylumName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#className">
+    <rdfs:label xml:lang="en">class name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of className</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subclassName">
+    <rdfs:label xml:lang="en">subclass name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of subclassName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#infraclassName">
+    <rdfs:label xml:lang="en">infraclass name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of infraclassName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#superorderName">
+    <rdfs:label xml:lang="en">superorder name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of superorderName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#orderName">
+    <rdfs:label xml:lang="en">order name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of orderName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#suborderName">
+    <rdfs:label xml:lang="en">suborder name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of suborderName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#infraorderName">
+    <rdfs:label xml:lang="en">infraorder name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of infraorderName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#parvorderName">
+    <rdfs:label xml:lang="en">parvorder name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of parvorderName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#superfamilyName">
+    <rdfs:label xml:lang="en">superfamily name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of superfamilyName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#familyName">
+    <rdfs:label xml:lang="en">family name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of familyName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subfamilyName">
+    <rdfs:label xml:lang="en">subfamily name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of subfamilyName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#tribeName">
+    <rdfs:label xml:lang="en">tribe name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of tribeName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#genusName">
+    <rdfs:label xml:lang="en">genus name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of genusName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subgenusName">
+    <rdfs:label xml:lang="en">subgenus name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of subgenusName</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#speciesName">
+    <rdfs:label xml:lang="en">species name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of species or epithet name</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#subspeciesName">
+    <rdfs:label xml:lang="en">subspecies name</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of subspecies or subspecific epithet name</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#binomial">
+    <rdfs:label xml:lang="en">binomial</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of the binomial name</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#trinomial">
+    <rdfs:label xml:lang="en">trinomial</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to the the string form of the trinomial name</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon"/>
+    <rdfs:range rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+    <rdfs:subPropertyOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#scientificName"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+  </owl:ObjectProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+ 
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+    
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+ 
+    <owl:Class rdf:about="http://labs.mondeca.com/vocab/voaf#Vocabulary"/>
+    
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Year"/>
+    
+    <owl:Class rdf_about="http://www.w3.org/TR/xmlschema-2/#Name"/>
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Scientist"/>
+ 
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName">
+        <rdfs:label xml:lang="en">TaxonName</rdfs:label>
+        <rdfs:comment xml:lang="en">A name of a taxon</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+ 
+     <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificName">
+        <rdfs:label xml:lang="en">ScientificName</rdfs:label>
+        <rdfs:comment xml:lang="en">The scientific name of a taxon without the authorship string e.g. "Puma concolor", "Felidae"</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+     <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificNameWithAuthorship">
+        <rdfs:label xml:lang="en">ScientificNameWithAuthorship</rdfs:label>
+        <rdfs:comment xml:lang="en">The scientific name of a taxon with the authorship string e.g. "Puma concolor (Linnaeus 1771)", "Mammalia Linnaeus, 1758"</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+ 
+      <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#SurrogateName">
+        <rdfs:label xml:lang="en">SurrogateName</rdfs:label>
+        <rdfs:comment xml:lang="en">The surrogate name of a taxon e.g. "Aedes sp 2495"</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+      <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#CommonName">
+        <rdfs:label xml:lang="en">CommonName</rdfs:label>
+        <rdfs:comment xml:lang="en">The common or vernacular name for a Taxon e.g. "Mountain Lion"@en</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonName"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+     
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank">
+        <rdfs:label xml:lang="en">TaxonRank</rdfs:label>
+        <rdfs:comment xml:lang="en">A rank of a taxon</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Taxonomic_rank"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxon">
+        <rdfs:label xml:lang="en">Taxon</rdfs:label>
+        <rdfs:comment xml:lang="en">The class for a taxon as opposed to a taxon name</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID">
+        <rdfs:label>TaxonNameID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI for a given taxon name, typically a globalnames.org URI</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificNameID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificNameID">
+        <rdfs:label>ScientificNameID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI for a given scientific name, typically a globalnames.org URI</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificNameWithAuthorID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#ScientificNameID">
+        <rdfs:label>ScientificNameWithAuthorID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI for a given scientific name, typically a globalnames.org URI</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#SurrogateNameID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#SurrogateNameID">
+        <rdfs:label>SurrogateNameID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI for a given surrogate name, typically a globalnames.org URI</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#CommonNameID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#CommonNameID">
+        <rdfs:label>CommonNameID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI for a given common or vernacular name, typically a globalnames.org URI</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#AuthorshipString -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#AuthorshipString">
+        <rdfs:label>Authorship String</rdfs:label>
+        <rdfs:comment xml:lang="en">The Authority String or Authorship string i.e. (L. 1785)</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#AuthorityStringID -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#AuthorshipStringID">
+        <rdfs:label>Authorship String ID</rdfs:label>
+        <rdfs:comment xml:lang="en">The URI version of an authority string or authorship string i.e. (L. 1785)</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+   <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year-->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Year">
+        <rdfs:label xml:lang="en">Year</rdfs:label>
+        <rdfs:comment xml:lang="en">Class for the Concept Year</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Year"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl"/>
+    </owl:Class>
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxonomist -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Taxonomist">
+        <rdfs:label xml:lang="en">Taxonomist</rdfs:label>
+        <rdfs:comment xml:lang="en">Class for a Taxonomist a dbpedia_owl:Scientist and foaf:Person</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Scientist"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Class -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Class">
+        <rdfs:label xml:lang="en">Rank Class</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subclass"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superclass"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Family -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Family">
+        <rdfs:label xml:lang="en">Rank Family</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subfamily"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superfamily"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Forma -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Forma">
+        <rdfs:label xml:lang="en">Rank Forma</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Varietas"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Genus -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Genus">
+        <rdfs:label xml:lang="en">Rank Genus</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subgenus"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subtribe"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraclass -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Infraclass">
+        <rdfs:label xml:lang="en">Rank Infraclass</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subclass"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superorder"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraorder -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Infraorder">
+        <rdfs:label xml:lang="en">Rank Infraorder</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Parvorder"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Suborder"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Kingdom -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Kingdom">
+        <rdfs:label xml:lang="en">Rank Kingdom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subkingdom"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superkingdom"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Order -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Order">
+        <rdfs:label xml:lang="en">Rank Species</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <owl:sameAs rdf:resource="http://purl.org/ontology/wo/Order"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Species">
+        <rdfs:label xml:lang="en">Rank Species</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <owl:sameAs rdf:resource="http://purl.org/ontology/wo/Species"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subspecies"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subgenus"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species_Group -->
+
+    <owl:Class  rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species_Group">
+        <rdfs:label xml:lang="en">Rank Species Group</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species_Subgroup -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Species_Subgroup">
+        <rdfs:label xml:lang="en">Rank Species Subgroup</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subclass -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subclass">
+        <rdfs:label xml:lang="en">Rank Subclass</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraclass"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Class"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subfamily -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subfamily">
+        <rdfs:label xml:lang="en">Rank Subfamily</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Tribe"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Family"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subgenus -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subgenus">
+        <rdfs:label xml:lang="en">Rank Subgenus</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Genus"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subkingdom -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subkingdom">
+        <rdfs:label xml:lang="en">Rank Subkingdom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superphylum"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Kingdom"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Parvclass -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Parvclass">
+        <rdfs:label xml:lang="en">Rank Parvclass</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Magnorder"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraclass"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Magnorder -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Magnorder">
+        <rdfs:label xml:lang="en">Rank Magnorder</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superorder"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Parvclass"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Parvorder -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Parvorder">
+        <rdfs:label xml:lang="en">Rank Parvorder</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superfamily"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraorder"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Phylum -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Phylum">
+        <rdfs:label xml:lang="en">Rank Phylum</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subphylum"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superphylum"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Suborder -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Suborder">
+        <rdfs:label xml:lang="en">Rank Suborder</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <owl:sameAs rdf:resource="http://purl.org/ontology/wo/Suborder"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraorder"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Order"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subphylum -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subphylum">
+        <rdfs:label xml:lang="en">Rank Subphylum</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superorder"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Phylum"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subspecies -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subspecies">
+        <rdfs:label xml:lang="en">Rank Subspecies</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Species"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Varietas"/>
+        <owl:sameAs rdf:resource="http://purl.org/ontology/wo/Subspecies"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subtribe -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Subtribe">
+        <rdfs:label xml:lang="en">Rank Subtribe</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Genus"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Tribe"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superclass -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Superclass">
+        <rdfs:label xml:lang="en">Rank Superclass</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Class"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subphylum"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superfamily -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Superfamily">
+        <rdfs:label xml:lang="en">Rank Superfamily</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Family"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraorder"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superkingdom -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Superkingdom">
+        <rdfs:label xml:lang="en">Rank Superkingdom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Kingdom"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superorder -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Superorder">
+        <rdfs:label xml:lang="en">Rank Superorder</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Order"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Infraclass"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+    
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Superphylum -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Superphylum">
+        <rdfs:label xml:lang="en">Rank Superphylum</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Phylum"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subkingdom"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Tribe -->
+
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Tribe">
+        <rdfs:label xml:lang="en">Rank Tribe</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subtribe"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subfamily"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <!-- http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Varietas -->
+    
+    <owl:Class rdf:about="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Rank_Varietas">
+        <rdfs:label xml:lang="en">Rank Varietas</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#TaxonRank"/>
+        <txn_nomen:broaderRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Subspecies"/>
+        <txn_nomen:narrowerRank rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#Forma"/>
+        <vs:term_status>testing</vs:term_status>
+       <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Class>
+
+    <owl:Thing rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#Habitat">
+        <rdfs:label>Habitat</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.org/ontology/wo/Habitat"/>
+        <vs:term_status>testing</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxnomen/index.owl#index.owl"/>
+    </owl:Thing>
+
+
+
+</rdf:RDF>

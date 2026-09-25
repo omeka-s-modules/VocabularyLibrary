@@ -1,0 +1,131 @@
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#comment> "The summary text of a news Asset"@en .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#label> "Asset summary"@en .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/abstract> .
+<http://data.press.net/ontology/asset/summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/title> "SNaP Asset Ontology"@en .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/modified> "2012-01-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/created> "2011-07-28"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-nd/3.0/> .
+<http://data.press.net/ontology/asset/> <http://xmlns.com/foaf/0.1/maker> <http://uk.linkedin.com/in/paulwilton> .
+<http://data.press.net/ontology/asset/> <http://xmlns.com/foaf/0.1/maker> <http://uk.linkedin.com/in/pauliharman> .
+<http://data.press.net/ontology/asset/> <http://xmlns.com/foaf/0.1/maker> <http://uk.linkedin.com/in/jarredmcginnis> .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/2000/01/rdf-schema#comment> "The Asset Ontology describes news assets (text, images, video, data, etc), the relationships between them and how assets can be classified and semantically annotated." .
+<http://uk.linkedin.com/in/paulwilton> <http://xmlns.com/foaf/0.1/name> "Paul Wilton" .
+<http://uk.linkedin.com/in/paulwilton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time a news Asset was published"@en .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2000/01/rdf-schema#label> "Asset published dateTime"@en .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that associates a Text transcript with a Video"@en .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#label> "The text transcript of a Video"@en .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/asset/Text> .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Video> .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.press.net/ontology/asset/associatedAsset> .
+<http://data.press.net/ontology/asset/hasTranscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2000/01/rdf-schema#comment> "The byline of a news Asset"@en .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2000/01/rdf-schema#label> "Asset byline"@en .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/byline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2000/01/rdf-schema#comment> "Video Asset Class"@en .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video Asset Class"@en .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2002/07/owl#seeAlso> <http://cv.iptc.org/newscodes/ninature/video> .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/MovingImage> .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic News Asset Class"@en .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Generic Asset Class"@en .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.press.net/ontology/tag/Taggable> .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.press.net/ontology/classification/Classifiable> .
+<http://data.press.net/ontology/asset/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2000/01/rdf-schema#comment> "Image Asset Class"@en .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image Asset Class"@en .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2002/07/owl#seeAlso> <http://cv.iptc.org/newscodes/ninature/picture> .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/StillImage> .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2000/01/rdf-schema#comment> "Text Asset Class"@en .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2000/01/rdf-schema#label> "Text Asset Class"@en .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2002/07/owl#seeAlso> <http://cv.iptc.org/newscodes/ninature/text> .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Text> .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that associates a thumbnail image with an asset"@en .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#label> "Property that associates a thumbnail image with an asset"@en .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/asset/Image> .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.press.net/ontology/asset/associatedAsset> .
+<http://data.press.net/ontology/asset/hasThumbnail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an asset to an asset that it is derived from"@en .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "Relates an asset to an asset that it is derived from"@en .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.press.net/ontology/asset/associatedAsset> .
+<http://data.press.net/ontology/asset/derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uk.linkedin.com/in/jarredmcginnis> <http://xmlns.com/foaf/0.1/name> "Jarred McGinnis" .
+<http://uk.linkedin.com/in/jarredmcginnis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that associates one asset with another asset"@en .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2000/01/rdf-schema#label> "Property that associates one asset with another asset"@en .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/associatedAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uk.linkedin.com/in/pauliharman> <http://xmlns.com/foaf/0.1/name> "Paul Harman" .
+<http://uk.linkedin.com/in/pauliharman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of a news Asset"@en .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#label> "Asset title"@en .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/title> .
+<http://data.press.net/ontology/asset/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time a news Asset is embargoedUntil"@en .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2000/01/rdf-schema#label> "Asset embargoed until dateTime"@en .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/embargoedUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time a news Asset was created"@en .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#label> "Asset created dateTime"@en .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> .
+<http://data.press.net/ontology/asset/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/asset/> .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time a news Asset was modified"@en .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#label> "Asset modified dateTime"@en .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/asset/Asset> .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/modified> .
+<http://data.press.net/ontology/asset/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

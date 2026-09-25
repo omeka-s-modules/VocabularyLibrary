@@ -1,0 +1,944 @@
+_:Bd3b11865eff4e9fd5f27eda7b54d946b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bd3b11865eff4e9fd5f27eda7b54d946b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "operating system"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bd3b11865eff4e9fd5f27eda7b54d946b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bc4450730d38ae9d0a0b37defe99a73a0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf7a370528a855fab1de619ab8767c288 .
+_:Bc4450730d38ae9d0a0b37defe99a73a0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isBasedOn"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bc4450730d38ae9d0a0b37defe99a73a0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bf507fb9f67be972225e01ac69822c836 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bf507fb9f67be972225e01ac69822c836 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "requires"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bf507fb9f67be972225e01ac69822c836 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B80c92ecd574545b092652fc2b8500b7c <http://www.w3.org/2002/07/owl#oneOf> _:B5a94e1a2c3925a55c37338c1fd9fff21 .
+_:B80c92ecd574545b092652fc2b8500b7c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf8ca0a2842b5c5252c30323e4889e5ed .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty> <http://www.w3.org/2000/01/rdf-schema#comment> "How hard it is to work with or through this learning object for the typical intended target audience. IEEE LOM element 5.8"@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B39fec9d3a3c867b505373a4370a2dcf7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B3b2c51f7c9560d2a30e07a29e420aa4d .
+_:B39fec9d3a3c867b505373a4370a2dcf7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B39fec9d3a3c867b505373a4370a2dcf7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B183bc57eb0bd7fb34d98802fe33f46e0 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:B183bc57eb0bd7fb34d98802fe33f46e0 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B183bc57eb0bd7fb34d98802fe33f46e0 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions> .
+_:B183bc57eb0bd7fb34d98802fe33f46e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the required technology to use a learning object. IEEE LOM element 4.4.1.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B8d1e627ecb2a504b734fea17e052adf0 <http://www.w3.org/2002/07/owl#oneOf> _:Bda8c41ee464a0efecb61f6920c4ef4a6 .
+_:B8d1e627ecb2a504b734fea17e052adf0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:B108251ee68f0e2ab19ab15a2f4626557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B108251ee68f0e2ab19ab15a2f4626557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "training"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B108251ee68f0e2ab19ab15a2f4626557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of the taxon, such as a number or letter combination provided by the source of the taxonomy. IEEE LOM element 9.2.2.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity (i.e., people, organization) that created this annotation. IEEE LOM element 8.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B193bae2862095a1554dd7efdb1b73a96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B193bae2862095a1554dd7efdb1b73a96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "training"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B193bae2862095a1554dd7efdb1b73a96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B0fb94d084643bd03e6f406b55f07938f <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B0fb94d084643bd03e6f406b55f07938f <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> .
+_:B0fb94d084643bd03e6f406b55f07938f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bc6a16e719b18b28ea02e56727ead0488 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc6a16e719b18b28ea02e56727ead0488 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:Bc6a16e719b18b28ea02e56727ead0488 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> .
+_:Bc6a16e719b18b28ea02e56727ead0488 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B53d0cfa5b7d711c597268ba87556ed9f <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:B53d0cfa5b7d711c597268ba87556ed9f <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription> .
+_:B53d0cfa5b7d711c597268ba87556ed9f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Age of the typical intended user. IEEE LOM element 5.7."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/2000/01/rdf-schema#range> _:Be21f30e7f4de764720864c50587b53dc .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/2000/01/rdf-schema#range> _:Bffd8053ce0941b81a3164d0d6e836ef3 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree of conciseness of a learning object. The semantic density of a learning object may be estimated in terms of its size, span, or --in the case of self-timed resources such as audio or video-- duration. IEEE LOM element 5.4."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bff71e9a5fede4ae339e83799d1aa1223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba1753d4bdd2c146418777e3fb31cd21b .
+_:Bff71e9a5fede4ae339e83799d1aa1223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "script writer"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bff71e9a5fede4ae339e83799d1aa1223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage> <http://www.w3.org/2000/01/rdf-schema#range> _:B0e03eb20961bf46e0c1249c2d8113970 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Language of this metadata instance. This is the default language for all LangString values in this metadata instance. If a value for this data element is not present in a metadata instance, then there is no default language for LangString values. IEEE LOM element 3.4."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "This predicate represents the fact that a learning object has a label that identifies it. IEEE LOM element 1.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+_:Bfb3942e21d4cd4cc75bdad29c9fcb871 <http://www.w3.org/2002/07/owl#oneOf> _:B8e8f6d82f86faf7febfb267dafb5a435 .
+_:Bfb3942e21d4cd4cc75bdad29c9fcb871 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage> <http://www.w3.org/2000/01/rdf-schema#range> _:B73d78fb144969e0a906aef0bd9ea0ad4 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary human language or languages used within this learning object to communicate to the intended user. If the learning object had no lingual content (as in the case of a picture of the Mona Lisa, for example), then the appropriate value for this data element would be \"none\". IEEE LOM element 1.3."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bed61685801db2b3bda96fe83c58ed6c6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Bed61685801db2b3bda96fe83c58ed6c6 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry> .
+_:Bed61685801db2b3bda96fe83c58ed6c6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B76e5018b4309409d185af80fe922c44d <http://www.w3.org/2002/07/owl#maxCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B76e5018b4309409d185af80fe922c44d <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema> .
+_:B76e5018b4309409d185af80fe922c44d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B12b7a21ce87fa5283894091ee6355166 <http://www.w3.org/2002/07/owl#oneOf> _:Bea25f57c9fa680daf10a050287434744 .
+_:B12b7a21ce87fa5283894091ee6355166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval in time with accuracy at least as small as one second."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B060320209ee2d8d86d5a00e1ad199684 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba05507aa25237bbf01eb4fdd0eaf1e13 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "A technical capability necessary for using a learning object."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdeb664671a0b580d3f65415469aa3ed1 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B357c5570bec54565ea749acbad9aeddc .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B76801d4ed56b2af350375cf668105325 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3ef8744a34eaac965d7aa83c5528c27c .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bc74bf74f954ab6954179ae16d517c1bf <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc74bf74f954ab6954179ae16d517c1bf <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole> .
+_:Bc74bf74f954ab6954179ae16d517c1bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of where a learning object falls within a particular classification system. IEEE LOM element 9."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bc96792d3b25f6b6fce34d21b2ead636f <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc96792d3b25f6b6fce34d21b2ead636f <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity> .
+_:Bc96792d3b25f6b6fce34d21b2ead636f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B3c45025a402c8fbe7533c6fcc1661069 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B3c45025a402c8fbe7533c6fcc1661069 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "validator"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B3c45025a402c8fbe7533c6fcc1661069 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bfa91c6c586f7ccb588e4e5bbd0405c95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B01565be4ee788dee1fe088a57e75eb46 .
+_:Bfa91c6c586f7ccb588e4e5bbd0405c95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "linear"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bfa91c6c586f7ccb588e4e5bbd0405c95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B0f25ada1a57940e3fbfd622b7804ea2c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc4450730d38ae9d0a0b37defe99a73a0 .
+_:B0f25ada1a57940e3fbfd622b7804ea2c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "hasVersion"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B0f25ada1a57940e3fbfd622b7804ea2c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bf0ba94dfc1bad36248ee81bb501ea334 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bf0ba94dfc1bad36248ee81bb501ea334 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+_:Bf0ba94dfc1bad36248ee81bb501ea334 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier> .
+_:Bf0ba94dfc1bad36248ee81bb501ea334 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:Bcb7e926c6090391794e3944f98e50b9f .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The completion status or condition of this learning object. IEEE LOM element 2.2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B4e947b645a694c102c7fb64221d736d1 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "15"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B4e947b645a694c102c7fb64221d736d1 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> .
+_:B4e947b645a694c102c7fb64221d736d1 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon> .
+_:B4e947b645a694c102c7fb64221d736d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Those entities (i.e., people, organizations) that have contributed to the state of this learning object during its life cycle (e.g.,creation, edits, publication)."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B62a2b5670c7d33b597599023107f6bf4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B9307a27b4b91df96d6520007b5f132b4 .
+_:B62a2b5670c7d33b597599023107f6bf4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ca"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B62a2b5670c7d33b597599023107f6bf4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bba6dcd52282f9b9269f33bf0c4ace4f2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Bba6dcd52282f9b9269f33bf0c4ace4f2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue> .
+_:Bba6dcd52282f9b9269f33bf0c4ace4f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the contribution. IEEE LOM element 3.2.3."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be63571dd7c56aa7eeb7404562fb597bd .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc706a57f30e241a645ba6cb6975bd667 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c806880fccf17a6ad287789785b0d7b .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5ba952b66c4634b684b1ef9dcfec7aa2 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2eac8323c398552a68a4fbef7759bfed .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc6a16e719b18b28ea02e56727ead0488 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9d2073be8b6832e0cd11bfbd625d1b3c .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7209e275d8e4ed4b2251bb2155fe91d5 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://purl.org/dc/terms/format> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B76e5018b4309409d185af80fe922c44d .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://purl.org/dc/terms/rights> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://purl.org/dc/terms/language> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc37510b5aad684c0bddfd629845e9ef0 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be820bf06262ce743c524488fce575155 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B39aa1fed1d3a6b0ca4c8e60e85e69bfb .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B367925791beaa28f0277f4f59eb7ff4f .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B12b6ae834c3ed73453e5b4cb09864ce8 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B12483527bd7fb09b34cd8d5398d4f41a .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9342bbe92c4c603016a937cec69d5e82 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf0ba94dfc1bad36248ee81bb501ea334 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B183bc57eb0bd7fb34d98802fe33f46e0 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Learning Object" .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb4d5e0b10965685759a0c660828679d6 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be629ce43764aed5b5f0b8796c908c808 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be00ba300620b9c9819c24952f7395473 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://purl.org/dc/terms/publisher> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3326664385b89b2a715593573a1a2b33 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4fb5900428819b8f8f261068b6c5ca90 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4d5e360f40ff736f0a368d2507813457 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba1ec68226247efb89fe2e63f63f14b1e .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription> <http://purl.org/dc/terms/description> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bea627fc785b0f3355990168ec9cf24f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bea627fc785b0f3355990168ec9cf24f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very low"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bea627fc785b0f3355990168ec9cf24f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B0cda0e6fa84470f91dedf035e6a9af0b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B3c45025a402c8fbe7533c6fcc1661069 .
+_:B0cda0e6fa84470f91dedf035e6a9af0b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "unknown"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B0cda0e6fa84470f91dedf035e6a9af0b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bc59a536a294ce54744a4f73af9288f8c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd93b6e6dbd18b3fd4877dacfcd2074a2 .
+_:Bc59a536a294ce54744a4f73af9288f8c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "final"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bc59a536a294ce54744a4f73af9288f8c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B4ccfcd366fd26e8dbd4d901b860faa1e <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B4ccfcd366fd26e8dbd4d901b860faa1e <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole> .
+_:B4ccfcd366fd26e8dbd4d901b860faa1e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "The name and version of the authoritative specification used to create this metadata instance. IEEE LOM element 3.3."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email as it appears in the vCard"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B14f3e618e7388f0c456555b17f3de8a2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B14f3e618e7388f0c456555b17f3de8a2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose> .
+_:B14f3e618e7388f0c456555b17f3de8a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B76801d4ed56b2af350375cf668105325 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B76801d4ed56b2af350375cf668105325 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType> .
+_:B76801d4ed56b2af350375cf668105325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B7209e275d8e4ed4b2251bb2155fe91d5 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B7209e275d8e4ed4b2251bb2155fe91d5 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> .
+_:B7209e275d8e4ed4b2251bb2155fe91d5 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements> .
+_:B7209e275d8e4ed4b2251bb2155fe91d5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B09dd5bfd1f24d6eca03099d9248e930f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B09dd5bfd1f24d6eca03099d9248e930f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "none"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B09dd5bfd1f24d6eca03099d9248e930f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B6bc25f8dbbc9f974b59a853a9839d622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B28f867db4943a2e431ea17d6db8637c8 .
+_:B6bc25f8dbbc9f974b59a853a9839d622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "author"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B6bc25f8dbbc9f974b59a853a9839d622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B4d5e360f40ff736f0a368d2507813457 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B4d5e360f40ff736f0a368d2507813457 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> .
+_:B4d5e360f40ff736f0a368d2507813457 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution> .
+_:B4d5e360f40ff736f0a368d2507813457 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique label that identifies this metadata record. IEEE LOM element 3.1."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bda8c41ee464a0efecb61f6920c4ef4a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B39fec9d3a3c867b505373a4370a2dcf7 .
+_:Bda8c41ee464a0efecb61f6920c4ef4a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "1"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bda8c41ee464a0efecb61f6920c4ef4a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The technical capabilities necessary for using a learning object. There can be multiple requirements, in which case all are required, i.e., the logical connector is AND."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc2aba05105c77a586269314ac124bb8e .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5165c978e52cd4a200732516b2bba370 <http://www.w3.org/2002/07/owl#maxCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B5165c978e52cd4a200732516b2bba370 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> .
+_:B5165c978e52cd4a200732516b2bba370 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/dc/terms/coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B01565be4ee788dee1fe088a57e75eb46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B01565be4ee788dee1fe088a57e75eb46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "networked"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B01565be4ee788dee1fe088a57e75eb46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B9b3d0df476134b7efe57d76087357f43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B9b3d0df476134b7efe57d76087357f43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B9b3d0df476134b7efe57d76087357f43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B66fb86e6384ce95b7a34430bb493e42f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bdad6a8164630a2644d8493a8def9ca35 .
+_:B66fb86e6384ce95b7a34430bb493e42f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "competency"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B66fb86e6384ce95b7a34430bb493e42f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Be820bf06262ce743c524488fce575155 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Be820bf06262ce743c524488fce575155 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel> .
+_:Be820bf06262ce743c524488fce575155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb620823d6f883abeff8d9a635e80e825 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B14deb6006d7fb668d42f9ee0eb169e15 .
+_:Bb620823d6f883abeff8d9a635e80e825 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "es"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bb620823d6f883abeff8d9a635e80e825 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B4403f80ee33289fbdd0a358e75c3e1a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc42f07a93ec83eb81243b0d9682f66fd .
+_:B4403f80ee33289fbdd0a358e75c3e1a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "difficult"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4403f80ee33289fbdd0a358e75c3e1a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B76065fd4f61d1bde97ada5ad025bdf66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bea627fc785b0f3355990168ec9cf24f3 .
+_:B76065fd4f61d1bde97ada5ad025bdf66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very high"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B76065fd4f61d1bde97ada5ad025bdf66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B44bc258c0bb6badfd91a3025cb63dc2a <http://www.w3.org/2002/07/owl#maxCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B44bc258c0bb6badfd91a3025cb63dc2a <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage> .
+_:B44bc258c0bb6badfd91a3025cb63dc2a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/2006/vcard/ns#ORG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B56ab4ccb362713a3924b9b4980432519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bfa91c6c586f7ccb588e4e5bbd0405c95 .
+_:B56ab4ccb362713a3924b9b4980432519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "hierarchical"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B56ab4ccb362713a3924b9b4980432519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether use of the learning object requires payment. IEEE LOM element 6.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B97bb796f8fd18776953a354767f5414b <http://www.w3.org/2002/07/owl#oneOf> _:B8303f5340de79ec80e466b3c07a4fa84 .
+_:B97bb796f8fd18776953a354767f5414b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:B758eac3d7e4da73e209b82b13af6255b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd3b11865eff4e9fd5f27eda7b54d946b .
+_:B758eac3d7e4da73e209b82b13af6255b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "browser"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B758eac3d7e4da73e209b82b13af6255b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B003a6d16b33b74019c4584852a0e898c <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B003a6d16b33b74019c4584852a0e898c <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> .
+_:B003a6d16b33b74019c4584852a0e898c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B69900c0bed9cbc689313935117535a06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B193bae2862095a1554dd7efdb1b73a96 .
+_:B69900c0bed9cbc689313935117535a06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "school"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B69900c0bed9cbc689313935117535a06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Ba411024d5e5b09984be82c070eb390c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba358521275af038291f28418e1d15e75 .
+_:Ba411024d5e5b09984be82c070eb390c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "low"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ba411024d5e5b09984be82c070eb390c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the content of this learning object. IEEE LOM element 1.4."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> <http://www.w3.org/2000/01/rdf-schema#comment> "Comments on how this learning object is to be used. IEEE LOM element 5.10"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> <http://purl.org/dc/terms/description> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B12b6ae834c3ed73453e5b4cb09864ce8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B12b6ae834c3ed73453e5b4cb09864ce8 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+_:B12b6ae834c3ed73453e5b4cb09864ce8 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational> .
+_:B12b6ae834c3ed73453e5b4cb09864ce8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "The identification of and information about entities (i.e., people, organizations) contributing to this learning object. The entities shall be ordered as most relevant first. IEEE LOM element 3.2.2."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bd93b6e6dbd18b3fd4877dacfcd2074a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Be426584cd1ef8dc93798631b56fb15f5 .
+_:Bd93b6e6dbd18b3fd4877dacfcd2074a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bd93b6e6dbd18b3fd4877dacfcd2074a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/2000/01/rdf-schema#range> _:B2fecbdc43e6a1afa9d5bf4fb45702e2d .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#short> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The principal environment within which the learning and use of this learning object is intended to take place. IEEE LOM element 5.6."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B39aa1fed1d3a6b0ca4c8e60e85e69bfb <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B39aa1fed1d3a6b0ca4c8e60e85e69bfb <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus> .
+_:B39aa1fed1d3a6b0ca4c8e60e85e69bfb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Those entities (i.e., people, organizations) that have contributed to the state of this learning object during its life cycle (e.g., creation, edits, publication)."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B3ef8744a34eaac965d7aa83c5528c27c <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B3ef8744a34eaac965d7aa83c5528c27c <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion> .
+_:B3ef8744a34eaac965d7aa83c5528c27c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B8c806880fccf17a6ad287789785b0d7b <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B8c806880fccf17a6ad287789785b0d7b <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize> .
+_:B8c806880fccf17a6ad287789785b0d7b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date that this annotation was created. IEEE LOM element 8.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B060320209ee2d8d86d5a00e1ad199684 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+_:B060320209ee2d8d86d5a00e1ad199684 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B060320209ee2d8d86d5a00e1ad199684 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription> .
+_:B060320209ee2d8d86d5a00e1ad199684 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B68d233fb0f2709a5ba6276e142ea9dc0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B6c57edf474583d3189f07e2d1003c186 .
+_:B68d233fb0f2709a5ba6276e142ea9dc0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very high"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B68d233fb0f2709a5ba6276e142ea9dc0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bea25f57c9fa680daf10a050287434744 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B66fb86e6384ce95b7a34430bb493e42f .
+_:Bea25f57c9fa680daf10a050287434744 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "accessibility"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bea25f57c9fa680daf10a050287434744 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B5a94e1a2c3925a55c37338c1fd9fff21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Be88011a679141716d3a2a8c209ac7beb .
+_:B5a94e1a2c3925a55c37338c1fd9fff21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "atomic"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B5a94e1a2c3925a55c37338c1fd9fff21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B86837c1462c70b3e2f2e5d63be2d6457 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B86837c1462c70b3e2f2e5d63be2d6457 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:B86837c1462c70b3e2f2e5d63be2d6457 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description> .
+_:B86837c1462c70b3e2f2e5d63be2d6457 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Comments on the educational use of a learning object, including information on when and by whom the comments were created."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9ea185692bddf248f3f5e2a192d5a7aa .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04e444f0c5c6c4d2e682569aeb8b4c2d .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8bf5d24aa9fe080fa9bf55a2a1cea071 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7482341ab9fc6445e17bae0e80e5109a .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bc42f07a93ec83eb81243b0d9682f66fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc7ea03c37266bda629d96528800cc763 .
+_:Bc42f07a93ec83eb81243b0d9682f66fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "easy"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bc42f07a93ec83eb81243b0d9682f66fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bf7a370528a855fab1de619ab8767c288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Be11d05e976fce067a1eed9ac24d6885e .
+_:Bf7a370528a855fab1de619ab8767c288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isBasisFor"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bf7a370528a855fab1de619ab8767c288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B2acdfc3d2454fa061616a53fecef464a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B43dce9acf10eb0f2e16ed507186228fb .
+_:B2acdfc3d2454fa061616a53fecef464a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "other"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B2acdfc3d2454fa061616a53fecef464a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel> <http://www.w3.org/2000/01/rdf-schema#range> _:B8d1e627ecb2a504b734fea17e052adf0 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The functional granularity of this learning object. IEEE LOM element 1.8."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B35da2f34243988083ef91f50c3eda292 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:B35da2f34243988083ef91f50c3eda292 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B35da2f34243988083ef91f50c3eda292 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> .
+_:B35da2f34243988083ef91f50c3eda292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "This predicate relates a lomIdentifier to the value of the identifier within the identification or cataloging scheme that designates or identifies a learning object or a learning object metadata record (a namespace specific string).  IEEE LOM element 1.1, 3.1, 7.2.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B9ea185692bddf248f3f5e2a192d5a7aa <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B9ea185692bddf248f3f5e2a192d5a7aa <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> .
+_:B9ea185692bddf248f3f5e2a192d5a7aa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B3326664385b89b2a715593573a1a2b33 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B3326664385b89b2a715593573a1a2b33 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> .
+_:B3326664385b89b2a715593573a1a2b33 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation> .
+_:B3326664385b89b2a715593573a1a2b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Highest possible version of the required technology to use the learning object. IEEE LOM element 4.4.1.4."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0fb94d084643bd03e6f406b55f07938f .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B997414508dd1e4044e3918ed9f71f15c .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4ccfcd366fd26e8dbd4d901b860faa1e .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bd53813ecd3146f406275329b879ecc21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B68a0a9dd2e1eb7dff8c69cfcf98dbe22 .
+_:Bd53813ecd3146f406275329b879ecc21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "graphical designer"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bd53813ecd3146f406275329b879ecc21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B4ea09c50fb835b48f239c0065112b22f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B69900c0bed9cbc689313935117535a06 .
+_:B4ea09c50fb835b48f239c0065112b22f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "other"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4ea09c50fb835b48f239c0065112b22f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B12d2e5951a86f625cffc47ab24fd3acb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8a7881ce5616db24b8da48af78719bc1 .
+_:B12d2e5951a86f625cffc47ab24fd3acb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ba"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B12d2e5951a86f625cffc47ab24fd3acb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath> <http://www.w3.org/2000/01/rdf-schema#comment> "A taxonomic path in a specific classification system according to which a learning object is classified. IEEE LOM element 9.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/creator> "\n\t\t\tEnayat Rajabi (enayat.rajabi@uah.es)\n\t\t" .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/issued> "2014-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/title> "A vocabulary for exposing IEEE LOM metadata as Linked Open Data"@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2015 University of Alcala, Information Engineering (IE) research unit (http://www.ieru.org/) " .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/publisher> "\nUniversity of Alcala (www.uah.es) " .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://www.w3.org/2000/01/rdf-schema#comment> "-Version 1.0: covers a complete mapping of IEEE LOM to Linked Open Data"@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/modified> "2015-03-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> <http://purl.org/dc/elements/1.1/description> "An ontology and vocabulary used for exposing IEEE LOM, a metadata standard for educational contents, as Linked Data. \n\t\tIt is intended as a bridge for linkage of educational metadata into Linked Open Data (LOD). \n\t\tIn this ontology, we designed a mapping of IEEE LOM elements to RDF based on Linked Data principles. "@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular term within a taxonomy which serves to classify a learning object. IEEE LOM element 9.2.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B17b42f3a47c1204d986de121ba723cc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4401bc713eca7c1e3a079da6bb463775 .
+_:B17b42f3a47c1204d986de121ba723cc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "technical implementer"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B17b42f3a47c1204d986de121ba723cc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bd21b92c63a94dd529dbeb4c57fbc067e <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Bd21b92c63a94dd529dbeb4c57fbc067e <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource> .
+_:Bd21b92c63a94dd529dbeb4c57fbc067e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B4401bc713eca7c1e3a079da6bb463775 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B20c1562b722146f274d02fb6e68a28ce .
+_:B4401bc713eca7c1e3a079da6bb463775 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "technical validator"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4401bc713eca7c1e3a079da6bb463775 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Be00ba300620b9c9819c24952f7395473 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Be00ba300620b9c9819c24952f7395473 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:Be00ba300620b9c9819c24952f7395473 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage> .
+_:Be00ba300620b9c9819c24952f7395473 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical datatype(s) of (all the components of) this learning object. This information is used to identify the software needed to access the learning object. IEEE LOM element 4.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Be629ce43764aed5b5f0b8796c908c808 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Be629ce43764aed5b5f0b8796c908c808 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements> .
+_:Be629ce43764aed5b5f0b8796c908c808 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "A technical capability necessary for using a learning object. IEEE LOM Element \"4.4. Requirement\"."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ba05507aa25237bbf01eb4fdd0eaf1e13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+_:Ba05507aa25237bbf01eb4fdd0eaf1e13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Ba05507aa25237bbf01eb4fdd0eaf1e13 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue> .
+_:Ba05507aa25237bbf01eb4fdd0eaf1e13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of where a learning object falls within a particular classification system. To define multiple classifications, there may be multiple instances of this category for a learning object."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B53d0cfa5b7d711c597268ba87556ed9f .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B14f3e618e7388f0c456555b17f3de8a2 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B70fd79fe4f3ca7a70f15129ad74143b4 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c692374dc1085157fc08811f8cd63a1 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel> <http://www.w3.org/2000/01/rdf-schema#range> _:B08f6786f7b7b9238ab71bbc7d41af4f0 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree of interactivity characterizing this learning object. Interactivity in this context refers to the degree to which the learner can influence the aspect or behavior of the learning object. IEEE LOM element 5.3."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword> <http://www.w3.org/2000/01/rdf-schema#comment> "Keywords and phrases descriptive of the learning object relative to the stated 9.1:Classification.Purpose of this specific classification, such as accessibility, security level, etc., most relevant first. IEEE LOM element 9.4"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique label that identifies either a learning object or a learning object metadata record."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> <http://purl.org/dc/terms/identifier> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B003a6d16b33b74019c4584852a0e898c .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B8c692374dc1085157fc08811f8cd63a1 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "15"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B8c692374dc1085157fc08811f8cd63a1 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> .
+_:B8c692374dc1085157fc08811f8cd63a1 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath> .
+_:B8c692374dc1085157fc08811f8cd63a1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B7bc04f2349c7887cc9e1a110ae5d65f9 <http://www.w3.org/2002/07/owl#oneOf> _:B0f69bcf5c746b992e601b4c83610de48 .
+_:B7bc04f2349c7887cc9e1a110ae5d65f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:B997414508dd1e4044e3918ed9f71f15c <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B997414508dd1e4044e3918ed9f71f15c <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> .
+_:B997414508dd1e4044e3918ed9f71f15c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The size of the digital learning object in bytes (not Mbytes, GB, etc.). The size is represented as a decimal value. This data element shall refer to the actual size of this learning object. If the learning object is compressed, then this data element shall refer to the uncompressed size. IEEE LOM element 4.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B4b90391461f66bc6fc0ce4c7d3de2eff <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd53813ecd3146f406275329b879ecc21 .
+_:B4b90391461f66bc6fc0ce4c7d3de2eff <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "educational validator"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4b90391461f66bc6fc0ce4c7d3de2eff <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B8303f5340de79ec80e466b3c07a4fa84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B96d6ee0fb731027ce636906e92196c7f .
+_:B8303f5340de79ec80e466b3c07a4fa84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "hasFormat"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B8303f5340de79ec80e466b3c07a4fa84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Comments on the educational use of a learning object, containing information on when and by whom the comments were created. This category enables educators to share their assessments of learning objects, suggestions for use, etc. IEEE LOM element 8."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B14807982771497d79db3c74bc95f7191 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B14807982771497d79db3c74bc95f7191 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+_:B14807982771497d79db3c74bc95f7191 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> .
+_:B14807982771497d79db3c74bc95f7191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B68a0a9dd2e1eb7dff8c69cfcf98dbe22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B6e8d9b34f0fef94721687b90185c1c4b .
+_:B68a0a9dd2e1eb7dff8c69cfcf98dbe22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "initiator"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B68a0a9dd2e1eb7dff8c69cfcf98dbe22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bf8ca0a2842b5c5252c30323e4889e5ed <http://www.w3.org/2002/07/owl#oneOf> _:B4403f80ee33289fbdd0a358e75c3e1a6 .
+_:Bf8ca0a2842b5c5252c30323e4889e5ed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bb19db832f59066ba2a27d35c2bcdf9d2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bb19db832f59066ba2a27d35c2bcdf9d2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty> .
+_:Bb19db832f59066ba2a27d35c2bcdf9d2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B4f7fe4ac551874484bbfcaf9a7f5c67b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B62a2b5670c7d33b597599023107f6bf4 .
+_:B4f7fe4ac551874484bbfcaf9a7f5c67b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ba"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4f7fe4ac551874484bbfcaf9a7f5c67b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept which defines the relationship between a learning object and other learning objects, if any."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B14807982771497d79db3c74bc95f7191 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bed5189fd6c69c59f3f790eccbb6c2b93 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B120e61a6f5f1b3d79762b1e6a2b6bd8b .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Lowest possible version of the required technology to use the learning object. IEEE LOM element 4.4.1.3."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B79178c0cb74fddccb5294a19df97fb47 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B79178c0cb74fddccb5294a19df97fb47 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+_:B79178c0cb74fddccb5294a19df97fb47 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime> .
+_:B79178c0cb74fddccb5294a19df97fb47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bf55f60e2c103038d37191c6a93eb3d8a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bd82c6d546c30402b6f4d13f13d6a3087 .
+_:Bf55f60e2c103038d37191c6a93eb3d8a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isVersionOf"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bf55f60e2c103038d37191c6a93eb3d8a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B2fecbdc43e6a1afa9d5bf4fb45702e2d <http://www.w3.org/2002/07/owl#oneOf> _:B3cd3daef8551734193ccaa6f1bdda818 .
+_:B2fecbdc43e6a1afa9d5bf4fb45702e2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B8a7881ce5616db24b8da48af78719bc1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb620823d6f883abeff8d9a635e80e825 .
+_:B8a7881ce5616db24b8da48af78719bc1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ca"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B8a7881ce5616db24b8da48af78719bc1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bc2aba05105c77a586269314ac124bb8e <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc2aba05105c77a586269314ac124bb8e <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+_:Bc2aba05105c77a586269314ac124bb8e <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf> .
+_:Bc2aba05105c77a586269314ac124bb8e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb4d5e0b10965685759a0c660828679d6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bb4d5e0b10965685759a0c660828679d6 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:Bb4d5e0b10965685759a0c660828679d6 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword> .
+_:Bb4d5e0b10965685759a0c660828679d6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B0e03eb20961bf46e0c1249c2d8113970 <http://www.w3.org/2002/07/owl#oneOf> _:B4f7fe4ac551874484bbfcaf9a7f5c67b .
+_:B0e03eb20961bf46e0c1249c2d8113970 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Be11d05e976fce067a1eed9ac24d6885e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bfa1782e8a09a90c4895b4f7e526445ee .
+_:Be11d05e976fce067a1eed9ac24d6885e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isFormatOf"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Be11d05e976fce067a1eed9ac24d6885e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole> <http://www.w3.org/2000/01/rdf-schema#range> _:B7594c487d18c7b60cf0c09d0c71476cb .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Kind of contribution. IEEE LOM element 2.3.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bde75eec1da31a40004cf2afe777fb1f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bee0644fc38837bc3aebe5bdb3d97bcc9 .
+_:Bde75eec1da31a40004cf2afe777fb1f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "expositive"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bde75eec1da31a40004cf2afe777fb1f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Be63571dd7c56aa7eeb7404562fb597bd <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Be63571dd7c56aa7eeb7404562fb597bd <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks> .
+_:Be63571dd7c56aa7eeb7404562fb597bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether copyright or other restrictions apply to the use of this learning object. IEEE LOM element 6.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bdad6a8164630a2644d8493a8def9ca35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B97d6e956dc9e63ca5e127223e82982ae .
+_:Bdad6a8164630a2644d8493a8def9ca35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "discipline"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bdad6a8164630a2644d8493a8def9ca35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B0a3cdf7fe1ded2982f8aef03865337bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B26d0622a660a4fb3492ade743f59a5d4 .
+_:B0a3cdf7fe1ded2982f8aef03865337bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "restrictions"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B0a3cdf7fe1ded2982f8aef03865337bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B73d78fb144969e0a906aef0bd9ea0ad4 <http://www.w3.org/2002/07/owl#oneOf> _:B12d2e5951a86f625cffc47ab24fd3acb .
+_:B73d78fb144969e0a906aef0bd9ea0ad4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Bd3691d9cccc6711b7dd83fe52643e240 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bd3691d9cccc6711b7dd83fe52643e240 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:Bd3691d9cccc6711b7dd83fe52643e240 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange> .
+_:Bd3691d9cccc6711b7dd83fe52643e240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B3d46ca53fbb4a53273b9d9ccaf3d5061 <http://www.w3.org/2002/07/owl#maxCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B3d46ca53fbb4a53273b9d9ccaf3d5061 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole> .
+_:B3d46ca53fbb4a53273b9d9ccaf3d5061 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B1ae1bf5a0bad477e1dedaed0d42f84a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0a3cdf7fe1ded2982f8aef03865337bb .
+_:B1ae1bf5a0bad477e1dedaed0d42f84a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "prerequisite"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B1ae1bf5a0bad477e1dedaed0d42f84a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B6c57edf474583d3189f07e2d1003c186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B6c57edf474583d3189f07e2d1003c186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very low"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B6c57edf474583d3189f07e2d1003c186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Kind of contribution. IEEE LOM element 3.2.1."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bc37510b5aad684c0bddfd629845e9ef0 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc37510b5aad684c0bddfd629845e9ef0 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure> .
+_:Bc37510b5aad684c0bddfd629845e9ef0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ba358521275af038291f28418e1d15e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B76065fd4f61d1bde97ada5ad025bdf66 .
+_:Ba358521275af038291f28418e1d15e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "medium"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ba358521275af038291f28418e1d15e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bed5189fd6c69c59f3f790eccbb6c2b93 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bed5189fd6c69c59f3f790eccbb6c2b93 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind> .
+_:Bed5189fd6c69c59f3f790eccbb6c2b93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B97d6e956dc9e63ca5e127223e82982ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B9be8469d1ed56f00b6b38940d8db2421 .
+_:B97d6e956dc9e63ca5e127223e82982ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "educational level"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B97d6e956dc9e63ca5e127223e82982ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B9be8469d1ed56f00b6b38940d8db2421 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4d569a2d8dd0d7e0511b5ab83d513e75 .
+_:B9be8469d1ed56f00b6b38940d8db2421 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "educational objective"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B9be8469d1ed56f00b6b38940d8db2421 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType> <http://www.w3.org/2000/01/rdf-schema#range> _:Bfb3942e21d4cd4cc75bdad29c9fcb871 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType> <http://www.w3.org/2000/01/rdf-schema#comment> "Predominant mode of learning supported by this learning object. IEEE LOM element 5.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> <http://www.w3.org/2000/01/rdf-schema#comment> "A taxonomic path in a specific classification system. Each succeeding level is a refinement in the definition of the preceding level. There may be different paths, in the same or different classifications, which describe the same characteristic."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4e947b645a694c102c7fb64221d736d1 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd21b92c63a94dd529dbeb4c57fbc067e .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bc7ea03c37266bda629d96528800cc763 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb5b15c5536101d8a44aa9ace31b73f56 .
+_:Bc7ea03c37266bda629d96528800cc763 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "medium"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bc7ea03c37266bda629d96528800cc763 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B96d6ee0fb731027ce636906e92196c7f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0f25ada1a57940e3fbfd622b7804ea2c .
+_:B96d6ee0fb731027ce636906e92196c7f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "hasPart"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B96d6ee0fb731027ce636906e92196c7f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Ba1753d4bdd2c146418777e3fb31cd21b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B17b42f3a47c1204d986de121ba723cc9 .
+_:Ba1753d4bdd2c146418777e3fb31cd21b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "subject matter expert"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ba1753d4bdd2c146418777e3fb31cd21b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This predicate relates a singleLangString to the character string containing its textual description."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole> <http://www.w3.org/2000/01/rdf-schema#range> _:B7bc04f2349c7887cc9e1a110ae5d65f9 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Principal user(s) for which this learning object was designed, most dominant first. IEEE LOM element 5.5."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "When grouping multiple requirements, the composite requirement is satisfied when one of the component requirements is satisfied, i.e., the logical connector is OR. IEEE LOM element 4.4.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Be41de88edcd6f4355304746be8da5bc3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba411024d5e5b09984be82c070eb390c7 .
+_:Be41de88edcd6f4355304746be8da5bc3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "high"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Be41de88edcd6f4355304746be8da5bc3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A string that is used to access this learning object. It may be a location  (e.g., Universal Resource Locator), or a method that resolves to a location (e.g., Universal Resource Identifier). The first element of this list shall be the preferable location. IEEE LOM element 4.3."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Be88011a679141716d3a2a8c209ac7beb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B56ab4ccb362713a3924b9b4980432519 .
+_:Be88011a679141716d3a2a8c209ac7beb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "collection"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Be88011a679141716d3a2a8c209ac7beb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bfbe68036e57293f12984e864f3868c20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bfbe68036e57293f12984e864f3868c20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ga"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bfbe68036e57293f12984e864f3868c20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B12483527bd7fb09b34cd8d5398d4f41a <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B12483527bd7fb09b34cd8d5398d4f41a <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation> .
+_:B12483527bd7fb09b34cd8d5398d4f41a <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation> .
+_:B12483527bd7fb09b34cd8d5398d4f41a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B9d2073be8b6832e0cd11bfbd625d1b3c <http://www.w3.org/2002/07/owl#maxCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B9d2073be8b6832e0cd11bfbd625d1b3c <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation> .
+_:B9d2073be8b6832e0cd11bfbd625d1b3c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/2006/vcard/ns#FN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bcfa6b4fad596b364a931cd4a4aab76ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4ea09c50fb835b48f239c0065112b22f .
+_:Bcfa6b4fad596b364a931cd4a4aab76ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "higherEducation"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bcfa6b4fad596b364a931cd4a4aab76ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bbf26c782084659f8ee9bf98333b14729 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bbf26c782084659f8ee9bf98333b14729 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel> .
+_:Bbf26c782084659f8ee9bf98333b14729 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B6e8d9b34f0fef94721687b90185c1c4b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba62cb77e3542a4191be1b29fdecb1d74 .
+_:B6e8d9b34f0fef94721687b90185c1c4b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "instructional designer"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B6e8d9b34f0fef94721687b90185c1c4b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2000/01/rdf-schema#comment> "A vCard is a collection of one or more properties. A property is a uniquely named value. A set of properties can be grouped within a vCard. For example, the properties for a telephone number and comment can be grouped in order to preserve the coupling of the annotation with the telephone number. In addition to property groupings, a vC. versit  is developing a comprehensive family of PDI technologies based on open specifications and interoperability agreements to help meet this technology need."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2006/vcard/ns#ORG> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2006/vcard/ns#N> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2006/vcard/ns#FN> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2006/vcard/ns#email> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique label that identifies the target  learning object. IEEE LOM element 7.2.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B7482341ab9fc6445e17bae0e80e5109a <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B7482341ab9fc6445e17bae0e80e5109a <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> .
+_:B7482341ab9fc6445e17bae0e80e5109a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/2006/vcard/ns#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A point in time with accuracy at least as small as one second, as described by IEEE LOM in clause 8 (IEEE 1484.12.1-2002)."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B35da2f34243988083ef91f50c3eda292 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B26d0622a660a4fb3492ade743f59a5d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B2f2bcdeb7e862b8ac521d79dd4984ccd .
+_:B26d0622a660a4fb3492ade743f59a5d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "security level"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B26d0622a660a4fb3492ade743f59a5d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B367925791beaa28f0277f4f59eb7ff4f <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B367925791beaa28f0277f4f59eb7ff4f <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage> .
+_:B367925791beaa28f0277f4f59eb7ff4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational> <http://www.w3.org/2000/01/rdf-schema#comment> "This category describes the key educational or pedagogic characteristics of this learning object. IEEE LOM element 5."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure> <http://www.w3.org/2000/01/rdf-schema#range> _:B80c92ecd574545b092652fc2b8500b7c .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure> <http://www.w3.org/2000/01/rdf-schema#comment> "Underlying organizational structure of this learning object. IEEE LOM element 1.7."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#includesSingleLangString> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#includesSingleLangString> <http://www.w3.org/2000/01/rdf-schema#comment> "LangString values may include multiple semantically equivalent character strings, such as translations or alternative descriptions. Each of these is represented by a singleLangString."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#includesSingleLangString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B4d569a2d8dd0d7e0511b5ab83d513e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B1ae1bf5a0bad477e1dedaed0d42f84a2 .
+_:B4d569a2d8dd0d7e0511b5ab83d513e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "idea"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4d569a2d8dd0d7e0511b5ab83d513e75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bd3f5ccaa929b8f350d61816dc2af9b05 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc59a536a294ce54744a4f73af9288f8c .
+_:Bd3f5ccaa929b8f350d61816dc2af9b05 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "draft"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bd3f5ccaa929b8f350d61816dc2af9b05 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B292f2921e3b047ee8341125c50616160 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B292f2921e3b047ee8341125c50616160 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> .
+_:B292f2921e3b047ee8341125c50616160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B9342bbe92c4c603016a937cec69d5e82 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B9342bbe92c4c603016a937cec69d5e82 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+_:B9342bbe92c4c603016a937cec69d5e82 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification> .
+_:B9342bbe92c4c603016a937cec69d5e82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B4e1d5d1921d3a83a8c9a0acf65f39c07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf55f60e2c103038d37191c6a93eb3d8a .
+_:B4e1d5d1921d3a83a8c9a0acf65f39c07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isRequiredBy"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B4e1d5d1921d3a83a8c9a0acf65f39c07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://purl.org/dc/terms/type> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5165c978e52cd4a200732516b2bba370 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44bc258c0bb6badfd91a3025cb63dc2a .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfe29e3dc1025c79356543e5685ab6876 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B79178c0cb74fddccb5294a19df97fb47 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd3691d9cccc6711b7dd83fe52643e240 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B86837c1462c70b3e2f2e5d63be2d6457 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d46ca53fbb4a53273b9d9ccaf3d5061 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbf26c782084659f8ee9bf98333b14729 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb19db832f59066ba2a27d35c2bcdf9d2 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc96792d3b25f6b6fce34d21b2ead636f .
+_:Bffd8053ce0941b81a3164d0d6e836ef3 <http://www.w3.org/2002/07/owl#oneOf> _:Bcfa6b4fad596b364a931cd4a4aab76ac .
+_:Bffd8053ce0941b81a3164d0d6e836ef3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:B70fd79fe4f3ca7a70f15129ad74143b4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "40"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B70fd79fe4f3ca7a70f15129ad74143b4 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:B70fd79fe4f3ca7a70f15129ad74143b4 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword> .
+_:B70fd79fe4f3ca7a70f15129ad74143b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a learning object and other learning objects, if any."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bcb7e926c6090391794e3944f98e50b9f <http://www.w3.org/2002/07/owl#oneOf> _:Bd3f5ccaa929b8f350d61816dc2af9b05 .
+_:Bcb7e926c6090391794e3944f98e50b9f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular term within a taxonomy. A taxon is a node that has a defined label or\nterm. A taxon may also have an alphanumeric designation or identifier for standardized reference. Either or both the label and the entry may be used to designate a particular taxon. An ordered list of taxons creates a taxonomic path, i.e., \"taxonomic stairway\": this is a path from a more general to more specific entry in a classification."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B09e6b07dd0145cfa7e25e788cfc5b004 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bed61685801db2b3bda96fe83c58ed6c6 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0f69bcf5c746b992e601b4c83610de48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ba75da11577eaf65f3421764baeed58cc .
+_:B0f69bcf5c746b992e601b4c83610de48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "author"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B0f69bcf5c746b992e601b4c83610de48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose> <http://www.w3.org/2000/01/rdf-schema#range> _:B12b7a21ce87fa5283894091ee6355166 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "The purpose of classifying a learning object. IEEE LOM element 9.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bee0644fc38837bc3aebe5bdb3d97bcc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bee0644fc38837bc3aebe5bdb3d97bcc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "mised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bee0644fc38837bc3aebe5bdb3d97bcc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B969fb39a9c2274b16b2b17f90a8d8e13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb2dff712d18e2cac57d97d566e8ab4db .
+_:B969fb39a9c2274b16b2b17f90a8d8e13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "low"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B969fb39a9c2274b16b2b17f90a8d8e13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B120e61a6f5f1b3d79762b1e6a2b6bd8b <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B120e61a6f5f1b3d79762b1e6a2b6bd8b <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> .
+_:B120e61a6f5f1b3d79762b1e6a2b6bd8b <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription> .
+_:B120e61a6f5f1b3d79762b1e6a2b6bd8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5ba952b66c4634b684b1ef9dcfec7aa2 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B5ba952b66c4634b684b1ef9dcfec7aa2 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+_:B5ba952b66c4634b684b1ef9dcfec7aa2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier> .
+_:B5ba952b66c4634b684b1ef9dcfec7aa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B7594c487d18c7b60cf0c09d0c71476cb <http://www.w3.org/2002/07/owl#oneOf> _:B6bc25f8dbbc9f974b59a853a9839d622 .
+_:B7594c487d18c7b60cf0c09d0c71476cb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Be071bb08f6c481de8019d1b6d4f3cd3e <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Be071bb08f6c481de8019d1b6d4f3cd3e <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> .
+_:Be071bb08f6c481de8019d1b6d4f3cd3e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B8e8f6d82f86faf7febfb267dafb5a435 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bde75eec1da31a40004cf2afe777fb1f2 .
+_:B8e8f6d82f86faf7febfb267dafb5a435 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "active"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B8e8f6d82f86faf7febfb267dafb5a435 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bb70b663dcb28fdb2a11669d4dd273eb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bb70b663dcb28fdb2a11669d4dd273eb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "teacher"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bb70b663dcb28fdb2a11669d4dd273eb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bb2dff712d18e2cac57d97d566e8ab4db <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B68d233fb0f2709a5ba6276e142ea9dc0 .
+_:Bb2dff712d18e2cac57d97d566e8ab4db <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "medium"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bb2dff712d18e2cac57d97d566e8ab4db <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B43dce9acf10eb0f2e16ed507186228fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B108251ee68f0e2ab19ab15a2f4626557 .
+_:B43dce9acf10eb0f2e16ed507186228fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "school"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B43dce9acf10eb0f2e16ed507186228fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B28f867db4943a2e431ea17d6db8637c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B2730a864b13430a63c3f8d280f42212c .
+_:B28f867db4943a2e431ea17d6db8637c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "content provider"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B28f867db4943a2e431ea17d6db8637c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B2730a864b13430a63c3f8d280f42212c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4b90391461f66bc6fc0ce4c7d3de2eff .
+_:B2730a864b13430a63c3f8d280f42212c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "editor"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B2730a864b13430a63c3f8d280f42212c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Ba1ec68226247efb89fe2e63f63f14b1e <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:Ba1ec68226247efb89fe2e63f63f14b1e <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion> .
+_:Ba1ec68226247efb89fe2e63f63f14b1e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B8bf5d24aa9fe080fa9bf55a2a1cea071 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B8bf5d24aa9fe080fa9bf55a2a1cea071 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard> .
+_:B8bf5d24aa9fe080fa9bf55a2a1cea071 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity> .
+_:B8bf5d24aa9fe080fa9bf55a2a1cea071 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the possible semantically equivalent character strings of a langString."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bba6dcd52282f9b9269f33bf0c4ace4f2 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B08f6786f7b7b9238ab71bbc7d41af4f0 <http://www.w3.org/2002/07/owl#oneOf> _:B23956ff58787bd10a1f2f9e3daebcdd1 .
+_:B08f6786f7b7b9238ab71bbc7d41af4f0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Bd82c6d546c30402b6f4d13f13d6a3087 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf507fb9f67be972225e01ac69822c836 .
+_:Bd82c6d546c30402b6f4d13f13d6a3087 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "references"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bd82c6d546c30402b6f4d13f13d6a3087 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bfe29e3dc1025c79356543e5685ab6876 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bfe29e3dc1025c79356543e5685ab6876 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType> .
+_:Bfe29e3dc1025c79356543e5685ab6876 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/2006/vcard/ns#N> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType> <http://www.w3.org/2000/01/rdf-schema#range> _:Bb50b701c8c491cb6d6151a8e37c9a9f8 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The technology required to use this learning object, e.g., hardware, software, network, etc. IEEE LOM element 4.4.1.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B9307a27b4b91df96d6520007b5f132b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bfbe68036e57293f12984e864f3868c20 .
+_:B9307a27b4b91df96d6520007b5f132b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "es"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B9307a27b4b91df96d6520007b5f132b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Be21f30e7f4de764720864c50587b53dc <http://www.w3.org/2002/07/owl#oneOf> _:Be41de88edcd6f4355304746be8da5bc3 .
+_:Be21f30e7f4de764720864c50587b53dc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Bdeb664671a0b580d3f65415469aa3ed1 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bdeb664671a0b580d3f65415469aa3ed1 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion> .
+_:Bdeb664671a0b580d3f65415469aa3ed1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B09e6b07dd0145cfa7e25e788cfc5b004 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B09e6b07dd0145cfa7e25e788cfc5b004 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId> .
+_:B09e6b07dd0145cfa7e25e788cfc5b004 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B2eac8323c398552a68a4fbef7759bfed <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B2eac8323c398552a68a4fbef7759bfed <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration> .
+_:B2eac8323c398552a68a4fbef7759bfed <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration> .
+_:B2eac8323c398552a68a4fbef7759bfed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B14deb6006d7fb668d42f9ee0eb169e15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B09dd5bfd1f24d6eca03099d9248e930f .
+_:B14deb6006d7fb668d42f9ee0eb169e15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ga"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B14deb6006d7fb668d42f9ee0eb169e15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B07fe887a0a22ac9d6b8b91dab0e8aeb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B07fe887a0a22ac9d6b8b91dab0e8aeb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very easy"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B07fe887a0a22ac9d6b8b91dab0e8aeb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B3b2c51f7c9560d2a30e07a29e420aa4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B9b3d0df476134b7efe57d76087357f43 .
+_:B3b2c51f7c9560d2a30e07a29e420aa4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "3"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B3b2c51f7c9560d2a30e07a29e420aa4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Date time value in format: YYYY[-MM[-DD[Thh[:mm[:ss[.s[TZD]]]]]]]"@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "The target learning object that a relationship references. IEEE LOM element 7.2."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bfa1782e8a09a90c4895b4f7e526445ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0153acb39433fc3eca956d5c761f39c7 .
+_:Bfa1782e8a09a90c4895b4f7e526445ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isPartOf"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bfa1782e8a09a90c4895b4f7e526445ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword or phrase describing the topic of this learning object. This data element should not be used for characteristics that can be described by other data elements. IEEE LOM element 1.5."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage> <http://www.w3.org/2000/01/rdf-schema#comment> "The time, culture, geography or region to which this learning object applies.\nThe extent or scope of the content of the learning object. Coverage will typically include spatial location (a place name or geographic coordinates), temporal period (a period label, date, or date range) or jurisdiction (such as a named administrative entity). Recommended best practice is to select a value from a controlled vocabulary (for example, the Thesaurus of Geographic Names [TGN]) and that, where appropriate, named places or time periods be used in preference to numeric identifiers such as sets of coordinates or date ranges. IEEE LOM element 1.6."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage> <http://purl.org/dc/terms/coverage> ""^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B23956ff58787bd10a1f2f9e3daebcdd1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B969fb39a9c2274b16b2b17f90a8d8e13 .
+_:B23956ff58787bd10a1f2f9e3daebcdd1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "high"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B23956ff58787bd10a1f2f9e3daebcdd1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind> <http://www.w3.org/2000/01/rdf-schema#range> _:B97bb796f8fd18776953a354767f5414b .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Nature of the relationship between a learning object and the target learning object, identified by 7.2:Relation.Resource. IEEE LOM element 7.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B292f2921e3b047ee8341125c50616160 .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc74bf74f954ab6954179ae16d517c1bf .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be071bb08f6c481de8019d1b6d4f3cd3e .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Ba75da11577eaf65f3421764baeed58cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B378d357872c4c80f50f3704f93062cfc .
+_:Ba75da11577eaf65f3421764baeed58cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "learner"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ba75da11577eaf65f3421764baeed58cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B20c1562b722146f274d02fb6e68a28ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B0cda0e6fa84470f91dedf035e6a9af0b .
+_:B20c1562b722146f274d02fb6e68a28ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "terminator"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B20c1562b722146f274d02fb6e68a28ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> <http://www.w3.org/2000/01/rdf-schema#comment> "This predicate relates a lomIdentifier to the name or designator of the identification or cataloging scheme used for its identification. It is usually a namespace scheme. IEEE LOM element 1.1, 3.1, 7.2.1."@en .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B2f2bcdeb7e862b8ac521d79dd4984ccd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B2f2bcdeb7e862b8ac521d79dd4984ccd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "skill level"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B2f2bcdeb7e862b8ac521d79dd4984ccd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution> .
+<http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Ba62cb77e3542a4191be1b29fdecb1d74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bff71e9a5fede4ae339e83799d1aa1223 .
+_:Ba62cb77e3542a4191be1b29fdecb1d74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "publisher"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ba62cb77e3542a4191be1b29fdecb1d74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B04e444f0c5c6c4d2e682569aeb8b4c2d <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:B04e444f0c5c6c4d2e682569aeb8b4c2d <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription> .
+_:B04e444f0c5c6c4d2e682569aeb8b4c2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B378d357872c4c80f50f3704f93062cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb70b663dcb28fdb2a11669d4dd273eb8 .
+_:B378d357872c4c80f50f3704f93062cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "manager"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B378d357872c4c80f50f3704f93062cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B3cd3daef8551734193ccaa6f1bdda818 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B2acdfc3d2454fa061616a53fecef464a .
+_:B3cd3daef8551734193ccaa6f1bdda818 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "higher education"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B3cd3daef8551734193ccaa6f1bdda818 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B357c5570bec54565ea749acbad9aeddc <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B357c5570bec54565ea749acbad9aeddc <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName> .
+_:B357c5570bec54565ea749acbad9aeddc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bb5b15c5536101d8a44aa9ace31b73f56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B07fe887a0a22ac9d6b8b91dab0e8aeb3 .
+_:Bb5b15c5536101d8a44aa9ace31b73f56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "very difficult"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Bb5b15c5536101d8a44aa9ace31b73f56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B0153acb39433fc3eca956d5c761f39c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4e1d5d1921d3a83a8c9a0acf65f39c07 .
+_:B0153acb39433fc3eca956d5c761f39c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "isReferencedBy"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:B0153acb39433fc3eca956d5c761f39c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:Bb50b701c8c491cb6d6151a8e37c9a9f8 <http://www.w3.org/2002/07/owl#oneOf> _:B758eac3d7e4da73e209b82b13af6255b .
+_:Bb50b701c8c491cb6d6151a8e37c9a9f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:Be426584cd1ef8dc93798631b56fb15f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Be426584cd1ef8dc93798631b56fb15f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "unavalaible"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Be426584cd1ef8dc93798631b56fb15f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:B4fb5900428819b8f8f261068b6c5ca90 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:B4fb5900428819b8f8f261068b6c5ca90 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B4fb5900428819b8f8f261068b6c5ca90 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost> .
+_:B4fb5900428819b8f8f261068b6c5ca90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bc706a57f30e241a645ba6cb6975bd667 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "30"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Bc706a57f30e241a645ba6cb6975bd667 <http://www.w3.org/2002/07/owl#onClass> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution> .
+_:Bc706a57f30e241a645ba6cb6975bd667 <http://www.w3.org/2002/07/owl#onProperty> <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContribution> .
+_:Bc706a57f30e241a645ba6cb6975bd667 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

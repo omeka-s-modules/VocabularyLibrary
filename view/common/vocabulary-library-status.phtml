@@ -1,0 +1,43 @@
+<?php
+/**
+ * A library vocabulary's status in Omeka: its namespace in use, meaning Omeka
+ * has a vocabulary with it, whatever file or version that came from; in use in
+ * another form; or an Import button.
+ *
+ * In the table the status links to the vocabulary in core. The sidebar names
+ * that vocabulary in its own group, so there the status is text, with a
+ * Compare and update button when the user can update the vocabulary.
+ *
+ * @var string $slug
+ * @var array|null $installed From IndexController::installed()
+ * @var string|null $prefixTakenBy Label of the vocabulary in Omeka that
+ *   already has this vocabulary's default prefix
+ * @var bool $long Whether to write the sidebar's status: a taken prefix
+ *   explained in full, and the Compare and update button
+ */
+$prefixTakenBy = $prefixTakenBy ?? null;
+$long = $long ?? false;
+?>
+<div class="vocabulary-library-status">
+<?php if (!$installed): ?>
+<?php echo $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), ['class' => 'button']); ?>
+<?php if ($prefixTakenBy !== null && $long): ?>
+<p class="vocabulary-library-prefix-note"><?php echo $this->escapeHtml(sprintf($this->translate('Its prefix is already used in Omeka by "%s". Choose another when importing.'), $prefixTakenBy)); ?></p>
+<?php elseif ($prefixTakenBy !== null): ?>
+<span class="vocabulary-library-prefix-note" title="<?php echo $this->escapeHtml(sprintf($this->translate('Used by "%s"'), $prefixTakenBy)); ?>"><?php echo $this->translate('Prefix in use'); ?></span>
+<?php endif; ?>
+<?php elseif ($long): ?>
+<?php if ($installed['exact']): ?>
+<?php echo $this->translate('Namespace in use'); ?>
+<?php else: ?>
+<?php echo $this->escapeHtml(sprintf($this->translate('Namespace in use as %s'), $installed['vocabulary']->namespaceUri())); ?>
+<?php endif; ?>
+<?php if ($installed['comparable']): ?>
+<p class="vocabulary-library-compare"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button']); ?></p>
+<?php endif; ?>
+<?php elseif ($installed['exact']): ?>
+<?php echo $this->hyperlink($this->translate('Namespace in use'), $installed['url']); ?>
+<?php else: ?>
+<?php echo sprintf($this->escapeHtml($this->translate('Namespace in use as %s')), $this->hyperlink($installed['vocabulary']->namespaceUri(), $installed['url'])); ?>
+<?php endif; ?>
+</div>

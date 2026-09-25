@@ -1,0 +1,75 @@
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#Manuscript> <http://www.w3.org/2000/01/rdf-schema#comment> "An unpublished document in an arch:Collection"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#Manuscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#Manuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/archival/vocab/arch#primaryProvenanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/archival/vocab/arch#primaryProvenanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#primaryProvenanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a foaf:Person, foaf:Organization, or arch:Family to the arch:Collection that they created.  This might be more than one entity.  Inverse of arch:hasProvenance."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#primaryProvenanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/knows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#holds> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#holds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/archival/vocab/arch#Archive> .
+<http://purl.org/archival/vocab/arch#holds> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an arch:Archive to a collection that it holds.  Inverse of arch:heldBy"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#holds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#bulkStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> .
+<http://purl.org/archival/vocab/arch#bulkStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The beginning of a collection's bulk dates" .
+<http://purl.org/archival/vocab/arch#bulkStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/archival/vocab/arch#relatedSubject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> .
+<http://purl.org/archival/vocab/arch#relatedSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Related Subject" .
+<http://purl.org/archival/vocab/arch#relatedSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Subjects related to a name in an archival collection.  Usually represents the subjects from a collection that a name is the arch:primaryProvenanceOf" .
+<http://purl.org/archival/vocab/arch#relatedSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch> <http://purl.org/dc/elements/1.1/title> "Archival" .
+<http://purl.org/archival/vocab/arch> <http://purl.org/dc/elements/1.1/description> "An RDF vocabulary for describing archival collections and the names associated with them" .
+<http://purl.org/archival/vocab/arch> <http://purl.org/dc/elements/1.1/creator> "Aaron Rubinstein" .
+<http://purl.org/archival/vocab/arch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/archival/vocab/arch#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of documents organized according to the principle of provenance."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/archival/vocab/arch#Family> <http://www.w3.org/2000/01/rdf-schema#comment> "For representing a family, a subclass of foaf:Group.  This class might be equivalent to a similar class in genealogical vocabularies."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#Family> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Group> .
+<http://purl.org/archival/vocab/arch#Family> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/archival/vocab/arch#hasProvenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/archival/vocab/arch#hasProvenance> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/archival/vocab/arch#primaryProvenanceOf> .
+<http://purl.org/archival/vocab/arch#hasProvenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#hasProvenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Property relating a arch:Collection to the names that are the provenance of that collection.  Inverse of arch:primaryProvenanceOf."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The end of a collection's bulk dates" .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#correspondedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/knows> .
+<http://purl.org/archival/vocab/arch#correspondedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/archival/vocab/arch#correspondedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/archival/vocab/arch#Family> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a foaf:Person, foaf:Organization, or arch:Family to a arch:Collection that they are referenced in." .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The end of a collection's inclusive dates" .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/archival/vocab/arch#inclusiveStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> .
+<http://purl.org/archival/vocab/arch#inclusiveStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The beginning of a collection's inclusive dates" .
+<http://purl.org/archival/vocab/arch#inclusiveStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#heldBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/archival/vocab/arch#holds> .
+<http://purl.org/archival/vocab/arch#heldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/archival/vocab/arch#Collection> .
+<http://purl.org/archival/vocab/arch#heldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/archival/vocab/arch#Archive> .
+<http://purl.org/archival/vocab/arch#heldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a arch:Collection to the archive that holds it.  Inverse of arch:holds"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/archival/vocab/arch#Archive> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that holds archival collections."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/archival/vocab/arch#Archive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/archival/vocab/arch#Archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/archival/vocab/arch#appearsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/knows> .
+<http://purl.org/archival/vocab/arch#appearsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Name appears with another name in an archival collection" .
+<http://purl.org/archival/vocab/arch#appearsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/archival/vocab/arch#appearsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

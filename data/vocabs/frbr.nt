@@ -1,0 +1,1563 @@
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4224 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e8 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:B8299c2ff87c4d25590c26101768432bd <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B8299c2ff87c4d25590c26101768432bd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B8299c2ff87c4d25590c26101768432bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is revised."@en .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B48a1619d10266f369be9dd5bd440e47c .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B286e43b9d46396d282109531059c8b0a .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdbf5cde2235a301420778fa7bcf0052d .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2000/01/rdf-schema#label> "revision of"@en .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#revision> .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#revisionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc13c31d62fb79f0811be8551c7d00001 .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "adaption of"@en .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bb9e141dae1046260fd892e06c7a84d43 .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#adaption> .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B4e2e2c5d88012752cfac0a3fdfaa84e5 .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2000/01/rdf-schema#range> _:B39b13dca102ffc8e45f1ad265c4c4a67 .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bdce66bc6a1b8aa60f12d36518bd97c07 .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is adapted."@en .
+<http://purl.org/vocab/frbr/core#adaptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#ScholarlyWork> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#label> "scholarly work"@en .
+<http://purl.org/vocab/frbr/core#ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#ScholarlyWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bccf428a8d227a1a722917e4d489b49d0 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41eb .
+_:Bccf428a8d227a1a722917e4d489b49d0 <http://www.w3.org/2000/01/rdf-schema#label> "the union of all expressions, items, manifestations and works"@en .
+_:Bccf428a8d227a1a722917e4d489b49d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B31801aaae5290a07e53ce7140cc56026 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B31801aaae5290a07e53ce7140cc56026 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B31801aaae5290a07e53ce7140cc56026 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:Bdd2a858e143f08922081eaa7ca5459df <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4201 .
+_:Bdd2a858e143f08922081eaa7ca5459df <http://www.w3.org/2000/01/rdf-schema#label> "a manifestation or an item"@en .
+_:Bdd2a858e143f08922081eaa7ca5459df <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bruce.darcus.name/about#me> <http://xmlns.com/foaf/0.1/name> "Bruce D'Arcus" .
+<http://bruce.darcus.name/about#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B78850c87633894871bc98cf704e3c880 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4215 .
+_:B78850c87633894871bc98cf704e3c880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bd5cd9a37ea48665eac5328c8b9882986 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4219 .
+_:Bd5cd9a37ea48665eac5328c8b9882986 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bed5bc197d2b4a9c6e40b740c1a8c0191 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bed5bc197d2b4a9c6e40b740c1a8c0191 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bed5bc197d2b4a9c6e40b740c1a8c0191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B071d02ced785702fb9979cf404ecfc5f <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B071d02ced785702fb9979cf404ecfc5f <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B071d02ced785702fb9979cf404ecfc5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://purl.org/vocab/frbr/core#ClassicalWork> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#ClassicalWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#ClassicalWork> <http://www.w3.org/2000/01/rdf-schema#label> "classical work"@en .
+<http://purl.org/vocab/frbr/core#ClassicalWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#ClassicalWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://web.resource.org/cc/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B41b37d5682fa2a2feb7f01b62f58c402 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B41b37d5682fa2a2feb7f01b62f58c402 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B41b37d5682fa2a2feb7f01b62f58c402 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bd586582c52d539e865d811d44699c463 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bd586582c52d539e865d811d44699c463 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd586582c52d539e865d811d44699c463 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4206 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D422a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D422a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bf78b77ab937b1c8c123c05f1be2f52f4 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf78b77ab937b1c8c123c05f1be2f52f4 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf78b77ab937b1c8c123c05f1be2f52f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:B80deaad3b4ed7fae11503f8440543ba5 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B80deaad3b4ed7fae11503f8440543ba5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B80deaad3b4ed7fae11503f8440543ba5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:Bcfb5b9d25edc56d0b9161206e6b8351f <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bcfb5b9d25edc56d0b9161206e6b8351f <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bcfb5b9d25edc56d0b9161206e6b8351f <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/contributor> <http://bruce.darcus.name/about#me> .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/date> "2009-05-16" .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This vocabulary is an expression in RDF of the concepts and relations described in the\n      IFLA report on the Functional Requirements for Bibliographic Records (FRBR). \n    "@en .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/frbr/frbr-core-20051014" .
+<http://purl.org/vocab/frbr/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/frbr/core#" .
+<http://purl.org/vocab/frbr/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "frbr" .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2005 Richard Newman and Ian Davis" .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/2004/02/skos/core#example> <file:///var/www/vocab.org/www/htdocs/frbr/frbr-example-film-20050809.html> .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/frbr/frbr-core-20050809> .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/creator> _:Bc27a5c61b5638214625cb27f82da48ec .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This vocabulary is a work in progress, it includes RDF classes for the group 1, 2 and 3 entities\n      described by the FRBR report and properties corresponding to the core relationships between\n      those entities. It does not yet describe attributes of the entities. Where possible, appropriate \n      relationships with other vocabularies are included in order to place this vocabulary in the \n      context of existing RDF work.\n    "@en .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/2004/02/skos/core#changeNote> _:B8201f0a8e53454c5709c88b69d92d767 .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/elements/1.1/title> "Expression of Core FRBR Concepts in RDF"@en .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bbfb2a4ce79f00bb681917559a8f2ff49 .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/frbr/core#> .
+<http://purl.org/vocab/frbr/core> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B286e43b9d46396d282109531059c8b0a <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B286e43b9d46396d282109531059c8b0a <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B286e43b9d46396d282109531059c8b0a <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B4b8194c2ca9ea384210f52d8459dc07c <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ed .
+_:B4b8194c2ca9ea384210f52d8459dc07c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B39bb2661355b0b102014ad588ac113ce <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B39bb2661355b0b102014ad588ac113ce <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B39bb2661355b0b102014ad588ac113ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B754666f88643d7f6776463683b478218 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B754666f88643d7f6776463683b478218 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B754666f88643d7f6776463683b478218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://www.isi.edu/~pan/damltime/time-entry.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B1185afa3a289430d9a5e2aba76e81cd5 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B1185afa3a289430d9a5e2aba76e81cd5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B1185afa3a289430d9a5e2aba76e81cd5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#changeNote> _:B8299c2ff87c4d25590c26101768432bd .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bae38b84f8edf9d1358734d57cc722b1a .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#definition> "An exemplar of a single manifestation."@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf3b721b74d7dc4ea5c8a13be42f0ca3c .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bfd8956716c380ca60bb5d3c070631559 .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#label> "item"@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2004/02/skos/core#changeNote> _:B5382071e03e2dcb62aac5aa1a1b3d3bb .
+<http://purl.org/vocab/frbr/core#Item> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group one entity 'Item'."@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Endeavour> .
+_:Ba142e5a55c49742cdf20cf36c28aeaea <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Ba142e5a55c49742cdf20cf36c28aeaea <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba142e5a55c49742cdf20cf36c28aeaea <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4218 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:B1cafc18eace4b992c7c0de9be8f001a7 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4221 .
+_:B1cafc18eace4b992c7c0de9be8f001a7 <http://www.w3.org/2000/01/rdf-schema#label> "a manifestation or an item"@en .
+_:B1cafc18eace4b992c7c0de9be8f001a7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bb2f1ccb4c7df764e1fa13d67ba1ce66a <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bb2f1ccb4c7df764e1fa13d67ba1ce66a <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bb2f1ccb4c7df764e1fa13d67ba1ce66a <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Ba5cf6855ff3d43c9b16f17d08eee3cbd <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Ba5cf6855ff3d43c9b16f17d08eee3cbd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba5cf6855ff3d43c9b16f17d08eee3cbd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2004/02/skos/core#changeNote> _:B9689b86a3c3446367d33810ef217d696 .
+<http://purl.org/vocab/frbr/core#owner> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf868a32c55f2058ba10792e7f90955a0 .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntity> .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2004/02/skos/core#definition> "An entity that owns an item."@en .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2000/01/rdf-schema#label> "owner"@en .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#owner> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#ownerOf> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bc699a8e4e741bb4d8b6b60050fd68fa9 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bc699a8e4e741bb4d8b6b60050fd68fa9 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc699a8e4e741bb4d8b6b60050fd68fa9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bd9d54872f86603e49efee112f0f7e26d <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4213 .
+_:Bd9d54872f86603e49efee112f0f7e26d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bfb0224e60a59b39c3fbe30b04f509cbd <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bfb0224e60a59b39c3fbe30b04f509cbd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfb0224e60a59b39c3fbe30b04f509cbd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#LegalWork> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#LegalWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#LegalWork> <http://www.w3.org/2000/01/rdf-schema#label> "legal work"@en .
+<http://purl.org/vocab/frbr/core#LegalWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#LegalWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Concept> .
+_:B9ce42d0b25bf2fd9ff450a3365d57fb4 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B9ce42d0b25bf2fd9ff450a3365d57fb4 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B9ce42d0b25bf2fd9ff450a3365d57fb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:Bfd46ba4674e8a01c954aedd8df2f3d6f <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e1 .
+_:Bfd46ba4674e8a01c954aedd8df2f3d6f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B77f75f2662c4c14f1cc00c7efff9c951 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B77f75f2662c4c14f1cc00c7efff9c951 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B77f75f2662c4c14f1cc00c7efff9c951 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is summarized."@en .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B9e6ca9a8c3f7450e7491a158ddd5e3a5 .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B80711a446c4ce6e27cd3155495237798 .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B20476adfe3fe2fecb7421c9e84443962 .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:B5a0a57c749ad979c4df20a9eae7345d3 .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2000/01/rdf-schema#range> _:Bc60161f233048ab0cabb7389bb09885b .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2000/01/rdf-schema#label> "summarization of"@en .
+<http://purl.org/vocab/frbr/core#summarizationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#summarization> .
+_:Bdf9c5abc98b7e5af7576f211d5110cf5 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bdf9c5abc98b7e5af7576f211d5110cf5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdf9c5abc98b7e5af7576f211d5110cf5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:B3293d8ef50d18a9e6378349f63a3f182 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4217 .
+_:B3293d8ef50d18a9e6378349f63a3f182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bba8977fa4432b694f31c16e1744c1edd .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2000/01/rdf-schema#range> _:B1cafc18eace4b992c7c0de9be8f001a7 .
+<http://purl.org/vocab/frbr/core#reproduction> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc699a8e4e741bb4d8b6b60050fd68fa9 .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf50e385fc37b91654c2ded2ea53cdd86 .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2000/01/rdf-schema#label> "reproduction"@en .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bd9d27aa24c01f7532a7b528f1c283503 .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2004/02/skos/core#definition> "A reproduction of a manifestation or item."@en .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#reproduction> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#reproductionOf> .
+_:Bee270906f985dbdc12d4d00f6d414b46 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bee270906f985dbdc12d4d00f6d414b46 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bee270906f985dbdc12d4d00f6d414b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B950a83ab3ee80d18eed34fb315cac6b4 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f9 .
+_:B950a83ab3ee80d18eed34fb315cac6b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B66dfd9c18d4e1eefd912eed90d22bd34 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B66dfd9c18d4e1eefd912eed90d22bd34 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B66dfd9c18d4e1eefd912eed90d22bd34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B2994fdd05dab84ce540ac9a2344b51f4 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B2994fdd05dab84ce540ac9a2344b51f4 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B2994fdd05dab84ce540ac9a2344b51f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .
+_:B331a000dbf28ba8f4776634b472383a6 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B331a000dbf28ba8f4776634b472383a6 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B331a000dbf28ba8f4776634b472383a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://web.resource.org/cc/permits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bbd305240a6afa0af60d5f696c8b5405d <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4211 .
+_:Bbd305240a6afa0af60d5f696c8b5405d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2004/02/skos/core#definition> "An endeavour that is the responsibility of an entity."@en .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B88401a4106a990d1ac4dbd1112b240d7 .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B7eeeb73dfaaeea2663fa36f2d55e8e36 .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#responsibleEntity> .
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> <http://www.w3.org/2000/01/rdf-schema#label> "responsible entity of"@en .
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bcab77d5a84bbcd2ba2cedf33aa9cb7a5 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bcab77d5a84bbcd2ba2cedf33aa9cb7a5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bcab77d5a84bbcd2ba2cedf33aa9cb7a5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B4851217a47f90274594aa76a4c8870b6 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B4851217a47f90274594aa76a4c8870b6 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B4851217a47f90274594aa76a4c8870b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B784613dc51619a4aaa41ca1d6001dc0e <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B784613dc51619a4aaa41ca1d6001dc0e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B784613dc51619a4aaa41ca1d6001dc0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bc89c8969d1d27d45e16c71f05566ef8e <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bc89c8969d1d27d45e16c71f05566ef8e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc89c8969d1d27d45e16c71f05566ef8e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fa .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2004/02/skos/core#definition> "Another endeavour that is related in some way to an endeavour."@en .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2004/02/skos/core#changeNote> _:Ba97756bbdf027867e00a102a9700d734 .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be0237abf09741b7e3da62c9666bcfe9d .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2000/01/rdf-schema#label> "related endeavour"@en .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#relatedEndeavour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B0880af772badd4522b62ce773e4e6579 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B0880af772badd4522b62ce773e4e6579 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B0880af772badd4522b62ce773e4e6579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:B7b1c6e3773e9129b1115ee1e7fdf656d <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B7b1c6e3773e9129b1115ee1e7fdf656d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B7b1c6e3773e9129b1115ee1e7fdf656d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://web.resource.org/cc/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:B3634771c03f2d0490187c1904e760453 .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bcfb5b9d25edc56d0b9161206e6b8351f .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf184e20a402810c5ed0bcb50ba5b9a4f .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents any of the FRBR group two entities."@en .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2217d97028fcb81f2cd629754ad68d77 .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2000/01/rdf-schema#label> "responsible entity"@en .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> <http://www.w3.org/2004/02/skos/core#definition> "One responsible for the creation, production, distribution or maintenance of artistic or creative content."@en .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Subject> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f0 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bc5b83d9272f62b79636902a00f4ffa6a <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bc5b83d9272f62b79636902a00f4ffa6a <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc5b83d9272f62b79636902a00f4ffa6a <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://vocab.org/frbr/core.rdf> <http://xmlns.com/foaf/0.1/topic> <http://purl.org/vocab/frbr/core> .
+<http://vocab.org/frbr/core.rdf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/vocab/frbr/core> .
+<http://vocab.org/frbr/core.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/frbr/core.html> .
+<http://vocab.org/frbr/core.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/frbr/core.json> .
+<http://vocab.org/frbr/core.rdf> <http://purl.org/dc/terms/hasFormat> <http://vocab.org/frbr/core.turtle> .
+<http://vocab.org/frbr/core.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://vocab.org/frbr/core.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://vocab.org/frbr/core.html> <http://purl.org/dc/elements/1.1/format> "text/html" .
+<http://vocab.org/frbr/core.html> <http://www.w3.org/2000/01/rdf-schema#label> "HTML" .
+<http://vocab.org/frbr/core.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://vocab.org/frbr/core.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+_:Bfeb3a73ba732e90841037aa73124fdbb <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bfeb3a73ba732e90841037aa73124fdbb <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfeb3a73ba732e90841037aa73124fdbb <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Group> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D422b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D422a .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D422b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ef <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ee .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ef <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2000/01/rdf-schema#label> "arrangement of"@en .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is arranged."@en .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2994fdd05dab84ce540ac9a2344b51f4 .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B36b6308cec99f61f4a447eb0c5663a7d .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#arrangement> .
+<http://purl.org/vocab/frbr/core#arrangementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bb618d93ebc0392514bc8b053a02dd01e .
+_:Be0237abf09741b7e3da62c9666bcfe9d <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Be0237abf09741b7e3da62c9666bcfe9d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be0237abf09741b7e3da62c9666bcfe9d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B454725d36fd19cb07341daf9db571a67 .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#owner> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2000/01/rdf-schema#label> "owner of"@en .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B1185afa3a289430d9a5e2aba76e81cd5 .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntityOf> .
+<http://purl.org/vocab/frbr/core#ownerOf> <http://www.w3.org/2004/02/skos/core#definition> "An item that is in some way owned an entity."@en .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B3148e37ac9e27b02208c56e29fb52806 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e7 .
+_:B3148e37ac9e27b02208c56e29fb52806 <http://www.w3.org/2000/01/rdf-schema#label> "the union of all events, objects, places and concepts"@en .
+_:B3148e37ac9e27b02208c56e29fb52806 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2004/02/skos/core#definition> "A summarization of a work or expression."@en .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2000/01/rdf-schema#label> "summarization"@en .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2004/02/skos/core#historyNote> _:B7697aaeb47ff8363c378d4bf0ce473e8 .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#summarizationOf> .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2004/02/skos/core#changeNote> _:B784613dc51619a4aaa41ca1d6001dc0e .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdb6cf4be48b5555a8981dee24d42ae03 .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2004/02/skos/core#changeNote> _:B975b68336809bb62b6a8f0c036ed9c6d .
+<http://purl.org/vocab/frbr/core#summarization> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#summarization> <http://www.w3.org/2000/01/rdf-schema#range> _:B8723faade7b19536b216bf81758434ac .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420c .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bc49a946c493082e47c815c7068d2ac59 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bc49a946c493082e47c815c7068d2ac59 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc49a946c493082e47c815c7068d2ac59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:Bef567d4e4c0a08d2d6f7b8788287976c <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bef567d4e4c0a08d2d6f7b8788287976c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bef567d4e4c0a08d2d6f7b8788287976c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B60bba65c06e09103d830337569baae7d <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B60bba65c06e09103d830337569baae7d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B60bba65c06e09103d830337569baae7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2000/01/rdf-schema#label> "abridgement"@en .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B29f650ab7a6514d05f0c1ed07033a573 .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#abridgementOf> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B3511074039f734f02e219819f6c6c804 .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2004/02/skos/core#definition> "An abridgment of an expression."@en .
+<http://purl.org/vocab/frbr/core#abridgement> <http://www.w3.org/2004/02/skos/core#historyNote> _:B77f75f2662c4c14f1cc00c7efff9c951 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4220 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e4 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Place> .
+_:Ba97756bbdf027867e00a102a9700d734 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Ba97756bbdf027867e00a102a9700d734 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba97756bbdf027867e00a102a9700d734 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2004/02/skos/core#definition> "An entity in some way responsible for an endeavour."@en .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2000/01/rdf-schema#label> "responsible entity"@en .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#responsibleEntityOf> .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bfce6179240fdd8d541ebffbbf1870254 .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://www.w3.org/2004/02/skos/core#changeNote> _:Ba78876b34e5efea980efbc472b9b17b8 .
+<http://purl.org/vocab/frbr/core#responsibleEntity> <http://purl.org/dc/terms/issued> "2005-07-15" .
+_:B3634771c03f2d0490187c1904e760453 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421f .
+_:B3634771c03f2d0490187c1904e760453 <http://www.w3.org/2000/01/rdf-schema#label> "the union of all people and corporate bodies"@en .
+_:B3634771c03f2d0490187c1904e760453 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Ba3057e844a46c6a5eb2507aa5920e611 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ff .
+_:Ba3057e844a46c6a5eb2507aa5920e611 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B20476adfe3fe2fecb7421c9e84443962 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B20476adfe3fe2fecb7421c9e84443962 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B20476adfe3fe2fecb7421c9e84443962 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2004/02/skos/core#definition> "The manifestation that is exemplified by a item."@en .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2000/01/rdf-schema#label> "exemplar of"@en .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdbac4c5460de2f4d9fb8cd3e9d47629c .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B331a000dbf28ba8f4776634b472383a6 .
+<http://purl.org/vocab/frbr/core#exemplarOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#exemplar> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421e .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#CorporateBody> .
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bf868a32c55f2058ba10792e7f90955a0 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bf868a32c55f2058ba10792e7f90955a0 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf868a32c55f2058ba10792e7f90955a0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bc27a5c61b5638214625cb27f82da48ec <http://xmlns.com/foaf/0.1/name> "Richard Newman" .
+_:Bc27a5c61b5638214625cb27f82da48ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Be39ed058135b16b8754abf6bf0196b0c <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Be39ed058135b16b8754abf6bf0196b0c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be39ed058135b16b8754abf6bf0196b0c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B29f650ab7a6514d05f0c1ed07033a573 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B29f650ab7a6514d05f0c1ed07033a573 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B29f650ab7a6514d05f0c1ed07033a573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f6 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bc9a20402c427701106d2807d1a58db52 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bc9a20402c427701106d2807d1a58db52 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc9a20402c427701106d2807d1a58db52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:Bb8b4d090fd75ea72eb06d9899d26ba94 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bb8b4d090fd75ea72eb06d9899d26ba94 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bb8b4d090fd75ea72eb06d9899d26ba94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Manifestation or Item" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4202 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:B17d1f81168b5779fc45434b2266c9260 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B17d1f81168b5779fc45434b2266c9260 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B17d1f81168b5779fc45434b2266c9260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ea <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e9 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ea <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .
+_:B7f8b81bbb64c488ca36cdc42186d280c <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B7f8b81bbb64c488ca36cdc42186d280c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B7f8b81bbb64c488ca36cdc42186d280c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+<http://purl.org/vocab/frbr/core#Text> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Text> <http://www.w3.org/2000/01/rdf-schema#label> "text"@en .
+<http://purl.org/vocab/frbr/core#Text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B6c057fa7caeb02e73ea0e87673e5ff46 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B6c057fa7caeb02e73ea0e87673e5ff46 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B6c057fa7caeb02e73ea0e87673e5ff46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4214 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2000/01/rdf-schema#label> "adaption"@en .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdeb14ec80012deb8ea5550eec7febe6c .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#adaptionOf> .
+<http://purl.org/vocab/frbr/core#adaption> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2004/02/skos/core#definition> "An adaption of a work or expression."@en .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2000/01/rdf-schema#range> _:B3293d8ef50d18a9e6378349f63a3f182 .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2004/02/skos/core#historyNote> _:B35246d437815ebc17756635a9472b3c1 .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2004/02/skos/core#changeNote> _:B82efe557d71d1c64050198fc842e2e7e .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd5cd9a37ea48665eac5328c8b9882986 .
+<http://purl.org/vocab/frbr/core#adaption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2004/02/skos/core#definition> "An endeavour incorporating an endeavour."@en .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf764b6a743b0865dcfd3c5dc7e52b9ed .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B4851217a47f90274594aa76a4c8870b6 .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#part> .
+<http://purl.org/vocab/frbr/core#partOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of"@en .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B1ba7f7a5e357123105d8308cedf7c078 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B1ba7f7a5e357123105d8308cedf7c078 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B1ba7f7a5e357123105d8308cedf7c078 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Be0cbc09d1284c740e39406ea77e40771 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Be0cbc09d1284c740e39406ea77e40771 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be0cbc09d1284c740e39406ea77e40771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B57d7b6e57b9c7b434ccc2c96b079f5e8 .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#imitation> .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2a96b59c178f529ef36f9f559af7b526 .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is imitated."@en .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B0880af772badd4522b62ce773e4e6579 .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2000/01/rdf-schema#range> _:Bd9d54872f86603e49efee112f0f7e26d .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:B78850c87633894871bc98cf704e3c880 .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#imitationOf> <http://www.w3.org/2000/01/rdf-schema#label> "imitation of"@en .
+_:Bc31981d1c9857f7d5d8cc16d6479b16c <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fd .
+_:Bc31981d1c9857f7d5d8cc16d6479b16c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bc60161f233048ab0cabb7389bb09885b <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4225 .
+_:Bc60161f233048ab0cabb7389bb09885b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2000/01/rdf-schema#label> "abridgement of"@en .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is abridged."@en .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B87f9018170f2ad75117e5c1ebf350ba2 .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B03150ecc283a1f9f80378ac1c33b9ec2 .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#abridgement> .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be25098cdaa79bb123ea2ead33c75ee1d .
+<http://purl.org/vocab/frbr/core#abridgementOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4226 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bd68afb687f6e44d5d979f9192ffcc4e2 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bd68afb687f6e44d5d979f9192ffcc4e2 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd68afb687f6e44d5d979f9192ffcc4e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://web.resource.org/cc/Notice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Requirement> .
+_:B5382071e03e2dcb62aac5aa1a1b3d3bb <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B5382071e03e2dcb62aac5aa1a1b3d3bb <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B5382071e03e2dcb62aac5aa1a1b3d3bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:B8723faade7b19536b216bf81758434ac <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421b .
+_:B8723faade7b19536b216bf81758434ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Bdbac4c5460de2f4d9fb8cd3e9d47629c <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bdbac4c5460de2f4d9fb8cd3e9d47629c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdbac4c5460de2f4d9fb8cd3e9d47629c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2004/02/skos/core#definition> "An entity in some way responsible for the creation of a work."@en .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator"@en .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#creatorOf> .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bed5bc197d2b4a9c6e40b740c1a8c0191 .
+<http://purl.org/vocab/frbr/core#creator> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2004/02/skos/core#changeNote> _:B41b37d5682fa2a2feb7f01b62f58c402 .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntity> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bdd6b31eab2d997ff9d5739a9c7ce9d19 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bdd6b31eab2d997ff9d5739a9c7ce9d19 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdd6b31eab2d997ff9d5739a9c7ce9d19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B2a96b59c178f529ef36f9f559af7b526 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B2a96b59c178f529ef36f9f559af7b526 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B2a96b59c178f529ef36f9f559af7b526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bd474d153cf8b564fac772cec3e167998 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bd474d153cf8b564fac772cec3e167998 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd474d153cf8b564fac772cec3e167998 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41de <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41dd .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41de <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+_:B49ab8f91edf5a3f9639d17d1bbfbdbbb <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B49ab8f91edf5a3f9639d17d1bbfbdbbb <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B49ab8f91edf5a3f9639d17d1bbfbdbbb <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of geo:SpatialThing" .
+_:Bb618d93ebc0392514bc8b053a02dd01e <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bb618d93ebc0392514bc8b053a02dd01e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bb618d93ebc0392514bc8b053a02dd01e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2004/02/skos/core#definition> "A complement to a work or expression."@en .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#complementOf> .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2000/01/rdf-schema#range> _:Bb0ecc05eff3b51fe1adee620abd9f0c2 .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbd305240a6afa0af60d5f696c8b5405d .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2000/01/rdf-schema#label> "complement"@en .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be2ac0c57000c5f0359068796f215b652 .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B071d02ced785702fb9979cf404ecfc5f .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#complement> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/2004/02/skos/core#historyNote> _:B6cc75846a4c4a6d1f429a7a17585a4bc .
+<http://purl.org/vocab/frbr/core#complement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B3660f1a70a2ee4a36e85cf6e94fe56d8 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B3660f1a70a2ee4a36e85cf6e94fe56d8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B3660f1a70a2ee4a36e85cf6e94fe56d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bd1e6d0432792399b57ee125e8de15814 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bd1e6d0432792399b57ee125e8de15814 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd1e6d0432792399b57ee125e8de15814 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2004/02/skos/core#definition> "An item that is reconfigured."@en .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#reconfiguration> .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://purl.org/dc/terms/issued> "2005-08-10" .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2000/01/rdf-schema#label> "reconfiguration of"@en .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#reconfigurationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bf0a00fa089e339994ac17a90ba6c485e <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf0a00fa089e339994ac17a90ba6c485e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf0a00fa089e339994ac17a90ba6c485e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of wordnet:Work~2" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4208 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B61a43d8cb7fb08f760a79370e99584bd .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#transformation> .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B80deaad3b4ed7fae11503f8440543ba5 .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2000/01/rdf-schema#range> _:B46f9a96942f0a33e07373f064ea07b53 .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is transformed."@en .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2000/01/rdf-schema#label> "transformation of"@en .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf78bb2af914c31b91d9ca85197870f61 .
+<http://purl.org/vocab/frbr/core#transformationOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc0d260ff120ca0727869b63ee1bab62c .
+_:Bdad75b9a28856093e621d3bc2b2184e3 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bdad75b9a28856093e621d3bc2b2184e3 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdad75b9a28856093e621d3bc2b2184e3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2004/02/skos/core#changeNote> _:B9a8d960d091e23d1fcc0b6abe4f34e31 .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2004/02/skos/core#changeNote> _:B026f9ebd0f1a44aff4b3a6db957f4e79 .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2002/07/owl#equivalentClass> _:B57bdc1df30efcd7461d40e99bb926ebc .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2004/02/skos/core#definition> "An organization or group of individuals and/or other organizations."@en .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group two entity 'Corporate Body'."@en .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2000/01/rdf-schema#label> "corporate body"@en .
+<http://purl.org/vocab/frbr/core#CorporateBody> <http://www.w3.org/2004/02/skos/core#changeNote> _:B891840fdd077e7f35dd8a69d3e4ea3fc .
+<http://vocab.org/frbr/core.turtle> <http://purl.org/dc/elements/1.1/format> "text/plain" .
+<http://vocab.org/frbr/core.turtle> <http://www.w3.org/2000/01/rdf-schema#label> "Turtle" .
+<http://vocab.org/frbr/core.turtle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://vocab.org/frbr/core.turtle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2000/01/rdf-schema#label> "supplement of"@en .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bcab77d5a84bbcd2ba2cedf33aa9cb7a5 .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbac4172ec68e9b87387d466d0ced8ca9 .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bbb4f1279e93c75f8b2cfddd5618bfbd8 .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#supplement> .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:Ba46e1dc60b4f8f56035201e05f010d76 .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is supplemented."@en .
+<http://purl.org/vocab/frbr/core#supplementOf> <http://www.w3.org/2000/01/rdf-schema#range> _:B667d413d278a9f0a39b168fdfdd13e01 .
+_:Bdce66bc6a1b8aa60f12d36518bd97c07 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bdce66bc6a1b8aa60f12d36518bd97c07 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdce66bc6a1b8aa60f12d36518bd97c07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bc1d2170a29d8b900ffbaeaf41883bd3f <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bc1d2170a29d8b900ffbaeaf41883bd3f <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc1d2170a29d8b900ffbaeaf41883bd3f <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:Bc65b60e056726853d70e73ba89ce07ae <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bc65b60e056726853d70e73ba89ce07ae <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc65b60e056726853d70e73ba89ce07ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:B87f9018170f2ad75117e5c1ebf350ba2 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B87f9018170f2ad75117e5c1ebf350ba2 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B87f9018170f2ad75117e5c1ebf350ba2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2000/01/rdf-schema#range> _:Bdd2a858e143f08922081eaa7ca5459df .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2000/01/rdf-schema#label> "reproduction of"@en .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bb8b4d090fd75ea72eb06d9899d26ba94 .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#reproduction> .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bab92578c4bed1d20581cb3890e9a8fec .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2004/02/skos/core#definition> "A manifestation or item that is reproduced."@en .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B754666f88643d7f6776463683b478218 .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbcf3ac1e084834dd0014a1cbd8d542ab .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#reproductionOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2004/02/skos/core#definition> "A part of an endeavour."@en .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2004/02/skos/core#changeNote> _:B6d274d96b6e99fcd76e1119bd9fc2bdf .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2004/02/skos/core#changeNote> _:B0fc80c1a1cfbdf6838a7b260b8bcf530 .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#partOf> .
+<http://purl.org/vocab/frbr/core#part> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2000/01/rdf-schema#label> "part"@en .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e5 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Object> .
+_:B80711a446c4ce6e27cd3155495237798 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B80711a446c4ce6e27cd3155495237798 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B80711a446c4ce6e27cd3155495237798 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B46f9a96942f0a33e07373f064ea07b53 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420b .
+_:B46f9a96942f0a33e07373f064ea07b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#producer> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntityOf> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2000/01/rdf-schema#label> "producer of"@en .
+<http://purl.org/vocab/frbr/core#producerOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2004/02/skos/core#definition> "A manifestation that was in some way produced an entity."@en .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B27d57bfdad4109840db03c4a27051a9e .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B50f49d099213b182c3de5569e1f6a984 .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#producerOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+_:B742c758a3399257102fe9d20d4213176 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B742c758a3399257102fe9d20d4213176 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B742c758a3399257102fe9d20d4213176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B27d57bfdad4109840db03c4a27051a9e <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B27d57bfdad4109840db03c4a27051a9e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B27d57bfdad4109840db03c4a27051a9e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://web.resource.org/cc/Reproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Permission> .
+_:B975b68336809bb62b6a8f0c036ed9c6d <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B975b68336809bb62b6a8f0c036ed9c6d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B975b68336809bb62b6a8f0c036ed9c6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B7e25a7b6223f10350c25965466092ac5 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f7 .
+_:B7e25a7b6223f10350c25965466092ac5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B2222b280742ca09b4571141b6ea4a740 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B2222b280742ca09b4571141b6ea4a740 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B2222b280742ca09b4571141b6ea4a740 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2004/02/skos/core#changeNote> _:Ba5cf6855ff3d43c9b16f17d08eee3cbd .
+<http://purl.org/vocab/frbr/core#successor> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#successorOf> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#label> "successor"@en .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba3057e844a46c6a5eb2507aa5920e611 .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#range> _:Bc31981d1c9857f7d5d8cc16d6479b16c .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2004/02/skos/core#changeNote> _:B742c758a3399257102fe9d20d4213176 .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2004/02/skos/core#definition> "A successor to a work or expression."@en .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2004/02/skos/core#historyNote> _:B4b5f18eb867ca2ac0a036913e8be9c51 .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Place> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Event> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2004/02/skos/core#definition> "A tangible or material thing."@en .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Concept> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bfc8e8c5a6447f142896c70ac52bcf806 .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group three entity 'Object'."@en .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf78b77ab937b1c8c123c05f1be2f52f4 .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2000/01/rdf-schema#label> "object"@en .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Object> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2004/02/skos/core#historyNote> _:B3dcdb1749c243e69f6a8a9dbc0ce6962 .
+<http://purl.org/vocab/frbr/core#Object> <http://www.w3.org/2004/02/skos/core#changeNote> _:B46e436feab152523699d8774e24eb905 .
+_:Bf3b721b74d7dc4ea5c8a13be42f0ca3c <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf3b721b74d7dc4ea5c8a13be42f0ca3c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf3b721b74d7dc4ea5c8a13be42f0ca3c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ea .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B4ec8e47230982359ebdf6ba9cf728809 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fb .
+_:B4ec8e47230982359ebdf6ba9cf728809 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B36b6308cec99f61f4a447eb0c5663a7d <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B36b6308cec99f61f4a447eb0c5663a7d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B36b6308cec99f61f4a447eb0c5663a7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#CorporateBody> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bfd8956716c380ca60bb5d3c070631559 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bfd8956716c380ca60bb5d3c070631559 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfd8956716c380ca60bb5d3c070631559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of geo:SpatialThing" .
+_:Bdeb14ec80012deb8ea5550eec7febe6c <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bdeb14ec80012deb8ea5550eec7febe6c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdeb14ec80012deb8ea5550eec7febe6c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B8b7a4eb698106446df67f48c9ae7fa85 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B8b7a4eb698106446df67f48c9ae7fa85 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B8b7a4eb698106446df67f48c9ae7fa85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bba4e57db3c8495f061221389b1c8dfb0 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bba4e57db3c8495f061221389b1c8dfb0 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bba4e57db3c8495f061221389b1c8dfb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bbfb2a4ce79f00bb681917559a8f2ff49 <http://purl.org/dc/elements/1.1/date> "2005-10-14" .
+_:Bbfb2a4ce79f00bb681917559a8f2ff49 <http://purl.org/dc/elements/1.1/creator> <http://iandavis.com/id/me> .
+_:Bbfb2a4ce79f00bb681917559a8f2ff49 <http://www.w3.org/2000/01/rdf-schema#label> "Added type hierarchy"@en .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf469f41051ad44a8c5cb7621260f9551 .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bef567d4e4c0a08d2d6f7b8788287976c .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#exemplar> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2000/01/rdf-schema#label> "exemplar"@en .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2004/02/skos/core#definition> "An item that is an exemplar of a manifestation."@en .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#exemplarOf> .
+<http://purl.org/vocab/frbr/core#exemplar> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+_:B1d569f4f44deee9f71ac9479a4b1e06c <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B1d569f4f44deee9f71ac9479a4b1e06c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B1d569f4f44deee9f71ac9479a4b1e06c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of skos:Concept" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fc .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bc0d260ff120ca0727869b63ee1bab62c <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420d .
+_:Bc0d260ff120ca0727869b63ee1bab62c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B45358d64b8045bb11663286e15da2e4c <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B45358d64b8045bb11663286e15da2e4c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B45358d64b8045bb11663286e15da2e4c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:Ba46e1dc60b4f8f56035201e05f010d76 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Ba46e1dc60b4f8f56035201e05f010d76 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba46e1dc60b4f8f56035201e05f010d76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:B88401a4106a990d1ac4dbd1112b240d7 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B88401a4106a990d1ac4dbd1112b240d7 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B88401a4106a990d1ac4dbd1112b240d7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e0 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdf3d55389e9d29508e1f6950dbc400b8 .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2000/01/rdf-schema#domain> _:B4ec8e47230982359ebdf6ba9cf728809 .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2000/01/rdf-schema#label> "transformation"@en .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#transformation> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2004/02/skos/core#definition> "A transformation of a work or expression."@en .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2004/02/skos/core#changeNote> _:B996fde7036cec644a81fafe5ec48bf21 .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#transformationOf> .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2000/01/rdf-schema#range> _:B950a83ab3ee80d18eed34fb315cac6b4 .
+<http://purl.org/vocab/frbr/core#transformation> <http://www.w3.org/2004/02/skos/core#historyNote> _:Ba0fbf6d1dee3625836030f6b08c79792 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://web.resource.org/cc/DerivativeWorks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Permission> .
+_:Bc3225d8e79cbce1624a130601f35588b <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bc3225d8e79cbce1624a130601f35588b <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc3225d8e79cbce1624a130601f35588b <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421a .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:B18a7ee50008d868ae6913701044d8b46 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B18a7ee50008d868ae6913701044d8b46 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B18a7ee50008d868ae6913701044d8b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41df <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41de .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41df <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Image> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Image> <http://www.w3.org/2000/01/rdf-schema#label> "image"@en .
+<http://purl.org/vocab/frbr/core#Image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Data> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#Data> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Data> <http://www.w3.org/2000/01/rdf-schema#label> "data"@en .
+<http://purl.org/vocab/frbr/core#Data> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f2 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Ba142e5a55c49742cdf20cf36c28aeaea .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2000/01/rdf-schema#label> "realizer of"@en .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntityOf> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#realizer> .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that was in some way realized by an entity."@en .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B6c1ceaff27b4fc30d15c340bd060ed95 .
+<http://purl.org/vocab/frbr/core#realizerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2000/01/rdf-schema#range> _:B18775e9dd2e4ed3c79a269b3404f58f4 .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7e25a7b6223f10350c25965466092ac5 .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bba4e57db3c8495f061221389b1c8dfb0 .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is succeeded."@en .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#successor> .
+<http://purl.org/vocab/frbr/core#successorOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2000/01/rdf-schema#label> "successor of"@en .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bc89c8969d1d27d45e16c71f05566ef8e .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#successorOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be77d24849596f33b686f560d26b0a5a7 .
+_:B4e2e2c5d88012752cfac0a3fdfaa84e5 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B4e2e2c5d88012752cfac0a3fdfaa84e5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B4e2e2c5d88012752cfac0a3fdfaa84e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://web.resource.org/cc/Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Permission> .
+_:B7697aaeb47ff8363c378d4bf0ce473e8 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B7697aaeb47ff8363c378d4bf0ce473e8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B7697aaeb47ff8363c378d4bf0ce473e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2004/02/skos/core#changeNote> _:B82844340a63644b0296025ed20b22bdd .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2004/02/skos/core#changeNote> _:B39bb2661355b0b102014ad588ac113ce .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#realizationOf> .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is an intellectual or artistic realization of a work."@en .
+<http://purl.org/vocab/frbr/core#realization> <http://www.w3.org/2000/01/rdf-schema#label> "realization"@en .
+<http://purl.org/vocab/frbr/core#realization> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#supplement> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#definition> "A supplement to a work or expression."@en .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bb2f1ccb4c7df764e1fa13d67ba1ce66a .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#supplementOf> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#range> _:Bed5b2c0821b82fb625bc2e72afd71bd4 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B82a6bdaaef7f0013ffa8f03b4129373e .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#label> "supplement"@en .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bdad75b9a28856093e621d3bc2b2184e3 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba078de36dcc2a8940ffe86d129e5fd30 .
+<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bec24eab9e3cd3a0133737a4fa0a7a207 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bec24eab9e3cd3a0133737a4fa0a7a207 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bec24eab9e3cd3a0133737a4fa0a7a207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2000/01/rdf-schema#label> "person"@en .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2004/02/skos/core#definition> "A living or dead individual."@en .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be0cbc09d1284c740e39406ea77e40771 .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bb891d09f9c8eede9d048fabe010e6b00 .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group two entity 'Person'."@en .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Person> <http://purl.org/dc/terms/issued> "2005-08-08" .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdf9c5abc98b7e5af7576f211d5110cf5 .
+<http://purl.org/vocab/frbr/core#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2004/02/skos/core#historyNote> _:B49ab8f91edf5a3f9639d17d1bbfbdbbb .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Concept> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2000/01/rdf-schema#label> "place"@en .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2004/02/skos/core#definition> "A location."@en .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Object> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Event> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Place> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2004/02/skos/core#changeNote> _:B211903c534ea6624c39a73bf1849e51f .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group three entity 'Place'."@en .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc1d2170a29d8b900ffbaeaf41883bd3f .
+<http://purl.org/vocab/frbr/core#Place> <http://www.w3.org/2004/02/skos/core#changeNote> _:B9ce42d0b25bf2fd9ff450a3365d57fb4 .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bf279717a709adfab16a816cbc5ddfde2 .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bfd8cd1167a1254b350e286c07126732a .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#imitationOf> .
+<http://purl.org/vocab/frbr/core#imitation> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2000/01/rdf-schema#range> _:B4b8194c2ca9ea384210f52d8459dc07c .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2000/01/rdf-schema#domain> _:Baf57c0e57c67ee489d08b97bbdc51720 .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc9f1e30e6864cc40c431a95b20090a74 .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2000/01/rdf-schema#label> "imitation"@en .
+<http://purl.org/vocab/frbr/core#imitation> <http://www.w3.org/2004/02/skos/core#definition> "An imitation of a work or expression."@en .
+_:Be431cbd34e497c143604292d1e2359c9 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Be431cbd34e497c143604292d1e2359c9 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be431cbd34e497c143604292d1e2359c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+<http://purl.org/vocab/vann/changes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B39e13253c5a574e3273ee079e3497762 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B39e13253c5a574e3273ee079e3497762 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B39e13253c5a574e3273ee079e3497762 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<file:///var/www/vocab.org/www/htdocs/frbr/> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///var/www/vocab.org/www/htdocs/frbr/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+_:B34c37bb67a7170bc0a35014729907905 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B34c37bb67a7170bc0a35014729907905 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B34c37bb67a7170bc0a35014729907905 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:B4b13a013c48ff4a038dfdcbda5ddaf61 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B4b13a013c48ff4a038dfdcbda5ddaf61 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B4b13a013c48ff4a038dfdcbda5ddaf61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of owltime:Event" .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2000/01/rdf-schema#label> "embodiment"@en .
+<http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2004/02/skos/core#definition> "A manifestation that embodies an expression."@en .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#embodimentOf> .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2004/02/skos/core#changeNote> _:B39e13253c5a574e3273ee079e3497762 .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2004/02/skos/core#changeNote> _:B66dfd9c18d4e1eefd912eed90d22bd34 .
+<http://purl.org/vocab/frbr/core#embodiment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4210 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#MovingImage> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#MovingImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#MovingImage> <http://www.w3.org/2000/01/rdf-schema#label> "moving image"@en .
+<http://purl.org/vocab/frbr/core#MovingImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#MovingImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B48a1619d10266f369be9dd5bd440e47c <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B48a1619d10266f369be9dd5bd440e47c <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B48a1619d10266f369be9dd5bd440e47c <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+_:B61a43d8cb7fb08f760a79370e99584bd <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B61a43d8cb7fb08f760a79370e99584bd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B61a43d8cb7fb08f760a79370e99584bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B82a6bdaaef7f0013ffa8f03b4129373e <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B82a6bdaaef7f0013ffa8f03b4129373e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B82a6bdaaef7f0013ffa8f03b4129373e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420e .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4222 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:B82844340a63644b0296025ed20b22bdd <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B82844340a63644b0296025ed20b22bdd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B82844340a63644b0296025ed20b22bdd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e6 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Event> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:B9181d6d473a43dc6b94acdecc4ed6ed6 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B9181d6d473a43dc6b94acdecc4ed6ed6 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B9181d6d473a43dc6b94acdecc4ed6ed6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+_:B454725d36fd19cb07341daf9db571a67 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B454725d36fd19cb07341daf9db571a67 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B454725d36fd19cb07341daf9db571a67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B58e01d837e5568b1cae95e9a9e8d26ed <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B58e01d837e5568b1cae95e9a9e8d26ed <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B58e01d837e5568b1cae95e9a9e8d26ed <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B10186336ba624c9a31c26cc9959d786b <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e3 .
+_:B10186336ba624c9a31c26cc9959d786b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B913a1dd09e6129e208658a8baf231a80 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B913a1dd09e6129e208658a8baf231a80 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B913a1dd09e6129e208658a8baf231a80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2004/02/skos/core#definition> "A recongifuration of an item."@en .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#reconfigurationOf> .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://purl.org/dc/terms/issued> "2005-08-10" .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "reconfiguration"@en .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#reconfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bdb6cf4be48b5555a8981dee24d42ae03 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421d .
+_:Bdb6cf4be48b5555a8981dee24d42ae03 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bd9d27aa24c01f7532a7b528f1c283503 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bd9d27aa24c01f7532a7b528f1c283503 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd9d27aa24c01f7532a7b528f1c283503 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Manifestation or Item" .
+_:Bb9e141dae1046260fd892e06c7a84d43 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bb9e141dae1046260fd892e06c7a84d43 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bb9e141dae1046260fd892e06c7a84d43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bbb4f1279e93c75f8b2cfddd5618bfbd8 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bbb4f1279e93c75f8b2cfddd5618bfbd8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bbb4f1279e93c75f8b2cfddd5618bfbd8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bf184e20a402810c5ed0bcb50ba5b9a4f <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf184e20a402810c5ed0bcb50ba5b9a4f <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf184e20a402810c5ed0bcb50ba5b9a4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bab92578c4bed1d20581cb3890e9a8fec <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bab92578c4bed1d20581cb3890e9a8fec <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bab92578c4bed1d20581cb3890e9a8fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f8 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bf764b6a743b0865dcfd3c5dc7e52b9ed <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf764b6a743b0865dcfd3c5dc7e52b9ed <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf764b6a743b0865dcfd3c5dc7e52b9ed <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4204 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:B8201f0a8e53454c5709c88b69d92d767 <http://purl.org/dc/elements/1.1/date> "2009-05-16" .
+_:B8201f0a8e53454c5709c88b69d92d767 <http://purl.org/dc/elements/1.1/creator> <http://iandavis.com/id/me> .
+_:B8201f0a8e53454c5709c88b69d92d767 <http://www.w3.org/2000/01/rdf-schema#label> "Various minor tidying tasks"@en .
+_:B6d274d96b6e99fcd76e1119bd9fc2bdf <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B6d274d96b6e99fcd76e1119bd9fc2bdf <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B6d274d96b6e99fcd76e1119bd9fc2bdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B6c1ceaff27b4fc30d15c340bd060ed95 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B6c1ceaff27b4fc30d15c340bd060ed95 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B6c1ceaff27b4fc30d15c340bd060ed95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+_:B9a8d960d091e23d1fcc0b6abe4f34e31 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B9a8d960d091e23d1fcc0b6abe4f34e31 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B9a8d960d091e23d1fcc0b6abe4f34e31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2004/02/skos/core#definition> "An action or occurrence."@en .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2004/02/skos/core#historyNote> _:B4b13a013c48ff4a038dfdcbda5ddaf61 .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Event> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Concept> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bfb0224e60a59b39c3fbe30b04f509cbd .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Object> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.isi.edu/~pan/damltime/time-entry.owl#Event> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Place> .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc65b60e056726853d70e73ba89ce07ae .
+<http://purl.org/vocab/frbr/core#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group three entity 'Event'."@en .
+_:B996fde7036cec644a81fafe5ec48bf21 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B996fde7036cec644a81fafe5ec48bf21 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B996fde7036cec644a81fafe5ec48bf21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bba8977fa4432b694f31c16e1744c1edd <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bba8977fa4432b694f31c16e1744c1edd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bba8977fa4432b694f31c16e1744c1edd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B383545d00f186da2b3bd539e6e6b5e97 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B383545d00f186da2b3bd539e6e6b5e97 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B383545d00f186da2b3bd539e6e6b5e97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Bdbf5cde2235a301420778fa7bcf0052d <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bdbf5cde2235a301420778fa7bcf0052d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdbf5cde2235a301420778fa7bcf0052d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bc13c31d62fb79f0811be8551c7d00001 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D422b .
+_:Bc13c31d62fb79f0811be8551c7d00001 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bf36f2a89c2d23991488fe3725cf73cfc <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf36f2a89c2d23991488fe3725cf73cfc <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf36f2a89c2d23991488fe3725cf73cfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4216 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2004/02/skos/core#definition> "An alternative to a manifestation."@en .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#alternateOf> .
+<http://purl.org/vocab/frbr/core#alternate> <http://purl.org/dc/terms/issued> "2005-08-10" .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2000/01/rdf-schema#label> "alternate"@en .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#alternate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B751725621b91d49e9541b8f429510ecd <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B751725621b91d49e9541b8f429510ecd <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B751725621b91d49e9541b8f429510ecd <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://iandavis.com/id/me> <http://xmlns.com/foaf/0.1/name> "Ian Davis" .
+<http://iandavis.com/id/me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B31e026b324c45bb108a02e8efe085ead <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B31e026b324c45bb108a02e8efe085ead <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B31e026b324c45bb108a02e8efe085ead <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bbac4172ec68e9b87387d466d0ced8ca9 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4207 .
+_:Bbac4172ec68e9b87387d466d0ced8ca9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bae38b84f8edf9d1358734d57cc722b1a <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bae38b84f8edf9d1358734d57cc722b1a <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bae38b84f8edf9d1358734d57cc722b1a <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Removed subclass of geo:SpatialThing" .
+_:Bbcf3ac1e084834dd0014a1cbd8d542ab <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4203 .
+_:Bbcf3ac1e084834dd0014a1cbd8d542ab <http://www.w3.org/2000/01/rdf-schema#label> "a manifestation or an item"@en .
+_:Bbcf3ac1e084834dd0014a1cbd8d542ab <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/wordnet/1.6/Work~2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2004/02/skos/core#definition> "Any of the products of artistic or creative endeavour."@en .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents any one of the FRBR group one entities."@en .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bccf428a8d227a1a722917e4d489b49d0 .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc49a946c493082e47c815c7068d2ac59 .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2004/02/skos/core#changeNote> _:B33b493cd4e88311a05ff6ee0d4d3ecce .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#label> "endeavour"@en .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2004/02/skos/core#changeNote> _:B34c37bb67a7170bc0a35014729907905 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4228 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://web.resource.org/cc/License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2004/02/skos/core#definition> "A translation of an expression."@en .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2004/02/skos/core#changeNote> _:B58e01d837e5568b1cae95e9a9e8d26ed .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2000/01/rdf-schema#label> "translation"@en .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#translationOf> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bd586582c52d539e865d811d44699c463 .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2004/02/skos/core#changeNote> _:B3188ea35ca9a555448046e864235b444 .
+<http://purl.org/vocab/frbr/core#translation> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Place> .
+<http://purl.org/vocab/frbr/core#Concept> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bd1e6d0432792399b57ee125e8de15814 .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Subject> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2004/02/skos/core#changeNote> _:B7b1c6e3773e9129b1115ee1e7fdf656d .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Object> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group three entity 'Concept'."@en .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2004/02/skos/core#historyNote> _:B1d569f4f44deee9f71ac9479a4b1e06c .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2004/02/skos/core#definition> "An abstract idea or notion."@en .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Event> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "concept"@en .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/2004/02/skos/core#changeNote> _:B913a1dd09e6129e208658a8baf231a80 .
+<http://purl.org/vocab/frbr/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bfc8e8c5a6447f142896c70ac52bcf806 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bfc8e8c5a6447f142896c70ac52bcf806 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfc8e8c5a6447f142896c70ac52bcf806 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:Bb891d09f9c8eede9d048fabe010e6b00 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bb891d09f9c8eede9d048fabe010e6b00 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bb891d09f9c8eede9d048fabe010e6b00 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2000/01/rdf-schema#label> "manifestation"@en .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2004/02/skos/core#definition> "The physical embodiment of one or more expressions."@en .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bdd6b31eab2d997ff9d5739a9c7ce9d19 .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2004/02/skos/core#changeNote> _:B0820b4caf91da988b405ae850bb0e841 .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bfeb3a73ba732e90841037aa73124fdbb .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group one entity 'Manifestation'."@en .
+<http://purl.org/vocab/frbr/core#Manifestation> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc3225d8e79cbce1624a130601f35588b .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is embodied by a manifestation."@en .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bee270906f985dbdc12d4d00f6d414b46 .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#embodiment> .
+<http://purl.org/vocab/frbr/core#embodimentOf> <http://www.w3.org/2000/01/rdf-schema#label> "embodiment of"@en .
+<http://web.resource.org/cc/Requirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Ba0fbf6d1dee3625836030f6b08c79792 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Ba0fbf6d1dee3625836030f6b08c79792 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba0fbf6d1dee3625836030f6b08c79792 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#CorporateBody> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2000/01/rdf-schema#label> "revision"@en .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bcb81c03af80b333d02cb349a09585fe1 .
+<http://purl.org/vocab/frbr/core#revision> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bef3fedfa43886f2475b4744fe1a619c4 .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2004/02/skos/core#definition> "A revision of an expression."@en .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2004/02/skos/core#changeNote> _:B17d1f81168b5779fc45434b2266c9260 .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#revisionOf> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#revision> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+_:B6cc75846a4c4a6d1f429a7a17585a4bc <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B6cc75846a4c4a6d1f429a7a17585a4bc <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B6cc75846a4c4a6d1f429a7a17585a4bc <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:Bcb81c03af80b333d02cb349a09585fe1 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bcb81c03af80b333d02cb349a09585fe1 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bcb81c03af80b333d02cb349a09585fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Be2ac0c57000c5f0359068796f215b652 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Be2ac0c57000c5f0359068796f215b652 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be2ac0c57000c5f0359068796f215b652 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#producer> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc5b83d9272f62b79636902a00f4ffa6a .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#producerOf> .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntity> .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer"@en .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2004/02/skos/core#definition> "An entity in some way responsible for producing a manifestation."@en .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bd474d153cf8b564fac772cec3e167998 .
+<http://purl.org/vocab/frbr/core#producer> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ba78876b34e5efea980efbc472b9b17b8 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Ba78876b34e5efea980efbc472b9b17b8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Ba78876b34e5efea980efbc472b9b17b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://web.resource.org/cc/Attribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Requirement> .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2004/02/skos/core#changeNote> _:B7f8b81bbb64c488ca36cdc42186d280c .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents any of the FRBR group three entities."@en .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2004/02/skos/core#definition> "Something that may serve as the subject of a work."@en .
+<http://purl.org/vocab/frbr/core#Subject> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2002/07/owl#equivalentClass> _:B3148e37ac9e27b02208c56e29fb52806 .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2004/02/skos/core#changeNote> _:B8b7a4eb698106446df67f48c9ae7fa85 .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#Subject> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bf36f2a89c2d23991488fe3725cf73cfc .
+_:B2217d97028fcb81f2cd629754ad68d77 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B2217d97028fcb81f2cd629754ad68d77 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B2217d97028fcb81f2cd629754ad68d77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:B064a8f033abdaadec6bd4285fd1976a9 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B064a8f033abdaadec6bd4285fd1976a9 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B064a8f033abdaadec6bd4285fd1976a9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:B10186336ba624c9a31c26cc9959d786b .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2004/02/skos/core#definition> "A work or expression that is complemented."@en .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bec24eab9e3cd3a0133737a4fa0a7a207 .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#complement> .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B6c057fa7caeb02e73ea0e87673e5ff46 .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:B60bba65c06e09103d830337569baae7d .
+<http://purl.org/vocab/frbr/core#complementOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2000/01/rdf-schema#label> "complement of"@en .
+<http://purl.org/vocab/frbr/core#complementOf> <http://www.w3.org/2000/01/rdf-schema#range> _:Bfd46ba4674e8a01c954aedd8df2f3d6f .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2004/02/skos/core#definition> "A manifestation that is alternated."@en .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#alternate> .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://purl.org/dc/terms/issued> "2005-08-10" .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2000/01/rdf-schema#label> "alternate of"@en .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#alternateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bfd8cd1167a1254b350e286c07126732a <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bfd8cd1167a1254b350e286c07126732a <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfd8cd1167a1254b350e286c07126732a <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:B46e436feab152523699d8774e24eb905 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B46e436feab152523699d8774e24eb905 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B46e436feab152523699d8774e24eb905 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bf469f41051ad44a8c5cb7621260f9551 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf469f41051ad44a8c5cb7621260f9551 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf469f41051ad44a8c5cb7621260f9551 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#LiteraryWork> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#LiteraryWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#LiteraryWork> <http://www.w3.org/2000/01/rdf-schema#label> "literary work"@en .
+<http://purl.org/vocab/frbr/core#LiteraryWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#LiteraryWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bc7532afc265593eb729dbe9b9766f224 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bc7532afc265593eb729dbe9b9766f224 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc7532afc265593eb729dbe9b9766f224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B35246d437815ebc17756635a9472b3c1 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B35246d437815ebc17756635a9472b3c1 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B35246d437815ebc17756635a9472b3c1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B7eeeb73dfaaeea2663fa36f2d55e8e36 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B7eeeb73dfaaeea2663fa36f2d55e8e36 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B7eeeb73dfaaeea2663fa36f2d55e8e36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B18775e9dd2e4ed3c79a269b3404f58f4 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f5 .
+_:B18775e9dd2e4ed3c79a269b3404f58f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B39b13dca102ffc8e45f1ad265c4c4a67 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4229 .
+_:B39b13dca102ffc8e45f1ad265c4c4a67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B3dcdb1749c243e69f6a8a9dbc0ce6962 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B3dcdb1749c243e69f6a8a9dbc0ce6962 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B3dcdb1749c243e69f6a8a9dbc0ce6962 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made subclass of geo:SpatialThing" .
+<http://purl.org/vocab/frbr/core#Performance> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#Performance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Performance> <http://www.w3.org/2000/01/rdf-schema#label> "performance"@en .
+<http://purl.org/vocab/frbr/core#Performance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Performance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B3188ea35ca9a555448046e864235b444 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B3188ea35ca9a555448046e864235b444 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B3188ea35ca9a555448046e864235b444 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Bb0ecc05eff3b51fe1adee620abd9f0c2 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420f .
+_:Bb0ecc05eff3b51fe1adee620abd9f0c2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0fc80c1a1cfbdf6838a7b260b8bcf530 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B0fc80c1a1cfbdf6838a7b260b8bcf530 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B0fc80c1a1cfbdf6838a7b260b8bcf530 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ed <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ec .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ed <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:B3511074039f734f02e219819f6c6c804 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B3511074039f734f02e219819f6c6c804 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B3511074039f734f02e219819f6c6c804 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B27b268ebd7314bd785b7ba0c20195d09 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B27b268ebd7314bd785b7ba0c20195d09 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B27b268ebd7314bd785b7ba0c20195d09 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:Bdf3d55389e9d29508e1f6950dbc400b8 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Bdf3d55389e9d29508e1f6950dbc400b8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bdf3d55389e9d29508e1f6950dbc400b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:Ba078de36dcc2a8940ffe86d129e5fd30 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f3 .
+_:Ba078de36dcc2a8940ffe86d129e5fd30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bd68afb687f6e44d5d979f9192ffcc4e2 .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2004/02/skos/core#definition> "A work that was in some way created by of an entity."@en .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be39ed058135b16b8754abf6bf0196b0c .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#creator> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntityOf> .
+<http://purl.org/vocab/frbr/core#creatorOf> <http://www.w3.org/2000/01/rdf-schema#label> "creator of"@en .
+_:B9e6ca9a8c3f7450e7491a158ddd5e3a5 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B9e6ca9a8c3f7450e7491a158ddd5e3a5 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B9e6ca9a8c3f7450e7491a158ddd5e3a5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:B57d7b6e57b9c7b434ccc2c96b079f5e8 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B57d7b6e57b9c7b434ccc2c96b079f5e8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B57d7b6e57b9c7b434ccc2c96b079f5e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B57bdc1df30efcd7461d40e99bb926ebc <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4209 .
+_:B57bdc1df30efcd7461d40e99bb926ebc <http://www.w3.org/2000/01/rdf-schema#label> "the union of all organizations and groups"@en .
+_:B57bdc1df30efcd7461d40e99bb926ebc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#translation> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B511f72088a1141c1cacf06dc7da032e1 .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2004/02/skos/core#definition> "An expression that is translated."@en .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2004/02/skos/core#historyNote> _:Be431cbd34e497c143604292d1e2359c9 .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B064a8f033abdaadec6bd4285fd1976a9 .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#label> "translation of"@en .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Bf50e385fc37b91654c2ded2ea53cdd86 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4223 .
+_:Bf50e385fc37b91654c2ded2ea53cdd86 <http://www.w3.org/2000/01/rdf-schema#label> "a manifestation or an item"@en .
+_:Bf50e385fc37b91654c2ded2ea53cdd86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Bfce6179240fdd8d541ebffbbf1870254 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bfce6179240fdd8d541ebffbbf1870254 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bfce6179240fdd8d541ebffbbf1870254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:Be83c1d69879a678cc0b2d3e117007f8b <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41df .
+_:Be83c1d69879a678cc0b2d3e117007f8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B50f49d099213b182c3de5569e1f6a984 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B50f49d099213b182c3de5569e1f6a984 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B50f49d099213b182c3de5569e1f6a984 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fe .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:B33b493cd4e88311a05ff6ee0d4d3ecce <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B33b493cd4e88311a05ff6ee0d4d3ecce <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B33b493cd4e88311a05ff6ee0d4d3ecce <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B026f9ebd0f1a44aff4b3a6db957f4e79 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B026f9ebd0f1a44aff4b3a6db957f4e79 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B026f9ebd0f1a44aff4b3a6db957f4e79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Extracted definition from existing comment" .
+_:B9689b86a3c3446367d33810ef217d696 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B9689b86a3c3446367d33810ef217d696 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B9689b86a3c3446367d33810ef217d696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D420a .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D420b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bd048f821ad52ee5fd93c0e3ce9cf415b <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bd048f821ad52ee5fd93c0e3ce9cf415b <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bd048f821ad52ee5fd93c0e3ce9cf415b <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B511f72088a1141c1cacf06dc7da032e1 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B511f72088a1141c1cacf06dc7da032e1 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B511f72088a1141c1cacf06dc7da032e1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B03150ecc283a1f9f80378ac1c33b9ec2 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B03150ecc283a1f9f80378ac1c33b9ec2 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B03150ecc283a1f9f80378ac1c33b9ec2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B5a0a57c749ad979c4df20a9eae7345d3 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4227 .
+_:B5a0a57c749ad979c4df20a9eae7345d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e2 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41e3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#Work> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2004/02/skos/core#definition> "An abstract notion of an artistic or intellectual creation."@en .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group one entity 'Work'."@en .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2004/02/skos/core#changeNote> _:B31e026b324c45bb108a02e8efe085ead .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/wordnet/1.6/Work~2> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bd048f821ad52ee5fd93c0e3ce9cf415b .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2004/02/skos/core#changeNote> _:B31801aaae5290a07e53ce7140cc56026 .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2000/01/rdf-schema#label> "work"@en .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bf0a00fa089e339994ac17a90ba6c485e .
+_:Bf78bb2af914c31b91d9ca85197870f61 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bf78bb2af914c31b91d9ca85197870f61 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf78bb2af914c31b91d9ca85197870f61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#realizer> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2004/02/skos/core#changeNote> _:B18a7ee50008d868ae6913701044d8b46 .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc7532afc265593eb729dbe9b9766f224 .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2000/01/rdf-schema#label> "realizer"@en .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2004/02/skos/core#definition> "An entity in some way responsible for realizing an expression."@en .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#realizerOf> .
+<http://purl.org/vocab/frbr/core#realizer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#responsibleEntity> .
+_:B211903c534ea6624c39a73bf1849e51f <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B211903c534ea6624c39a73bf1849e51f <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B211903c534ea6624c39a73bf1849e51f <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D421c .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D421d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bf279717a709adfab16a816cbc5ddfde2 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bf279717a709adfab16a816cbc5ddfde2 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bf279717a709adfab16a816cbc5ddfde2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:B667d413d278a9f0a39b168fdfdd13e01 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4205 .
+_:B667d413d278a9f0a39b168fdfdd13e01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#realization> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B751725621b91d49e9541b8f429510ecd .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2004/02/skos/core#changeNote> _:B27b268ebd7314bd785b7ba0c20195d09 .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#label> "realization of"@en .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2004/02/skos/core#definition> "The work that has been realized by an expression."@en .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bc9a20402c427701106d2807d1a58db52 .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2004/02/skos/core#changeNote> _:B45358d64b8045bb11663286e15da2e4c .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2004/02/skos/core#changeNote> _:B0064c982a60f9f11095373cc1eab1101 .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2004/02/skos/core#definition> "A realization of a single work usually in a physical form."@en .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2000/01/rdf-schema#comment> "This class corresponds to the FRBR group one entity 'Expression'."@en .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2000/01/rdf-schema#label> "expression"@en .
+<http://purl.org/vocab/frbr/core#Expression> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f4 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4200 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:Bed5b2c0821b82fb625bc2e72afd71bd4 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41f1 .
+_:Bed5b2c0821b82fb625bc2e72afd71bd4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Be77d24849596f33b686f560d26b0a5a7 <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:Be77d24849596f33b686f560d26b0a5a7 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be77d24849596f33b686f560d26b0a5a7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B0820b4caf91da988b405ae850bb0e841 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B0820b4caf91da988b405ae850bb0e841 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B0820b4caf91da988b405ae850bb0e841 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added comment" .
+_:Be25098cdaa79bb123ea2ead33c75ee1d <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Be25098cdaa79bb123ea2ead33c75ee1d <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Be25098cdaa79bb123ea2ead33c75ee1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://vocab.org/frbr/core.json> <http://purl.org/dc/elements/1.1/format> "application/json" .
+<http://vocab.org/frbr/core.json> <http://www.w3.org/2000/01/rdf-schema#label> "JSON" .
+<http://vocab.org/frbr/core.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://vocab.org/frbr/core.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://web.resource.org/cc/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2222b280742ca09b4571141b6ea4a740 .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2004/02/skos/core#changeNote> _:B3660f1a70a2ee4a36e85cf6e94fe56d8 .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2004/02/skos/core#historyNote> _:B9181d6d473a43dc6b94acdecc4ed6ed6 .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2000/01/rdf-schema#label> "arrangement"@en .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#arrangementOf> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#arrangement> <http://www.w3.org/2004/02/skos/core#definition> "An arrangement of an expression."@en .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D4212 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D4213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:Bef3fedfa43886f2475b4744fe1a619c4 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:Bef3fedfa43886f2475b4744fe1a619c4 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bef3fedfa43886f2475b4744fe1a619c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Expression" .
+<http://purl.org/vocab/frbr/core#Sound> <http://purl.org/dc/terms/issued> "2005-10-14" .
+<http://purl.org/vocab/frbr/core#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Sound> <http://www.w3.org/2000/01/rdf-schema#label> "sound"@en .
+<http://purl.org/vocab/frbr/core#Sound> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B891840fdd077e7f35dd8a69d3e4ea3fc <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B891840fdd077e7f35dd8a69d3e4ea3fc <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B891840fdd077e7f35dd8a69d3e4ea3fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D41fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:Baf57c0e57c67ee489d08b97bbdc51720 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D41ef .
+_:Baf57c0e57c67ee489d08b97bbdc51720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2004/02/skos/core#definition> "The subject of a work."@en .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2004/02/skos/core#changeNote> _:B1ba7f7a5e357123105d8308cedf7c078 .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2004/02/skos/core#changeNote> _:B383545d00f186da2b3bd539e6e6b5e97 .
+<http://purl.org/vocab/frbr/core#subject> <http://purl.org/dc/terms/issued> "2005-07-15" .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2000/01/rdf-schema#range> _:Be83c1d69879a678cc0b2d3e117007f8b .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core> .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bc9f1e30e6864cc40c431a95b20090a74 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:Bc9f1e30e6864cc40c431a95b20090a74 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:Bc9f1e30e6864cc40c431a95b20090a74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+_:B4b5f18eb867ca2ac0a036913e8be9c51 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:B4b5f18eb867ca2ac0a036913e8be9c51 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B4b5f18eb867ca2ac0a036913e8be9c51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added domain and range of Work or Expression" .
+_:B82efe557d71d1c64050198fc842e2e7e <http://purl.org/dc/elements/1.1/date> "2005-08-09" .
+_:B82efe557d71d1c64050198fc842e2e7e <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B82efe557d71d1c64050198fc842e2e7e <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definition" .
+_:B0064c982a60f9f11095373cc1eab1101 <http://purl.org/dc/elements/1.1/date> "2005-08-08" .
+_:B0064c982a60f9f11095373cc1eab1101 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:B0064c982a60f9f11095373cc1eab1101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy property referring to FRBR core namespace" .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

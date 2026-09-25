@@ -1,0 +1,164 @@
+@prefix :       		<http://semweb.mmlab.be/ns/dicera#> .
+@prefix xsd:    		<http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:   		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    		<http://www.w3.org/2002/07/owl#> .
+@prefix dct:    		<http://purl.org/dc/terms/> .
+@prefix foaf:   		<http://xmlns.com/foaf/0.1/> .
+
+<http://semweb.mmlab.be/ns/dicera#ontology>
+    a owl:Ontology ;
+    dct:title "Dicera (DIgital Comic book ERA vocabulary)"^^xsd:string ;
+    dct:description "Ontology designed to support the addition of metadata to (digital) comics."^^xsd:string ;
+    dct:creator [foaf:name "Pieter Heyvaert"^^xsd:string;] ;
+    .
+    
+<http://semweb.mmlab.be/ns/dicera>
+    foaf:primaryTopic <http://semweb.mmlab.be/ns/dicera#ontology>;
+    .
+
+#use dbpedia-owl:Comic instead
+#:Comic
+#    a owl:Class ;
+#    rdfs:comment "This class represents a comic entity."^^xsd:string ;
+#    .
+    
+:StoryArc
+    a owl:Class ;
+    rdfs:comment "This class represents a story arc entity."^^xsd:string ;
+    .
+
+#use dbpedia-owl:literaryGenre instead
+#:Genre
+#    a owl:Class ;
+#   rdfs:comment "This class represents a genre entity."^^xsd:string ;
+#    .
+
+:GenreMatch
+	a owl:Class ;
+	rdfs:comment "This class is used to connect a genre to the matches property."^^xsd:string ;
+	.
+
+:ContentRating
+    a owl:Class ;
+    rdfs:comment "This class represents a content rating entity."^^xsd:string ;
+    .
+
+#use dbpedia-owl:ComicsCharacter
+#:Character
+#    a owl:Class ;
+#    rdfs:comment "This class represents a character entity."^^xsd:string ;
+#    .
+
+:Issue
+    a owl:Class ;
+    rdfs:comment "This class is used to denote the issue number of comic and to connect it to a story arc."^^xsd:string ;
+    .
+
+:Cover
+    a owl:Class ;
+    rdfs:comment "This class represents the cover (of a comic book) entity."^^xsd:string ;
+    .
+
+:Balloon
+    a owl:Class ;
+    rdfs:comment "This class represents a speech balloon in a comic."^^xsd:string ;
+    .
+
+:Caption
+    a owl:Class ;
+    rdfs:comment "This class represents a caption in a comic."^^xsd:string ;
+    .
+
+:Effect
+    a owl:Class ;
+    rdfs:comment "This class represents an effect (i.e. 'Zzzz', 'Boem') in a comic."^^xsd:string ;
+    .
+
+#use dbpedia-owl:Place instead
+#:Location
+#    a owl:Class ;
+#    rdfs:comment "This class represent a location, i.e. a place where a scene (or the whole comics) takes place."^^xsd:string ;
+#    .
+
+:Text
+    a owl:Class ;
+    rdfs:comment "This class represents the text that is visually presented to the reader."^^xsd:string ;
+    .
+
+:Audio
+    a owl:Class ;
+    rdfs:comment "This class represents audio that can be played to the reader i.e. using Javascript."^^xsd:string ;
+    .
+
+:Panel
+    a owl:Class ;
+    rdfs:comment "This class represents a panel on the page of a comic."^^xsd:string ;
+    .
+
+:Page
+    a owl:Class ;
+    rdfs:comment "This class represents the page of a comic."^^xsd:string ;
+    .
+
+:Layer
+    a owl:Class ;
+    rdfs:comment "This class represents the layer of panel, each layer can hold multiple characters, objects etc."^^xsd:string ;
+    .
+
+:has
+    a owl:ObjectProperty ;
+    rdfs:comment "Generic property to connect one entity to another."^^xsd:string ;
+    owl:inverseOf :belongsTo ;
+    .
+
+:talksAbout
+    a owl:ObjectProperty ;
+    rdfs:comment "This property denotes whether a comic concept talks about something/someone."^^xsd:string ;
+    .
+
+:withEmotion
+    a owl:ObjectProperty ;
+    rdfs:comment "This property tells what emotion is expressed."^^xsd:string ;
+    .
+
+:hasReadingOrder
+    a owl:DatatypeProperty ;
+    rdfs:comment "The order in which an object has to be read."^^xsd:string ;
+    .
+
+:usesSystem
+    a owl:ObjectProperty ;
+    rdfs:domain :ContentRating ;
+    rdfs:comment "This property tells what content rating system a certain content rating entity uses."^^xsd:string ;
+    .
+
+:hasRating
+    a owl:ObjectProperty ;
+    rdfs:domain :ContentRating ;
+    rdfs:comment "This property tells what rating a certain content rating has for the comic."^^xsd:string ;
+    .
+
+:matches
+    a owl:DatatypeProperty ;
+    rdfs:domain :GenreMatch ;
+    rdfs:comment "This property tells how many percent of the genre actually matches with the story of the comic."^^xsd:string ;
+    .
+
+:number
+    a owl:DatatypeProperty ;
+    rdfs:domain :Issue ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "This property tells what the issue number is of the issue."^^xsd:string ;
+    .
+
+:says
+    a owl:DatatypeProperty ;
+    rdfs:domain :Text ;
+    rdfs:comment "This property denotes the acutal text that is being is said by a Text class."^^xsd:string ;
+    .
+
+:isSaidThrough
+    a owl:ObjectProperty ;
+    rdfs:domain :Text ;
+    rdfs:comment "This property tells through which element (caption, balloon) the text inside a Text class is being said."^^xsd:string ;
+    .

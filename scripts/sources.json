@@ -1,0 +1,3104 @@
+{
+    "a-loc": {
+        "download": "https://w3id.org/arco/ontology/location/",
+        "namespace": "https://w3id.org/arco/ontology/location/",
+        "prefix": "a-loc",
+        "tags": [
+            "museums",
+            "places"
+        ]
+    },
+    "adms": {
+        "copy_from": "LOV",
+        "download": "http://www.w3.org/ns/adms#",
+        "namespace": "http://www.w3.org/ns/adms#",
+        "prefix": "adms",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "agls": {
+        "copy_from": "LOV",
+        "download": "http://www.agls.gov.au/agls/terms/",
+        "namespace": "http://www.agls.gov.au/agls/terms/",
+        "prefix": "agls",
+        "tags": [
+            "general"
+        ]
+    },
+    "agrelon": {
+        "download": "http://d-nb.info/standards/elementset/agrelon#",
+        "namespace": "http://d-nb.info/standards/elementset/agrelon#",
+        "prefix": "agrelon",
+        "tags": [
+            "people"
+        ]
+    },
+    "aiiso": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/vocab/aiiso/schema",
+        "namespace": "http://purl.org/vocab/aiiso/schema#",
+        "prefix": "aiiso",
+        "tags": [
+            "people"
+        ]
+    },
+    "amo": {
+        "download": "https://sparontologies.github.io/amo/current/amo.xml",
+        "namespace": "http://purl.org/spar/amo/",
+        "prefix": "amo",
+        "tags": [
+            "humanities",
+            "publishing",
+            "value-annotations"
+        ]
+    },
+    "aos": {
+        "download": "http://rdf.muninn-project.org/ontologies/appearances#",
+        "namespace": "http://rdf.muninn-project.org/ontologies/appearances#",
+        "prefix": "aos",
+        "tags": [
+            "people"
+        ]
+    },
+    "arch": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/archival/vocab/arch#",
+        "namespace": "http://purl.org/archival/vocab/arch#",
+        "prefix": "arch",
+        "tags": [
+            "archives"
+        ]
+    },
+    "arco": {
+        "download": "https://w3id.org/arco/ontology/core/",
+        "namespace": "https://w3id.org/arco/ontology/core/",
+        "prefix": "arco",
+        "tags": [
+            "museums"
+        ]
+    },
+    "as": {
+        "download": "https://www.w3.org/ns/activitystreams-owl",
+        "namespace": "https://www.w3.org/ns/activitystreams#",
+        "prefix": "as",
+        "tags": [
+            "general"
+        ]
+    },
+    "awol": {
+        "alternates": [
+            "http://bblfish.net/work/atom-owl/2006-06-06/#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://bblfish.net/work/atom-owl/2006-06-06/AtomOwl.ttl",
+        "namespace": "http://bblfish.net/work/atom-owl/2006-06-06/#",
+        "prefix": "awol",
+        "tags": [
+            "aggregation"
+        ]
+    },
+    "bco": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.obolibrary.org/obo/bco.owl/",
+        "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
+        "prefix": "bco",
+        "tags": [
+            "science"
+        ]
+    },
+    "bdo": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.bdrc.io/ontology/core/",
+        "namespace": "http://purl.bdrc.io/ontology/core/",
+        "prefix": "bdo",
+        "tags": [
+            "humanities",
+            "libraries",
+            "people"
+        ]
+    },
+    "beijing-palace-lamp-metadata-standards": {
+        "download": "http://metadataregistry.org/schema/show/id/237.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/Hz/",
+        "prefix": "bplamp",
+        "tags": [
+            "museums"
+        ]
+    },
+    "bflc": {
+        "alternates": [
+            "http://id.loc.gov/ontologies/bflc/"
+        ],
+        "download": "http://id.loc.gov/ontologies/bflc.rdf",
+        "namespace": "http://id.loc.gov/ontologies/bflc/",
+        "prefix": "bflc",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "bibframe": {
+        "download": "http://id.loc.gov/ontologies/bibframe.rdf",
+        "namespace": "http://id.loc.gov/ontologies/bibframe/",
+        "prefix": "bf",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "bibo": {
+        "download": "http://purl.org/ontology/bibo/",
+        "namespace": "http://purl.org/ontology/bibo/",
+        "prefix": "bibo",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "bibtex": {
+        "download": "http://purl.org/net/nknouf/ns/bibtex#",
+        "namespace": "http://purl.org/net/nknouf/ns/bibtex#",
+        "prefix": "bibtex",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "bio": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/vocab/bio/0.1/",
+        "namespace": "http://purl.org/vocab/bio/0.1/",
+        "prefix": "bio",
+        "tags": [
+            "people"
+        ]
+    },
+    "bioc": {
+        "alternates": [
+            "http://deductions.github.io/biological-collections.owl.ttl"
+        ],
+        "download": "http://deductions.github.io/biological-collections.owl.ttl#",
+        "namespace": "http://deductions.github.io/biological-collections.owl.ttl#",
+        "prefix": "bioc",
+        "tags": [
+            "science"
+        ]
+    },
+    "biocrm": {
+        "download": "http://ldf.fi/schema/bioc/",
+        "namespace": "http://ldf.fi/schema/bioc/",
+        "prefix": "biocrm",
+        "tags": [
+            "people",
+            "humanities",
+            "museums"
+        ]
+    },
+    "biol": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/NET/biol/ns#",
+        "namespace": "http://purl.org/NET/biol/ns#",
+        "prefix": "biol",
+        "tags": [
+            "science"
+        ]
+    },
+    "biro": {
+        "alternates": [
+            "http://purl.org/spar/biro/"
+        ],
+        "download": "http://speronitomcat.web.cs.unibo.it:8080/LODE/source?url=http://purl.org/spar/biro",
+        "namespace": "http://purl.org/spar/biro/",
+        "prefix": "biro",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "bkb": {
+        "download": "https://budayakb.cs.ui.ac.id/ns",
+        "namespace": "https://budayakb.cs.ui.ac.id/ns#",
+        "prefix": "bkb",
+        "tags": [
+            "museums",
+            "places"
+        ]
+    },
+    "blt": {
+        "copy_from": "LOV",
+        "download": "http://www.bl.uk/schemas/bibliographic/blterms#",
+        "namespace": "http://www.bl.uk/schemas/bibliographic/blterms#",
+        "prefix": "blt",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "botany": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/NET/biol/botany#",
+        "namespace": "http://purl.org/NET/biol/botany#",
+        "prefix": "botany",
+        "tags": [
+            "science"
+        ]
+    },
+    "c4o": {
+        "download": "http://purl.org/spar/c4o/",
+        "namespace": "http://purl.org/spar/c4o/",
+        "prefix": "c4o",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "cal": {
+        "copy_from": "LOV",
+        "download": "http://www.w3.org/2002/12/cal/ical#",
+        "namespace": "http://www.w3.org/2002/12/cal/ical#",
+        "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
+        "prefix": "cal",
+        "tags": [
+            "time"
+        ],
+        "title": "RDF Calendar",
+        "title_source": "W3C note \"RDF Calendar - an application of the Resource Description Framework to iCalendar Data\"; the namespace page was not reachable (406)."
+    },
+    "cataloging-cultural-objects": {
+        "download": "http://metadataregistry.org/schema/show/id/91.rdf",
+        "namespace": "http://opaquenamespace/ns/cco/",
+        "prefix": "cco",
+        "tags": [
+            "museums"
+        ]
+    },
+    "cbo": {
+        "download": "http://comicmeta.org/cbo/",
+        "namespace": "http://comicmeta.org/cbo/",
+        "prefix": "cbo",
+        "tags": [
+            "humanities",
+            "libraries"
+        ]
+    },
+    "cc": {
+        "alternates": [
+            "http://creativecommons.org/ns#"
+        ],
+        "download": "http://creativecommons.org/schema.rdf",
+        "namespace": "http://creativecommons.org/ns#",
+        "prefix": "cc",
+        "tags": [
+            "rights"
+        ],
+        "title": "Creative Commons Rights Expression Language"
+    },
+    "cdesc": {
+        "download": "https://w3id.org/arco/ontology/context-description/",
+        "namespace": "https://w3id.org/arco/ontology/context-description/",
+        "prefix": "cdesc",
+        "tags": [
+            "museums"
+        ]
+    },
+    "cdtype": {
+        "download": "http://purl.org/cld/cdtype/",
+        "namespace": "http://purl.org/cld/cdtype/",
+        "prefix": "cdtype",
+        "tags": [
+            "libraries",
+            "archives"
+        ]
+    },
+    "cerif": {
+        "copy_from": "LOV",
+        "download": "http://www.eurocris.org/ontologies/cerif/1.3#",
+        "namespace": "http://www.eurocris.org/ontologies/cerif/1.3#",
+        "prefix": "cerif",
+        "tags": [
+            "publishing",
+            "people"
+        ]
+    },
+    "cevent": {
+        "download": "https://w3id.org/arco/ontology/cultural-event/",
+        "namespace": "https://w3id.org/arco/ontology/cultural-event/",
+        "prefix": "cevent",
+        "tags": [
+            "museums",
+            "time"
+        ]
+    },
+    "cidoc-crm": {
+        "download": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3.rdfs",
+        "namespace": "http://www.cidoc-crm.org/cidoc-crm/",
+        "prefix": "crm",
+        "tags": [
+            "museums"
+        ],
+        "title": "CIDOC CRM"
+    },
+    "cis": {
+        "download": "http://dati.beniculturali.it/cis/",
+        "namespace": "http://dati.beniculturali.it/cis/",
+        "prefix": "cis",
+        "tags": [
+            "museums",
+            "places",
+            "time"
+        ]
+    },
+    "cito": {
+        "download": "http://purl.org/spar/cito/",
+        "namespace": "http://purl.org/spar/cito/",
+        "prefix": "cito",
+        "tags": [
+            "publishing",
+            "value-annotations"
+        ]
+    },
+    "citof": {
+        "copy_from": "LOV",
+        "download": "http://www.essepuntato.it/2013/03/cito-functions/",
+        "namespace": "http://www.essepuntato.it/2013/03/cito-functions/",
+        "prefix": "citof",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "cl": {
+        "download": "http://advene.org/ns/cinelab/ld#",
+        "namespace": "http://advene.org/ns/cinelab/ld#",
+        "prefix": "cl",
+        "tags": [
+            "media"
+        ]
+    },
+    "cld": {
+        "download": "http://purl.org/cld/terms/",
+        "namespace": "http://purl.org/cld/terms/",
+        "prefix": "cld",
+        "tags": [
+            "libraries",
+            "archives"
+        ]
+    },
+    "cnt": {
+        "download": "http://www.w3.org/2011/content#",
+        "namespace": "http://www.w3.org/2011/content#",
+        "prefix": "cnt",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "co": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/co/",
+        "namespace": "http://purl.org/co/",
+        "prefix": "co",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "coun": {
+        "copy_from": "LOV",
+        "download": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
+        "namespace": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
+        "prefix": "coun",
+        "tags": [
+            "places"
+        ],
+        "title": "ISO 3166 Country Codes",
+        "title_source": "Not confirmed with the publisher: the file has no title and the publisher's page was unreachable or carries none. Taken from LOV."
+    },
+    "country-and-subdivision-representation": {
+        "download": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
+        "namespace": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
+        "prefix": "lcc-cr",
+        "tags": [
+            "places"
+        ]
+    },
+    "cpm": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://catalogus-professorum.org/cpm/2/",
+        "namespace": "http://catalogus-professorum.org/cpm/2/",
+        "prefix": "cpm",
+        "tags": [
+            "people",
+            "humanities"
+        ]
+    },
+    "crmarchaeo": {
+        "download": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
+        "prefix": "crmarchaeo",
+        "tags": [
+            "museums"
+        ],
+        "title": "CRMarchaeo",
+        "title_source": "cidoc-crm.org"
+    },
+    "crmdig": {
+        "download": "https://cidoc-crm.org/sites/default/files/CRMdig_v3.2.1.rdfs",
+        "namespace": "http://www.ics.forth.gr/isl/CRMdig/",
+        "prefix": "crmdig",
+        "tags": [
+            "museums",
+            "media",
+            "rights"
+        ],
+        "title": "CRMdig",
+        "title_source": "cidoc-crm.org"
+    },
+    "crmeh": {
+        "alternates": [
+            "http://purl.org/crmeh"
+        ],
+        "download": "http://purl.org/crmeh#CRMEH",
+        "namespace": "http://purl.org/crmeh#",
+        "prefix": "crmeh",
+        "tags": [
+            "museums"
+        ]
+    },
+    "crminf": {
+        "download": "http://www.cidoc-crm.org/extensions/crminf/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crminf/",
+        "prefix": "crminf",
+        "tags": [
+            "museums",
+            "humanities",
+            "value-annotations"
+        ],
+        "title": "CRMinf",
+        "title_source": "cidoc-crm.org"
+    },
+    "crmsci": {
+        "download": "http://www.cidoc-crm.org/extensions/crmsci/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crmsci/",
+        "prefix": "crmsci",
+        "tags": [
+            "museums",
+            "science"
+        ],
+        "title": "CRMsci",
+        "title_source": "cidoc-crm.org"
+    },
+    "cro": {
+        "download": "http://rhizomik.net/ontologies/copyrightonto.owl#",
+        "namespace": "http://rhizomik.net/ontologies/copyrightonto.owl#",
+        "prefix": "cro",
+        "tags": [
+            "rights"
+        ]
+    },
+    "ctag": {
+        "alternates": [
+            "http://commontag.org/ns#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://commontag.org/ns",
+        "namespace": "http://commontag.org/ns#",
+        "prefix": "ctag",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "ctlog": {
+        "download": "https://w3id.org/arco/ontology/catalogue/",
+        "namespace": "https://w3id.org/arco/ontology/catalogue/",
+        "prefix": "ctlog",
+        "tags": [
+            "museums"
+        ]
+    },
+    "cwork": {
+        "copy_from": "LOV",
+        "download": "http://www.bbc.co.uk/ontologies/creativework/",
+        "namespace": "http://www.bbc.co.uk/ontologies/creativework/",
+        "prefix": "cwork",
+        "tags": [
+            "media"
+        ]
+    },
+    "cwrc": {
+        "copy_from": "LOV",
+        "download": "http://sparql.cwrc.ca/ontologies/cwrc#",
+        "namespace": "http://sparql.cwrc.ca/ontologies/cwrc#",
+        "prefix": "cwrc",
+        "tags": [
+            "humanities",
+            "people"
+        ]
+    },
+    "cwrc-illness-injury": {
+        "alternates": [
+            "http://sparql.cwrc.ca/ontologies/ii"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "http://sparql.cwrc.ca/ontologies/ii#",
+        "namespace": "http://sparql.cwrc.ca/ontologies/ii#",
+        "prefix": "ii",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "daia": {
+        "alternates": [
+            "http://purl.org/ontology/daia/"
+        ],
+        "copy_from": "LOV",
+        "download": "https://github.com/gbv/daia/blob/implementations/schemas/daia.owl.n3",
+        "namespace": "http://purl.org/ontology/daia/",
+        "prefix": "daia",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "datatypes-edtf": {
+        "download": "http://id.loc.gov/datatypes/edtf/",
+        "namespace": "http://id.loc.gov/datatypes/edtf/",
+        "prefix": "edtf",
+        "tags": [
+            "time"
+        ],
+        "title": "Extended Date/Time Format (EDTF)",
+        "title_source": "Library of Congress name for the standard; id.loc.gov returned 403."
+    },
+    "dba": {
+        "download": "https://w3id.org/dba/ontology/",
+        "namespace": "https://w3id.org/dba/ontology/",
+        "prefix": "dba",
+        "tags": [
+            "archives"
+        ]
+    },
+    "dbpedia-owl": {
+        "copy_from": "LOV",
+        "download": "http://dbpedia.org/ontology/",
+        "namespace": "http://dbpedia.org/ontology/",
+        "notes": "The live file fails the import check (imports nothing); the LOV copy imports. Serve the rescued copy until the live file imports again.",
+        "prefix": "dbpedia-owl",
+        "tags": [
+            "general"
+        ]
+    },
+    "dc11": {
+        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl",
+        "namespace": "http://purl.org/dc/elements/1.1/",
+        "prefix": "dc11",
+        "tags": [
+            "general"
+        ]
+    },
+    "dcam": {
+        "alternates": [
+            "http://purl.org/dc/dcam/"
+        ],
+        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_abstract_model.ttl",
+        "namespace": "http://purl.org/dc/dcam/",
+        "prefix": "dcam",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "dcat": {
+        "download": "https://www.w3.org/ns/dcat.ttl",
+        "namespace": "http://www.w3.org/ns/dcat#",
+        "prefix": "dcat",
+        "tags": [
+            "linked-data",
+            "science"
+        ]
+    },
+    "dcite": {
+        "download": "http://purl.org/spar/datacite/",
+        "namespace": "http://purl.org/spar/datacite/",
+        "prefix": "dcite",
+        "tags": [
+            "publishing",
+            "science"
+        ]
+    },
+    "dcndl": {
+        "download": "http://ndl.go.jp/dcndl/terms/",
+        "namespace": "http://ndl.go.jp/dcndl/terms/",
+        "prefix": "dcndl",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "dcterms": {
+        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
+        "namespace": "http://purl.org/dc/terms/",
+        "notes": "The file's own title is \"DCMI Metadata Terms - other\", naming the terms beyond the fifteen original elements; DCMI calls the whole set \"DCMI Metadata Terms\".",
+        "prefix": "dcterms",
+        "tags": [
+            "general",
+            "value-annotations"
+        ],
+        "title": "DCMI Metadata Terms"
+    },
+    "dctype": {
+        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl",
+        "namespace": "http://purl.org/dc/dcmitype/",
+        "prefix": "dctype",
+        "tags": [
+            "general"
+        ]
+    },
+    "ddesc": {
+        "download": "https://w3id.org/arco/ontology/denotative-description/",
+        "namespace": "https://w3id.org/arco/ontology/denotative-description/",
+        "prefix": "ddesc",
+        "tags": [
+            "museums"
+        ]
+    },
+    "deo": {
+        "download": "http://purl.org/spar/deo/",
+        "namespace": "http://purl.org/spar/deo/",
+        "prefix": "deo",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "dicera": {
+        "alternates": [
+            "http://semweb.mmlab.be/ns/dicera"
+        ],
+        "download": "http://semweb.mmlab.be/ns/dicera#ontology",
+        "namespace": "http://semweb.mmlab.be/ns/dicera#",
+        "prefix": "dicera",
+        "tags": [
+            "humanities",
+            "media"
+        ]
+    },
+    "disco": {
+        "download": "http://rdf-vocabulary.ddialliance.org/discovery#",
+        "namespace": "http://rdf-vocabulary.ddialliance.org/discovery#",
+        "prefix": "disco",
+        "tags": [
+            "science"
+        ]
+    },
+    "dm2e": {
+        "copy_from": "LOV",
+        "download": "http://onto.dm2e.eu/schemas/dm2e/",
+        "namespace": "http://onto.dm2e.eu/schemas/dm2e/",
+        "prefix": "dm2e",
+        "tags": [
+            "aggregation",
+            "humanities"
+        ]
+    },
+    "dnbt": {
+        "download": "http://d-nb.info/standards/elementset/dnb#",
+        "namespace": "http://d-nb.info/standards/elementset/dnb#",
+        "prefix": "dnbt",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "doap": {
+        "alternates": [
+            "https://raw.githubusercontent.com/ewilderj/doap/master/schema/doap.rdf",
+            "http://usefulinc.com/ns/doap",
+            "http://usefulinc.com/ns/doap#"
+        ],
+        "download": "https://github.com/edumbill/doap/blob/master/schema/doap.rdf",
+        "namespace": "http://usefulinc.com/ns/doap#",
+        "prefix": "doap",
+        "tags": [
+            "media"
+        ]
+    },
+    "doco": {
+        "download": "http://purl.org/spar/doco/",
+        "namespace": "http://purl.org/spar/doco/",
+        "prefix": "doco",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "dpd": {
+        "download": "http://www.kanzaki.com/ns/dpd",
+        "namespace": "http://www.kanzaki.com/ns/dpd#",
+        "prefix": "dpd",
+        "tags": [
+            "media"
+        ]
+    },
+    "dr": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/swan/2.0/discourse-relationships/",
+        "namespace": "http://purl.org/swan/2.0/discourse-relationships/",
+        "prefix": "dr",
+        "tags": [
+            "publishing",
+            "humanities",
+            "value-annotations"
+        ]
+    },
+    "drama": {
+        "download": "http://www.purl.org/drammar#",
+        "namespace": "http://www.purl.org/drammar#",
+        "prefix": "drama",
+        "tags": [
+            "performing-arts",
+            "humanities"
+        ]
+    },
+    "dso": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/ontology/dso#",
+        "namespace": "http://purl.org/ontology/dso#",
+        "prefix": "docso",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "dsw": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.org/dsw/",
+        "namespace": "http://purl.org/dsw/",
+        "prefix": "dsw",
+        "tags": [
+            "science"
+        ],
+        "title": "Darwin-SW",
+        "title_source": "Name used by its authors; the namespace page returned 404."
+    },
+    "dul": {
+        "download": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+        "namespace": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+        "prefix": "dul",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "e-collections": {
+        "download": "http://purl.org/ceu/eco",
+        "namespace": "http://purl.org/ceu/eco#",
+        "prefix": "ecoll",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "eac-cpf": {
+        "download": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
+        "namespace": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
+        "prefix": "eac-cpf",
+        "tags": [
+            "archives",
+            "people"
+        ],
+        "title": "EAC-CPF Descriptions Ontology for Linked Archival Data",
+        "title_source": "LOV title without its trailing colon."
+    },
+    "ebucore": {
+        "copy_from": "LOV",
+        "download": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+        "namespace": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+        "prefix": "ebucore",
+        "tags": [
+            "media"
+        ]
+    },
+    "eclap": {
+        "copy_from": "LOV",
+        "download": "http://www.eclap.eu/schema/eclap/",
+        "namespace": "http://www.eclap.eu/schema/eclap/",
+        "prefix": "eclap",
+        "tags": [
+            "performing-arts",
+            "media"
+        ]
+    },
+    "ecpo": {
+        "alternates": [
+            "http://purl.org/ontology/ecpo#"
+        ],
+        "download": "http://cklee.github.io/ecpo/ecpo.ttl",
+        "namespace": "http://purl.org/ontology/ecpo#",
+        "prefix": "ecpo",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "ecrm": {
+        "download": "http://erlangen-crm.org/current/",
+        "namespace": "http://erlangen-crm.org/current/",
+        "prefix": "ecrm",
+        "tags": [
+            "museums"
+        ]
+    },
+    "edm": {
+        "copy_from": "LOV",
+        "download": "http://www.europeana.eu/schemas/edm/rdf/edm.owl",
+        "namespace": "http://www.europeana.eu/schemas/edm/",
+        "notes": "Official file returns 403 to scripted requests; europeana.eu blocks them. Kept in the core; served from the Archivo copy (2024) until Europeana is asked for a fetchable URL.",
+        "prefix": "edm",
+        "tags": [
+            "aggregation"
+        ]
+    },
+    "efrbroo": {
+        "download": "http://erlangen-crm.org/efrbroo/",
+        "namespace": "http://erlangen-crm.org/efrbroo/",
+        "prefix": "efrbroo",
+        "tags": [
+            "libraries",
+            "museums"
+        ]
+    },
+    "ekc": {
+        "alternates": [
+            "http://dh.aks.ac.kr/ontologies/ekc#"
+        ],
+        "copy_from": "LOV",
+        "download": "https://raw.githubusercontent.com/dongshins/EKC_ontology/main/ekc_ontology.ttl",
+        "namespace": "http://dh.aks.ac.kr/ontologies/ekc#",
+        "prefix": "ekc",
+        "tags": [
+            "humanities",
+            "people"
+        ]
+    },
+    "ekcd": {
+        "download": "http://dh.aks.ac.kr/ontologies/ekcd#",
+        "namespace": "http://dh.aks.ac.kr/ontologies/ekcd#",
+        "prefix": "ekcd",
+        "tags": [
+            "humanities",
+            "value-annotations"
+        ]
+    },
+    "ep": {
+        "copy_from": "LOV",
+        "download": "http://eprints.org/ontology/",
+        "namespace": "http://eprints.org/ontology/",
+        "prefix": "ep",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "event": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/NET/c4dm/event.owl#",
+        "namespace": "http://purl.org/NET/c4dm/event.owl#",
+        "prefix": "event",
+        "tags": [
+            "time"
+        ]
+    },
+    "exif": {
+        "download": "http://www.w3.org/2003/12/exif/ns#",
+        "namespace": "http://www.w3.org/2003/12/exif/ns#",
+        "prefix": "exif",
+        "tags": [
+            "media"
+        ]
+    },
+    "fabio": {
+        "download": "http://purl.org/spar/fabio/",
+        "namespace": "http://purl.org/spar/fabio/",
+        "prefix": "fabio",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "foaf": {
+        "download": "http://xmlns.com/foaf/spec/index.rdf",
+        "namespace": "http://xmlns.com/foaf/0.1/",
+        "prefix": "foaf",
+        "tags": [
+            "general",
+            "people"
+        ]
+    },
+    "formats": {
+        "download": "http://www.w3.org/ns/formats/",
+        "format": "rdfa",
+        "namespace": "http://www.w3.org/ns/formats/",
+        "prefix": "formats",
+        "tags": [
+            "media",
+            "linked-data"
+        ],
+        "title": "Unique URIs for File Formats",
+        "title_source": "w3.org/ns/formats/"
+    },
+    "fpo": {
+        "download": "https://raw.githubusercontent.com/johnBradley501/FPO/master/fpo.owl",
+        "namespace": "https://github.com/johnBradley501/FPO/raw/master/fpo.owl#",
+        "prefix": "fpo",
+        "tags": [
+            "people",
+            "humanities",
+            "value-annotations"
+        ]
+    },
+    "fpr": {
+        "alternates": [
+            "http://www.filmstandards.org/schemas/filmportal_relations"
+        ],
+        "download": "http://www.filmstandards.org/schemas/filmportal_relations#",
+        "namespace": "http://www.filmstandards.org/schemas/filmportal_relations#",
+        "prefix": "fpr",
+        "tags": [
+            "media"
+        ]
+    },
+    "frad": {
+        "copy_from": "LOV",
+        "download": "http://iflastandards.info/ns/fr/frad/",
+        "namespace": "http://iflastandards.info/ns/fr/frad/",
+        "prefix": "frad",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "frapo": {
+        "download": "http://purl.org/cerif/frapo/",
+        "namespace": "http://purl.org/cerif/frapo/",
+        "prefix": "frapo",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "frbr": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/vocab/frbr/core#",
+        "namespace": "http://purl.org/vocab/frbr/core#",
+        "prefix": "frbr",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "frbre": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/vocab/frbr/extended#",
+        "namespace": "http://purl.org/vocab/frbr/extended#",
+        "prefix": "frbre",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "frbrer": {
+        "alternates": [
+            "http://iflastandards.info/ns/fr/frbr/frbrer/"
+        ],
+        "copy_from": "LOV",
+        "download": "http://iflastandards.info/ns/fr/frbr/frbrer/frbrer.rdf",
+        "namespace": "http://iflastandards.info/ns/fr/frbr/frbrer/",
+        "prefix": "frbrer",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "frbroo": {
+        "download": "http://metadataregistry.org/schema/show/id/94.rdf",
+        "namespace": "http://iflastandards.info/ns/fr/frbr/frbroo/",
+        "prefix": "frbroo",
+        "tags": [
+            "libraries",
+            "museums"
+        ]
+    },
+    "frsad": {
+        "download": "http://metadataregistry.org/schema/show/id/26.rdf",
+        "namespace": "http://iflastandards.info/ns/fr/frsad/",
+        "prefix": "frsad",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "gadm": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://gadm.geovocab.org/ontology",
+        "namespace": "http://gadm.geovocab.org/ontology#",
+        "prefix": "gadm",
+        "tags": [
+            "places"
+        ],
+        "title": "GADM Ontology",
+        "title_source": "Descriptive name: the file has no title and the publisher (GeoVocab, gadm.geovocab.org) is unreachable."
+    },
+    "gamecip": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/89.rdf",
+        "namespace": "http://gamemetadata.org/uri/schema/gamecip/",
+        "prefix": "gamecip",
+        "tags": [
+            "media",
+            "libraries"
+        ]
+    },
+    "gen": {
+        "alternates": [
+            "http://purl.org/gen/0.1#"
+        ],
+        "download": "https://raw.githubusercontent.com/joshhansen/vocab-gen/master/releases/gen01.rdf",
+        "namespace": "http://purl.org/gen/0.1#",
+        "prefix": "gen",
+        "tags": [
+            "people"
+        ]
+    },
+    "genre": {
+        "alternates": [
+            "http://sparql.cwrc.ca/ontologies/genre"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "http://sparql.cwrc.ca/ontology/genre#",
+        "namespace": "http://sparql.cwrc.ca/ontologies/genre#",
+        "prefix": "genre",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "geop": {
+        "copy_from": "LOV",
+        "download": "http://aims.fao.org/aos/geopolitical.owl#",
+        "namespace": "http://aims.fao.org/aos/geopolitical.owl#",
+        "prefix": "geop",
+        "tags": [
+            "places"
+        ],
+        "title": "FAO Geopolitical Ontology"
+    },
+    "georss": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://www.opengis.net/gml/",
+        "namespace": "http://www.georss.org/georss/",
+        "prefix": "georss",
+        "tags": [
+            "places"
+        ]
+    },
+    "geosparql": {
+        "download": "http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf",
+        "namespace": "http://www.opengis.net/ont/geosparql#",
+        "notes": "GeoSPARQL 1.0. The namespace URL returns an OGC catalog record, not the ontology (imports nothing). A current GeoSPARQL 1.1 file was not found at a stable URL; Archivo holds a 1.1 copy from 2024-04-05.",
+        "prefix": "geo",
+        "tags": [
+            "places"
+        ],
+        "title": "GeoSPARQL"
+    },
+    "gn": {
+        "alternates": [
+            "http://www.geonames.org/ontology"
+        ],
+        "download": "https://www.geonames.org/ontology/ontology_v3.3.rdf",
+        "namespace": "http://www.geonames.org/ontology#",
+        "prefix": "gn",
+        "tags": [
+            "places"
+        ]
+    },
+    "gndo": {
+        "download": "http://d-nb.info/standards/elementset/gnd#",
+        "namespace": "http://d-nb.info/standards/elementset/gnd#",
+        "prefix": "gndo",
+        "tags": [
+            "libraries",
+            "people"
+        ]
+    },
+    "gov": {
+        "download": "http://gov.genealogy.net/ontology.owl#",
+        "namespace": "http://gov.genealogy.net/ontology.owl#",
+        "prefix": "gov",
+        "tags": [
+            "places",
+            "humanities"
+        ]
+    },
+    "graves": {
+        "download": "http://rdf.muninn-project.org/ontologies/graves",
+        "namespace": "http://rdf.muninn-project.org/ontologies/graves#",
+        "prefix": "graves",
+        "tags": [
+            "humanities",
+            "museums"
+        ]
+    },
+    "gtm": {
+        "download": "https://www.goudatijdmachine.nl/def#",
+        "namespace": "https://www.goudatijdmachine.nl/def#",
+        "prefix": "gtm",
+        "tags": [
+            "places",
+            "humanities"
+        ]
+    },
+    "gvp": {
+        "copy_from": "LOV",
+        "download": "http://vocab.getty.edu/ontology#",
+        "namespace": "http://vocab.getty.edu/ontology#",
+        "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
+        "prefix": "gvp",
+        "tags": [
+            "museums"
+        ]
+    },
+    "hht": {
+        "alternates": [
+            "https://w3id.org/HHT#"
+        ],
+        "download": "https://www.irit.fr/recherches/MELODI/ontologies/HHT/ontology.ttl",
+        "namespace": "https://w3id.org/HHT#",
+        "prefix": "hht",
+        "tags": [
+            "places",
+            "humanities"
+        ],
+        "title": "Historical Hierarchical Territories"
+    },
+    "hico": {
+        "download": "https://marilenadaquino.github.io/hico/1.1/hico.owl",
+        "namespace": "http://purl.org/emmedi/hico/",
+        "prefix": "hico",
+        "tags": [
+            "humanities",
+            "museums",
+            "value-annotations"
+        ]
+    },
+    "histograph": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://rdf.histograph.io/",
+        "namespace": "http://rdf.histograph.io/",
+        "prefix": "hg",
+        "tags": [
+            "places",
+            "humanities"
+        ],
+        "title": "Histograph Ontology",
+        "title_source": "Descriptive name: the file has no title and the publisher (histograph.io) is unreachable."
+    },
+    "holding": {
+        "alternates": [
+            "http://purl.org/ontology/holding#"
+        ],
+        "download": "http://dini-ag-kim.github.io/holding-ontology/holding.ttl",
+        "namespace": "http://purl.org/ontology/holding#",
+        "prefix": "holding",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "icon": {
+        "download": "https://w3id.org/icon/ontology/",
+        "namespace": "https://w3id.org/icon/ontology/",
+        "prefix": "icon",
+        "tags": [
+            "museums",
+            "humanities"
+        ]
+    },
+    "iiif-image-2": {
+        "alternates": [
+            "http://iiif.io/api/image/2"
+        ],
+        "download": "http://iiif.io/api/image/2#",
+        "namespace": "http://iiif.io/api/image/2#",
+        "prefix": "iiif",
+        "tags": [
+            "aggregation",
+            "media"
+        ],
+        "title": "IIIF Image API 2",
+        "title_source": "IIIF names the specification \"IIIF Image API\"; this is the 2.x ontology."
+    },
+    "iiif-presentation-2": {
+        "alternates": [
+            "http://iiif.io/api/presentation/2"
+        ],
+        "download": "http://iiif.io/api/presentation/2#",
+        "namespace": "http://iiif.io/api/presentation/2#",
+        "prefix": "sc",
+        "tags": [
+            "aggregation",
+            "media"
+        ],
+        "title": "IIIF Presentation API 2",
+        "title_source": "IIIF names the specification \"IIIF Presentation API\"; this is the 2.x ontology."
+    },
+    "immovable-property-arco-network": {
+        "alternates": [
+            "https://w3id.org/arco/ontology/immovable-property/"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "https://w3id.org/arco/ontology/immovable-property",
+        "namespace": "https://w3id.org/arco/ontology/immovable-property/",
+        "prefix": "a-ip",
+        "tags": [
+            "museums"
+        ]
+    },
+    "information-model-for-visual-arts": {
+        "alternates": [
+            "http://visualartsdna.org/2021/07/16/model"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "http://visualartsdna.org/2021/07/16/model#",
+        "namespace": "http://visualartsdna.org/2021/07/16/model#",
+        "prefix": "vadna",
+        "tags": [
+            "museums"
+        ]
+    },
+    "intro": {
+        "copy_from": "LOV",
+        "download": "https://w3id.org/lso/intro/beta202408#",
+        "namespace": "https://w3id.org/lso/intro/beta202408#",
+        "prefix": "intro",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "isbd": {
+        "copy_from": "LOV",
+        "download": "http://iflastandards.info/ns/isbd/elements/",
+        "namespace": "http://iflastandards.info/ns/isbd/elements/",
+        "prefix": "isbd",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "isbdu": {
+        "download": "http://metadataregistry.org/schema/show/id/97.rdf",
+        "namespace": "http://iflastandards.info/ns/isbd/unc/elements/",
+        "prefix": "isbdu",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "isil": {
+        "download": "http://metadataregistry.org/schema/show/id/73.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/isil/",
+        "prefix": "isil",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "iso-thes": {
+        "download": "http://purl.org/iso25964/skos-thes",
+        "namespace": "http://purl.org/iso25964/skos-thes#",
+        "prefix": "iso-thes",
+        "tags": [
+            "linked-data"
+        ],
+        "title": "ISO 25964 SKOS extensions"
+    },
+    "kanzaki-music": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://www.kanzaki.com/ns/music",
+        "namespace": "http://www.kanzaki.com/ns/music#",
+        "prefix": "music",
+        "tags": [
+            "performing-arts"
+        ]
+    },
+    "kbv": {
+        "download": "https://id.kb.se/vocab/",
+        "namespace": "https://id.kb.se/vocab/",
+        "prefix": "kbv",
+        "tags": [
+            "libraries"
+        ],
+        "title": "Basvokabulär",
+        "title_source": "Title of the publisher's page, id.kb.se/vocab/ (\"Basvokabulär | id.kb.se\")."
+    },
+    "l4lod": {
+        "alternates": [
+            "http://ns.inria.fr/l4lod/v2"
+        ],
+        "download": "http://ns.inria.fr/l4lod/v2#",
+        "namespace": "http://ns.inria.fr/l4lod/v2#",
+        "prefix": "l4lod",
+        "tags": [
+            "rights"
+        ]
+    },
+    "language-representation": {
+        "download": "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/",
+        "namespace": "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/",
+        "prefix": "lcc-lr",
+        "tags": [
+            "language"
+        ]
+    },
+    "lawd": {
+        "copy_from": "LOV",
+        "download": "http://lawd.info/ontology/",
+        "namespace": "http://lawd.info/ontology/",
+        "prefix": "lawd",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "lcmpt": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/70.rdf",
+        "namespace": "http://www.metadataregistry.org/uri/schema/lcmptade/",
+        "prefix": "lcmpt",
+        "tags": [
+            "libraries",
+            "performing-arts"
+        ]
+    },
+    "ldp": {
+        "alternates": [
+            "http://www.w3.org/ns/ldp",
+            "http://www.w3.org/ns/ldp#"
+        ],
+        "download": "http://www.w3.org/ns/ldp.ttl",
+        "namespace": "http://www.w3.org/ns/ldp#",
+        "prefix": "ldp",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "ldr": {
+        "copy_from": "LOV",
+        "download": "http://purl.oclc.org/NET/ldr/ns#",
+        "namespace": "http://purl.oclc.org/NET/ldr/ns#",
+        "prefix": "ldr",
+        "tags": [
+            "rights"
+        ]
+    },
+    "lexicog": {
+        "download": "http://www.w3.org/ns/lemon/lexicog#",
+        "namespace": "http://www.w3.org/ns/lemon/lexicog#",
+        "prefix": "lexicog",
+        "tags": [
+            "language"
+        ]
+    },
+    "lexinfo": {
+        "download": "http://www.lexinfo.net/ontology/3.0/lexinfo",
+        "namespace": "http://www.lexinfo.net/ontology/3.0/lexinfo#",
+        "prefix": "lexinfo",
+        "tags": [
+            "language"
+        ]
+    },
+    "lib": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/library/",
+        "namespace": "http://purl.org/library/",
+        "prefix": "lib",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "limo": {
+        "alternates": [
+            "http://purl.org/LiMo/0.1/"
+        ],
+        "copy_from": "LOV",
+        "download": "http://purl.org/LiMo/0.1#",
+        "namespace": "http://purl.org/LiMo/0.1/",
+        "prefix": "limoo",
+        "tags": [
+            "rights"
+        ]
+    },
+    "lingvo": {
+        "download": "https://w3id.org/vocab/lingvoj#",
+        "namespace": "https://w3id.org/vocab/lingvoj#",
+        "prefix": "lingvo",
+        "tags": [
+            "language"
+        ]
+    },
+    "linked-art": {
+        "download": "https://linked.art/ns/terms/",
+        "namespace": "https://linked.art/ns/terms/",
+        "prefix": "la",
+        "tags": [
+            "museums"
+        ],
+        "title": "Linked Art"
+    },
+    "lio": {
+        "download": "http://purl.org/net/lio#",
+        "namespace": "http://purl.org/net/lio#",
+        "prefix": "lio",
+        "tags": [
+            "media",
+            "museums"
+        ]
+    },
+    "loc-american-cartoon-prints-collection": {
+        "download": "http://metadataregistry.org/schema/show/id/72.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/berraypolard/",
+        "prefix": "locacp",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "locah": {
+        "copy_from": "LOV",
+        "download": "http://data.archiveshub.ac.uk/def/",
+        "namespace": "http://data.archiveshub.ac.uk/def/",
+        "prefix": "locah",
+        "tags": [
+            "archives"
+        ]
+    },
+    "locn": {
+        "alternates": [
+            "http://www.w3.org/ns/locn"
+        ],
+        "download": "http://www.w3.org/ns/locn.ttl",
+        "namespace": "http://www.w3.org/ns/locn#",
+        "prefix": "locn",
+        "tags": [
+            "places"
+        ]
+    },
+    "lode": {
+        "copy_from": "LOV",
+        "download": "http://linkedevents.org/ontology/",
+        "namespace": "http://linkedevents.org/ontology/",
+        "prefix": "lode",
+        "tags": [
+            "time"
+        ]
+    },
+    "lom": {
+        "copy_from": "LOV",
+        "download": "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#",
+        "namespace": "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#",
+        "prefix": "lom",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "lrmoo": {
+        "download": "https://cidoc-crm.org/extensions/lrmoo/owl/1.0/LRMoo_v1.0.owl",
+        "namespace": "http://iflastandards.info/ns/lrm/lrmoo/",
+        "prefix": "lrmoo",
+        "tags": [
+            "libraries",
+            "museums"
+        ]
+    },
+    "lto": {
+        "alternates": [
+            "https://w3id.org/lto#"
+        ],
+        "download": "https://www.isibang.ac.in/ns/lto/ontology.ttl",
+        "namespace": "https://w3id.org/lto#",
+        "prefix": "lto",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "lv": {
+        "download": "http://purl.org/lobid/lv#",
+        "namespace": "http://purl.org/lobid/lv#",
+        "prefix": "lv",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "lvont": {
+        "alternates": [
+            "http://lexvo.org/ontology#"
+        ],
+        "download": "http://lexvo.org/ontology",
+        "namespace": "http://lexvo.org/ontology#",
+        "prefix": "lvont",
+        "tags": [
+            "language"
+        ]
+    },
+    "ma-ont": {
+        "download": "http://www.w3.org/ns/ma-ont#",
+        "namespace": "http://www.w3.org/ns/ma-ont#",
+        "prefix": "ma-ont",
+        "tags": [
+            "media"
+        ],
+        "title": "Ontology for Media Resources 1.0",
+        "title_source": "W3C Recommendation title."
+    },
+    "mads": {
+        "alternates": [
+            "http://www.loc.gov/mads/rdf/v1#"
+        ],
+        "download": "http://www.loc.gov/standards/mads/rdf/v1.rdf",
+        "namespace": "http://www.loc.gov/mads/rdf/v1#",
+        "prefix": "mads",
+        "tags": [
+            "libraries",
+            "people"
+        ]
+    },
+    "marc-21-elements-00x": {
+        "download": "http://metadataregistry.org/schema/show/id/38.rdf",
+        "namespace": "http://marc21rdf.info/elements/00X/",
+        "prefix": "marc00x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-0xx": {
+        "download": "http://metadataregistry.org/schema/show/id/39.rdf",
+        "namespace": "http://marc21rdf.info/elements/0XX/",
+        "prefix": "marc0xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-1xx": {
+        "download": "http://metadataregistry.org/schema/show/id/40.rdf",
+        "namespace": "http://marc21rdf.info/elements/1XX/",
+        "prefix": "marc1xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-2xx": {
+        "download": "http://metadataregistry.org/schema/show/id/41.rdf",
+        "namespace": "http://marc21rdf.info/elements/2XX/",
+        "prefix": "marc2xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-3xx": {
+        "download": "http://metadataregistry.org/schema/show/id/42.rdf",
+        "namespace": "http://marc21rdf.info/elements/3XX/",
+        "prefix": "marc3xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-4xx": {
+        "download": "http://metadataregistry.org/schema/show/id/43.rdf",
+        "namespace": "http://marc21rdf.info/elements/4XX/",
+        "prefix": "marc4xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-5xx": {
+        "download": "http://metadataregistry.org/schema/show/id/44.rdf",
+        "namespace": "http://marc21rdf.info/elements/5XX/",
+        "prefix": "marc5xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-60x": {
+        "download": "http://metadataregistry.org/schema/show/id/45.rdf",
+        "namespace": "http://marc21rdf.info/elements/60X/",
+        "prefix": "marc60x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-61x": {
+        "download": "http://metadataregistry.org/schema/show/id/46.rdf",
+        "namespace": "http://marc21rdf.info/elements/61X/",
+        "prefix": "marc61x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-63x": {
+        "download": "http://metadataregistry.org/schema/show/id/47.rdf",
+        "namespace": "http://marc21rdf.info/elements/63X/",
+        "prefix": "marc63x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-64x": {
+        "download": "http://metadataregistry.org/schema/show/id/48.rdf",
+        "namespace": "http://marc21rdf.info/elements/64X/",
+        "prefix": "marc64x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-65x": {
+        "download": "http://metadataregistry.org/schema/show/id/49.rdf",
+        "namespace": "http://marc21rdf.info/elements/65X/",
+        "prefix": "marc65x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-7xx": {
+        "download": "http://metadataregistry.org/schema/show/id/50.rdf",
+        "namespace": "http://marc21rdf.info/elements/7XX/",
+        "prefix": "marc7xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "marc-21-elements-8xx": {
+        "download": "http://metadataregistry.org/schema/show/id/51.rdf",
+        "namespace": "http://marc21rdf.info/elements/8XX/",
+        "prefix": "marc8xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "mdcs": {
+        "download": "https://mdcs.monumentenkennis.nl/damageatlas/ontology#",
+        "namespace": "https://mdcs.monumentenkennis.nl/damageatlas/ontology#",
+        "prefix": "mdcs",
+        "tags": [
+            "museums"
+        ]
+    },
+    "media": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/media#",
+        "namespace": "http://purl.org/media#",
+        "prefix": "media",
+        "tags": [
+            "media"
+        ]
+    },
+    "mediapreserve-required-elements-list": {
+        "download": "http://metadataregistry.org/schema/show/id/189.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/TheMediaPreserve/",
+        "prefix": "mprel",
+        "tags": [
+            "media",
+            "preservation"
+        ],
+        "title": "The MediaPreserve Required Elements List"
+    },
+    "memorix": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://memorix.io/ontology#",
+        "namespace": "http://memorix.io/ontology#",
+        "prefix": "memorix",
+        "tags": [
+            "museums",
+            "archives"
+        ]
+    },
+    "metadata-schema-for-ceramic-resources": {
+        "download": "http://metadataregistry.org/schema/show/id/18.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/cr/",
+        "prefix": "ceramic",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "mmms": {
+        "download": "http://ldf.fi/schema/mmm/",
+        "namespace": "http://ldf.fi/schema/mmm/",
+        "prefix": "mmms",
+        "tags": [
+            "humanities"
+        ],
+        "title": "Mapping Manuscript Migrations Metadata Schema",
+        "title_source": "ldf.fi documentation page."
+    },
+    "mo": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/ontology/mo/",
+        "namespace": "http://purl.org/ontology/mo/",
+        "prefix": "mo",
+        "tags": [
+            "performing-arts",
+            "media"
+        ]
+    },
+    "mods-rdf": {
+        "download": "https://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl",
+        "namespace": "http://www.loc.gov/mods/rdf/v1#",
+        "prefix": "modsrdf",
+        "tags": [
+            "libraries"
+        ],
+        "title": "MODS/RDF",
+        "title_source": "loc.gov namespace document."
+    },
+    "movable-property-arco-network": {
+        "alternates": [
+            "https://w3id.org/arco/ontology/movable-property/"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "https://w3id.org/arco/ontology/movable-property",
+        "namespace": "https://w3id.org/arco/ontology/movable-property/",
+        "prefix": "a-mp",
+        "tags": [
+            "museums"
+        ]
+    },
+    "mpeg7": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl",
+        "namespace": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#",
+        "prefix": "mpeg7",
+        "tags": [
+            "media"
+        ],
+        "title": "MPEG-7 Ontology",
+        "title_source": "Rhizomik; the namespace page carries no title."
+    },
+    "mrel": {
+        "copy_from": "LOV",
+        "download": "http://id.loc.gov/vocabulary/relators/",
+        "namespace": "http://id.loc.gov/vocabulary/relators/",
+        "notes": "The live file fails the import check (literal with both a language and a datatype, which EasyRdf rejects); the LOV copy imports. Serve the rescued copy until the live file imports again.",
+        "prefix": "mrel",
+        "tags": [
+            "libraries",
+            "people"
+        ]
+    },
+    "muninn-military": {
+        "download": "http://rdf.muninn-project.org/ontologies/military#",
+        "namespace": "http://rdf.muninn-project.org/ontologies/military#",
+        "prefix": "mil",
+        "tags": [
+            "humanities",
+            "people"
+        ]
+    },
+    "muninn-organization": {
+        "download": "http://rdf.muninn-project.org/ontologies/organization#",
+        "namespace": "http://rdf.muninn-project.org/ontologies/organization#",
+        "prefix": "muninn-org",
+        "tags": [
+            "people",
+            "humanities"
+        ]
+    },
+    "muo": {
+        "copy_from": "LOV",
+        "download": "http://purl.oclc.org/NET/muo/muo-vocab.owl",
+        "namespace": "http://purl.oclc.org/NET/muo/muo#",
+        "prefix": "muo",
+        "tags": [
+            "science"
+        ]
+    },
+    "mus": {
+        "alternates": [
+            "http://data.doremus.org/ontology#"
+        ],
+        "download": "https://raw.githubusercontent.com/DOREMUS-ANR/doremus-ontology/master/doremus.ttl",
+        "namespace": "http://data.doremus.org/ontology#",
+        "prefix": "mus",
+        "tags": [
+            "performing-arts",
+            "libraries"
+        ],
+        "title": "DOREMUS Ontology",
+        "title_source": "data.doremus.org/ontology/"
+    },
+    "musemeta": {
+        "download": "http://metadataregistry.org/schema/show/id/63.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/musemeta/",
+        "prefix": "musemeta",
+        "tags": [
+            "museums"
+        ]
+    },
+    "muto": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/muto/core#",
+        "namespace": "http://purl.org/muto/core#",
+        "prefix": "muto",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "national-library-of-scotland-digital": {
+        "download": "http://metadataregistry.org/schema/show/id/64.rdf",
+        "namespace": "http://nlsdata.info/dod/elements/",
+        "prefix": "nlsdod",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "nature": {
+        "alternates": [
+            "http://deductions.github.io/nature_observation.owl.ttl"
+        ],
+        "download": "http://deductions.github.io/nature_observation.owl.ttl#",
+        "namespace": "http://deductions.github.io/nature_observation.owl.ttl#",
+        "prefix": "nature",
+        "tags": [
+            "science"
+        ]
+    },
+    "naval": {
+        "download": "http://rdf.muninn-project.org/ontologies/naval",
+        "namespace": "http://rdf.muninn-project.org/ontologies/naval#",
+        "prefix": "naval",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "nfo": {
+        "alternates": [
+            "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
+        "namespace": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "prefix": "nfo",
+        "tags": [
+            "media"
+        ],
+        "title": "NEPOMUK File Ontology",
+        "title_source": "semanticdesktop.org"
+    },
+    "nie": {
+        "alternates": [
+            "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie",
+        "namespace": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
+        "prefix": "nie",
+        "tags": [
+            "media"
+        ],
+        "title": "NEPOMUK Information Element Ontology",
+        "title_source": "semanticdesktop.org"
+    },
+    "nlon": {
+        "copy_from": "LOV",
+        "download": "http://lod.nl.go.kr/ontology/",
+        "namespace": "http://lod.nl.go.kr/ontology/",
+        "prefix": "nlon",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "nmo": {
+        "alternates": [
+            "http://nomisma.org/ontology"
+        ],
+        "download": "http://nomisma.org/ontology.rdf",
+        "namespace": "http://nomisma.org/ontology#",
+        "prefix": "nmo",
+        "tags": [
+            "museums",
+            "humanities"
+        ],
+        "title": "Nomisma Ontology",
+        "title_source": "nomisma.org/ontology"
+    },
+    "nomo": {
+        "download": "https://nomenclature.info/nom/ontology/",
+        "namespace": "https://nomenclature.info/nom/ontology/",
+        "prefix": "nomo",
+        "tags": [
+            "museums"
+        ]
+    },
+    "oa": {
+        "download": "http://www.w3.org/ns/oa.ttl",
+        "namespace": "http://www.w3.org/ns/oa#",
+        "prefix": "oa",
+        "tags": [
+            "humanities",
+            "aggregation"
+        ]
+    },
+    "oad": {
+        "copy_from": "LOV",
+        "download": "http://culturalis.org/oad#",
+        "namespace": "http://culturalis.org/oad#",
+        "prefix": "oad",
+        "tags": [
+            "archives"
+        ]
+    },
+    "oc": {
+        "alternates": [
+            "http://contextus.net/ontology/ontomedia/core/expression#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://contextus.googlecode.com/svn/trunk/ontomedia/core/expression.owl",
+        "namespace": "http://contextus.net/ontology/ontomedia/core/expression#",
+        "prefix": "oc",
+        "tags": [
+            "media",
+            "humanities"
+        ]
+    },
+    "oco": {
+        "copy_from": "DBpedia Archivo",
+        "download": "https://w3id.org/oc/ontology/",
+        "namespace": "https://w3id.org/oc/ontology/",
+        "prefix": "oco",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "odrl": {
+        "download": "http://www.w3.org/ns/odrl/2/",
+        "namespace": "http://www.w3.org/ns/odrl/2/",
+        "prefix": "odrl",
+        "tags": [
+            "rights"
+        ]
+    },
+    "odrs": {
+        "alternates": [
+            "http://schema.theodi.org/odrs#"
+        ],
+        "download": "http://schema.theodi.org/odrs/index.ttl",
+        "namespace": "http://schema.theodi.org/odrs#",
+        "prefix": "odrs",
+        "tags": [
+            "rights"
+        ]
+    },
+    "og": {
+        "copy_from": "LOV",
+        "download": "http://ogp.me/ns#",
+        "namespace": "http://ogp.me/ns#",
+        "prefix": "og",
+        "tags": [
+            "general"
+        ],
+        "title": "Open Graph protocol",
+        "title_source": "ogp.me; the namespace page returned 404."
+    },
+    "oh": {
+        "download": "http://semweb.mmlab.be/ns/oh#",
+        "namespace": "http://semweb.mmlab.be/ns/oh#",
+        "prefix": "oh",
+        "tags": [
+            "time"
+        ]
+    },
+    "olo": {
+        "alternates": [
+            "http://purl.org/ontology/olo/core#",
+            "http://purl.org/ontology/olo/orderedlistontology.owl"
+        ],
+        "copy_from": "LOV",
+        "download": "http://smiy.sourceforge.net/olo/rdf/orderedlistontology.owl",
+        "namespace": "http://purl.org/ontology/olo/core#",
+        "prefix": "olo",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "om": {
+        "alternates": [
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+        ],
+        "download": "https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf",
+        "namespace": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "prefix": "om",
+        "tags": [
+            "science"
+        ]
+    },
+    "ontolex": {
+        "download": "http://www.w3.org/ns/lemon/ontolex#",
+        "namespace": "http://www.w3.org/ns/lemon/ontolex#",
+        "prefix": "ontolex",
+        "tags": [
+            "language"
+        ]
+    },
+    "orca": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://vocab.deri.ie/orca",
+        "namespace": "http://vocab.deri.ie/orca#",
+        "prefix": "orca",
+        "tags": [
+            "rights",
+            "value-annotations"
+        ]
+    },
+    "ore": {
+        "download": "http://www.openarchives.org/ore/terms/",
+        "namespace": "http://www.openarchives.org/ore/terms/",
+        "prefix": "ore",
+        "tags": [
+            "aggregation"
+        ]
+    },
+    "oregon-digital": {
+        "download": "http://metadataregistry.org/schema/show/id/90.rdf",
+        "namespace": "http://opaquenamespace.org/ns/",
+        "prefix": "opaque",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "org": {
+        "download": "http://www.w3.org/ns/org.ttl",
+        "namespace": "http://www.w3.org/ns/org#",
+        "prefix": "org",
+        "tags": [
+            "people"
+        ]
+    },
+    "owl": {
+        "download": "http://www.w3.org/2002/07/owl",
+        "namespace": "http://www.w3.org/2002/07/owl#",
+        "prefix": "owl",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "part": {
+        "alternates": [
+            "http://purl.org/vocab/participation/schema#",
+            "http://vocab.org/participation/schema#"
+        ],
+        "copy_from": "LOV",
+        "download": "http://vocab.org/participation/schema",
+        "namespace": "http://vocab.org/participation/schema#",
+        "prefix": "part",
+        "tags": [
+            "people"
+        ]
+    },
+    "passim": {
+        "copy_from": "LOV",
+        "download": "http://data.lirmm.fr/ontologies/passim#",
+        "namespace": "http://data.lirmm.fr/ontologies/passim#",
+        "prefix": "passim",
+        "tags": [
+            "places"
+        ]
+    },
+    "pav": {
+        "download": "http://purl.org/pav/",
+        "namespace": "http://purl.org/pav/",
+        "prefix": "pav",
+        "tags": [
+            "rights",
+            "value-annotations"
+        ]
+    },
+    "pcdm": {
+        "alternates": [
+            "https://raw.githubusercontent.com/duraspace/pcdm/master/models.rdf"
+        ],
+        "download": "http://pcdm.org/models",
+        "namespace": "http://pcdm.org/models#",
+        "prefix": "pcdm",
+        "tags": [
+            "aggregation"
+        ]
+    },
+    "pcdmuse": {
+        "download": "http://pcdm.org/use",
+        "namespace": "http://pcdm.org/use#",
+        "prefix": "pcdmuse",
+        "tags": [
+            "aggregation",
+            "media"
+        ]
+    },
+    "pcdmworks": {
+        "download": "http://pcdm.org/works",
+        "namespace": "http://pcdm.org/works#",
+        "prefix": "pcdmworks",
+        "tags": [
+            "aggregation"
+        ]
+    },
+    "pericles-born-digital-archives": {
+        "alternates": [
+            "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP#"
+        ],
+        "copy_from": "Ontology Design Patterns",
+        "download": "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl",
+        "namespace": "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP#",
+        "prefix": "pericles-bda",
+        "tags": [
+            "preservation",
+            "archives"
+        ],
+        "title": "Born Digital Archives",
+        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Born Digital Archives), where the PERICLES project published it."
+    },
+    "pericles-computer-system": {
+        "alternates": [
+            "http://mklab.iti.gr/pericles/ComputerSystem_ODP#"
+        ],
+        "copy_from": "Ontology Design Patterns",
+        "download": "http://mklab.iti.gr/pericles/ComputerSystem_ODP.owl",
+        "namespace": "http://mklab.iti.gr/pericles/ComputerSystem_ODP#",
+        "prefix": "pericles-cs",
+        "tags": [
+            "preservation"
+        ],
+        "title": "Computer System",
+        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Computer System), where the PERICLES project published it."
+    },
+    "pericles-digital-video": {
+        "alternates": [
+            "http://mklab.iti.gr/pericles/DigitalVideo_ODP#"
+        ],
+        "copy_from": "Ontology Design Patterns",
+        "download": "http://mklab.iti.gr/pericles/DigitalVideo_ODP.owl",
+        "namespace": "http://mklab.iti.gr/pericles/DigitalVideo_ODP#",
+        "prefix": "pericles-dv",
+        "tags": [
+            "preservation",
+            "media"
+        ],
+        "title": "DigitalVideo",
+        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:DigitalVideo), where the PERICLES project published it."
+    },
+    "pericles-policy": {
+        "alternates": [
+            "http://mklab.iti.gr/pericles/Policy_ODP#"
+        ],
+        "copy_from": "Ontology Design Patterns",
+        "download": "http://mklab.iti.gr/pericles/Policy_ODP.owl",
+        "namespace": "http://mklab.iti.gr/pericles/Policy_ODP#",
+        "prefix": "pericles-pol",
+        "tags": [
+            "preservation"
+        ],
+        "title": "Policy",
+        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Policy), where the PERICLES project published it."
+    },
+    "persee": {
+        "download": "http://data.persee.fr/ontology/persee-ontology/",
+        "namespace": "http://data.persee.fr/ontology/persee-ontology/",
+        "prefix": "persee",
+        "tags": [
+            "publishing",
+            "humanities"
+        ]
+    },
+    "person": {
+        "copy_from": "LOV",
+        "download": "http://www.w3.org/ns/person#",
+        "namespace": "http://www.w3.org/ns/person#",
+        "prefix": "person",
+        "tags": [
+            "people"
+        ]
+    },
+    "place": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/ontology/places#",
+        "namespace": "http://purl.org/ontology/places#",
+        "prefix": "place",
+        "tags": [
+            "places"
+        ]
+    },
+    "plink": {
+        "copy_from": "LOV",
+        "download": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
+        "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
+        "prefix": "plink",
+        "tags": [
+            "people"
+        ]
+    },
+    "pna": {
+        "copy_from": "LOV",
+        "download": "http://data.press.net/ontology/asset/",
+        "namespace": "http://data.press.net/ontology/asset/",
+        "prefix": "pna",
+        "tags": [
+            "media"
+        ]
+    },
+    "pnv": {
+        "alternates": [
+            "https://w3id.org/pnv"
+        ],
+        "download": "https://w3id.org/pnv#",
+        "namespace": "https://w3id.org/pnv#",
+        "prefix": "pnv",
+        "tags": [
+            "people"
+        ]
+    },
+    "po": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/ontology/po/",
+        "namespace": "http://purl.org/ontology/po/",
+        "prefix": "po",
+        "tags": [
+            "media"
+        ]
+    },
+    "premis": {
+        "download": "https://id.loc.gov/ontologies/premis-3-0-0.rdf",
+        "namespace": "http://www.loc.gov/premis/rdf/v3/",
+        "prefix": "premis",
+        "tags": [
+            "preservation"
+        ]
+    },
+    "pro": {
+        "download": "http://purl.org/spar/pro/",
+        "namespace": "http://purl.org/spar/pro/",
+        "prefix": "pro",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "prof": {
+        "download": "http://www.w3.org/ns/dx/prof/",
+        "namespace": "http://www.w3.org/ns/dx/prof/",
+        "prefix": "prof",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "prov": {
+        "download": "http://www.w3.org/ns/prov-o",
+        "namespace": "http://www.w3.org/ns/prov#",
+        "prefix": "prov",
+        "tags": [
+            "rights",
+            "value-annotations"
+        ]
+    },
+    "pso": {
+        "download": "http://purl.org/spar/pso/",
+        "namespace": "http://purl.org/spar/pso/",
+        "prefix": "pso",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "publication-metadata": {
+        "download": "http://metadataregistry.org/schema/show/id/17.rdf",
+        "namespace": "http://purl.org/escidoc/metadata/terms/0.1/",
+        "prefix": "eterms",
+        "tags": [
+            "publishing"
+        ],
+        "title": "Publication metadata"
+    },
+    "pwo": {
+        "download": "http://purl.org/spar/pwo/",
+        "namespace": "http://purl.org/spar/pwo/",
+        "prefix": "pwo",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "qudt": {
+        "alternates": [
+            "http://qudt.org/schema/qudt/"
+        ],
+        "copy_from": "LOV",
+        "download": "http://qudt.org/2.1/schema/qudt",
+        "namespace": "http://qudt.org/schema/qudt/",
+        "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
+        "prefix": "qudt",
+        "tags": [
+            "science"
+        ]
+    },
+    "r-arco": {
+        "download": "https://w3id.org/arco/ontology/arco/",
+        "namespace": "https://w3id.org/arco/ontology/arco/",
+        "prefix": "r-arco",
+        "tags": [
+            "museums"
+        ]
+    },
+    "rcgs": {
+        "copy_from": "DBpedia Archivo",
+        "download": "https://collection.rcgs.jp/terms/",
+        "namespace": "https://collection.rcgs.jp/terms/",
+        "prefix": "rcgs",
+        "tags": [
+            "media",
+            "libraries"
+        ]
+    },
+    "rda-c": {
+        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml",
+        "namespace": "http://rdaregistry.info/Elements/c/",
+        "prefix": "rdac",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-n": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/157.rdf",
+        "namespace": "http://rdaregistry.info/Elements/n/",
+        "prefix": "rdan",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-onix-framework-element-set": {
+        "download": "http://metadataregistry.org/schema/show/id/96.rdf",
+        "namespace": "http://rdaregistry.info/Elements/rof/",
+        "prefix": "rof",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-p": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/135.rdf",
+        "namespace": "http://rdaregistry.info/Elements/p/",
+        "prefix": "rdap",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-t": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/156.rdf",
+        "namespace": "http://rdaregistry.info/Elements/t/",
+        "prefix": "rdat",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-w": {
+        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml",
+        "namespace": "http://rdaregistry.info/Elements/w/",
+        "prefix": "rdaw",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rda-x": {
+        "copy_from": "Open Metadata Registry",
+        "download": "http://metadataregistry.org/schema/show/id/151.rdf",
+        "namespace": "http://rdaregistry.info/Elements/x/",
+        "prefix": "rdax",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdaa": {
+        "copy_from": "LOV",
+        "download": "http://rdaregistry.info/Elements/a/",
+        "namespace": "http://rdaregistry.info/Elements/a/",
+        "prefix": "rdaa",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdae": {
+        "copy_from": "LOV",
+        "download": "http://rdaregistry.info/Elements/e/",
+        "namespace": "http://rdaregistry.info/Elements/e/",
+        "prefix": "rdae",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdai": {
+        "copy_from": "LOV",
+        "download": "http://rdaregistry.info/Elements/i/",
+        "namespace": "http://rdaregistry.info/Elements/i/",
+        "prefix": "rdai",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdam": {
+        "copy_from": "LOV",
+        "download": "http://rdaregistry.info/Elements/m/",
+        "namespace": "http://rdaregistry.info/Elements/m/",
+        "prefix": "rdam",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdarole": {
+        "download": "http://rdvocab.info/roles/",
+        "namespace": "http://rdvocab.info/roles/",
+        "prefix": "rdarole",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdau": {
+        "copy_from": "LOV",
+        "download": "http://rdaregistry.info/Elements/u/",
+        "namespace": "http://rdaregistry.info/Elements/u/",
+        "prefix": "rdau",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdf": {
+        "download": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "namespace": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "prefix": "rdf",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "rdfs": {
+        "download": "http://www.w3.org/2000/01/rdf-schema",
+        "namespace": "http://www.w3.org/2000/01/rdf-schema#",
+        "prefix": "rdfs",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "reina-sofia-library-geolocation": {
+        "download": "http://metadataregistry.org/schema/show/id/84.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/geobibrs/",
+        "prefix": "geobibrs",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rel": {
+        "alternates": [
+            "http://purl.org/vocab/relationship/"
+        ],
+        "copy_from": "LOV",
+        "download": "http://vocab.org/relationship/.rdf",
+        "namespace": "http://purl.org/vocab/relationship/",
+        "prefix": "rel",
+        "tags": [
+            "people"
+        ]
+    },
+    "religion": {
+        "download": "http://rdf.muninn-project.org/ontologies/religion",
+        "namespace": "http://rdf.muninn-project.org/ontologies/religion#",
+        "prefix": "religion",
+        "tags": [
+            "humanities"
+        ]
+    },
+    "rev": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/stuff/rev#",
+        "namespace": "http://purl.org/stuff/rev#",
+        "prefix": "rev",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "rico": {
+        "download": "https://www.ica.org/standards/RiC/ontology",
+        "namespace": "https://www.ica.org/standards/RiC/ontology#",
+        "prefix": "rico",
+        "tags": [
+            "archives"
+        ]
+    },
+    "roar": {
+        "alternates": [
+            "https://w3id.org/roar"
+        ],
+        "download": "https://w3id.org/roar#",
+        "namespace": "https://w3id.org/roar#",
+        "prefix": "roar",
+        "tags": [
+            "archives",
+            "people"
+        ]
+    },
+    "rov": {
+        "alternates": [
+            "http://www.w3.org/ns/regorg#"
+        ],
+        "download": "http://www.w3.org/TR/vocab-regorg/",
+        "namespace": "http://www.w3.org/ns/regorg#",
+        "prefix": "rov",
+        "tags": [
+            "people"
+        ]
+    },
+    "rss": {
+        "alternates": [
+            "http://purl.org/rss/1.0/"
+        ],
+        "download": "http://web.resource.org/rss/1.0/schema.rdf",
+        "namespace": "http://purl.org/rss/1.0/",
+        "prefix": "rss",
+        "tags": [
+            "aggregation"
+        ],
+        "title": "RDF Site Summary (RSS) 1.0",
+        "title_source": "web.resource.org/rss/1.0/; LOV had \"Rich Site Summary\"."
+    },
+    "san-lod": {
+        "download": "http://dati.san.beniculturali.it/SAN/",
+        "namespace": "http://dati.san.beniculturali.it/SAN/",
+        "prefix": "san-lod",
+        "tags": [
+            "archives"
+        ]
+    },
+    "saws": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/saws/ontology#",
+        "namespace": "http://purl.org/saws/ontology#",
+        "prefix": "saws",
+        "tags": [
+            "humanities"
+        ],
+        "title": "Sharing Ancient Wisdoms Ontology"
+    },
+    "schema": {
+        "download": "https://schema.org/version/latest/schemaorg-current-https.ttl",
+        "namespace": "https://schema.org/",
+        "prefix": "schema",
+        "tags": [
+            "general"
+        ],
+        "title": "Schema.org"
+    },
+    "scholarly-data-model": {
+        "download": "http://metadataregistry.org/schema/show/id/147.rdf",
+        "namespace": "http://standard.k-history.kr/resource/",
+        "prefix": "khist",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "scoro": {
+        "download": "http://purl.org/spar/scoro/",
+        "namespace": "http://purl.org/spar/scoro/",
+        "prefix": "scoro",
+        "tags": [
+            "publishing"
+        ]
+    },
+    "sealit": {
+        "download": "http://www.sealitproject.eu/ontology/",
+        "namespace": "http://www.sealitproject.eu/ontology/",
+        "prefix": "sealit",
+        "tags": [
+            "humanities",
+            "museums"
+        ]
+    },
+    "sem": {
+        "copy_from": "LOV",
+        "download": "http://semanticweb.cs.vu.nl/2009/11/sem/",
+        "namespace": "http://semanticweb.cs.vu.nl/2009/11/sem/",
+        "prefix": "sem",
+        "tags": [
+            "time",
+            "value-annotations"
+        ],
+        "title": "Simple Event Model (SEM)",
+        "title_source": "Name used by its authors; the namespace page was not reachable."
+    },
+    "shoah": {
+        "copy_from": "LOV",
+        "download": "http://dati.cdec.it/lod/shoah/",
+        "namespace": "http://dati.cdec.it/lod/shoah/",
+        "prefix": "shoah",
+        "tags": [
+            "humanities",
+            "people"
+        ],
+        "title": "Shoah Vocabulary Specification",
+        "title_source": "Not confirmed with the publisher: the file has no title and the publisher's page was unreachable or carries none. Taken from LOV."
+    },
+    "sioc": {
+        "download": "http://rdfs.org/sioc/ns",
+        "namespace": "http://rdfs.org/sioc/ns#",
+        "prefix": "sioc",
+        "tags": [
+            "people"
+        ]
+    },
+    "skos": {
+        "download": "http://www.w3.org/2004/02/skos/core.rdf",
+        "namespace": "http://www.w3.org/2004/02/skos/core#",
+        "prefix": "skos",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "skosxl": {
+        "download": "http://www.w3.org/2008/05/skos-xl#",
+        "namespace": "http://www.w3.org/2008/05/skos-xl#",
+        "prefix": "skosxl",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "soch": {
+        "download": "http://kulturarvsdata.se/ksamsok",
+        "namespace": "http://kulturarvsdata.se/ksamsok#",
+        "prefix": "soch",
+        "tags": [
+            "museums",
+            "aggregation"
+        ],
+        "title": "K-samsök",
+        "title_source": "Swedish National Heritage Board name; the namespace page carries no title."
+    },
+    "symbolic-music": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.org/ontology/symbolic-music/",
+        "namespace": "http://purl.org/ontology/symbolic-music/",
+        "prefix": "so",
+        "tags": [
+            "performing-arts"
+        ],
+        "title": "Symbolic Music Ontology",
+        "title_source": "Name used by its author; the namespace page returned 403."
+    },
+    "taxon-name-and-rank": {
+        "alternates": [
+            "http://lod.taxonconcept.org/ontology/taxnomen/index.owl"
+        ],
+        "download": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
+        "namespace": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
+        "prefix": "taxnomen",
+        "tags": [
+            "science"
+        ]
+    },
+    "theatre": {
+        "download": "http://purl.org/theatre#",
+        "namespace": "http://purl.org/theatre#",
+        "prefix": "theatre",
+        "tags": [
+            "performing-arts"
+        ],
+        "title": "Theatre Ontology",
+        "title_source": "semweb.lukeblaney.co.uk/theatre"
+    },
+    "thematic-indexes": {
+        "download": "http://metadataregistry.org/schema/show/id/31.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/ThematicIndexes/",
+        "prefix": "thematic",
+        "tags": [
+            "performing-arts",
+            "libraries"
+        ]
+    },
+    "time": {
+        "download": "https://www.w3.org/2006/time.ttl",
+        "namespace": "http://www.w3.org/2006/time#",
+        "prefix": "time",
+        "tags": [
+            "time"
+        ]
+    },
+    "tl": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/NET/c4dm/timeline.owl#",
+        "namespace": "http://purl.org/NET/c4dm/timeline.owl#",
+        "prefix": "tl",
+        "tags": [
+            "time"
+        ]
+    },
+    "tvc": {
+        "download": "https://sparontologies.github.io/tvc/current/tvc.xml",
+        "namespace": "http://www.essepuntato.it/2012/04/tvc/",
+        "prefix": "tvc",
+        "tags": [
+            "time",
+            "value-annotations"
+        ]
+    },
+    "txn": {
+        "download": "http://lod.taxonconcept.org/ontology/txn.owl#",
+        "namespace": "http://lod.taxonconcept.org/ontology/txn.owl#",
+        "prefix": "txn",
+        "tags": [
+            "science"
+        ]
+    },
+    "un": {
+        "download": "https://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/Uncertainty.owl",
+        "namespace": "http://www.owl-ontologies.com/Ontology1181490123.owl#",
+        "prefix": "un",
+        "tags": [
+            "value-annotations"
+        ],
+        "title": "Uncertainty Ontology"
+    },
+    "unimarc-b-elements-0xx": {
+        "download": "http://metadataregistry.org/schema/show/id/126.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/0XX/",
+        "prefix": "unimarcb0xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-1xx": {
+        "download": "http://metadataregistry.org/schema/show/id/127.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/1XX/",
+        "prefix": "unimarcb1xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-2xx": {
+        "download": "http://metadataregistry.org/schema/show/id/102.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/2XX/",
+        "prefix": "unimarcb2xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-3xx": {
+        "download": "http://metadataregistry.org/schema/show/id/103.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/3XX/",
+        "prefix": "unimarcb3xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-41x": {
+        "download": "http://metadataregistry.org/schema/show/id/104.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/41X/",
+        "prefix": "unimarcb41x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-42x": {
+        "download": "http://metadataregistry.org/schema/show/id/105.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/42X/",
+        "prefix": "unimarcb42x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-43x": {
+        "download": "http://metadataregistry.org/schema/show/id/106.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/43X/",
+        "prefix": "unimarcb43x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-44x": {
+        "download": "http://metadataregistry.org/schema/show/id/107.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/44X/",
+        "prefix": "unimarcb44x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-45x": {
+        "download": "http://metadataregistry.org/schema/show/id/108.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/45X/",
+        "prefix": "unimarcb45x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-46x": {
+        "download": "http://metadataregistry.org/schema/show/id/109.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/46X/",
+        "prefix": "unimarcb46x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-47x": {
+        "download": "http://metadataregistry.org/schema/show/id/110.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/47X/",
+        "prefix": "unimarcb47x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-48x": {
+        "download": "http://metadataregistry.org/schema/show/id/111.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/48X/",
+        "prefix": "unimarcb48x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-60x": {
+        "download": "http://metadataregistry.org/schema/show/id/113.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/60X/",
+        "prefix": "unimarcb60x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-61x": {
+        "download": "http://metadataregistry.org/schema/show/id/114.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/61X/",
+        "prefix": "unimarcb61x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-62x": {
+        "download": "http://metadataregistry.org/schema/show/id/115.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/62X/",
+        "prefix": "unimarcb62x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-66x": {
+        "download": "http://metadataregistry.org/schema/show/id/116.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/66X/",
+        "prefix": "unimarcb66x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-67x": {
+        "download": "http://metadataregistry.org/schema/show/id/117.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/67X/",
+        "prefix": "unimarcb67x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-68x": {
+        "download": "http://metadataregistry.org/schema/show/id/118.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/68X/",
+        "prefix": "unimarcb68x",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-7xx": {
+        "download": "http://metadataregistry.org/schema/show/id/119.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/7XX/",
+        "prefix": "unimarcb7xx",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-801": {
+        "download": "http://metadataregistry.org/schema/show/id/121.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/801/",
+        "prefix": "unimarcb801",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-802": {
+        "download": "http://metadataregistry.org/schema/show/id/122.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/802/",
+        "prefix": "unimarcb802",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-830": {
+        "download": "http://metadataregistry.org/schema/show/id/123.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/830/",
+        "prefix": "unimarcb830",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-850": {
+        "download": "http://metadataregistry.org/schema/show/id/124.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/850/",
+        "prefix": "unimarcb850",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-856": {
+        "download": "http://metadataregistry.org/schema/show/id/120.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/856/",
+        "prefix": "unimarcb856",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "unimarc-b-elements-886": {
+        "download": "http://metadataregistry.org/schema/show/id/125.rdf",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/886/",
+        "prefix": "unimarcb886",
+        "tags": [
+            "libraries"
+        ]
+    },
+    "vartrans": {
+        "download": "http://www.w3.org/ns/lemon/vartrans",
+        "namespace": "http://www.w3.org/ns/lemon/vartrans#",
+        "prefix": "vartrans",
+        "tags": [
+            "language"
+        ]
+    },
+    "vcard": {
+        "download": "http://www.w3.org/2006/vcard/ns#",
+        "namespace": "http://www.w3.org/2006/vcard/ns#",
+        "prefix": "vcard",
+        "tags": [
+            "people"
+        ]
+    },
+    "vgms-expansion-pack-visual-novel": {
+        "download": "http://metadataregistry.org/schema/show/id/249.rdf",
+        "namespace": "http://metadataregistry.org/uri/schema/vgms-vn/",
+        "prefix": "vgms-vn",
+        "tags": [
+            "media"
+        ]
+    },
+    "vgo": {
+        "download": "http://purl.org/net/VideoGameOntology#",
+        "namespace": "http://purl.org/net/VideoGameOntology#",
+        "prefix": "vgo",
+        "tags": [
+            "media"
+        ]
+    },
+    "viaf": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://viaf.org/",
+        "namespace": "http://viaf.org/#",
+        "prefix": "viaf",
+        "tags": [
+            "libraries",
+            "people"
+        ]
+    },
+    "video": {
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.org/ontology/video/",
+        "namespace": "http://purl.org/ontology/video/",
+        "prefix": "video",
+        "tags": [
+            "media"
+        ]
+    },
+    "vir": {
+        "copy_from": "LOV",
+        "download": "http://w3id.org/vir#",
+        "namespace": "http://w3id.org/vir#",
+        "prefix": "vir",
+        "tags": [
+            "museums",
+            "humanities"
+        ]
+    },
+    "vivo": {
+        "download": "http://vivoweb.org/ontology/core#",
+        "namespace": "http://vivoweb.org/ontology/core#",
+        "prefix": "vivo",
+        "tags": [
+            "publishing",
+            "people"
+        ]
+    },
+    "void": {
+        "copy_from": "LOV",
+        "download": "http://rdfs.org/ns/void#",
+        "namespace": "http://rdfs.org/ns/void#",
+        "prefix": "void",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "vra": {
+        "download": "http://purl.org/vra/",
+        "format": "rdfa",
+        "namespace": "http://purl.org/vra/",
+        "notes": "Published only as RDFa in the HTML page at the namespace. Stored as N-Triples converted from that page, since an HTML file under modules/ would be served as a page on the Omeka site. The GitHub project (mixterj/VRA-RDF-Project) has a converter and samples but no ontology file.",
+        "prefix": "vra",
+        "tags": [
+            "museums"
+        ],
+        "title": "VRA Ontology",
+        "title_source": "Heading of the ontology page (s3.amazonaws.com/VRA/ontology.html)."
+    },
+    "vs": {
+        "alternates": [
+            "http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "download": "http://www.w3.org/2003/06/sw-vocab-status/ns",
+        "namespace": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "prefix": "vs",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "wgs84": {
+        "download": "http://www.w3.org/2003/01/geo/wgs84_pos",
+        "namespace": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+        "prefix": "wgs84",
+        "tags": [
+            "places"
+        ]
+    },
+    "wikibase": {
+        "download": "http://wikiba.se/ontology#",
+        "namespace": "http://wikiba.se/ontology#",
+        "prefix": "wikibase",
+        "tags": [
+            "linked-data"
+        ]
+    },
+    "wittgenstein": {
+        "alternates": [
+            "http://discovery-project.eu/ontologies/wittgensteinsource/"
+        ],
+        "download": "http://wab.uib.no/cost-a32_rdf/wittgenstein_model.owl",
+        "namespace": "http://discovery-project.eu/ontologies/wittgensteinsource/",
+        "prefix": "wittgenstein",
+        "tags": [
+            "humanities"
+        ],
+        "title": "Wittgenstein Ontology",
+        "title_source": "Name used by the Wittgenstein Archives at the University of Bergen; the namespace page returned 404."
+    },
+    "wo": {
+        "copy_from": "LOV",
+        "download": "http://purl.org/ontology/wo/",
+        "namespace": "http://purl.org/ontology/wo/",
+        "prefix": "wo",
+        "tags": [
+            "science"
+        ]
+    },
+    "xtypes": {
+        "download": "http://purl.org/xtypes/",
+        "namespace": "http://purl.org/xtypes/",
+        "prefix": "xtypes",
+        "tags": [
+            "media"
+        ]
+    },
+    "zbwext": {
+        "download": "http://zbw.eu/namespaces/zbw-extensions/",
+        "namespace": "http://zbw.eu/namespaces/zbw-extensions/",
+        "prefix": "zbwext",
+        "tags": [
+            "libraries",
+            "linked-data"
+        ]
+    },
+    "zoology": {
+        "alternates": [
+            "http://purl.org/NET/biol/zoology"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "http://purl.org/NET/biol/zoology#",
+        "namespace": "http://purl.org/NET/biol/zoology#",
+        "prefix": "zoology",
+        "tags": [
+            "science"
+        ]
+    }
+}

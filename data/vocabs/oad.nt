@@ -1,0 +1,517 @@
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#label> "System of arrangement"@en .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#label> "Criteri di ordinamento"@it .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the internal structure, the order and/or the system of classification of the described resource"@en .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative ai criteri di ordinamento della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/systemOfArrangement> .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.4_system_of_arrangement> .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#systemOfArrangement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/2000/01/rdf-schema#label> "Publication note"@en .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia"@it .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents a bibliography"@en .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la bibliografia"@it .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/publicationNote> .
+<http://culturalis.org/oad#PublicationNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Has extent and medium"@en .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Ha estensione e supporto"@it .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to information about extent and medium"@en .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega l'istanziazione di una risorsa archivistica alle informazioni relative all'estensione e al supporto"@it .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#ExtentAndMedium> .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasExtentAndMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#label> "Date(s)"@en .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#label> "Data/e"@it .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents a date"@en .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla datazione della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#date> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/date> .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.3_dates> .
+<http://culturalis.org/oad#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#label> "Has publication note"@en .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#label> "Ha bibliografia"@it .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to its bibliography information"@en .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una scheda descrittiva alle informazioni relative alla pubblicazione"@it .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#PublicationNote> .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_publicationNote> .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.4_publication_note> .
+<http://culturalis.org/oad#hasPublicationNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a73 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/eac-cpf#Entity> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6c .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/eac-cpf#Instance> .
+<http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "Physical characteristics and technical requirements"@en .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "Caratteristiche materiali e requisiti tecnici"@it .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents physical characteristics and technical requirements"@en .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle caratteristiche materiali e ai requisiti tecnici della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/physicalCharacteristicsAndTechnicalRequirements> .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.4_physical_characteristics_and_technical_requirements> .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#label> "File Plan"@en .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema di classificazione"@it .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to a classification system"@en .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una archival instance ad un sistema di classificazione"@it .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_filePlan> .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://culturalis.org/oad#hasFilePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2000/01/rdf-schema#label> "Archival resource"@en .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa archivistica"@it .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2002/07/owl#equivalentClass> <http://dati.san.beniculturali.it/SAN/complessoArchivistico> .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2002/07/owl#versionInfo> "Questa classe è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2000/01/rdf-schema#comment> "oad:ArchivalResource is the class that represents the object of the description (i.e., a single document or a set of document)."@en .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe Archival resource indica un corpus documentale oggetto di descrizione"@it .
+<http://culturalis.org/oad#ArchivalResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Has related instance"@en .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Ha scheda descrittiva collegata"@it .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links two or more instances related"@en .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega tra loro due o più istanze archivistiche"@it .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_relatedUnitsOfDescription> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.3_related_units_of_description> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Archival history"@en .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Storia archivistica"@it .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents information about the history of the instance"@en .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla storia archivistica della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/archivalHistory> .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.3_archival_history> .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#archivalHistory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B610789f828c0292af8de39e9a2bbb7d2 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6f .
+_:B610789f828c0292af8de39e9a2bbb7d2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#Custody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/2000/01/rdf-schema#label> "Archival instance"@en .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/2000/01/rdf-schema#label> "Instanza archivistica"@it .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/2002/07/owl#versionInfo> "Questa classe è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the descriptive entry of an archival resource"@en .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe Archival instance rappresenta l'istanziazione dell'archival resource"@it .
+<http://culturalis.org/oad#Instance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Has level of description"@en .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Ha livello di descrizione"@it .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an archival resource to its level of description"@en .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una unità di descrizione al livello di descrizione archivistica"@it .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#LevelOfDescription> .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_level> .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.4_level_of_description> .
+<http://culturalis.org/oad#hasLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Has next in sequence"@en .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Ha successivo"@it .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to the following sibling"@en .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega l'istanziazione di una risorsa archivistica alla sua successiva gerarchicamente"@it .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasNextInSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a72 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Place> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Has entry"@en .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Ha scheda descrittiva"@it .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà inversa di 'isEntryOf'."@it .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#ArchivalResource> .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bbb467e76653e9004a1c309ca13a84add <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a76 .
+_:Bbb467e76653e9004a1c309ca13a84add <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Has language/scripts of material"@en .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Ha lingua/scrittura della documentazione"@it .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to its language information"@en .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una archival instance alle informazioni relative alla lingua"@it .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language> .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_languageScriptsOfMaterial> .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.3_language_scripts_of_material> .
+<http://culturalis.org/oad#hasLanguageScriptsOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/2000/01/rdf-schema#label> "EAD Schema's element or attribute"@en .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/2000/01/rdf-schema#label> "Elemento o attributo dello Schema EAD"@it .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe è utilizzata per mappare le classi e le proprietà dell'ontologia OAD con gli elementi dello schema EAD"@it .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/eadElement> .
+<http://culturalis.org/oad#EadElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Has Entity"@en .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Entità collegata"@it .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/eac-cpf#Entity> .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_entity> .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/2000/01/rdf-schema#domain> _:B3e278e2aad84abcf83c3e626ec9ba30d .
+<http://culturalis.org/oad#hasEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#hasAccessPointPlace> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasAccessPointPlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://culturalis.org/oad#hasAccessPoint> .
+<http://culturalis.org/oad#hasAccessPointPlace> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_accessPointPlace> .
+<http://culturalis.org/oad#hasAccessPointPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasAccessPointCorporateBody> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasAccessPointCorporateBody> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://culturalis.org/oad#hasAccessPoint> .
+<http://culturalis.org/oad#hasAccessPointCorporateBody> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_accessPointCorporateBody> .
+<http://culturalis.org/oad#hasAccessPointCorporateBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/eac-cpf#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dati.san.beniculturali.it/SAN/strumento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a77 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Custody> .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione o titolo"@it .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the name shown in a description"@en .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla denominazione riportata in una scheda descrittiva"@it .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#title> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/title> .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.2_title> .
+<http://culturalis.org/oad#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Has key access point"@en .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Ha chiave di indice"@it .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an access point"@en .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle chiavi di accesso"@it .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_accessPoint> .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#range> _:B0eb39e3872532b512f412e0349c58249 .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbb467e76653e9004a1c309ca13a84add .
+<http://culturalis.org/oad#hasAccessPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative / Biographical history"@en .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Storia istituzionale/ amministrativa o biografia"@it .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the administrative and biographical history."@en .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta le informazioni relative alla storia istituzionale, amministrativa o biografica"@it .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/administrativeBiographicalHistory> .
+<http://culturalis.org/oad#AdministrativeBiographicalHistory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Is contained in"@en .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "È contenuta in"@it .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the relationship between an instance and the finding aid in which it is contained"@en .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà descrive la relazione tra l'istanziazione di una risorsa archivistica o di un'entity e lo strumento di ricerca in cui è contenuta"@it .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#FindingAid> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://culturalis.org/oad#contains> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba2040626a2094277f8e8439fa08cb974 .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Contains"@en .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Contiene"@it .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse property of oad:isContainedIn"@en .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà inversa di 'isContainedIn'."@it .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#FindingAid> .
+<http://culturalis.org/oad#contains> <http://www.w3.org/2000/01/rdf-schema#range> _:B610789f828c0292af8de39e9a2bbb7d2 .
+<http://culturalis.org/oad#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#label> "Has finding aid"@en .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#label> "Ha strumento di ricerca"@it .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una archival instance allo strumento di ricerca che la contiene"@it .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#FindingAid> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_findingAid> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.5_finding_aids> .
+<http://culturalis.org/oad#hasFindingAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a71 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://culturalis.org/eac-cpf#Instance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://culturalis.org/oad/" .
+<http://culturalis.org/oad#> <http://www.w3.org/2000/01/rdf-schema#comment> "Con questo aggiornamento è stata pubblicata l'estensione di OAD relativa all'integrazione con l'Archival Resource. Hanno preso parte alla elaborazione di questo aggiornamento IBC e regesta.exe"@it .
+<http://culturalis.org/oad#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<http://culturalis.org/oad#> <http://purl.org/dc/elements/1.1/creator> "Istituto per i beni artistici culturali e naturali della Regione Emilia-Romagna" .
+<http://culturalis.org/oad#> <http://purl.org/dc/elements/1.1/creator> "Regesta.exe" .
+<http://culturalis.org/oad#> <http://www.w3.org/2002/07/owl#priorVersion> <http://lod.xdams.org/reload/oad1.2> .
+<http://culturalis.org/oad#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://culturalis.org/oad#> <http://purl.org/dc/elements/1.1/description> "An ontology for the description of archival data (OAD, “Ontology of Archival Description”) using the Web Ontology Language (OWL). This ontology represents the classes and properties needed to expose the archival resources as linked data." .
+<http://culturalis.org/oad#> <http://www.w3.org/2002/07/owl#versionInfo> "1.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://culturalis.org/oad#> <http://purl.org/dc/elements/1.1/date> "20180802" .
+<http://culturalis.org/oad#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oad" .
+<http://culturalis.org/oad#> <http://purl.org/dc/elements/1.1/title> "Ontology for archival description" .
+<http://culturalis.org/oad#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://culturalis.org/oad#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://culturalis.org/oad#> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology for archival description" .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#label> "Archivist's Note"@en .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#label> "Nota dell'archivista"@it .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle note dell'archivista della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/archivistsNote> .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.7.1_archivist_s_note> .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#archivistsNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasAccessPointPerson> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasAccessPointPerson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://culturalis.org/oad#hasAccessPoint> .
+<http://culturalis.org/oad#hasAccessPointPerson> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_accessPointPerson> .
+<http://culturalis.org/oad#hasAccessPointPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is entry of"@en .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#label> "È scheda descrittiva di"@it .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links an instance to an archival resource"@en .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà mette in relazione l'istanziazione di una risorsa archivistica alla risorsa archivistica oggetto della descrizione"@it .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#ArchivalResource> .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://culturalis.org/oad#hasEntry> .
+<http://culturalis.org/oad#isEntryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is produced by"@en .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#label> "È prodotta da"@it .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links the archival resource described to the entity responsible for the production of the resource"@en .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega la risorsa archivistica descritta alla entity responsabile della sua produzione"@it .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/eac-cpf#Entity> .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#ArchivalResource> .
+<http://culturalis.org/oad#isProducedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2000/01/rdf-schema#label> "Has Custody"@en .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2000/01/rdf-schema#label> "Conservato da"@it .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Custody> .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_custody> .
+<http://culturalis.org/oad#hasCustody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Production> .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Has administrative / biographical history"@en .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#label> "Ha storia amministrativa / biografica"@it .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links and instace to information about administrative and biographica history."@en .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una scheda descrittiva alle informazioni relative alla storia amministrativa o biografica"@it .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#AdministrativeBiographicalHistory> .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_administrativeBiographicalHistory> .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.2_administrative_biographical_history> .
+<http://culturalis.org/oad#hasAdministrativeBiographicalHistory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2000/01/rdf-schema#label> "Use EAD element or attribute"@en .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2000/01/rdf-schema#label> "Utilizza l'elemento o attributo di EAD"@it .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega una organizzazione all'elemento dello schema EAD utilizzato"@it .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#EadElement> .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/use_eadElement> .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://culturalis.org/oad#useEadElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#label> "Existence and location of originals"@en .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#label> "Esistenza e localizzazione degli originali"@it .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the existence and location of originals"@en .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative all'esistenza e alla localizzazione degli originali della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/existenceAndLocationOfOriginals> .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.1_existence_and_location_of_originals> .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#existenceAndLocationOfOriginals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a70 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Extent and medium of the unit of description (quantity, bulk, or size)"@en .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/extentAndMedium> .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.5_extent_and_medium_of_the_unit_of_description> .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#extentAndMedium> <http://purl.org/dc/elements/1.1/description> "Le informazioni sottoforma di stringa di testo sulla consistenza vengono descritte attraverso la proprietà dc:format" .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla consistenza e al supporto della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Consistenza e supporto dell'unità di descrizione"@it .
+<http://culturalis.org/oad#extentAndMedium> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2001/XMLSchema#booelan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2000/01/rdf-schema#label> "Finding aid"@en .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2000/01/rdf-schema#label> "Strumento di ricerca"@it .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2002/07/owl#equivalentClass> <http://dati.san.beniculturali.it/SAN/strumento> .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://culturalis.org/cult/0.1/#Catalogue> .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents a finding aid."@en .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta lo strumento di ricerca"@it .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/findingAid> .
+<http://culturalis.org/oad#FindingAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#label> "Other Level of description"@en .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#label> "Altro livello di descrizione"@it .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an otherlevel of description"@en .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative ad un altro livello di descrizione della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/otherlevel> .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#otherlevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dati.san.beniculturali.it/SAN/complessoArchivistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Luogo"@it .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Feature> .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents a physical place"@en .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta un luogo"@it .
+<http://culturalis.org/oad#Place> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/place> .
+<http://culturalis.org/oad#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#custody> <http://www.w3.org/2000/01/rdf-schema#label> "Custody"@en .
+<http://culturalis.org/oad#custody> <http://www.w3.org/2000/01/rdf-schema#label> "Conservazione"@it .
+<http://culturalis.org/oad#custody> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#custody> <http://purl.org/dc/elements/1.1/description> "Le classi production e custody sono state inserite per descrivere il rapporto tra una risorsa archivistica e una entità (CPF), volendo esplicitare anche le date di relazione verso un soggetto produttore o un conservatore, gestendo in questo modo ad esempio anche i cambi di custodia"@it .
+<http://culturalis.org/oad#custody> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/custody> .
+<http://culturalis.org/oad#custody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#label> "Note"@en .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#label> "Note"@it .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents information that cannot be accommodated in any of the other properties."@en .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle note della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#note> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/note> .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.6.1_note> .
+<http://culturalis.org/oad#note> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Level of description"@en .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Livello di descrizione"@it .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the archival description level"@en .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il livello della descrizione archivistica"@it .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/levelOfDescription> .
+<http://culturalis.org/oad#LevelOfDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a75 .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/eac-cpf#Entity> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6e .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/eac-cpf#Instance> .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of description"@en .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/2000/01/rdf-schema#label> "Unità of descrizione"@it .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe uod rappresenta la descrizione della risorsa archivistica"@it .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/uod> .
+<http://culturalis.org/oad#UoD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Immediate source of acquisition or transfer"@en .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Modalità di acquisizione o versamento"@it .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an immediate source of acquisition or transfer"@en .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla modalità di acquisizione o versamento della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/immediateSourceOfAcquisitionOrTransfer> .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.4_immediate_source_of_acquisition_or_transfer> .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2000/01/rdf-schema#label> "Has repository"@en .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2000/01/rdf-schema#label> "Soggetto conservatore"@it .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/eac-cpf#Entity> .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_repository> .
+<http://culturalis.org/oad#hasRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Person> .
+_:B0eb39e3872532b512f412e0349c58249 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a74 .
+_:B0eb39e3872532b512f412e0349c58249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Extent and medium"@en .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Consistenza e supporto"@it .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/2002/07/owl#versionInfo> "Questa classe è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the description about extent and medium."@en .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe Extent and medium rappresenta la descrizione dell'estensione e del supporto"@it .
+<http://culturalis.org/oad#ExtentAndMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2000/01/rdf-schema#label> "Name of creator(s)"@en .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2000/01/rdf-schema#label> "Nome del soggetto produttore"@it .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/eac-cpf#Entity> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_nameOfCreator> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.1_name_of_creators> .
+<http://culturalis.org/oad#hasNameOfCreator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#label> "Conditions governing reproduction"@en .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#label> "Condizioni che regolano la riproduzione"@it .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents condition governing reproduction of the instance"@en .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle condizioni che regolano la riproduzione della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/conditionsGoverningReproduction> .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.2_conditions_governing_reproduction> .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#conditionsGoverningReproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#label> "Existence and location of copies"@en .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#label> "Esistenza e localizzazione di copie"@it .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the existence and location of copies"@en .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative all'esistenza e alla localizzazione di copie della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/existenceAndLocationOfCopies> .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.2_existence_and_location_of_copies> .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#existenceAndLocationOfCopies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Ba2040626a2094277f8e8439fa08cb974 <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6d .
+_:Ba2040626a2094277f8e8439fa08cb974 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#production> <http://www.w3.org/2000/01/rdf-schema#label> "Production"@en .
+<http://culturalis.org/oad#production> <http://www.w3.org/2000/01/rdf-schema#label> "Produzione"@it .
+<http://culturalis.org/oad#production> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#production> <http://purl.org/dc/elements/1.1/description> "Le classi production e custody sono state inserite per descrivere il rapporto tra una risorsa archivistica e una entità (CPF), volendo esplicitare anche le date di relazione verso un soggetto produttore o un conservatore, gestendo in questo modo ad esempio anche i cambi di custodia"@it .
+<http://culturalis.org/oad#production> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/production> .
+<http://culturalis.org/oad#production> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#label> "Accruals"@en .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#label> "Incrementi previsti"@it .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents expected increase."@en .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative agli incrementi previsti."@it .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/accruals> .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.3_accruals> .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#accruals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Instance> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a6e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Conditions governing access"@en .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Condizioni che regolano l’accesso"@it .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents condition governing access of the instance"@en .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle condizioni che regolano l'accesso della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/conditionsGoverningAccess> .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.1_conditions_governing_access> .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#conditionsGoverningAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#label> "Has extent type"@en .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#label> "Ha tipo di estensione"@it .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an extent type and it is related to a skos vocabulary"@en .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla tipologia di estensione e punta ad un vocabolario skos"@it .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#ExtentAndMedium> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#Production> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Appraisal, destruction and scheduling information"@en .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure, tempi e criteri di valutazione e scarto"@it .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents appraisal, destruction and scheduling information"@en .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alle procedure, ai tempi e ai criteri di valutazione e scarto della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/appraisalDestructionAndSchedulingInformation> .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.2_appraisal_destruction_and_scheduling_information> .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasAccessPointFamily> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasAccessPointFamily> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://culturalis.org/oad#hasAccessPoint> .
+<http://culturalis.org/oad#hasAccessPointFamily> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_accessPointFamily> .
+<http://culturalis.org/oad#hasAccessPointFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Reference code"@en .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Segnatura o codice identificativo"@it .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an identification code of the described resource"@en .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative al codice identificativo riportato in una scheda descrittiva"@it .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/referenceCode> .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.1_reference_codes> .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#referenceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2000/01/rdf-schema#label> "Has Production"@en .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2000/01/rdf-schema#label> "Prodotto da"@it .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#booelan> .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Production> .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_production> .
+<http://culturalis.org/oad#hasProduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/cult/0.1/#Catalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is described by"@en .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Descritta da"@it .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse property of oad:describes"@en .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà inversa di 'describes'."@it .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#ArchivalResource> .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#FindingAid> .
+<http://culturalis.org/oad#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#label> "Scope and content"@en .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#label> "Ambiti e contenuto"@it .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the scope and the content of the described resource"@en .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative ad ambiti e contenuto della risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/scopeAndContent> .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.1_scope_and_content> .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#scopeAndContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#ArchivalResource> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega uno strumento di ricerca alla risorsa archivistica descritta"@it .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#comment> "This functional property links a finding aid to the archival resource described"@en .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#label> "Descrive"@it .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#FindingAid> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2000/01/rdf-schema#label> "Describes"@en .
+<http://culturalis.org/oad#describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://culturalis.org/oad#describes> <http://www.w3.org/2002/07/owl#inverseOf> <http://culturalis.org/oad#isDescribedBy> .
+_:B3e278e2aad84abcf83c3e626ec9ba30d <http://www.w3.org/2002/07/owl#unionOf> _:BX2D2680d168X3A1a0ce7c7f10X3AX2D7a78 .
+_:B3e278e2aad84abcf83c3e626ec9ba30d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://opaquenamespace/ns/cco"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Cataloging Cultural Objects -->
+<rdf:Description rdf:about="http://opaquenamespace/ns/cco">
+  <dc:title xml:lang="en">Cataloging Cultural Objects</dc:title>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: accession number -->
+<rdf:Description rdf:about="http://opaquenamespace/ns/cco/accessionNumber">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace/ns/cco" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">accessionNumber</reg:name>
+  <rdfs:label xml:lang="en">accession number</rdfs:label>
+  <skos:definition xml:lang="en">Identification number assigned to a particular donation or acquisition</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
+</rdf:Description>
+
+<!-- Property: view description -->
+<rdf:Description rdf:about="http://opaquenamespace/ns/cco/viewDescription">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace/ns/cco" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">viewDescription</reg:name>
+  <rdfs:label xml:lang="en">view description</rdfs:label>
+  <skos:definition xml:lang="en">Describes the spatial, chronological or contextual aspect of teh work as captures in the image view.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

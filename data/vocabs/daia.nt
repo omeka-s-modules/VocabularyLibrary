@@ -1,0 +1,282 @@
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/holds> .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/daia/collectedBy> .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to an Institution that holds the Item."@en .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/2000/01/rdf-schema#label> "held by"@en .
+<http://purl.org/ontology/daia/heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2008/05/skos#scopeNote> "The name or title of this location can be expressed with foaf:name and dct:title"@en .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage"@en .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2008/05/skos#ScopeNote> "Most instances of this class are also dct:Location and geo:SpatialThing" .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Site> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/page> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "A place where instances of frbr:Item are stored."@en .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Location> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/primaryTopicOf> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/title> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2008/05/skos#scopeNote> "A link to a page with more information about the storage can be added with foaf:page and foaf:primaryTopicOf. However there should be another property to express a link to a specific item at a specific storage."@en .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/name> .
+<http://purl.org/ontology/daia/Storage> <http://www.w3.org/2008/05/skos#scopeNote> "Physical items can be related to storages with geo:location. Most non-physical items have no locations but access services."@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/description> .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Service> .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2008/05/skos#scopeNote> "Messages can be added with dct:description."@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/coverage> .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2008/05/skos#scopeNote> "Do not mix types of services (like 'loaning'), which are subclasses of Service, and specific instances of services (like loaning a particular book)!"@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2008/05/skos#scopeNote> "The property dct:coverage may be used to refer to a scope of this service - but this is outside of the core purpose of DAIA"@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service is something that is provided by an Institution, typically related to an Item, for instance the service of loaning the Item."@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<http://purl.org/ontology/daia/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/description> .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2008/05/skos#scopeNote> "rdfs:seeAlso is used to link to documents and institutions."@en .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2008/05/skos#scopeNote> "Messages can be added with dct:description."@en .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2000/01/rdf-schema#comment> "A Respone contains information about document availability for a specific time and institution."@en .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/2000/01/rdf-schema#label> "Response"@en .
+<http://purl.org/ontology/daia/Response> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/daia/unavailableFor> .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to a Service which the Item is available for. This property is disjoint with the unavailable property; however an Item can be available and unavailable for two different Services of the same class at the same time."@en .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/2000/01/rdf-schema#label> "available for"@en .
+<http://purl.org/ontology/daia/availableFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/heldBy> .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/daia/inCollection> .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Institution to an Item which the Institution holds."@en .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/2000/01/rdf-schema#label> "holds"@en .
+<http://purl.org/ontology/daia/holds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/availableFor> .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a unavailable Service to the Item which this Service refers to"@en .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/2000/01/rdf-schema#label> "available of"@en .
+<http://purl.org/ontology/daia/unavailableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/coverage> .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/limits> .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/daia/Limitation> .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Service to a Limitation."@en .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/2000/01/rdf-schema#label> "limited by"@en .
+<http://purl.org/ontology/daia/limitedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/collectedBy> .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Collection> .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2008/05/skos#scopeNote> "This property implies the existence of a dcmitype:Collection and a cdtype:CatalogueOrIndex that need not to be modeled explicitly."@en .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Institution to a Document which the Institution helds an item of."@en .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/2000/01/rdf-schema#label> "in collection"@en .
+<http://purl.org/ontology/daia/inCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplar> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/vocab/frbr/core#exemplarOf> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#label> "has exemplar"@en .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/narrowerExemplar> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Document to an Item that is an exemplar of the Document. This property is similar to frbr:exemplar but does not refer to the class frbr:Manifestation."@en .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/vocab/frbr/core#embodimentOf> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/exemplarOf> .
+<http://purl.org/ontology/daia/exemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/description> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2008/05/skos#scopeNote> "Messages can be added with dct:description."@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Every Item is also a document (frbr:Item rdfs:subClassOf bibo:Document."@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "An Item is a single instance of a Document. Availability information is directly connected to single items."@en .
+<http://purl.org/vocab/frbr/core#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/inCollection> .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Collection> .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2008/05/skos#scopeNote> "This property implies the existence of a dcmitype:Collection and a cdtype:CatalogueOrIndex that need not to be modeled explicitly."@en .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Document to an Institution which helds an iten of the Document."@en .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "collected by"@en .
+<http://purl.org/ontology/daia/collectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/limits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Limitation> .
+<http://purl.org/ontology/daia/limits> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/limits> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Limitation to a Service."@en .
+<http://purl.org/ontology/daia/limits> <http://www.w3.org/2000/01/rdf-schema#label> "limits"@en .
+<http://purl.org/ontology/daia/limits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/availableFor> .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an available Service to the Item which this Service refers to"@en .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/2000/01/rdf-schema#label> "available of"@en .
+<http://purl.org/ontology/daia/availableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, or other geometrical thing in space, where it is."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2008/05/skos#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/broaderExemplar> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/broaderExemplarOf> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/hasPart> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplarOf> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Document to an Item that contains an exemplar of the Document as part."@en .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplar> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/exemplar> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2008/05/skos#scopeNote> "{ ?i daia:broaderExemplarOf ?d } => { ?i dct:hasPart [ daia:exemplarOf ?d ] }" .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/exemplarOf> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to a Document which is partly exemplified by the Item."@en .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2008/05/skos#scopeNote> "{ ?d daia:broaderExemplar ?i } => { ?i dct:hasPart [ daia:exemplarOf ?d ] }" .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#label> "broader exemplar of"@en .
+<http://purl.org/ontology/daia/broaderExemplar> <http://www.w3.org/2000/01/rdf-schema#label> "broader exemplar"@en .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/unavailableFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/unavailableFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/unavailableFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to a Service which the Item is not available for. This property is disjoint with the available property; however an Item can be available and unavailable for two different Services of the same class at the same time."@en .
+<http://purl.org/ontology/daia/unavailableFor> <http://www.w3.org/2000/01/rdf-schema#label> "not available for"@en .
+<http://purl.org/ontology/daia/unavailableFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/daia/Service/Presentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/Service/Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Use within the holding institution (in their rooms, in their intranet etc.)"@en .
+<http://purl.org/ontology/daia/Service/Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "presentation service"@en .
+<http://purl.org/ontology/daia/Service/Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/exemplarOf> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/hasPart> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#label> "narrower exemplar"@en .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/exemplar> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplarOf> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to a Document which is partly exemplified by the Item."@en .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplar> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Document to an Item that is an exemplar of a part of the Document."@en .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/narrowerExemplarOf> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2000/01/rdf-schema#label> "narrower exemplar of"@en .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2008/05/skos#scopeNote> "{ ?i daia:narrowerExemplarOf ?d } => { ?i daia:exemplarOf [ dct:isPartOf ?d ] }" .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/narrowerExemplar> .
+<http://purl.org/ontology/daia/narrowerExemplar> <http://www.w3.org/2008/05/skos#scopeNote> "{ ?d daia:narrowerExemplar ?i } => { ?d dct:hasPart [ daia:exemplar ?i ] }" .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/daia/Service/Openaccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/Service/Openaccess> <http://www.w3.org/2008/05/skos#scopeNote> "this does not imply free reuse, for instance distribution and and modification. A specific license should be used for details."@en .
+<http://purl.org/ontology/daia/Service/Openaccess> <http://www.w3.org/2000/01/rdf-schema#comment> "can be accessed freely on the Web"@en .
+<http://purl.org/ontology/daia/Service/Openaccess> <http://www.w3.org/2000/01/rdf-schema#label> "open access service"@en .
+<http://purl.org/ontology/daia/Service/Openaccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2008/05/skos#scopeNote> "This property can be inferred from a daia:narrowerExemplar or daia:broaderExemplar property."@en .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/daia/delay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/delay> <http://www.w3.org/2000/01/rdf-schema#comment> "A time period of estimated delay untill an available Service can be used. Applications should normalize all literal values not conforming to xsd:duration to 'unknown'"@en .
+<http://purl.org/ontology/daia/delay> <http://www.w3.org/2000/01/rdf-schema#label> "delay"@en .
+<http://purl.org/ontology/daia/delay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2008/05/skos#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2001/XMLSchema#dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://purl.org/ontology/daia/Service/Loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/Service/Loan> <http://www.w3.org/2000/01/rdf-schema#comment> "Use outside of the holding institution (by lending or online access)"@en .
+<http://purl.org/ontology/daia/Service/Loan> <http://www.w3.org/2000/01/rdf-schema#label> "loan service"@en .
+<http://purl.org/ontology/daia/Service/Loan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/coverage> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/primaryTopicOf> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/page> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/title> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/org#Organization> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2008/05/skos#scopeNote> "A link to a page with more information can be added with foaf:page and with foaf:primaryTopicOf."@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2008/05/skos#scopeNote> "A name or title can be expressed with dct:title"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for any kind of organization such as a library or a company, both Institution and Department."@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/Service/Interloan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/Service/Interloan> <http://www.w3.org/2000/01/rdf-schema#comment> "Use mediated by another institution."@en .
+<http://purl.org/ontology/daia/Service/Interloan> <http://www.w3.org/2000/01/rdf-schema#label> "interloan service"@en .
+<http://purl.org/ontology/daia/Service/Interloan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/provides> .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Service to an Institution that provides the Service."@en .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/2000/01/rdf-schema#label> "provided by"@en .
+<http://purl.org/ontology/daia/providedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2008/05/skos#scopeNote> "Date that a resource became or will become available. Applications may derive this property from daia:expected and/or daia:timestamp"@en .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/2000/01/rdf-schema#comment> "A call number, shelf mark or similar label of an item"@en .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
+<http://purl.org/ontology/daia/label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/available> .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Response> .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/valid> .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time of a the validity of a Response"@en .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/2000/01/rdf-schema#label> "timestamp"@en .
+<http://purl.org/ontology/daia/timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/daia/expected> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/available> .
+<http://purl.org/ontology/daia/expected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/expected> <http://www.w3.org/2000/01/rdf-schema#comment> "If this property is given on an unavailable Service, it is assumed that the Service will be available at the specified time. Applications should normalize all literal values not conforming to xsd:date or xsd:dateTime to 'unknown'"@en .
+<http://purl.org/ontology/daia/expected> <http://www.w3.org/2000/01/rdf-schema#label> "expected"@en .
+<http://purl.org/ontology/daia/expected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/providedBy> .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Institution to a Service that is provided by the Institution."@en .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
+<http://purl.org/ontology/daia/provides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/perform> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/ontology/daia/perform> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/perform> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to perform, register or reserve a Service."@en .
+<http://purl.org/ontology/daia/perform> <http://www.w3.org/2000/01/rdf-schema#label> "perform"@en .
+<http://purl.org/ontology/daia/perform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2008/05/skos#scopeNote> "Messages can be added with dct:description."@en .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A Document"@en .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/primaryTopicOf> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2008/05/skos#scopeNote> "A link to a document about the document can be added with foaf:page and with foaf:primaryTopicOf."@en .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/title> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Document> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2008/05/skos#scopeNote> "A name or title can be expressed with dct:title"@en .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/description> .
+<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/page> .
+<http://purl.org/ontology/daia/queue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/ontology/daia/queue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/daia/Service> .
+<http://purl.org/ontology/daia/queue> <http://www.w3.org/2000/01/rdf-schema#comment> "The number number of waiting requests for this service. If this property is not given, the value zero may be assumed but applications may also distinguish zero and no value."@en .
+<http://purl.org/ontology/daia/queue> <http://www.w3.org/2000/01/rdf-schema#label> "queue"@en .
+<http://purl.org/ontology/daia/queue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/primaryTopicOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/dc/terms/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/description> .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/primaryTopicOf> .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/page> .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/title> .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2008/05/skos#scopeNote> "A link to a page with more information can be added with foaf:page and with foaf:primaryTopicOf"@en .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2008/05/skos#scopeNote> "A description of the limitation can be added with dct:description."@en .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Limitation is something that limits the the availability of an Item."@en .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/2000/01/rdf-schema#label> "Limitation"@en .
+<http://purl.org/ontology/daia/Limitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/daia/> <http://www.w3.org/2002/07/owl#versionInfo> "Beta version 2011-12-15" .
+<http://purl.org/ontology/daia/> <http://purl.org/dc/terms/description> "The Document Availability Information Ontology (DAIA) describes the current availability of documents in libraries and similar institutions. Availability can be expressed in terms of specific services."@en .
+<http://purl.org/ontology/daia/> <http://purl.org/dc/terms/title> "Document Availability Information Ontology (DAIA)" .
+<http://purl.org/ontology/daia/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/dc/terms/valid> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://www.w3.org/2008/05/skos#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/vocab/frbr/core#embodiment> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/daia/exemplar> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/broaderExemplarOf> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#label> "is examplar of"@en .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/vocab/frbr/core#exemplar> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Item to the Document that is exemplified by the Item."@en .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/ontology/daia/exemplarOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/daia/narrowerExemplarOf> .

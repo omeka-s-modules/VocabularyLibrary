@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/ThematicIndexes"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Thematic Indexes -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes">
+  <dc:title xml:lang="en">Thematic Indexes</dc:title>
+  <skos:note  xml:lang="en">Used to identify and describe thematic indexes used in the Library of Congress/NACO Authority File</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Access Point Abbreviation -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/accessPointAbbrev">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">accessPointAbbrev</reg:name>
+  <rdfs:label xml:lang="en">Access Point Abbreviation</rdfs:label>
+  <skos:definition xml:lang="en">Defines the abbreviation used in conjunction with the thematic index number in access points in the LC/NAF. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Access Point Use -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/accessPointUse">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">accessPointUse</reg:name>
+  <rdfs:label xml:lang="en">Access Point Use</rdfs:label>
+  <skos:definition xml:lang="en">Defines whether the thematic index is used in the creation of authorized or variant access points in the LC/NAF.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Additional Information -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/addInfo">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">addInfo</reg:name>
+  <rdfs:label xml:lang="en">Additional Information</rdfs:label>
+  <skos:definition xml:lang="en">Additional information about the thematic index</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Brief Citation -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/briefCitation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">briefCitation</reg:name>
+  <rdfs:label xml:lang="en">Brief Citation</rdfs:label>
+  <skos:definition xml:lang="en">A brief character string which uniquely identifies a thematic index referenced at http://bcc.musiclibraryassoc.org/BCC-Historical/BCC2011/Thematic_Indexes.htm</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Composer -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/composer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">composer</reg:name>
+  <rdfs:label xml:lang="en">Composer</rdfs:label>
+  <skos:definition xml:lang="en">The composer whose works are indexed and identified in a thematic index</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Full Citation -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/ThematicIndexes/fullCitation">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/ThematicIndexes" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">fullCitation</reg:name>
+  <rdfs:label xml:lang="en">Full Citation</rdfs:label>
+  <skos:definition xml:lang="en">A citation in Turabian/Chicago Manual of Style format identifying a resource used as a thematic index.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

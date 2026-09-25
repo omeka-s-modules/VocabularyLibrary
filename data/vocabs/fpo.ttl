@@ -1,0 +1,523 @@
+@prefix : <https://github.com/johnBradley501/FPO/raw/master/fpo.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix frbroo: <http://www.ifla.org/files/assets/cataloguing/FRBRoo/frbroo_v_2.4.pdf#> .
+
+<https://github.com/johnBradley501/FPO/raw/master/fpo.owl> a owl:Ontology ;
+	rdfs:label "A Factoid Prosopography Ontology" ;
+	owl:versionInfo "1.0"^^xsd:decimal ;
+	dc:rights "Creative Commons Attribution-NonCommercial 4.0 International License." ;
+	rdfs:comment """FPO (Factoid Prosopography Ontology) is an ontology which has been defined to formalise some aspects of the practice of Factoid Prosopography as it has been practiced in the six structured prosopographies collaboratively created by King's College London's Department of Digital Humanities (formally Centre for Computing in the Humanities) with various historians between 1995 and 2016.  By defining this ontology its makers wish to clarify some aspects of how this approach for factoid prosopography actually worked.
+
+It was first created (version 0.1) in 2016 by John Bradley, now a retired member of DDH but who participated in various ways (from developer to Co-Investigator) in all six of KCL's factoid prosopographical projects.  This version (1.0: June 2010) of FPO is much like the previous preliminary version, with the most significant change being in the representation of :Reference and the associated addition of the new class :Role.""" ;
+	dc:creator "John Bradley (King's Digital Lab, King's Collage London)" ;
+	dc:title "A Factoid Prosopography Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#assertsPossessionOf
+
+:assertsPossessionOf a owl:ObjectProperty ;
+	rdfs:domain :PossessionFactoid ;
+	rdfs:range :Possession .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#dateAsserted
+
+:dateAsserted a owl:ObjectProperty ;
+	rdfs:domain :Factoid ;
+	rdfs:range :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#dateForAssertion
+
+:dateForAssertion a owl:ObjectProperty ;
+	rdfs:domain :StateOfAffairsFactoid ;
+	rdfs:range :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#fromSource
+
+:fromSource a owl:ObjectProperty ;
+	rdfs:domain :SourceCitation ;
+	rdfs:range :Source .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasDateAssertionMade
+
+:hasDateAssertionMade a owl:ObjectProperty ;
+	rdfs:domain :Assertion ;
+	rdfs:range :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasFromRange
+
+:hasFromRange a owl:ObjectProperty ;
+	rdfs:domain :DateRangeCompound ;
+	rdfs:range :DateRangeTEI .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasLifeDates
+
+:hasLifeDates a owl:ObjectProperty ;
+	rdfs:domain :Person ;
+	rdfs:range :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasReference
+
+:hasReference a owl:ObjectProperty ;
+	rdfs:domain :Assertion ;
+	rdfs:range :Reference .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasRole
+
+:hasRole a owl:ObjectProperty ;
+	rdfs:domain :Reference ;
+	rdfs:range :Role .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasToRange
+
+:hasToRange a owl:ObjectProperty ;
+	rdfs:domain :DateRangeCompound ;
+	rdfs:range :DateRangeTEI .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#involvesPossession
+
+:involvesPossession a owl:ObjectProperty ;
+	rdfs:domain :Transaction ;
+	rdfs:range :Possession .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#isFrom
+
+:isFrom a owl:ObjectProperty ;
+	rdfs:domain :DateRangeTEI ;
+	rdfs:range :Date .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#isNotAfter
+
+:isNotAfter a owl:ObjectProperty ;
+	rdfs:domain :DateRangeTEI ;
+	rdfs:range :Date .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#isNotBefore
+
+:isNotBefore a owl:ObjectProperty ;
+	rdfs:domain :DateRangeTEI ;
+	rdfs:range :Date .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#isTo
+
+:isTo a owl:ObjectProperty ;
+	rdfs:domain :DateRangeTEI ;
+	rdfs:range :Date .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#locatedAt
+
+:locatedAt a owl:ObjectProperty ;
+	rdfs:domain :GeographicalPossession ;
+	rdfs:range :Location .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#occurredOn
+
+:occurredOn a owl:ObjectProperty ;
+	rdfs:domain :EventFactoid ;
+	rdfs:range :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#referencesLocation
+
+:referencesLocation a owl:ObjectProperty ;
+	rdfs:domain :LocationReference ;
+	rdfs:range :Location .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#referencesPerson
+
+:referencesPerson a owl:ObjectProperty ;
+	rdfs:domain :PersonReference ;
+	rdfs:range :Person .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#sourcedFrom
+
+:sourcedFrom a owl:ObjectProperty ;
+	rdfs:domain :Assertion ;
+	rdfs:range :SourceCitation .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasBibliographicEntry
+
+:hasBibliographicEntry a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Source ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasDay
+
+:hasDay a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Date ;
+	rdfs:range _:genid1 .
+
+_:genid1 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
+
+_:genid3 xsd:maxInclusive "31"^^xsd:integer .
+
+_:genid2 rdf:rest rdf:nil .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasDisplayName
+
+:hasDisplayName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasDisplayNameComponent
+
+:hasDisplayNameComponent a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasDisplayNumberComponent
+
+:hasDisplayNumberComponent a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:int .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasEventName
+
+:hasEventName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :EventFactoid ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasISO8601Date
+
+:hasISO8601Date a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Date ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasLocationName
+
+:hasLocationName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Location ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasMonth
+
+:hasMonth a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Date ;
+	rdfs:range _:genid4 .
+
+_:genid4 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
+
+_:genid6 xsd:maxInclusive "12"^^xsd:integer .
+
+_:genid5 rdf:rest rdf:nil .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasNameInSourceAs
+
+:hasNameInSourceAs a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Reference ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasPlaceInSource
+
+:hasPlaceInSource a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :SourceCitation ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasPossessionName
+
+:hasPossessionName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Possession ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasRoleName
+
+:hasRoleName a owl:DatatypeProperty ;
+	rdfs:domain :Role ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasSourceID
+
+:hasSourceID a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Source ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasSourceName
+
+:hasSourceName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Source ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasTextualDescription
+
+:hasTextualDescription a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :DateRange ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#hasYear
+
+:hasYear a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Date ;
+	rdfs:range xsd:integer .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://erlangen-crm.org/current/E39_Actor
+
+cidoc:E39_Actor a owl:Class .
+# 
+# http://erlangen-crm.org/current/E53_Place
+
+cidoc:E53_Place a owl:Class .
+# 
+# http://www.ifla.org/files/assets/cataloguing/FRBRoo/frbroo_v_2.4.pdf#F2_Expression
+
+frbroo:F2_Expression a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Assertion
+
+:Assertion a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#CIDOC_Actor
+
+:CIDOC_Actor a owl:Class ;
+	rdfs:subClassOf cidoc:E39_Actor , :Person .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#CIDOC_Place
+
+:CIDOC_Place a owl:Class ;
+	rdfs:subClassOf cidoc:E53_Place , :Location .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Date
+
+:Date a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#DateRange
+
+:DateRange a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#DateRangeCompound
+
+:DateRangeCompound a owl:Class ;
+	rdfs:subClassOf :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#DateRangeTEI
+
+:DateRangeTEI a owl:Class ;
+	rdfs:subClassOf :DateRange .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#EventFactoid
+
+:EventFactoid a owl:Class ;
+	rdfs:subClassOf :Factoid ;
+	owl:disjointWith :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#FRBRSource
+
+:FRBRSource a owl:Class ;
+	rdfs:subClassOf frbroo:F2_Expression , :Source .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Factoid
+
+:Factoid a owl:Class ;
+	rdfs:subClassOf :Assertion .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#FemalePerson
+
+:FemalePerson a owl:Class ;
+	rdfs:subClassOf :Person .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#GeographicalPossession
+
+:GeographicalPossession a owl:Class ;
+	rdfs:subClassOf :Possession .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Group
+
+:Group a owl:Class ;
+	rdfs:subClassOf :Person .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Institution
+
+:Institution a owl:Class ;
+	rdfs:subClassOf :Group .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Location
+
+:Location a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#LocationReference
+
+:LocationReference a owl:Class ;
+	rdfs:subClassOf :Reference .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#MalePerson
+
+:MalePerson a owl:Class ;
+	rdfs:subClassOf :Person .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#NongeographicalPossession
+
+:NongeographicalPossession a owl:Class ;
+	rdfs:subClassOf :Possession .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#OccupationFactoid
+
+:OccupationFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#OfficeFactoid
+
+:OfficeFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Person
+
+:Person a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#PersonReference
+
+:PersonReference a owl:Class ;
+	rdfs:subClassOf :Reference .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Possession
+
+:Possession a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#PossessionFactoid
+
+:PossessionFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Reference
+
+:Reference a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#ReferenceAsObject
+
+:ReferenceAsObject a owl:Class ;
+	rdfs:subClassOf :PersonReference ;
+	owl:disjointWith :ReferenceAsSubject .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#ReferenceAsSubject
+
+:ReferenceAsSubject a owl:Class ;
+	rdfs:subClassOf :PersonReference .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#RelationshipFactoid
+
+:RelationshipFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Role
+
+:Role a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Source
+
+:Source a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#SourceCitation
+
+:SourceCitation a owl:Class .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#StateOfAffairsFactoid
+
+:StateOfAffairsFactoid a owl:Class ;
+	rdfs:subClassOf :Factoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#StatusFactoid
+
+:StatusFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#TitleFactoid
+
+:TitleFactoid a owl:Class ;
+	rdfs:subClassOf :StateOfAffairsFactoid .
+# 
+# https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Transaction
+
+:Transaction a owl:Class ;
+	rdfs:subClassOf :EventFactoid .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid7 a owl:AllDisjointClasses ;
+	owl:members _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :FemalePerson ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :Group ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :MalePerson ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid11 a owl:AllDisjointClasses ;
+	owl:members _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :OccupationFactoid ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :OfficeFactoid ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :PossessionFactoid ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :RelationshipFactoid ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :StatusFactoid ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :TitleFactoid ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi

@@ -1,0 +1,277 @@
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#secondLevelClassification> .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_division> .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/2000/01/rdf-schema#label> "division"@en .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_division> .
+<http://purl.org/NET/biol/ns#division> <http://purl.org/dc/terms/description> "The second highest level of classification, as used by botanists. Note that\ndivision may be used to describe any form of life — the use of division is\nnot meant to imply that the entity being described is a plant, merely that\nbotanical names of ranks are being used. Zoologists use the term \"division\"\nto describe a rank between an \"infraclass\" and a \"cohort\". biol:division\nshould not be used for this purpose — use biol:rank instead."@en .
+<http://purl.org/NET/biol/ns#division> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:B458dbb1713a0552df8ba1fc54c69a0c5 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
+_:Bf9ebcb5d5c97ba3d2d3c5aa86a5b22b1 <http://purl.org/NET/biol/ns#hasTaxonomy> _:B53235a5afb55250ce8a9144eb1c49afd .
+_:Bf9ebcb5d5c97ba3d2d3c5aa86a5b22b1 <http://xmlns.com/foaf/0.1/page> <http://tobyinkster.co.uk/> .
+_:Bf9ebcb5d5c97ba3d2d3c5aa86a5b22b1 <http://xmlns.com/foaf/0.1/name> "Toby Inkster"@en .
+_:Bf9ebcb5d5c97ba3d2d3c5aa86a5b22b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "taxonomy"@en .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://purl.org/dc/terms/description> "This property provides a relationship between an entity (such as a <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://xmlns.com/foaf/spec/#term_Person\">foaf:Person</a>) and a taxonomy. Because biologists don't always agree on how to classify life, a single entity may have multiple taxonomies, each of which may be differentiated between using <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#term_authority\">biol:authority</a> or dc:date."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> .
+<http://purl.org/NET/biol/ns#hasTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:Bbf311889ef2e3950e1b2fb3ddd7933ff <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
+_:B8a85db01d50fc78120feb7b8ce2eee1b <http://purl.org/NET/biol/ns#hasTaxonomy> _:B711cadc121af7a7b9729c77d6c3797d6 .
+_:B8a85db01d50fc78120feb7b8ce2eee1b <http://xmlns.com/foaf/0.1/page> <http://tobyinkster.co.uk/> .
+_:B8a85db01d50fc78120feb7b8ce2eee1b <http://xmlns.com/foaf/0.1/name> "Toby Inkster"@en .
+_:B8a85db01d50fc78120feb7b8ce2eee1b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/2000/01/rdf-schema#label> "second level classification"@en .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://purl.org/dc/terms/description> "The second highest level of classification. Zoologists call these <i xmlns=\"http://www.w3.org/1999/xhtml\">phyla</i> and botanists call them \"divisions\". In general, you should pick one of those terms and use it instead."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#secondLevelClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_order> .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_order> .
+<http://purl.org/NET/biol/ns#order> <http://purl.org/dc/terms/description> "The fourth highest level of classification. For example \"Primates\"."@en .
+<http://purl.org/NET/biol/ns#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_label> .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_authority> .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/2000/01/rdf-schema#label> "authority"@en .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_authority> .
+<http://purl.org/NET/biol/ns#authority> <http://purl.org/dc/terms/description> "The authority who classified this form of life. For example \"Linnaeus, 1758\"."@en .
+<http://purl.org/NET/biol/ns#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "Botanical Taxonomy"@en .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://purl.org/dc/terms/description> "A BotTaxonomy is a subclass of Taxonomy. It is not necessarily used to\ndescribe a plant. Most of the time, it is more appropriate to use Taxonomy\ninstead."@en .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#BotTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_class> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/2000/01/rdf-schema#label> "class"@en .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_class> .
+<http://purl.org/NET/biol/ns#class> <http://purl.org/dc/terms/description> "The third highest level of classification. For example <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Mammalia</i>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_resource> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_type> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_species> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/2000/01/rdf-schema#label> "species"@en .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_species> .
+<http://purl.org/NET/biol/ns#species> <http://purl.org/dc/terms/description> "The lowest level of classification supported by this vocabulary. For example <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Sapiens</i>. To include information more specific than species, use <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#term_rank\">biol:rank</a> or <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#section_Abstract\">a more specialist vocabulary</a>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#species> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bbf311889ef2e3950e1b2fb3ddd7933ff .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B458dbb1713a0552df8ba1fc54c69a0c5 .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_morePrecise> .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#label> "more precise"@en .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_morePrecise> .
+<http://purl.org/NET/biol/ns#morePrecise> <http://purl.org/dc/terms/description> "Connects a taxonomy to a more precise taxonomy. For example, the taxonomy\n\"Mammal\" might have a \"more precise\" property linking to \"Primate\"."@en .
+<http://purl.org/NET/biol/ns#morePrecise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_genus> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/2000/01/rdf-schema#label> "genus"@en .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_genus> .
+<http://purl.org/NET/biol/ns#genus> <http://purl.org/dc/terms/description> "The sixth highest level of classification. For example <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Homo</i>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#genus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_class> .
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_seealso> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_seeAlso> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/2000/01/rdf-schema#label> "see also"@en .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_seeAlso> .
+<http://purl.org/NET/biol/ns#seeAlso> <http://purl.org/dc/terms/description> "A link to another resource further describing this form of life."@en .
+<http://purl.org/NET/biol/ns#seeAlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "Zoological Taxonomy"@en .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://purl.org/dc/terms/description> "A ZooTaxonomy is a subclass of Taxonomy. It is not necessarily used to\ndescribe an animal, but it indicates that certain ambiguous terms, such as\n\"division\" should be interpreted the way zoologists use them. Most of the\ntime, it is more appropriate to use Taxonomy instead."@en .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#ZooTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:lsid:ubio.org:predicates:taxonomicGroup> .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_rank> .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/2000/01/rdf-schema#label> "rank"@en .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_rank> .
+<http://purl.org/NET/biol/ns#rank> <http://purl.org/dc/terms/description> "An unspecified classification. This should not normally be used."@en .
+<http://purl.org/NET/biol/ns#rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://creativecommons.org/licenses/by-sa/2.0/uk/> <http://purl.org/dc/terms/title> "Creative Commons Attribution-Share Alike 2.0 (UK: England & Wales) Licence" .
+<http://creativecommons.org/licenses/by-sa/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://creativecommons.org/ns#License> .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#authority> "Linnaeus, 1758"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#species> "Sapiens"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#phylum> "Chordata"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#name> "Homo sapiens"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/dc/terms/date> "2008-05-08"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#order> "Primates"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#seeAlso> <http://species.wikimedia.org/wiki/Homo_sapiens> .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#kingdom> "Animalia"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#family> "Hominidae"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#genus> "Homo"@en .
+_:B711cadc121af7a7b9729c77d6c3797d6 <http://purl.org/NET/biol/ns#class> "Mammalia"@en .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_commonName> .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/2000/01/rdf-schema#label> "common name"@en .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_commonName> .
+<http://purl.org/NET/biol/ns#commonName> <http://purl.org/dc/terms/description> "A non-scientific name. For example, \"Human\"."@en .
+<http://purl.org/NET/biol/ns#commonName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://en.wikipedia.org/wiki/Taxonomic_rank> <http://purl.org/dc/terms/publisher> "Wikipedia"@en .
+<http://en.wikipedia.org/wiki/Taxonomic_rank> <http://purl.org/dc/terms/title> "Taxonomic rank"@en .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "Taxonomy"@en .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_Taxonomy> .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://purl.org/dc/terms/description> "A taxonomy is a classification for something. An animal or plant <em xmlns=\"http://www.w3.org/1999/xhtml\">has</em> a taxonomy; an animal or plant <em xmlns=\"http://www.w3.org/1999/xhtml\">is not</em> a taxonomy. For those familiar with object-oriented programming, think of a taxonomy as being analogous to a class, not an object."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_Taxonomy> .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/NET/biol/ns#Taxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#name> "Homo sapiens"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/dc/terms/date> "2008-05-08"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#phylum> "Chordata"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#species> "Sapiens"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#kingdom> "Animalia"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#seeAlso> <http://species.wikimedia.org/wiki/Homo_sapiens> .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#genus> "Homo"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#class> "Mammalia"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#order> "Primates"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#authority> "Linnaeus, 1758"@en .
+_:B53235a5afb55250ce8a9144eb1c49afd <http://purl.org/NET/biol/ns#family> "Hominidae"@en .
+<http://www.w3.org/2000/01/rdf-schema#Literal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_literal> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_family> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/2000/01/rdf-schema#label> "family"@en .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_family> .
+<http://purl.org/NET/biol/ns#family> <http://purl.org/dc/terms/description> "The fifth highest level of classification. For example <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Hominidae</i>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#family> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/rdf-schema/#ch_subclassof> .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_name> .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_name> .
+<http://purl.org/NET/biol/ns#name> <http://purl.org/dc/terms/description> "A scientific name; a binomial or trinomial. For example, <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Homo sapiens</i>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#secondLevelClassification> .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_phylum> .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/2000/01/rdf-schema#label> "phylum"@en .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_phylum> .
+<http://purl.org/NET/biol/ns#phylum> <http://purl.org/dc/terms/description> "The second highest level of classification, as used by zoologists. Note that\nphylum may be used to describe any form of life — the use of phylum is not\nmeant to imply that the entity being described is an animal, merely that\nzoological names of ranks are being used."@en .
+<http://purl.org/NET/biol/ns#phylum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://microformats.org/wiki/species> <http://purl.org/dc/terms/publisher> "microformats.org"@en .
+<http://microformats.org/wiki/species> <http://purl.org/dc/terms/title> "species"@en .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/biol/ns#rank> .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/biol/ns#Taxonomy> .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/NET/biol/ns.html#term_kingdom> .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/2000/01/rdf-schema#label> "kingdom"@en .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_kingdom> .
+<http://purl.org/NET/biol/ns#kingdom> <http://purl.org/dc/terms/description> "The highest-level and least specific level of classification. Example kingdoms are <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Animalia</i> and <i xmlns=\"http://www.w3.org/1999/xhtml\" class=\"taxon\">Plantae</i>."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/NET/biol/ns#kingdom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_order> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_Taxonomy> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/2.0/uk/> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_morePrecise> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_phylum> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_References> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/bibliographicCitation> <http://microformats.org/wiki/species> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_uri> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_division> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_taxodoc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_lifedoc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_lifedoc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_class> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_authority> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/modified> "2008-10-06"@en .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_authority> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_phylum> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_class> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_basic> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_full> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_seeAlso> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_genus> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_Taxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_rank> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/rdfa-syntax> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Changes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_hierarchy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_References> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_order> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_class> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_rank> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_hierarchy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_commonName> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_References-I> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_basic> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Examples> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_uri> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_simple_rdfa> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_name> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#contents> <http://purl.org/NET/biol/ns.html#toc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_kingdom> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Classes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Changes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_References> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_seeAlso> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Core)"@en .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_commonName> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#section_References-I> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/creator> _:B8a85db01d50fc78120feb7b8ce2eee1b .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Properties> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Classes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_class> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#help> <http://purl.org/NET/biol/ns.html#section_Examples> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_taxodoc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_full> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_kingdom> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Properties> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_family> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_division> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_name> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/licenses/by-sa/2.0/uk/> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_species> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_family> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/bibliographicCitation> <http://en.wikipedia.org/wiki/Taxonomic_rank> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_morePrecise> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_simple_rdfa> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#toc> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_Changes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Examples> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Properties> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Examples> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#alternate> <http://purl.org/NET/biol/ns-20081006.rdf> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_species> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Classes> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_genus> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/creator> _:Bf9ebcb5d5c97ba3d2d3c5aa86a5b22b1 .

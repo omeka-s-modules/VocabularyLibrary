@@ -1,0 +1,402 @@
+<http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression has developed from another" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/2000/01/rdf-schema#label> "Has Spin Off" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#causes> .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/2000/01/rdf-schema#domain> _:B1d5cfc26dc7f63d2ba523633d83d00a8 .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/2000/01/rdf-schema#range> _:B28e818c9f9ab45ded7b14a669cecd600 .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the instigating factor of an event, whether it be an item, event, or collection." .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/2000/01/rdf-schema#label> "Caused By" .
+<http://contextus.net/ontology/ontomedia/core/expression#caused-by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B223dec961c7f17143ffd1aeb53ddc757 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B886311e7f81b7bf055d85cddf01ccfbe .
+_:B223dec961c7f17143ffd1aeb53ddc757 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Loss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Loss> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class results in an overall reduction of the entities related to the primary subject or subjects of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#Loss> <http://www.w3.org/2000/01/rdf-schema#label> "Loss" .
+<http://contextus.net/ontology/ontomedia/core/expression#Loss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-object-entity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-object-entity> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-object-entity> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the entity which is the target of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-object-entity> <http://www.w3.org/2000/01/rdf-schema#label> "Has Object Entity" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-object-entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Context> .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/2000/01/rdf-schema#label> "Exists In" .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents that the expression exists within the related context" .
+<http://contextus.net/ontology/ontomedia/core/expression#exists-in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Physical-Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Collection> .
+<http://contextus.net/ontology/ontomedia/core/expression#Physical-Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#Physical-Item> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Item" .
+<http://contextus.net/ontology/ontomedia/core/expression#Physical-Item> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a physical entity which may participate in an event within the media" .
+<http://contextus.net/ontology/ontomedia/core/expression#Physical-Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#label> "Occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a single occurrence of an event, placing it at a position in a timeline" .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B156b9933d0cd9864c1655c285d971d01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B31cd0aaeb6ae539116cbbe5ca91f231a .
+_:B156b9933d0cd9864c1655c285d971d01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+_:B8da22100c71e5ac0f25b97c10970b205 <http://www.w3.org/2002/07/owl#unionOf> _:B37f97238a60574ada0385c434740ed74 .
+_:B8da22100c71e5ac0f25b97c10970b205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection" .
+<http://contextus.net/ontology/ontomedia/core/expression#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a collection of entities" .
+<http://contextus.net/ontology/ontomedia/core/expression#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#timeline-ref> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#timeline-ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Timeline> .
+<http://contextus.net/ontology/ontomedia/core/expression#timeline-ref> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to the Timeline that the Occurrence exists on" .
+<http://contextus.net/ontology/ontomedia/core/expression#timeline-ref> <http://www.w3.org/2000/01/rdf-schema#label> "Timeline Reference" .
+<http://contextus.net/ontology/ontomedia/core/expression#timeline-ref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing" .
+<http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity" .
+<http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" .
+<http://contextus.net/ontology/ontomedia/core/expression#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class describes an action sequence (ie no plot)" .
+<http://contextus.net/ontology/ontomedia/core/expression#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B5c52c88995619a895ad3fad19a0b0d0d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B5c52c88995619a895ad3fad19a0b0d0d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Transformation> .
+<http://contextus.net/ontology/ontomedia/core/expression#from> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#from> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the entity which is being transformed" .
+<http://contextus.net/ontology/ontomedia/core/expression#from> <http://www.w3.org/2000/01/rdf-schema#label> "From" .
+<http://contextus.net/ontology/ontomedia/core/expression#from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B886311e7f81b7bf055d85cddf01ccfbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B886311e7f81b7bf055d85cddf01ccfbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-min-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-min-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Collection> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-min-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the minimum number of parts that can be contained by the collection" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-min-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#label> "Has Minimum Number Of Parts" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-min-number-of-parts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract Item" .
+<http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an abstract entity which may participate in an event within the media" .
+<http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression refers to another expression. This may be an event referring to a location, or a character refering to an event, etc." .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#referenced-by> .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/2000/01/rdf-schema#label> "Refers To" .
+<http://contextus.net/ontology/ontomedia/core/expression#refers-to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#contained-by> .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that one expression contains the other" .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Contains" .
+<http://contextus.net/ontology/ontomedia/core/expression#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#precedes> .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/2000/01/rdf-schema#comment> "Follows specifies the occurrence that happens after the referencing occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/2000/01/rdf-schema#label> "Follows" .
+<http://contextus.net/ontology/ontomedia/core/expression#follows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is refered to by another expression." .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#refers-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/2000/01/rdf-schema#label> "Refers To" .
+<http://contextus.net/ontology/ontomedia/core/expression#referenced-by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B37f97238a60574ada0385c434740ed74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B6b53a2804ff181e3ce530f5f209aad14 .
+_:B37f97238a60574ada0385c434740ed74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+_:B13a306acdb083b6072ebe9ddbf2adb78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B5c52c88995619a895ad3fad19a0b0d0d .
+_:B13a306acdb083b6072ebe9ddbf2adb78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#has-spin-off> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression has developed from another" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/2000/01/rdf-schema#label> "Is Spin Off Of" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-spin-off-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#StartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/date#Date> .
+<http://contextus.net/ontology/ontomedia/core/expression#StartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#StartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time/date/temporal reference for the start of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#StartTime> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal End" .
+<http://contextus.net/ontology/ontomedia/core/expression#StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is potentially another. For example, it may be a possible future version" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/2000/01/rdf-schema#label> "Is Potentially" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-potentially> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B31cd0aaeb6ae539116cbbe5ca91f231a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B31cd0aaeb6ae539116cbbe5ca91f231a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Transformation> .
+<http://contextus.net/ontology/ontomedia/core/expression#to> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the resultant entity" .
+<http://contextus.net/ontology/ontomedia/core/expression#to> <http://www.w3.org/2000/01/rdf-schema#label> "To" .
+<http://contextus.net/ontology/ontomedia/core/expression#to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines any the event that the occurrence relates to" .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/2000/01/rdf-schema#label> "Occurrence Of" .
+<http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-subject-entity> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-subject-entity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-subject-entity> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the entity which carries out the aim of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-subject-entity> <http://www.w3.org/2000/01/rdf-schema#label> "Has Subject Entity" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-subject-entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#contains> .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that one expression is contained by the other" .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/2000/01/rdf-schema#label> "Contained By" .
+<http://contextus.net/ontology/ontomedia/core/expression#contained-by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B7cd98616a0416ff7c78580b21968d99e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B7cd98616a0416ff7c78580b21968d99e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines an event" .
+<http://contextus.net/ontology/ontomedia/core/expression#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+<http://contextus.net/ontology/ontomedia/core/expression#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B1ad07cf5018dd359007433d47348d278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B1ad07cf5018dd359007433d47348d278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Abstract-Item> .
+<http://contextus.net/ontology/ontomedia/core/expression#Context> <http://www.w3.org/2000/01/rdf-schema#label> "Context" .
+<http://contextus.net/ontology/ontomedia/core/expression#Context> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the context in which an event or entity exists" .
+<http://contextus.net/ontology/ontomedia/core/expression#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#inspired-by> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression inspired another" .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/2000/01/rdf-schema#label> "Inspired" .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B6b53a2804ff181e3ce530f5f209aad14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B6b53a2804ff181e3ce530f5f209aad14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+_:B96c59902a7629e154f348d8d497d40d8 <http://www.w3.org/2002/07/owl#unionOf> _:B156b9933d0cd9864c1655c285d971d01 .
+_:B96c59902a7629e154f348d8d497d40d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#occurrence-of> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines any occurrences of this event" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/2000/01/rdf-schema#label> "Has occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-occurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#range> _:B8da22100c71e5ac0f25b97c10970b205 .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a state that must exist before the event can occur" .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#label> "Precondition" .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#end-point> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#end-point> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#end-point> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the point in the media at which the event occurrence stops happening" .
+<http://contextus.net/ontology/ontomedia/core/expression#end-point> <http://www.w3.org/2000/01/rdf-schema#label> "End Point in Media" .
+<http://contextus.net/ontology/ontomedia/core/expression#end-point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B576a11179fdf72485bd9d6bb54a5a71b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B7cd98616a0416ff7c78580b21968d99e .
+_:B576a11179fdf72485bd9d6bb54a5a71b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+_:B2d521fffbf7f10986079676c7263ba06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B8a2074faa90921d1fd709f7471dca374 .
+_:B2d521fffbf7f10986079676c7263ba06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#Gain> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class results in an overall increase of the entities related to the primary subject or subjects of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#Gain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Gain> <http://www.w3.org/2000/01/rdf-schema#label> "Gain" .
+<http://contextus.net/ontology/ontomedia/core/expression#Gain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B7277a6f8fab5f7f5a3e9ea04e193a53a <http://www.w3.org/2002/07/owl#unionOf> _:B576a11179fdf72485bd9d6bb54a5a71b .
+_:B7277a6f8fab5f7f5a3e9ea04e193a53a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurs> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#occurs> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the region of media in when an event occurrence happens" .
+<http://contextus.net/ontology/ontomedia/core/expression#occurs> <http://www.w3.org/2000/01/rdf-schema#label> "Occurs" .
+<http://contextus.net/ontology/ontomedia/core/expression#occurs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Expression> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a piece of information conveyed through a media" .
+<http://contextus.net/ontology/ontomedia/core/expression#Expression> <http://www.w3.org/2000/01/rdf-schema#label> "Expression" .
+<http://contextus.net/ontology/ontomedia/core/expression#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#DiscreteTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/date#Date> .
+<http://contextus.net/ontology/ontomedia/core/expression#DiscreteTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#DiscreteTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time/date/temporal reference for the the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#DiscreteTime> <http://www.w3.org/2000/01/rdf-schema#label> "Time/Date" .
+<http://contextus.net/ontology/ontomedia/core/expression#DiscreteTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is> .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is exactly the same as another" .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/2000/01/rdf-schema#label> "Is" .
+<http://contextus.net/ontology/ontomedia/core/expression#is> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Introduction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Introduction> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class denotes the introduction of an entity to the media" .
+<http://contextus.net/ontology/ontomedia/core/expression#Introduction> <http://www.w3.org/2000/01/rdf-schema#label> "Introduction" .
+<http://contextus.net/ontology/ontomedia/core/expression#Introduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that there is some no link between the named Expressions" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/2000/01/rdf-schema#label> "Is Not Linked To" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B8a2074faa90921d1fd709f7471dca374 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B8a2074faa90921d1fd709f7471dca374 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/ext/common/trait#Dimension> .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#involved-in> .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the entities involved in this event. Note that this includes the subject and object." .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/2000/01/rdf-schema#label> "Involves" .
+<http://contextus.net/ontology/ontomedia/core/expression#involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B05b4163725945ca9622fb5948f3dea4b <http://www.w3.org/2002/07/owl#unionOf> _:B13a306acdb083b6072ebe9ddbf2adb78 .
+_:B05b4163725945ca9622fb5948f3dea4b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#EndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#EndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/date#Date> .
+<http://contextus.net/ontology/ontomedia/core/expression#EndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time/date/temporal reference for the end of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#EndTime> <http://www.w3.org/2000/01/rdf-schema#label> "Period Initial Limit" .
+<http://contextus.net/ontology/ontomedia/core/expression#EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#Item> <http://www.w3.org/2000/01/rdf-schema#label> "Item" .
+<http://contextus.net/ontology/ontomedia/core/expression#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an entity which may participate in an event within the media. An Item may be abstract or physical" .
+<http://contextus.net/ontology/ontomedia/core/expression#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#start-point> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#start-point> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#start-point> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the point in the media at which the event occurrence starts happening" .
+<http://contextus.net/ontology/ontomedia/core/expression#start-point> <http://www.w3.org/2000/01/rdf-schema#label> "Start point in Media" .
+<http://contextus.net/ontology/ontomedia/core/expression#start-point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTAQ> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTAQ> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTAQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Terminus Ante Quem (Limit Before Which): The latest point that the period the event covers could have happened" .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTAQ> <http://www.w3.org/2000/01/rdf-schema#label> "Media End Period Limit" .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTAQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#inspired> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression was inspired by another" .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/2000/01/rdf-schema#label> "Inspired By" .
+<http://contextus.net/ontology/ontomedia/core/expression#inspired-by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#involves> .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the events involved in by this entity. Note that this includes the subject and object." .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/2000/01/rdf-schema#label> "Involves" .
+<http://contextus.net/ontology/ontomedia/core/expression#involved-in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-duration> <http://www.w3.org/2000/01/rdf-schema#range> _:B6b17fdd02c741de68649b90ec78673ae .
+<http://contextus.net/ontology/ontomedia/core/expression#has-duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-duration> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the duration of the occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration of Occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is-not> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is entirely different to another" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/2000/01/rdf-schema#label> "Is Not" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#label> "Timeline" .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#comment> "This class contains a sequence of occurring events" .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#follows> .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines the occurrence which immediately follows this occurrence" .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/2000/01/rdf-schema#label> "Precedes" .
+<http://contextus.net/ontology/ontomedia/core/expression#precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Transformation> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation" .
+<http://contextus.net/ontology/ontomedia/core/expression#Transformation> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class results in no gain or loss of attributes or entities, merely alteration" .
+<http://contextus.net/ontology/ontomedia/core/expression#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B28e818c9f9ab45ded7b14a669cecd600 <http://www.w3.org/2002/07/owl#unionOf> _:B39a581861a20f6d9f4c09a232d26b6c5 .
+_:B28e818c9f9ab45ded7b14a669cecd600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#TAQ> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/date#Date> .
+<http://contextus.net/ontology/ontomedia/core/expression#TAQ> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#TAQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Terminus Ante Quem (Limit Before Which): The latest date that the period the event covers could have happened" .
+<http://contextus.net/ontology/ontomedia/core/expression#TAQ> <http://www.w3.org/2000/01/rdf-schema#label> "Period Terminal Limit" .
+<http://contextus.net/ontology/ontomedia/core/expression#TAQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#final-event> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#final-event> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#final-event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B1d5cfc26dc7f63d2ba523633d83d00a8 <http://www.w3.org/2002/07/owl#unionOf> _:B223dec961c7f17143ffd1aeb53ddc757 .
+_:B1d5cfc26dc7f63d2ba523633d83d00a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B39a581861a20f6d9f4c09a232d26b6c5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B1ad07cf5018dd359007433d47348d278 .
+_:B39a581861a20f6d9f4c09a232d26b6c5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#postcondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#postcondition> <http://www.w3.org/2000/01/rdf-schema#comment> "This property contains the state which should occur as a consequence of this event" .
+<http://contextus.net/ontology/ontomedia/core/expression#postcondition> <http://www.w3.org/2000/01/rdf-schema#range> _:B7277a6f8fab5f7f5a3e9ea04e193a53a .
+<http://contextus.net/ontology/ontomedia/core/expression#postcondition> <http://www.w3.org/2000/01/rdf-schema#label> "Postcondition" .
+<http://contextus.net/ontology/ontomedia/core/expression#postcondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/2000/01/rdf-schema#comment> "Terminus Post Quem (Limit After Which): The earliest point that the period the event covers could be said to be happening" .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/locspec#LocSpec> .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the earliest point in the media at which the event occurrence could have happened" .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/2000/01/rdf-schema#label> "Media Start Period Limit" .
+<http://contextus.net/ontology/ontomedia/core/expression#MediaTPQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://www.w3.org/2002/07/owl#versionInfo> "0.32" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/terms/created> "2005-05-03" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/elements/1.1/creator> "Mischa M Tuffield (mailto:mmt04r@ecs.soton.ac.uk)" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/elements/1.1/creator> "K Faith Lawrence (mailto:kf03r@ecs.soton.ac.uk)" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/elements/1.1/creator> "Michael O. Jewell (mailto:moj@ecs.soton.ac.uk)" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/elements/1.1/description> "OntoMedia (Ontology for Media) has been designed to describe the interactions occurring in multimedia."@en .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://purl.org/dc/elements/1.1/title> "OntoMedia Core"@en .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://www.w3.org/2000/01/rdf-schema#label> "OntoMedia Core" .
+<http://contextus.net/ontology/ontomedia/core/expression#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Collection> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the number of parts contained by the collection" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#label> "Has Number Of Parts" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-number-of-parts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B6b17fdd02c741de68649b90ec78673ae <http://www.w3.org/2002/07/owl#unionOf> _:B2d521fffbf7f10986079676c7263ba06 .
+_:B6b17fdd02c741de68649b90ec78673ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-max-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-max-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Collection> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-max-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the maximum number of parts that can be contained by the collection" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-max-number-of-parts> <http://www.w3.org/2000/01/rdf-schema#label> "Has Maximum Number Of Parts" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-max-number-of-parts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#label> "Social" .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class describes a sequence focusing on social, interpersonal and personal emotional elements" .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://contextus.net/ontology/ontomedia/core/expression#summary> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a plain-text summery of what occurs in the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#summary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://contextus.net/ontology/ontomedia/core/expression#summary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#summary> <http://www.w3.org/2000/01/rdf-schema#label> "Summary" .
+<http://contextus.net/ontology/ontomedia/core/expression#summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#has-shadow> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is a variation on another, very similar but not exactly the same. For example the different interpretations of the same character" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/2000/01/rdf-schema#label> "Is Shadow Of" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#caused-by> .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/2000/01/rdf-schema#domain> _:B96c59902a7629e154f348d8d497d40d8 .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/2000/01/rdf-schema#range> _:B05b4163725945ca9622fb5948f3dea4b .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the instigating factor of an event, whether it be an item, event, or collection." .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/2000/01/rdf-schema#label> "Causes" .
+<http://contextus.net/ontology/ontomedia/core/expression#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is-shadow-of> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is a variation on another, very similar but not exactly the same. For example the different interpretations of the same character" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/2000/01/rdf-schema#label> "Has Shadow" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-shadow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#initial-event> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#initial-event> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> .
+<http://contextus.net/ontology/ontomedia/core/expression#initial-event> <http://www.w3.org/2000/01/rdf-schema#comment> "the first event which begins this sequence" .
+<http://contextus.net/ontology/ontomedia/core/expression#initial-event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/has-variant> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the expression is a variation of another" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/2000/01/rdf-schema#label> "Has Variant" .
+<http://contextus.net/ontology/ontomedia/core/expression#has-variant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#exists-in> .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Context> .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/2000/01/rdf-schema#label> "Allows Existence Of" .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents that the desired expression may exist within the context" .
+<http://contextus.net/ontology/ontomedia/core/expression#allows-existence-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Expression> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/core/expression#is-not-linked-to> .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that there is some type of link between the named Expressions" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/2000/01/rdf-schema#label> "Is Linked To" .
+<http://contextus.net/ontology/ontomedia/core/expression#is-linked-to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://contextus.net/ontology/ontomedia/core/expression#TPQ> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Occurrence> .
+<http://contextus.net/ontology/ontomedia/core/expression#TPQ> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/misc/date#Date> .
+<http://contextus.net/ontology/ontomedia/core/expression#TPQ> <http://www.w3.org/2000/01/rdf-schema#comment> "The time/date/temporal reference for the start of the event" .
+<http://contextus.net/ontology/ontomedia/core/expression#TPQ> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Start" .
+<http://contextus.net/ontology/ontomedia/core/expression#TPQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

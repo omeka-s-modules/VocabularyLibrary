@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://nlsdata.info/dod/elements/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: National Library of Scotland Digital Object Database elements -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/">
+  <dc:title xml:lang="en">National Library of Scotland Digital Object Database elements</dc:title>
+  <skos:note  xml:lang="en">Element set representing the descriptive metadata structure of the Digital Object Database of National Library of Scotland.</skos:note>
+</rdf:Description>
+
+<!-- Classes -->
+
+<!-- Class: Date or Event -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/DateOrEvent">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">DateOrEvent</reg:name>
+  <rdfs:label xml:lang="en">Date or Event</rdfs:label>
+  <skos:definition xml:lang="en">A date or event associated with a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+</rdf:Description>
+
+<!-- Class: Form and Genre -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/FormAndGenre">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">FormAndGenre</reg:name>
+  <rdfs:label xml:lang="en">Form and Genre</rdfs:label>
+  <skos:definition xml:lang="en">A form or genre associated with a DOD resource. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+</rdf:Description>
+
+<!-- Class: Keyword -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/Keyword">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">Keyword</reg:name>
+  <rdfs:label xml:lang="en">Keyword</rdfs:label>
+  <skos:definition xml:lang="en">A keyword or term from a controlled vocabulary associated with a DOD resource
+
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+</rdf:Description>
+
+<!-- Class: Place -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/Place">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">Place</reg:name>
+  <rdfs:label xml:lang="en">Place</rdfs:label>
+  <skos:definition xml:lang="en">A place associated with a resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+</rdf:Description>
+
+<!-- Class: Resource -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/Resource">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">Resource</reg:name>
+  <rdfs:label xml:lang="en">Resource</rdfs:label>
+  <skos:definition xml:lang="en">An information resource in the Digital Object Database.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  <skos:scopeNote xml:lang="en">Resource is equivalent of DOD.tDescription table</skos:scopeNote>
+</rdf:Description>
+
+<!-- Class: Who -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/Who">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">Who</reg:name>
+  <rdfs:label xml:lang="en">Who</rdfs:label>
+  <skos:definition xml:lang="en">A person, family or organisation associated with a DOD resource. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+</rdf:Description>
+
+
+<!-- Properties -->
+
+<!-- Property: has date or event -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasDateOrEvent">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">hasDateOrEvent</reg:name>
+  <rdfs:label xml:lang="en">has date or event</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a date or event.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isDateOrEventOf" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tDateOrEventJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has form or genre -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasFormOrGenre">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">hasFormOrGenre</reg:name>
+  <rdfs:label xml:lang="en">has form or genre</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a form or genre.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isFormOrGenreOf" />
+  <skos:scopeNote xml:lang="en">Equivalent to tFormAndGenreJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/FormAndGenre" />
+</rdf:Description>
+
+<!-- Property: has keyword -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasKeyword">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">hasKeyword</reg:name>
+  <rdfs:label xml:lang="en">has keyword</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:definition xml:lang="en">Relates a DOD resource to a keyword.</skos:definition>
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isKeywordOf" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tKeywordJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Keyword" />
+</rdf:Description>
+
+<!-- Property: has place -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasPlace">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">hasPlace</reg:name>
+  <rdfs:label xml:lang="en">has place</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a place.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isPlaceOf" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tPlaceJunction table.</skos:scopeNote>
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Place" />
+</rdf:Description>
+
+<!-- Property: has parent -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasResourceParent">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">hasResourceParent</reg:name>
+  <rdfs:label xml:lang="en">has parent</rdfs:label>
+  <skos:definition xml:lang="en">Parent of resource</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: has shelfmark -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasResourceShelfmark">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">hasResourceShelfmark</reg:name>
+  <rdfs:label xml:lang="en">has shelfmark</rdfs:label>
+  <skos:definition xml:lang="en">Shelfmark of originating resource</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: has Voyager bib id -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasResourceVoyagerBibId">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">hasResourceVoyagerBibId</reg:name>
+  <rdfs:label xml:lang="en">has Voyager bib id</rdfs:label>
+  <skos:definition xml:lang="en">The id of the originating resource in the NLS library management system (currently Ex Libris Voyager).</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: has who -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/hasWho">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">hasWho</reg:name>
+  <rdfs:label xml:lang="en">has who</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a person, family or organisation.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isWhoOf" />
+  <skos:scopeNote xml:lang="en">Equivalent of tWhoJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Who" />
+</rdf:Description>
+
+<!-- Property: is date or event of -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isDateOrEventOf">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">isDateOrEventOf</reg:name>
+  <rdfs:label xml:lang="en">is date or event of</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/hasDateOrEvent" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tDateOrEventJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: is form or genre of -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isFormOrGenreOf">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">isFormOrGenreOf</reg:name>
+  <rdfs:label xml:lang="en">is form or genre of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:definition xml:lang="en">Relates a form or genre to a DOD resource. </skos:definition>
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/hasFormOrGenre" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tFormAndGenreJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/FormAndGenre" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: is keyword of -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isKeywordOf">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">isKeywordOf</reg:name>
+  <rdfs:label xml:lang="en">is keyword of</rdfs:label>
+  <skos:definition xml:lang="en">Relates a keyword to a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isKeywordOf" />
+  <skos:scopeNote xml:lang="en">Is equivalent to tKeywordJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Keyword" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: is place created in -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isPlaceCreatedIn">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">isPlaceCreatedIn</reg:name>
+  <rdfs:label xml:lang="en">is place created in</rdfs:label>
+  <skos:definition xml:lang="en">Relates a place in which it was written, created, manufactured, produced, taken (of photographs), etc. to a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Place" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <rdfs:subPropertyOf rdf:resource="http://nlsdata.info/dod/elements/isPlaceOf" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/tPlaceType.Placecreated" />
+</rdf:Description>
+
+<!-- Property: is place depicted in -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isPlaceDepictedIn">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">isPlaceDepictedIn</reg:name>
+  <rdfs:label xml:lang="en">is place depicted in</rdfs:label>
+  <skos:definition xml:lang="en">Relates a place to a DOD resource it is depicted in.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Place" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/tPlaceType.Placedepicted" />
+  <rdfs:subPropertyOf rdf:resource="http://nlsdata.info/dod/elements/isPlaceOf" />
+</rdf:Description>
+
+<!-- Property: is place of -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isPlaceOf">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">isPlaceOf</reg:name>
+  <rdfs:label xml:lang="en">is place of</rdfs:label>
+  <skos:definition xml:lang="en">Relates a place to a DOD resource.
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/hasPlace" />
+  <reg:hasSubproperty rdf:resource="http://nlsdata.info/dod/elements/isPlaceDepictedIn" />
+  <reg:hasSubproperty rdf:resource="http://nlsdata.info/dod/elements/isPlaceCreatedIn" />
+  <skos:scopeNote xml:lang="en">Is equivalent of tPlaceJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Place" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: is who depicted in -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isWhoDepictedIn">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">isWhoDepictedIn</reg:name>
+  <rdfs:label xml:lang="en">is who depicted in</rdfs:label>
+  <skos:definition xml:lang="en">Relates a [who] depicted to a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/tWhoType.Depicted" />
+</rdf:Description>
+
+<!-- Property: is who of -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/isWhoOf">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">isWhoOf</reg:name>
+  <rdfs:label xml:lang="en">is who of</rdfs:label>
+  <skos:definition xml:lang="en">Relates a person, family or organisation to a DOD resource.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/hasWho" />
+  <skos:scopeNote xml:lang="en">Is equivalent of tWhoJunction table.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Who" />
+  <rdfs:range rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: has date or event label -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-dateOrEvent">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tDateOrEvent-dateOrEvent</reg:name>
+  <rdfs:label xml:lang="en">has date or event label</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to its label.
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end day -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endDay">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endDay</reg:name>
+  <rdfs:label xml:lang="en">has date or event end day</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the day of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end day circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endDay-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endDay-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event end day circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate day of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end month -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endMonth">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endMonth</reg:name>
+  <rdfs:label xml:lang="en">has date or event end month</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the month of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end month circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endMonth-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endMonth-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event end month circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate month of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end year -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endYear">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endYear</reg:name>
+  <rdfs:label xml:lang="en">has date or event end year</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the year of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event end year circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-endYear-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-endYear-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event end year circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate year of its ending.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start day -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startDay">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startDay</reg:name>
+  <rdfs:label xml:lang="en">has date or event start day</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the day of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start day circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startDay-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startDay-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event start day circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate day of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start month -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startMonth">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startMonth</reg:name>
+  <rdfs:label xml:lang="en">has date or event start month</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the month of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start month circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startMonth-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startMonth-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event start month circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate month of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start year -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startYear">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startYear</reg:name>
+  <rdfs:label xml:lang="en">has date or event start year</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the year of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has date or event start year circa -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDateOrEvent-startYear-circa">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tDateOrEvent-startYear-circa</reg:name>
+  <rdfs:label xml:lang="en">has date or event start year circa</rdfs:label>
+  <skos:definition xml:lang="en">Relates a date or event to the approximate year of its beginning.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/DateOrEvent" />
+</rdf:Description>
+
+<!-- Property: has description -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDescription-description">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tDescription-description</reg:name>
+  <rdfs:label xml:lang="en">has description</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to its description.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: has title -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tDescription-title">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tDescription-title</reg:name>
+  <rdfs:label xml:lang="en">has title</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to its title.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+</rdf:Description>
+
+<!-- Property: has form or genre label -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tFormAndGenre-formAndGenre">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tFormAndGenre-formAndGenre</reg:name>
+  <rdfs:label xml:lang="en">has form or genre label</rdfs:label>
+  <skos:definition xml:lang="en">Relates a form or genre to its label. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/FormAndGenre" />
+</rdf:Description>
+
+<!-- Property: has keyword label -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tKeyword-keyword">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tKeyword-keyword</reg:name>
+  <rdfs:label xml:lang="en">has keyword label</rdfs:label>
+  <skos:definition xml:lang="en">Relates a keyword to its label.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Keyword" />
+</rdf:Description>
+
+<!-- Property: has place label -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tPlace-place">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tPlace-place</reg:name>
+  <rdfs:label xml:lang="en">has place label</rdfs:label>
+  <skos:definition xml:lang="en">Relates a place to its label. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Place" />
+</rdf:Description>
+
+<!-- Property: has place created -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tPlaceType-Placecreated">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tPlaceType-Placecreated</reg:name>
+  <rdfs:label xml:lang="en">has place created</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a place written, created, manufactured, produced, taken (of photographs), etc.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isPlaceDepictedIn" />
+</rdf:Description>
+
+<!-- Property: has place depicted -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tPlaceType-Placedepicted">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tPlaceType-Placedepicted</reg:name>
+  <rdfs:label xml:lang="en">has place depicted</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to the place it depicts.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Resource" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isPlaceDepictedIn" />
+</rdf:Description>
+
+<!-- Property: has who label -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tWho-who">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">tWho-who</reg:name>
+  <rdfs:label xml:lang="en">has who label</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:definition xml:lang="en">Relates a person, family or organisation to its label.</skos:definition>
+  <rdfs:domain rdf:resource="http://nlsdata.info/dod/elements/Who" />
+</rdf:Description>
+
+<!-- Property: has who depicted -->
+<rdf:Description rdf:about="http://nlsdata.info/dod/elements/tWhoType-Depicted ">
+  <rdfs:isDefinedBy rdf:resource="http://nlsdata.info/dod/elements/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">tWhoType-Depicted</reg:name>
+  <rdfs:label xml:lang="en">has who depicted</rdfs:label>
+  <skos:definition xml:lang="en">Relates a DOD resource to a [who] depicted.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <owl:inverseOf rdf:resource="http://nlsdata.info/dod/elements/isWhoDepictedIn" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

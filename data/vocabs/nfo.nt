@@ -1,0 +1,666 @@
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> <http://www.w3.org/2000/01/rdf-schema#label> "DeletedResource" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A file entity that has been deleted from the original source. Usually such entities are stored within various kinds of 'Trash' or 'Recycle Bin' folders." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.w3.org/2000/01/rdf-schema#label> "hashValue" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual value of the hash." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isPartOf> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/2000/01/rdf-schema#label> "belongsToContainer" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Models the containment relations between Files and Folders (or CompressedFiles)." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark> <http://www.w3.org/2000/01/rdf-schema#label> "Placemark" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark> <http://www.w3.org/2000/01/rdf-schema#comment> "One placemark within a placemark container/file. Use nie:title for the name/label, nao:creator for defining the creator." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/2000/01/rdf-schema#label> "colorDepth" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of bits used to express the color of each pixel." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem> <http://www.w3.org/2000/01/rdf-schema#label> "SoftwareItem" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataObject representing a piece of software. Examples of interpretations of a SoftwareItem include an Application and an OperatingSystem." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> <http://www.w3.org/2000/01/rdf-schema#label> "TextDocument" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A text document" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#label> "hasMediaFileListEntry" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is intended to point to an RDF list of MediaFiles." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaFileListEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "horizontalResolution" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Horizontal resolution of an image (if printed). Expressed in DPI." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#horizontalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.w3.org/2000/01/rdf-schema#label> "width" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual content width in pixels." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website> <http://www.w3.org/2000/01/rdf-schema#label> "Website" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website> <http://www.w3.org/2000/01/rdf-schema#comment> "A website, usually a container for remote resources, that may be interpreted as HTMLDocuments, images or other types of content." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> <http://www.w3.org/2000/01/rdf-schema#label> "Font" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> <http://www.w3.org/2000/01/rdf-schema#comment> "A font." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> <http://www.w3.org/2000/01/rdf-schema#label> "PlainTextDocument" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing plain text (ASCII, Unicode or other encodings). Examples may include TXT, HTML, XML, program source code etc." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#label> "MediaFileListEntry" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "A single node in the list of media files contained within an MediaList instance. This class is intended to provide a type all those links have. In valid NRL untyped resources cannot be linked. There are no properties defined for this class but the application may expect rdf:first and rdf:last links. The former points to the DataObject instance, interpreted as Media the latter points at another MediaFileListEntr. At the end of the list there is a link to rdf:nil." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "hashAlgorithm" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the algorithm used to compute the hash value. Examples might include CRC32, MD5, SHA, TTH etc." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Presentation" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Presentation made by some presentation software (Corel Presentations, OpenOffice Impress, MS Powerpoint etc.)" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> <http://www.w3.org/2000/01/rdf-schema#label> "FileHash" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> <http://www.w3.org/2000/01/rdf-schema#comment> "A fingerprint of the file, generated by some hashing function." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/2000/01/rdf-schema#label> "frameCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of frames in a video sequence." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.w3.org/2000/01/rdf-schema#label> "filesystemType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of filesystem such as ext3 and ntfs." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#filesystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment> <http://www.w3.org/2000/01/rdf-schema#label> "Attachment" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment> <http://www.w3.org/2000/01/rdf-schema#comment> "A file attached to another data object. Many data formats allow for attachments: emails, vcards, ical events, id3 and exif..." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "OperatingSystem" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An OperatingSystem" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> <http://www.w3.org/2000/01/rdf-schema#label> "rate" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> <http://www.w3.org/2000/01/rdf-schema#comment> "A common superproperty for all properties specifying the media rate. Examples of subproperties may include frameRate for video and sampleRate for audio. This property is expressed in units per second." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/2000/01/rdf-schema#label> "frameRate" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of video frames per second." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frameRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#userVisible> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/2000/01/rdf-schema#label> "hasHash" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the file with it's hash value." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#label> "contains folder" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#comment> "The folder contains a bookmark folder." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesFunction> <http://www.w3.org/2000/01/rdf-schema#label> "definesFunction" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A name of a function/method defined in the given source code file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.w3.org/2000/01/rdf-schema#label> "wordCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of words in a text document." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#wordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.w3.org/2000/01/rdf-schema#label> "occupiedSpace" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupied storage space of the filesystem." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#occupiedSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#decryptedStatus> <http://www.w3.org/2000/01/rdf-schema#label> "DecryptedStatus" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#decryptedStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.w3.org/2000/01/rdf-schema#label> "fontFamily" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the font family." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fontFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#codec> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#codec> <http://www.w3.org/2000/01/rdf-schema#label> "codec" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#codec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#codec> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the codec necessary to decode a piece of media." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#codec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.w3.org/2000/01/rdf-schema#label> "pageCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of pages." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing an image." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#links> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/2000/01/rdf-schema#label> "link" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/2000/01/rdf-schema#comment> "The address of the linked object. Usually a web URI." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#byteSize> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/2000/01/rdf-schema#label> "fileSize" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The size of the file in bytes. For compressed files it means the size of the packed file, not of the contents. For folders it means the aggregated size of all contained files and folders " .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.w3.org/2000/01/rdf-schema#label> "lineCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of lines in a text document" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lineCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/2000/01/rdf-schema#label> "uuid" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/2000/01/rdf-schema#comment> "Universally unique identifier of the filesystem. In the future, this property may have its parent changed to a more generic class." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive> <http://www.w3.org/2000/01/rdf-schema#label> "Archive" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive> <http://www.w3.org/2000/01/rdf-schema#comment> "A compressed file. May contain other files or folder inside. " .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAddress> <http://www.w3.org/2000/01/rdf-schema#label> "RemotePortAddress" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "An address specifying a remote host and port. Such an address can be interpreted in many ways (examples of such interpretations include mailboxes, websites, remote calendars or filesystems), depending on an interpretation, various kinds of data may be extracted from such an address." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/2000/01/rdf-schema#label> "sampleRate" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of audio samples per second." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.w3.org/2000/01/rdf-schema#label> "pageNumber" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Page linked by the bookmark." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#pageNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.w3.org/2000/01/rdf-schema#label> "characterCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of characters in the document." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.w3.org/2000/01/rdf-schema#label> "commentCharacterCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of character in comments i.e. characters ignored by the compiler/interpreter." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#commentCharacterCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/2000/01/rdf-schema#label> "contains bookmark" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/2000/01/rdf-schema#comment> "The folder contains a bookmark." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.w3.org/2000/01/rdf-schema#label> "sideChannels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of side channels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sideChannels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.w3.org/2000/01/rdf-schema#label> "aspectRatio" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual content aspect ratio. (Width divided by Height)" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#aspectRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "encryptionStatus" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the encryption of the InformationElement." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage> <http://www.w3.org/2000/01/rdf-schema#label> "FilesystemImage" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage> <http://www.w3.org/2000/01/rdf-schema#comment> "An image of a filesystem. Instances of this class may include CD images, DVD images or hard disk partition images created by various pieces of software (e.g. Norton Ghost). Deprecated in favor of nfo:Filesystem." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.w3.org/2000/01/rdf-schema#label> "interlaceMode" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.w3.org/2000/01/rdf-schema#comment> "True if the image is interlaced, false if not." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#interlaceMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream> <http://www.w3.org/2000/01/rdf-schema#label> "MediaStream" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A stream of multimedia content, usually contained within a media container such as a movie (containing both audio and video) or a DVD (possibly containing many streams of audio and video). Most common interpretations for such a DataObject include Audio and Video." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#supercedes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#supercedes> <http://www.w3.org/2000/01/rdf-schema#label> "supercedes" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#supercedes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#supercedes> <http://www.w3.org/2000/01/rdf-schema#comment> "States that a piece of software supercedes another piece of software." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#supercedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> <http://www.w3.org/2000/01/rdf-schema#label> "Visual" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> <http://www.w3.org/2000/01/rdf-schema#comment> "File containing visual content." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.w3.org/2000/01/rdf-schema#label> "encoding" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The encoding used for the Embedded File. Examples might include BASE64 or UUEncode" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#losslessCompressionType> <http://www.w3.org/2000/01/rdf-schema#label> "losslessCompressionType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#losslessCompressionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject> <http://www.w3.org/2000/01/rdf-schema#label> "RemoteDataObject" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A file data object stored at a remote location. Don't confuse this class with a RemotePortAddress. This one applies to a particular resource, RemotePortAddress applies to an address, that can have various interpretations." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> <http://www.w3.org/2000/01/rdf-schema#label> "RasterImage" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A raster image." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/2000/01/rdf-schema#label> "foundry" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/2000/01/rdf-schema#comment> "The foundry, the organization that created the font." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "SourceCode" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Code in a compilable or interpreted programming language." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptedStatus> <http://www.w3.org/2000/01/rdf-schema#label> "EncryptedStatus" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptedStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesClass> <http://www.w3.org/2000/01/rdf-schema#label> "definesClass" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a class defined in the source code file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.w3.org/2000/01/rdf-schema#label> "streamPosition" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Stream position of the bookmark, suitable for e.g. audio books. Expressed in milliseconds" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#streamPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.w3.org/2000/01/rdf-schema#label> "bitrateType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the bitrate. Examples may include CBR and VBR." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitrateType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "verticalResolution" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical resolution of an Image (if printed). Expressed in DPI" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#verticalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.w3.org/2000/01/rdf-schema#label> "deletionDate" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time of the deletion." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#deletionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareService> <http://www.w3.org/2000/01/rdf-schema#label> "SoftwareService" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareService> <http://www.w3.org/2000/01/rdf-schema#comment> "A service published by a piece of software, either by an operating system or an application. Examples of such services may include calendar, addressbook and mailbox managed by a PIM application. This category is introduced to distinguish between data available directly from the applications (Via some Interprocess Communication Mechanisms) and data available from files on a disk. In either case both DataObjects would receive a similar interpretation (e.g. a Mailbox) and wouldn't differ on the content level." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet> <http://www.w3.org/2000/01/rdf-schema#label> "Spreadsheet" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet> <http://www.w3.org/2000/01/rdf-schema#comment> "A spreadsheet, created by a spreadsheet application. Examples might include Gnumeric, OpenOffice Calc or MS Excel." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Placemark Container" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "A data object containing placemark(s). Use nie:contentCreated to represent the date when the user created the dataobject, nao:creator for defining the creator, nie:contentLastModified for modifications. nfo:containsPlacemark to refer to individual placemarks within." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.w3.org/2000/01/rdf-schema#label> "color count" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of colors used/available in a raster image." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#colorCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#LocalFileDataObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#LocalFileDataObject> <http://www.w3.org/2000/01/rdf-schema#label> "local file" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#LocalFileDataObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A local file data object which is stored on a local file system. Its nie:url always uses the file:/ protocol. The main use of this class is to distinguish local and non-local files." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#LocalFileDataObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> <http://www.w3.org/2000/01/rdf-schema#label> "count" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> <http://www.w3.org/2000/01/rdf-schema#comment> "A common superproperty for all properties signifying the amount of atomic media data units. Examples of subproperties may include sampleCount and frameCount." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> <http://www.w3.org/2000/01/rdf-schema#label> "Filesystem" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A filesystem. Examples of filesystems include hard disk partitions, removable media, but also images thereof stored in files such as ISO." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an image to the information elements it depicts." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.w3.org/2000/01/rdf-schema#label> "frontChannels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of front channels." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#frontChannels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.w3.org/2000/01/rdf-schema#label> "height" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual content height in pixels." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable> <http://www.w3.org/2000/01/rdf-schema#label> "Executable" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable> <http://www.w3.org/2000/01/rdf-schema#comment> "An executable file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Agent> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of software. Examples may include applications and the operating system. This interpretation most commonly applies to SoftwareItems." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.w3.org/2000/01/rdf-schema#label> "fileOwner" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "The owner of the file as defined by the file system access rights feature." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/2000/01/rdf-schema#label> "fileCreated" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "File creation date" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/2000/01/rdf-schema#label> "fileUrl" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of the file. It points at the location of the file. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskPartition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskPartition> <http://www.w3.org/2000/01/rdf-schema#label> "HardDiskPartition" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "A partition on a hard disk" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskPartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/2000/01/rdf-schema#label> "hasMediaStream" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a media container with a single media stream contained within." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.w3.org/2000/01/rdf-schema#label> "freeSpace" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Unoccupied storage space of the filesystem." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#freeSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic document. A common superclass for all documents on the desktop." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder> <http://www.w3.org/2000/01/rdf-schema#label> "Folder" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder> <http://www.w3.org/2000/01/rdf-schema#comment> "A folder/directory. Examples of folders include folders on a filesystem and message folders in a mailbox." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a media piece." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> <http://www.w3.org/2000/01/rdf-schema#label> "Media" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of media content. This class may be used to express complex media containers with many streams of various media content (both aural and visual)." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.w3.org/2000/01/rdf-schema#label> "lfeChannels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of Low Frequency Expansion (subwoofer) channels." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lfeChannels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.w3.org/2000/01/rdf-schema#label> "totalSpace" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Total storage space of the filesystem, which can be different from nie:contentSize because the latter includes filesystem format overhead." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#totalSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/2000/01/rdf-schema#label> "fileLastAccessed" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/2000/01/rdf-schema#comment> "Time when the file was last accessed." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastAccessed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument> <http://www.w3.org/2000/01/rdf-schema#label> "HtmlDocument" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A HTML document, may contain links to other files." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.w3.org/2000/01/rdf-schema#label> "uncompressedSize" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Uncompressed size of the content of a compressed file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uncompressedSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application> <http://www.w3.org/2000/01/rdf-schema#label> "Application" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application> <http://www.w3.org/2000/01/rdf-schema#comment> "An application" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> <http://www.w3.org/2000/01/rdf-schema#label> "DataContainer" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "A superclass for all entities, whose primary purpose is to serve as containers for other data object. They usually don't have any \"meaning\" by themselves. Examples include folders, archives and optical disc images." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> <http://www.w3.org/2000/01/rdf-schema#label> "Audio" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing audio content" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap> <http://www.w3.org/2000/01/rdf-schema#label> "MindMap" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A MindMap, created by a mind-mapping utility. Examples might include FreeMind or mind mapper." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#prefLabel> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/2000/01/rdf-schema#label> "fileName" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the file, together with the extension" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.w3.org/2000/01/rdf-schema#label> "permissions" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.w3.org/2000/01/rdf-schema#comment> "A string containing the permissions of a file. A feature common in many UNIX-like operating systems." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#permissions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.w3.org/2000/01/rdf-schema#label> "characterPosition" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Character position of the bookmark." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#characterPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.w3.org/2000/01/rdf-schema#label> "compressionType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the compression. Values include, 'lossy' and 'lossless'." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#compressionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastModified> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/2000/01/rdf-schema#label> "fileLastModified" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/2000/01/rdf-schema#comment> "last modification date" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.w3.org/2000/01/rdf-schema#label> "channels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of channels. This property is to be used directly if no detailed information is necessary. Otherwise use more detailed subproperties." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor> <http://www.w3.org/2000/01/rdf-schema#label> "Cursor" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor> <http://www.w3.org/2000/01/rdf-schema#comment> "A Cursor." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/2000/01/rdf-schema#label> "sampleCount" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of samples in an audio clip." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#sampleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> <http://www.w3.org/2000/01/rdf-schema#comment> "A video file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/2000/01/rdf-schema#label> "averageBitrate" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/2000/01/rdf-schema#comment> "The average overall bitrate of a media container. (i.e. the size of the piece of media in bits, divided by it's duration expressed in seconds)." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#averageBitrate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon> <http://www.w3.org/2000/01/rdf-schema#label> "Icon" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon> <http://www.w3.org/2000/01/rdf-schema#comment> "An Icon (regardless of whether it's a raster or a vector icon. A resource representing an icon could have two types (Icon and Raster, or Icon and Vector) if required." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesGlobalVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesGlobalVariable> <http://www.w3.org/2000/01/rdf-schema#label> "definesGlobalVariable" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesGlobalVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesGlobalVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a global variable defined within the source code file." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#definesGlobalVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.w3.org/2000/01/rdf-schema#label> "isPasswordProtected" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.w3.org/2000/01/rdf-schema#comment> "States if a given resource is password-protected." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isPasswordProtected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem> <http://www.w3.org/2000/01/rdf-schema#label> "ArchiveItem" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A file entity inside an archive." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.w3.org/2000/01/rdf-schema#label> "palette size" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of colors defined in palette of the raster image." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#paletteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depicts> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.w3.org/2000/01/rdf-schema#label> "depiction" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an information element to an image which depicts said element." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#depiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.w3.org/2000/01/rdf-schema#label> "originalLocation" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The original location of the deleted resource." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#originalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.w3.org/2000/01/rdf-schema#label> "bitDepth" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "A common superproperty for all properties signifying the amount of bits for an atomic unit of data. Examples of subproperties may include bitsPerSample and bitsPerPixel" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash> <http://www.w3.org/2000/01/rdf-schema#label> "Trash" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a container for deleted files, a feature common in modern operating systems." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument> <http://www.w3.org/2000/01/rdf-schema#label> "PaginatedTextDocument" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing a text document, that is unambiguously divided into pages. Examples might include PDF, DOC, PS, DVI etc." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.w3.org/2000/01/rdf-schema#label> "rearChannels" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of rear channels." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rearChannels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList> <http://www.w3.org/2000/01/rdf-schema#label> "MediaList" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing a list of media files.e.g. a playlist" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> <http://www.w3.org/2000/01/rdf-schema#label> "EmbeddedFileDataObject" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A file embedded in another data object. There are many ways in which a file may be embedded in another one. Use this class directly only in cases if none of the subclasses gives a better description of your case." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#VectorImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#VectorImage> <http://www.w3.org/2000/01/rdf-schema#label> "VectorImage" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#VectorImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> <http://www.w3.org/2000/01/rdf-schema#label> "CompressionType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of compression. Instances of this class represent the limited set of values allowed for the nfo:compressionType property." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#conflicts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#conflicts> <http://www.w3.org/2000/01/rdf-schema#label> "conflicts" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#conflicts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#conflicts> <http://www.w3.org/2000/01/rdf-schema#comment> "States that a piece of software is in conflict with another piece of software." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#conflicts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject> <http://www.w3.org/2000/01/rdf-schema#label> "web data object" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An information resources of which representations (files, streams) can be retrieved through a web server. They may be generated at retrieval time. Typical examples are pages served by PHP or AJAX or mp3 streams." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lossyCompressionType> <http://www.w3.org/2000/01/rdf-schema#label> "lossyCompressionType" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#lossyCompressionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/2000/01/rdf-schema#label> "contains Placemark" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/2000/01/rdf-schema#comment> "Containment relation between placemark containers (files) and placemarks within." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#label> "bitsPerSample" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of bits in each audio sample." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitsPerSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "EncryptionStatus" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the encryption of an InformationElement. nfo:encryptedStatus means that the InformationElement has been encrypted and couldn't be decrypted by the extraction software, thus no content is available. nfo:decryptedStatus means that decryption was successfull and the content is available." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> <http://www.w3.org/2000/01/rdf-schema#label> "file" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource containing a finite sequence of bytes with arbitrary information, that is available to a computer program and is usually based on some kind of durable storage. A file is durable in the sense that it remains available for programs to use after the current program has finished." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "programmingLanguage" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the name of the programming language this source code file is written in. Examples might include 'C', 'C++', 'Java' etc." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> <http://www.w3.org/2000/01/rdf-schema#label> "Bookmark" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A bookmark of a webbrowser. Use nie:title for the name/label, nie:contentCreated to represent the date when the user added the bookmark, and nie:contentLastModified for modifications. nfo:bookmarks to store the link." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#label> "Bookmark Folder" .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> <http://www.w3.org/2000/01/rdf-schema#comment> "A folder with bookmarks of a webbrowser. Use nfo:containsBookmark to relate Bookmarks. Folders can contain subfolders, use containsBookmarkFolder to relate them." .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .

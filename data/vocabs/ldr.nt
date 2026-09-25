@@ -1,0 +1,357 @@
+<http://purl.oclc.org/NET/ldr/ns#PublicCommunication> <http://www.w3.org/2000/01/rdf-schema#comment> "Granting a number of people access to the work without existing distribution"@en .
+<http://purl.oclc.org/NET/ldr/ns#PublicCommunication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#IPRight> .
+<http://purl.oclc.org/NET/ldr/ns#PublicCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#Distribution> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://creativecommons.org/ns#Distribution> .
+<http://purl.oclc.org/NET/ldr/ns#Distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Make available the original work or its copies, in a physical medium"@en .
+<http://purl.oclc.org/NET/ldr/ns#Distribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#IPRight> .
+<http://purl.oclc.org/NET/ldr/ns#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#protocol> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#protocol> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#protocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Access protocol (e.g. \"SPARQL\", \"HTTPS\", etc.)"@en .
+<http://purl.oclc.org/NET/ldr/ns#protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#hasClaim> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#hasClaim> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares a claim asserted in the context of a rights expression"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasClaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerMinute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerMinute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerMinute> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of queries per minute"@en .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerMinute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#reutilization> <http://www.w3.org/2000/01/rdf-schema#comment> "General right of re-utilization"@en .
+<http://purl.oclc.org/NET/ldr/ns#reutilization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#reutilization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Reutilization> .
+<http://purl.oclc.org/NET/ldr/ns#Access> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/ns/auth/acl#Access> .
+<http://purl.oclc.org/NET/ldr/ns#Access> <http://www.w3.org/2000/01/rdf-schema#comment> "Right of access, which can be legally granted (e.g. public sector information) or expressely restricted (e.g. secrets compromising national security)"@en .
+<http://purl.oclc.org/NET/ldr/ns#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> .
+<http://purl.oclc.org/NET/ldr/ns#Access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#hasNationalSecurityInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource has information whose disclosure might harm the national security"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasNationalSecurityInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasNationalSecurityInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#hasclaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#DatabaseRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Sui generis right for databases, recognized in European countries and others"@en .
+<http://purl.oclc.org/NET/ldr/ns#DatabaseRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> .
+<http://purl.oclc.org/NET/ldr/ns#DatabaseRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#rent> <http://www.w3.org/2000/01/rdf-schema#comment> "Renting a copy of the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#rent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#rent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#deriveProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Subpropertying"@en .
+<http://purl.oclc.org/NET/ldr/ns#deriveProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#deriveProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.org/NET/rdflicense/odbc-pddl1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Public Domain for data/databases"@en .
+<http://purl.org/NET/rdflicense/odbc-pddl1.0> <http://www.w3.org/2000/01/rdf-schema#label> "ODC Public Domain Dedication and Licence (PDDL)"@en .
+<http://purl.org/NET/rdflicense/odbc-pddl1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/NET/rdflicense/odbc-pddl1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> .
+<http://purl.oclc.org/NET/ldr/ns#publicCommunication> <http://www.w3.org/2000/01/rdf-schema#comment> "General right of public communication"@en .
+<http://purl.oclc.org/NET/ldr/ns#publicCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#publicCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#PublicCommunication> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPATCH> <http://www.w3.org/2000/01/rdf-schema#comment> "Accesing with the HTTP PATH Method"@en .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPATCH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPATCH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#LDPAccess> .
+<http://purl.oclc.org/NET/ldr/ns#hasLegalStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#hasLegalStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://purl.oclc.org/NET/ldr/ns#hasLegalStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares the legal status of a resource" .
+<http://purl.oclc.org/NET/ldr/ns#hasLegalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ldr/ns#hasDisclaimerText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://purl.oclc.org/NET/ldr/ns#hasDisclaimerText> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#hasDisclaimerText> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#hasDisclaimerText> <http://www.w3.org/2000/01/rdf-schema#comment> "Text discharging responsibilities on the use of the Linked Data resource"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasDisclaimerText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#Reutilization> <http://www.w3.org/2000/01/rdf-schema#comment> "Right to make available to the public all or a substantial part of the contents of a database by the distribution of copies, by renting, by on-line or other forms of transmission"@en .
+<http://purl.oclc.org/NET/ldr/ns#Reutilization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#DatabaseRight> .
+<http://purl.oclc.org/NET/ldr/ns#Reutilization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLDESCRIBE> <http://www.w3.org/2000/01/rdf-schema#comment> "Access through the SPARQL DESCRIBE query form"@en .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLDESCRIBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLDESCRIBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#extract> <http://www.w3.org/2000/01/rdf-schema#comment> "General right of extraction"@en .
+<http://purl.oclc.org/NET/ldr/ns#extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Extraction> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Action legally granted as allowable to be exercised on a Linked Data resource"@en .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Action> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ldp#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://www.w3.org/ns/ldp#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://purl.oclc.org/NET/ldr/ns#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares which requirements have to be fulfilled for the Rule to be valid"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ldr/ns#transcodeWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Transcoding the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#transcodeWork> <http://www.w3.org/2004/02/skos/core#example> "Having permission to publish a dataset as NTRIPLES, does not entitle the grantee the act of publishing the dataset as Turtle"@en .
+<http://purl.oclc.org/NET/ldr/ns#transcodeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#transcodeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.oclc.org/NET/ldr/ns#rebaseURIs> <http://www.w3.org/2000/01/rdf-schema#comment> "Partially change the URI systematically rebasing the entities"@en .
+<http://purl.oclc.org/NET/ldr/ns#rebaseURIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#rebaseURIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.oclc.org/NET/ldr/ns#License> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of rights expressions offered to the public, which grant one or more rights, possibly conditioned to the fulfillment of one or more conditions (propositions)"@en .
+<http://purl.oclc.org/NET/ldr/ns#License> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> .
+<http://purl.oclc.org/NET/ldr/ns#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#sell> <http://www.w3.org/2000/01/rdf-schema#comment> "Selling a copy of the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<http://purl.oclc.org/NET/ldr/ns#Reproduction> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://creativecommons.org/ns#Reproduction> .
+<http://purl.oclc.org/NET/ldr/ns#Reproduction> <http://www.w3.org/2000/01/rdf-schema#comment> "Direct or indirect fixation, allowing its communication and/or making copies of it"@en .
+<http://purl.oclc.org/NET/ldr/ns#Reproduction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#IPRight> .
+<http://purl.oclc.org/NET/ldr/ns#Reproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#deriveClasses> <http://www.w3.org/2000/01/rdf-schema#comment> "Subclassing"@en .
+<http://purl.oclc.org/NET/ldr/ns#deriveClasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#deriveClasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/> <http://www.w3.org/2000/01/rdf-schema#label> "UK Open Government License for public sector information"@en .
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/> <http://www.w3.org/2000/01/rdf-schema#label> "UK Open Government License"@en .
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> "Declaring rights on both Linked Open Data and Linked Closed Data"@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#classNumber> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://xmlns.com/foaf/0.1/null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#similar> <http://schema.theodi.org/odrs/> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/issued> "2013-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> "http://www.w3.org/TR/swbp-n-aryRelations/"@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Linked Data Rights"@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> <http://oeg-dev.dia.fi.upm.es/licensius/static/ldr/pattern.html#int> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://creativecommons.org/ns#null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/creator> "Ontology Engineering Group - Universidad PolitÃƒÂ©cnica de Madrid" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/contributor> "Asuncion Gomez-Perez" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#reliesOn> <http://creativecommons.org/ns#null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ldr" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/ns/odrl/2/null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/contributor> "Victor Rodriguez-Doncel" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/ns/odrl/2/null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/elements/1.1/creator> <http://delicias.dia.fi.upm.es/~vrodriguez/> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/description> "The Linked Data Rights ontology provides the vocabulary for creating rights expressions for Linked Data resources by extending the ODRL ontology. \n                   Linked Data assets (RDF triples, graphs, datasets, mappings...) can be object of protection by the intellectual property law, the database law or its access or publication be restricted by other legal reasons (personal data pro- tection, security reasons, etc.). Publishing a rights expression along with the digital asset, allows the rightsholder waiving some or all of the IP and database rights (leaving the work in the public domain), permitting some operations if certain conditions are satisfied (like giving attribution to the author) or simply reminding the audience that some rights are reserved. Specific vocabulary is given for authorising specific uses of Linked Data."@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/contributor> "Mari Carmen Suarez" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#similar> <http://www.w3.org/ns/odrl/2/null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/contributor> "Maria Poveda-Villalon" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.oclc.org/NET/ldr/ns#" .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#similar> <http://ns.inria.fr/l4lod/v2/l4lod_v2.rdf> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#similar> <http://data.opendataday.it/LiMo> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#specializes> <http://creativecommons.org/ns#null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> <http://oeg-dev.dia.fi.upm.es/licensius/static/ldr/pattern.html#reqs> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/ns/odrl/2/null> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/issued> "2014-08-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://oeg-dev.dia.fi.upm.es/licensius/static/lldr/lldr-2013.07.18.owl> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/ns/odrl/2/> .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/dc/terms/title> "Linked Data Rights (LDR)"@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"@en .
+<http://purl.oclc.org/NET/ldr/ns#> <http://purl.org/vocommons/voaf#propertyNumber> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "License publicly available and known to the public"@en .
+<http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#License> .
+<http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#operation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.oclc.org/NET/ldr/ns#operation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#ExtendedRule> .
+<http://purl.oclc.org/NET/ldr/ns#operation> <http://www.w3.org/2000/01/rdf-schema#comment> "May be set with one of the mathematical values AND, OR and XOR. (OR is the default if not specified.)"@en .
+<http://purl.oclc.org/NET/ldr/ns#operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#reificate> <http://www.w3.org/2000/01/rdf-schema#comment> "Reificate an RDF statement or a set thereof"@en .
+<http://purl.oclc.org/NET/ldr/ns#reificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#reificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A Linked Data resource, object of some rights"@en .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieval of Linked Data resources"@en .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Access> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLASK> <http://www.w3.org/2000/01/rdf-schema#comment> "Access through the SPARQL ASK query form"@en .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLASK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLASK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#sellAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Offering for meny the access to a copy of the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#sellAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#sellAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<http://purl.oclc.org/NET/ldr/ns#mirror> <http://www.w3.org/2000/01/rdf-schema#comment> "The action of mirroring any piece of Linked Data"@en .
+<http://purl.oclc.org/NET/ldr/ns#mirror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#mirror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<http://purl.oclc.org/NET/ldr/ns#distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "General act of making available the original work or its copies, in a physical medium"@en .
+<http://purl.oclc.org/NET/ldr/ns#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<urn:mpeg:mpeg21:mco:core:2012#Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> .
+<urn:mpeg:mpeg21:mco:core:2012#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#translateWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Translating the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#translateWork> <http://www.w3.org/2004/02/skos/core#example> "Having permission to publish a dataset, does not entitle the grantee the act of publishing a tanslated version of it"@en .
+<http://purl.oclc.org/NET/ldr/ns#translateWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#translateWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.org/NET/rdflicense/odbl1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribution Share-Alike for data/databases"@en .
+<http://purl.org/NET/rdflicense/odbl1.0> <http://www.w3.org/2000/01/rdf-schema#label> "ODC Open Database License"@en .
+<http://purl.org/NET/rdflicense/odbl1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/NET/rdflicense/odbl1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> .
+<http://purl.oclc.org/NET/ldr/ns#IPRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Intellectual Property right"@en .
+<http://purl.oclc.org/NET/ldr/ns#IPRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> .
+<http://purl.oclc.org/NET/ldr/ns#IPRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPGET> <http://www.w3.org/2000/01/rdf-schema#comment> "Accessing with the HTTP GET Method"@en .
+<http://purl.oclc.org/NET/ldr/ns#HTTPGET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPGET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#LDPAccess> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightNotice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightNotice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightNotice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightNotice> <http://www.w3.org/2000/01/rdf-schema#comment> "Text that has to be attached imposed as a condition"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#dataFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#dataFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#dataFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Format of the data (\"text/html\", \"application/rdf+xml\", etc.)"@en .
+<http://purl.oclc.org/NET/ldr/ns#dataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#publishDatabase> <http://www.w3.org/2000/01/rdf-schema#comment> "Make available a database in internet or by other means"@en .
+<http://purl.oclc.org/NET/ldr/ns#publishDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#publishDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Reutilization> .
+<http://purl.oclc.org/NET/ldr/ns#hasAllRightsReserved> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource is protected under copyright or database rights, and none of them is waived"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasAllRightsReserved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasAllRightsReserved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#copyWork> <http://www.w3.org/2000/01/rdf-schema#comment> "copying the work for purposes other than private"@en .
+<http://purl.oclc.org/NET/ldr/ns#copyWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#copyWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Reproduction> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightExpired> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource has its copyright expired"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightExpired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasCopyrightExpired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#hasExtendedRule> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://purl.oclc.org/NET/ldr/ns#hasExtendedRule> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ldr/ns#ExtendedRule> .
+<http://purl.oclc.org/NET/ldr/ns#hasExtendedRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Policy to an ExtendedRule it contains"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasExtendedRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/ldr/ns#derivation> <http://www.w3.org/2000/01/rdf-schema#comment> "General transformation of the work"@en .
+<http://purl.oclc.org/NET/ldr/ns#derivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#derivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Derivation> .
+<http://purl.oclc.org/NET/ldr/ns#copyDatabase> <http://www.w3.org/2000/01/rdf-schema#comment> "Coyping a dataset, for other purposes than private use"@en .
+<http://purl.oclc.org/NET/ldr/ns#copyDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#copyDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Extraction> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLCONSTRUCT> <http://www.w3.org/2000/01/rdf-schema#comment> "Access through the SPARQL CONSTRUCT query form"@en .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLCONSTRUCT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLCONSTRUCT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> .
+<http://purl.oclc.org/NET/ldr/ns#isInPublicDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the declared resource is in the public domain"@en .
+<http://purl.oclc.org/NET/ldr/ns#isInPublicDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#isInPublicDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.org/NET/rdflicense/cc-zero1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Creative Commons public domain waiver"@en .
+<http://purl.org/NET/rdflicense/cc-zero1.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC0"@en .
+<http://purl.org/NET/rdflicense/cc-zero1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/NET/rdflicense/cc-zero1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#reasonWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Accesing Linked Data with the purpose of reasoning, through an specialized protocol (e.g. OWLLink) or not"@en .
+<http://purl.oclc.org/NET/ldr/ns#reasonWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#reasonWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Access> .
+<http://purl.oclc.org/NET/ldr/ns#access> <http://www.w3.org/2000/01/rdf-schema#comment> "Access in any manner or form" .
+<http://purl.oclc.org/NET/ldr/ns#access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Access> .
+<http://purl.oclc.org/NET/ldr/ns#ExtendedRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Extended Relations may tie Permission, Prohibition, Duty, and Constraint entities together with an AND, OR or XOR relationship. Only entities of the same type can be linked with this model. For example, a Permission and Prohibition cannot be linked together within this model. The Extended rule is composed of two or more rules" .
+<http://purl.oclc.org/NET/ldr/ns#ExtendedRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://purl.oclc.org/NET/ldr/ns#ExtendedRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#RightsObject> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://purl.oclc.org/NET/ldr/ns#RightsObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Object over which a right is execised"@en .
+<http://purl.oclc.org/NET/ldr/ns#RightsObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of ODRL"@en .
+<http://purl.oclc.org/NET/ldr/ns#RightsObject> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#judicialProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "if the action is carried out for the purposes of an administrative or judicial procedure"@en .
+<http://purl.oclc.org/NET/ldr/ns#judicialProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#judicialProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#CopyrightException> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.oclc.org/NET/ldr/ns#Proposition> <http://www.w3.org/2000/01/rdf-schema#comment> "A veritative statement"@en .
+<http://purl.oclc.org/NET/ldr/ns#Proposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#hasDatabaseRightsExpired> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource has the database rights expired"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasDatabaseRightsExpired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasDatabaseRightsExpired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy applied over a Linked Data resource"@en .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "hasIssuer"@en .
+<http://purl.oclc.org/NET/ldr/ns#reproduction> <http://www.w3.org/2000/01/rdf-schema#comment> "General right of public reproduction"@en .
+<http://purl.oclc.org/NET/ldr/ns#reproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#reproduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Reproduction> .
+<http://rdfs.org/ns/void#Linkset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://rdfs.org/ns/void#Linkset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#downloadDatabase> <http://www.w3.org/2000/01/rdf-schema#comment> "Downloading a dataset, for other purposes than private use"@en .
+<http://purl.oclc.org/NET/ldr/ns#downloadDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#downloadDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Extraction> .
+<http://purl.oclc.org/NET/ldr/ns#hasTopSecret> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource contains top secret information of military nature or other"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasTopSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasTopSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLSELECT> <http://www.w3.org/2000/01/rdf-schema#comment> "Access through the SPARQL SELECT query form"@en .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLSELECT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLSELECT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerDay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerDay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerDay> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of queries per day"@en .
+<http://purl.oclc.org/NET/ldr/ns#queriesPerDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPOST> <http://www.w3.org/2000/01/rdf-schema#comment> "Accessing with the HTTP POST Method"@en .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPOST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPOST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#LDPAccess> .
+<http://purl.oclc.org/NET/ldr/ns#hasIndustrialSecret> <http://www.w3.org/2000/01/rdf-schema#comment> "The referred resource containts an Industrial Secret"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasIndustrialSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasIndustrialSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares the privacy level (e.g. personal data) for a Linked Data resource"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares that the referred resource has personal data"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> .
+<http://purl.oclc.org/NET/ldr/ns#hasPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#Extraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Right to permanent or temporary transfer of all or a substantial part of the contents of a database to another medium by any means or in any form"@en .
+<http://purl.oclc.org/NET/ldr/ns#Extraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#DatabaseRight> .
+<http://purl.oclc.org/NET/ldr/ns#Extraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/ns/odrl/2/Party> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of the ODRL term"@en .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Agent related to a Linked Data resource" .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Access> .
+<http://purl.oclc.org/NET/ldr/ns#SPARQLAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.oclc.org/NET/ldr/ns#baseSoftwareUpon> <http://www.w3.org/2000/01/rdf-schema#comment> "Distribute a pice of software whose well functioning depends on the related Linked Data resource"@en .
+<http://purl.oclc.org/NET/ldr/ns#baseSoftwareUpon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#baseSoftwareUpon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Distribution> .
+<http://purl.oclc.org/NET/ldr/ns#truthValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.oclc.org/NET/ldr/ns#truthValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#truthValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Truth value"@en .
+<http://purl.oclc.org/NET/ldr/ns#truthValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPUT> <http://www.w3.org/2000/01/rdf-schema#comment> "Accessing with the HTTP PUT Method"@en .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#LDPAccess> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.oclc.org/NET/ldr/ns#nationalSecurity> <http://www.w3.org/2000/01/rdf-schema#comment> "if the action is carried out in the interests of public security"@en .
+<http://purl.oclc.org/NET/ldr/ns#nationalSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#nationalSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#CopyrightException> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#Derivation> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://creativecommons.org/ns#DerivativeWorks> .
+<http://purl.oclc.org/NET/ldr/ns#Derivation> <http://www.w3.org/2000/01/rdf-schema#comment> "Transformation of the work, including translation adaptation or any other form modification"@en .
+<http://purl.oclc.org/NET/ldr/ns#Derivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#IPRight> .
+<http://purl.oclc.org/NET/ldr/ns#Derivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/NET/rdflicense/odbc-by1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribution for data/databases"@en .
+<http://purl.org/NET/rdflicense/odbc-by1.0> <http://www.w3.org/2000/01/rdf-schema#label> "Open Data Commons Attribution"@en .
+<http://purl.org/NET/rdflicense/odbc-by1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/NET/rdflicense/odbc-by1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#FamousDataLicense> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPDELETE> <http://www.w3.org/2000/01/rdf-schema#comment> "Accessing with the HTTP DELETE Method"@en .
+<http://purl.oclc.org/NET/ldr/ns#HTTPDELETE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#HTTPDELETE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#LDPAccess> .
+<http://purl.oclc.org/NET/ldr/ns#issuedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.oclc.org/NET/ldr/ns#issuedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#Policy> .
+<http://purl.oclc.org/NET/ldr/ns#issuedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the rights expression is issued, with legal consequences on the copyright or database right expiration."@en .
+<http://purl.oclc.org/NET/ldr/ns#issuedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#issuedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute of a resource regarding its legal status"@en .
+<http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#ResourceLegalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#CopyrightException> <http://www.w3.org/2000/01/rdf-schema#comment> "Reason which can be invoked to make an exception to the intellectual property or database law "@en .
+<http://purl.oclc.org/NET/ldr/ns#CopyrightException> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#CopyrightException> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#Proposition> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://creativecommons.org/ns#attributionURL> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://creativecommons.org/ns#attributionName> .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/2000/01/rdf-schema#comment> "Text that has to be included as requested by a condition"@en .
+<http://purl.oclc.org/NET/ldr/ns#hasAttributionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/ldr/ns#LDPAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Access> .
+<http://purl.oclc.org/NET/ldr/ns#LDPAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/ldr/ns#research> <http://www.w3.org/2000/01/rdf-schema#comment> "illustration for teaching or scientific research, provided the source, including the author's name, is acknowledged"@en .
+<http://purl.oclc.org/NET/ldr/ns#research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#CopyrightException> .
+<http://purl.oclc.org/NET/ldr/ns#downloadWork> <http://www.w3.org/2000/01/rdf-schema#comment> "downloading the work for purposes other than private"@en .
+<http://purl.oclc.org/NET/ldr/ns#downloadWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.oclc.org/NET/ldr/ns#downloadWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ldr/ns#Reproduction> .

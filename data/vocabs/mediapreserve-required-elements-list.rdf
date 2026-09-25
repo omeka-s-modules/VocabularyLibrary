@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: The MediaPreserve Required Elements List -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements">
+  <dc:title xml:lang="en">The MediaPreserve Required Elements List</dc:title>
+  <skos:note  xml:lang="en">The MediaPreserve Required Element Set is a vocabulary of seven properties for use in asset description. These descriptions are used throughout the tracking of media assets during ingest and production, and will also be used in the generation of XML, spreadsheet, JSON, or other metadata containers for use by the client and provided with digitized file deliverables. The MediaPreserve Element Sets are used in conjunction with a wide variety of standards and schemas associated with audio, film, and video preservation and digitization.</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Filename -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100002">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Filename</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">Customer Filename </reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/Filename.en" />
+  <skos:definition xml:lang="en">Most often, the customer filename will become the filename plus the file extension, i.e. sample001.wav for all digital files. THIS IS A REQUIRED FIELD.</skos:definition>
+</rdf:Description>
+
+<!-- Property: Format Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100007">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Format Type</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">FormatType</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/FormatType.en" />
+  <skos:definition xml:lang="en">Audio, Video, or Film analog format of original asset. See concepts listed at:
+http://metadataregistry.org/uri/FormatTypeAudio
+http://metadataregistry.org/uri/FormatTypeVideo
+http://metadataregistry.org/uri/FormatTypeFilm
+THIS IS A REQUIRED FIELD.</skos:definition>
+  <rdfs:comment xml:lang="en">The MediaPreserve accepts modified/shortened versions of labels, i.e. "U-matic" vs. "3/4 in videotape: U-Matic", "Helical BVH" vs. "1 inch videotape: Helical BVH-1000", etc.</rdfs:comment>
+  <rdfs:domain rdf:resource="http://metadataregistry.org/concept/list/vocabulary_id/145.html" />
+</rdf:Description>
+
+<!-- Property: Language -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100015">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Language</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">Language</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/Language.en" />
+  <skos:definition xml:lang="en">Adheres to ISO 639-2. Lowercase.
+THIS IS A REQUIRED FIELD.</skos:definition>
+  <rdfs:comment xml:lang="en">Please convert ISO-639-1</rdfs:comment>
+  <rdfs:domain rdf:resource="https://www.loc.gov/standards/iso639-2/php/code_list.php" />
+</rdf:Description>
+
+<!-- Property: Media Type -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100006">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Media Type</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">MediaType</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/MediaType.en" />
+  <skos:definition xml:lang="en">Type of audiovisual media. Only one of four field values is allowed, see http://metadataregistry.org/uri/TheMediaPreserve_MediaType
+THIS IS A REQUIRED FIELD.</skos:definition>
+  <rdfs:comment xml:lang="en">MediaPreserve will assign appropriate term if not provided. Video/Film and Moving Image are interchangeable based on preference.</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Date -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100004">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Date</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">RecordDate or DateCreated</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/Date.en" />
+  <skos:definition xml:lang="en">"Undated" or "unknown" acceptable text in field. If only a portion of a year is known, use X in place of unknowns, i.e 20XX. Conforms to ISO 8601.</skos:definition>
+  <rdfs:comment xml:lang="en">YYYY-MM-DD or YYYY-MM
+"Undated" or "unknown" acceptable text in field. If only a portion of a year is known, use X in place of unknowns, i.e 20XX.
+THIS IS A REQUIRED FIELD.</rdfs:comment>
+  <rdfs:domain rdf:resource="https://en.wikipedia.org/wiki/ISO_8601" />
+</rdf:Description>
+
+<!-- Property: Reel Size -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100008">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Reel Size</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">ReelSize</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/ReelSize.en" />
+  <skos:definition xml:lang="en">Tape or reel length or width. If length should be total length, regardless of length of actual content. (i.e. 90 min. cassette with 8.22 minutes of content).
+THIS IS A REQUIRED FIELD.</skos:definition>
+</rdf:Description>
+
+<!-- Property: Title -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/TheMediaPreserve/100001">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve_RequiredElements" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">Title</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">Title</reg:name>
+  <reg:lexicalAlias rdf:resource="http://metadataregistry.org/uri/schema/TheMediaPreserve/Title.en" />
+  <skos:definition xml:lang="en">Title of asset. THIS IS A REQUIRED FIELD.</skos:definition>
+  <rdfs:comment xml:lang="en">Title case preferred, sentence case allowable.</rdfs:comment>
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

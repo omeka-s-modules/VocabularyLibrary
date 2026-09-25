@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://www.metadataregistry.org/uri/schema/lcmptade"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: LCMPT Authority Data Elements -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade">
+  <dc:title xml:lang="en">LCMPT Authority Data Elements</dc:title>
+  <skos:note  xml:lang="en">Authority data elements for the Medium of Performance Thesaurus</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Sponsoring agency code -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/agencyCode">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">agencyCode</reg:name>
+  <rdfs:label xml:lang="en">Sponsoring agency code</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Code scheme needs to be chosen (DLC?)</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Associated place -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/assocPlace">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">assocPlace</reg:name>
+  <rdfs:label xml:lang="en">Associated place</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Use for origin of medium, which may differ from place associated with a resource where medium is used</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Encoding level of content -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/contEncLevel">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">contEncLevel</reg:name>
+  <rdfs:label xml:lang="en">Encoding level of content</rdfs:label>
+  <skos:definition xml:lang="en">MARC options: complete authority record, incomplete authority record</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Geographic code -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/geoCode">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">geoCode</reg:name>
+  <rdfs:label xml:lang="en">Geographic code</rdfs:label>
+  <skos:definition xml:lang="en">ISO code scheme (?)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Hierarchy location -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/hierLoc">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">hierLoc</reg:name>
+  <rdfs:label xml:lang="en">Hierarchy location</rdfs:label>
+  <skos:definition xml:lang="en">Notation for hierarchical location of term if hierarchy captions for preferred terms will be numbered</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">a.k.a. "tree number"</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: MARC record number -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/MARCno">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">MARCno</reg:name>
+  <rdfs:label xml:lang="en">MARC record number</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Node label -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/node">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">node</reg:name>
+  <rdfs:label xml:lang="en">Node label</rdfs:label>
+  <skos:definition xml:lang="en">"Dummy" term not assigned to resources but used to group related preferred terms</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">not usable in MARC</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Non-posted entry term -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/nonPostEntryTerm">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">nonPostEntryTerm</reg:name>
+  <rdfs:label xml:lang="en">Non-posted entry term</rdfs:label>
+  <skos:definition xml:lang="en">Lead-in vocabulary that cannot be attached as a variant to any authorized term; general cross reference</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">MARC Complex see reference, 15X/260</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Other record number -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/otherRecNo">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">otherRecNo</reg:name>
+  <rdfs:label xml:lang="en">Other record number</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Other controlled vocabulary designation -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/otherVocabDes">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">otherVocabDes</reg:name>
+  <rdfs:label xml:lang="en">Other controlled vocabulary designation</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Reference source -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/refSource">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">refSource</reg:name>
+  <rdfs:label xml:lang="en">Reference source</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">mandatory for all terms</skos:scopeNote>
+</rdf:Description>
+
+<!-- Property: Related LCCN -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/relLCCN">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">relLCCN</reg:name>
+  <rdfs:label xml:lang="en">Related LCCN</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: See also reference -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/seeAlsoRef">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">seeAlsoRef</reg:name>
+  <rdfs:label xml:lang="en">See also reference</rdfs:label>
+  <skos:definition xml:lang="en">Links to preferred terms related to chosen preferred term</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">MARC Complex see also reference, 15X/260</rdfs:comment>
+</rdf:Description>
+
+<!-- Property: Source of term -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/termSource">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">termSource</reg:name>
+  <rdfs:label xml:lang="en">Source of term</rdfs:label>
+  <skos:definition xml:lang="en">Name of thesaurus of origin (LCMPT)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Time code -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/timeCode">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">timeCode</reg:name>
+  <rdfs:label xml:lang="en">Time code</rdfs:label>
+  <skos:definition xml:lang="en">ISO code (?)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Time period -->
+<rdf:Description rdf:about="http://www.metadataregistry.org/uri/schema/lcmptade/timePer">
+  <rdfs:isDefinedBy rdf:resource="http://www.metadataregistry.org/uri/schema/lcmptade" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">timePer</reg:name>
+  <rdfs:label xml:lang="en">Time period</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:comment xml:lang="en">Time period of resource that uses instrument may differ from time period of instrument</rdfs:comment>
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

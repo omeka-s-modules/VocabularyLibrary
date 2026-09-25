@@ -1,0 +1,761 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix ekc: <http://dh.aks.ac.kr/ontologies/ekc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ekcd: <http://dh.aks.ac.kr/ontologies/ekcd#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://dh.aks.ac.kr/ontologies/ekcd> rdf:type owl:Ontology ;
+                                       owl:versionIRI <http://dh.aks.ac.kr/ontologies/ekcd_v1> ;
+                                       owl:imports <http://dh.aks.ac.kr/ontologies/ekc-2025> ;
+                                       ekcd:authoringPolicy "EKCD TBox files and related ABox data do not use @base declarations, the empty prefix ':', or relative IRIs such as <#...>, <...>, and <>. EKC and EKCD resources must be explicitly written with the ekc: or ekcd: prefixed names."@en ,
+                                                            "EKCD TBox 및 관련 ABox 데이터에서는 @base 선언, empty prefix ':', 상대 IRI(<#...>, <...>, <>)를 사용하지 않도록 합니다. EKC 및 EKCD 자원은 반드시 ekc: 또는 ekcd: prefixed name으로 명시하도록 합니다."@ko ;
+                                       dc:creator <https://orcid.org/0009-0007-4477-6547> ,
+                                                  "Dong Shin SEO"@en ,
+                                                  "서동신"@ko ;
+                                       dc:contributor <https://orcid.org/0009-0008-1531-1238> ,
+                                                  "Su-jeong PARK"@en ,
+                                                  "박수정"@ko ;
+                                       dc:description "A derivative ontology extending the EKC line for Korean cultural heritage knowledge modeling, with a particular focus on historical and cultural resources of Korea. It provides additional datatype properties for dates and URLs, local application guidelines for standard semantic mapping properties, and project-level semantic extensions."@en ,
+                                                      "한국 문화유산 지식 모델링을 위해 EKC 계열을 확장한 파생 온톨로지로서, 날짜 및 URL 관련 datatype properties를 보완하고 표준 시맨틱 매핑 properties의 로컬 적용 지침과 프로젝트 수준의 semantic 확장을 제공합니다."@ko ,
+                                                      "Version 1.1.0 adds classes and properties for interpretive assertions, confidence levels, evidence tracking, and utterance modeling in historical knowledge graphs."@en ,
+                                                      "버전 1.1.0은 역사 지식그래프에서 해석적 진술, 신뢰도 수준, 근거 추적, 발화 모델링을 위한 클래스와 속성을 추가합니다."@ko ,
+                                                      "Version 1.2.0 clarifies the methodological positioning of EKCD's lightweight interpretive-assertion pattern in relation to CRMinf and separates two independent dimensions of interpretation: interpretive basis and epistemic confidence. It documents conceptual overlap with CRMinf while retaining the existing PROV-O-based, project-level EKCD model without importing or formally aligning to CRMinf."@en ,
+                                                      "버전 1.2.0은 EKCD의 경량 해석적 진술 모델과 CRMinf의 관계에 대한 방법론적 위치를 명확히 하고, 해석의 두 독립 차원인 해석 근거 방식과 인식론적 신뢰도를 분리합니다. CRMinf와의 개념적 접점을 문서화하되, CRMinf를 import하거나 형식적으로 정렬하지 않고 기존 PROV-O 기반의 프로젝트 수준 EKCD 모델을 유지합니다."@ko ;
+                                       dc:publisher <https://dh.aks.ac.kr/> ,
+                                                  "The Center for Digital Humanities, Academy of Korean Studies"@en ,
+                                                    "한국학중앙연구원 디지털인문학연구소"@ko ;
+                                       dc:title "EKCD: An EKC-derived Ontology for Korean Cultural Heritage Knowledge Modeling"@en ,
+                                                "EKCD: 한국 문화유산 지식 모델링을 위한 EKC 파생 온톨로지"@ko ;
+                                       dcterms:issued "2026-04-17"^^xsd:date ;
+                                       dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                       dcterms:modified "2026-08-15"^^xsd:date ;
+                                       dcterms:replaces <http://dh.aks.ac.kr/ontologies/ekcd_v1_1_5.ttl> ;
+                                       dcterms:source <http://dh.aks.ac.kr/ontologies/ekc> ;
+                                       vann:preferredNamespacePrefix "ekcd" ;
+                                       vann:preferredNamespaceUri "http://dh.aks.ac.kr/ontologies/ekcd#" ;
+                                       rdfs:seeAlso <https://github.com/dongshins/ekcd-ontology> ,
+                                                    <http://dh.aks.ac.kr/ontologies/ekc> ,
+                                                    <https://cidoc-crm.org/crminf/> ,
+                                                    <https://cidoc-crm.org/crminf/ModelVersion/crminf-1.2.1> ,
+                                                    "https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022" ,
+                                                    "https://github.com/dongshins/EKC_ontology" ,
+                                                    "https://github.com/dongshins/EKC_ontology_advanced" ;
+                                       owl:priorVersion <http://dh.aks.ac.kr/ontologies/ekcd_v1_1_5.ttl> ;
+                                       owl:versionInfo "EKCD v1.2.0"@en ;
+                                       dcat:contactPoint <https://github.com/dongshins> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#authoringPolicy
+ekcd:authoringPolicy rdf:type owl:AnnotationProperty ;
+                     rdfs:comment "An annotation property used to describe local authoring and serialization policies for EKCD TBox and related ABox data."@en ,
+                                  "EKCD TBox 및 관련 ABox 데이터의 로컬 작성 및 직렬화 원칙을 기술하기 위한 annotation property입니다."@ko ;
+                     rdfs:label "authoring policy"@en ,
+                                "작성 원칙"@ko .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/replaces
+dcterms:replaces rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty ;
+               dc:description "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system."@en ;
+               rdfs:label "source"@en ;
+               skos:definition "A related resource from which the described resource is derived."@en .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+dcterms:isReferencedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/provenance
+dcterms:provenance rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/references
+dcterms:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dcterms:rightsHolder rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/type
+dcterms:type rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/currentLocation
+edm:currentLocation rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/formerLocation
+edm:formerLocation rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/happenedAt
+edm:happenedAt rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/isDerivativeOf
+edm:isDerivativeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/isNextInSequenceTo
+edm:isNextInSequenceTo rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/isRelatedTo
+edm:isRelatedTo rdf:type owl:ObjectProperty .
+
+
+###  http://www.europeana.eu/schemas/edm/isShownAt
+edm:isShownAt rdf:type owl:ObjectProperty ;
+              skos:scopeNote "EKCD 운용(로컬) 시 object property로서 설명 페이지, 랜딩 페이지, 뷰어 페이지 등 도착 페이지 성격의 WebResource 노드로 연결하고, 실제 URL은 대상 노드의 ekcd:accessURL에 기록합니다."@ko .
+
+
+###  http://www.europeana.eu/schemas/edm/isShownBy
+edm:isShownBy rdf:type owl:ObjectProperty ;
+              skos:scopeNote "EKCD 운용(로컬) 시 object property로서, 직접 활용 가능한 이미지·미디어 또는 임베드 가능한 뷰어 성격의 WebResource/Multimedia 노드로 연결하고, 실제 URL은 대상 노드의 ekcd:accessURL에 기록합니다."@ko .
+
+
+###  http://www.europeana.eu/schemas/edm/isSuccessorOf
+edm:isSuccessorOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ekc:CO ;
+           rdf:type owl:SymmetricProperty ,
+                    owl:TransitiveProperty ;
+           dc:description "두 URI가 동일한 개체(같은 resource/individual)를 가리킨다. 단순 유사성, 상호참조, 개념 대응에는 사용하지 않는다."@ko ;
+           rdfs:label "sameAs"@en ;
+           skos:example """EKCD에서의 운용(로컬) 예시 : <http://dh.aks.ac.kr/iri/ekc#조선_영조> - <https://www.wikidata.org/entity/Q485009>
+※ EKC에서와는 다름에 유의"""@ko ;
+           skos:note "EKCD 운용(로컬) 시 : 엄격한 동일개체 관계 ※ EKC에서와 다름에 유의"@ko ;
+           skos:scopeNote "엄격한 동일성이 확실할 때만 사용. 개념/용어의 대응에는 skos:exactMatch 또는 skos:closeMatch를 우선 검토할 것. ※ EKC에서와는 다름에 유의"@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:mappingRelation ;
+                rdf:type owl:SymmetricProperty ;
+                dc:description "~와 유사하다 ※ 다른 개념체계(어휘집)의 자원과 근접하게 대응한다. 일부 정보검색 맥락에서는 상호대체 가능하지만, 완전 동일개체를 뜻하지는 않는다."@ko ;
+                rdfs:label "closeMatch"@en ;
+                skos:example "개념 A(EKC) - 개념 B(외부 어휘) ※ 부분적 상호대체 가능"@ko ;
+                skos:note "유사한 관계(근접 대응)"@ko ;
+                skos:scopeNote "주로 Concept/Index 간의 외부 어휘 매핑에 사용. 엄격한 동일성이 아니므로 owl:sameAs 대용으로 사용하지 말 것."@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:closeMatch ;
+                rdf:type owl:SymmetricProperty ,
+                         owl:TransitiveProperty ;
+                dc:description "다른 개념체계(어휘집)의 자원과 정밀하게 대응한다. 넓은 정보검색 맥락에서 상호대체 가능하지만, OWL의 엄격한 동일성(owl:sameAs)과는 구별한다."@ko ;
+                rdfs:label "exactMatch"@en ;
+                skos:example "개념 A(EKC) - 개념 B(외부 어휘) ※ 광범위한 상호대체 가능"@ko ;
+                skos:note "정밀 대응 관계"@ko ;
+                skos:scopeNote "주로 Concept/Index 간의 외부 어휘 매핑에 사용. 완전 동일 개체가 확실할 때만 owl:sameAs를 사용."@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+skos:mappingRelation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ekc:CO ;
+                     dc:description "상이한 개념체계(어휘집) 사이의 대응 관계를 묶는 상위 속성"@ko ;
+                     rdfs:label "mappingRelation"@en ;
+                     skos:example "개념 A(EKC) - 개념 B(외부 어휘)"@ko ;
+                     skos:note "외부 개념체계 매핑의 상위 관계"@ko ;
+                     skos:scopeNote "주로 Concept/Index 간의 외부 링크 정리에 사용"@ko .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+foaf:knows rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/member
+foaf:member rdf:type owl:ObjectProperty .
+
+
+#################################################################
+# EKCD interpretive assertion, evidence, confidence, and utterance object properties
+#################################################################
+
+### http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom
+    rdf:type owl:ObjectProperty ;
+    rdfs:label "was derived from"@en ;
+    rdfs:label "근거 자료에서 도출됨"@ko ;
+    rdfs:comment "Relates an interpretive assertion or modeled resource to the source resource from which it was derived."@en ;
+    rdfs:comment "해석적 진술이나 모델링된 자원을 그것이 도출된 근거 자료와 연결합니다."@ko ;
+    skos:scopeNote "In EKCD, this property is used as a lightweight provenance link from an interpretive assertion or modeled resource to supporting source material. It does not by itself model an inference-making activity, inference logic, belief adoption, or a complete scholarly argumentation chain as addressed in CRMinf."@en ;
+    skos:scopeNote "EKCD에서는 이 property를 해석적 진술 또는 모델링된 자원에서 그 근거 자료로 이어지는 경량 provenance 연결로 사용합니다. 이 property 자체가 CRMinf에서 다루는 추론 행위, 추론 논리, 믿음 채택 또는 완전한 학술적 논증 사슬을 모델링하는 것은 아닙니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#assertsSubject
+ekcd:assertsSubject
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range owl:Thing ;
+    rdfs:label "asserts subject"@en ;
+    rdfs:label "진술 주어"@ko ;
+    rdfs:comment "Relates an interpretive assertion to the subject resource of the asserted relation."@en ;
+    rdfs:comment "해석적 진술을 그 진술이 대상으로 삼는 주어 자원과 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#assertsPredicate
+ekcd:assertsPredicate
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range rdf:Property ;
+    rdfs:label "asserts predicate"@en ;
+    rdfs:label "진술 술어"@ko ;
+    rdfs:comment "Relates an interpretive assertion to the property used as the predicate of the asserted relation."@en ;
+    rdfs:comment "해석적 진술을 그 진술에서 술어로 사용되는 property와 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#assertsObject
+ekcd:assertsObject
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range owl:Thing ;
+    rdfs:label "asserts object"@en ;
+    rdfs:label "진술 목적어"@ko ;
+    rdfs:comment "Relates an interpretive assertion to the object resource of the asserted relation."@en ;
+    rdfs:comment "해석적 진술을 그 진술이 대상으로 삼는 목적어 자원과 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#correspondsTo
+ekcd:correspondsTo
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf ekc:CO ;
+    rdfs:label "corresponds to"@en ;
+    rdfs:label "대응한다"@ko ;
+    rdfs:comment "Relates two resources that are interpreted as corresponding to each other, without asserting strict identity."@en ;
+    rdfs:comment "두 자원이 서로 대응한다고 해석되는 경우에 사용하되, 엄격한 동일성을 주장하지 않습니다."@ko ;
+    skos:scopeNote "Use this property for scene-procedure, record-event, or source-unit correspondences. Do not use it as a substitute for owl:sameAs."@en ;
+    skos:scopeNote "장면-절차, 기록-사건, 자료 단위 사이의 대응 관계에 사용합니다. owl:sameAs의 대체물로 사용하지 않습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#contextuallyRelatedTo
+ekcd:contextuallyRelatedTo
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf ekc:mightBeRelatedTo ;
+    rdfs:label "contextually related to"@en ;
+    rdfs:label "맥락적으로 관련된다"@ko ;
+    rdfs:comment "Relates two resources that are associated through historical, textual, visual, or interpretive context, without asserting direct correspondence."@en ;
+    rdfs:comment "직접 대응을 주장하지 않고, 역사적·문헌적·시각적·해석적 맥락 안에서 관련되는 두 자원을 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#hasInterpretiveBasis
+ekcd:hasInterpretiveBasis
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range ekcd:InterpretiveBasisType ;
+    rdfs:label "has interpretive basis"@en ;
+    rdfs:label "해석 근거 유형을 갖는다"@ko ;
+    rdfs:comment "Relates an interpretive assertion to the type of evidential or inferential basis on which the interpretation is made."@en ;
+    rdfs:comment "해석적 진술을 그 해석이 성립하는 직접적·추론적·맥락적 근거 방식과 연결합니다."@ko ;
+    skos:scopeNote "This property records how an interpretation is supported, independently of the confidence assigned to the assertion. Direct evidence does not automatically imply high confidence, and contextual or inferential support does not automatically imply low confidence."@en ;
+    skos:scopeNote "이 property는 해석이 어떤 방식으로 근거지어지는지를, 그 진술에 부여되는 신뢰도와 독립적으로 기록합니다. 직접 근거라고 해서 자동으로 높은 신뢰도를 뜻하지 않으며, 맥락적·추론적 근거라고 해서 자동으로 낮은 신뢰도를 뜻하지 않습니다."@ko .
+
+
+### http://dh.aks.ac.kr/ontologies/ekcd#hasInterpretiveConfidence
+ekcd:hasInterpretiveConfidence
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range ekcd:InterpretiveConfidenceLevel ;
+    rdfs:label "has interpretive confidence"@en ;
+    rdfs:label "해석적 신뢰도를 갖는다"@ko ;
+    rdfs:comment "Relates an interpretive assertion to the epistemic confidence level assigned to it."@en ;
+    rdfs:comment "해석적 진술을 그 진술에 부여된 인식론적 신뢰도 수준과 연결합니다."@ko ;
+    skos:scopeNote "This confidence axis is independent of ekcd:hasInterpretiveBasis. It records the degree of confidence assigned to an interpretive assertion, not whether the assertion is based on direct, inferential, or contextual support. The EKCD confidence level is not asserted to be equivalent to CRMinf I6 Belief Value or to any other CRMinf construct."@en ;
+    skos:scopeNote "이 신뢰도 축은 ekcd:hasInterpretiveBasis와 독립적입니다. 해석이 직접적·추론적·맥락적 근거에 기반하는지를 나타내는 것이 아니라, 해석적 진술에 부여된 확신의 정도를 기록합니다. EKCD의 신뢰도 수준을 CRMinf의 I6 Belief Value 또는 다른 CRMinf 구성요소와 동등한 것으로 선언하지 않습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#hasSpeaker
+ekcd:hasSpeaker
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:Utterance ;
+    rdfs:range ekc:Actor ;
+    rdfs:label "has speaker"@en ;
+    rdfs:label "발화자를 갖는다"@ko ;
+    rdfs:comment "Relates an utterance to the actor who made or is represented as making the utterance."@en ;
+    rdfs:comment "발화를 그 발화를 한 행위자 또는 발화자로 기록된 행위자와 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#isUtteranceRecordedIn
+ekcd:isUtteranceRecordedIn
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:Utterance ;
+    rdfs:range ekc:Record ;
+    rdfs:label "is utterance recorded in"@en ;
+    rdfs:label "발화가 기록되어 있다"@ko ;
+    rdfs:comment "Relates an utterance to the record in which it is documented."@en ;
+    rdfs:comment "발화를 그것이 기록된 문헌·기록물과 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#utteranceAbout
+ekcd:utteranceAbout
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain ekcd:Utterance ;
+    rdfs:range owl:Thing ;
+    rdfs:label "utterance about"@en ;
+    rdfs:label "발화의 대상"@ko ;
+    rdfs:comment "Relates an utterance to the event, record, person, place, object, or concept that it concerns."@en ;
+    rdfs:comment "발화를 그 발화가 다루는 사건, 기록물, 인물, 장소, 사물 또는 개념과 연결합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#retrospectivelyFrames
+ekcd:retrospectivelyFrames
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf ekcd:contextuallyRelatedTo ;
+    rdfs:domain ekcd:Utterance ;
+    rdfs:range ekc:Event ;
+    rdfs:label "retrospectively frames"@en ;
+    rdfs:label "사후적으로 의미화한다"@ko ;
+    rdfs:comment "Relates an utterance to an event or event complex that it retrospectively frames, summarizes, or politically contextualizes."@en ;
+    rdfs:comment "발화를 그것이 사후적으로 총괄하거나 정치적·해석적으로 의미화하는 사건 또는 사건군과 연결합니다."@ko .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#accessURL
+ekcd:accessURL rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:anyURI ;
+               dc:description "Dereferenceable web address of a WebResource/Multimedia individual."@en ,
+                              "WebResource/Multimedia 개체의 실제 접근 웹주소. EKCD 운용(로컬)에서 edm:isShownBy와 edm:isShownAt는 object property로 유지되되, 구체적 URL은 대상 WebResource/Multimedia 노드에 ekcd:accessURL(data property)로 기록합니다."@ko ;
+               rdfs:label "access URL"@en ,
+                          "접근 URL"@ko ;
+               skos:example "https://example.org/images/001.jpg 또는 https://example.org/items/001 등"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#endDate
+ekcd:endDate rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:date ;
+             dc:description "기간 사건의 정규화된 종료일. 입력은 YYYY, YYYY-MM, YYYY-MM-DD 형식을 사용한다."@ko ;
+             rdfs:label "end date"@en ,
+                        "종료일"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#occurrenceDate
+ekcd:occurrenceDate rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:date ;
+                    dc:description "Date on which an event, activity, or historical occurrence took place. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used."@en ,
+                                   "단일 시점의 사건·행위·역사적 사실이 발생한 날짜. 전체 날짜를 알 수 없는 경우 월과 연도(YYYY-MM) 또는 연도(YYYY)만 사용할 수 있다. 기간 사건의 경우에는 ekcd:startDate와 ekcd:endDate를 우선 사용하고, 원사료형 날짜 표기는 ekcd:originalDate에 가능한 한에서 기록한다."@ko ;
+                    rdfs:label "occurrenceDate"@en ,
+                               "발생일"@ko ;
+                    skos:definition "특정 사건·행위·역사적 사실의 단일 발생 시점"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#originalDate
+ekcd:originalDate rdf:type owl:DatatypeProperty ;
+                  rdfs:range rdfs:Literal ;
+                  dc:description "사료에 나타난 날짜 표현을 가능한 한 원형에 가깝게 기록하는 값. 예: 음력 1795년 윤2월 9일~16일"@ko ;
+                  rdfs:label "original date expression"@en ,
+                             "원사료형 날짜"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekcd#startDate
+ekcd:startDate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:date ;
+               dc:description "기간 사건의 정규화된 시작일. 입력은 YYYY, YYYY-MM, YYYY-MM-DD 형식을 사용한다."@ko ;
+               rdfs:label "start date"@en ,
+                          "시작일"@ko .
+
+
+#################################################################
+# EKCD evidence and utterance datatype properties
+#################################################################
+
+### http://dh.aks.ac.kr/ontologies/ekcd#evidenceLocation
+ekcd:evidenceLocation
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "evidence location"@en ;
+    rdfs:label "근거 위치"@ko ;
+    rdfs:comment "A textual indication of the location of evidence, such as a folio, page, section, scene title, article date, or database entry."@en ;
+    rdfs:comment "권차, 면, 쪽, 절목, 장면명, 기사 일자, 데이터베이스 항목 등 근거 자료 안에서의 위치를 기록합니다."@ko ;
+    skos:example "『기사경회첩』 경현당선온도; 『승정원일기』 영조 20년 11월 9일 기사"@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#evidenceNote
+ekcd:evidenceNote
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain ekcd:InterpretiveAssertion ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "evidence note"@en ;
+    rdfs:label "근거 설명"@ko ;
+    rdfs:comment "A note explaining how the cited evidence supports the interpretive assertion."@en ;
+    rdfs:comment "제시된 근거가 해당 해석적 진술을 어떻게 뒷받침하는지 설명합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#utteranceText
+ekcd:utteranceText
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain ekcd:Utterance ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "utterance text"@en ;
+    rdfs:label "발화 내용"@ko ;
+    rdfs:comment "The quoted, transcribed, or summarized text of an utterance."@en ;
+    rdfs:comment "발화의 인용문, 전사문 또는 요약문을 기록합니다."@ko .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_모델
+<http://dh.aks.ac.kr/ontologies/ekc#3D_모델> rdf:type owl:Class .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_지도
+<http://dh.aks.ac.kr/ontologies/ekc#3D_지도> rdf:type owl:Class .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+voaf:Vocabulary rdf:type owl:Class .
+
+
+#################################################################
+# EKCD interpretive assertion, basis, confidence, and utterance classes
+#################################################################
+
+### http://www.w3.org/ns/prov#Entity
+prov:Entity
+    rdf:type owl:Class .
+
+### http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept
+    rdf:type owl:Class .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#InterpretiveAssertion
+ekcd:InterpretiveAssertion
+    rdf:type owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Interpretive assertion"@en ;
+    rdfs:label "해석적 진술"@ko ;
+    rdfs:comment "A modeled assertion that records an interpretive relation, its subject, predicate, object, evidence, interpretive basis, and epistemic confidence level."@en ;
+    rdfs:comment "해석적 관계의 주어, 술어, 목적어, 근거 자료, 해석 근거 방식, 인식론적 신뢰도 수준을 함께 기록하기 위한 진술 단위입니다."@ko ;
+    rdfs:seeAlso <https://cidoc-crm.org/crminf/ModelVersion/crminf-1.2.1> ;
+    skos:scopeNote "EKCD deliberately uses a compact reified assertion pattern for historical and digital-humanities datasets. It separates the basis of an interpretation from the confidence assigned to that interpretation, while preserving traceability to evidence. Its scope is conceptually related to concerns addressed by CRMinf, but EKCD does not import CRMinf or assert owl:equivalentClass, rdfs:subClassOf, skos:exactMatch, or skos:closeMatch relations between ekcd:InterpretiveAssertion and CRMinf classes. CRMinf can be used as a complementary model when detailed representation of argumentation, inference making, belief adoption, or inference logic is required."@en ;
+    skos:scopeNote "EKCD는 역사학·디지털 인문학 데이터세트에서 간결한 reified assertion 패턴을 사용하며, 해석이 성립하는 근거 방식과 그 해석에 부여되는 신뢰도를 서로 분리하면서 근거 자료까지의 추적 가능성을 보존합니다. 그 관심 범위는 CRMinf가 다루는 문제와 개념적으로 연결되지만, EKCD는 CRMinf를 import하지 않으며 ekcd:InterpretiveAssertion과 CRMinf 클래스 사이에 owl:equivalentClass, rdfs:subClassOf, skos:exactMatch 또는 skos:closeMatch 관계를 선언하지 않습니다. 논증, 추론 행위, 믿음 채택, 추론 논리를 세밀하게 표현해야 하는 경우에는 CRMinf를 상호보완적 모델로 활용할 수 있습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#InterpretiveBasisType
+ekcd:InterpretiveBasisType
+    rdf:type owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Interpretive basis type"@en ;
+    rdfs:label "해석 근거 유형"@ko ;
+    rdfs:comment "A controlled value indicating whether an interpretive assertion is supported directly, inferentially, or contextually."@en ;
+    rdfs:comment "해석적 진술이 직접적·추론적·맥락적 방식 가운데 어떤 방식으로 근거지어지는지를 나타내는 통제값입니다."@ko ;
+    skos:scopeNote "Interpretive basis is orthogonal to epistemic confidence. Use ekcd:hasInterpretiveConfidence separately to state how strongly the assertion is held."@en ;
+    skos:scopeNote "해석 근거 유형은 인식론적 신뢰도와 독립된 차원입니다. 그 진술을 어느 정도 확신하는지는 ekcd:hasInterpretiveConfidence로 별도 기록합니다."@ko .
+
+
+### http://dh.aks.ac.kr/ontologies/ekcd#InterpretiveConfidenceLevel
+ekcd:InterpretiveConfidenceLevel
+    rdf:type owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Interpretive confidence level"@en ;
+    rdfs:label "해석적 신뢰도 수준"@ko ;
+    rdfs:comment "A controlled value indicating the epistemic degree of confidence assigned to an interpretive assertion."@en ;
+    rdfs:comment "해석적 진술에 부여되는 인식론적 신뢰도 정도를 나타내는 통제값입니다."@ko ;
+    skos:scopeNote "Confidence is independent of whether the assertion has a direct, inferential, or contextual basis."@en ;
+    skos:scopeNote "신뢰도는 그 진술의 근거 방식이 직접적·추론적·맥락적인지와 독립적으로 부여합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#Utterance
+ekcd:Utterance
+    rdf:type owl:Class ;
+    rdfs:subClassOf ekc:Event ;
+    rdfs:label "Utterance"@en ;
+    rdfs:label "발화"@ko ;
+    rdfs:comment "An event in which an actor makes, issues, or is represented as making a statement, command, declaration, or other meaningful verbal expression."@en ;
+    rdfs:comment "행위자가 진술, 명령, 선언 등 의미 있는 언표를 하거나 한 것으로 기록되는 사건입니다."@ko ;
+    skos:scopeNote "This class models an utterance as a performative event. The record in which the utterance is documented should be modeled separately as an instance of ekc:Record or its subclass."@en ;
+    skos:scopeNote "이 클래스는 발화를 수행적 사건으로 모델링합니다. 발화가 기록된 문헌·기록물은 별도로 ekc:Record 또는 그 하위 클래스의 개체로 모델링합니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#RoyalUtterance
+ekcd:RoyalUtterance
+    rdf:type owl:Class ;
+    rdfs:subClassOf ekcd:Utterance ;
+    rdfs:label "Royal utterance"@en ;
+    rdfs:label "국왕 발화"@ko ;
+    rdfs:comment "An utterance made by, attributed to, or formally represented as issued by a king or royal figure."@en ;
+    rdfs:comment "국왕 또는 왕실 인물이 한 것으로 기록되거나 공식적으로 제시되는 발화입니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#RoyalCommand
+ekcd:RoyalCommand
+    rdf:type owl:Class ;
+    rdfs:subClassOf ekcd:RoyalUtterance ;
+    rdfs:label "Royal command"@en ;
+    rdfs:label "왕명"@ko ;
+    rdfs:comment "A royal utterance that functions as an instruction, order, directive, or command."@en ;
+    rdfs:comment "지시, 명령, 교시, 하교의 기능을 수행하는 국왕 발화입니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#RetrospectiveUtterance
+ekcd:RetrospectiveUtterance
+    rdf:type owl:Class ;
+    rdfs:subClassOf ekcd:Utterance ;
+    rdfs:label "Retrospective utterance"@en ;
+    rdfs:label "회고적/총괄적 발화"@ko ;
+    rdfs:comment "An utterance that retrospectively summarizes, frames, or gives political or interpretive meaning to preceding events or records."@en ;
+    rdfs:comment "앞선 사건이나 기록을 사후적으로 총괄하거나 정치적·해석적 의미 속에 배치하는 발화입니다."@ko .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc
+<http://dh.aks.ac.kr/ontologies/ekc> rdf:type owl:NamedIndividual ;
+                                     dcterms:publisher <https://dh.aks.ac.kr/> .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekcd
+<http://dh.aks.ac.kr/ontologies/ekcd> rdf:type owl:NamedIndividual ,
+                                               voaf:Vocabulary .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#
+ekc: rdf:type owl:NamedIndividual ,
+              voaf:Vocabulary .
+
+
+###  https://dh.aks.ac.kr/
+<https://dh.aks.ac.kr/> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+# EKCD interpretive basis and confidence individuals
+#################################################################
+
+### http://dh.aks.ac.kr/ontologies/ekcd#DirectEvidenceBasis
+ekcd:DirectEvidenceBasis
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveBasisType ,
+             skos:Concept ;
+    rdfs:label "Direct evidence basis"@en ;
+    rdfs:label "직접 근거"@ko ;
+    skos:prefLabel "Direct evidence basis"@en ;
+    skos:prefLabel "직접 근거"@ko ;
+    skos:definition "An interpretive basis in which the assertion is supported by an explicit statement, title, label, inscription, directly observable feature, or other comparatively direct indication in the source material."@en ;
+    skos:definition "자료의 명시적 진술, 표제, 명문, 문자면, 직접 관찰 가능한 특징 등 비교적 직접적인 표시가 해석적 진술의 근거가 되는 경우입니다."@ko ;
+    skos:scopeNote "This value characterizes the basis of the interpretation only; it does not itself imply high confidence."@en ;
+    skos:scopeNote "이 값은 해석의 근거 방식만을 나타내며, 그 자체로 높은 신뢰도를 뜻하지 않습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#InferentialBasis
+ekcd:InferentialBasis
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveBasisType ,
+             skos:Concept ;
+    rdfs:label "Inferential basis"@en ;
+    rdfs:label "추론적 근거"@ko ;
+    skos:prefLabel "Inferential basis"@en ;
+    skos:prefLabel "추론적 근거"@ko ;
+    skos:definition "An interpretive basis in which the assertion is derived by reasoning from multiple, indirect, or mutually supporting pieces of evidence rather than from an explicit statement of the asserted relation."@en ;
+    skos:definition "주장된 관계가 자료에 명시되어 있지 않지만, 복수의 근거·간접 근거·상호 보강되는 근거를 종합하여 추론하는 경우입니다."@ko ;
+    skos:scopeNote "This value does not prescribe a confidence level; an inferential assertion may be assigned high, medium, or low confidence depending on the evidence and research judgment."@en ;
+    skos:scopeNote "이 값은 신뢰도 수준을 미리 정하지 않습니다. 추론적 진술도 근거와 연구 판단에 따라 높음·중간·낮음의 신뢰도를 가질 수 있습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#ContextualBasis
+ekcd:ContextualBasis
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveBasisType ,
+             skos:Concept ;
+    rdfs:label "Contextual basis"@en ;
+    rdfs:label "맥락적 근거"@ko ;
+    skos:prefLabel "Contextual basis"@en ;
+    skos:prefLabel "맥락적 근거"@ko ;
+    skos:definition "An interpretive basis in which the assertion is supported primarily by broader historical, textual, visual, social, or political context rather than by direct correspondence or an explicit source statement."@en ;
+    skos:definition "직접 대응이나 명시적 자료 진술보다는 보다 넓은 역사적·문헌적·시각적·사회적·정치적 맥락이 주된 근거가 되는 경우입니다."@ko ;
+    skos:scopeNote "This value characterizes contextual support and does not itself imply low confidence."@en ;
+    skos:scopeNote "이 값은 맥락적 근거 방식을 나타내며, 그 자체로 낮은 신뢰도를 뜻하지 않습니다."@ko .
+
+
+### http://dh.aks.ac.kr/ontologies/ekcd#HighConfidence
+ekcd:HighConfidence
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveConfidenceLevel ,
+             skos:Concept ;
+    rdfs:label "High confidence"@en ;
+    rdfs:label "높은 신뢰도"@ko ;
+    skos:prefLabel "High"@en ;
+    skos:prefLabel "높음"@ko ;
+    skos:definition "A high degree of confidence assigned to an interpretive assertion after consideration of the available evidence and relevant alternatives."@en ;
+    skos:definition "가용한 근거와 관련 대안 해석을 검토한 결과 해석적 진술에 높은 정도의 확신을 부여하는 경우입니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#MediumConfidence
+ekcd:MediumConfidence
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveConfidenceLevel ,
+             skos:Concept ;
+    rdfs:label "Medium confidence"@en ;
+    rdfs:label "중간 신뢰도"@ko ;
+    skos:prefLabel "Medium"@en ;
+    skos:prefLabel "중간"@ko ;
+    skos:definition "A moderate degree of confidence assigned to an interpretive assertion when the evidence supports the interpretation but meaningful uncertainty or alternative readings remain."@en ;
+    skos:definition "근거가 해당 해석을 지지하지만 의미 있는 불확실성이나 대안적 해석이 남아 있어 중간 정도의 확신을 부여하는 경우입니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#LowConfidence
+ekcd:LowConfidence
+    rdf:type owl:NamedIndividual ,
+             ekcd:InterpretiveConfidenceLevel ,
+             skos:Concept ;
+    rdfs:label "Low confidence"@en ;
+    rdfs:label "낮은 신뢰도"@ko ;
+    skos:prefLabel "Low"@en ;
+    skos:prefLabel "낮음"@ko ;
+    skos:definition "A low degree of confidence assigned to an interpretive assertion when the interpretation remains tentative because the available evidence is limited, ambiguous, or compatible with substantial alternatives."@en ;
+    skos:definition "가용한 근거가 제한적이거나 모호하고 상당한 대안 해석이 가능하여 해석적 진술을 잠정적으로 제시하는 경우입니다."@ko .
+
+
+#################################################################
+# Deprecated legacy mixed values from EKCD v1.1.x
+#################################################################
+
+### http://dh.aks.ac.kr/ontologies/ekcd#Direct
+ekcd:Direct
+    rdf:type owl:NamedIndividual ,
+             skos:Concept ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:label "Direct correspondence (legacy)"@en ;
+    rdfs:label "직접 대응 (레거시)"@ko ;
+    skos:prefLabel "Direct"@en ;
+    skos:prefLabel "직접 대응"@ko ;
+    skos:definition "A legacy EKCD v1.1.x controlled value that combined the directness of evidential support with an implicit confidence judgment."@en ;
+    skos:definition "직접적인 근거 방식과 암묵적인 신뢰도 판단을 하나의 값에 결합했던 EKCD v1.1.x의 레거시 통제값입니다."@ko ;
+    skos:scopeNote "Deprecated for new data. Use ekcd:hasInterpretiveBasis ekcd:DirectEvidenceBasis and assign ekcd:hasInterpretiveConfidence independently. No automatic mapping to ekcd:HighConfidence is asserted."@en ;
+    skos:scopeNote "새 데이터에서는 사용하지 않습니다. ekcd:hasInterpretiveBasis ekcd:DirectEvidenceBasis를 사용하고 ekcd:hasInterpretiveConfidence를 독립적으로 부여합니다. ekcd:HighConfidence로 자동 대응시키지 않습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#Probable
+ekcd:Probable
+    rdf:type owl:NamedIndividual ,
+             skos:Concept ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:label "Probable correspondence (legacy)"@en ;
+    rdfs:label "유력한 대응 (레거시)"@ko ;
+    skos:prefLabel "Probable"@en ;
+    skos:prefLabel "유력한 대응"@ko ;
+    skos:definition "A legacy EKCD v1.1.x controlled value that combined inferential support with a confidence judgment."@en ;
+    skos:definition "추론적 근거 방식과 신뢰도 판단을 하나의 값에 결합했던 EKCD v1.1.x의 레거시 통제값입니다."@ko ;
+    skos:scopeNote "Deprecated for new data. Use ekcd:hasInterpretiveBasis ekcd:InferentialBasis and assign ekcd:hasInterpretiveConfidence independently. No automatic mapping to a particular confidence level is asserted."@en ;
+    skos:scopeNote "새 데이터에서는 사용하지 않습니다. ekcd:hasInterpretiveBasis ekcd:InferentialBasis를 사용하고 ekcd:hasInterpretiveConfidence를 독립적으로 부여합니다. 특정 신뢰도 수준으로 자동 대응시키지 않습니다."@ko .
+
+### http://dh.aks.ac.kr/ontologies/ekcd#Contextual
+ekcd:Contextual
+    rdf:type owl:NamedIndividual ,
+             skos:Concept ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:label "Contextual association (legacy)"@en ;
+    rdfs:label "맥락적 연관 (레거시)"@ko ;
+    skos:prefLabel "Contextual"@en ;
+    skos:prefLabel "맥락적 연관"@ko ;
+    skos:definition "A legacy EKCD v1.1.x controlled value that combined contextual support with an implicit weaker-confidence judgment."@en ;
+    skos:definition "맥락적 근거 방식과 암묵적인 낮은 신뢰도 판단을 하나의 값에 결합했던 EKCD v1.1.x의 레거시 통제값입니다."@ko ;
+    skos:scopeNote "Deprecated for new data. Use ekcd:hasInterpretiveBasis ekcd:ContextualBasis and assign ekcd:hasInterpretiveConfidence independently. No automatic mapping to ekcd:LowConfidence is asserted."@en ;
+    skos:scopeNote "새 데이터에서는 사용하지 않습니다. ekcd:hasInterpretiveBasis ekcd:ContextualBasis를 사용하고 ekcd:hasInterpretiveConfidence를 독립적으로 부여합니다. ekcd:LowConfidence로 자동 대응시키지 않습니다."@ko .
+
+
+###  Generated (partly) by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

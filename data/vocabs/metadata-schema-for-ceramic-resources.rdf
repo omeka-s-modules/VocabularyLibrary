@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/cr"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Metadata Schema for Ceramic Resources -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr">
+  <dc:title xml:lang="en">Metadata Schema for Ceramic Resources</dc:title>
+  <skos:note  xml:lang="en">This Schema is proposed for the development of repository for ceramic resources.</skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: Approving body -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/Approvingbody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Approvingbody</reg:name>
+  <rdfs:label xml:lang="en">Approving body</rdfs:label>
+  <skos:definition xml:lang="en">The organization which approved the standard;</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Award year -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/AwardYear: ">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">AwardYear: </reg:name>
+  <rdfs:label xml:lang="en">Award year</rdfs:label>
+  <skos:definition xml:lang="en">The year in which the Ph. D award was conferred;</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Country -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/Country">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Country</reg:name>
+  <rdfs:label xml:lang="en">Country</rdfs:label>
+  <skos:definition xml:lang="en">The country or organization where the patent application was filed or granted</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Patent No -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/PatentNo">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">PatentNo</reg:name>
+  <rdfs:label xml:lang="en">Patent No</rdfs:label>
+  <skos:definition xml:lang="en">A patent number is the number assigned to a patent application on publication</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Report No -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/ReportNo">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">ReportNo</reg:name>
+  <rdfs:label xml:lang="en">Report No</rdfs:label>
+  <skos:definition xml:lang="en">A report number is the number assigned to a report on publication;</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Series -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/Series">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Series</reg:name>
+  <rdfs:label xml:lang="en">Series</rdfs:label>
+  <skos:definition xml:lang="en">Volumes usually related to each other in subject matter, issued</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Standard No:  -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/StandardNo">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">StandardNo</reg:name>
+  <rdfs:label xml:lang="en">Standard No: </rdfs:label>
+  <skos:definition xml:lang="en">A standard number is the number assigned to a standard on publication;</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: Supervisor -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/Supervisor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">Supervisor</reg:name>
+  <rdfs:label xml:lang="en">Supervisor</rdfs:label>
+  <skos:definition xml:lang="en">The word supervisor is referred to the person who helps prepare a Doctoral or Ph. D. Thesis</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:definition xml:lang="en">Guide</skos:definition>
+</rdf:Description>
+
+<!-- Property: University -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/cr/University">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/cr" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">University</reg:name>
+  <rdfs:label xml:lang="en">University</rdfs:label>
+  <skos:definition xml:lang="en">The University which conferred the Ph. D. award</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

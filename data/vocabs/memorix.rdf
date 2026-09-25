@@ -1,0 +1,885 @@
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:schema="https://schema.org/"
+    xmlns:memorix="http://memorix.io/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:dash="http://datashapes.org/dash#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://memorix.io/ontology#">
+    <dct:rights>© 2021-… Picturae, Heerhugowaard, the Netherlands</dct:rights>
+    <vann:preferredNamespaceUri rdf:resource="http://memorix.io/ontology#"/>
+    <rdfs:label>Memorix Application Ontology</rdfs:label>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2021-02-09T17:00:00+00:00</dct:created>
+    <rdfs:comment xml:lang="en">The Memorix Application Ontology describes Classes and Properties that are uses in Picturae's Collection Management System.</rdfs:comment>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2022-08-25T16:57:26+02:00</dct:modified>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+    <vann:preferredNamespacePrefix>memorix</vann:preferredNamespacePrefix>
+    <dct:publisher rdf:parseType="Resource">
+      <schema:identifier rdf:resource="https://picturae.com"/>
+      <schema:name>Picturae</schema:name>
+    </dct:publisher>
+    <dct:creator rdf:parseType="Resource">
+      <schema:email>m.lindeman@picturae.com</schema:email>
+      <schema:name>Mark Lindeman</schema:name>
+    </dct:creator>
+    <dct:contributor>Memorix Development team</dct:contributor>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://memorix.io/ontology#ResultPagination">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#numberOfPages"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#page"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#perPage"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#total"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Pagination</rdfs:label>
+    <rdfs:comment xml:lang="en">Parent Class for pagination properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Organization">
+    <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    <rdfs:comment xml:lang="en">The Organization making use of a specific Memorix instance.</rdfs:comment>
+    <rdfs:label>Organization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#ImageComponent">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://memorix.io/ontology#InformationComponent"/>
+    </rdfs:subClassOf>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#AudienceInternal">
+    <rdfs:domain>
+      <owl:ObjectProperty rdf:about="http://memorix.io/ontology#audience"/>
+    </rdfs:domain>
+    <owl:inverseOf>
+      <owl:Class rdf:about="http://memorix.io/ontology#AudienceExternal"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="en">Indicates that something may not be used outside of the Memorix application  (to be used as value for &lt;a href=#audience&gt;audience&lt;/a&gt; predicate on &lt;a href=#Context&gt;Context&lt;/a&gt;).</rdfs:comment>
+    <rdfs:label>AudienceInternal</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#LocationBagEditor">
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+    <rdfs:comment>Editor for selecting a BAG Location.</rdfs:comment>
+    <rdfs:label>BAG Editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org/DigitalDocument">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#isDefaultDigitalDocument"/>
+        </owl:onProperty>
+        <rdfs:comment>Switch for indication that a Document should be used as a default asset for a Record/Context</rdfs:comment>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/fileSize"/>
+        <rdfs:comment>Filesize of document, Memorix always uses bytes as Int and not Text as Schema.org defines.</rdfs:comment>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/encodingFormat"/>
+        <rdfs:comment>The mimetype of the document</rdfs:comment>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/name"/>
+        <rdfs:comment>The document name in DAM (without extension)</rdfs:comment>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://memorix.io/ontology#digitalDocumentId"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>DigitalDocument</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Class">
+    <rdfs:comment>Base Class for main Memorix Classes</rdfs:comment>
+    <rdfs:label>Class</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#AccessibilityAndRightsComponent">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://schema.org/creditText"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#copyrightExpires"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#attributionRequired"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/conditionsOfAccess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/copyrightNotice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeDownload"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeScanningOnDemand"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#restrictionsExpire"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The class of information about Accessibility &amp; Rights.</rdfs:comment>
+    <rdfs:label>AccessibilityAndRightsComponent</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://schema.org/license"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://memorix.io/ontology#Context"/>
+        </owl:onClass>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://schema.org/copyrightHolder"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#InformationComponent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeDisplay"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeReservation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#LocationCoordinatesEditor">
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+    <rdfs:comment>Editor for selecting a Coordinates Location.</rdfs:comment>
+    <rdfs:label>Coordinates Editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#History">
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+        <owl:onDataRange>
+          <owl:Class rdf:about="http://memorix.io/ontology#Collection"/>
+        </owl:onDataRange>
+        <owl:onDataRange>
+          <owl:Class rdf:about="http://memorix.io/ontology#Set"/>
+        </owl:onDataRange>
+        <owl:onDataRange>
+          <owl:Class rdf:about="http://memorix.io/ontology#Context"/>
+        </owl:onDataRange>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/object"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/startTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://memorix.io/ontology#User"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/agent"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:oneOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://schema.org/AddAction"/>
+          <rdf:Description rdf:about="https://schema.org/ReplaceAction"/>
+          <rdf:Description rdf:about="https://schema.org/DeleteAction"/>
+          <rdf:Description rdf:about="https://schema.org/UpdateAction"/>
+        </owl:oneOf>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/additionalType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:oneOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://memorix.io/ontology#Context"/>
+          <owl:Class rdf:about="http://memorix.io/ontology#Set"/>
+          <owl:Class rdf:about="http://memorix.io/ontology#Collection"/>
+          <owl:Class rdf:about="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+        </owl:oneOf>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/object"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Action"/>
+    <rdfs:comment>The class of Actions performed on a resources by an Agent at a certain Time. 
+  Note there is also a ObjectProperty 'history' on Resources which is used for last modification and creation history.</rdfs:comment>
+    <rdfs:label>History</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#DateEditor">
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+    <rdfs:comment>An editor for integer date literals, e.g. 20081201.</rdfs:comment>
+    <rdfs:label>Integer date editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#DepotLocationComponent">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depotContainerEnd"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depotContainerStart"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depot"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#InformationComponent"/>
+    <rdfs:comment>Depot location information, specific to memorix application.</rdfs:comment>
+    <rdfs:label>DepotLocationComponent</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#PathEditor">
+    <rdfs:domain>
+      <owl:Class rdf:about="http://memorix.io/ontology#Recordtype"/>
+    </rdfs:domain>
+    <rdfs:comment>Editor for managing the path of a container.</rdfs:comment>
+    <rdfs:label>Container path editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Record">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://memorix.io/ontology#Context"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasContext"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <rdfs:seeAlso rdf:resource="https://www.nationaalarchief.nl/archiveren/kennisbank/informatieobject"/>
+    <rdfs:comment xml:lang="nl">Vastgelegde informatie die als eenheid moet worden behandeld.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Recorded information that must be handled as a unit.</rdfs:comment>
+    <rdfs:label>Record</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#AudienceExternal">
+    <rdfs:domain>
+      <owl:ObjectProperty rdf:about="http://memorix.io/ontology#audience"/>
+    </rdfs:domain>
+    <owl:inverseOf rdf:resource="http://memorix.io/ontology#AudienceInternal"/>
+    <rdfs:comment xml:lang="en">Indicates that something may be used outside of the Memorix application (to be used as value for &lt;a href=#audience&gt;audience&lt;/a&gt; predicate on &lt;a href=#Context&gt;Context&lt;/a&gt;).</rdfs:comment>
+    <rdfs:label>AudienceExternal</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Collection">
+    <skos:example>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix memorix: &lt;http://memorix.io/ontology#&gt; .
+@prefix recordtypes: &lt;/resources/recordtypes/&gt; .
+&lt;&gt; a memorix:Collection ;
+  dct:description "Collection of Persons and Organisations" ;
+  dct:title "Persons &amp; Organisations" ;
+  memorix:hasRecordtype recordtypes:All .</skos:example>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://memorix.io/ontology#AudienceExternal"/>
+        <owl:onDataRange rdf:resource="http://memorix.io/ontology#AudienceInternal"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#audience"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <rdfs:comment xml:lang="en">Collections are permanent groupings of Records that are conceptually linked. 
+  Possible uses could be for works that were donated as a group, objects that all belonged to the same person, 
+  or that were shown together in a historical exhibition etc. 
+  Normally you wouldn’t use this to describe a category of works such as “books,” 
+  though that is your choice. Object can only be in a single collection.</rdfs:comment>
+    <rdfs:label>Collection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Recordtype">
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <rdfs:comment xml:lang="en">Record Types are the most commonly used way to categorize Records in your collection.
+  The main guideline is to choose Record types that are broad enough so that an Record can never be more than one type 
+  (ie a painting can never also be an moving image). 
+  If you would like to describe your Records more specifically, you can supplement this categorization with an 
+  additional "subtype" dropdown menu on the record editor itself.  For example, an object of type "ephemera" 
+  could have a subtype list of "postcard," "poster," "letter," etc.  
+  A subtype list could potentially be repeatable, so you would have the opportunity to assign multiple subtypes if that's appropriate.
+  Record types are described using SHACL Nodeshapes.</rdfs:comment>
+    <rdfs:label>Recordtype</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#DigitalAssetComponent">
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#InformationComponent"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Context">
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://memorix.io/ontology#Record"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasRecord"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://memorix.io/ontology#Recordtype"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Context</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:oneOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://memorix.io/ontology#AudienceInternal"/>
+          <owl:Class rdf:about="http://memorix.io/ontology#AudienceExternal"/>
+        </owl:oneOf>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#audience"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Memorix unit used as an entrypoint to all things related to an informationobject.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://memorix.io/ontology#DepotLocationComponent"/>
+        <owl:onProperty rdf:resource="http://memorix.io/ontology#depotLocation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#LinkedRecordEditor">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:comment>Editor for linking to Memorix Nexus internal records.</rdfs:comment>
+    <rdfs:label>Linked Record Editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#Set">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+    <rdfs:comment xml:lang="en">Sets are designed for temporary and arbitrary groupings of your Record, 
+  often for a practical task such as creating an online exhibition, 
+  or creating a working list of images for publication etc. 
+  Sets can contain Records from one or more Collections.</rdfs:comment>
+    <rdfs:label>Set</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#VocabularyEditor">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:comment>Editor for linking to a concept in a conceptscheme.</rdfs:comment>
+    <rdfs:label>Vocabulary Editor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#GeoCoordinates">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <owl:onProperty rdf:resource="https://schema.org/sameAs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/longitude"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/latitude"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://schema.org/name"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://schema.org/GeoCoordinates"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>GeoCoordinates</rdfs:label>
+    <rdfs:comment xml:lang="en">Class for storing GeoCoordinates data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#AccessModeType">
+    <rdfs:comment>The Class of &lt;em&gt;accessMode…&lt;/em&gt; &lt;a href=#datatypeproperties&gt;Datatype Properties&lt;/a&gt; that can be used to permit certain actions</rdfs:comment>
+    <rdfs:label>AccessModeType</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://memorix.io/ontology#TreePathComponent">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasRecordtype"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#InformationComponent"/>
+    <rdfs:comment>Render element to link a parent record and show a tree structure.</rdfs:comment>
+    <rdfs:label>TreePathComponent</rdfs:label>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasRecord">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:comment xml:lang="en">RDF List of parents of other record contexts, starting with the root and ending with the parent attached to the record</rdfs:comment>
+    <rdfs:label>hasParents</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasContext"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#Record"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Links a Record to its Context</rdfs:comment>
+    <rdfs:label>hasRecord</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://schema.org/accessMode">
+    <rdfs:range rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:label>accessMode</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeDisplay">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/odrl-vocab/#term-display"/>
+    <rdfs:comment xml:lang="en">Allow display of attached assets.</rdfs:comment>
+    <rdfs:label>accessModeDisplay</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#constructQueryTitleAndDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:comment>Sets a SPARQL CONSTRUCT on a Recordtype to create titles and descriptions of memorix:Context. Expects a dcterms:title and dcterms:decription predicates.</rdfs:comment>
+    <rdfs:label>constructQueryTitleAndDescription</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasRecordtype">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#TreePathComponent"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Collection"/>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:comment xml:lang="en">Marks a Recordtype as usable in a Collection</rdfs:comment>
+    <rdfs:label>hasRecordtype</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasAccessibilityAndRightsComponent">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasContext"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Links a AccessibilityAndRightsComponent to its Context</rdfs:comment>
+    <rdfs:label>hasAccessibilityAndRightsComponent</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#inTitleAt">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <rdfs:comment>Indicates that a sh:property is part of the title of memorix:Context</rdfs:comment>
+    <rdfs:label>inTitleAt</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#inSummaryAt">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <rdfs:comment>Indicates that a sh:property is part of the description of memorix:Context</rdfs:comment>
+    <rdfs:label>inSummaryAt</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasHistory">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <owl:inverseOf rdf:resource="https://schema.org/object"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Set"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#History"/>
+    <rdfs:comment xml:lang="en">Links zero or more History reources to a Class</rdfs:comment>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Collection"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:label>hasHistory</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#audience">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/audience"/>
+    <rdfs:comment xml:lang="en">Property that makes a resource internal/external from the Application perspective. 
+  An external resource may never be published outside the Memorix Application. 
+  When used on a Shacl property (sh:property) this property may provide information for certain RDF statements 
+  that may not be published outside Memorix. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/shacl#property"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:label>audience</rdfs:label>
+    <rdfs:domain>
+      <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+      </rdf:Description>
+    </rdfs:domain>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Collection"/>
+    <owl:oneOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://memorix.io/ontology#AudienceInternal"/>
+      <owl:Class rdf:about="http://memorix.io/ontology#AudienceExternal"/>
+    </owl:oneOf>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Set"/>
+    <rdfs:domain>
+      <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#Class"/>
+      </rdf:Description>
+    </rdfs:domain>
+    <owl:equivalentProperty rdf:resource="https://schema.org/audience"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#conceptSchemeIn">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#VocabularyEditor"/>
+    <rdfs:comment xml:lang="en">Specifies a list of skos:ConceptSchemes that can be used for picking Concepts.</rdfs:comment>
+    <rdfs:label>conceptSchemeIn</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#isPartOfSet">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasContext"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#Set"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeReservation">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:comment xml:lang="en">Allow request/reservations.</rdfs:comment>
+    <rdfs:label>accessModeReservation</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#isDefaultDigitalDocument">
+    <rdfs:domain rdf:resource="https://schema.org/DigitalDocument"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="en">If set to TRUE then a schema:DigitalDocument is the default Document for a Record.</rdfs:comment>
+    <rdfs:label>isDefaultDigitalDocument</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasInformationComponent">
+    <rdfs:range rdf:resource="http://memorix.io/ontology#InformationComponent"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Recordtype"/>
+    <rdfs:comment xml:lang="en">Links an InformationComponent to a RecordType. Can be used as information for frontend rendering.</rdfs:comment>
+    <rdfs:label>hasInformationComponent</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeScanningOnDemand">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:comment xml:lang="en">Allow scanning on demand.</rdfs:comment>
+    <rdfs:label>accessModeScanningOnDemand</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasDigitalDocument">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Collection of links to digital documents stored in Asset Manegement System.</rdfs:comment>
+    <rdfs:label>hasDigitalDocument</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#attributionRequired">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:seeAlso rdf:resource="https://creativecommons.org/ns#Attribution"/>
+    <rdfs:comment xml:lang="en">If set to TRUE then it is required to show Creditstatement.</rdfs:comment>
+    <rdfs:label>attributionRequired</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#accessModeDownload">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subClassOf rdf:resource="http://memorix.io/ontology#AccessModeType"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/odrl-vocab/#term-archive"/>
+    <rdfs:comment xml:lang="en">Allow download of attached assets.</rdfs:comment>
+    <rdfs:label>accessModeDownload</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasMedia">
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Links from a Record to Media (e.g. Nuxeo links, IIIF Manifest files, etc)</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#history">
+    <rdfs:comment xml:lang="en">Used for direct and limited (only creation and modification a.k.a. replacement) 
+  history on a Resource. There is also a full History log for Resources (&lt;code&gt;&lt;a href=#History&gt;memorix:History&lt;/a&gt;&lt;/code&gt;) 
+  link to a Resource by the Resources object property &lt;code&gt;&lt;a href=#hasHistory&gt;memorix:hasHistory&lt;/a&gt;&lt;/code&gt;</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Set"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Collection"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:range rdf:resource="https://schema.org/ReplaceAction"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:range rdf:resource="https://schema.org/CreateAction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://memorix.io/ontology#hasContext">
+    <owl:inverseOf rdf:resource="http://memorix.io/ontology#hasRecord"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Record"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#AccessibilityAndRightsComponent"/>
+    <rdfs:label>hasContext</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a Context object to a Record, AccessibilityAndRightsComponent or schema:DigitalDocument</rdfs:comment>
+    <rdfs:range rdf:resource="http://memorix.io/ontology#Context"/>
+    <owl:inverseOf rdf:resource="http://memorix.io/ontology#hasAccessibilityAndRightsComponent"/>
+    <owl:inverseOf rdf:resource="http://memorix.io/ontology#isPartOfSet"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Set"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://schema.org/copyrightHolder">
+    <rdfs:range rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Link to a Context/Record from Memorix</rdfs:comment>
+    <rdfs:label>copyrightHolder</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://schema.org/license">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:label>license</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#page">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#ResultPagination"/>
+    <rdfs:label>page</rdfs:label>
+    <rdfs:comment>Current page of result set (offset by 1).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depot">
+    <rdfs:comment>UUID of a Depot object registred in Memorix. Depots are not expressed as RDF Resources!</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#DepotLocationComponent"/>
+    <rdfs:comment>UUID of a Depot object registered in Memorix. Depots are not expressed as RDF Resources!</rdfs:comment>
+    <rdfs:label>depot</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depotContainerEnd">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#DepotLocationComponent"/>
+    <rdfs:comment>UUID of a Depot Container that markes the end of a physical depot location of an object registered in Memorix. Containers are not expressed as RDF Resources!</rdfs:comment>
+    <rdfs:label>depotContainerEnd</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#numberOfItems">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Collection"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Set"/>
+    <rdfs:comment xml:lang="en">Indicator for number of items (e.g. Records or Concepts) that are contained by Sets, Collections and ConceptSchemes</rdfs:comment>
+    <rdfs:label>numberOfItems</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://schema.org/creditText">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:label>creditText</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#restrictionsExpire">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Property that defines when a restriction to Conditions of Access expires.</rdfs:comment>
+    <rdfs:label>restrictionsExpire</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#depotContainerStart">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#DepotLocationComponent"/>
+    <rdfs:comment>UUID of a Depot Container that markes the start of a physical depot location of an object registered in Memorix. Containers are not expressed as RDF Resources!</rdfs:comment>
+    <rdfs:label>depotContainerStart</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#numberOfPages">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#ResultPagination"/>
+    <rdfs:label>numberOfPages</rdfs:label>
+    <rdfs:comment>Total number of pages in result set.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#copyrightExpires">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#Context"/>
+    <rdfs:comment xml:lang="en">Property that defines when the copyright expires.</rdfs:comment>
+    <rdfs:label>copyrightExpires</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#total">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#ResultPagination"/>
+    <rdfs:label>total</rdfs:label>
+    <rdfs:comment>Total number of items in a result set.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://memorix.io/ontology#perPage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://memorix.io/ontology#ResultPagination"/>
+    <rdfs:label>perPage</rdfs:label>
+    <rdfs:comment>Maximium number of items in page of a result set (a.k.a. as 'limit').</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:Thing rdf:about="http://memorix.io/ontology#Thingy">
+    <dct:creator>Siergiej Onda</dct:creator>
+    <rdfs:label>Thingy</rdfs:label>
+    <rdfs:comment xml:lang="en">The class of Memorix individuals that do not have a specific name, 
+  or have a name that no one can come up with during a meeting.</rdfs:comment>
+  </owl:Thing>
+</rdf:RDF>
+

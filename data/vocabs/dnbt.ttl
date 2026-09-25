@@ -1,0 +1,271 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://d-nb.info/standards/elementset/dnb#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+
+dct:language
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    owl:propertyChainAxiom (:hasQualifiedLanguage
+        :qualifiesLanguage
+    ) .
+
+dct:subject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    owl:propertyChainAxiom (:hasQualifiedSubject
+        :qualifiesSubject
+    ) .
+
+<https://d-nb.info/standards/elementset/dnb#>
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:description """Das DNB RDF-Vokabular (dnbt:) ist eine Sammlung
+		von Klassen, Properties und Datentypen, die im Rahmen des LinkedData-Dienstes
+		der DNB verwendung finden. Es ist ein Komplement zur GND-Ontologie (gndo:), die 
+		besonders für die Representation der Daten aus der Gemeinsamen Normdatei (GND)
+		konstruiert wurde. Das DNB-Vokabular dagegen hat einen allgemeineren Scope.
+		"""@de, """The DNB RDF Vocabulary (dnbt:) is a collection of
+		classes, properties and datatypes used within the DNB's linked data service.
+		It complements the GND Ontology (gndo:) which is specifically geared towards
+		authority data from the Integrated Authority File (GND), whereas this vocabulary
+		is more general-purpose.
+		"""@en ;
+    dc:title "DNB Metadata Terms"@de, "DNB Metadata Terms"@en ;
+    dct:available "2022-06-07"^^xsd:date ;
+    dct:creator :larsGSvensson ;
+    dct:issued "2016-05-12"^^xsd:date ;
+    dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:modified "2022-03-02T07:50:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://ld.zdb-services.de/resource/organisations/DE-101> ;
+    dct:rights "Copyright 2015-2022 Deutsche Nationalbibliothek" ;
+    vann:preferredNamespacePrefix "dnbt" ;
+    vann:preferredNamespaceUri "https://d-nb.info/standards/elementset/dnb#" ;
+    a <http://purl.org/vocommons/voaf#Vocabulary>, owl:Ontology ;
+    owl:priorVersion <http://d-nb.info/standards/elementset/dnb_20210928> ;
+    owl:versionIRI <https://d-nb.info/standards/elementset/dnb_20220607> ;
+    owl:versionInfo "1.6" ;
+    adms:versionNotes """
+Changes from 2021-05-05 to 2022-06-07
+
+Added new object properties
+- https://d-nb.info/standards/elementset/dnb#attributionRequired
+- https://d-nb.info/standards/elementset/dnb#copyrighted
+		   
+*Changes from 2019-10-15 to 2021-05-04
+
+Added new class
+	- https://d-nb.info/standards/elementset/dnb#DeletedResource
+
+Changes from 2019-02-12 to 2019-10-15
+
+All d-nb.info-URIs changed from http to https
+		"""@en .
+
+:AutomatedActivity
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An automated activity is an activity performed by a machine with little or no human supervision.
+        It can be implied that the agent an automated activity is attributed to is a software agent as in
+		<#anAutomatedActivity> a dnbt:AutomatedActivity ;
+			prov:wasAttributedTo :anAgent .
+		:anAgent a prov:SoftwareAgent ."""@en, """Eine automatisierte Aktivität ist eine Aktivität, die von einer Maschine durchgeführt wird und nur wenig oder
+            überhaupt nicht von Menschen überwacht wird. Es kann angenommen werden, dass der Agent, dem eine automatisierte
+            Aktivität zugeordnet wird, ein Softwareagent ist, wie in
+		<#anAutomatedActivity> a dnbt:AutomatedActivity ;
+			prov:wasAttributedTo :anAgent .
+		:anAgent a prov:SoftwareAgent ."""@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Automated activity"@en, "Automatisierte Aktivität"@de ;
+    rdfs:subClassOf prov:Activity, [
+        a owl:Restriction ;
+        owl:onProperty prov:wasAttributedTo ;
+        owl:someValuesFrom prov:SoftwareAgent
+    ] .
+
+:DeletedResource
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "A deleted resource is a resource that is no longer available."@en, "Eine gelöschte Ressource ist eine Ressource, die nicht mehr verfügbar ist."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Deleted Resource"@en, "Gelöschte Ressource"@de .
+
+:IntellectualActivity
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An intellectual activity is an activity performed by humans with little or no machine support.
+        It can be implied that the agent an intellectual activity is attributed to is a person agent as in
+		<#anIntellectualActivity> a dnbt:IntellectualActivity ;
+			prov:wasAttributedTo :anAgent .
+		:anAgent a prov:Person ."""@en, """Eine intellektuelle Aktivität ist eine Aktivität, die von einem Menschen durchgeführt wird und nur wenig oder
+            überhaupt nicht von Maschinen unterstützt wird. Es kann angenommen werden, dass der Agent, dem eine intellektuelle
+            Aktivität zugeordnet wird, eine Person ist, wie in
+		<#anIntellectualActivity> a dnbt:IntellectualActivity ;
+			prov:wasAttributedTo :anAgent .
+		:anAgent a prov:Person ."""@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Intellectual activity"@en, "Intellektuelle Aktivität"@de ;
+    rdfs:subClassOf prov:Activity, [
+        a owl:Restriction ;
+        owl:onProperty prov:wasAttributedTo ;
+        owl:someValuesFrom prov:Person
+    ] .
+
+:QualifiedLanguage
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An instance of dnbt:QualifiedLanguage provides additional descriptions about 
+		the binary dct:language relation from a publication to the language of that publication.
+		For example <#publication> dnbt:hasQualifiedLanguage [
+			a dnbt:QualifiedLanguage;
+			prov:wasGeneratedBy <#aPieceOfSoftware> ;
+			ex:confidenceValue 0.6^^xsd:decimal ;
+			dnbt:qualifiesLanguage loc:ger ] ."""@en, """Eine Instanz von dnbt:QualifiedLanguage stellt zusätzliche Beschreibungen über
+		die binäre Beziehung dct:language zwischen einer Publikation und ihrer Sprache bereit.
+		Zum Beispiel <#publication> dnbt:hasQualifiedLanguage [
+			a dnbt:QualifiedLanguage;
+			prov:wasGeneratedBy <#aPieceOfSoftware> ;
+			ex:confidenceValue 0.6^^xsd:decimal ;
+			dnbt:qualifiesLanguage loc:ger ] ."""@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Qualified Language"@en, "Qualifizierte Sprache"@de ;
+    prov:unqualifiedForm [
+        rdfs:resource "http://purl.org/dc/terms/language"
+    ] .
+
+:QualifiedSubject
+    a rdfs:Class, owl:Class ;
+    rdfs:comment """An instance of dnbt:QualifiedSubject provides additional descriptions about 
+		the binary dct:subject relation from a publication to the subject(s) of that publication.
+		For example <#publication> dnbt:hasQualifiedSubject [
+			a dnbt:QualifiedSubject;
+			prov:wasGeneratedBy <#aPieceOfSoftware> ;
+			ex:confidenceValue 0.6^^xsd:decimal ;
+			dnbt:qualifiesSubject gnd:12345-6 ] ."""@en, """Eine Instanz von dnbt:QualifiedSubject stellt zusätzliche Beschreibungen über
+		die binäre Beziehung dct:subject zwischen einer Publikation und ihren Themen bereit.
+		Zum Beispiel <#publication> dnbt:hasQualifiedSubject [
+			a dnbt:QualifiedSubject;
+			prov:wasGeneratedBy <#aPieceOfSoftware> ;
+			ex:confidenceValue 0.6^^xsd:decimal ;
+			dnbt:qualifiesSubject gnd:12345-6 ] ."""@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Qualified subject"@en, "Qualifiziertes Thema"@de ;
+    prov:unqualifiedForm [
+        rdfs:resource "http://purl.org/dc/terms/subject"
+    ] .
+
+:attributionRequired
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A boolean flag (true/false) indicating whether author attribution is required for a work."@en, "Ein boolescher Wert (true/false), der angibt, ob eine Namensnennung des Autors für ein Werk erforderlich ist."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Attribution required"@en, "Namensnennung erforderlich"@de .
+
+:canonicalUri
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Der URI, der eine Ressource primär identifiziert und zu ihrer Referenzierung verwendet werden sollte."@de, "The URI that is the primary identifier for a resource and should be used to reference it."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Canonical URI"@en, "Kanonischer URI"@de ;
+    owl:equivalentProperty <http://open.vocab.org/terms/canonicalUri> .
+
+:copyrighted
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A boolean flag (true/false) that indicates whether a work is marked as copyright protected."@en, "Ein boolescher Wert (true/false), der angibt, ob ein Werk als urheberrechlich geschützt gekennzeichnet ist."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Copyrighted"@en, "Urheberrechtlich geschützt"@de .
+
+:dateCaptured
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment """Das letzte Änderungsdatum der Datengrundlage
+			der Ressource. Um die Ressource zu aktualisieren, müssen Änderungen
+            ab diesem Zeitstempel berücksichtigt werden."""@de, """The final modification date of the data 
+               used to produce the resource. To update the resource, changes
+            from this timestamp onwards need to be incorporated."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Date captured"@en, "Datum des Datenstandes "@de ;
+    rdfs:range xsd:dateTime .
+
+:ddc-subject-category
+    a rdfs:Datatype ;
+    rdfs:comment "Dieser Datentyp kennzeichnet eine Sachgruppe, die auf der Dewey-Dezimalklassifikation (DDC) beruht."@de, "This datatype denotes a subject category based on the Dewey Decimal Classification (DDC)."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "DDC Subject Category"@en, "DDC-Sachgruppe"@de ;
+    rdfs:seeAlso <http://nbn-resolving.de/urn:nbn:de:101-2014050500>, <http://www.dnb.de/ddcSachgruppen>, <http://www.dnb.de/ddcsubjectcategories> ;
+    owl:onDatatype xsd:string ;
+    owl:withRestrictions ([
+            xsd:pattern "[BKS]|[0-9]{3}(\\.[0-9]+)?"
+        ]
+    ) .
+
+:deprecatedUri
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A URI that is no longer recommended for referencing a resource."@en, "Ein URI, der nicht mehr für die Referenzierung einer Ressource empfohlen wird."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Abgelöster URI"@de, "Deprecated URI"@en .
+
+:hasQualifiedLanguage
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Connects a publication with an instance of dnbt:QualifiedLanguage."@en, "Verbindet eine Publikation mit einer Instanz von dnbt:QualifiedLanguage."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Has qualified language"@en, "Hat qualifizierte Sprache"@de .
+
+:hasQualifiedSubject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Connects a publication with an instance of dnbt:QualifiedSubject."@en, "Verbindet eine Publikation mit einer Instanz von dnbt:QualifiedSubject."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Has qualified subject"@en, "Hat qualifiziertes Thema"@de .
+
+:isDescribedIn
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "An information resource that contains a description of the entity in the subject position."@en, "Eine Informationsressource, die eine Beschreibung der Entität in der Subjektposition enthält."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Is described in"@en, "Wird beschrieben in"@de ;
+    owl:propertyChainAxiom (dct:description
+        dct:isPartOf
+    ) .
+
+:larsGSvensson
+    a foaf:Person ;
+    rdfs:label "Lars G. Svensson" ;
+    owl:sameAs <https://d-nb.info/gnd/124903959> .
+
+:literary-genre-notation
+    a rdfs:Datatype ;
+    rdfs:comment "Dieser Datentyp kennzeichnet eine Notation aus der Liste von literarischen Gattungen, gepflegt von der DNB"@de, "This datatype denotes a notation from the DNB list of literary genres."@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Literary Genre Notation"@en, "Notation aus der Liste der Literarischen Gattungsbegriffe"@de ;
+    rdfs:seeAlso <http://library.ifla.org/id/eprint/184> ;
+    owl:onDatatype xsd:string ;
+    owl:withRestrictions ([
+            xsd:pattern "[12][0-9]{2}"
+        ]
+    ) .
+
+:qualifiesLanguage
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Connects an instance of dnbt:QualifiedLanguage with the language it qualifies."@en, "Verbindet eine Instanz von dnbt:QualifiedLanguage mit der Sprache, die sie qualifiziert."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Qualifies language"@en, "Qualifiziert Sprache"@de .
+
+:qualifiesSubject
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Connects an instance of dnbt:QualifiedSubject with the subject it qualifies."@en, "Verbindet eine Instanz von dnbt:QualifiedSubject mit dem Thema, das sie qualifiziert."@de ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Qualifies subject"@en, "Qualifiziert Thema"@de .
+
+:thema-classification-notation
+    a rdfs:Datatype ;
+    rdfs:comment """Dieser Datentyp kennzeichnet eine Notation aus der
+		thema-Klassifikation. Diese Klassifikation wird gepflegt von Editeur.org."""@de, """This datatype denotes notation from the thema
+		classification system. The thema classification is maintained by Editeur.org."""@en ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/dnb#> ;
+    rdfs:label "Notation aus der Thema-Klassifikation"@de, "Thema classification notation"@en ;
+    rdfs:seeAlso <http://www.editeur.org/151/Thema/> ;
+    owl:onDatatype xsd:string ;
+    owl:withRestrictions ([
+            xsd:pattern "([A-Z]{1,4}|[A-Z]{4}[1-9]{1,4})([1-6][A-Z]{1,8}(-[A-Z]{2}-[A-Z]{0,8})?)?"
+        ]
+    ) .
+

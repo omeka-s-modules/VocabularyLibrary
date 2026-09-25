@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+         <!ENTITY sioc	"http://rdfs.org/sioc/ns#">
+         <!ENTITY acl	"http://www.w3.org/ns/auth/acl#">
+         <!ENTITY sp	"http://spinrdf.org/sp#">
+         <!ENTITY skos  "http://www.w3.org/2004/02/skos/core#">
+         <!ENTITY foaf	"http://xmlns.com/foaf/0.1/">
+         <!ENTITY rdfs	"http://www.w3.org/2000/01/rdf-schema#">     
+         <!ENTITY prissma	"http://ns.inria.fr/prissma/v2#">           
+             ]> 
+             
+    <rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="&rdfs;"
+        xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xml:base="http://ns.inria.fr/l4lod/v2"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+       	xmlns:vann="http://purl.org/vocab/vann/"
+       	xmlns:cc="http://creativecommons.org/ns#"
+       	xmlns:skos="&skos;"
+       	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+       	xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+       	xmlns:waiver="http://vocab.org/waiver/terms/"
+       	xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
+       	xmlns:premis="http://multimedialab.elis.ugent.be/users/samcoppe/ontologies/Premis/premis.owl#"
+       	xmlns:voag="http://voag.linkedmodel.org/schema/voag#"
+       	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+       	xmlns:gr="http://purl.org/goodrelations/v1#"
+       	xmlns:meb="http://rdf.myexperiment.org/ontologies/base/"
+       	xmlns:odrl="http://w3.org/ns/odrl/vocab#"
+        xmlns:o="http://w3.org/ns/odrl/2/"
+        xmlns:limo="http://purl.org/LiMo/0.1/">
+
+	<owl:Ontology rdf:about="http://ns.inria.fr/l4lod/v2">
+		<dc:title xml:lang="en">Licences for Linked Open Data (L4LOD) Ontology</dc:title>
+		<dc:description xml:lang="en">A vocabulary to describe the licensing terms associated to linked open data.</dc:description>
+		<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-10</dc:issued> 
+		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+     	<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
+        <dc:publisher> 
+        <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/> 
+        </dc:publisher> 
+		<foaf:page rdf:resource="http://ns.inria.fr/l4lod/v1/l4lod_v2.html"/>
+		<vann:preferredNamespacePrefix></vann:preferredNamespacePrefix> 
+	    <vann:preferredNamespaceUri>http://ns.inria.fr/l4lod/v2#</vann:preferredNamespaceUri>
+	</owl:Ontology>
+	
+	<!-- LICENSES  -->
+	
+	<owl:Class rdf:ID="License">
+		<rdfs:label xml:lang="en">License</rdfs:label>
+		<rdfs:comment xml:lang="en">A license is a set of prohibitions, permissions and obligations.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status> 
+		<owl:equivalentClass rdf:resource="cc:License"/>
+		<owl:equivalentClass rdf:resource="limo:LicenseModel"/>
+		<skos:related rdf:resource="omv:LicenseModel"/>
+		<skos:related rdf:resource="premis:LicenseInformation"/>
+		<skos:related rdf:resource="voag:LicenseModel"/>
+		<skos:related rdf:resource="gr:License"/>
+		<skos:related rdf:resource="meb:License"/>
+		<skos:exactMatch rdf:resource="http://eurovoc.europa.eu/259007"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	 <owl:ObjectProperty rdf:ID="permits"> 
+		<rdfs:domain rdf:resource="#License"/>
+		<rdfs:range rdf:resource="#Permission"/>
+		<rdfs:label xml:lang="en">permits</rdfs:label>
+		<rdfs:comment xml:lang="en">The property defines the permissions associated to the license.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status> 
+		<skos:exactMatch rdf:resource="o:permission"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="prohibits"> 
+		<rdfs:domain rdf:resource="#License"/>
+		<rdfs:range rdf:resource="#Prohibition"/>
+		<rdfs:label xml:lang="en">prohibits</rdfs:label>
+		<rdfs:comment xml:lang="en">The property defines the prohibitions associated to the license.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<skos:exactMatch rdf:resource="o:prohibition"/> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="obliges"> 
+		<rdfs:domain rdf:resource="#License"/>
+		<rdfs:range rdf:resource="#Obligation"/>
+		<rdfs:label xml:lang="en">obliges</rdfs:label>
+		<rdfs:comment xml:lang="en">The property defines the obligations associated to the license.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status> 
+		<skos:exactMatch rdf:resource="o:duty"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:Class rdf:ID="Permission">
+		<rdfs:label xml:lang="en">Permission</rdfs:label>
+		<rdfs:comment xml:lang="en">The class is used to express the permissions associated to the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="limo:LegalTerms"/>
+		<skos:exactMatch rdf:resource="cc:Permission"/>
+		<skos:exactMatch rdf:resource="o:Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Prohibition">
+		<rdfs:label xml:lang="en">Prohibition</rdfs:label>
+		<rdfs:comment xml:lang="en">The class is used to express the prohibitions associated to the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="limo:LegalTerms"/>
+		<skos:exactMatch rdf:resource="cc:Prohibition"/>
+		<skos:exactMatch rdf:resource="o:Prohibition"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Obligation">
+		<rdfs:label xml:lang="en">Obligation</rdfs:label>
+		<rdfs:comment xml:lang="en">The class is used to express the obligations associated to the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="limo:LegalTerms"/>
+		<skos:exactMatch rdf:resource="cc:Requirement"/>
+		<skos:exactMatch rdf:resource="o:Duty"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	
+	<!-- LICENSING TERMS -->
+	
+	<owl:Class rdf:ID="NoCommercial">
+		<rdfs:label xml:lang="en">NoCommercial</rdfs:label>
+		<rdfs:comment xml:lang="en">The class is used to express the prohibition of commercial use of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Prohibition"/>
+		<vs:term_status>stable</vs:term_status> 
+		<skos:related rdf:resource="cc:CommercialUse"/>
+		<rdfs:subClassOf rdf:resource="limo:UseConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="NoDerivative">
+		<rdfs:label xml:lang="en">NoDerivative</rdfs:label>
+		<rdfs:comment xml:lang="en">The class is used to express the prohibition of producing derivative work of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Prohibition"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:UseConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Attribution">
+		<rdfs:label xml:lang="en">Attribution</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the obligation of attribution to author of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Obligation"/>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/> 
+		<skos:related rdf:resource="cc:Attribution"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="ShareAlike">
+		<rdfs:label xml:lang="en">ShareAlike</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the obligation of for the derivative works be licensed under the same terms of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Obligation"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/>
+		<skos:related rdf:resource="cc:ShareAlike"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Citation">
+		<rdfs:label xml:lang="en">Citation</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the obligation of citation of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Obligation"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Reproduction">
+		<rdfs:label xml:lang="en">Reproduction</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission of making multiple copies of the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:subClassOf rdf:resource="limo:UseConditions"/>
+		<skos:related rdf:resource="cc:Reproduction"/> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Derivative">
+		<rdfs:label xml:lang="en">Derivative</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to distribute derivative works from the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/>
+		<skos:related rdf:resource="cc:DerivativeWorks"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Sharing">
+		<rdfs:label xml:lang="en">Sharing</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to copy, distribute and use the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:Rights"/>
+		<skos:related rdf:resource="cc:Sharing"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Distribution">
+		<rdfs:label xml:lang="en">Distribution</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to distribute the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/>
+		<skos:related rdf:resource="cc:Distribution"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+
+	<owl:Class rdf:ID="Publishing">
+		<rdfs:label xml:lang="en">Publishing</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to publish the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:UseConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="Using">
+		<rdfs:label xml:lang="en">Using</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to use the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:UseConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+
+	<owl:Class rdf:ID="CommercialExpl">
+		<rdfs:label xml:lang="en">CommercialExpl</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to express the permission to commercially exploit the licensed data.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Permission"/>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:subClassOf rdf:resource="limo:DistributionConditions"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:Class>
+	
+	<!-- ADDITIONAL ELEMENTS CONCERNING LICENSES -->
+	
+	<owl:ObjectProperty rdf:ID="licensingTerms">
+		<rdfs:domain rdf:resource="#License"/>	
+		<rdfs:range rdf:resource="dcterms:LicenseDocument"/>	
+		<rdfs:label xml:lang="en">licensingTerms</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates the License to the URI of the human-readable text describing the license.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<skos:related rdf:resource="cc:legalCode"/>
+		<skos:related rdf:resource="waiver:declaration"/>
+		<skos:related rdf:resource="premis:licenseTerms"/>
+		<skos:related rdf:resource="nie:licenseType"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="licensor">
+		<rdfs:domain rdf:resource="#License"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>		
+		<rdfs:label xml:lang="en">licensor</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates the License to issuer of the license.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<skos:related rdf:resource="limo:creator"/>
+		<skos:related rdf:resource="odrl:assigner"/>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/l4lod/v2#"/>
+	</owl:ObjectProperty>
+
+</rdf:RDF>

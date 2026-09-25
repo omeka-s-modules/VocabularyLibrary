@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://opaquenamespace.org/ns/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: Oregon Digital -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/">
+  <dc:title xml:lang="en">Oregon Digital</dc:title>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: contents -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/contents">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace.org/ns/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">contents</reg:name>
+  <rdfs:label xml:lang="en">contents</rdfs:label>
+  <skos:definition xml:lang="en">Defines a relationship between an object and a list of objects which make up its parts.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List" />
+  <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart" />
+</rdf:Description>
+
+<!-- Property: contributing institution -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/contributingInstitution">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace.org/ns/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">contributingInstitution</reg:name>
+  <rdfs:label xml:lang="en">contributing institution</rdfs:label>
+  <skos:definition xml:lang="en">A reference to the institutions or administrative units that contributed to the creation, management, description, and/or dissemination of the digital resource.  For example, one institution may physically hold the original resource, another may perform the digital imaging, and another may create metadata.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization" />
+</rdf:Description>
+
+<!-- Property: conversion specifications -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/conversionSpecifications">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace.org/ns/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">conversionSpecifications</reg:name>
+  <rdfs:label xml:lang="en">conversion specifications</rdfs:label>
+  <skos:definition xml:lang="en">Describes the process, equipment and specifications used to convert the resource into its present format.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: exhibit -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/exhibit">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace.org/ns/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1002" />
+  <reg:name xml:lang="en">exhibit</reg:name>
+  <rdfs:label xml:lang="en">exhibit</rdfs:label>
+  <skos:definition xml:lang="en">Curated set or grouping created for a special display or exhibit not related to a formal collection.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: set -->
+<rdf:Description rdf:about="http://opaquenamespace.org/ns/set">
+  <rdfs:isDefinedBy rdf:resource="http://opaquenamespace.org/ns/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">set</reg:name>
+  <rdfs:label xml:lang="en">set</rdfs:label>
+  <skos:definition xml:lang="en">Defines a relationship between an object and a group or collection of objects to which it belongs.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection" />
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1002">
+        <skos:prefLabel xml:lang="en">New-Proposed</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
+        <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

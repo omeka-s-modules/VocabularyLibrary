@@ -1,0 +1,962 @@
+# baseURI: http://visualartsdna.org/2021/07/16/model#
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: cwva
+
+@prefix cwva: <http://visualartsdna.org/2021/07/16/model#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix the:   <http://visualartsdna.org/thesaurus/> .
+
+cwva:
+	rdf:type owl:Ontology ;
+	rdfs:label "Information model for the Visual Arts" ;
+	rdfs:seeAlso <http://visualartsdna.org> ;
+	dct:contributor <http://visualartsdna.org> ;
+	dct:description "CWVA organizes the visual arts creative process into an information model.  Visit visualartsdna.org for more information." ;
+	dct:issued "2021-07-16T12:00:00Z"^^xsd:dateTime ;
+	dct:license <http://creativecommons.org/licenses/by/4.0> ;
+	dct:modified "2022-08-25T12:00:00Z"^^xsd:dateTime ;
+	dct:publisher <http://visualartsdna.org> ;
+	dct:rights <http://visualartsdna.org/copyright> ;
+	dct:title "Information model for the Visual Arts" ;
+	rdfs:comment "A strawman proposal, creative-process domain ontology for the visual arts" ;
+	owl:versionInfo "v 1.4" ;
+.
+cwva:Abstract
+  rdf:type owl:Class ;
+  rdfs:label "Abstract" ;
+  rdfs:subClassOf cwva:ArtTypes ;
+.
+cwva:Abstract_Expressionism
+  rdf:type cwva:School ;
+  rdfs:label "Abstract Expressionism" ;
+.
+cwva:Acrylic
+  rdf:type owl:Class ;
+  rdfs:label "Acrylic" ;
+  rdfs:subClassOf cwva:Painting ;
+.
+cwva:Aesthetics
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Aesthetics> ;
+  rdfs:label "Aesthetics" ;
+  rdfs:subClassOf cwva:Art ;
+.
+cwva:Art
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Art> ;
+  rdfs:label "Art" ;
+  rdfs:subClassOf skos:Concept ;
+.
+cwva:ArtAgent
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Art_agent> ;
+  rdfs:label "Art agent" ;
+  rdfs:subClassOf cwva:ArtsPersonRole ;
+.
+cwva:ArtCollection
+  rdf:type owl:Class ;
+  rdfs:comment "Wikipedia redirects to museum collection" ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Collection_(museum)> ;
+  rdfs:label "Art collection" ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:ArtCollector
+  rdf:type owl:Class ;
+  rdfs:comment "The person who owns a private collection" ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Private_collection> ;
+  rdfs:label "Art collector" ;
+  rdfs:subClassOf cwva:ArtsPersonRole ;
+.
+cwva:ArtCritic
+  rdf:type owl:Class ;
+  rdfs:label "Art critic" ;
+  rdfs:subClassOf cwva:ArtExpert ;
+.
+cwva:ArtCriticism
+  rdf:type owl:Class ;
+  rdfs:label "Art criticism" ;
+  rdfs:subClassOf cwva:ArtHistory ;
+.
+cwva:ArtCurator
+  rdf:type owl:Class ;
+  rdfs:label "Curator" ;
+  rdfs:subClassOf cwva:ArtExpert ;
+.
+cwva:ArtElements
+  rdf:type owl:Class ;
+  rdfs:label "Art elements" ;
+  rdfs:subClassOf cwva:Vocabulary ;
+.
+cwva:ArtExhibition
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Art_exhibition> ;
+  rdfs:label "Art exhibition" ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+  skos:altLabel "Art exhibit" ;
+.
+cwva:ArtExpert
+  rdf:type owl:Class ;
+  rdfs:label "Art expert" ;
+  rdfs:subClassOf cwva:ArtsPersonRole ;
+.
+cwva:ArtGallery
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtMarket ;
+  rdfs:label "Art gallery" ;
+.
+cwva:ArtHistorian
+  rdf:type owl:Class ;
+  rdfs:label "Art historian" ;
+  rdfs:subClassOf cwva:ArtExpert ;
+.
+cwva:ArtHistory
+  rdf:type owl:Class ;
+  rdfs:label "Art history" ;
+  rdfs:subClassOf cwva:Art ;
+.
+cwva:Artist
+  rdf:type owl:Class ;
+  rdfs:label "Artist in any art form" ;
+  rdfs:subClassOf cwva:ArtsPersonRole ;
+.
+cwva:ArtMarket
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Art_market> ;
+  rdfs:subClassOf cwva:Art ;
+  rdfs:label "Art market" ;
+.
+cwva:ArtMaterial
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Process ;
+  rdfs:label "Art material" ;
+.
+cwva:ArtMovement
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtHistory ;
+  rdfs:label "Art movement" ;
+.
+cwva:ArtPrinciples
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Vocabulary ;
+  rdfs:label "Art principles" ;
+.
+cwva:ArtPrivateCollection
+  rdf:type owl:Class ;
+  rdfs:comment "Wikipedia redirects to museum collection" ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Private_collection> ;
+  rdfs:label "Art collection" ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:ArtSeries
+  rdf:type owl:Class ;
+  rdfs:comment "A series of works of art" ;
+  rdfs:isDefinedBy <https://www.dictionary.com/browse/series> ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:ArtTypes
+  rdf:type owl:Class ;
+  rdfs:label "Art types" ;
+  rdfs:subClassOf cwva:ArtHistory ;
+.
+cwva:ArtistProfile
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Process ;
+  rdfs:label "Artist's profile" ;
+  rdfs:comment "The artist profile identifies the artist's preferences in their creative process." ;
+.
+cwva:ArtsPersonRole
+  rdf:type owl:Class ;
+  rdfs:comment "Role as applied to the arts" ;
+  rdfs:isDefinedBy <https://www.dictionary.com/browse/role> ;
+  rdfs:label "Role of the person in the arts" ;
+  rdfs:subClassOf cwva:Art ;
+  rdfs:subClassOf foaf:Person ;
+.
+cwva:ArtworkCollection
+  rdf:type owl:Class ;
+  rdfs:comment "Any collection of art including the artist's own works" ;
+  rdfs:isDefinedBy <https://www.britannica.com/art/art-collection> ;
+  rdfs:label "Artwork collection" ;
+  rdfs:subClassOf skos:Collection ;
+.
+cwva:Assembled
+  rdf:type owl:Class ;
+  rdfs:label "Assembled" ;
+  rdfs:subClassOf cwva:Sculpture ;
+.
+cwva:Balance
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Balance" ;
+.
+cwva:Binder
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:PaintingMaterial ;
+  rdfs:label "Vehicle" ;
+.
+cwva:BioArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:SciArt ;
+  rdfs:comment "An art practice where humans work with live tissues, bacteria, living organisms, and life processes." ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/BioArt> ;
+  rdfs:label "Bio art" ;
+.
+cwva:Carved
+  rdf:type owl:Class ;
+  rdfs:label "Carved" ;
+  rdfs:subClassOf cwva:Sculpture ;
+.
+cwva:Cast
+  rdf:type owl:Class ;
+  rdfs:label "Cast" ;
+  rdfs:subClassOf cwva:Sculpture ;
+.
+cwva:Catalog
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:Chalk
+  rdf:type owl:Class ;
+  rdfs:label "Chalk" ;
+  rdfs:subClassOf cwva:Drawing ;
+.
+cwva:Color
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Color" ;
+.
+cwva:Composition
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Composition_(visual_arts)> ;
+  rdfs:label "Composition" ;
+  rdfs:subClassOf cwva:Vocabulary ;
+.
+cwva:ComputerAnimation
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Computer animation" ;
+.
+cwva:ComputerArt
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Computer_art> ;
+  rdfs:label "Computer art" ;
+  rdfs:subClassOf cwva:Medium ;
+.
+cwva:ComputerGraphics
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Computer graphics" ;
+.
+cwva:ComputerRendition
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Rendering_(computer_graphics)> ;
+  rdfs:label "Computer rendition" ;
+  rdfs:subClassOf cwva:Rendition ;
+.
+cwva:Conceptualism
+  rdf:type cwva:School ;
+  rdfs:label "Conceptualism" ;
+.
+cwva:Contrast
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Contrast" ;
+.
+cwva:Crayon
+  rdf:type owl:Class ;
+  rdfs:label "Crayon" ;
+  rdfs:subClassOf cwva:Drawing ;
+.
+cwva:CreativeWork
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:VisualArts ;
+  rdfs:label "Creative work" ;
+.
+cwva:Cubism
+  rdf:type cwva:School ;
+  rdfs:label "Cubism" ;
+.
+cwva:CyborgArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Cyborg art" ;
+.
+cwva:DigitalArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Digital art" ;
+.
+cwva:DigitalArtist
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Digital_art> ;
+  rdfs:label "Digital artist" ;
+  rdfs:subClassOf cwva:VisualArtist ;
+  rdfs:label "Digital artist" ;
+.
+cwva:DigitalLanguage
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Vocabulary ;
+  rdfs:label "Digital language" ;
+.
+cwva:Drawing
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Medium ;
+.
+cwva:DrawingMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Drawing material" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:DryingOil
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Binder ;
+  rdfs:label "Drying oil" ;
+.
+cwva:Edition
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:EggTempera
+  rdf:type owl:Class ;
+  rdfs:label "Egg tempera" ;
+  rdfs:subClassOf cwva:Painting ;
+.
+cwva:EggYolk
+  rdf:type cwva:Binder ;
+  rdfs:label "Egg yolk" ;
+.
+cwva:Emphasis
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Emphasis" ;
+.
+cwva:Form
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Form" ;
+.
+cwva:Fresco
+  rdf:type owl:Class ;
+  rdfs:label "Fresco" ;
+  rdfs:subClassOf cwva:Painting ;
+.
+cwva:GeneraArt
+  rdf:type owl:Class ;
+  rdfs:label "Genera art" ;
+  rdfs:subClassOf cwva:VisualImagery ;
+.
+cwva:Gesso
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Gesso> ;
+  rdfs:label "Gesso panel" ;
+  rdfs:subClassOf cwva:Surface ;
+.
+cwva:Holograms
+  rdf:type owl:Class ;
+  rdfs:label "Holograms" ;
+  rdfs:subClassOf cwva:NewSculptureForms ;
+.
+cwva:Hudson_River_School
+  rdf:type cwva:School ;
+  rdfs:label "Hudson River School" ;
+.
+cwva:Image
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Image> ;
+  rdfs:label "Image" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:Implement
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Tool> ;
+  rdfs:label "Implement" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:Impressionism
+  rdf:type cwva:School ;
+  rdfs:label "Impressionism" ;
+.
+cwva:Ink
+  rdf:type owl:Class ;
+  rdfs:label "Ink" ;
+  rdfs:subClassOf cwva:Drawing ;
+.
+cwva:Installation
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Installation_art> ;
+  rdfs:label "Installation" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:Intaglio
+  rdf:type owl:Class ;
+  rdfs:label "Intaglio" ;
+  rdfs:subClassOf cwva:PrintMaking ;
+.
+cwva:InteractiveArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Interactive art" ;
+.
+cwva:InternetArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Internet art" ;
+.
+cwva:JPG
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Photograph ;
+  rdfs:label "JPG" ;
+.
+cwva:Landscape
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:VisualImagery ;
+.
+cwva:LindenMayerSystemImage
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/L-system> ;
+  rdfs:subClassOf cwva:SoftwareArt ;
+  rdfs:label "Linden mayer system image" ;
+.
+cwva:PaintApplicationImage
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Digital_image> ;
+  rdfs:subClassOf cwva:SoftwareArt ;
+  rdfs:label "Digital graphic image" ;
+.
+cwva:Line
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Line" ;
+.
+cwva:LinseedOil
+  rdf:type cwva:DryingOil ;
+  rdfs:label "Linseed oil" ;
+.
+cwva:Lithograph
+  rdf:type owl:Class ;
+  rdfs:label "Lithograph" ;
+  rdfs:subClassOf cwva:PrintMaking ;
+.
+cwva:LsysRules
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:DigitalLanguage ;
+  rdfs:label "Lsys rules" ;
+.
+cwva:Luminism
+  rdf:type cwva:School ;
+  rdfs:label "Luminism" ;
+.
+cwva:Medium
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/List_of_art_media> ;
+  rdfs:label "Medium" ;
+  rdfs:subClassOf cwva:CreativeWork ;
+.
+cwva:MixedMedia
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Mixed_media> ;
+  rdfs:label "Mixed media" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:MobileSculpture
+  rdf:type owl:Class ;
+  rdfs:label "Mobile sculpture" ;
+  rdfs:subClassOf cwva:NewSculptureForms ;
+.
+cwva:Molded
+  rdf:type owl:Class ;
+  rdfs:label "Molded" ;
+  rdfs:subClassOf cwva:Sculpture ;
+.
+cwva:Movement
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Movement" ;
+.
+cwva:NFT
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NFTMarket ;
+  rdfs:label "NFT" ;
+.
+cwva:NFTBroker
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NFTMarket ;
+  rdfs:label "NFTBroker" ;
+.
+cwva:NFTMarket
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtMarket ;
+  rdfs:label "NFTMarket" ;
+.
+cwva:NewMedia
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/New_media_art> ;
+  rdfs:label "New media" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:NewSculptureForms
+  rdf:type owl:Class ;
+  rdfs:label "New sculpture forms" ;
+  rdfs:subClassOf cwva:SculpturalForms ;
+.
+cwva:NonObjective
+  rdf:type owl:Class ;
+  rdfs:label "Non objective" ;
+  rdfs:subClassOf cwva:ArtTypes ;
+.
+cwva:Oeuvre
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+  rdfs:label "Oeuvre" ;
+.
+cwva:Oil
+  rdf:type owl:Class ;
+  rdfs:label "Oil" ;
+  rdfs:subClassOf cwva:Painting ;
+.
+cwva:OnlineStore
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtMarket ;
+  rdfs:label "Online store" ;
+.
+cwva:Painter
+  rdf:type owl:Class ;
+  rdfs:label "Painter" ;
+  rdfs:subClassOf cwva:VisualArtist ;
+.
+cwva:Painting
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Painting> ;
+  rdfs:label "Painting" ;
+  rdfs:subClassOf cwva:Medium ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:PaintingMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Painting material" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:Palette
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Process ;
+  rdfs:label "Palette" ;
+.
+cwva:Pastel
+  rdf:type owl:Class ;
+  rdfs:label "Pastel" ;
+  rdfs:subClassOf cwva:Drawing ;
+.
+cwva:Pattern
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Pattern principle" ;
+.
+cwva:PatternElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Pattern element" ;
+.
+cwva:Pencil
+  rdf:type owl:Class ;
+  rdfs:label "Pencil" ;
+  rdfs:subClassOf cwva:Drawing ;
+.
+cwva:Perspective
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Perspective_(graphical)> ;
+  rdfs:label "Perspective" ;
+  rdfs:subClassOf cwva:Vocabulary ;
+.
+cwva:Photograph
+  rdf:type owl:Class ;
+  rdfs:label "Photograph" ;
+  rdfs:subClassOf cwva:Image ;
+.
+cwva:Photography
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Photography> ;
+  rdfs:label "Photography" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:Pigment
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:PaintingMaterial ;
+  rdfs:label "Pigment" ;
+.
+cwva:PoppySeedOil
+  rdf:type cwva:DryingOil ;
+  rdfs:label "Poppy seed oil" ;
+.
+cwva:Portfolio
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:Portrait
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:VisualImagery ;
+.
+cwva:PrimedCanvas
+  rdf:type owl:Class ;
+  rdfs:label "Primed canvas" ;
+  rdfs:subClassOf cwva:Surface ;
+.
+cwva:PrintMaking
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Medium ;
+.
+cwva:PrinterMaker
+  rdf:type owl:Class ;
+  rdfs:label "Printer maker" ;
+  rdfs:subClassOf cwva:VisualArtist ;
+.
+cwva:Printing
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Printing> ;
+  rdfs:label "Printing form" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:Printing3d
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Printing3d" ;
+.
+cwva:PrintingMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Printing material" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:Process
+  rdf:type owl:Class ;
+  rdfs:comment "Process describes how the art is made." ;
+  rdfs:subClassOf cwva:VisualArts ;
+.
+cwva:Relief
+  rdf:type owl:Class ;
+  rdfs:label "Relief" ;
+  rdfs:subClassOf cwva:PrintMaking ;
+.
+cwva:Rendering
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Non-photorealistic_rendering#Artistic> ;
+  rdfs:label "Rendering" ;
+  rdfs:subClassOf cwva:Process ;
+.
+cwva:Rendition
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Artist%27s_impression> ;
+  rdfs:subClassOf cwva:Process ;
+  rdfs:label "Rendition" ;
+.
+cwva:Representational
+  rdf:type owl:Class ;
+  rdfs:label "Representational" ;
+  rdfs:subClassOf cwva:ArtTypes ;
+.
+cwva:RetrospectiveExhibit
+  rdf:type owl:Class ;
+  rdfs:label "Retrospective exhibit" ;
+  rdfs:subClassOf cwva:ArtExhibition ;
+.
+cwva:Rhythm
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Rhythm" ;
+.
+cwva:Robotics
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Robotics" ;
+.
+cwva:SafflowerOil
+  rdf:type cwva:DryingOil ;
+  rdfs:label "Safflower oil" ;
+.
+cwva:School
+  rdf:type owl:Class ;
+  rdfs:label "School of Art" ;
+  rdfs:subClassOf cwva:ArtMovement ;
+.
+cwva:SciArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+  rdfs:isDefinedBy <https://www.emergingcreativesofscience.com/post/what-is-sciart> ;
+  rdfs:label "Bio art" ;
+.
+cwva:Sculptor
+  rdf:type owl:Class ;
+  rdfs:label "Sculptor" ;
+  rdfs:subClassOf cwva:VisualArtist ;
+.
+cwva:SculpturalForms
+  rdf:type owl:Class ;
+  rdfs:label "Sculpture types" ;
+  rdfs:subClassOf cwva:VisualArtForms ;
+.
+cwva:Sculpture
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:Medium ;
+.
+cwva:SculptureInTheRound
+  rdf:type owl:Class ;
+  rdfs:label "Sculpture in the round" ;
+  rdfs:subClassOf cwva:SculpturalForms ;
+.
+cwva:SculptureMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Sculpture material" ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:SculptureRelief
+  rdf:type owl:Class ;
+  rdfs:label "Sculpture relief" ;
+  rdfs:subClassOf cwva:SculpturalForms ;
+.
+cwva:Series
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtworkCollection ;
+.
+cwva:Serigraphy
+  rdf:type owl:Class ;
+  rdfs:label "Screenprinting" ;
+  rdfs:subClassOf cwva:PrintMaking ;
+  skos:altLabel "Screen printing" ;
+.
+cwva:Shape
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Shape" ;
+.
+cwva:SoftwareArt
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Software_art> ;
+  rdfs:label "Software art" ;
+  rdfs:subClassOf cwva:ComputerArt ;
+.
+cwva:Space
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Space" ;
+.
+cwva:StillLife
+  rdf:type owl:Class ;
+  rdfs:label "Still life" ;
+  rdfs:subClassOf cwva:VisualImagery ;
+.
+cwva:Surface
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://www.dictionary.com/browse/surface> ;
+  rdfs:subClassOf cwva:ArtMaterial ;
+.
+cwva:Technique
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/List_of_art_techniques> ;
+  rdfs:isDefinedBy <https://www.dictionary.com/browse/technique> ;
+  rdfs:subClassOf cwva:Process ;
+.
+cwva:Texture
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Texture_(visual_arts)> ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Texture" ;
+.
+cwva:Trend
+  rdf:type owl:Class ;
+  rdfs:label "Trend" ;
+  rdfs:subClassOf cwva:ArtMovement ;
+.
+cwva:Unity-Variety
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtPrinciples ;
+  rdfs:label "Unity-Variety" ;
+.
+cwva:Value
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:ArtElements ;
+  rdfs:label "Value" ;
+.
+cwva:Vermillion
+  rdf:type cwva:Pigment ;
+  rdfs:label "Vermillion" ;
+.
+cwva:VideoGames
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Video games" ;
+.
+cwva:VirtualArt
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:NewMedia ;
+  rdfs:label "Virtual art" ;
+.
+cwva:VirtualReality
+  rdf:type owl:Class ;
+  rdfs:label "Virtual reality" ;
+  rdfs:subClassOf cwva:NewSculptureForms ;
+.
+cwva:VisualArtForms
+  rdf:type owl:Class ;
+  rdfs:label "Visual art forms" ;
+  rdfs:subClassOf cwva:VisualArts ;
+.
+cwva:VisualArtist
+  rdf:type owl:Class ;
+  rdfs:label "Artist of the visual arts" ;
+  rdfs:subClassOf cwva:Artist ;
+.
+cwva:VisualArts
+  rdf:type owl:Class ;
+  rdfs:label "Art vocabulary" ;
+  rdfs:subClassOf cwva:Art ;
+.
+cwva:VisualImagery
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://www.thefreedictionary.com/visual+imagery> ;
+  rdfs:subClassOf cwva:ArtHistory ;
+.
+cwva:Vocabulary
+  rdf:type owl:Class ;
+  rdfs:subClassOf cwva:VisualArts ;
+  rdfs:label "Vocabulary" ;
+.
+cwva:WalnutOil
+  rdf:type cwva:DryingOil ;
+  rdfs:label "Walnut oil" ;
+.
+cwva:Watercolor
+  rdf:type owl:Class ;
+  rdfs:label "Watercolor" ;
+  rdfs:subClassOf cwva:Painting ;
+.
+cwva:artist
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:Art ;
+  rdfs:range cwva:VisualArtist ;
+  rdfs:label "artist" ;
+.
+cwva:collaboratesWith
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:VisualArtist ;
+  rdfs:range cwva:VisualArtist ;
+  rdfs:label "collaborates with" ;
+.
+cwva:filePath
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cwva:JPG ;
+  rdfs:range xsd:string ;
+  rdfs:label "file path" ;
+.
+cwva:grcode
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "grcode" ;
+.
+cwva:hasArtistProfile
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range cwva:ArtistProfile ;
+  rdfs:label "has artist profile" ;
+  rdfs:comment "both concepts and collections get an artist profile, so the domain is set generally to cover both" ; 
+.
+cwva:hasAssisstant
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:VisualArtist ;
+  rdfs:range cwva:VisualArtist ;
+  rdfs:label "has assisstant" ;
+.
+cwva:hasComposition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has composition" ;
+  rdfs:range cwva:Composition ;
+.
+cwva:hasElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has element" ;
+  rdfs:range cwva:ArtElements ;
+.
+cwva:hasMaterial
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has material" ;
+.
+cwva:hasNFT
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:Art ;
+  rdfs:range cwva:NFT ;
+  rdfs:label "has NFT" ;
+.
+cwva:hasPaper
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has paper" ;
+.
+cwva:hasPaperFinish
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has paper finish" ;
+.
+cwva:hasPaperWeight
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has paper weight" ;
+.
+cwva:hasPerspective
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has perspective" ;
+  rdfs:range cwva:Perspective ;
+.
+cwva:hasPrinciple
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has principle" ;
+  rdfs:range cwva:ArtPrinciples ;
+.
+cwva:hasProcess
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has process" ;
+  rdfs:range cwva:Process ;
+.
+cwva:hasRendition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has rendition" ;
+  rdfs:range cwva:Rendition ;
+.
+cwva:hasSurface
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has surface" ;
+  rdfs:range cwva:Surface ;
+.
+cwva:hasTechnique
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:CreativeWork ;
+  rdfs:label "has technique" ;
+  rdfs:range cwva:Technique ;
+.
+cwva:hasVisualImagery
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain cwva:Painting ;
+  rdfs:label "has visual imagery" ;
+  rdfs:range xsd:string ;
+.
+cwva:media
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:Art ;
+  rdfs:range cwva:Medium ;
+  rdfs:label "media" ;
+.
+cwva:withImplement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cwva:Technique ;
+  rdfs:label "with implement" ;
+  rdfs:range cwva:Implement ;
+.
+
+

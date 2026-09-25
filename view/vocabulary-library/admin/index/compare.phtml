@@ -1,0 +1,127 @@
+<?php
+$translate = $this->plugin('translate');
+$escape = $this->plugin('escapeHtml');
+$this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
+$this->htmlElement('body')->appendAttribute('class', 'vocabulary-library compare');
+$browseUrl = $this->url('admin/vocabulary-library');
+$prefix = $vocabulary->prefix();
+
+// Terms as the site writes them, in alphabetical order.
+$rows = function (array $kinds) use ($prefix) {
+    $rows = [];
+    foreach ($kinds as $members) {
+        uksort($members, 'strnatcasecmp');
+        foreach ($members as $localName => $values) {
+            $rows[] = array_merge([$prefix . ':' . $localName], (array) $values);
+        }
+    }
+    return $rows;
+};
+// A value as it would be stored: escaped, with its whitespace, and marked
+// when empty.
+$value = function ($value) use ($translate, $escape) {
+    if ($value === null || $value === '') {
+        return sprintf('<span class="vocabulary-library-none">%s</span>', $translate('None'));
+    }
+    return sprintf('<span class="vocabulary-library-value">%s</span>', $escape($value));
+};
+$sections = [
+    [$translate('Changed labels'), [$translate('Term'), $translate('From'), $translate('To')], $rows([$diff['classes']['label'], $diff['properties']['label']])],
+    [$translate('Changed comments'), [$translate('Term'), $translate('From'), $translate('To')], $rows([$diff['classes']['comment'], $diff['properties']['comment']])],
+    [$translate('New classes'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['classes']['new']])],
+    [$translate('New properties'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['properties']['new']])],
+];
+$changes = array_sum(array_map(function ($section) {
+    return count($section[2]);
+}, $sections));
+$missingRows = $rows([$missing['classes'], $missing['properties']]);
+?>
+
+<?php echo $this->pageTitle($title, 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
+
+<?php // Only the actions and hidden inputs, so the language form can't nest in it. ?>
+<?php $form->prepare(); ?>
+<?php echo $this->form()->openTag($form); ?>
+<div id="page-actions">
+    <?php if ($changes): ?>
+    <?php echo $this->hyperlink($translate('Cancel'), $browseUrl, ['class' => 'button']); ?>
+    <button type="submit"><?php echo $translate('Update'); ?></button>
+    <?php else: ?>
+    <?php echo $this->hyperlink($translate('Back to the library'), $browseUrl, ['class' => 'button']); ?>
+    <?php endif; ?>
+</div>
+<?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
+<input type="hidden" name="lang" value="<?php echo $escape((string) $lang); ?>">
+<?php echo $this->form()->closeTag(); ?>
+
+<?php if (count($entry['languages']) > 1): ?>
+<form method="get" class="vocabulary-library-language">
+    <div class="field">
+        <div class="field-meta">
+            <label for="vocabulary-library-lang"><?php echo $translate('Preferred language'); ?></label>
+            <div class="field-description"><?php echo $translate('Choose the language the vocabulary was imported in to see what changed, or another language to switch its labels and comments to that language. First available matches an import with no preferred language.'); ?></div>
+        </div>
+        <div class="inputs">
+            <select name="lang" id="vocabulary-library-lang">
+                <option value=""<?php echo $lang === null ? ' selected' : ''; ?>><?php echo $translate('First available'); ?></option>
+                <?php foreach ($entry['languages'] as $code): ?>
+                <option value="<?php echo $escape($code); ?>"<?php echo $lang === $code ? ' selected' : ''; ?>><?php echo $escape($code); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <button type="submit"><?php echo $translate('Compare'); ?></button>
+        </div>
+    </div>
+</form>
+<?php endif; ?>
+
+<?php if ($changes): ?>
+<p class="vocabulary-library-compare-warning"><?php echo $translate('Apply these changes only if the library\'s file is newer than the vocabulary in Omeka.'); ?></p>
+<?php else: ?>
+<p><?php echo $translate('Updating would change nothing in Omeka.'); ?></p>
+<?php endif; ?>
+
+<?php if ($missingRows): ?>
+<h3><?php echo $escape(sprintf('%s (%s)', $translate('Not in the library\'s file'), count($missingRows))); ?></h3>
+<p><?php echo $translate('These can mean the vocabulary in Omeka is newer than the library\'s file. Updating doesn\'t remove them.'); ?></p>
+<table class="tablesaw vocabulary-library-compare-table" data-tablesaw-mode="stack">
+    <thead>
+        <tr>
+            <th><?php echo $translate('Term'); ?></th>
+            <th><?php echo $translate('Label'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($missingRows as [$term, $label]): ?>
+        <tr>
+            <td><?php echo $escape($term); ?></td>
+            <td><?php echo $value($label); ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php endif; ?>
+
+<?php foreach ($sections as [$heading, $columns, $sectionRows]): ?>
+<?php if ($sectionRows): ?>
+<h3><?php echo $escape(sprintf('%s (%s)', $heading, count($sectionRows))); ?></h3>
+<table class="tablesaw vocabulary-library-compare-table" data-tablesaw-mode="stack">
+    <thead>
+        <tr>
+            <?php foreach ($columns as $column): ?>
+            <th><?php echo $escape($column); ?></th>
+            <?php endforeach; ?>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($sectionRows as $row): ?>
+        <tr>
+            <td><?php echo $escape(array_shift($row)); ?></td>
+            <?php foreach ($row as $cell): ?>
+            <td><?php echo $value($cell); ?></td>
+            <?php endforeach; ?>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php endif; ?>
+<?php endforeach; ?>
