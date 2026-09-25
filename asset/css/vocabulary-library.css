@@ -111,7 +111,7 @@
 }
 
 .vocabulary-library-status-column {
-    width: 6.5rem;
+    width: 7.5rem;
 }
 
 /* With the sidebar open, which lists the tags, the title needs the room. */
@@ -125,6 +125,13 @@
     font-size: 13px;
     line-height: 18px;
     word-break: normal;
+}
+
+/* The status at the size of the button and note it can hold, so "Namespace
+   in use" fits on one line. */
+#vocabulary-library-table .vocabulary-library-status {
+    font-size: 13px;
+    line-height: 18px;
 }
 
 /* The Import and Compare and update buttons in a status, in the table and

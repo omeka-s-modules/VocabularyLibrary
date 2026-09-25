@@ -12,7 +12,7 @@
  * Nothing is written if any entry has a problem: a file that does not parse,
  * imports nothing, or breaks one of Omeka's column limits; a slug with no
  * file or several; a stored HTML file; a missing or empty title; an invalid,
- * reserved or duplicate prefix; a duplicate namespace; a slug or namespace in
+ * reserved, duplicate or capitalized prefix; a duplicate namespace; a slug or namespace in
  * scripts/excluded.json; or missing, unknown or repeated tags. Each problem is
  * listed and the script exits non-zero.
  */
@@ -73,6 +73,10 @@ foreach ($sources as $slug => $entry) {
     }
     if (preg_match(Repo::RESERVED_PREFIX, $prefix)) {
         $problems[] = "$slug: prefix \"$prefix\" is reserved by Omeka";
+    }
+    // Omeka accepts capitals, but published prefixes are nearly all lowercase.
+    if ($prefix !== strtolower($prefix)) {
+        $problems[] = "$slug: prefix \"$prefix\" has capitals; prefixes are lowercase";
     }
     // Omeka compares prefixes without regard to case.
     $prefixes[mb_strtolower($prefix)][] = $slug;

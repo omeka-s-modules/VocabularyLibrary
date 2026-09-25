@@ -1081,7 +1081,7 @@
         ],
         "license": "http://www.gnu.org/copyleft/fdl.html",
         "namespace": "http://dbpedia.org/ontology/",
-        "prefix": "dbpedia-owl",
+        "prefix": "dbo",
         "properties": 2711,
         "tags": [
             "general"
@@ -1160,7 +1160,7 @@
         ],
         "license": "http://creativecommons.org/licenses/by/4.0/",
         "namespace": "http://purl.org/spar/datacite/",
-        "prefix": "dcite",
+        "prefix": "datacite",
         "properties": 12,
         "tags": [
             "publishing",
@@ -1401,7 +1401,7 @@
         "languages": [],
         "license": "Ontology Drammar is available at the url http://purl.org/drammar, under the license Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). The canonical citation for Drammar is \"Vincenzo Lombardo, Rossana Damiano, Antonio Pizzo. Drammar: a comprehensive ontology of drama (2018). http://purl.org/drammar\"",
         "namespace": "http://www.purl.org/drammar#",
-        "prefix": "drama",
+        "prefix": "drammar",
         "properties": 84,
         "tags": [
             "performing-arts",
@@ -1419,7 +1419,7 @@
         ],
         "license": "http://creativecommons.org/licenses/by/3.0/",
         "namespace": "http://purl.org/ontology/dso#",
-        "prefix": "docso",
+        "prefix": "dso",
         "properties": 2,
         "tags": [
             "libraries"
@@ -2585,7 +2585,7 @@
         ],
         "license": "http://creativecommons.org/licenses/by/3.0/",
         "namespace": "http://purl.org/LiMo/0.1/",
-        "prefix": "limoo",
+        "prefix": "limo",
         "properties": 20,
         "tags": [
             "rights"
@@ -3814,7 +3814,7 @@
         ],
         "license": "Copyright © 2008 Rob Styles, Chris Wallace, Knud Moeller",
         "namespace": "http://vocab.org/participation/schema#",
-        "prefix": "part",
+        "prefix": "participation",
         "properties": 6,
         "tags": [
             "people"
@@ -4037,7 +4037,7 @@
         ],
         "license": "Copyright 2015, CNAM",
         "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
-        "prefix": "plink",
+        "prefix": "personlink",
         "properties": 103,
         "tags": [
             "people"
@@ -4937,7 +4937,7 @@
         ],
         "license": null,
         "namespace": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
-        "prefix": "taxnomen",
+        "prefix": "txn_nomen",
         "properties": 71,
         "tags": [
             "science"

@@ -573,7 +573,7 @@
         "download": "http://dbpedia.org/ontology/",
         "namespace": "http://dbpedia.org/ontology/",
         "notes": "The live file fails the import check (imports nothing); the LOV copy imports. Serve the rescued copy until the live file imports again.",
-        "prefix": "dbpedia-owl",
+        "prefix": "dbo",
         "tags": [
             "general"
         ]
@@ -609,7 +609,7 @@
     "dcite": {
         "download": "http://purl.org/spar/datacite/",
         "namespace": "http://purl.org/spar/datacite/",
-        "prefix": "dcite",
+        "prefix": "datacite",
         "tags": [
             "publishing",
             "science"
@@ -739,7 +739,7 @@
     "drama": {
         "download": "http://www.purl.org/drammar#",
         "namespace": "http://www.purl.org/drammar#",
-        "prefix": "drama",
+        "prefix": "drammar",
         "tags": [
             "performing-arts",
             "humanities"
@@ -749,7 +749,7 @@
         "copy_from": "LOV",
         "download": "http://purl.org/ontology/dso#",
         "namespace": "http://purl.org/ontology/dso#",
-        "prefix": "docso",
+        "prefix": "dso",
         "tags": [
             "libraries"
         ]
@@ -1401,7 +1401,7 @@
         "copy_from": "LOV",
         "download": "http://purl.org/LiMo/0.1#",
         "namespace": "http://purl.org/LiMo/0.1/",
-        "prefix": "limoo",
+        "prefix": "limo",
         "tags": [
             "rights"
         ]
@@ -2064,7 +2064,7 @@
         "copy_from": "LOV",
         "download": "http://vocab.org/participation/schema",
         "namespace": "http://vocab.org/participation/schema#",
-        "prefix": "part",
+        "prefix": "participation",
         "tags": [
             "people"
         ]
@@ -2204,7 +2204,7 @@
         "copy_from": "LOV",
         "download": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
         "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
-        "prefix": "plink",
+        "prefix": "personlink",
         "tags": [
             "people"
         ]
@@ -2665,7 +2665,7 @@
         ],
         "download": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
         "namespace": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
-        "prefix": "taxnomen",
+        "prefix": "txn_nomen",
         "tags": [
             "science"
         ]

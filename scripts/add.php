@@ -117,12 +117,14 @@ foreach ($sources as $slug => $entry) {
     }
 }
 
-$prefix = option($argv, 'prefix') ?? $result['prefix'];
+// Prefixes are lowercase, as nearly all published ones are, though a file may
+// declare one with capitals.
+$prefix = option($argv, 'prefix') ?? ($result['prefix'] === null ? null : strtolower($result['prefix']));
 if ($prefix === null) {
     fail("The file declares no prefix. Pass one with --prefix=.");
 }
-if (!preg_match(Vocabulary::PREFIX_REGEX, $prefix) || preg_match(Repo::RESERVED_PREFIX, $prefix)) {
-    fail("The prefix \"$prefix\" is invalid or reserved: use letters, numbers, hyphens and underscores, not \"o\" or \"o-…\".");
+if (!preg_match(Vocabulary::PREFIX_REGEX, $prefix) || preg_match(Repo::RESERVED_PREFIX, $prefix) || $prefix !== strtolower($prefix)) {
+    fail("The prefix \"$prefix\" is invalid or reserved: use lowercase letters, numbers, hyphens and underscores, not \"o\" or \"o-…\".");
 }
 foreach ($sources as $slug => $entry) {
     if (mb_strtolower($entry['prefix']) === mb_strtolower($prefix)) {
