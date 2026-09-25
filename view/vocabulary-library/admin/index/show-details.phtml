@@ -1,7 +1,7 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
-$paragraphs = array_values(array_filter(explode("\n\n", (string) $entry['description']), 'strlen'));
+$paragraphs = array_filter(explode("\n\n", (string) $entry['description']), 'strlen');
 // About 200 characters of the description show, ending with a sentence where
 // one ends in time; the rest continues under Full description. A first
 // sentence much longer than that is cut at a word.
@@ -20,20 +20,16 @@ if ($paragraphs) {
     }
     $rest = array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs);
 }
+// Publisher text arrives as plain text: the build cleans the description and
+// license, and the controller the term labels and comments.
 $license = $entry['license'];
-// Publisher text is shown as text: HTML markup in some term comments is
-// removed, and everything else is escaped.
-$text = function ($value) use ($escape) {
-    $value = preg_replace(\VocabularyLibrary\Controller\Admin\IndexController::HTML_TAG, '', (string) $value);
-    return $escape(html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8'));
-};
 $terms = [
     ['label' => $translate('Classes'), 'members' => $classes],
     ['label' => $translate('Properties'), 'members' => $properties],
 ];
 $file = basename($entry['file']);
 ?>
-<h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($title); ?></h3>
+<h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['title']); ?></h3>
 
 <div class="meta-group">
     <h4><?php echo $translate('Status'); ?></h4>
@@ -50,13 +46,13 @@ $file = basename($entry['file']);
 <div class="meta-group">
     <h4><?php echo $translate('Description'); ?></h4>
     <div class="value">
-        <?php echo $text($excerpt); ?>
+        <?php echo $escape($excerpt); ?>
         <?php if ($rest): ?>
         <div class="vocabulary-library-more">
             <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
             <div class="collapsible">
                 <?php foreach ($rest as $paragraph): ?>
-                <p><?php echo $text($paragraph); ?></p>
+                <p><?php echo $escape($paragraph); ?></p>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -86,7 +82,7 @@ $file = basename($entry['file']);
         <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
         <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
         <?php else: ?>
-        <?php echo $text($license); ?>
+        <?php echo $escape($license); ?>
         <?php endif; ?>
     </div>
 </div>
@@ -102,10 +98,10 @@ $file = basename($entry['file']);
     <div class="collapsible">
         <?php foreach ($group['members'] as $localName => $member): ?>
         <div class="value">
-            <span class="vocabulary-library-term-label"><?php echo $text($member['label']); ?></span>
+            <span class="vocabulary-library-term-label"><?php echo $escape($member['label']); ?></span>
             <span class="field-term"><?php echo $escape($entry['prefix'] . ':' . $localName); ?></span>
             <?php if ($member['comment'] !== null && trim($member['comment']) !== ''): ?>
-            <span class="vocabulary-library-term-comment"><?php echo $text($member['comment']); ?></span>
+            <span class="vocabulary-library-term-comment"><?php echo $escape($member['comment']); ?></span>
             <?php endif; ?>
         </div>
         <?php endforeach; ?>

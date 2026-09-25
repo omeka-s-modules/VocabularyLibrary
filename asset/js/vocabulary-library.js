@@ -1,6 +1,5 @@
 (function ($) {
 
-    const TERM_QUERY_MIN = 3;
     const TERM_SEARCH_DELAY = 400;
 
     /**
@@ -23,6 +22,8 @@
         const empty = $('.vocabulary-library-empty');
         const shown = $('.vocabulary-library-shown');
         const searchText = new Map(rows.map(row => [row, fold(row.dataset.search)]));
+        // Term search needs as many characters as the server asks for.
+        const termQueryMin = filters.data('term-query-min');
         const collator = new Intl.Collator(document.documentElement.lang || undefined, {sensitivity: 'base', numeric: true});
         let termMatches = null;
         let termRequest = null;
@@ -83,7 +84,7 @@
                 termRequest.abort();
                 termRequest = null;
             }
-            if (!form.terms.checked || query.length < TERM_QUERY_MIN) {
+            if (!form.terms.checked || query.length < termQueryMin) {
                 termMatches = null;
                 apply();
                 return;

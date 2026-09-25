@@ -5,6 +5,7 @@ use EasyRdf\Graph as RdfGraph;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
 use Throwable;
+use VocabularyLibrary\PlainText;
 
 /**
  * Tests a vocabulary file against Omeka's own importer, without a database or
@@ -36,25 +37,16 @@ class ImportCheck
     const MAX_NAMESPACE = 190;
 
     /**
-     * HTML elements found in vocabulary files' literals. Only these are
-     * removed from titles and descriptions, so text like "<= 5.0" or
-     * "<subject>" survives.
+     * The language of labels and comments the check reads terms in, as the
+     * module imports by default.
      */
-    const HTML_TAG = '#</?(?:[a-z][a-z0-9.-]*:)?(a|abbr|b|blockquote|br|code|dd|div|dl|dt|em|figcaption|figure|h[1-6]|i|img|li|ol|p|pre|span|strong|sub|sup|table|td|th|tr|ul)\\b[^<>]*>#i';
+    const LANG = 'en';
 
     protected $importer;
 
     public function __construct()
     {
         $this->importer = (new ReflectionClass(CheckImporter::class))->newInstanceWithoutConstructor();
-    }
-
-    /**
-     * Whether a check result means the vocabulary imports.
-     */
-    public static function imports(array $result)
-    {
-        return $result['parsed'] && $result['classes'] + $result['properties'] > 0 && empty($result['limits']);
     }
 
     /**
@@ -84,19 +76,16 @@ class ImportCheck
     /**
      * @param string $path The vocabulary file
      * @param string|null $namespace The namespace a user would enter, if known
-     * @param string|null $format An EasyRdf format name; autodetected if null
-     * @param string|null $lang The language of labels and comments, as the
-     *   module imports with
      * @return array The check result
      */
-    public function check($path, $namespace = null, $format = null, $lang = 'en')
+    public function check($path, $namespace = null)
     {
         // As Omeka's form does by default, autodetect the format. If that
         // fails, try the formats a user can choose explicitly.
         $graph = null;
         $error = null;
-        $tried = $format ? [$format] : ['guess', 'rdfxml', 'turtle', 'jsonld', 'ntriples'];
-        foreach ($tried as $try) {
+        $format = null;
+        foreach (['guess', 'rdfxml', 'turtle', 'jsonld', 'ntriples'] as $try) {
             $attempt = new RdfGraph;
             try {
                 $attempt->parseFile($path, $try, $namespace);
@@ -111,27 +100,33 @@ class ImportCheck
         }
 
         $source = $namespace ? 'given' : null;
-        $declared = $this->safely(function () use ($graph) {
-            return $this->literal($graph, self::VANN . 'preferredNamespaceUri');
-        });
-        if (!$namespace && $declared) {
-            [$namespace, $source] = [$declared, 'declared'];
+        if (!$namespace) {
+            $declared = $this->safely(function () use ($graph) {
+                return $this->literal($graph, self::VANN . 'preferredNamespaceUri');
+            });
+            if ($declared) {
+                [$namespace, $source] = [$declared, 'declared'];
+            }
         }
         if (!$namespace && ($ontology = $graph->allOfType('owl:Ontology')) && preg_match('#^https?://#', (string) $ontology[0]->getUri())) {
             [$namespace, $source] = [$ontology[0]->getUri(), 'ontology'];
         }
 
         $best = $namespace;
-        $bestMembers = $namespace ? $this->importer->members($graph, $namespace, $lang) : ['classes' => [], 'properties' => []];
+        $bestMembers = $namespace ? $this->importer->members($graph, $namespace, self::LANG) : ['classes' => [], 'properties' => []];
         $bestCount = $this->count($bestMembers);
         foreach ($namespace ? $this->candidates($namespace) : [] as $candidate) {
-            $members = $this->importer->members($graph, $candidate, $lang);
+            // The namespace itself is the first candidate, already counted.
+            if ($candidate === $namespace) {
+                continue;
+            }
+            $members = $this->importer->members($graph, $candidate, self::LANG);
             if ($this->count($members) > $bestCount) {
                 [$best, $bestMembers, $bestCount, $source] = [$candidate, $members, $this->count($members), 'variant'];
             }
         }
         if (!$bestCount && $inferred = $this->inferredNamespace($graph)) {
-            $members = $this->importer->members($graph, $inferred, $lang);
+            $members = $this->importer->members($graph, $inferred, self::LANG);
             if ($this->count($members)) {
                 [$best, $bestMembers, $bestCount, $source] = [$inferred, $members, $this->count($members), 'terms'];
             }
@@ -349,7 +344,7 @@ class ImportCheck
         foreach ($subjects as $subject) {
             $value = $subject->get($properties, 'literal', 'en') ?: $subject->get($properties, 'literal');
             // Some files use XHTML literals, and some Markdown; keep the text.
-            $text = html_entity_decode(preg_replace(self::HTML_TAG, '', (string) $value), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $text = PlainText::from($value);
             if (!mb_check_encoding($text, 'UTF-8')) {
                 continue;
             }
@@ -416,7 +411,7 @@ class ImportCheck
         $properties = ['dcterms:license', 'dc11:rights', 'dcterms:rights', '<http://creativecommons.org/ns#license>', '<http://www.w3.org/1999/xhtml/vocab#license>'];
         foreach ($graph->allOfType('owl:Ontology') as $ontology) {
             foreach ($properties as $property) {
-                $value = trim((string) $ontology->get($property));
+                $value = trim(PlainText::from($ontology->get($property)));
                 if ($value !== '' && mb_check_encoding($value, 'UTF-8')) {
                     return $value;
                 }

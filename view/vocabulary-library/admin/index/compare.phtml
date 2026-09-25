@@ -19,9 +19,10 @@ $rows = function (array $kinds) use ($prefix) {
 };
 // A value as it would be stored: escaped, with its whitespace, and marked
 // when empty.
-$value = function ($value) use ($translate, $escape) {
+$none = sprintf('<span class="vocabulary-library-none">%s</span>', $translate('None'));
+$value = function ($value) use ($none, $escape) {
     if ($value === null || $value === '') {
-        return sprintf('<span class="vocabulary-library-none">%s</span>', $translate('None'));
+        return $none;
     }
     return sprintf('<span class="vocabulary-library-value">%s</span>', $escape($value));
 };
@@ -31,13 +32,18 @@ $sections = [
     [$translate('New classes'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['classes']['new']])],
     [$translate('New properties'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['properties']['new']])],
 ];
-$changes = array_sum(array_map(function ($section) {
-    return count($section[2]);
-}, $sections));
-$missingRows = $rows([$missing['classes'], $missing['properties']]);
+$changes = array_sum(array_map('count', array_column($sections, 2)));
+// Terms Omeka has and the library's file doesn't come first, with a note.
+// They aren't changes: updating keeps them.
+array_unshift($sections, [
+    $translate('Not in the library\'s file'),
+    [$translate('Term'), $translate('Label')],
+    $rows([$missing['classes'], $missing['properties']]),
+    $translate('These can mean the vocabulary in Omeka is newer than the library\'s file. Updating doesn\'t remove them.'),
+]);
 ?>
 
-<?php echo $this->pageTitle($title, 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
+<?php echo $this->pageTitle($entry['title'], 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
 
 <?php // Only the actions and hidden inputs, so the language form can't nest in it. ?>
 <?php $form->prepare(); ?>
@@ -75,35 +81,18 @@ $missingRows = $rows([$missing['classes'], $missing['properties']]);
 <?php endif; ?>
 
 <?php if ($changes): ?>
-<p class="vocabulary-library-compare-warning"><?php echo $translate('Apply these changes only if the library\'s file is newer than the vocabulary in Omeka.'); ?></p>
+<p class="error"><?php echo $translate('Apply these changes only if the library\'s file is newer than the vocabulary in Omeka.'); ?></p>
 <?php else: ?>
 <p><?php echo $translate('Updating would change nothing in Omeka.'); ?></p>
 <?php endif; ?>
 
-<?php if ($missingRows): ?>
-<h3><?php echo $escape(sprintf('%s (%s)', $translate('Not in the library\'s file'), count($missingRows))); ?></h3>
-<p><?php echo $translate('These can mean the vocabulary in Omeka is newer than the library\'s file. Updating doesn\'t remove them.'); ?></p>
-<table class="tablesaw vocabulary-library-compare-table" data-tablesaw-mode="stack">
-    <thead>
-        <tr>
-            <th><?php echo $translate('Term'); ?></th>
-            <th><?php echo $translate('Label'); ?></th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($missingRows as [$term, $label]): ?>
-        <tr>
-            <td><?php echo $escape($term); ?></td>
-            <td><?php echo $value($label); ?></td>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
-<?php endif; ?>
-
-<?php foreach ($sections as [$heading, $columns, $sectionRows]): ?>
+<?php foreach ($sections as $section): ?>
+<?php [$heading, $columns, $sectionRows] = $section; ?>
 <?php if ($sectionRows): ?>
 <h3><?php echo $escape(sprintf('%s (%s)', $heading, count($sectionRows))); ?></h3>
+<?php if (isset($section[3])): ?>
+<p><?php echo $section[3]; ?></p>
+<?php endif; ?>
 <table class="tablesaw vocabulary-library-compare-table" data-tablesaw-mode="stack">
     <thead>
         <tr>

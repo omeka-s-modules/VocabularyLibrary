@@ -25,6 +25,11 @@ class Repo
     const SLUG_PATTERN = '/^[a-z0-9][a-z0-9-]*$/';
 
     /**
+     * Each vocabulary has one to this many tags.
+     */
+    const MAX_TAGS = 3;
+
+    /**
      * Prefixes Omeka reserves (VocabularyAdapter::$reservedPrefixes).
      */
     const RESERVED_PREFIX = '/^o(-|$)/';
@@ -60,7 +65,6 @@ class Repo
 
     public function writeSources(array $sources)
     {
-        ksort($sources);
         $this->writeJson('scripts/sources.json', $sources);
     }
 
@@ -75,7 +79,6 @@ class Repo
 
     public function writeVocabularies(array $vocabularies)
     {
-        ksort($vocabularies);
         $this->writeJson('data/vocabularies.json', $vocabularies);
     }
 

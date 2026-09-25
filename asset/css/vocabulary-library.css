@@ -127,10 +127,11 @@
     word-break: normal;
 }
 
-/* Import buttons in the table and the sidebar, sized as core's buttons in
-   browse controls, without the bottom margin core gives buttons. */
-#vocabulary-library-table .button,
-.vocabulary-library .sidebar .button {
+/* The Import and Compare and update buttons in a status, in the table and
+   the sidebar: sized as core's buttons in browse controls, without the bottom
+   margin core gives buttons. The status is one block, so core's flex cell
+   layout doesn't put the note beside the button. */
+.vocabulary-library-status .button {
     min-height: 0;
     height: 24px;
     line-height: 24px;
@@ -138,12 +139,12 @@
     padding: 0 10px;
     font-size: 13px;
     vertical-align: middle;
+    white-space: nowrap;
 }
 
-/* The status is one block, so core's flex cell layout doesn't put the note
-   beside the button. */
-.vocabulary-library-status .button {
-    white-space: nowrap;
+/* The Compare and update button in the sidebar, under the status text. */
+.vocabulary-library-compare {
+    margin: 6px 0 0;
 }
 
 /* A library vocabulary whose default prefix the site already uses. */
@@ -217,17 +218,8 @@
     color: #a91919;
 }
 
-/* Compare and update */
-.vocabulary-library-compare {
-    margin: 6px 0 0;
-}
-
-.vocabulary-library-compare-warning {
-    color: #a91919;
-}
-
-/* Long comments make tall rows; keep each term beside the start of its
-   values. */
+/* Compare and update page. Long comments make tall rows; keep each term
+   beside the start of its values. */
 table.tablesaw.vocabulary-library-compare-table td {
     vertical-align: top;
 }

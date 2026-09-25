@@ -20,10 +20,7 @@ require __DIR__ . '/bootstrap.php';
 use Omeka\Entity\Vocabulary;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
-
 use VocabularyLibrary\Scripts\Repo;
-
-const MAX_TAGS = 3;
 
 $check = new ImportCheck;
 $sources = $repo->sources();
@@ -45,8 +42,8 @@ foreach ($sources as $slug => $entry) {
         }
     }
     $entryTags = $entry['tags'] ?? [];
-    if (!is_array($entryTags) || !$entryTags || count($entryTags) > MAX_TAGS) {
-        $problems[] = sprintf('%s: needs 1 to %d tags', $slug, MAX_TAGS);
+    if (!is_array($entryTags) || !$entryTags || count($entryTags) > Repo::MAX_TAGS) {
+        $problems[] = sprintf('%s: needs 1 to %d tags', $slug, Repo::MAX_TAGS);
     } else {
         foreach (array_diff($entryTags, array_keys($tags)) as $unknown) {
             $problems[] = "$slug: unknown tag \"$unknown\" (tags are in config/module.config.php)";
@@ -139,8 +136,7 @@ foreach (glob($repo->path('data/vocabs/*')) as $path) {
 }
 
 if ($problems) {
-    fwrite(STDERR, "Nothing written. Problems:\n  " . implode("\n  ", $problems) . "\n");
-    exit(1);
+    fail("Nothing written. Problems:\n  " . implode("\n  ", $problems));
 }
 
 $repo->writeVocabularies($vocabularies);

@@ -13,13 +13,11 @@ require __DIR__ . '/bootstrap.php';
 
 [$slug, $reason] = positionalArgs($argv) + [null, null];
 if (!$slug || !$reason) {
-    fwrite(STDERR, "Usage: php scripts/remove.php <slug> \"<reason>\"\n");
-    exit(1);
+    fail('Usage: php scripts/remove.php <slug> "<reason>"');
 }
 $sources = $repo->sources();
 if (!isset($sources[$slug])) {
-    fwrite(STDERR, "Unknown slug: $slug\n");
-    exit(1);
+    fail("Unknown slug: $slug");
 }
 
 $entry = $sources[$slug];

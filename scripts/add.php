@@ -32,12 +32,6 @@ use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
 
-function fail($message)
-{
-    fwrite(STDERR, "$message\n");
-    exit(1);
-}
-
 const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa] [--file=<path> --copy-from=<archive>]';
 const OPTIONS = ['tags', 'prefix', 'slug', 'namespace', 'title', 'format', 'file', 'copy-from'];
 // Extensions an archived copy may keep.
@@ -57,7 +51,7 @@ if (count($positional) !== 1 || !preg_match('#^https?://#', $url)) {
 }
 $tags = array_values(array_filter(array_map('trim', explode(',', (string) option($argv, 'tags'))), 'strlen'));
 $knownTags = array_keys($repo->tags());
-if (!$tags || count($tags) > 3 || array_diff($tags, $knownTags)) {
+if (!$tags || count($tags) > Repo::MAX_TAGS || array_diff($tags, $knownTags)) {
     fail('Give one to three tags with --tags=, from: ' . implode(', ', $knownTags));
 }
 $format = option($argv, 'format');
@@ -107,18 +101,15 @@ if ($failure = ImportCheck::failure($result)) {
 $namespace = $result['namespace'];
 
 $sources = $repo->sources();
-// The namespaces the build found to import, which can differ from the
-// curated ones in their #// or http/https form.
-$vocabularies = $repo->vocabularies();
 $excluded = [];
 foreach ($repo->excluded() as $record) {
     $excluded[$record['slug']] = $record['excluded'];
 }
+// The namespace the build found to import can differ from the curated one
+// only in its #// or http/https form, which the comparison ignores.
 foreach ($sources as $slug => $entry) {
-    foreach ([$entry['namespace'], $vocabularies[$slug]['namespace'] ?? null] as $existing) {
-        if ($existing && Repo::normalizedNamespace($existing) === Repo::normalizedNamespace($namespace)) {
-            fail("The namespace $namespace is already in the collection as \"$slug\" ($existing).");
-        }
+    if (Repo::normalizedNamespace($entry['namespace']) === Repo::normalizedNamespace($namespace)) {
+        fail("The namespace $namespace is already in the collection as \"$slug\" ({$entry['namespace']}).");
     }
 }
 

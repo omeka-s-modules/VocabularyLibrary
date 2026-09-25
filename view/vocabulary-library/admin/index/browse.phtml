@@ -9,6 +9,9 @@ $aboutUrl = 'https://github.com/omeka-s-modules/VocabularyLibrary#about-the-coll
 // Tags in alphabetical order of their translated labels.
 $tagLabels = array_map($translate, $tags);
 uasort($tagLabels, 'strnatcasecmp');
+// Row text, translated once rather than for each of the rows.
+$matchingTerms = $translate('Matching terms:');
+$details = $translate('Details');
 $sortBy = [
     'title' => $translate('Title'),
     'prefix' => $translate('Prefix'),
@@ -35,7 +38,8 @@ $selected = function ($name, $value) use ($query) {
 </div>
 
 <form id="vocabulary-library-filters" class="browse-controls" role="search"
-    data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>">
+    data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>"
+    data-term-query-min="<?php echo $termQueryMin; ?>">
     <div class="vocabulary-library-search">
         <input type="text" name="q"
             value="<?php echo $escape($query['q'] ?? ''); ?>"
@@ -101,8 +105,8 @@ $selected = function ($name, $value) use ($query) {
         $detailsUrl = $this->url('admin/vocabulary-library', ['action' => 'show-details', 'slug' => $row['slug']]);
         ?>
         <tr data-slug="<?php echo $escape($row['slug']); ?>"
-            data-search="<?php echo $escape(implode(' ', [$row['title'], $entry['prefix'], $entry['namespace'], $entry['description']])); ?>"
-            data-title="<?php echo $escape($row['title']); ?>"
+            data-search="<?php echo $escape(implode(' ', [$entry['title'], $entry['prefix'], $entry['namespace'], $entry['description']])); ?>"
+            data-title="<?php echo $escape($entry['title']); ?>"
             data-prefix="<?php echo $escape($entry['prefix']); ?>"
             data-classes="<?php echo $entry['classes']; ?>"
             data-properties="<?php echo $entry['properties']; ?>"
@@ -111,7 +115,7 @@ $selected = function ($name, $value) use ($query) {
             data-languages="<?php echo $escape(implode(' ', $row['languages'])); ?>">
             <td>
                 <div class="vocabulary-library-title">
-                    <?php echo $this->hyperlink($row['title'], '#', [
+                    <?php echo $this->hyperlink($entry['title'], '#', [
                         'class' => 'sidebar-content',
                         'data-sidebar-content-url' => $detailsUrl,
                     ]); ?>
@@ -119,14 +123,14 @@ $selected = function ($name, $value) use ($query) {
                     <p class="vocabulary-library-description"><?php echo $escape($description); ?></p>
                     <?php endif; ?>
                     <p class="vocabulary-library-term-matches" hidden>
-                        <strong><?php echo $translate('Matching terms:'); ?></strong> <span class="vocabulary-library-term-list"></span>
+                        <strong><?php echo $matchingTerms; ?></strong> <span class="vocabulary-library-term-list"></span>
                     </p>
                 </div>
                 <ul class="actions">
                     <li><?php echo $this->hyperlink('', '#', [
                         'data-sidebar-content-url' => $detailsUrl,
                         'class' => 'o-icon-more sidebar-content',
-                        'title' => $translate('Details'),
+                        'title' => $details,
                     ]); ?></li>
                 </ul>
             </td>

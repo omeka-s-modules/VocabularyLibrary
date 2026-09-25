@@ -11,6 +11,7 @@ use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
 use Omeka\Stdlib\RdfImporter;
 use VocabularyLibrary\Form\ImportForm;
+use VocabularyLibrary\PlainText;
 
 class IndexController extends AbstractActionController
 {
@@ -26,13 +27,6 @@ class IndexController extends AbstractActionController
      * About where a comment prefilled from the description is cut.
      */
     const COMMENT_LENGTH = 500;
-
-    /**
-     * HTML elements found in vocabulary files' term comments, removed for
-     * display. Other angle brackets, as in "<= 5.0" or "<subject>", are
-     * text. The same list as scripts/ImportCheck.php.
-     */
-    const HTML_TAG = '#</?(?:[a-z][a-z0-9.-]*:)?(a|abbr|b|blockquote|br|code|dd|div|dl|dt|em|figcaption|figure|h[1-6]|i|img|li|ol|p|pre|span|strong|sub|sup|table|td|th|tr|ul)\\b[^<>]*>#i';
 
     const CONTENT_TYPES = [
         'jsonld' => 'application/ld+json',
@@ -63,8 +57,8 @@ class IndexController extends AbstractActionController
 
     public function browseAction()
     {
-        $installed = $this->installedVocabularies();
-        $prefixes = $this->installedPrefixes($installed);
+        $installedVocabularies = $this->installedVocabularies();
+        $prefixes = $this->installedPrefixes($installedVocabularies);
         $rows = [];
         $tagCounts = array_fill_keys(array_keys($this->tags), 0);
         $languageCounts = [];
@@ -73,8 +67,7 @@ class IndexController extends AbstractActionController
             $rows[] = [
                 'slug' => (string) $slug,
                 'entry' => $entry,
-                'title' => $entry['title'],
-                'installed' => $this->installed($entry, $installed),
+                'installed' => $this->installed($entry, $installedVocabularies),
                 'prefixTakenBy' => $prefixes[mb_strtolower($entry['prefix'])] ?? null,
                 'languages' => $languages,
             ];
@@ -90,7 +83,7 @@ class IndexController extends AbstractActionController
         // so an English option would hide most of them.
         unset($languageCounts['en']);
         usort($rows, function ($a, $b) {
-            return strnatcasecmp($a['title'], $b['title']);
+            return strnatcasecmp($a['entry']['title'], $b['entry']['title']);
         });
 
         $view = new ViewModel;
@@ -99,18 +92,23 @@ class IndexController extends AbstractActionController
         $view->setVariable('tagCounts', $tagCounts);
         $view->setVariable('languageCounts', $languageCounts);
         $view->setVariable('query', $this->params()->fromQuery());
+        $view->setVariable('termQueryMin', self::TERM_QUERY_MIN);
         return $view;
     }
 
     public function showDetailsAction()
     {
         [$slug, $entry] = $this->entry();
-        $members = $this->rdfImporter->getMembers('file', $entry['namespace'], [
-            'file' => $this->dataDir . '/' . $entry['file'],
-            'format' => $entry['format'] ?? 'guess',
-            'lang' => $this->defaultLanguage($entry),
-        ]);
+        $members = $this->rdfImporter->getMembers('file', $entry['namespace'], $this->importerOptions($entry, $this->defaultLanguage($entry)));
         foreach ($members as &$terms) {
+            // Some files put HTML in their labels and comments.
+            foreach ($terms as &$term) {
+                $term['label'] = PlainText::from($term['label']);
+                if ($term['comment'] !== null) {
+                    $term['comment'] = PlainText::from($term['comment']);
+                }
+            }
+            unset($term);
             uasort($terms, function ($a, $b) {
                 return strnatcasecmp($a['label'], $b['label']);
             });
@@ -121,11 +119,10 @@ class IndexController extends AbstractActionController
         $view->setTerminal(true);
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
-        $view->setVariable('title', $entry['title']);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
-        $installed = $this->installedVocabularies();
-        $view->setVariable('installed', $this->installed($entry, $installed));
-        $view->setVariable('prefixTakenBy', $this->installedPrefixes($installed)[mb_strtolower($entry['prefix'])] ?? null);
+        $installedVocabularies = $this->installedVocabularies();
+        $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
+        $view->setVariable('prefixTakenBy', $this->installedPrefixes($installedVocabularies)[mb_strtolower($entry['prefix'])] ?? null);
         $view->setVariable('classes', $members['classes']);
         $view->setVariable('properties', $members['properties']);
         return $view;
@@ -135,13 +132,13 @@ class IndexController extends AbstractActionController
     {
         [$slug, $entry] = $this->entry();
         $installedVocabularies = $this->installedVocabularies();
+        $installed = $this->installed($entry, $installedVocabularies);
 
         $view = new ViewModel;
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
-        $view->setVariable('title', $entry['title']);
-        $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
-        if ($view->getVariable('installed')) {
+        $view->setVariable('installed', $installed);
+        if ($installed) {
             return $view;
         }
 
@@ -171,11 +168,7 @@ class IndexController extends AbstractActionController
                 'o:prefix' => $data['o:prefix'],
                 'o:label' => $data['o:label'],
                 'o:comment' => $data['o:comment'],
-            ], [
-                'file' => $this->dataDir . '/' . $entry['file'],
-                'format' => $entry['format'] ?? 'guess',
-                'lang' => $lang,
-            ])->getContent();
+            ], $this->importerOptions($entry, $lang))->getContent();
         } catch (\Exception $e) {
             // As core's import does: the importer's message, and any from the
             // API's validation.
@@ -216,7 +209,7 @@ class IndexController extends AbstractActionController
      */
     public function compareAction()
     {
-        [$slug, $entry] = $this->entry();
+        [, $entry] = $this->entry();
         $installed = $this->installed($entry, $this->installedVocabularies());
         if (!$installed || !$installed['exact']) {
             throw new NotFoundException;
@@ -233,11 +226,7 @@ class IndexController extends AbstractActionController
         } elseif (!in_array($lang, $entry['languages'], true)) {
             $lang = $this->defaultLanguage($entry);
         }
-        $options = [
-            'file' => $this->dataDir . '/' . $entry['file'],
-            'format' => $entry['format'] ?? 'guess',
-            'lang' => $lang,
-        ];
+        $options = $this->importerOptions($entry, $lang);
         // Computed on every request, never taken from the form.
         $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $options);
         $form = $this->getForm(ConfirmForm::class);
@@ -263,8 +252,8 @@ class IndexController extends AbstractActionController
         // them, and they can mean the vocabulary in Omeka is newer.
         $members = $this->rdfImporter->getMembers('file', $entry['namespace'], $options);
         $missing = ['classes' => [], 'properties' => []];
-        foreach (['classes' => 'resource_classes', 'properties' => 'properties'] as $kind => $resource) {
-            foreach ($this->api()->search($resource, ['vocabulary_id' => $vocabulary->id()])->getContent() as $term) {
+        foreach (['classes' => $vocabulary->resourceClasses(), 'properties' => $vocabulary->properties()] as $kind => $terms) {
+            foreach ($terms as $term) {
                 if (!isset($members[$kind][$term->localName()])) {
                     $missing[$kind][$term->localName()] = $term->label();
                 }
@@ -272,9 +261,7 @@ class IndexController extends AbstractActionController
         }
 
         $view = new ViewModel;
-        $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
-        $view->setVariable('title', $entry['title']);
         $view->setVariable('vocabulary', $vocabulary);
         $view->setVariable('diff', $diff);
         $view->setVariable('missing', $missing);
@@ -351,6 +338,19 @@ class IndexController extends AbstractActionController
     }
 
     /**
+     * Options for core's importer to read an entry's file. A null format is
+     * one the build check found by autodetecting.
+     */
+    protected function importerOptions(array $entry, $lang)
+    {
+        return [
+            'file' => $this->dataDir . '/' . $entry['file'],
+            'format' => $entry['format'] ?? 'guess',
+            'lang' => $lang,
+        ];
+    }
+
+    /**
      * The languages of a vocabulary's labels, as primary language subtags
      * (en-GB and en-us are both en).
      *
@@ -404,13 +404,13 @@ class IndexController extends AbstractActionController
      * vocabulary that holds each. Omeka compares prefixes without regard to
      * case.
      *
-     * @param VocabularyRepresentation[] $installed
+     * @param VocabularyRepresentation[] $installedVocabularies
      * @return array prefix => label
      */
-    protected function installedPrefixes(array $installed)
+    protected function installedPrefixes(array $installedVocabularies)
     {
         $prefixes = [];
-        foreach ($installed as $vocabulary) {
+        foreach ($installedVocabularies as $vocabulary) {
             $prefixes[mb_strtolower($vocabulary->prefix())] = $vocabulary->label();
         }
         return $prefixes;
@@ -428,11 +428,11 @@ class IndexController extends AbstractActionController
      *   (Dublin Core and its types), and one the user may change (site
      *   administrators may change only their own)]
      */
-    protected function installed(array $entry, array $installed)
+    protected function installed(array $entry, array $installedVocabularies)
     {
         $namespace = $entry['namespace'];
         $match = null;
-        foreach ($installed as $vocabulary) {
+        foreach ($installedVocabularies as $vocabulary) {
             if (mb_strtolower($vocabulary->namespaceUri()) === mb_strtolower($namespace)) {
                 $match = $vocabulary;
                 break;

@@ -8,10 +8,11 @@
  */
 $omekaDir = getenv('OMEKA_DIR') ?: dirname(__DIR__, 3);
 if (!is_file("$omekaDir/vendor/autoload.php")) {
-    fwrite(STDERR, "Omeka S not found at $omekaDir; set OMEKA_DIR to an Omeka S install with its dependencies installed.\n");
-    exit(1);
+    fail("Omeka S not found at $omekaDir; set OMEKA_DIR to an Omeka S install with its dependencies installed.");
 }
 require "$omekaDir/vendor/autoload.php";
+// The module's src/ is autoloaded only inside Omeka.
+require dirname(__DIR__) . '/src/PlainText.php';
 require __DIR__ . '/Repo.php';
 require __DIR__ . '/ImportCheck.php';
 require __DIR__ . '/Download.php';
@@ -20,6 +21,15 @@ $repo = new VocabularyLibrary\Scripts\Repo(dirname(__DIR__));
 // Omeka\Module is not autoloadable, so read its VERSION constant directly.
 preg_match("/const VERSION = '([^']+)'/", file_get_contents("$omekaDir/application/Module.php"), $match);
 $omekaVersion = $match[1];
+
+/**
+ * Writes the message to standard error and exits with an error.
+ */
+function fail($message)
+{
+    fwrite(STDERR, "$message\n");
+    exit(1);
+}
 
 /**
  * Positional arguments: those not starting with "--".

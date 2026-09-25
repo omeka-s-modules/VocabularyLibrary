@@ -27,8 +27,7 @@ $check = new ImportCheck;
 $sources = $repo->sources();
 $only = positionalArgs($argv);
 foreach (array_diff($only, array_keys($sources)) as $unknown) {
-    fwrite(STDERR, "Unknown slug: $unknown\n");
-    exit(1);
+    fail("Unknown slug: $unknown");
 }
 
 $pending = [];
