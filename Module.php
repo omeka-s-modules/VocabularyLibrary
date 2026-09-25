@@ -18,15 +18,15 @@ class Module extends AbstractModule
     {
         // Point to the library from core's Import vocabulary page. The page
         // has no event of its own, so a notice is added before the layout
-        // renders its messages. Only on a GET: after a POST, core redirects,
-        // and the notice would show on the next page.
+        // renders its messages. The layout renders only when the page shows,
+        // including after a failed import, and not when core redirects after
+        // a successful one.
         $sharedEventManager->attach(
             'Omeka\Controller\Admin\Vocabulary',
             'view.layout',
             function (Event $event) {
                 $view = $event->getTarget();
                 if ('import' !== $view->params()->fromRoute('action')
-                    || !$this->getServiceLocator()->get('Request')->isGet()
                     || !$view->userIsAllowed('VocabularyLibrary\Controller\Admin\Index', 'browse')
                 ) {
                     return;

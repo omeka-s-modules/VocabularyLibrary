@@ -7,7 +7,7 @@
  * Deletes the entry from scripts/sources.json and its file, and records the
  * slug and the reason in scripts/excluded.json, so the slug stays reserved
  * and is never reused for another vocabulary: the module's URLs use it. Then
- * runs build.php.
+ * runs build.php; if the build fails, all of that is undone.
  */
 require __DIR__ . '/bootstrap.php';
 
@@ -22,6 +22,11 @@ if (!isset($sources[$slug])) {
 
 $entry = $sources[$slug];
 $excluded = $repo->excluded();
+[$sourcesBefore, $excludedBefore] = [$sources, $excluded];
+$files = [];
+foreach ($repo->files($slug) as $file) {
+    $files[$file] = file_get_contents($file);
+}
 $excluded[] = [
     'slug' => $slug,
     'title' => $entry['title'] ?? $repo->vocabularies()[$slug]['title'] ?? null,
@@ -31,12 +36,20 @@ $excluded[] = [
     'excluded' => $reason,
 ];
 unset($sources[$slug]);
-foreach ($repo->files($slug) as $file) {
+foreach (array_keys($files) as $file) {
     unlink($file);
 }
 $repo->writeSources($sources);
 $repo->writeExcluded($excluded);
-echo "Removed $slug.\n";
 
 passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/build.php'), $status);
-exit($status);
+if ($status !== 0) {
+    // Leave the collection as it was.
+    foreach ($files as $file => $data) {
+        file_put_contents($file, $data);
+    }
+    $repo->writeSources($sourcesBefore);
+    $repo->writeExcluded($excludedBefore);
+    fail("Not removed: fix the problems above and try again.");
+}
+echo "Removed $slug.\n";

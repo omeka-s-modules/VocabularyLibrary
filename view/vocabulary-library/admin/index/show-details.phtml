@@ -1,25 +1,6 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
-$paragraphs = array_filter(explode("\n\n", (string) $entry['description']), 'strlen');
-// About 200 characters of the description show, ending with a sentence where
-// one ends in time; the rest continues under Full description. A first
-// sentence much longer than that is cut at a word.
-$excerpt = null;
-$rest = [];
-if ($paragraphs) {
-    $sentences = preg_split('/(?<=[.!?])\s+(?=[\p{Lu}\p{N}"“(])/u', array_shift($paragraphs));
-    $excerpt = array_shift($sentences);
-    while ($sentences && mb_strlen($excerpt . ' ' . $sentences[0]) <= 200) {
-        $excerpt .= ' ' . array_shift($sentences);
-    }
-    if (mb_strlen($excerpt) > 250) {
-        $cut = mb_strrpos(mb_substr($excerpt, 0, 200), ' ') ?: 200;
-        array_unshift($sentences, '…' . ltrim(mb_substr($excerpt, $cut)));
-        $excerpt = rtrim(mb_substr($excerpt, 0, $cut)) . '…';
-    }
-    $rest = array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs);
-}
 // Publisher text arrives as plain text: the build cleans the description and
 // license, and the controller the term labels and comments.
 $license = $entry['license'];

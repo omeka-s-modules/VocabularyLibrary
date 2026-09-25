@@ -21,7 +21,8 @@
  * Ontology Design Patterns).
  *
  * Refuses a slug already used or excluded, a prefix already used or invalid,
- * and a namespace already in the collection in any #//, http/https form. On
+ * and a namespace already in the collection or excluded, in any #//,
+ * http/https form. On
  * success, writes the entry to scripts/sources.json and stores the file, then
  * runs build.php; if the build fails, both are undone.
  */
@@ -49,7 +50,7 @@ $url = $positional[0] ?? null;
 if (count($positional) !== 1 || !preg_match('#^https?://#', $url)) {
     fail(USAGE);
 }
-$tags = array_values(array_filter(array_map('trim', explode(',', (string) option($argv, 'tags'))), 'strlen'));
+$tags = array_values(array_unique(array_filter(array_map('trim', explode(',', (string) option($argv, 'tags'))), 'strlen')));
 $knownTags = array_keys($repo->tags());
 if (!$tags || count($tags) > Repo::MAX_TAGS || array_diff($tags, $knownTags)) {
     fail('Give one to three tags with --tags=, from: ' . implode(', ', $knownTags));
@@ -104,6 +105,9 @@ $sources = $repo->sources();
 $excluded = [];
 foreach ($repo->excluded() as $record) {
     $excluded[$record['slug']] = $record['excluded'];
+    if (Repo::normalizedNamespace($record['namespace']) === Repo::normalizedNamespace($namespace)) {
+        fail("The namespace $namespace is in scripts/excluded.json as \"{$record['slug']}\": {$record['excluded']}\nRemove it from there first to add it again.");
+    }
 }
 // The namespace the build found to import can differ from the curated one
 // only in its #// or http/https form, which the comparison ignores.

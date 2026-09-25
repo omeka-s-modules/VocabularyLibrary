@@ -10,6 +10,14 @@
     };
 
     /**
+     * A value the object has of its own, so a key such as "constructor"
+     * doesn't find what every object inherits.
+     */
+    const own = function (object, key) {
+        return object && Object.prototype.hasOwnProperty.call(object, key) ? object[key] : undefined;
+    };
+
+    /**
      * The library page: filters, sorting and term search over the rows the
      * page already has. The markup, including every message, is in
      * browse.phtml; this only hides, reorders and fills in rows.
@@ -38,7 +46,7 @@
             rows.forEach(function (row) {
                 // Matches held from the last term search, narrowed to what is
                 // typed now, so rows never show terms from an earlier query.
-                const terms = (termMatches && termMatches[row.dataset.slug] || []).filter(term => fold(term).includes(query));
+                const terms = (own(termMatches, row.dataset.slug) || []).filter(term => fold(term).includes(query));
                 let visible = !query || searchText.get(row).includes(query) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
@@ -135,6 +143,13 @@
             apply();
         });
 
+        // Core's expand toggle names each link "Expand" or "Collapse". The
+        // sidebar's toggles have visible text, which names them better, and
+        // aria-expanded already says which state they're in.
+        $(document).on('o:expanded o:collapsed', '.vocabulary-library-more > a, .vocabulary-library-terms > a', function () {
+            $(this).removeAttr('aria-label title');
+        });
+
         // Move focus into the details sidebar when it opens.
         $(document).on('o:sidebar-content-loaded', '.sidebar', function () {
             $(this).find('.vocabulary-library-details-title').trigger('focus');
@@ -158,7 +173,7 @@
         const reserved = warnings.find('.vocabulary-library-prefix-reserved');
         const check = function () {
             const prefix = input.value.trim();
-            const holder = installed[prefix.toLowerCase()];
+            const holder = own(installed, prefix.toLowerCase());
             taken.prop('hidden', !holder);
             taken.find('.vocabulary-library-prefix-holder').text(holder || '');
             reserved.prop('hidden', !/^o(-|$)/.test(prefix));

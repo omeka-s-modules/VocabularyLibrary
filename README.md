@@ -133,7 +133,8 @@ These scripts run `build.php` themselves. After editing
 diff and commit. For each release, list in the release notes the vocabularies
 whose files changed, as `update.php` reports them, so that administrators know
 which vocabularies to compare. Slugs are permanent once released, because they
-are in the module's URLs. A removed slug stays reserved in `excluded.json`.
+are in the module's URLs. A vocabulary in `excluded.json` stays out: the build
+refuses its slug and its namespace.
 
 # Copyright
 

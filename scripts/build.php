@@ -12,14 +12,16 @@
  * Nothing is written if any entry has a problem: a file that does not parse,
  * imports nothing, or breaks one of Omeka's column limits; a slug with no
  * file or several; a stored HTML file; a missing or empty title; an invalid,
- * reserved or duplicate prefix; a duplicate namespace; or missing or unknown
- * tags. Each problem is listed and the script exits non-zero.
+ * reserved or duplicate prefix; a duplicate namespace; a slug or namespace in
+ * scripts/excluded.json; or missing, unknown or repeated tags. Each problem is
+ * listed and the script exits non-zero.
  */
 require __DIR__ . '/bootstrap.php';
 
 use Omeka\Entity\Vocabulary;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
+use VocabularyLibrary\PlainText;
 use VocabularyLibrary\Scripts\Repo;
 
 $check = new ImportCheck;
@@ -30,11 +32,20 @@ $problems = [];
 $index = [];
 $prefixes = [];
 $namespaces = [];
+// Vocabularies left out or removed stay out, under any slug.
+$excluded = $excludedNamespaces = [];
+foreach ($repo->excluded() as $record) {
+    $excluded[$record['slug']] = $record['excluded'];
+    $excludedNamespaces[Repo::normalizedNamespace($record['namespace'])] = $record['slug'];
+}
 
 foreach ($sources as $slug => $entry) {
     $slug = (string) $slug;
     if (!preg_match(Repo::SLUG_PATTERN, $slug)) {
         $problems[] = "$slug: slug must match " . Repo::SLUG_PATTERN;
+    }
+    if (isset($excluded[$slug])) {
+        $problems[] = "$slug: in scripts/excluded.json: {$excluded[$slug]}";
     }
     foreach (['download', 'namespace', 'prefix'] as $field) {
         if (empty($entry[$field])) {
@@ -47,6 +58,9 @@ foreach ($sources as $slug => $entry) {
     } else {
         foreach (array_diff($entryTags, array_keys($tags)) as $unknown) {
             $problems[] = "$slug: unknown tag \"$unknown\" (tags are in config/module.config.php)";
+        }
+        if (count(array_unique($entryTags)) !== count($entryTags)) {
+            $problems[] = "$slug: a tag is listed twice";
         }
     }
     if (isset($entry['copy_from']) && !in_array($entry['copy_from'], Repo::COPY_SOURCES, true)) {
@@ -85,7 +99,11 @@ foreach ($sources as $slug => $entry) {
     if (isset($entry['title']) && trim($entry['title']) === '') {
         $problems[] = "$slug: title is empty";
     }
-    $namespaces[Repo::normalizedNamespace($result['namespace'])][] = $slug;
+    $normalized = Repo::normalizedNamespace($result['namespace']);
+    $namespaces[$normalized][] = $slug;
+    if (isset($excludedNamespaces[$normalized])) {
+        $problems[] = "$slug: the namespace is in scripts/excluded.json as \"{$excludedNamespaces[$normalized]}\"";
+    }
 
     // The label alone where it differs from the local name, to keep the
     // index small: many files have no labels, so Omeka uses the local name.
@@ -93,7 +111,9 @@ foreach ($sources as $slug => $entry) {
     foreach (['classes', 'properties'] as $kind) {
         foreach ($result['members'][$kind] as $localName => $member) {
             $localName = (string) $localName;
-            $label = (string) $member['label'];
+            // As the sidebar shows it: without markup, and with whitespace
+            // collapsed, so a search for several words matches.
+            $label = trim(preg_replace('/\s+/u', ' ', PlainText::from($member['label'])));
             $terms[] = $label === $localName ? $localName : [$localName, $label];
         }
     }

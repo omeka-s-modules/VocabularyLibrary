@@ -14,10 +14,8 @@ $browseUrl = $this->url('admin/vocabulary-library');
 <div id="page-actions">
     <?php echo $this->hyperlink($translate('Back to the library'), $browseUrl, ['class' => 'button']); ?>
 </div>
-<p>
-    <?php echo $translate('Omeka already has a vocabulary with this namespace.'); ?>
-    <?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed]); ?>
-</p>
+<p><?php echo $translate('Omeka already has a vocabulary with this namespace.'); ?></p>
+<?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed]); ?>
 
 <?php else: ?>
 

@@ -152,10 +152,22 @@ class Repo
         file_put_contents($this->path('data/term-index.json'), "{\n" . implode(",\n", $lines) . "\n}\n");
     }
 
+    /**
+     * @return mixed The decoded file, or null if there is none. A file that
+     *   doesn't parse, such as one with a mistake from a hand edit, throws
+     *   rather than reading as empty and being written back that way.
+     */
     public function readJson($relative)
     {
         $path = $this->path($relative);
-        return is_file($path) ? json_decode(file_get_contents($path), true) : null;
+        if (!is_file($path)) {
+            return null;
+        }
+        try {
+            return json_decode(file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
+        } catch (\JsonException $e) {
+            throw new \RuntimeException(sprintf('%s is not valid JSON: %s', $relative, $e->getMessage()), 0, $e);
+        }
     }
 
     /**

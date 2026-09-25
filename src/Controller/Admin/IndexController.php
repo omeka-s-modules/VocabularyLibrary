@@ -24,8 +24,10 @@ class IndexController extends AbstractActionController
     const TERM_MATCHES_SHOWN = 3;
 
     /**
-     * About where a comment prefilled from the description is cut.
+     * About where the description is cut: in the details sidebar, and in the
+     * comment the import form prefills from it.
      */
+    const EXCERPT_LENGTH = 200;
     const COMMENT_LENGTH = 500;
 
     const CONTENT_TYPES = [
@@ -91,7 +93,8 @@ class IndexController extends AbstractActionController
         $view->setVariable('tags', $this->tags);
         $view->setVariable('tagCounts', $tagCounts);
         $view->setVariable('languageCounts', $languageCounts);
-        $view->setVariable('query', $this->params()->fromQuery());
+        // Only single values: a filter given as a list isn't one this page sets.
+        $view->setVariable('query', array_filter($this->params()->fromQuery(), 'is_string'));
         $view->setVariable('termQueryMin', self::TERM_QUERY_MIN);
         return $view;
     }
@@ -119,6 +122,9 @@ class IndexController extends AbstractActionController
         $view->setTerminal(true);
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
+        [$excerpt, $rest] = $this->excerpt($entry['description'], self::EXCERPT_LENGTH);
+        $view->setVariable('excerpt', $excerpt);
+        $view->setVariable('rest', $rest);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
         $installedVocabularies = $this->installedVocabularies();
         $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
@@ -146,7 +152,7 @@ class IndexController extends AbstractActionController
         $form->setData([
             'o:prefix' => $entry['prefix'],
             'o:label' => $entry['title'],
-            'o:comment' => $this->commentExcerpt($entry['description']),
+            'o:comment' => $this->excerpt($entry['description'], self::COMMENT_LENGTH)[0] ?? '',
             'lang' => $this->defaultLanguage($entry),
         ]);
         $view->setVariable('form', $form);
@@ -279,7 +285,8 @@ class IndexController extends AbstractActionController
      */
     public function termSearchAction()
     {
-        $query = trim((string) $this->params()->fromQuery('q'));
+        $query = $this->params()->fromQuery('q');
+        $query = is_string($query) ? trim($query) : '';
         if (mb_strlen($query) < self::TERM_QUERY_MIN || mb_strlen($query) > self::TERM_QUERY_MAX) {
             return new JsonModel(['matches' => new \stdClass]);
         }
@@ -376,19 +383,35 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * The description's first paragraph, cut near COMMENT_LENGTH characters
-     * at the end of a sentence. Some descriptions run to many thousands of
-     * characters, and core shows the comment above the vocabulary's terms.
+     * The start of the description, and the rest. The start is its first
+     * paragraph cut near $length characters, ending with a sentence where one
+     * ends in time; a first sentence much longer than that is cut at a word,
+     * and the rest continues from there. Some descriptions run to many
+     * thousands of characters.
+     *
+     * A sentence ends at ".", "?" or "!" followed by a capital, a digit, a
+     * quote or a parenthesis, so abbreviations such as "e.g." don't end one.
+     *
+     * @return array [the start, or null if there is no description, the rest
+     *   as paragraphs]
      */
-    protected function commentExcerpt($description)
+    protected function excerpt($description, $length)
     {
-        $paragraph = explode("\n\n", (string) $description)[0];
-        if (mb_strlen($paragraph) <= self::COMMENT_LENGTH) {
-            return $paragraph;
+        $paragraphs = array_filter(explode("\n\n", (string) $description), 'strlen');
+        if (!$paragraphs) {
+            return [null, []];
         }
-        $cut = mb_substr($paragraph, 0, self::COMMENT_LENGTH);
-        $end = max(mb_strrpos($cut, '. ') ?: 0, mb_strrpos($cut, '? ') ?: 0, mb_strrpos($cut, '! ') ?: 0);
-        return $end ? mb_substr($cut, 0, $end + 1) : rtrim($cut) . '…';
+        $sentences = preg_split('/(?<=[.!?])\s+(?=[\p{Lu}\p{N}"“(])/u', array_shift($paragraphs));
+        $excerpt = array_shift($sentences);
+        while ($sentences && mb_strlen($excerpt . ' ' . $sentences[0]) <= $length) {
+            $excerpt .= ' ' . array_shift($sentences);
+        }
+        if (mb_strlen($excerpt) > $length * 1.25) {
+            $cut = mb_strrpos(mb_substr($excerpt, 0, $length), ' ') ?: $length;
+            array_unshift($sentences, '…' . ltrim(mb_substr($excerpt, $cut)));
+            $excerpt = rtrim(mb_substr($excerpt, 0, $cut)) . '…';
+        }
+        return [$excerpt, array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs)];
     }
 
     /**
