@@ -28,6 +28,9 @@
         const tbody = table.children('tbody');
         const rows = tbody.children('tr').get();
         const empty = $('.vocabulary-library-empty');
+        const searchTermsButton = empty.find('.vocabulary-library-search-terms');
+        const clearFiltersButton = empty.find('.vocabulary-library-clear-filters');
+        const filterNames = ['tag', 'lang', 'show'];
         const shown = $('.vocabulary-library-shown');
         const termItem = document.getElementById('vocabulary-library-term-item').content.firstElementChild;
         const allItem = document.getElementById('vocabulary-library-term-all').content.firstElementChild;
@@ -95,6 +98,11 @@
             shown.text(count);
             table.prop('hidden', count === 0);
             empty.prop('hidden', count > 0);
+            // When nothing matches, offer to search terms too, if the query
+            // is long enough for a term search, and to clear the filters,
+            // keeping the query.
+            searchTermsButton.prop('hidden', form.terms.checked || form.q.value.trim().length < termQueryMin);
+            clearFiltersButton.prop('hidden', filterNames.every(name => form[name].value === ''));
             saveState();
         };
 
@@ -162,6 +170,21 @@
         $(form.terms).on('change', searchTerms);
         $(form.tag).add(form.lang).add(form.show).on('change', apply);
         $(form.sort_by).add(form.sort_order).on('change', sort);
+
+        // The empty state's buttons change the controls they stand for, and
+        // move focus there, since the buttons hide once something matches.
+        searchTermsButton.on('click', function () {
+            form.terms.checked = true;
+            form.terms.focus();
+            searchTerms();
+        });
+        clearFiltersButton.on('click', function () {
+            filterNames.forEach(function (name) {
+                form[name].value = '';
+            });
+            form.tag.focus();
+            apply();
+        });
 
         // A tag in the details sidebar filters by that tag in place. Its link
         // also works without the script.

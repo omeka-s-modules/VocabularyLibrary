@@ -148,8 +148,13 @@ $selected = function ($name, $value) use ($query) {
 <template id="vocabulary-library-term-item"><li></li></template>
 <template id="vocabulary-library-term-all"><li class="vocabulary-library-term-all"><a href="#" class="sidebar-content"></a></li></template>
 
+<?php // Ways to widen a search that found nothing; the script shows those that apply. ?>
 <div class="no-resources vocabulary-library-empty" hidden>
     <p><?php echo $translate('No vocabularies match.'); ?></p>
+    <div class="vocabulary-library-empty-actions">
+        <button type="button" class="vocabulary-library-search-terms" hidden><?php echo $translate('Also search class and property names'); ?></button>
+        <button type="button" class="vocabulary-library-clear-filters" hidden><?php echo $translate('Clear filters'); ?></button>
+    </div>
 </div>
 
 <div class="sidebar">

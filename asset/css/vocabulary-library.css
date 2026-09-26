@@ -57,6 +57,14 @@
     margin-left: 0;
 }
 
+/* The empty state's buttons, centered under its message as core centers it. */
+.vocabulary-library-empty-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
 .vocabulary-library-count {
     margin: 0 0 12px;
     font-size: 13px;
