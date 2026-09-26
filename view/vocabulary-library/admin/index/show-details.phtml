@@ -72,10 +72,20 @@ $file = basename($entry['file']);
     <div class="value"><?php echo $this->hyperlink($file, $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug]), ['title' => $translate('Download file')]); ?></div>
 </div>
 
+<?php if ($classes || $properties): ?>
+<?php // Filled in by the script, and from a term search's "All matching terms". ?>
+<div class="vocabulary-library-term-filter">
+    <input type="text" value="<?php echo $escape($termFilter); ?>"
+        placeholder="<?php echo $escape($translate('Filter terms')); ?>"
+        aria-label="<?php echo $escape($translate('Filter terms')); ?>">
+    <p class="vocabulary-library-term-filter-empty" hidden><?php echo $translate('No terms match.'); ?></p>
+</div>
+<?php endif; ?>
+
 <?php foreach ($terms as $group): ?>
 <?php if ($group['members']): ?>
 <div class="meta-group vocabulary-library-terms">
-    <a href="#" class="expand" aria-expanded="false"><h4><?php echo $escape(sprintf('%s (%s)', $group['label'], count($group['members']))); ?></h4></a>
+    <a href="#" class="expand" aria-expanded="false"><h4 data-label="<?php echo $escape($group['label']); ?>"><?php echo $escape(sprintf('%s (%s)', $group['label'], count($group['members']))); ?></h4></a>
     <div class="collapsible">
         <?php foreach ($group['members'] as $localName => $member): ?>
         <div class="value">

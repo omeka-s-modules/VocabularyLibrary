@@ -39,7 +39,7 @@ $selected = function ($name, $value) use ($query) {
 <form id="vocabulary-library-filters" class="browse-controls" role="search"
     data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>"
     data-term-query-min="<?php echo $termQueryMin; ?>"
-    data-term-more="<?php echo $escape($translate('and %s more')); ?>">
+    data-term-all="<?php echo $escape($translate('All matching terms (%s)')); ?>">
     <div class="vocabulary-library-search">
         <input type="text" name="q"
             value="<?php echo $escape($query['q'] ?? ''); ?>"
@@ -144,8 +144,9 @@ $selected = function ($name, $value) use ($query) {
     </tbody>
 </table>
 
-<?php // A matching term, filled in by the script. ?>
+<?php // A matching term, and a link to all of them in the details sidebar; filled in by the script. ?>
 <template id="vocabulary-library-term-item"><li></li></template>
+<template id="vocabulary-library-term-all"><li class="vocabulary-library-term-all"><a href="#" class="sidebar-content"></a></li></template>
 
 <div class="no-resources vocabulary-library-empty" hidden>
     <p><?php echo $translate('No vocabularies match.'); ?></p>

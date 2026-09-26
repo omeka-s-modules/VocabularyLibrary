@@ -122,6 +122,10 @@ class IndexController extends AbstractActionController
         $view->setTerminal(true);
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
+        // Text to filter the terms by, when the sidebar opens from a term
+        // search's matches.
+        $filter = $this->params()->fromQuery('filter');
+        $view->setVariable('termFilter', is_string($filter) ? trim($filter) : '');
         [$excerpt, $rest] = $this->excerpt($entry['description'], self::EXCERPT_LENGTH);
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
@@ -283,8 +287,8 @@ class IndexController extends AbstractActionController
      * one with a word that starts with it ("date" in "Date created" or
      * "startDate"), then any other; within a rank, file order.
      *
-     * @return JsonModel {"matches": {slug: {"terms": ["Label
-     *   (prefix:localName)", …], "count": number}}}: the best
+     * @return JsonModel {"matches": {slug: {"terms": [{"label": …, "term":
+     *   "prefix:localName"}, …], "count": number}}}: the best
      *   TERM_MATCHES_SHOWN terms per vocabulary, and how many match in all.
      *   Terms are written as Omeka writes them, with the library's default
      *   prefix.
@@ -320,7 +324,7 @@ class IndexController extends AbstractActionController
                 }
                 // A term with no label in its file shows its local name, as
                 // Omeka labels it on import.
-                $found[] = [$rank, count($found), sprintf('%s (%s:%s)', $label, $prefix, $localName)];
+                $found[] = [$rank, count($found), ['label' => $label, 'term' => "$prefix:$localName"]];
             }
             if ($found) {
                 sort($found);

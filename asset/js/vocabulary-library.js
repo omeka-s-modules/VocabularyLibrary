@@ -30,13 +30,9 @@
         const empty = $('.vocabulary-library-empty');
         const shown = $('.vocabulary-library-shown');
         const termItem = document.getElementById('vocabulary-library-term-item').content.firstElementChild;
-        // A list item for a matching term, or for how many more match.
-        const item = function (text, more) {
-            const li = termItem.cloneNode(true);
-            li.textContent = text;
-            li.classList.toggle('vocabulary-library-term-more', more);
-            return li;
-        };
+        const allItem = document.getElementById('vocabulary-library-term-all').content.firstElementChild;
+        // A matching term's text, as Omeka writes terms.
+        const termText = match => match.label + ' (' + match.term + ')';
         const searchText = new Map(rows.map(row => [row, fold(row.dataset.search)]));
         // Term search needs as many characters as the server asks for.
         const termQueryMin = filters.data('term-query-min');
@@ -58,11 +54,11 @@
                 // Matches held from the last term search, narrowed to what is
                 // typed now, so rows never show terms from an earlier query.
                 const found = own(termMatches, row.dataset.slug);
-                const terms = (found ? found.terms : []).filter(term => fold(term).includes(query));
-                // How many more match, while the terms shown are for exactly
+                const terms = (found ? found.terms : []).filter(match => fold(termText(match)).includes(query));
+                // How many match in all, while the terms shown are for exactly
                 // this query rather than narrowed from an earlier one. The
                 // server compares accents, so this compares the text as typed.
-                const more = found && termQuery === form.q.value.trim().toLowerCase() ? found.count - found.terms.length : 0;
+                const all = found && termQuery === form.q.value.trim().toLowerCase() ? found.count : 0;
                 let visible = !query || searchText.get(row).includes(query) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
@@ -78,9 +74,20 @@
                 row.hidden = !visible;
                 const matches = row.querySelector('.vocabulary-library-term-matches');
                 matches.hidden = !(visible && terms.length);
-                const items = terms.map(term => item(term, false));
-                if (more > 0) {
-                    items.push(item(filters.data('term-more').replace('%s', more), true));
+                const items = terms.map(function (match) {
+                    const li = termItem.cloneNode(true);
+                    li.textContent = termText(match);
+                    return li;
+                });
+                if (all) {
+                    // All of them in the details sidebar, filtered by the
+                    // query.
+                    const li = allItem.cloneNode(true);
+                    const link = li.firstElementChild;
+                    const detailsUrl = row.querySelector('.vocabulary-library-title > a.sidebar-content').dataset.sidebarContentUrl;
+                    link.textContent = filters.data('term-all').replace('%s', all);
+                    link.dataset.sidebarContentUrl = detailsUrl + '?' + new URLSearchParams({filter: form.q.value.trim()});
+                    items.push(li);
                 }
                 matches.querySelector('.vocabulary-library-term-list').replaceChildren(...items);
                 count += visible ? 1 : 0;
@@ -171,15 +178,77 @@
             $(this).removeAttr('aria-label title');
         });
 
-        // Move focus into the details sidebar when it opens.
+        // When the details sidebar opens, set up its term filter and move
+        // focus into it: to the term filter when it opened from "All matching
+        // terms", so the matches are in view, otherwise to the title. Core
+        // keeps the sidebar's content hidden, which can't take focus, until
+        // just after this event, so focusing waits for the next frame, when
+        // the browser has applied that.
         $(document).on('o:sidebar-content-loaded', '.sidebar', function () {
-            $(this).find('.vocabulary-library-details-title').trigger('focus');
+            const sidebar = this;
+            initTermFilter(sidebar);
+            requestAnimationFrame(function () {
+                const filter = sidebar.querySelector('.vocabulary-library-term-filter input');
+                if (filter && filter.value !== '') {
+                    filter.scrollIntoView({block: 'start'});
+                    filter.focus({preventScroll: true});
+                    return;
+                }
+                const title = sidebar.querySelector('.vocabulary-library-details-title');
+                if (title) {
+                    title.focus();
+                }
+            });
         });
 
         // The template has already set the controls from the URL.
         sort();
         apply();
         searchTerms();
+    };
+
+    /**
+     * The details sidebar's term filter: narrows the class and property lists
+     * to terms whose label or prefixed name contains the text, as the table's
+     * search compares text, and opens the lists while it has any. It starts
+     * with the text from a term search's "All matching terms", if any.
+     */
+    const initTermFilter = function (sidebar) {
+        const input = sidebar.querySelector('.vocabulary-library-term-filter input');
+        if (!input) {
+            return;
+        }
+        const empty = sidebar.querySelector('.vocabulary-library-term-filter-empty');
+        const groups = [...sidebar.querySelectorAll('.vocabulary-library-terms')].map(group => ({
+            group: group,
+            toggle: group.querySelector(':scope > a'),
+            heading: group.querySelector('h4'),
+            values: [...group.querySelectorAll('.value')].map(value => ({
+                value: value,
+                text: fold(value.querySelector('.vocabulary-library-term-label').textContent + ' ' + value.querySelector('.field-term').textContent),
+            })),
+        }));
+        const filter = function () {
+            const query = fold(input.value.trim());
+            let total = 0;
+            groups.forEach(function (group) {
+                let count = 0;
+                group.values.forEach(function (term) {
+                    term.value.hidden = query !== '' && !term.text.includes(query);
+                    count += term.value.hidden ? 0 : 1;
+                });
+                group.group.hidden = count === 0;
+                group.heading.textContent = group.heading.dataset.label + ' (' + count + ')';
+                if (query && count && group.toggle.classList.contains('expand')) {
+                    group.toggle.classList.replace('expand', 'collapse');
+                    group.toggle.setAttribute('aria-expanded', 'true');
+                }
+                total += count;
+            });
+            empty.hidden = !(query && total === 0);
+        };
+        input.addEventListener('input', filter);
+        filter();
     };
 
     /**
