@@ -15,9 +15,11 @@ require "$omekaDir/vendor/autoload.php";
 require dirname(__DIR__) . '/src/PlainText.php';
 
 // A script that stops on an error says why, whatever the CLI's display
-// settings.
+// settings: the message alone for the errors the scripts raise on purpose,
+// such as a file that isn't valid JSON, and everything PHP knows for any
+// other, such as a bug.
 set_exception_handler(function (Throwable $e) {
-    fail($e->getMessage());
+    fail($e instanceof RuntimeException ? $e->getMessage() : (string) $e);
 });
 require __DIR__ . '/Repo.php';
 require __DIR__ . '/ImportCheck.php';

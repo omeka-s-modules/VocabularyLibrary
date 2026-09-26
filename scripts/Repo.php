@@ -91,6 +91,22 @@ class Repo
         return $this->readJson('scripts/excluded.json') ?: [];
     }
 
+    /**
+     * The excluded vocabularies by slug and by namespace, so a vocabulary
+     * taken down stays out under any slug.
+     *
+     * @return array [slug => record, normalized namespace => record]
+     */
+    public function excludedIndex()
+    {
+        $bySlug = $byNamespace = [];
+        foreach ($this->excluded() as $record) {
+            $bySlug[$record['slug']] = $record;
+            $byNamespace[self::normalizedNamespace($record['namespace'])] = $record;
+        }
+        return [$bySlug, $byNamespace];
+    }
+
     public function writeExcluded(array $excluded)
     {
         usort($excluded, function ($a, $b) {

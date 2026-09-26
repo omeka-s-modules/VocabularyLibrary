@@ -33,11 +33,7 @@ $index = [];
 $prefixes = [];
 $namespaces = [];
 // Vocabularies left out or removed stay out, under any slug.
-$excluded = $excludedNamespaces = [];
-foreach ($repo->excluded() as $record) {
-    $excluded[$record['slug']] = $record['excluded'];
-    $excludedNamespaces[Repo::normalizedNamespace($record['namespace'])] = $record['slug'];
-}
+[$excluded, $excludedNamespaces] = $repo->excludedIndex();
 
 foreach ($sources as $slug => $entry) {
     $slug = (string) $slug;
@@ -45,7 +41,7 @@ foreach ($sources as $slug => $entry) {
         $problems[] = "$slug: slug must match " . Repo::SLUG_PATTERN;
     }
     if (isset($excluded[$slug])) {
-        $problems[] = "$slug: in scripts/excluded.json: {$excluded[$slug]}";
+        $problems[] = "$slug: in scripts/excluded.json: {$excluded[$slug]['excluded']}";
     }
     foreach (['download', 'namespace', 'prefix'] as $field) {
         if (empty($entry[$field])) {
@@ -106,7 +102,7 @@ foreach ($sources as $slug => $entry) {
     $normalized = Repo::normalizedNamespace($result['namespace']);
     $namespaces[$normalized][] = $slug;
     if (isset($excludedNamespaces[$normalized])) {
-        $problems[] = "$slug: the namespace is in scripts/excluded.json as \"{$excludedNamespaces[$normalized]}\"";
+        $problems[] = "$slug: the namespace is in scripts/excluded.json as \"{$excludedNamespaces[$normalized]['slug']}\"";
     }
 
     // The label alone where it differs from the local name, to keep the
@@ -115,8 +111,9 @@ foreach ($sources as $slug => $entry) {
     foreach (['classes', 'properties'] as $kind) {
         foreach ($result['members'][$kind] as $localName => $member) {
             $localName = (string) $localName;
-            // As the sidebar shows it: without markup, and with whitespace
-            // collapsed, so a search for several words matches.
+            // Without markup, as the sidebar shows it, and with whitespace
+            // collapsed, as the browser shows it, so a search for several
+            // words matches.
             $label = trim(preg_replace('/\s+/u', ' ', PlainText::from($member['label'])));
             $terms[] = $label === $localName ? $localName : [$localName, $label];
         }

@@ -102,12 +102,9 @@ if ($failure = ImportCheck::failure($result)) {
 $namespace = $result['namespace'];
 
 $sources = $repo->sources();
-$excluded = [];
-foreach ($repo->excluded() as $record) {
-    $excluded[$record['slug']] = $record['excluded'];
-    if (Repo::normalizedNamespace($record['namespace']) === Repo::normalizedNamespace($namespace)) {
-        fail("The namespace $namespace is in scripts/excluded.json as \"{$record['slug']}\": {$record['excluded']}\nRemove it from there first to add it again.");
-    }
+[$excluded, $excludedNamespaces] = $repo->excludedIndex();
+if ($record = $excludedNamespaces[Repo::normalizedNamespace($namespace)] ?? null) {
+    fail("The namespace $namespace is in scripts/excluded.json as \"{$record['slug']}\": {$record['excluded']}\nRemove it from there first to add it again.");
 }
 // The namespace the build found to import can differ from the curated one
 // only in its #// or http/https form, which the comparison ignores.
@@ -140,7 +137,7 @@ if (isset($sources[$slug])) {
     fail("The slug \"$slug\" is already used. Pass another with --slug=.");
 }
 if (isset($excluded[$slug])) {
-    fail("The slug \"$slug\" is in scripts/excluded.json: {$excluded[$slug]}\nRemove it from there first to add it again.");
+    fail("The slug \"$slug\" is in scripts/excluded.json: {$excluded[$slug]['excluded']}\nRemove it from there first to add it again.");
 }
 
 $title = option($argv, 'title');

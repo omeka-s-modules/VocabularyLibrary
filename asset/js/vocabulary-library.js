@@ -60,8 +60,9 @@
                 const found = own(termMatches, row.dataset.slug);
                 const terms = (found ? found.terms : []).filter(term => fold(term).includes(query));
                 // How many more match, while the terms shown are for exactly
-                // this query rather than narrowed from an earlier one.
-                const more = found && termQuery === query ? found.count - found.terms.length : 0;
+                // this query rather than narrowed from an earlier one. The
+                // server compares accents, so this compares the text as typed.
+                const more = found && termQuery === form.q.value.trim().toLowerCase() ? found.count - found.terms.length : 0;
                 let visible = !query || searchText.get(row).includes(query) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
@@ -119,7 +120,7 @@
             termRequest = $.get(filters.data('term-search-url'), {q: query})
                 .done(function (data) {
                     termMatches = data.matches;
-                    termQuery = fold(query);
+                    termQuery = query.toLowerCase();
                     apply();
                 });
         };

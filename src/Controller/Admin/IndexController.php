@@ -296,7 +296,8 @@ class IndexController extends AbstractActionController
         if (mb_strlen($query) < self::TERM_QUERY_MIN || mb_strlen($query) > self::TERM_QUERY_MAX) {
             return new JsonModel(['matches' => new \stdClass]);
         }
-        $wordStart = '/(?:^|[^\p{L}\p{N}])' . preg_quote(mb_strtolower($query), '/') . '/u';
+        $lowerQuery = mb_strtolower($query);
+        $wordStart = '/(?:^|[^\p{L}\p{N}])' . preg_quote($lowerQuery, '/') . '/u';
         $index = json_decode(file_get_contents($this->dataDir . '/term-index.json'), true);
         $matches = [];
         foreach ($index as $slug => $terms) {
@@ -310,11 +311,9 @@ class IndexController extends AbstractActionController
                 if (mb_stripos($label, $query) === false && mb_stripos($localName, $query) === false) {
                     continue;
                 }
-                // Local names as words: startDate is "start date".
-                $words = mb_strtolower(preg_replace('/(?<=\p{Ll})(?=\p{Lu})/u', ' ', $localName));
-                if (mb_strtolower($label) === mb_strtolower($query) || mb_strtolower($localName) === mb_strtolower($query)) {
+                if (mb_strtolower($label) === $lowerQuery || mb_strtolower($localName) === $lowerQuery) {
                     $rank = 0;
-                } elseif (preg_match($wordStart, mb_strtolower($label)) || preg_match($wordStart, $words)) {
+                } elseif (preg_match($wordStart, $this->words($label)) || preg_match($wordStart, $this->words($localName))) {
                     $rank = 1;
                 } else {
                     $rank = 2;
@@ -505,6 +504,16 @@ class IndexController extends AbstractActionController
     protected function vocabularyUrl(VocabularyRepresentation $vocabulary)
     {
         return $this->url()->fromRoute('admin/default', ['controller' => 'vocabulary', 'action' => 'browse'], ['query' => ['namespace_uri' => $vocabulary->namespaceUri()]]);
+    }
+
+    /**
+     * Text as lowercase words, splitting names written in camel case:
+     * startDate, GrandSonOf and URLTemplate are "start date", "grand son of"
+     * and "url template".
+     */
+    protected function words($text)
+    {
+        return mb_strtolower(preg_replace('/(?<=\p{Ll})(?=\p{Lu})|(?<=\p{Lu})(?=\p{Lu}\p{Ll})/u', ' ', $text));
     }
 
     /**
