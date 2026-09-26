@@ -279,9 +279,15 @@ class IndexController extends AbstractActionController
     /**
      * Finds the vocabularies with a class or property matching the query.
      *
-     * @return JsonModel {"matches": {slug: ["Label (prefix:localName)", …]}},
-     *   with at most TERM_MATCHES_SHOWN terms per vocabulary. Terms are
-     *   written as Omeka writes them, with the library's default prefix.
+     * Terms are ranked: a label or local name that is the query itself, then
+     * one with a word that starts with it ("date" in "Date created" or
+     * "startDate"), then any other; within a rank, file order.
+     *
+     * @return JsonModel {"matches": {slug: {"terms": ["Label
+     *   (prefix:localName)", …], "count": number}}}: the best
+     *   TERM_MATCHES_SHOWN terms per vocabulary, and how many match in all.
+     *   Terms are written as Omeka writes them, with the library's default
+     *   prefix.
      */
     public function termSearchAction()
     {
@@ -290,6 +296,7 @@ class IndexController extends AbstractActionController
         if (mb_strlen($query) < self::TERM_QUERY_MIN || mb_strlen($query) > self::TERM_QUERY_MAX) {
             return new JsonModel(['matches' => new \stdClass]);
         }
+        $wordStart = '/(?:^|[^\p{L}\p{N}])' . preg_quote(mb_strtolower($query), '/') . '/u';
         $index = json_decode(file_get_contents($this->dataDir . '/term-index.json'), true);
         $matches = [];
         foreach ($index as $slug => $terms) {
@@ -297,17 +304,31 @@ class IndexController extends AbstractActionController
             if ($prefix === null) {
                 continue;
             }
+            $found = [];
             foreach ($terms as $term) {
                 [$localName, $label] = is_array($term) ? $term : [$term, $term];
                 if (mb_stripos($label, $query) === false && mb_stripos($localName, $query) === false) {
                     continue;
                 }
+                // Local names as words: startDate is "start date".
+                $words = mb_strtolower(preg_replace('/(?<=\p{Ll})(?=\p{Lu})/u', ' ', $localName));
+                if (mb_strtolower($label) === mb_strtolower($query) || mb_strtolower($localName) === mb_strtolower($query)) {
+                    $rank = 0;
+                } elseif (preg_match($wordStart, mb_strtolower($label)) || preg_match($wordStart, $words)) {
+                    $rank = 1;
+                } else {
+                    $rank = 2;
+                }
                 // A term with no label in its file shows its local name, as
                 // Omeka labels it on import.
-                $matches[$slug][] = sprintf('%s (%s:%s)', $label, $prefix, $localName);
-                if (count($matches[$slug]) === self::TERM_MATCHES_SHOWN) {
-                    break;
-                }
+                $found[] = [$rank, count($found), sprintf('%s (%s:%s)', $label, $prefix, $localName)];
+            }
+            if ($found) {
+                sort($found);
+                $matches[$slug] = [
+                    'terms' => array_column(array_slice($found, 0, self::TERM_MATCHES_SHOWN), 2),
+                    'count' => count($found),
+                ];
             }
         }
         return new JsonModel(['matches' => $matches ?: new \stdClass]);

@@ -29,11 +29,22 @@
         const rows = tbody.children('tr').get();
         const empty = $('.vocabulary-library-empty');
         const shown = $('.vocabulary-library-shown');
+        const termItem = document.getElementById('vocabulary-library-term-item').content.firstElementChild;
+        // A list item for a matching term, or for how many more match.
+        const item = function (text, more) {
+            const li = termItem.cloneNode(true);
+            li.textContent = text;
+            li.classList.toggle('vocabulary-library-term-more', more);
+            return li;
+        };
         const searchText = new Map(rows.map(row => [row, fold(row.dataset.search)]));
         // Term search needs as many characters as the server asks for.
         const termQueryMin = filters.data('term-query-min');
         const collator = new Intl.Collator(document.documentElement.lang || undefined, {sensitivity: 'base', numeric: true});
+        // Per vocabulary, the best few terms matching termQuery, and how many
+        // match in all.
         let termMatches = null;
+        let termQuery = null;
         let termRequest = null;
         let termTimer = null;
 
@@ -46,7 +57,11 @@
             rows.forEach(function (row) {
                 // Matches held from the last term search, narrowed to what is
                 // typed now, so rows never show terms from an earlier query.
-                const terms = (own(termMatches, row.dataset.slug) || []).filter(term => fold(term).includes(query));
+                const found = own(termMatches, row.dataset.slug);
+                const terms = (found ? found.terms : []).filter(term => fold(term).includes(query));
+                // How many more match, while the terms shown are for exactly
+                // this query rather than narrowed from an earlier one.
+                const more = found && termQuery === query ? found.count - found.terms.length : 0;
                 let visible = !query || searchText.get(row).includes(query) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
@@ -62,7 +77,11 @@
                 row.hidden = !visible;
                 const matches = row.querySelector('.vocabulary-library-term-matches');
                 matches.hidden = !(visible && terms.length);
-                matches.querySelector('.vocabulary-library-term-list').textContent = terms.join(', ');
+                const items = terms.map(term => item(term, false));
+                if (more > 0) {
+                    items.push(item(filters.data('term-more').replace('%s', more), true));
+                }
+                matches.querySelector('.vocabulary-library-term-list').replaceChildren(...items);
                 count += visible ? 1 : 0;
             });
             shown.text(count);
@@ -100,6 +119,7 @@
             termRequest = $.get(filters.data('term-search-url'), {q: query})
                 .done(function (data) {
                     termMatches = data.matches;
+                    termQuery = fold(query);
                     apply();
                 });
         };

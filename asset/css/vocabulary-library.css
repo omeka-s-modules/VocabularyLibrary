@@ -87,6 +87,18 @@
     color: #333;
 }
 
+/* One term per line, marked as core marks a cell's values. */
+.vocabulary-library-term-list {
+    margin: 0;
+    padding-left: 12px;
+    text-indent: 6px;
+    list-style-type: "—";
+}
+
+.vocabulary-library-term-more {
+    color: #676767;
+}
+
 .vocabulary-library-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;

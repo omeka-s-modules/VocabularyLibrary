@@ -39,7 +39,8 @@ $selected = function ($name, $value) use ($query) {
 
 <form id="vocabulary-library-filters" class="browse-controls" role="search"
     data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>"
-    data-term-query-min="<?php echo $termQueryMin; ?>">
+    data-term-query-min="<?php echo $termQueryMin; ?>"
+    data-term-more="<?php echo $escape($translate('and %s more')); ?>">
     <div class="vocabulary-library-search">
         <input type="text" name="q"
             value="<?php echo $escape($query['q'] ?? ''); ?>"
@@ -122,9 +123,10 @@ $selected = function ($name, $value) use ($query) {
                     <?php if ($description !== ''): ?>
                     <p class="vocabulary-library-description"><?php echo $escape($description); ?></p>
                     <?php endif; ?>
-                    <p class="vocabulary-library-term-matches" hidden>
-                        <strong><?php echo $matchingTerms; ?></strong> <span class="vocabulary-library-term-list"></span>
-                    </p>
+                    <div class="vocabulary-library-term-matches" hidden>
+                        <strong><?php echo $matchingTerms; ?></strong>
+                        <ul class="vocabulary-library-term-list"></ul>
+                    </div>
                 </div>
                 <ul class="actions">
                     <li><?php echo $this->hyperlink('', '#', [
@@ -149,6 +151,9 @@ $selected = function ($name, $value) use ($query) {
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<?php // A matching term, filled in by the script. ?>
+<template id="vocabulary-library-term-item"><li></li></template>
 
 <div class="no-resources vocabulary-library-empty" hidden>
     <p><?php echo $translate('No vocabularies match.'); ?></p>
