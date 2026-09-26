@@ -43,8 +43,8 @@ $selected = function ($name, $value) use ($query) {
     <div class="vocabulary-library-search">
         <input type="text" name="q"
             value="<?php echo $escape($query['q'] ?? ''); ?>"
-            placeholder="<?php echo $escape($translate('Filter vocabularies')); ?>"
-            aria-label="<?php echo $escape($translate('Filter vocabularies')); ?>">
+            placeholder="<?php echo $escape($translate('Search vocabularies')); ?>"
+            aria-label="<?php echo $escape($translate('Search vocabularies')); ?>">
         <label>
             <input type="checkbox" name="terms" value="1"<?php echo empty($query['terms']) ? '' : ' checked'; ?>>
             <?php echo $translate('Also search class and property names'); ?>
