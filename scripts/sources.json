@@ -8,6 +8,16 @@
             "places"
         ]
     },
+    "ac": {
+        "download": "http://rs.tdwg.org/ac/terms/",
+        "format": "term-list",
+        "namespace": "http://rs.tdwg.org/ac/terms/",
+        "prefix": "ac",
+        "tags": [
+            "natural-history",
+            "media"
+        ]
+    },
     "adms": {
         "copy_from": "LOV",
         "download": "http://www.w3.org/ns/adms#",
@@ -780,6 +790,15 @@
             "linked-data"
         ]
     },
+    "dwc": {
+        "download": "http://rs.tdwg.org/dwc/terms/",
+        "format": "term-list",
+        "namespace": "http://rs.tdwg.org/dwc/terms/",
+        "prefix": "dwc",
+        "tags": [
+            "natural-history"
+        ]
+    },
     "e-collections": {
         "download": "http://purl.org/ceu/eco",
         "namespace": "http://purl.org/ceu/eco#",
@@ -1089,6 +1108,14 @@
             "places"
         ],
         "title": "GeoSPARQL"
+    },
+    "gesah": {
+        "download": "https://raw.githubusercontent.com/tibonto/gesah/main/gesah.ttl",
+        "namespace": "http://ontology.tib.eu/gesah/",
+        "prefix": "gesah",
+        "tags": [
+            "museums"
+        ]
     },
     "gn": {
         "alternates": [

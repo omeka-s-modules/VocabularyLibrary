@@ -398,12 +398,16 @@ class IndexController extends AbstractActionController
 
     /**
      * The language to import labels and comments in: English if the file has
-     * it, else its only or first language, else none.
+     * it, else a regional English such as en-US, else its only or first
+     * language, else none.
      */
     protected function defaultLanguage(array $entry)
     {
         $languages = $entry['languages'];
-        return in_array('en', $languages, true) ? 'en' : ($languages[0] ?? null);
+        if (in_array('en', $languages, true)) {
+            return 'en';
+        }
+        return current(preg_grep('/^en-/i', $languages)) ?: ($languages[0] ?? null);
     }
 
     /**

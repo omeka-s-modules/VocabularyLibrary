@@ -1,15 +1,5 @@
 [
     {
-        "alternates": [],
-        "download": "http://rs.tdwg.org/ac/terms/",
-        "excluded": "All 70 terms are untyped (no rdf:type), so Omeka imports none.",
-        "namespace": "http://rs.tdwg.org/ac/terms/",
-        "prefix": "ac",
-        "slug": "ac",
-        "source": "LOV",
-        "title": "Core terms defined by Audubon Core"
-    },
-    {
         "alternates": [
             "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.1.rdfs",
             "http://www.ics.forth.gr/isl/CRMgeo/"

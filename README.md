@@ -76,7 +76,9 @@ import. They come from
 ### Licensing and takedown
 
 Files are redistributed without changes to their content, as LOV and Archivo
-do. Most state no license. Vocabularies whose license forbids redistribution
+do. Darwin Core and Audiovisual Core are published one term at a time, so
+their files combine the publisher's description of each term, unchanged. Most
+files state no license. Vocabularies whose license forbids redistribution
 are not included.
 
 If a vocabulary you publish is in the library and you want it removed, open an
@@ -108,10 +110,12 @@ The collection is kept in these files:
 
 To add a vocabulary:
 
-    php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa]
+    php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa|term-list]
 
 Use `--format=rdfa` for a vocabulary published only as RDFa in a web page,
-such as VRA. It is stored as N-Triples. For an archived copy, also give
+such as VRA. Use `--format=term-list` for one whose address serves only a
+list of its terms, each described at its own address, such as Darwin Core;
+every term is fetched. Both are stored as N-Triples. For an archived copy, also give
 `--file=<path> --copy-from=<archive>`, where `<archive>` is one of the four
 sources above, such as `--copy-from="DBpedia Archivo"`.
 
@@ -135,6 +139,11 @@ whose files changed, as `update.php` reports them, so that administrators know
 which vocabularies to compare. Slugs are permanent once released, because they
 are in the module's URLs. A vocabulary in `excluded.json` stays out: the build
 refuses its slug and its namespace.
+
+To list what each file says about its version and date, and flag those that
+call themselves a draft, beta, or experimental version:
+
+    php scripts/versions.php [<slug> …] [--drafts]
 
 # Copyright
 

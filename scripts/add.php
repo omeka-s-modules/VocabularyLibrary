@@ -3,7 +3,7 @@
  * Adds a vocabulary to the collection from the URL of its file.
  *
  * Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=]
- *            [--namespace=] [--title=] [--format=rdfa]
+ *            [--namespace=] [--title=] [--format=rdfa|term-list]
  *            [--file=<path> --copy-from=<archive>]
  *
  * Downloads the file and runs the import check. The namespace is the one the
@@ -12,7 +12,9 @@
  * --prefix is given; most files declare none. The slug defaults to the
  * prefix, lowercased; slugs are permanent once released, so choose with
  * care. --title is needed only when the file has no title. --format=rdfa is
- * for a vocabulary published only as RDFa in an HTML page. --tags takes one to
+ * for a vocabulary published only as RDFa in an HTML page, and
+ * --format=term-list for one whose <url> serves only a list of its terms, each
+ * described at its own URI, as TDWG publishes Darwin Core. --tags takes one to
  * three of the tags in config/module.config.php.
  *
  * To add an archived copy when the publisher no longer serves a working file,
@@ -33,7 +35,7 @@ use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
 
-const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa] [--file=<path> --copy-from=<archive>]';
+const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
 const OPTIONS = ['tags', 'prefix', 'slug', 'namespace', 'title', 'format', 'file', 'copy-from'];
 // Extensions an archived copy may keep.
 const FILE_EXTENSIONS = ['jsonld', 'nt', 'owl', 'rdf', 'ttl', 'xml'];
@@ -56,10 +58,15 @@ if (!$tags || count($tags) > Repo::MAX_TAGS || array_diff($tags, $knownTags)) {
     fail('Give one to three tags with --tags=, from: ' . implode(', ', $knownTags));
 }
 $format = option($argv, 'format');
-if ($format !== null && $format !== 'rdfa') {
-    fail('--format may only be "rdfa".');
+if ($format !== null && !in_array($format, ['rdfa', 'term-list'], true)) {
+    fail('--format may only be "rdfa" or "term-list".');
 }
 $namespace = option($argv, 'namespace');
+// A term list's URI is its namespace, and a request for it may redirect to a
+// file with another URI.
+if ($format === 'term-list' && $namespace === null) {
+    $namespace = $url;
+}
 $file = option($argv, 'file');
 $copyFrom = option($argv, 'copy-from');
 if (($file === null) !== ($copyFrom === null)) {

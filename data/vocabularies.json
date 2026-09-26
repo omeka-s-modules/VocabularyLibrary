@@ -18,6 +18,24 @@
         ],
         "title": "Location Ontology (ArCo network)"
     },
+    "ac": {
+        "classes": 4,
+        "description": "This term list includes all currently valid terms that have been defined in the core Audiovisual Core namespace ac:.",
+        "file": "vocabs/ac.nt",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": null,
+        "namespace": "http://rs.tdwg.org/ac/terms/",
+        "prefix": "ac",
+        "properties": 72,
+        "tags": [
+            "natural-history",
+            "media"
+        ],
+        "title": "Core terms defined by Audiovisual Core"
+    },
     "adms": {
         "classes": 4,
         "description": "This file specifies the set of RDF classes and properties used in ADMS",
@@ -1475,6 +1493,23 @@
         ],
         "title": "DOLCE+DnS Ultralite"
     },
+    "dwc": {
+        "classes": 24,
+        "description": "This term list includes all currently valid terms that have been defined in the core Darwin Core namespace dwc:. To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues",
+        "file": "vocabs/dwc.nt",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": null,
+        "namespace": "http://rs.tdwg.org/dwc/terms/",
+        "prefix": "dwc",
+        "properties": 254,
+        "tags": [
+            "natural-history"
+        ],
+        "title": "Core terms defined by Darwin Core"
+    },
     "e-collections": {
         "classes": 27,
         "description": "The E-Collections ontology defines a collections taxonomy for different collection types based on the structural properties of homogeneity, uniqueness, order and cardinality.",
@@ -2024,6 +2059,25 @@
             "places"
         ],
         "title": "GeoSPARQL"
+    },
+    "gesah": {
+        "classes": 65,
+        "description": "The GESAH Graphic Arts Ontology is designed for the inventory, classification and structured description of works on paper.",
+        "file": "vocabs/gesah.ttl",
+        "format": null,
+        "languages": [
+            "de",
+            "de-DE",
+            "en-US"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "http://ontology.tib.eu/gesah/",
+        "prefix": "gesah",
+        "properties": 169,
+        "tags": [
+            "museums"
+        ],
+        "title": "GESAH Graphic Arts Ontology"
     },
     "gn": {
         "classes": 7,

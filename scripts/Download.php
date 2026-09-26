@@ -15,6 +15,13 @@ class Download
     const EXTENSIONS = ['text/turtle' => 'ttl', 'application/rdf+xml' => 'rdf', 'application/ld+json' => 'jsonld', 'application/json' => 'jsonld', 'application/n-triples' => 'nt'];
 
     /**
+     * Term documents fetched at a time for a term list, all from the one
+     * publisher, with a pause between batches.
+     */
+    const TERM_BATCH = 4;
+    const TERM_PAUSE = 250000;
+
+    /**
      * Fetches URLs in parallel, following redirects.
      *
      * @return array Per key: body, type (content type), url (final URL),
@@ -106,11 +113,13 @@ class Download
      * HTML is never stored: files under modules/ are served directly by the
      * web server, so an HTML file would run as a page on the Omeka site. A
      * vocabulary published as RDFa ("format": "rdfa") is parsed from its page
-     * and stored as N-Triples, which imports the same.
+     * and stored as N-Triples, which imports the same. So is one published
+     * as a term list ("format": "term-list"), assembled by termList().
      *
      * @param array $response A result from fetchAll()
      * @param string|null $format The entry's curated format
-     * @param string|null $namespace The base URI for parsing RDFa
+     * @param string|null $namespace The base URI for parsing RDFa, and a term
+     *   list's URI
      * @return array [data, extension], or [null, reason] if not storable
      */
     public static function storable(array $response, $format, $namespace)
@@ -118,6 +127,9 @@ class Download
         $body = $response['body'];
         if (trim($body) === '') {
             return [null, sprintf('empty response (HTTP %s)', $response['status'])];
+        }
+        if ($format === 'term-list') {
+            return self::termList($response, $namespace);
         }
         if ($format === 'rdfa') {
             try {
@@ -137,6 +149,54 @@ class Download
         $first = self::head($body)[0];
         $extension = self::EXTENSIONS[$response['type']] ?? ($first === '<' ? 'rdf' : ($first === '{' ? 'jsonld' : 'ttl'));
         return [$body, $extension];
+    }
+
+    /**
+     * Assembles a vocabulary published as a term list, as TDWG publishes
+     * Darwin Core: the namespace serves a list of its current terms, each
+     * dcterms:isPartOf the list, and each term's own URI serves the term's
+     * description. The list and every term's document are combined as they
+     * are and stored as N-Triples, sorted so an unchanged vocabulary gives
+     * an identical file. Fails if any term's document can't be fetched.
+     *
+     * @return array [data, extension], or [null, reason]
+     */
+    public static function termList(array $response, $namespace)
+    {
+        // The list's URI, not the response's: the request may redirect.
+        if (!$namespace) {
+            return [null, 'a term list needs its namespace'];
+        }
+        try {
+            $graph = new RdfGraph;
+            $graph->parse($response['body'], $response['type'] ?: null, $namespace);
+            $terms = [];
+            foreach ($graph->resourcesMatching('dcterms:isPartOf', $graph->resource($namespace)) as $term) {
+                if ($term->getUri() !== $namespace) {
+                    $terms[] = $term->getUri();
+                }
+            }
+            if (!$terms) {
+                return [null, 'the term list has no terms'];
+            }
+            sort($terms);
+            foreach (array_chunk($terms, self::TERM_BATCH) as $i => $batch) {
+                if ($i) {
+                    usleep(self::TERM_PAUSE);
+                }
+                foreach (self::fetchAll(array_combine($batch, $batch)) as $term => $termResponse) {
+                    if ($termResponse['error'] || !self::looksLikeRdf($termResponse['body'])) {
+                        return [null, sprintf('term %s: %s', $term, $termResponse['error'] ?: 'not RDF')];
+                    }
+                    $graph->parse($termResponse['body'], $termResponse['type'] ?: null, $term);
+                }
+            }
+        } catch (Throwable $e) {
+            return [null, 'term list did not parse: ' . mb_substr($e->getMessage(), 0, 200)];
+        }
+        $lines = array_filter(explode("\n", $graph->serialise('ntriples')));
+        sort($lines);
+        return [implode("\n", $lines) . "\n", 'nt'];
     }
 
     /**
