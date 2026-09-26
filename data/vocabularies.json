@@ -480,23 +480,6 @@
         ],
         "title": "RDF Calendar"
     },
-    "cataloging-cultural-objects": {
-        "classes": 0,
-        "description": null,
-        "file": "vocabs/cataloging-cultural-objects.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": null,
-        "namespace": "http://opaquenamespace/ns/cco/",
-        "prefix": "cco",
-        "properties": 2,
-        "tags": [
-            "museums"
-        ],
-        "title": "Cataloging Cultural Objects"
-    },
     "cbo": {
         "classes": 57,
         "description": "An OWL ontology and RDF metadata vocabulary for describing comic books and comic book collections.",
@@ -750,21 +733,6 @@
             "linked-data"
         ],
         "title": "The Collections Ontology (CO)"
-    },
-    "coun": {
-        "classes": 1,
-        "description": "ISO 3166 Country Codes",
-        "file": "vocabs/coun.nt",
-        "format": null,
-        "languages": [],
-        "license": null,
-        "namespace": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
-        "prefix": "coun",
-        "properties": 0,
-        "tags": [
-            "places"
-        ],
-        "title": "ISO 3166 Country Codes"
     },
     "country-and-subdivision-representation": {
         "classes": 12,
@@ -1025,21 +993,6 @@
             "libraries"
         ],
         "title": "Document Availability Information Ontology (DAIA)"
-    },
-    "datatypes-edtf": {
-        "classes": 1,
-        "description": null,
-        "file": "vocabs/datatypes-edtf.rdf",
-        "format": null,
-        "languages": [],
-        "license": null,
-        "namespace": "http://id.loc.gov/datatypes/edtf/",
-        "prefix": "edtf",
-        "properties": 0,
-        "tags": [
-            "time"
-        ],
-        "title": "Extended Date/Time Format (EDTF)"
     },
     "dba": {
         "classes": 32,
@@ -1756,21 +1709,6 @@
         ],
         "title": "Friend of a Friend (FOAF) vocabulary"
     },
-    "formats": {
-        "classes": 1,
-        "description": "Unique URIs for File Formats",
-        "file": "vocabs/formats.nt",
-        "format": null,
-        "languages": [],
-        "license": null,
-        "namespace": "http://www.w3.org/ns/formats/",
-        "prefix": "formats",
-        "properties": 2,
-        "tags": [
-            "linked-data"
-        ],
-        "title": "Unique URIs for File Formats"
-    },
     "fpo": {
         "classes": 35,
         "description": "FPO (Factoid Prosopography Ontology) is an ontology which has been defined to formalise some aspects of the practice of Factoid Prosopography as it has been practiced in the six structured prosopographies collaboratively created by King's College London's Department of Digital Humanities (formally Centre for Computing in the Humanities) with various historians between 1995 and 2016. By defining this ontology its makers wish to clarify some aspects of how this approach for factoid prosopography actually worked.\n\nIt was first created (version 0.1) in 2016 by John Bradley, now a retired member of DDH but who participated in various ways (from developer to Co-Investigator) in all six of KCL's factoid prosopographical projects. This version (1.0: June 2010) of FPO is much like the previous preliminary version, with the most significant change being in the representation of :Reference and the associated addition of the new class :Role.",
@@ -1977,24 +1915,6 @@
             "people"
         ],
         "title": "Gen---A Vocabulary for Linked Genealogical Data"
-    },
-    "genre": {
-        "classes": 1,
-        "description": "The CWRC Literary Genre Ontology is the ontology used by the Canadian Writing Research Collaboratory to assign Literary Genres to different documents.",
-        "file": "vocabs/genre.owl",
-        "format": null,
-        "languages": [
-            "en",
-            "fr"
-        ],
-        "license": "http://creativecommons.org/licenses/by-nc/4.0/",
-        "namespace": "http://sparql.cwrc.ca/ontologies/genre#",
-        "prefix": "genre",
-        "properties": 1,
-        "tags": [
-            "humanities"
-        ],
-        "title": "The CWRC Literary Genre Ontology"
     },
     "geop": {
         "classes": 11,
@@ -2376,23 +2296,6 @@
         ],
         "title": "ISBD elements (unconstrained)"
     },
-    "isil": {
-        "classes": 0,
-        "description": null,
-        "file": "vocabs/isil.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": null,
-        "namespace": "http://metadataregistry.org/uri/schema/isil/",
-        "prefix": "isil",
-        "properties": 2,
-        "tags": [
-            "libraries"
-        ],
-        "title": "ISIL"
-    },
     "iso-thes": {
         "classes": 6,
         "description": "These notes apply to the published mapping between the ISO 25964 data model and the SKOS schema (http://www.niso.org/schemas/iso25964/correspondencesSKOS/). Remarks can be exchanged using: 25964info@list.niso.org Subscription info and archive is on: http://www.niso.org/lists/25964info/ General information about ISO 25964: http://www.niso.org/schemas/iso25964/\n\nThe annotation http://www.w3.org/2003/06/sw-vocab-status/ns#term_status indicates \"proposed\" properties that are not part of the mapping documentation.",
@@ -2706,23 +2609,6 @@
             "museums"
         ],
         "title": "Lightweight Image Ontology (LIO)"
-    },
-    "loc-american-cartoon-prints-collection": {
-        "classes": 0,
-        "description": null,
-        "file": "vocabs/loc-american-cartoon-prints-collection.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": null,
-        "namespace": "http://metadataregistry.org/uri/schema/berraypolard/",
-        "prefix": "locacp",
-        "properties": 3,
-        "tags": [
-            "libraries"
-        ],
-        "title": "LOC American Cartoon Prints Collection"
     },
     "locah": {
         "classes": 12,
@@ -3453,24 +3339,6 @@
         ],
         "title": "National Library of Scotland Digital Object Database elements"
     },
-    "nature": {
-        "classes": 1,
-        "description": null,
-        "file": "vocabs/nature.ttl",
-        "format": null,
-        "languages": [
-            "en",
-            "fr"
-        ],
-        "license": null,
-        "namespace": "http://deductions.github.io/nature_observation.owl.ttl#",
-        "prefix": "nature",
-        "properties": 2,
-        "tags": [
-            "natural-history"
-        ],
-        "title": "Nature Observations, botanical or zoological"
-    },
     "naval": {
         "classes": 17,
         "description": "The Muninn Naval Ontology marks up information about maritime establishments.",
@@ -3556,24 +3424,6 @@
         ],
         "title": "Nomisma Ontology"
     },
-    "nomo": {
-        "classes": 0,
-        "description": "NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies.",
-        "file": "vocabs/nomo.ttl",
-        "format": null,
-        "languages": [
-            "en",
-            "fr"
-        ],
-        "license": "http://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://nomenclature.info/nom/ontology/",
-        "prefix": "nomo",
-        "properties": 1,
-        "tags": [
-            "museums"
-        ],
-        "title": "Nomenclature for Museum Cataloging Ontology"
-    },
     "oa": {
         "classes": 21,
         "description": "The Web Annotation ontology defines the terms of the Web Annotation vocabulary. Any changes to this document MUST be from a Working Group in the W3C that has established expertise in the area.",
@@ -3623,23 +3473,6 @@
             "humanities"
         ],
         "title": "OntoMedia Core"
-    },
-    "oco": {
-        "classes": 0,
-        "description": "OCO, the OpenCitations Ontology, is not yet another bibliographic ontology, rather it is just a place where existing and complementary ontological entities from several other ontologies are grouped together for the purpose of providing descriptive metadata as introduced in the OpenCitations Data Model(ODCM).\n\n• bibliographic resources (br), class fabio:Expression and its subclasses – resources that either cites or are cited by other bibliographic resources (e.g. journal articles), or that contain such citing/cited resources (e.g. journals);\n\n• resource embodiments (re), class fabio:Manifestation and its subclasses – details of the physical or digital forms in which the bibliographic resources are made available by their publishers;\n\n• discourse elements (de), class deo:DiscourseElement and its subclasses - a document component, either structural (e.g. paragraph, section, chapter, table, caption, footnote, title) or rhetorical (e.g. introduction, discussion, acknowledgements, reference list, figure, appendix), in which the content of a bibliographic resource can be organized;\n\n• reference pointers (rp), class c4o:InTextReferencePointer - a textual device (e.g. “[1]”), denoting a single bibliographic reference, that is embedded in the text of a document within the context of a particular sentence or text chunk;\n\n• pointer list (pl), class c4o:SingleLocationPointerList - a textual device (e.g. “[1, 2, 3]” or “[4-9]”) which includes a number of reference pointers denoting the specific bibliographic references to which the list pertains;\n\n• bibliographic reference entries (be), class biro:BibliographicReference – the literal textual bibliographic entries occurring in the reference lists within bibliographic resources, that reference other bibliographic resources;\n\n• responsible agents (ra), class foaf:Agent – names of agents having certain roles with respect to bibliographic resources (i.e. names of authors, editors, publishers, etc.);\n\nagent roles (ar), class pro:RoleInTime – roles held by agents with respect to bibliographic resources (e.g. author, editor, publisher);\n\n• identifiers (id), class datacite:Identifier – external identifiers (e.g. DOI, ORCID, PubMedID) associated with the bibliographic entities;\n\n• citations (ci), class cito:Citation - conceptual directional links from a citing entity to a cited entity, created by a human performative act of making a citation.",
-        "file": "vocabs/oco.owl",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).",
-        "namespace": "https://w3id.org/oc/ontology/",
-        "prefix": "oco",
-        "properties": 3,
-        "tags": [
-            "publishing"
-        ],
-        "title": "OCO, the OpenCitations Ontology"
     },
     "odrl": {
         "classes": 26,
@@ -4216,23 +4049,6 @@
         ],
         "title": "The Publishing Status Ontology (PSO)"
     },
-    "publication-metadata": {
-        "classes": 0,
-        "description": null,
-        "file": "vocabs/publication-metadata.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": null,
-        "namespace": "http://purl.org/escidoc/metadata/terms/0.1/",
-        "prefix": "eterms",
-        "properties": 1,
-        "tags": [
-            "publishing"
-        ],
-        "title": "Publication metadata"
-    },
     "pwo": {
         "classes": 4,
         "description": "The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web).\n\nPWO is based on two main classes: pwo:Workflow and pwo:Step.\n\npwo:Workflow is a subclass of plandesc:Plan and represents a sequence of connected tasks (i.e., steps, by using the property pwo:hasFirstStep and pwo:hasStep, which are ordered by means of pwo:hasNextStep). We can use the class pwo:WorkflowExecution to represent the aggregate of the actions (pwo:Action) executed in the steps defined in a workflow. We can then abstract from the execution of individual steps, by saying that a certain workflow execution executes a workflow.\n\nThe architecture of PWO.\n\nThe other main class of PWO is pwo:Step. A step is an atomic unit of a workflow, and subclass of taskrole:Task; it is characterised by (required) temporal parameters (parameter:hasParameter) describing the expected duration (time:DurationDescription) of executed actions, and it is associated with one or more (time-indexed) executed actions by using the property pwo:involvesAction. A workflow step usually involves some input information (i.e., pwo:needs), material or energy needed to complete the step, and some output information (i.e., pwo:produces), material or energy produced by that step. In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML document.\n\nExamples of use\n\nIn the following subsections, we introduce some examples to showcase how to use PWO.\n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n@prefix : http://www.sparontologies.net/example/ . @prefix pwo: http://purl.org/spar/pwo/ . @prefix time: http://www.w3.org/2006/time# . @prefix fabio: http://purl.org/spar/fabio/ . @prefix pso: http://purl.org/spar/pso/ . @prefix c4o: http://purl.org/spar/c4o/ . @prefix frbr: http://purl.org/vocab/frbr/core# . @prefix dcterms: http://purl.org/dc/terms/ . @prefix tisit: http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl# . @prefix taskex: http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl# . @prefix ti: http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl# . @prefix part: http://www.ontologydesignpatterns.org/cp/owl/participation.owl# . @prefix tvc: http://www.essepuntato.it/2012/04/tvc/ . @prefix swj: http://semantic-web-journal.com/sejp/ . @prefix swj-node: http://semantic-web-journal.com/sejp/node/ . @prefix cito: http://purl.org/spar/cito/ . @prefix parameter: http://www.ontologydesignpatterns.org/cp/owl/parameter.owl# . @prefix xsd: http://www.w3.org/2001/XMLSchema# .\n\nDescribing the publishing workflow\n\nFrom the publisher's perspective, the first step of any workflow leading to a new journal publication starts with a formal submission of a manuscript written by someone, hereinafter the author. This activity expresses, at the same time, interest on the topics of the journal, and may acknowledge, indirectly, the quality of the journal itself – since authors (usually) would like to publish articles in a venue that they consider respectful and qualitatively worth for different reasons (e.g., appropriateness of topic, quality of reviews, journal impact factor, definite timing of the publishing process). Then, in the next step, i.e., the reviewing phase, the person (designated by the publisher) in charge of the quality of submitted material, hereinafter the editor, invites other people (hereinafter the reviewers) to assess the quality of the submitted manuscript. The opinions returned by the reviewers are the fundamental input that the editor uses to decide upon the fate of the manuscript during the next step, i.e., the decision phase. Finally, if the manuscript has been considered worth of publication in the present form, the editor will acknowledge the author of the acceptance of his/her work – and the next steps of the workflow will be in charge of the publisher itself.\n\n:workflow a pwo:Workflow ; pwo:hasFirstStep :step-one ; pwo:hasStep :step-one , :step-two , :step-three .\n\n:step-one a pwo:Step ; pwo:hasNextStep :step-two ; taskex:isExecutedIn :submission-action ; pwo:needs swj-node:432 ; pwo:produces :submitted-status .\n\n:step-two a pwo:Step ; pwo:hasNextStep :step-three ; parameter:hasParameter :review-time-constraint ; taskex:isExecutedIn :reviewing-action , :reviews-notification-sending-action ; pwo:needs swj-node:432 , :submitted-status ; pwo:produces :review-1 , :review-2 , :under-review-status , :reviewed-status.\n\n:review-time-constraint a time:DurationDescription ; time:weeks \"5\"^^xsd:decimal .\n\n:step-three a pwo:Step ; taskex:isExecutedIn :decision-action , :notification-action ; pwo:needs swj-node:432 , :review-1 , :review-2 ; pwo:produces :minor-revision-status , :decision-letter .\n\n:workflow-execution a pwo:WorkflowExecution ; pwo:executes :workflow ; pwo:involvesAction :submission-action , :reviewing-action , :reviews-notification-sending-action , :decision-action , :notification-action .\n\n:submission-action a pwo:Action ; dcterms:description 'Paolo Ciccarese submits the paper' ; tisit:atTime :submission-time ; part:hasParticipant swj:paolo-ciccarese , swj-node:432 .\n\n:submission-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-01-21T10:08:28'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-01-21T10:08:28'^^xsd:dateTime .\n\n:submitted-status a pso:StatusInTime ; pso:isStatusHeldBy swj-node:432 ; pso:isAcquiredAsConsequenceOf :submission-action ; pso:withStatus pso:submitted ; tvc:atTime :submitted-time .\n\n:submitted-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-01-21T10:08:28'^^xsd:dateTime .\n\n:reviewing-action a pwo:Action ; dcterms:description 'Reviewers review the manuscript' ; tisit:atTime :reviewing-time ; part:hasParticipant swj:csaba-veres , swj:fernando-naufel-do-amaral , swj-node:432 .\n\n:reviewing-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-02-26T12:00:07'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-04-01T05:53:24'^^xsd:dateTime .\n\n:reviews-notification-sending-action a pwo:Action ; dcterms:description 'The reviews are sent to the editor, i.e., Giancarlo Guizzardi' ; tisit:atTime :reviews-time ; part:hasParticipant swj:csaba-veres , swj:fernando-naufel-do-amaral , :review-1 , :review-2 , swj:giancarlo-guizzardi .\n\n:reviews-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-03-14T11:16:34'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-04-01T05:53:24'^^xsd:dateTime .\n\n:review-1 a fabio:Comment ; frbr:realizationOf [ a fabio:Review ] ; cito:reviews swj-node:432 ; frbr:realizer swj:csaba-veres ; c4o:hasContent 'The paper addresses a very practical...' .\n\n:review-2 a fabio:Comment ; frbr:realizationOf [ a fabio:Review ] ; cito:reviews swj-node:432 ; frbr:realizer swj:fernando-naufel-do-amaral ; c4o:hasContent 'The paper presents the Collection Ontology (CO)...' .\n\n:under-review-status a pso:StatusInTime ; pso:isStatusHeldBy swj-node:432 ; pso:isAcquiredAsConsequenceOf :reviewing-action ; pso:isLostAsConsequenceOf :reviews-notification-sending-action ; pso:withStatus pso:under-review ; tvc:atTime :under-review-time .\n\n:under-review-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-02-26T12:00:07'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-04-01T05:53:24'^^xsd:dateTime .\n\n:reviewed-status a pso:StatusInTime ; pso:isStatusHeldBy swj-node:432 ; pso:isAcquiredAsConsequenceOf :reviews-notification-sending-action ; pso:withStatus pso:reviewed ; tvc:atTime :reviewed-time .\n\n:reviewed-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-04-01T05:53:24'^^xsd:dateTime .\n\n:decision-action a pwo:Action ; dcterms:description 'The editor decides for acceptance or not' ; tisit:atTime :decision-time ; part:hasParticipant swj:giancarlo-guizzardi , :review-1 , :review-2 , swj-node:432 .\n\n:decision-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-04-01T05:53:24'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-06-10T17:47:53'^^xsd:dateTime .\n\n:notification-action a pwo:Action ; dcterms:description 'The editor notifies his decision to the corresponding author (i.e., Paolo Ciccarese).' ; tisit:atTime :notification-time ; part:hasParticipant swj:giancarlo-guizzardi , :decision-letter , :review-1 , :review-2 , swj:paolo-ciccarese , swj-node:432 .\n\n:notification-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-06-10T17:47:53'^^xsd:dateTime ; ti:hasIntervalEndDate '2013-06-10T17:47:53'^^xsd:dateTime .\n\n:decision-letter a fabio:Letter , fabio:Email ; frbr:realizationOf [ a fabio:Opinion ] ; cito:citesAsRelated swj-node:432 ; frbr:realizer swj:giancarlo-guizzardi ; c4o:hasContent 'Dear authors, Thank you for your interest in...' .\n\n:minor-revision-status a pso:StatusInTime ; pso:isStatusHeldBy swj-node:432 ; pso:isAcquiredAsConsequenceOf :decision-action ; pso:withStatus swj:minorRevision ; tvc:atTime :minor-revision-time .\n\n:minor-revision-time a ti:TimeInterval ; ti:hasIntervalStartDate '2013-06-10T17:47:53'^^xsd:dateTime .\n\nCompetency Questions\n\nPWO can be used for answering several questions related to publication workflows. In the following subsections, some of them are introduced together with their respective SPARQL queries.\n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\nPREFIX pwo: http://purl.org/spar/pwo/ PREFIX taskex: http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl# PREFIX part: http://www.ontologydesignpatterns.org/cp/owl/participation.owl# PREFIX dcterms: http://purl.org/dc/terms/ PREFIX frbr: http://purl.org/vocab/frbr/core# PREFIX tisit: http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl# PREFIX ti: http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#\n\nCQ1\n\nWhat is the ordered sequence of steps in a workflow, including their required inputs and produced outputs?\n\nSELECT ?workflow ?step ?nextStep ?requiredInput ?producedOutput WHERE { ?workflow a pwo:Workflow ; pwo:hasStep ?step . ?step a pwo:Step . OPTIONAL { ?step pwo:hasNextStep ?nextStep . } OPTIONAL { ?step pwo:needs ?requiredInput . } OPTIONAL { ?step pwo:produces ?producedOutput . } }\n\nCQ2\n\nWhich actions execute a workflow step, and who or what participates in them?\n\nSELECT ?step ?action ?actionDescription ?participant WHERE { ?step a pwo:Step ; taskex:isExecutedIn ?action . ?action a pwo:Action . OPTIONAL { ?action dcterms:description ?actionDescription . } OPTIONAL { ?action part:hasParticipant ?participant . } }\n\nCQ3\n\nWhat are the start and end times of actions involved in a workflow execution?\n\nSELECT ?workflowExecution ?action ?startDate ?endDate WHERE { ?workflowExecution a pwo:WorkflowExecution ; pwo:involvesAction ?action . ?action tisit:atTime ?timeInterval . OPTIONAL { ?timeInterval ti:hasIntervalStartDate ?startDate . } OPTIONAL { ?timeInterval ti:hasIntervalEndDate ?endDate . } }",
@@ -4633,25 +4449,6 @@
             "people"
         ],
         "title": "RELATIONSHIP: A vocabulary for describing relationships between people"
-    },
-    "religion": {
-        "classes": 1,
-        "description": "The Muninn Religion Ontology is meants to deal with both the religious belief and backgrounds of soldiers. At this time is records religious labeling but provides only basic taxonomy information.",
-        "file": "vocabs/religion.rdf",
-        "format": null,
-        "languages": [
-            "de",
-            "en",
-            "fr"
-        ],
-        "license": null,
-        "namespace": "http://rdf.muninn-project.org/ontologies/religion#",
-        "prefix": "religion",
-        "properties": 0,
-        "tags": [
-            "humanities"
-        ],
-        "title": "The Muninn Religion Ontology"
     },
     "rev": {
         "classes": 3,
@@ -5702,21 +5499,6 @@
             "museums"
         ],
         "title": "VRA Ontology"
-    },
-    "vs": {
-        "classes": 0,
-        "description": "This vocabulary was created in the FOAF project, based on experience with FOAF, Dublin Core and other early RDF vocabularies. Deployment experience shows that changing namespace URIs is expensive and unrewarding, so this vocabulary provides terms to support in-place evolution of structured data vocabularies. By indicating status at the level of terms rather than vocabularies, dictionary-style, fine grained improvements become easier. Different organizations and parties can agree or disagree on the status of a vocabulary term; however the status published alongside the term may deserve special attention. Future work could include patterns for citing announcements and decisions, or using SKOS to decentralise the extension of the basic status levels.",
-        "file": "vocabs/vs.rdf",
-        "format": null,
-        "languages": [],
-        "license": null,
-        "namespace": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-        "prefix": "vs",
-        "properties": 3,
-        "tags": [
-            "linked-data"
-        ],
-        "title": "SemWeb Vocab Status ontology"
     },
     "wgs84": {
         "classes": 2,

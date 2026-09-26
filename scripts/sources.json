@@ -258,14 +258,6 @@
         "title": "RDF Calendar",
         "title_source": "W3C note \"RDF Calendar - an application of the Resource Description Framework to iCalendar Data\"; the namespace page was not reachable (406)."
     },
-    "cataloging-cultural-objects": {
-        "download": "http://metadataregistry.org/schema/show/id/91.rdf",
-        "namespace": "http://opaquenamespace/ns/cco/",
-        "prefix": "cco",
-        "tags": [
-            "museums"
-        ]
-    },
     "cbo": {
         "download": "http://comicmeta.org/cbo/",
         "namespace": "http://comicmeta.org/cbo/",
@@ -393,17 +385,6 @@
         "tags": [
             "linked-data"
         ]
-    },
-    "coun": {
-        "copy_from": "LOV",
-        "download": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
-        "namespace": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
-        "prefix": "coun",
-        "tags": [
-            "places"
-        ],
-        "title": "ISO 3166 Country Codes",
-        "title_source": "Not confirmed with the publisher: the file has no title and the publisher's page was unreachable or carries none. Taken from LOV."
     },
     "country-and-subdivision-representation": {
         "download": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
@@ -559,16 +540,6 @@
         "tags": [
             "libraries"
         ]
-    },
-    "datatypes-edtf": {
-        "download": "http://id.loc.gov/datatypes/edtf/",
-        "namespace": "http://id.loc.gov/datatypes/edtf/",
-        "prefix": "edtf",
-        "tags": [
-            "time"
-        ],
-        "title": "Extended Date/Time Format (EDTF)",
-        "title_source": "Library of Congress name for the standard; id.loc.gov returned 403."
     },
     "dba": {
         "download": "https://w3id.org/dba/ontology/",
@@ -931,17 +902,6 @@
             "people"
         ]
     },
-    "formats": {
-        "download": "http://www.w3.org/ns/formats/",
-        "format": "rdfa",
-        "namespace": "http://www.w3.org/ns/formats/",
-        "prefix": "formats",
-        "tags": [
-            "linked-data"
-        ],
-        "title": "Unique URIs for File Formats",
-        "title_source": "w3.org/ns/formats/"
-    },
     "fpo": {
         "download": "https://raw.githubusercontent.com/johnBradley501/FPO/master/fpo.owl",
         "namespace": "https://github.com/johnBradley501/FPO/raw/master/fpo.owl#",
@@ -1057,18 +1017,6 @@
         "prefix": "gen",
         "tags": [
             "people"
-        ]
-    },
-    "genre": {
-        "alternates": [
-            "http://sparql.cwrc.ca/ontologies/genre"
-        ],
-        "copy_from": "DBpedia Archivo",
-        "download": "http://sparql.cwrc.ca/ontology/genre#",
-        "namespace": "http://sparql.cwrc.ca/ontologies/genre#",
-        "prefix": "genre",
-        "tags": [
-            "humanities"
         ]
     },
     "geop": {
@@ -1298,14 +1246,6 @@
             "libraries"
         ]
     },
-    "isil": {
-        "download": "http://metadataregistry.org/schema/show/id/73.rdf",
-        "namespace": "http://metadataregistry.org/uri/schema/isil/",
-        "prefix": "isil",
-        "tags": [
-            "libraries"
-        ]
-    },
     "iso-thes": {
         "download": "http://purl.org/iso25964/skos-thes",
         "namespace": "http://purl.org/iso25964/skos-thes#",
@@ -1454,14 +1394,6 @@
         "tags": [
             "media",
             "museums"
-        ]
-    },
-    "loc-american-cartoon-prints-collection": {
-        "download": "http://metadataregistry.org/schema/show/id/72.rdf",
-        "namespace": "http://metadataregistry.org/uri/schema/berraypolard/",
-        "prefix": "locacp",
-        "tags": [
-            "libraries"
         ]
     },
     "locah": {
@@ -1850,17 +1782,6 @@
             "libraries"
         ]
     },
-    "nature": {
-        "alternates": [
-            "http://deductions.github.io/nature_observation.owl.ttl"
-        ],
-        "download": "http://deductions.github.io/nature_observation.owl.ttl#",
-        "namespace": "http://deductions.github.io/nature_observation.owl.ttl#",
-        "prefix": "nature",
-        "tags": [
-            "natural-history"
-        ]
-    },
     "naval": {
         "download": "http://rdf.muninn-project.org/ontologies/naval",
         "namespace": "http://rdf.muninn-project.org/ontologies/naval#",
@@ -1920,14 +1841,6 @@
         "title": "Nomisma Ontology",
         "title_source": "nomisma.org/ontology"
     },
-    "nomo": {
-        "download": "https://nomenclature.info/nom/ontology/",
-        "namespace": "https://nomenclature.info/nom/ontology/",
-        "prefix": "nomo",
-        "tags": [
-            "museums"
-        ]
-    },
     "oa": {
         "download": "http://www.w3.org/ns/oa.ttl",
         "namespace": "http://www.w3.org/ns/oa#",
@@ -1957,15 +1870,6 @@
         "tags": [
             "media",
             "humanities"
-        ]
-    },
-    "oco": {
-        "copy_from": "DBpedia Archivo",
-        "download": "https://w3id.org/oc/ontology/",
-        "namespace": "https://w3id.org/oc/ontology/",
-        "prefix": "oco",
-        "tags": [
-            "publishing"
         ]
     },
     "odrl": {
@@ -2294,15 +2198,6 @@
             "publishing"
         ]
     },
-    "publication-metadata": {
-        "download": "http://metadataregistry.org/schema/show/id/17.rdf",
-        "namespace": "http://purl.org/escidoc/metadata/terms/0.1/",
-        "prefix": "eterms",
-        "tags": [
-            "publishing"
-        ],
-        "title": "Publication metadata"
-    },
     "pwo": {
         "download": "http://purl.org/spar/pwo/",
         "namespace": "http://purl.org/spar/pwo/",
@@ -2489,14 +2384,6 @@
         "prefix": "rel",
         "tags": [
             "people"
-        ]
-    },
-    "religion": {
-        "download": "http://rdf.muninn-project.org/ontologies/religion",
-        "namespace": "http://rdf.muninn-project.org/ontologies/religion#",
-        "prefix": "religion",
-        "tags": [
-            "humanities"
         ]
     },
     "rev": {
@@ -3036,17 +2923,6 @@
         ],
         "title": "VRA Ontology",
         "title_source": "Heading of the ontology page (s3.amazonaws.com/VRA/ontology.html)."
-    },
-    "vs": {
-        "alternates": [
-            "http://www.w3.org/2003/06/sw-vocab-status/ns#"
-        ],
-        "download": "http://www.w3.org/2003/06/sw-vocab-status/ns",
-        "namespace": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-        "prefix": "vs",
-        "tags": [
-            "linked-data"
-        ]
     },
     "wgs84": {
         "download": "http://www.w3.org/2003/01/geo/wgs84_pos",

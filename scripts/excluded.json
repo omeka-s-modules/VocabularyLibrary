@@ -8,6 +8,22 @@
         "title": "The Biological Collections Ontology"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/91.rdf",
+        "excluded": "Two undefined properties from an Open Metadata Registry schema, not the CCO standard, which has no RDF vocabulary.",
+        "namespace": "http://opaquenamespace/ns/cco/",
+        "prefix": "cco",
+        "slug": "cataloging-cultural-objects",
+        "title": "Cataloging Cultural Objects"
+    },
+    {
+        "download": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
+        "excluded": "Imports only a Country class, which Schema.org, DBpedia and GeoNames already have. The country codes are individuals, which Omeka doesn't import.",
+        "namespace": "http://www.daml.org/2001/09/countries/iso-3166-ont#",
+        "prefix": "coun",
+        "slug": "coun",
+        "title": "ISO 3166 Country Codes"
+    },
+    {
         "alternates": [
             "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.1.rdfs",
             "http://www.ics.forth.gr/isl/CRMgeo/"
@@ -21,6 +37,14 @@
         "title": "CRMgeo (CIDOC CRM extension for spatiotemporal data)"
     },
     {
+        "download": "http://id.loc.gov/datatypes/edtf/",
+        "excluded": "A datatype. Omeka imports it as a class, which gives Omeka no EDTF support.",
+        "namespace": "http://id.loc.gov/datatypes/edtf/",
+        "prefix": "edtf",
+        "slug": "datatypes-edtf",
+        "title": "Extended Date/Time Format (EDTF)"
+    },
+    {
         "alternates": [],
         "download": "http://dp.la/about/map/",
         "excluded": "No RDF file found for DPLA MAP at the namespace. Not in any rescue source.",
@@ -29,6 +53,22 @@
         "slug": "dpla",
         "source": "added",
         "title": "DPLA Metadata Application Profile"
+    },
+    {
+        "download": "http://www.w3.org/ns/formats/",
+        "excluded": "Describes file formats themselves. The list of formats is individuals, which Omeka doesn't import.",
+        "namespace": "http://www.w3.org/ns/formats/",
+        "prefix": "formats",
+        "slug": "formats",
+        "title": "Unique URIs for File Formats"
+    },
+    {
+        "download": "http://sparql.cwrc.ca/ontology/genre#",
+        "excluded": "Imports only a genre class and a has genre property. The genres are individuals, which Omeka doesn't import.",
+        "namespace": "http://sparql.cwrc.ca/ontologies/genre#",
+        "prefix": "genre",
+        "slug": "genre",
+        "title": "The CWRC Literary Genre Ontology"
     },
     {
         "alternates": [],
@@ -42,6 +82,22 @@
         "title": "GeoJSON-LD vocabulary"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/73.rdf",
+        "excluded": "An ISIL property and an interlibrary loan status property, too narrow for describing resources.",
+        "namespace": "http://metadataregistry.org/uri/schema/isil/",
+        "prefix": "isil",
+        "slug": "isil",
+        "title": "ISIL"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/72.rdf",
+        "excluded": "Creator, Subject and Title for one collection, which Dublin Core covers.",
+        "namespace": "http://metadataregistry.org/uri/schema/berraypolard/",
+        "prefix": "locacp",
+        "slug": "loc-american-cartoon-prints-collection",
+        "title": "LOC American Cartoon Prints Collection"
+    },
+    {
         "alternates": [
             "http://linkedpasts.org/ontology/lpo"
         ],
@@ -52,6 +108,30 @@
         "slug": "lpo",
         "source": "added",
         "title": "Linked Places Ontology"
+    },
+    {
+        "download": "http://deductions.github.io/nature_observation.owl.ttl#",
+        "excluded": "One project's observation class and two properties. Darwin Core covers observations.",
+        "namespace": "http://deductions.github.io/nature_observation.owl.ttl#",
+        "prefix": "nature",
+        "slug": "nature",
+        "title": "Nature Observations, botanical or zoological"
+    },
+    {
+        "download": "https://nomenclature.info/nom/ontology/",
+        "excluded": "Imports only one property, about label structure. Nomenclature's terms are SKOS values, which Omeka doesn't import.",
+        "namespace": "https://nomenclature.info/nom/ontology/",
+        "prefix": "nomo",
+        "slug": "nomo",
+        "title": "Nomenclature for Museum Cataloging Ontology"
+    },
+    {
+        "download": "https://w3id.org/oc/ontology/",
+        "excluded": "Imports only three properties internal to the OpenCitations data model.",
+        "namespace": "https://w3id.org/oc/ontology/",
+        "prefix": "oco",
+        "slug": "oco",
+        "title": "OCO, the OpenCitations Ontology"
     },
     {
         "alternates": [],
@@ -74,6 +154,22 @@
         "title": "PASSIM ontology"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/17.rdf",
+        "excluded": "A single Academic Degree property. BIBO and VIVO cover degrees.",
+        "namespace": "http://purl.org/escidoc/metadata/terms/0.1/",
+        "prefix": "eterms",
+        "slug": "publication-metadata",
+        "title": "Publication metadata"
+    },
+    {
+        "download": "http://rdf.muninn-project.org/ontologies/religion",
+        "excluded": "Imports only a Religion class; by its own description it provides only basic taxonomy information.",
+        "namespace": "http://rdf.muninn-project.org/ontologies/religion#",
+        "prefix": "religion",
+        "slug": "religion",
+        "title": "The Muninn Religion Ontology"
+    },
+    {
         "alternates": [],
         "download": "http://metadataregistry.org/schema/show/id/112.rdf",
         "excluded": "277 of its 599 property labels are longer than the 255 characters Omeka's property.label column holds, so the import fails on strict MySQL or truncates the labels.",
@@ -82,5 +178,13 @@
         "slug": "unimarc-b-elements-5xx",
         "source": "OMR",
         "title": "UNIMARC/B elements 5XX"
+    },
+    {
+        "download": "http://www.w3.org/2003/06/sw-vocab-status/ns",
+        "excluded": "Annotates a vocabulary's own terms, for vocabulary authors, not for describing resources.",
+        "namespace": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "prefix": "vs",
+        "slug": "vs",
+        "title": "SemWeb Vocab Status ontology"
     }
 ]

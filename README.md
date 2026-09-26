@@ -55,9 +55,10 @@ whose files changed.
 
 The library holds vocabularies for describing resources in digital
 collections, and for rights, files, measurement, and provenance. A vocabulary
-is included when an RDF file for it is available and Omeka imports at least
-one class or property from it. Thesauri and subject headings are not
-included, because Omeka imports classes and properties, not concepts.
+is included when an RDF file for it is available and Omeka imports classes or
+properties from it that are useful for describing resources. Thesauri and
+subject headings are not included, because Omeka imports classes and
+properties, not concepts.
 
 Titles and descriptions are the publisher's, taken from the file. Where a file
 has no title, or a misleading one, the library supplies one, usually the
