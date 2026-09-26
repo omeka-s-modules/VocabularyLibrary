@@ -210,23 +210,6 @@
         ],
         "title": "Atom Syndication Ontology"
     },
-    "bco": {
-        "classes": 2,
-        "description": "The BCO supports the interoperability of biodiversity and biodiversity related data, including data on museum collections, environmental/metagenomic samples, and ecological surveys. A key aspect of the BCO is distinguishing among material samples (i.e. specimens), observing processes, and data about either of those entities.",
-        "file": "vocabs/bco.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
-        "prefix": "bco",
-        "properties": 0,
-        "tags": [
-            "natural-history"
-        ],
-        "title": "The Biological Collections Ontology"
-    },
     "bdo": {
         "classes": 167,
         "description": "This is the core buda ontology comprising classes, and properties with domains and ranges",
@@ -3887,21 +3870,6 @@
             "people"
         ],
         "title": "Participation Schema"
-    },
-    "passim": {
-        "classes": 4,
-        "description": "This ontology is the description of the operation of a transport information service.",
-        "file": "vocabs/passim.nt",
-        "format": null,
-        "languages": [],
-        "license": null,
-        "namespace": "http://data.lirmm.fr/ontologies/passim#",
-        "prefix": "passim",
-        "properties": 18,
-        "tags": [
-            "places"
-        ],
-        "title": "PASSIM ontology"
     },
     "pav": {
         "classes": 0,

@@ -1,5 +1,13 @@
 [
     {
+        "download": "http://purl.obolibrary.org/obo/bco.owl/",
+        "excluded": "Its terms are OBO identifiers (purl.obolibrary.org/obo/BCO_...), which Omeka can import only under the shared OBO namespace, mixed with terms from other ontologies. The stored copy imported two obsolete classes.",
+        "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
+        "prefix": "bco",
+        "slug": "bco",
+        "title": "The Biological Collections Ontology"
+    },
+    {
         "alternates": [
             "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.1.rdfs",
             "http://www.ics.forth.gr/isl/CRMgeo/"
@@ -56,6 +64,14 @@
         "slug": "omr-242",
         "source": "OMR",
         "title": "Traditional village Metadata"
+    },
+    {
+        "download": "http://data.lirmm.fr/ontologies/passim#",
+        "excluded": "Describes transport information services, outside the collection's scope.",
+        "namespace": "http://data.lirmm.fr/ontologies/passim#",
+        "prefix": "passim",
+        "slug": "passim",
+        "title": "PASSIM ontology"
     },
     {
         "alternates": [],

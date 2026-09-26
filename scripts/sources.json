@@ -108,15 +108,6 @@
             "aggregation"
         ]
     },
-    "bco": {
-        "copy_from": "DBpedia Archivo",
-        "download": "http://purl.obolibrary.org/obo/bco.owl/",
-        "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
-        "prefix": "bco",
-        "tags": [
-            "natural-history"
-        ]
-    },
     "bdo": {
         "copy_from": "DBpedia Archivo",
         "download": "http://purl.bdrc.io/ontology/core/",
@@ -2100,15 +2091,6 @@
         "prefix": "participation",
         "tags": [
             "people"
-        ]
-    },
-    "passim": {
-        "copy_from": "LOV",
-        "download": "http://data.lirmm.fr/ontologies/passim#",
-        "namespace": "http://data.lirmm.fr/ontologies/passim#",
-        "prefix": "passim",
-        "tags": [
-            "places"
         ]
     },
     "pav": {
