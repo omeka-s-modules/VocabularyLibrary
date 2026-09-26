@@ -61,8 +61,8 @@ subject headings are not included, because Omeka imports classes and
 properties, not concepts.
 
 Titles and descriptions are the publisher's, taken from the file. Where a file
-has no title, or a misleading one, the library supplies one, usually the
-publisher's name for the vocabulary.
+has no title, none in English, or a misleading one, the library supplies one,
+usually the publisher's name for the vocabulary.
 
 Vocabulary files move, disappear, or stop importing as publishers change their
 sites. The files are bundled with the module, so importing a vocabulary does

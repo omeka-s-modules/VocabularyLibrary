@@ -18,15 +18,6 @@
             "media"
         ]
     },
-    "adms": {
-        "copy_from": "LOV",
-        "download": "http://www.w3.org/ns/adms#",
-        "namespace": "http://www.w3.org/ns/adms#",
-        "prefix": "adms",
-        "tags": [
-            "linked-data"
-        ]
-    },
     "agls": {
         "copy_from": "LOV",
         "download": "http://www.agls.gov.au/agls/terms/",
@@ -567,17 +558,6 @@
             "general"
         ]
     },
-    "dcam": {
-        "alternates": [
-            "http://purl.org/dc/dcam/"
-        ],
-        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_abstract_model.ttl",
-        "namespace": "http://purl.org/dc/dcam/",
-        "prefix": "dcam",
-        "tags": [
-            "linked-data"
-        ]
-    },
     "dcat": {
         "download": "https://www.w3.org/ns/dcat.ttl",
         "namespace": "http://www.w3.org/ns/dcat#",
@@ -600,7 +580,9 @@
         "prefix": "dcndl",
         "tags": [
             "libraries"
-        ]
+        ],
+        "title": "NDL Metadata Terms",
+        "title_source": "The name in the publisher's title, which is only in Japanese: RDF Schemaによって定義したNDL Metadata Termsの語彙."
     },
     "dcterms": {
         "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
@@ -1310,18 +1292,6 @@
         "tags": [
             "libraries",
             "performing-arts"
-        ]
-    },
-    "ldp": {
-        "alternates": [
-            "http://www.w3.org/ns/ldp",
-            "http://www.w3.org/ns/ldp#"
-        ],
-        "download": "http://www.w3.org/ns/ldp.ttl",
-        "namespace": "http://www.w3.org/ns/ldp#",
-        "prefix": "ldp",
-        "tags": [
-            "linked-data"
         ]
     },
     "ldr": {
@@ -2173,14 +2143,6 @@
             "publishing"
         ]
     },
-    "prof": {
-        "download": "http://www.w3.org/ns/dx/prof/",
-        "namespace": "http://www.w3.org/ns/dx/prof/",
-        "prefix": "prof",
-        "tags": [
-            "linked-data"
-        ]
-    },
     "prov": {
         "download": "http://www.w3.org/ns/prov-o",
         "namespace": "http://www.w3.org/ns/prov#",
@@ -2930,14 +2892,6 @@
         "prefix": "wgs84",
         "tags": [
             "places"
-        ]
-    },
-    "wikibase": {
-        "download": "http://wikiba.se/ontology#",
-        "namespace": "http://wikiba.se/ontology#",
-        "prefix": "wikibase",
-        "tags": [
-            "linked-data"
         ]
     },
     "wittgenstein": {

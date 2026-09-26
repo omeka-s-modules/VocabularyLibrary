@@ -1,5 +1,13 @@
 [
     {
+        "download": "http://www.w3.org/ns/adms#",
+        "excluded": "Catalogs vocabularies and schemas for asset registries, not resources.",
+        "namespace": "http://www.w3.org/ns/adms#",
+        "prefix": "adms",
+        "slug": "adms",
+        "title": "Asset Description Metadata Schema (ADMS)"
+    },
+    {
         "download": "http://purl.obolibrary.org/obo/bco.owl/",
         "excluded": "Its terms are OBO identifiers (purl.obolibrary.org/obo/BCO_...), which Omeka can import only under the shared OBO namespace, mixed with terms from other ontologies. The stored copy imported two obsolete classes.",
         "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
@@ -45,6 +53,14 @@
         "title": "Extended Date/Time Format (EDTF)"
     },
     {
+        "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_abstract_model.ttl",
+        "excluded": "Describes vocabularies, for vocabulary authors (what a property applies to), not resources.",
+        "namespace": "http://purl.org/dc/dcam/",
+        "prefix": "dcam",
+        "slug": "dcam",
+        "title": "Metadata terms for vocabulary description"
+    },
+    {
         "alternates": [],
         "download": "http://dp.la/about/map/",
         "excluded": "No RDF file found for DPLA MAP at the namespace. Not in any rescue source.",
@@ -88,6 +104,14 @@
         "prefix": "isil",
         "slug": "isil",
         "title": "ISIL"
+    },
+    {
+        "download": "http://www.w3.org/ns/ldp.ttl",
+        "excluded": "A server protocol's internals (containers, membership relations, an inbox), not for describing resources.",
+        "namespace": "http://www.w3.org/ns/ldp#",
+        "prefix": "ldp",
+        "slug": "ldp",
+        "title": "The W3C Linked Data Platform (LDP) Vocabulary"
     },
     {
         "download": "http://metadataregistry.org/schema/show/id/72.rdf",
@@ -154,6 +178,14 @@
         "title": "PASSIM ontology"
     },
     {
+        "download": "http://www.w3.org/ns/dx/prof/",
+        "excluded": "Describes standards and their profiles, not resources.",
+        "namespace": "http://www.w3.org/ns/dx/prof/",
+        "prefix": "prof",
+        "slug": "prof",
+        "title": "Profiles Vocabulary"
+    },
+    {
         "download": "http://metadataregistry.org/schema/show/id/17.rdf",
         "excluded": "A single Academic Degree property. BIBO and VIVO cover degrees.",
         "namespace": "http://purl.org/escidoc/metadata/terms/0.1/",
@@ -186,5 +218,13 @@
         "prefix": "vs",
         "slug": "vs",
         "title": "SemWeb Vocab Status ontology"
+    },
+    {
+        "download": "http://wikiba.se/ontology#",
+        "excluded": "Wikibase's internal data model (statements, ranks, qualifiers). Linking to Wikidata needs only a Wikidata address as a value.",
+        "namespace": "http://wikiba.se/ontology#",
+        "prefix": "wikibase",
+        "slug": "wikibase",
+        "title": "Wikibase system ontology"
     }
 ]
