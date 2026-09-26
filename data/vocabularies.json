@@ -205,7 +205,7 @@
         "prefix": "bco",
         "properties": 0,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "The Biological Collections Ontology"
     },
@@ -341,7 +341,7 @@
         "prefix": "bioc",
         "properties": 8,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Ontology for botanical or zoological collections"
     },
@@ -357,8 +357,7 @@
         "properties": 14,
         "tags": [
             "people",
-            "humanities",
-            "museums"
+            "humanities"
         ],
         "title": "Bio CRM schema"
     },
@@ -375,7 +374,7 @@
         "prefix": "biol",
         "properties": 16,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Biological Taxonomy Vocabulary 0.2 (Core)"
     },
@@ -444,7 +443,7 @@
         "prefix": "botany",
         "properties": 110,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Biological Taxonomy Vocabulary 0.2 (Botany)"
     },
@@ -886,6 +885,23 @@
         ],
         "title": "CRMsci"
     },
+    "crmtex": {
+        "classes": 14,
+        "description": "CRMtex is an extension of the CIDOC CRM created to support the study of ancient and handwritten documents, i.e., texts characterised by uniqueness since they have been produced without the use of techniques typical of modern mechanized processes of production. CRMtex aims to model information concerning ancient inscriptions (including coins, marks and stamps), papyri, medieval manuscripts, but also modern handwritten documents of any kind.",
+        "file": "vocabs/crmtex.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": null,
+        "namespace": "http://www.cidoc-crm.org/extensions/crmtex/",
+        "prefix": "crmtex",
+        "properties": 34,
+        "tags": [
+            "humanities"
+        ],
+        "title": "CRMtex"
+    },
     "cro": {
         "classes": 30,
         "description": "Copyright Ontology, https://rhizomik.net/ontologies/copyrightonto",
@@ -1145,8 +1161,7 @@
         "prefix": "dcat",
         "properties": 37,
         "tags": [
-            "linked-data",
-            "science"
+            "linked-data"
         ],
         "title": "The data catalog vocabulary"
     },
@@ -1163,8 +1178,7 @@
         "prefix": "datacite",
         "properties": 12,
         "tags": [
-            "publishing",
-            "science"
+            "publishing"
         ],
         "title": "The DataCite Ontology (DataCite)"
     },
@@ -1439,7 +1453,7 @@
         "prefix": "dsw",
         "properties": 20,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Darwin-SW"
     },
@@ -1735,7 +1749,6 @@
         "prefix": "formats",
         "properties": 2,
         "tags": [
-            "media",
             "linked-data"
         ],
         "title": "Unique URIs for File Formats"
@@ -3417,7 +3430,7 @@
         "prefix": "nature",
         "properties": 2,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Nature Observations, botanical or zoological"
     },
@@ -4801,8 +4814,7 @@
         "prefix": "sealit",
         "properties": 154,
         "tags": [
-            "humanities",
-            "museums"
+            "humanities"
         ],
         "title": "SeaLiT Ontology"
     },
@@ -4940,7 +4952,7 @@
         "prefix": "txn_nomen",
         "properties": 71,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Taxon Name and Rank Vocabulary"
     },
@@ -5051,7 +5063,7 @@
         "prefix": "txn",
         "properties": 180,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "TaxonConcept Ontology"
     },
@@ -5742,7 +5754,7 @@
         "prefix": "wo",
         "properties": 31,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Wildlife Ontology"
     },
@@ -5790,7 +5802,7 @@
         "prefix": "zoology",
         "properties": 107,
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Biological Taxonomy Vocabulary 0.2 (Zoology)"
     }

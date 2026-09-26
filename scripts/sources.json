@@ -104,7 +104,7 @@
         "namespace": "http://purl.obolibrary.org/obo/bco.owl/",
         "prefix": "bco",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "bdo": {
@@ -178,7 +178,7 @@
         "namespace": "http://deductions.github.io/biological-collections.owl.ttl#",
         "prefix": "bioc",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "biocrm": {
@@ -187,8 +187,7 @@
         "prefix": "biocrm",
         "tags": [
             "people",
-            "humanities",
-            "museums"
+            "humanities"
         ]
     },
     "biol": {
@@ -197,7 +196,7 @@
         "namespace": "http://purl.org/NET/biol/ns#",
         "prefix": "biol",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "biro": {
@@ -235,7 +234,7 @@
         "namespace": "http://purl.org/NET/biol/botany#",
         "prefix": "botany",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "c4o": {
@@ -479,6 +478,16 @@
         "title": "CRMsci",
         "title_source": "cidoc-crm.org"
     },
+    "crmtex": {
+        "download": "http://www.cidoc-crm.org/extensions/crmtex/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crmtex/",
+        "prefix": "crmtex",
+        "tags": [
+            "humanities"
+        ],
+        "title": "CRMtex",
+        "title_source": "cidoc-crm.org"
+    },
     "cro": {
         "download": "http://rhizomik.net/ontologies/copyrightonto.owl#",
         "namespace": "http://rhizomik.net/ontologies/copyrightonto.owl#",
@@ -602,8 +611,7 @@
         "namespace": "http://www.w3.org/ns/dcat#",
         "prefix": "dcat",
         "tags": [
-            "linked-data",
-            "science"
+            "linked-data"
         ]
     },
     "dcite": {
@@ -611,8 +619,7 @@
         "namespace": "http://purl.org/spar/datacite/",
         "prefix": "datacite",
         "tags": [
-            "publishing",
-            "science"
+            "publishing"
         ]
     },
     "dcndl": {
@@ -760,7 +767,7 @@
         "namespace": "http://purl.org/dsw/",
         "prefix": "dsw",
         "tags": [
-            "science"
+            "natural-history"
         ],
         "title": "Darwin-SW",
         "title_source": "Name used by its authors; the namespace page returned 404."
@@ -920,7 +927,6 @@
         "namespace": "http://www.w3.org/ns/formats/",
         "prefix": "formats",
         "tags": [
-            "media",
             "linked-data"
         ],
         "title": "Unique URIs for File Formats",
@@ -1834,7 +1840,7 @@
         "namespace": "http://deductions.github.io/nature_observation.owl.ttl#",
         "prefix": "nature",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "naval": {
@@ -2585,8 +2591,7 @@
         "namespace": "http://www.sealitproject.eu/ontology/",
         "prefix": "sealit",
         "tags": [
-            "humanities",
-            "museums"
+            "humanities"
         ]
     },
     "sem": {
@@ -2667,7 +2672,7 @@
         "namespace": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
         "prefix": "txn_nomen",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "theatre": {
@@ -2720,7 +2725,7 @@
         "namespace": "http://lod.taxonconcept.org/ontology/txn.owl#",
         "prefix": "txn",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "un": {
@@ -3069,7 +3074,7 @@
         "namespace": "http://purl.org/ontology/wo/",
         "prefix": "wo",
         "tags": [
-            "science"
+            "natural-history"
         ]
     },
     "xtypes": {
@@ -3098,7 +3103,7 @@
         "namespace": "http://purl.org/NET/biol/zoology#",
         "prefix": "zoology",
         "tags": [
-            "science"
+            "natural-history"
         ]
     }
 }

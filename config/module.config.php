@@ -83,6 +83,7 @@ return [
             'media' => 'Media and files', // @translate
             'preservation' => 'Digital preservation', // @translate
             'science' => 'Science and measurement', // @translate
+            'natural-history' => 'Natural history', // @translate
             'performing-arts' => 'Music and performing arts', // @translate
             'language' => 'Language', // @translate
             // Vocabularies whose properties describe a statement rather than
