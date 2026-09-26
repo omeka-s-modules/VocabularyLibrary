@@ -11,7 +11,6 @@ $tagLabels = array_map($translate, $tags);
 uasort($tagLabels, 'strnatcasecmp');
 // Row text, translated once rather than for each of the rows.
 $matchingTerms = $translate('Matching terms:');
-$details = $translate('Details');
 $sortBy = [
     'title' => $translate('Title'),
     'prefix' => $translate('Prefix'),
@@ -128,13 +127,6 @@ $selected = function ($name, $value) use ($query) {
                         <ul class="vocabulary-library-term-list"></ul>
                     </div>
                 </div>
-                <ul class="actions">
-                    <li><?php echo $this->hyperlink('', '#', [
-                        'data-sidebar-content-url' => $detailsUrl,
-                        'class' => 'o-icon-more sidebar-content',
-                        'title' => $details,
-                    ]); ?></li>
-                </ul>
             </td>
             <td class="column-value vocabulary-library-tags">
                 <ul>
