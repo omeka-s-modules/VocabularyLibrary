@@ -858,15 +858,17 @@
     },
     "crmdig": {
         "alt_title": "CRMdig",
-        "classes": 16,
-        "description": null,
+        "classes": 14,
+        "description": "CRM Digital is an ontology and RDF Schema to encode metadata about the steps and methods of production (\"provenance\") of digitization products and synthetic digital representations such as 2D, 3D or even animated Models created by various technologies. Its distinct features compared to competitive models is the complete inclusion of the initial physical measurement processes and their parameters. It has been developed as compatible extension of CIDOC CRM, which allows for querying the most relevant facts and returning complete descriptions encoded in this model by generic ISO21127 terms without need to refer to its specific properties. In contrast, competitive models cannot be queried by a more general standard and are restricted to the computational provenance only. Data encoded in the major competitive models can be transformed without loss of meaning into a CRM-Digital-form.",
         "file": "vocabs/crmdig.rdf",
         "format": null,
-        "languages": [],
+        "languages": [
+            "en"
+        ],
         "license": null,
-        "namespace": "http://www.ics.forth.gr/isl/CRMdig/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crmdig/",
         "prefix": "crmdig",
-        "properties": 68,
+        "properties": 43,
         "summary": "Classes and properties for documenting digitization and how digital objects are produced and transferred, including the devices and software involved, and for annotations.",
         "tags": [
             "museums",
@@ -1732,16 +1734,16 @@
         "title": "Erlangen FRBRoo"
     },
     "ekc": {
-        "alt_title": null,
+        "alt_title": "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary",
         "classes": 93,
-        "description": "EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마이다.(Encyves ≒ Encyclopedic Archives) 한국학중앙연구원 디지털인문학연구소에서 2016년에 처음 제정하였고(EKC 1.0/2016, EKC 1.1/2017), 매년 유관 분야 연구를 통해 확장해 가고 있다.",
-        "file": "vocabs/ekc.nt",
+        "description": "The EKC Ontology is a domain-specific vocabulary for modeling relationships among historical facts, source documents, persons, and locations in Korean cultural heritage. Initially developed during the Encyclopedic Archives of Korean Culture digitization project at the Academy of Korean Studies and refined through various digital humanities projects.\n\nThe present specification is based on the document \\\\\"Ontology:EKC 2022\\\\\", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies.",
+        "file": "vocabs/ekc.ttl",
         "format": null,
         "languages": [
             "en",
             "ko"
         ],
-        "license": null,
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
         "namespace": "http://dh.aks.ac.kr/ontologies/ekc#",
         "prefix": "ekc",
         "properties": 213,
@@ -1750,7 +1752,7 @@
             "humanities",
             "people"
         ],
-        "title": "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary"
+        "title": "EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)"
     },
     "ekcd": {
         "alt_title": null,
@@ -1905,7 +1907,7 @@
         "alt_title": "Functional Requirements for Authority Data (FRAD)",
         "classes": 12,
         "description": "This is the element set of native RDF classes and properties described in the Functional Requirements for Authority Data model. The model also uses elements previously described in the Functional Requirements for Bibliographic Records (FRBR) entity-relationship model.",
-        "file": "vocabs/frad.nt",
+        "file": "vocabs/frad.ttl",
         "format": null,
         "languages": [
             "en",
@@ -1914,7 +1916,7 @@
         "license": null,
         "namespace": "http://iflastandards.info/ns/fr/frad/",
         "prefix": "frad",
-        "properties": 135,
+        "properties": 138,
         "summary": "Classes and properties for authority data, describing the names, identifiers, and access points of persons, families, corporate bodies, and works, and how they relate.",
         "tags": [
             "libraries"
@@ -1982,7 +1984,7 @@
         "alt_title": "FRBR Entity-Relationship Model (FRBRer)",
         "classes": 10,
         "description": "This is the element set of native RDF classes and properties described in the current text (Feb 2009) of the Functional Requirements for Bibliographic Records (FRBR) entity-relationship model.",
-        "file": "vocabs/frbrer.nt",
+        "file": "vocabs/frbrer.rdf",
         "format": null,
         "languages": [
             "en",
@@ -2130,22 +2132,22 @@
     },
     "geosparql": {
         "alt_title": "GeoSPARQL",
-        "classes": 3,
+        "classes": 6,
         "description": "An RDF/OWL vocabulary for representing spatial information",
-        "file": "vocabs/geosparql.rdf",
+        "file": "vocabs/geosparql.ttl",
         "format": null,
         "languages": [
             "en"
         ],
-        "license": null,
+        "license": "https://www.ogc.org/license",
         "namespace": "http://www.opengis.net/ont/geosparql#",
         "prefix": "geo",
-        "properties": 34,
+        "properties": 54,
         "summary": "Classes and properties for representing spatial features and their geometries, with relations such as contains, within, overlaps, and touches, and text encodings of geometries.",
         "tags": [
             "places"
         ],
-        "title": null
+        "title": "GeoSPARQL Ontology"
     },
     "gesah": {
         "alt_title": null,
@@ -2483,7 +2485,7 @@
         "alt_title": null,
         "classes": 27,
         "description": "This is a registration of classes and properties from International Standard Bibliographic Description (ISBD), consolidated edition, published by De Gruyter Saur in July 2011 (ISBN 978-3-11-026379-4).",
-        "file": "vocabs/isbd.nt",
+        "file": "vocabs/isbd.ttl",
         "format": null,
         "languages": [
             "en",
@@ -2539,15 +2541,15 @@
     },
     "kanzaki-music": {
         "alt_title": null,
-        "classes": 62,
-        "description": "OLD RDF Schema version. A vocabulary to describe classical music and performances. Classes (categories) for musical work and performers, as well as related properties are defined. Make sure to distinguish musical works (e.g. Opera) from performance (Opera_Performance), or works (String_Quartette) from performer (StringQuartetEnsemble in this vocab), whose natural language terms are used interchangeblly. If desirable for interoperability, wordnet classes can be used instead of classes defined here for some categories (e.g. Vaiolinist), although not all classes are available in wordnet.",
+        "classes": 111,
+        "description": "A vocabulary, or music ontology, to describe classical music and performances. Classes (categories) for musical works, events, instruments and performers, as well as related properties are defined. Make sure to distinguish musical works (e.g. Opera) from performance events (Opera_Event), or works (String_Quartette) from performer (StringQuartetEnsemble in this vocab), whose natural language terms are used interchangeblly. The present version experiments more precise model to describe a musical work, its representations (performances, scores, etc) and a musical event to present a representation (a concert). Includes 30 keys as individuals.",
         "file": "vocabs/kanzaki-music.rdf",
         "format": null,
         "languages": [],
         "license": null,
         "namespace": "http://www.kanzaki.com/ns/music#",
         "prefix": "music",
-        "properties": 19,
+        "properties": 28,
         "summary": "Classes and properties for describing classical music works, performances, and performers, such as symphonies, operas, concerts, venues, composers, conductors, and instrumentalists.",
         "tags": [
             "performing-arts"
@@ -2939,7 +2941,7 @@
             "libraries",
             "museums"
         ],
-        "title": "LRMoo 1.0 / OWL"
+        "title": "LRMoo 1.1.1 / OWL"
     },
     "lto": {
         "alt_title": "Library Transaction Ontology (LTO)",
@@ -4454,20 +4456,22 @@
     },
     "qudt": {
         "alt_title": "Quantities, Units, Dimensions and Types (QUDT) Schema",
-        "classes": 83,
+        "classes": 67,
         "description": null,
-        "file": "vocabs/qudt.nt",
+        "file": "vocabs/qudt.ttl",
         "format": null,
-        "languages": [],
+        "languages": [
+            "en"
+        ],
         "license": null,
         "namespace": "http://qudt.org/schema/qudt/",
         "prefix": "qudt",
-        "properties": 163,
+        "properties": 110,
         "summary": "Classes and properties for describing quantities, units of measure, how to convert between units, dimensions, systems of units, and data types for storing values.",
         "tags": [
             "science"
         ],
-        "title": "QUDT Schema - Version 2.1.2"
+        "title": "QUDT Schema - Version 3.5.2"
     },
     "r-arco": {
         "alt_title": null,
@@ -4549,34 +4553,61 @@
         "title": "RDA Classes"
     },
     "rda-n": {
-        "alt_title": null,
+        "alt_title": "RDA Nomen properties",
         "classes": 0,
-        "description": "Warning! This element set is no longer maintained in the Open Metadata Registry. For the current version, see the RDA Registry at http://www.rdaregistry.info/",
-        "file": "vocabs/rda-n.rdf",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Nomen entity.",
+        "file": "vocabs/rda-n.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/n/",
         "prefix": "rdan",
-        "properties": 161,
+        "properties": 184,
         "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Nomen properties"
+        "title": "Nomen properties"
     },
     "rda-onix-framework-element-set": {
         "alt_title": null,
         "classes": 9,
-        "description": "Warning! This element set is no longer maintained in the Open Metadata Registry. For the current version, see the RDA Registry at http://www.rdaregistry.info/",
-        "file": "vocabs/rda-onix-framework-element-set.rdf",
+        "description": "Classes and properties that represent the the entities and attribute elements of the RDA/ONIX Framework for Resource Categorization.",
+        "file": "vocabs/rda-onix-framework-element-set.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "fi",
+            "fr",
+            "hu",
+            "nl",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/rof/",
         "prefix": "rof",
         "properties": 24,
@@ -4587,49 +4618,76 @@
         "title": "RDA/ONIX Framework element set"
     },
     "rda-p": {
-        "alt_title": null,
+        "alt_title": "RDA Place properties",
         "classes": 0,
-        "description": "Warning! This element set is no longer maintained in the Open Metadata Registry. For the current version, see the RDA Registry at http://www.rdaregistry.info/",
-        "file": "vocabs/rda-p.rdf",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Place entity.",
+        "file": "vocabs/rda-p.nt",
         "format": null,
         "languages": [
+            "ar",
             "ca",
+            "cs",
             "da",
             "de",
             "el",
             "en",
+            "es",
+            "et",
             "fi",
             "fr",
-            "vi"
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/p/",
         "prefix": "rdap",
-        "properties": 52,
+        "properties": 57,
         "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Place properties"
+        "title": "Place properties"
     },
     "rda-t": {
-        "alt_title": null,
+        "alt_title": "RDA Time-span properties",
         "classes": 0,
-        "description": "Warning! This element set is no longer maintained in the Open Metadata Registry. For the current version, see the RDA Registry at http://www.rdaregistry.info/",
-        "file": "vocabs/rda-t.rdf",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Timespan entity.",
+        "file": "vocabs/rda-t.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/t/",
         "prefix": "rdat",
-        "properties": 55,
+        "properties": 63,
         "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Time-span properties"
+        "title": "Timespan properties"
     },
     "rda-w": {
         "alt_title": "RDA Work properties",
@@ -4672,18 +4730,33 @@
     "rda-x": {
         "alt_title": null,
         "classes": 0,
-        "description": "Warning! This element set is no longer maintained in the Open Metadata Registry. For the current version, see the RDA Registry at http://www.rdaregistry.info/",
-        "file": "vocabs/rda-x.rdf",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Entity entity.",
+        "file": "vocabs/rda-x.nt",
         "format": null,
         "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
             "en",
+            "es",
+            "et",
+            "fi",
             "fr",
-            "sv"
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/x/",
         "prefix": "rdax",
-        "properties": 23,
+        "properties": 30,
         "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
         "tags": [
             "libraries"
@@ -4691,99 +4764,184 @@
         "title": "RDA Entity properties"
     },
     "rdaa": {
-        "alt_title": null,
+        "alt_title": "RDA Agent properties",
         "classes": 0,
-        "description": "Properties derived from RDA elements and relationship designators with the domain of RDA Agent.",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Agent, Collective Agent, Person, Family, and Corporate Body entities.",
         "file": "vocabs/rdaa.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/a/",
         "prefix": "rdaa",
-        "properties": 270,
+        "properties": 1109,
         "summary": "Properties for recording the attributes and relationships of persons, families, and corporate bodies, including names, dates, and roles such as composer or editor.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Agent properties"
+        "title": "Agent properties"
     },
     "rdae": {
-        "alt_title": null,
+        "alt_title": "RDA Expression properties",
         "classes": 0,
-        "description": "Properties derived from RDA elements and relationship designators with the domain of RDA Expression.",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Expression entity.",
         "file": "vocabs/rdae.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/e/",
         "prefix": "rdae",
-        "properties": 252,
+        "properties": 578,
         "summary": "Properties for recording the attributes and relationships of an expression of a work, including language, content type, translators, performers, and adaptations.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Expression properties"
+        "title": "Expression properties"
     },
     "rdai": {
-        "alt_title": null,
+        "alt_title": "RDA Item properties",
         "classes": 0,
-        "description": "Properties derived from RDA elements and relationship designators with the domain of RDA Item.",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Item entity.",
         "file": "vocabs/rdai.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/i/",
         "prefix": "rdai",
-        "properties": 66,
+        "properties": 164,
         "summary": "Properties for recording the attributes and relationships of an item, including owners, donors, custodial history, annotators, and restrictions on access and use.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Item properties"
+        "title": "Item properties"
     },
     "rdam": {
-        "alt_title": null,
+        "alt_title": "RDA Manifestation properties",
         "classes": 0,
-        "description": "Properties derived from RDA elements and relationship designators with the domain of RDA Manifestation.",
+        "description": "Properties that represent the attribute and relationship elements of the RDA Manifestation entity.",
         "file": "vocabs/rdam.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/m/",
         "prefix": "rdam",
-        "properties": 259,
+        "properties": 456,
         "summary": "Properties for recording the attributes and relationships of a manifestation, including titles, edition, publication details, carrier type, extent, and dimensions.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Manifestation properties"
+        "title": "Manifestation properties"
     },
     "rdau": {
-        "alt_title": null,
+        "alt_title": "RDA Unconstrained properties",
         "classes": 0,
-        "description": "Properties derived from RDA elements and relationship designators without specific or implicit restrictions to RDA entities.",
+        "description": "Properties that are derived from the elements of all of the RDA entities with semantics that are independent of the IFLA Library Reference Model.",
         "file": "vocabs/rdau.nt",
         "format": null,
         "languages": [
-            "en"
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "fi",
+            "hu",
+            "nl",
+            "tr",
+            "zh-Hans-CN"
         ],
-        "license": null,
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
         "namespace": "http://rdaregistry.info/Elements/u/",
         "prefix": "rdau",
-        "properties": 826,
+        "properties": 1214,
         "summary": "Properties for recording the attributes and relationships of all entities without limiting each property to one entity, including titles, contributors, dates, and carrier types.",
         "tags": [
             "libraries"
         ],
-        "title": "RDA Unconstrained properties"
+        "title": "Unconstrained properties"
     },
     "rdf": {
         "alt_title": null,

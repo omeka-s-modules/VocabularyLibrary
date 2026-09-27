@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:base="http://iflastandards.info/ns/lrm/lrmoo/">
   <!--
-OWL implementation of LRMoo v1.0 May, 2024 (https://cidoc-crm.org/lrmoo/ModelVersion/version-1.0)).
+OWL implementation of LRMoo v1.1.1 November, 2025 (https://cidoc-crm.org/lrmoo/ModelVersion/version-1.1.1)).
 
-Created by FORTH-ICS - October, 2025
+Created by FORTH-ICS - November, 2025
 CC BY 4.0 https://creativecommons.org/licenses/by/4.0/legalcode
 
 -->
   <owl:Ontology rdf:about="http://iflastandards.info/ns/lrm/lrmoo/">
-    <rdfs:label xml:lang="en">LRMoo 1.0 / OWL</rdfs:label>
-    <owl:versionIRI rdf:resource="http://cidoc-crm.org/extensions/lrmoo/owl/1.0/"/>
+    <rdfs:label xml:lang="en">LRMoo 1.1.1 / OWL</rdfs:label>
+    <owl:versionIRI rdf:resource="http://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/"/>
     <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/owl/7.1.3/"/>
-    <owl:versionInfo xml:lang="en">LRMoo Ontology 1.0 (May, 2024) including references to CIDOC-CRM 7.1.3</owl:versionInfo>
+    <owl:versionInfo xml:lang="en">LRMoo Ontology 1.1.1 (November, 2025) including references to CIDOC-CRM 7.1.3</owl:versionInfo>
   </owl:Ontology>
   <owl:Class rdf:about="F1_Work">
     <rdfs:label xml:lang="en">F1 Work</rdfs:label>
@@ -47,6 +47,9 @@ Examples:
 - Auguste Rodin’s ‘Le penseur’ (‘The thinker’) [art]
 - Pablo Picasso’s ‘Guernica’ [art]
 - Katsushika Hokusai’s ‘神奈川沖浪裏’ (‘The Great Wave’) [art]
+
+In First Order Logic:
+- F1(x) ⇒ E89(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F2_Expression">
@@ -79,6 +82,9 @@ Examples:
 - the censored version of Hitchcock’s movie ‘Psycho’ that was released in Britain (with stabbing sounds and visible nude shots removed)
 - the first plaster version of ‘The Thinker’ sculpture made by Auguste Rodin around 1881
 - large scale version of Auguste Rodin’s ‘The Thinker’ created at the Fonderie Alexis Rudier in 1904
+
+In First Order Logic:
+- F2(x) ⇒ E73(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F3_Manifestation">
@@ -104,6 +110,9 @@ Examples:
 - the manuscript known as ‘The Book of Kells’
 - the publication containing a text entitled ‘Pop Culture’ (authored by a person named ‘Richard Memeteau’), issued in 2014 by the publisher named ‘Zones’ and distributed in EPUB2 format by a distributor named ‘Editis’ and identified by ISBN ‘978-2-35522-085-2’
 - the publication entitled ‘Alfred Hitchcock’s Psycho: 60th Anniversary Edition’, containing one Blu-ray disc with two cuts of the movie, released in 2020
+
+In First Order Logic:
+- F3(x) ⇒ E73(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F5_Item">
@@ -124,6 +133,9 @@ Examples:
 - the bronze statue of Auguste Rodin’s ‘The Thinker’, cast at the Fonderie Alexis Rudier in 1904 held at the Musée Rodin in Paris, France since 1922
 - the ebook ‘Pop Culture’ by Richard Memeteau in EPUB2 format, received by the National Library of France through digital legal deposit on 1st February 2016 to which the legal deposit number DLN-20160201-6 has been assigned. In the catalogue, this item is identified with a unique number: LNUM20553886
 - the copy of the electronic file named ‘cidoc_crm_version_7.1.3.pdf’ on my hard drive containing the text of official version 7.1.3 of the ‘Definition of the CIDOC Conceptual Reference Model’
+
+In First Order Logic:
+- F5(x) ⇒ E24(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F11_Corporate_Body">
@@ -141,6 +153,9 @@ Examples:
 - The Jackson Five [pop band]
 - Municipalité régionale de comté de Portneuf [regional municipality in Quebec]
 - Symposium on Glaucoma
+
+In First Order Logic:
+- F11(x) ⇒ F55(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F12_Nomen">
@@ -176,6 +191,9 @@ Examples:
 - ‘595.7’ as a classification number for insects (the taxonomic class Insecta), in the 23rd edition of the Dewey Decimal Classification
 - ‘Insecta’ as a term for insects (the taxonomic class Insecta), used as the caption for the class ‘595.7’ in the English language 23rd edition of the Dewey Decimal Classification
 - ‘spa’ as a code to designate the language Spanish, drawn from set 2 (3-letter language identifiers) of ‘ISO 639 – Code for individual languages and language groups’ (ISO 639:2023)
+
+In First Order Logic:
+- F12(x) ⇒ E89(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F18_Serial_Work">
@@ -192,6 +210,9 @@ Examples:
 - the periodical entitled ‘The UNESCO Courier’, ISSN ‘0041-5278’
 - the periodical entitled ‘Courrier de l’UNESCO’, ISSN ‘0304-3118’ [French edition of the periodical titled ‘The UNESCO Courier’, ISSN ‘0041-5278’]
 - the series entitled ‘L’évolution de l’humanité’, ISSN ‘0755-1843’ [a monograph series comprising volumes that were published from 1920 on, and some of which were reprinted, with different physical features and rearranged in a different order, from 1968 on, in a distinct series also entitled ‘L’évolution de l’humanité’, ISSN ‘0755-1770’]
+
+In First Order Logic:
+- F18(x) ⇒ F1(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F27_Work_Creation">
@@ -220,6 +241,9 @@ Examples:
 - Auguste Rodin creating ‘Le Penseur’ (‘The Thinker’)
 - Picasso creating ‘Guernica’
 - Pascal Bonnefois and Marie-Louise Ollier creating ‘Yvain ou Le chevalier au lion : concordance lemmatisée’ [a concordance for the novel ‘Le chevalier au lion’ by Chrétien de Troyes, based on the 1960 edition by Mario Roques]
+
+In First Order Logic:
+- F27(x) ⇒ E65(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F28_Expression_Creation">
@@ -245,6 +269,10 @@ Examples:
 - the making of the censored version of Hitchcock’s movie ‘Psycho’ that was released in Britain
 - Auguste Rodin making the first plaster version of ‘The Thinker’ sculpture
 - the making of the large-scale version of ‘The Thinker’ by the ‘Fonderie Alexis Rudier in 1904
+
+In First Order Logic:
+- F28(x) ⇒ E12(x)
+- F28(x) ⇒ E65(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F30_Manifestation_Creation">
@@ -261,6 +289,10 @@ Examples:
 - the process of making the HTML-version of the English text of Homer’s ‘Odyssey’ (translated by S. H. Butcher and A. Lang), which is available online from the Gutenberg Project
 - the process of making the engraved copper plates for the first edition of Bach’s ‘Goldberg Variations’ by Balthasar Schmid
 - the process of making the CD publication ‘Bach Goldberg Variations’, published by Hyperion Records in 2016, including the process of recording the performance, editing, and typesetting the booklet, and design of the overall publication
+
+In First Order Logic:
+- F30(x) ⇒ E12(x)
+- F30(x) ⇒ E65(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F31_Performance">
@@ -281,6 +313,9 @@ Examples:
 - the performance of Verdi’s ‘La Traviata’ at the Salzburg Festival in 2005, that was staged by Willy Decker, directed by Brian Large and featuring Anna Netrebko and Rolando Villazón
 - the performance of Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’ by the Mariinsky Orchestra and Ballet at the Mariinsky Theatre in Saint Petersburg, June 2008
 - the performance of Daniel Humair and Damien Varaillon’s improvisation ‘Hommage à John Coltrane’ in the Bal Blomet (Paris), on 18 January 2018
+
+In First Order Logic:
+- F31(x) ⇒ E7(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F32_Item_Production_Event">
@@ -297,6 +332,9 @@ Examples:
 - the printing of copies of the score of Bach’s ‘Goldberg Variations’ by Balthasar Schmid in 1741
 - the casting of Auguste Rodin’s ‘The Thinker’ at the Fonderie Alexis Rudier in 1904
 - the production of the items of the CD publication ‘Bach Goldberg Variations’, published by Hyperion Records in 2016, including the pressing of the CDs, the printing of the booklet and cover, assembling the parts, etc.
+
+In First Order Logic:
+- F32(x) ⇒ E12(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F33_Reproduction_Event">
@@ -312,6 +350,10 @@ Examples:
 - the 2014 publication of Daniel Wilson’s ‘Caliban: the missing link’ by Cambridge University Press [a facsimile edition of the 1873 publication by Macmillan]
 - the 2015 publication of Harry Partch’s ‘Two studies on ancient Greek scales’ by Schott [which reproduces Harry Partch’s holograph manuscript]
 - the 2007 publication of Hubert Reeve’s ‘Malicorne: réflexions d’un observateur de la nature’ published by Éditions du Seuil as number 179 in the series ‘Points. Science’ (ISBN ‘978-2-02-096760-0’) [a reprint edition of the 1990 publication by Éditions du Seuil in the series ‘Science ouverte’ (ISBN ‘2-02-012644-3’)]
+
+In First Order Logic:
+- F33(x) ⇒ E12(x)
+- F33(x) ⇒ F30(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F36_Script_Conversion">
@@ -324,6 +366,9 @@ This class comprises rule sets for converting signs or arrangements of signs fro
 
 Examples:
 - the rules for the transliteration of the Cyrillic script into Latin script codified in ISO 9:1995 ‘Information and documentation — Transliteration of Cyrillic characters into Latin characters — Slavic and non-Slavic languages’ (ISO 9:1995)
+
+In First Order Logic:
+- F36(x) ⇒ E29(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F39_Family">
@@ -337,6 +382,9 @@ This class comprises groups of two or more persons presented as a family and jus
 Examples:
 - House of Tudor
 - the brothers Grimm
+
+In First Order Logic:
+- F39(x) ⇒ F55(x)
 </rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="F55_Collective_Agent">
@@ -363,6 +411,9 @@ Examples:
 - the President of the Swiss Confederation
 - Nicolas Bourbaki [collective pseudonym of a group of 20(th) century French mathematicians also known as the ‘Association des collaborateurs de Nicolas Bourbaki’]
 - Ellery Queen [joint pseudonym for detective fiction of cousins Frederic Dannay and Manfred Bennington Less who also wrote separately]
+
+In First Order Logic:
+- F55(x) ⇒ E74(x)
 </rdfs:comment>
   </owl:Class>
   <owl:ObjectProperty rdf:about="R1_is_logical_successor_of">
@@ -383,6 +434,12 @@ Examples:
 - Miguel de Cervantes’ ‘Segunda Parte del Ingenioso Cavallero Don Quixote de la Mancha’ (F1) is logical successor of Miguel de Cervantes’ ‘El ingenioso hidalgo Don Quixote de la Mancha’ (F1).
 - The TV series ‘Breaking Bad’ (F1) is logical successor of the TV series ‘Better Call Saul’ (F1).
 - The first ‘Star Wars’ trilogy, 1977-1983 (F1) is logical successor of the second ‘Star Wars’ trilogy, 1999-2005 (F1). [Note that the logical order does not follow, in either of the two last examples, the chronological order of creation]
+
+In First Order Logic:
+- R1(x,y) ⇒ F1(x)
+- R1(x,y) ⇒ F1(y)
+- R1(x,y) ⇒ P130(x,y)
+- R1(x,y) ⇒ ¬R1(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R1i_has_successor">
@@ -403,6 +460,12 @@ Examples of the inverse property:
 - Miguel de Cervantes’ ‘Segunda Parte del Ingenioso Cavallero Don Quixote de la Mancha’ (F1) is logical successor of Miguel de Cervantes’ ‘El ingenioso hidalgo Don Quixote de la Mancha’ (F1).
 - The TV series ‘Breaking Bad’ (F1) is logical successor of the TV series ‘Better Call Saul’ (F1).
 - The first ‘Star Wars’ trilogy, 1977-1983 (F1) is logical successor of the second ‘Star Wars’ trilogy, 1999-2005 (F1). [Note that the logical order does not follow, in either of the two last examples, the chronological order of creation]
+
+In First Order Logic of the inverse property:
+- R1(x,y) ⇒ F1(x)
+- R1(x,y) ⇒ F1(y)
+- R1(x,y) ⇒ P130(x,y)
+- R1(x,y) ⇒ ¬R1(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R2_is_derivative_of">
@@ -415,9 +478,11 @@ Examples of the inverse property:
     <rdfs:subPropertyOf rdf:resource="R68_is_inspired_by"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
+Shortcut Of: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
+
 Scope note:
 This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive, asymmetric and irreflexive.
-The inverse of this property is equivalent to the developed path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2). R3i realises: F1 Work(2). That is, F1 Work(1). R2i has derivative: F1 Work (2), without needing to specify the specific expressions involved in the derivation.
+This property is equivalent to the path: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2). That is, F1 Work(1). R2 is derivative of: F1 Work (2), without needing to specify the specific expressions involved in the derivation.
 
 Examples:
 - The movie ‘Murder on the Orient Express’ directed by Kenneth Branagh (F1) is derivative of the novel ‘Murder on the Orient Express’ by Agatha Christie (F1) with has type Movie adaptation (E55).
@@ -428,6 +493,15 @@ Properties:
 - R2.1 has type: 
   Scope note:
     This property allows for specifying the kind of derivation, such as adaptation, summarisation, etc.
+
+In First Order Logic:
+- R2(x,y) ⇒ F1(x)
+- R2(x,y) ⇒ F1(y)
+- R2(x,y) ⇒ R68(x,y)
+- R2(x,y) ⇔ (∃uzw) [F2(u) ∧ R3(x,u) ∧ F28(z) ∧ R17i(u,z) ∧ F2(w) ∧ P16(z,w) ∧ R3i(w,y)]
+- R2(x,y,z) ⇒ R2(x,y) ∧ E55(z)
+- R2(x,y) ∧ R2(y,z) ⇒ R2(x,z)
+- R2(x,y) ⇒ ¬R2(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R2i_has_derivative">
@@ -440,14 +514,25 @@ Properties:
     <rdfs:subPropertyOf rdf:resource="R68i_is_inspiration_for"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
+Shortcut Of of the inverse property: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
+
 Scope note of the inverse property:
 This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive, asymmetric and irreflexive.
-The inverse of this property is equivalent to the developed path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2). R3i realises: F1 Work(2). That is, F1 Work(1). R2i has derivative: F1 Work (2), without needing to specify the specific expressions involved in the derivation.
+This property is equivalent to the path: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2). That is, F1 Work(1). R2 is derivative of: F1 Work (2), without needing to specify the specific expressions involved in the derivation.
 
 Examples of the inverse property:
 - The movie ‘Murder on the Orient Express’ directed by Kenneth Branagh (F1) is derivative of the novel ‘Murder on the Orient Express’ by Agatha Christie (F1) with has type Movie adaptation (E55).
 - The movie ‘A Clockwork Orange’ directed by Stanley Kubrick (F1) is derivative of the novel ‘A Clockwork Orange’ by Anthony Burgess (F1) with has type Movie adaptation (E55).
 - Seth Grahame-Smith’s novel ‘Pride and prejudice and zombies’(F1) is derivative of Jane Austen’s novel ‘Pride and prejudice’ (F1) with has type Parody (E55).
+
+In First Order Logic of the inverse property:
+- R2(x,y) ⇒ F1(x)
+- R2(x,y) ⇒ F1(y)
+- R2(x,y) ⇒ R68(x,y)
+- R2(x,y) ⇔ (∃uzw) [F2(u) ∧ R3(x,u) ∧ F28(z) ∧ R17i(u,z) ∧ F2(w) ∧ P16(z,w) ∧ R3i(w,y)]
+- R2(x,y,z) ⇒ R2(x,y) ∧ E55(z)
+- R2(x,y) ∧ R2(y,z) ⇒ R2(x,z)
+- R2(x,y) ⇒ ¬R2(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R3_is_realised_in">
@@ -472,6 +557,12 @@ Examples:
 - Johann Sebastian Bach’s ‘Goldberg Variations’ (F1) is realised in the score of the ‘Goldberg Variations’ (as published by Balthasar Schmid in 1741) (F2).
 - Auguste Rodin’s work ‘The Thinker’ (F1) is realised in the first plaster version of ‘The thinker’ (F2) that Auguste Rodin made around 1881.
 - Auguste Rodin’s work ‘The Thinker’ (F1) is realised in the large-scale version of ‘The thinker’ (F2) created at the Fonderie Alexis Rudier in 1904.
+
+In First Order Logic:
+- R3(x,y) ⇒ F1(x)
+- R3(x,y) ⇒ F2(y)
+- R3(x,y) ⇒ P130(x,y)
+- R3(x,z) ∧ R3(y,z) ⇒ x=y
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R3i_realises">
@@ -496,6 +587,12 @@ Examples of the inverse property:
 - Johann Sebastian Bach’s ‘Goldberg Variations’ (F1) is realised in the score of the ‘Goldberg Variations’ (as published by Balthasar Schmid in 1741) (F2).
 - Auguste Rodin’s work ‘The Thinker’ (F1) is realised in the first plaster version of ‘The thinker’ (F2) that Auguste Rodin made around 1881.
 - Auguste Rodin’s work ‘The Thinker’ (F1) is realised in the large-scale version of ‘The thinker’ (F2) created at the Fonderie Alexis Rudier in 1904.
+
+In First Order Logic of the inverse property:
+- R3(x,y) ⇒ F1(x)
+- R3(x,y) ⇒ F2(y)
+- R3(x,y) ⇒ P130(x,y)
+- R3(x,z) ∧ R3(y,z) ⇒ x=y
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R4_embodies">
@@ -518,6 +615,11 @@ Examples:
 - The publication entitled ‘Alfred Hitchcock’s Psycho: 60th Anniversary Edition’ which was released in 2020 (F3), embodies the original cut of the movie (F2) and the censored version that was released in Britain (F2).
 - The publication identified by ISBN ‘2-222-00835-2’ (F3) embodies the text of Marin Mersenne’s ‘Harmonie universelle’ (F2).
 - The CD publication ‘Bach Goldberg Variations’ published by Hyperion Records in 2016 (F3), embodies Angela Hewitt’s performances of Bach’s ‘Goldberg Variations’ recorded in Christuskirche (Berlin) on 14-17 December 2015 (F2).
+
+In First Order Logic:
+- R4(x,y) ⇒ F3(x)
+- R4(x,y) ⇒ F2(y)
+- R4(x,y) ⇒ P165(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R4i_is_embodied_in">
@@ -540,6 +642,11 @@ Examples of the inverse property:
 - The publication entitled ‘Alfred Hitchcock’s Psycho: 60th Anniversary Edition’ which was released in 2020 (F3), embodies the original cut of the movie (F2) and the censored version that was released in Britain (F2).
 - The publication identified by ISBN ‘2-222-00835-2’ (F3) embodies the text of Marin Mersenne’s ‘Harmonie universelle’ (F2).
 - The CD publication ‘Bach Goldberg Variations’ published by Hyperion Records in 2016 (F3), embodies Angela Hewitt’s performances of Bach’s ‘Goldberg Variations’ recorded in Christuskirche (Berlin) on 14-17 December 2015 (F2).
+
+In First Order Logic of the inverse property:
+- R4(x,y) ⇒ F3(x)
+- R4(x,y) ⇒ F2(y)
+- R4(x,y) ⇒ P165(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R5_has_component">
@@ -563,6 +670,13 @@ Examples:
 - The Italian text of Dante’s textual work entitled ‘Divina Commedia’ (F2) has component the Italian text of Dante’s textual work entitled ‘Inferno’ (F2).
 - The musical notation of Mozart’s Singspiel entitled ‘Die Zauberflöte’ (F2) has component the musical notation of Mozart’s aria entitled ‘Der Hölle Rache’, also known as ‘The Queen of the Night’s Aria’ (F2).
 - The visual content of the map entitled ‘Wales – The Midlands – South West England’, scale 1:400,000, issued by Michelin in 2005 (F2) has component the visual content of the inset entitled ‘Liverpool’, scale 1:200,000, set within the compass of the map titled ‘Wales – The Midlands – South West England’, scale 1:400,000, issued by Michelin in 2005 (F2).
+
+In First Order Logic:
+- R5(x,y) ⇒ F2(x)
+- R5(x,y) ⇒ F2(y)
+- R5(x,y) ⇒ P148(x,y)
+- R5(x,y) ∧ R5(y,z) ⇒ R5(x,z)
+- R5(x,y) ⇒ ¬R5(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R5i_is_component_of">
@@ -586,6 +700,13 @@ Examples of the inverse property:
 - The Italian text of Dante’s textual work entitled ‘Divina Commedia’ (F2) has component the Italian text of Dante’s textual work entitled ‘Inferno’ (F2).
 - The musical notation of Mozart’s Singspiel entitled ‘Die Zauberflöte’ (F2) has component the musical notation of Mozart’s aria entitled ‘Der Hölle Rache’, also known as ‘The Queen of the Night’s Aria’ (F2).
 - The visual content of the map entitled ‘Wales – The Midlands – South West England’, scale 1:400,000, issued by Michelin in 2005 (F2) has component the visual content of the inset entitled ‘Liverpool’, scale 1:200,000, set within the compass of the map titled ‘Wales – The Midlands – South West England’, scale 1:400,000, issued by Michelin in 2005 (F2).
+
+In First Order Logic of the inverse property:
+- R5(x,y) ⇒ F2(x)
+- R5(x,y) ⇒ F2(y)
+- R5(x,y) ⇒ P148(x,y)
+- R5(x,y) ∧ R5(y,z) ⇒ R5(x,z)
+- R5(x,y) ⇒ ¬R5(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R7_exemplifies">
@@ -606,6 +727,11 @@ Even though an item may exhibit defects with respect to the intended manifestati
 Examples:
 - The item held by the Deichman public library in Oslo, identified by inventory number ‘9138513’ (F5) exemplifies the publication ‘Murder on the Orient Express / Agatha Christie’, HarperCollins 2017 (F3).
 - The item held by the National Library of France and identified by shelf mark ‘Res 8 P 10’ (F5) exemplifies the edition of Amerigo Vespucci’s textual and cartographic work entitled ‘Mundus novus’ issued in Paris ca. 1503-1504 (F3).
+
+In First Order Logic:
+- R7(x,y) ⇒ F5(x)
+- R7(x,y) ⇒ F3(y)
+- R7(x,y) ⇒ P128(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R7i_is_exemplified_by">
@@ -626,6 +752,11 @@ Even though an item may exhibit defects with respect to the intended manifestati
 Examples of the inverse property:
 - The item held by the Deichman public library in Oslo, identified by inventory number ‘9138513’ (F5) exemplifies the publication ‘Murder on the Orient Express / Agatha Christie’, HarperCollins 2017 (F3).
 - The item held by the National Library of France and identified by shelf mark ‘Res 8 P 10’ (F5) exemplifies the edition of Amerigo Vespucci’s textual and cartographic work entitled ‘Mundus novus’ issued in Paris ca. 1503-1504 (F3).
+
+In First Order Logic of the inverse property:
+- R7(x,y) ⇒ F5(x)
+- R7(x,y) ⇒ F3(y)
+- R7(x,y) ⇒ P128(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R8_combines">
@@ -635,9 +766,8 @@ Examples of the inverse property:
     <rdfs:domain rdf:resource="F12_Nomen"/>
     <rdfs:range rdf:resource="F12_Nomen"/>
     <owl:inverseOf rdf:resource="R8i_is_combined_to_form"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
-
-Shortcut Of: F12 Nomen (1). R33 has string: E62 String (1). P190i is symbolic content of: E90 Symbolic Object (1): P106 is composed of: E90 Symbolic Object (2). P190 has symbolic content: E62 String (2). R33i is string of: F12 Nomen (2)
 
 Scope note:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen where the string of the domain instance of F12 Nomen includes the complete symbolic content of the string of the range instance of F12 Nomen. This property is not transitive. It is asymmetric and irreflexive.
@@ -659,6 +789,12 @@ Examples:
 - ‘595.7096’ as a classification number for insects in Africa (F12) combines ‘096’ as the notation corresponding to the continent Africa (F12). [Classification number constructed using the geographic regions table in the 23rd edition of the Dewey Decimal Classification (DDC23).]
 - ‘Orange (Colour)’ as a controlled subject term for the concept (F12) combines ‘Orange’ the English language term for the colour (F12). [Terms combined according to the syntax of the Art and Architecture Thesaurus (AAT).]
 - ‘Orange (Colour)’ as a controlled subject term for the concept (F12) combines ‘Colour’ the English language term for the concept (F12). [Terms combined according to the syntax of the Art and Architecture Thesaurus (AAT).]
+
+In First Order Logic:
+- R8(x,y) ⇒ F12(x)
+- R8(x,y) ⇒ F12(y)
+- R8(x,y) ⇒ P148(x,y)
+- R8(x,y) ⇒ ¬R8(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R8i_is_combined_to_form">
@@ -668,9 +804,8 @@ Examples:
     <rdfs:domain rdf:resource="F12_Nomen"/>
     <rdfs:range rdf:resource="F12_Nomen"/>
     <owl:inverseOf rdf:resource="R8_combines"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
-
-Shortcut Of of the inverse property: F12 Nomen (1). R33 has string: E62 String (1). P190i is symbolic content of: E90 Symbolic Object (1): P106 is composed of: E90 Symbolic Object (2). P190 has symbolic content: E62 String (2). R33i is string of: F12 Nomen (2)
 
 Scope note of the inverse property:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen where the string of the domain instance of F12 Nomen includes the complete symbolic content of the string of the range instance of F12 Nomen. This property is not transitive. It is asymmetric and irreflexive.
@@ -692,6 +827,12 @@ Examples of the inverse property:
 - ‘595.7096’ as a classification number for insects in Africa (F12) combines ‘096’ as the notation corresponding to the continent Africa (F12). [Classification number constructed using the geographic regions table in the 23rd edition of the Dewey Decimal Classification (DDC23).]
 - ‘Orange (Colour)’ as a controlled subject term for the concept (F12) combines ‘Orange’ the English language term for the colour (F12). [Terms combined according to the syntax of the Art and Architecture Thesaurus (AAT).]
 - ‘Orange (Colour)’ as a controlled subject term for the concept (F12) combines ‘Colour’ the English language term for the concept (F12). [Terms combined according to the syntax of the Art and Architecture Thesaurus (AAT).]
+
+In First Order Logic of the inverse property:
+- R8(x,y) ⇒ F12(x)
+- R8(x,y) ⇒ F12(y)
+- R8(x,y) ⇒ P148(x,y)
+- R8(x,y) ⇒ ¬R8(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R10_is_member_of">
@@ -716,6 +857,10 @@ Examples:
 - Ludwig van Beethoven’s opera Op. 72 ‘Fidelio’ (E28) has member Ludwig van Beethoven’s opera ‘Fidelio’ (the final version that was first performed in 1814) (F1).
 - The fictional universe created by Terry Pratchett referred to as ‘Discworld’ (E28) has member Terry Pratchett’s novel ‘The Light Fantastic’ (F1).
 - The fictional universe created by Terry Pratchett referred to as ‘Discworld’ (E28) has member ‘Where’s my Cow’, a picture book by Terry Pratchett and Melvyn Grant (F1).
+
+In First Order Logic:
+- R10(x,y) ⇒ F1(x)
+- R10(x,y) ⇒ E28(y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R10i_has_member">
@@ -740,6 +885,10 @@ Examples of the inverse property:
 - Ludwig van Beethoven’s opera Op. 72 ‘Fidelio’ (E28) has member Ludwig van Beethoven’s opera ‘Fidelio’ (the final version that was first performed in 1814) (F1).
 - The fictional universe created by Terry Pratchett referred to as ‘Discworld’ (E28) has member Terry Pratchett’s novel ‘The Light Fantastic’ (F1).
 - The fictional universe created by Terry Pratchett referred to as ‘Discworld’ (E28) has member ‘Where’s my Cow’, a picture book by Terry Pratchett and Melvyn Grant (F1).
+
+In First Order Logic of the inverse property:
+- R10(x,y) ⇒ F1(x)
+- R10(x,y) ⇒ E28(y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R11_has_issuing_rule">
@@ -755,10 +904,15 @@ Shortcut Of: F18 Serial Work. R19i was realised through: F30 Manifestation Creat
 
 Scope note:
 This property associates an instance of F18 Serial Work with the instance of E29 Design or Procedure that specifies the issuing policy planned by this instance of F18 Serial Work, such as sequencing pattern, expected frequency and expected regularity.
+This property is a shortcut of the path from F1 Work, restricted to F18 Serial Work, through R19i was realised through, F30 Manifestation Creation, P16 used specific object to E29 Design or Procedure.
 
 Examples:
-- [Editor’s note: Transfer this property to PRESS(OO) once version 2.0 has a stable draft. Implement this property only in conjunction with an implementation of PRESS(OO).]
 - The serial entitled ‘Quarterly journal of pure and applied mathematics’, identified by ISSN ‘1549-6724’ (F18) has issuing rule to be issued every three months, on a regular basis, with each issue being numbered according to the pattern ‘Vol. 1, no. 1 (2005)’ that was observed by the Library of Congress’s cataloguers on an exemplar of the first issue (E29).
+
+In First Order Logic:
+- R11(x,y) ⇒ F18(x)
+- R11(x,y) ⇒ E29(y)
+- R11(x,y) ⇒ (∃z) [F30(z) ∧ R19i(x,z) ∧ P16(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R11i_is_issuing_rule_of">
@@ -774,10 +928,15 @@ Shortcut Of of the inverse property: F18 Serial Work. R19i was realised through:
 
 Scope note of the inverse property:
 This property associates an instance of F18 Serial Work with the instance of E29 Design or Procedure that specifies the issuing policy planned by this instance of F18 Serial Work, such as sequencing pattern, expected frequency and expected regularity.
+This property is a shortcut of the path from F1 Work, restricted to F18 Serial Work, through R19i was realised through, F30 Manifestation Creation, P16 used specific object to E29 Design or Procedure.
 
 Examples of the inverse property:
-- [Editor’s note: Transfer this property to PRESS(OO) once version 2.0 has a stable draft. Implement this property only in conjunction with an implementation of PRESS(OO).]
 - The serial entitled ‘Quarterly journal of pure and applied mathematics’, identified by ISSN ‘1549-6724’ (F18) has issuing rule to be issued every three months, on a regular basis, with each issue being numbered according to the pattern ‘Vol. 1, no. 1 (2005)’ that was observed by the Library of Congress’s cataloguers on an exemplar of the first issue (E29).
+
+In First Order Logic of the inverse property:
+- R11(x,y) ⇒ F18(x)
+- R11(x,y) ⇒ E29(y)
+- R11(x,y) ⇒ (∃z) [F30(z) ∧ R19i(x,z) ∧ P16(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R15_has_fragment">
@@ -801,6 +960,11 @@ Examples:
 - The stanza ‘Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura / ché la diritta via era smarrita’ (E33) is fragment of the Italian text of Dante Alighieri’s ‘Inferno’ from the ‘Divina Commedia’ (F2).
 - The widely recognized ominous four-note opening motif (E73) is fragment of Beethoven’s Fifth Symphony (F2).
 - The melting clock (E36) is fragment of the painting ‘Persistence of Memory’ by Salvador Dali, 1931 (F2).
+
+In First Order Logic:
+- R15(x,y) ⇒ F2(x)
+- R15(x,y) ⇒ E90(y)
+- R15(x,y) ⇒ P106(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R15i_is_fragment_of">
@@ -824,6 +988,11 @@ Examples of the inverse property:
 - The stanza ‘Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura / ché la diritta via era smarrita’ (E33) is fragment of the Italian text of Dante Alighieri’s ‘Inferno’ from the ‘Divina Commedia’ (F2).
 - The widely recognized ominous four-note opening motif (E73) is fragment of Beethoven’s Fifth Symphony (F2).
 - The melting clock (E36) is fragment of the painting ‘Persistence of Memory’ by Salvador Dali, 1931 (F2).
+
+In First Order Logic of the inverse property:
+- R15(x,y) ⇒ F2(x)
+- R15(x,y) ⇒ E90(y)
+- R15(x,y) ⇒ P106(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R16_created">
@@ -851,6 +1020,11 @@ Examples:
 - The making of ‘Psycho’, directed by Alfred Hitchcock (F27) created the work ‘Psycho’ (F1).
 - Auguste Rodin creating ‘Le Penseur’ (The Thinker) (F27), created the work ‘Le Penseur’ (The Thinker) (F1).
 - Picasso creating ‘Guernica’ (F27) created the work ‘Guernica’ (F1).
+
+In First Order Logic:
+- R16(x,y) ⇒ F27(x)
+- R16(x,y) ⇒ F1(y)
+- R16(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R16i_was_created_by">
@@ -878,6 +1052,11 @@ Examples of the inverse property:
 - The making of ‘Psycho’, directed by Alfred Hitchcock (F27) created the work ‘Psycho’ (F1).
 - Auguste Rodin creating ‘Le Penseur’ (The Thinker) (F27), created the work ‘Le Penseur’ (The Thinker) (F1).
 - Picasso creating ‘Guernica’ (F27) created the work ‘Guernica’ (F1).
+
+In First Order Logic of the inverse property:
+- R16(x,y) ⇒ F27(x)
+- R16(x,y) ⇒ F1(y)
+- R16(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R17_created">
@@ -900,6 +1079,11 @@ Examples:
 - The making of the censored version of Hitchcock’s movie ‘Psycho’ (F28) created the original version (cut) of the movie that was released in Britain (F2).
 - The making of the first plaster version of ‘The Thinker’ sculpture by Auguste Rodin (F28) created the plaster version of ‘The Thinker’ (F2).
 - The making of the large-scale version of ‘The Thinker’ by the Fonderie Alexis Rudier in 1904 (F28) created the large-scale version of ‘The Thinker’ (F2).
+
+In First Order Logic:
+- R17(x,y) ⇒ F28(x)
+- R17(x,y) ⇒ F2(y)
+- R17(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R17i_was_created_by">
@@ -922,6 +1106,11 @@ Examples of the inverse property:
 - The making of the censored version of Hitchcock’s movie ‘Psycho’ (F28) created the original version (cut) of the movie that was released in Britain (F2).
 - The making of the first plaster version of ‘The Thinker’ sculpture by Auguste Rodin (F28) created the plaster version of ‘The Thinker’ (F2).
 - The making of the large-scale version of ‘The Thinker’ by the Fonderie Alexis Rudier in 1904 (F28) created the large-scale version of ‘The Thinker’ (F2).
+
+In First Order Logic of the inverse property:
+- R17(x,y) ⇒ F28(x)
+- R17(x,y) ⇒ F2(y)
+- R17(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R19_created_a_realisation_of">
@@ -944,6 +1133,11 @@ Examples:
 - The making of the censored version of Hitchcock’s movie ‘Psycho’ (F28) created a realization of Hitchcock’s movie ‘Psycho’ (F1).
 - Auguste Rodin making the first plaster version of ‘The Thinker’ sculpture (F28) created a realization of Auguste Rodin’s ‘The Thinker’ (F1).
 - The making of the large-scale version of ‘The Thinker’ by the Fonderie Alexis Rudier in 1904 (F28) created a realization of Auguste Rodin’s ‘The Thinker’ (F1).
+
+In First Order Logic:
+- R19(x,y) ⇒ F28(x)
+- R19(x,y) ⇒ F1(y)
+- R19(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R19i_was_realised_through">
@@ -966,6 +1160,11 @@ Examples of the inverse property:
 - The making of the censored version of Hitchcock’s movie ‘Psycho’ (F28) created a realization of Hitchcock’s movie ‘Psycho’ (F1).
 - Auguste Rodin making the first plaster version of ‘The Thinker’ sculpture (F28) created a realization of Auguste Rodin’s ‘The Thinker’ (F1).
 - The making of the large-scale version of ‘The Thinker’ by the Fonderie Alexis Rudier in 1904 (F28) created a realization of Auguste Rodin’s ‘The Thinker’ (F1).
+
+In First Order Logic of the inverse property:
+- R19(x,y) ⇒ F28(x)
+- R19(x,y) ⇒ F1(y)
+- R19(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R24_created">
@@ -985,6 +1184,11 @@ Examples:
 - The process of creating the publication ‘Murder on the Orient Express / Agatha Christie’ as published by HarperCollins in 2017 (F30) created ‘Murder on the Orient Express / Agatha Christie’ published by HarperCollins in 2017 (F3).
 - The process of making the HTML-version of the English text of Homer’s ‘Odyssey’ (as available online from the Gutenberg Project) (F30) created the HTML-version of the English text of Homer’s ‘Odyssey’ (F3).
 - The process of making the CD publication ‘Bach Goldberg Variations’ (as published by Hyperion Records in 2016) (F30) created ‘Bach Goldberg Variations’, published by Hyperion Records in 2016 (F3).
+
+In First Order Logic:
+- R24(x,y) ⇒ F30(x)
+- R24(x,y) ⇒ F3(y)
+- R24(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R24i_was_created_through">
@@ -1004,6 +1208,11 @@ Examples of the inverse property:
 - The process of creating the publication ‘Murder on the Orient Express / Agatha Christie’ as published by HarperCollins in 2017 (F30) created ‘Murder on the Orient Express / Agatha Christie’ published by HarperCollins in 2017 (F3).
 - The process of making the HTML-version of the English text of Homer’s ‘Odyssey’ (as available online from the Gutenberg Project) (F30) created the HTML-version of the English text of Homer’s ‘Odyssey’ (F3).
 - The process of making the CD publication ‘Bach Goldberg Variations’ (as published by Hyperion Records in 2016) (F30) created ‘Bach Goldberg Variations’, published by Hyperion Records in 2016 (F3).
+
+In First Order Logic of the inverse property:
+- R24(x,y) ⇒ F30(x)
+- R24(x,y) ⇒ F3(y)
+- R24(x,y) ⇒ P94(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R27_materialized">
@@ -1022,6 +1231,11 @@ This property associates an instance of F32 Item Production Event with the set o
 Examples:
 - The production of copies of the paperback edition of the HarperCollins 2017 publication ‘Murder on the Orient Express / Agatha Christie’ (F32) materialized the publication ‘Murder on the Orient Express / Agatha Christie’ published by HarperCollins 2017 (F3).
 - The printing of the score of Bach’s ‘Goldberg Variations’ by Balthasar Schmid in 1741 (F32) materialized the publication Bach’s ‘Goldberg Variations’ as published by Balthasar Schmid in 1741 (F3).
+
+In First Order Logic:
+- R27(x,y) ⇒ F32(x)
+- R27(x,y) ⇒ F3(y)
+- R27(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R27i_was_materialized_by">
@@ -1040,6 +1254,11 @@ This property associates an instance of F32 Item Production Event with the set o
 Examples of the inverse property:
 - The production of copies of the paperback edition of the HarperCollins 2017 publication ‘Murder on the Orient Express / Agatha Christie’ (F32) materialized the publication ‘Murder on the Orient Express / Agatha Christie’ published by HarperCollins 2017 (F3).
 - The printing of the score of Bach’s ‘Goldberg Variations’ by Balthasar Schmid in 1741 (F32) materialized the publication Bach’s ‘Goldberg Variations’ as published by Balthasar Schmid in 1741 (F3).
+
+In First Order Logic of the inverse property:
+- R27(x,y) ⇒ F32(x)
+- R27(x,y) ⇒ F3(y)
+- R27(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R28_produced">
@@ -1059,6 +1278,11 @@ Examples:
 - The production of copies of the paperback edition of the HarperCollins 2017 publication ‘Murder on the Orient Express / Agatha Christie’ (F32) produced the copy (item) of this publication that is held by the Deichman public library in Oslo, Norway, and which is identified by inventory number ‘9138513’ (F5).
 - The printing of the score of Bach’s ‘Goldberg Variations’ by Balthasar Schmid in 1741 (F32) produced the copy of this score (item) that is held by the National Library in France (F5).
 - The second print run, occurring in 1978, of the publication dated of 1972 and entitled ‘The complete poems of Stephen Crane, edited with an introduction by Joseph Katz’ (identified by ISBN ‘0-8014-9130-4’) (F32) produced Universitätsbibliothek Passau’s holding identified by call number ‘00/HT 4801.978 K2’ (F5).
+
+In First Order Logic:
+- R28(x,y) ⇒ F32(x)
+- R28(x,y) ⇒ F5(y)
+- R28(x,y) ⇒ P108(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R28i_was_produced_by">
@@ -1078,6 +1302,11 @@ Examples of the inverse property:
 - The production of copies of the paperback edition of the HarperCollins 2017 publication ‘Murder on the Orient Express / Agatha Christie’ (F32) produced the copy (item) of this publication that is held by the Deichman public library in Oslo, Norway, and which is identified by inventory number ‘9138513’ (F5).
 - The printing of the score of Bach’s ‘Goldberg Variations’ by Balthasar Schmid in 1741 (F32) produced the copy of this score (item) that is held by the National Library in France (F5).
 - The second print run, occurring in 1978, of the publication dated of 1972 and entitled ‘The complete poems of Stephen Crane, edited with an introduction by Joseph Katz’ (identified by ISBN ‘0-8014-9130-4’) (F32) produced Universitätsbibliothek Passau’s holding identified by call number ‘00/HT 4801.978 K2’ (F5).
+
+In First Order Logic of the inverse property:
+- R28(x,y) ⇒ F32(x)
+- R28(x,y) ⇒ F5(y)
+- R28(x,y) ⇒ P108(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R29_reproduced_object">
@@ -1095,6 +1324,11 @@ This property associates an instance of F33 Reproduction Event with an instance 
 
 Examples:
 - The activity performed by Schott when producing the 2015 publication of Harry Partch’s ‘Two studies on ancient Greek scales’ (F33) reproduced object Harry Partch’s holograph manuscript of ‘Two studies on ancient Greek scales’ (F5).
+
+In First Order Logic:
+- R29(x,y) ⇒ F33(x)
+- R29(x,y) ⇒ F5(y)
+- R29(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R29i_was_object_reproduced_by">
@@ -1112,6 +1346,11 @@ This property associates an instance of F33 Reproduction Event with an instance 
 
 Examples of the inverse property:
 - The activity performed by Schott when producing the 2015 publication of Harry Partch’s ‘Two studies on ancient Greek scales’ (F33) reproduced object Harry Partch’s holograph manuscript of ‘Two studies on ancient Greek scales’ (F5).
+
+In First Order Logic of the inverse property:
+- R29(x,y) ⇒ F33(x)
+- R29(x,y) ⇒ F5(y)
+- R29(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R30_reproduced_publication">
@@ -1130,6 +1369,11 @@ This property associates an instance of F33 Reproduction Event with an instance 
 Examples:
 - The activity performed by Cambridge University Press when producing the 2014 publication of Daniel Wilson’s ‘Caliban: the missing link’ (F33) reproduced publication the 1873 publication of Daniel Wilson’s ‘Caliban: the missing link’ by Macmillan (F3).
 - The activity performed by the Éditions du Seuil when producing the 2007 publication of Hubert Reeve’s ‘Malicorne: réflexions d’un observateur de la nature’ as number 179 in the series ‘Points. Science’ (identified by ISBN ‘978-2-02-096760-0’) (F33) reproduced publication the 1990 publication by the Éditions du Seuil in the series ‘Science ouverte’ (identified by ISBN ‘2-02-012644-3’) (F3).
+
+In First Order Logic:
+- R30(x,y) ⇒ F33(x)
+- R30(x,y) ⇒ F3(y)
+- R30(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R30i_was_publication_reproduced_by">
@@ -1148,6 +1392,11 @@ This property associates an instance of F33 Reproduction Event with an instance 
 Examples of the inverse property:
 - The activity performed by Cambridge University Press when producing the 2014 publication of Daniel Wilson’s ‘Caliban: the missing link’ (F33) reproduced publication the 1873 publication of Daniel Wilson’s ‘Caliban: the missing link’ by Macmillan (F3).
 - The activity performed by the Éditions du Seuil when producing the 2007 publication of Hubert Reeve’s ‘Malicorne: réflexions d’un observateur de la nature’ as number 179 in the series ‘Points. Science’ (identified by ISBN ‘978-2-02-096760-0’) (F33) reproduced publication the 1990 publication by the Éditions du Seuil in the series ‘Science ouverte’ (identified by ISBN ‘2-02-012644-3’) (F3).
+
+In First Order Logic of the inverse property:
+- R30(x,y) ⇒ F33(x)
+- R30(x,y) ⇒ F3(y)
+- R30(x,y) ⇒ P16(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="R33_has_string">
@@ -1166,6 +1415,11 @@ Examples:
 - The English word ‘poison’ as a term for toxic substances, notated in the International Phonetic Alphabet (F12) has string the string of characters ['pɔɪz(ə)n] (E62).
 - The French word ‘poison’ as a term for toxic substances, in written form in the Latin alphabet (F12) has string the letters p, o, i, s, o, n with no intervening spaces (E62).
 - The French word ‘poison’ as a term for toxic substances, notated in the International Phonetic Alphabet (F12) has string the string of characters [pwa'zɔ̃] (E62).
+
+In First Order Logic:
+- R33(x,y) ⇒ F12(x)
+- R33(x,y) ⇒ E62(y)
+- R33(x,y) ⇒ P3(x,y)
 </rdfs:comment>
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="R35_is_specified_by">
@@ -1185,6 +1439,11 @@ Examples:
 - ‘acoustic surface wave device’ as a term for the device (F12) is specified by INSPEC Thesaurus version January 1973 (F2).
 - ‘595.7’ as a classification number for the taxonomic class Insecta (insects) (F12) is specified by the 23(rd) edition of the Dewey Decimal Classification (DDC) (F2).
 - ‘Martin Doerr’ as the name of a co-chair of the CIDOC CRM SIG (F12) is specified by the statement on the title page of the Definition of the ‘CIDOC Conceptual Reference Model’, Version 7.1.3, February 2024 (F2).
+
+In First Order Logic:
+- R35(x,y) ⇒ F12(x)
+- R35(x,y) ⇒ F2(y)
+- R35(x,y) ⇒ P67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R35i_specifies">
@@ -1204,6 +1463,11 @@ Examples of the inverse property:
 - ‘acoustic surface wave device’ as a term for the device (F12) is specified by INSPEC Thesaurus version January 1973 (F2).
 - ‘595.7’ as a classification number for the taxonomic class Insecta (insects) (F12) is specified by the 23(rd) edition of the Dewey Decimal Classification (DDC) (F2).
 - ‘Martin Doerr’ as the name of a co-chair of the CIDOC CRM SIG (F12) is specified by the statement on the title page of the Definition of the ‘CIDOC Conceptual Reference Model’, Version 7.1.3, February 2024 (F2).
+
+In First Order Logic of the inverse property:
+- R35(x,y) ⇒ F12(x)
+- R35(x,y) ⇒ F2(y)
+- R35(x,y) ⇒ P67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R36_uses_script_conversion">
@@ -1215,14 +1479,20 @@ Examples of the inverse property:
     <owl:inverseOf rdf:resource="R36i_is_script_conversion_used_in"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F12 Nomen. R17i was created by (created): E65 Creation. P33 used specific technique (was used by): E29 Design or Procedure
+Shortcut Of: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
 
 Scope note:
 This property associates an instance of F12 Nomen with an instance of F36 Script Conversion that is used to create the E62 String used in that instance of F12 Nomen from the string used in another instance of F12 Nomen that co-refers with the first nomen (the instances of F12 Nomen are related via the R56 has related form (is related form of) property). The source of this conversion may or may not be explicitly mentioned.
+This property is a shortcut from an instance of F12 Nomen, a subclass of E28 Conceptual Object, through the inverse of P94 has created (was created by), E65 Creation, a subclass of E7 Activity, P33 used specific technique (was used by), to an instance of E29 Design or Procedure used to create it, restricted to its subclass F36 Script Conversion.
 
 Examples:
 - ‘Du Fu’ as the name for a Chinese poet of the 8(th) century (F12) uses script conversion Pinyin (F36).
 - ‘Čajkovskij, Petr Ilʹič’ as the name of a Russian composer (F12) uses script conversion ‘ISO 9:1995 Information and documentation — Transliteration of Cyrillic characters into Latin characters — Slavic and non-Slavic languages’ (F36).
+
+In First Order Logic:
+- R36(x,y) ⇒ F12(x)
+- R36(x,y) ⇒ F36(y)
+- R36(x,y) ⇔ F12(x) ∧ F36(y) ∧ (∃z) [E65(z) ∧ P94i(x,z) ∧ P33(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R36i_is_script_conversion_used_in">
@@ -1234,14 +1504,20 @@ Examples:
     <owl:inverseOf rdf:resource="R36_uses_script_conversion"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F12 Nomen. R17i was created by (created): E65 Creation. P33 used specific technique (was used by): E29 Design or Procedure
+Shortcut Of of the inverse property: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
 
 Scope note of the inverse property:
 This property associates an instance of F12 Nomen with an instance of F36 Script Conversion that is used to create the E62 String used in that instance of F12 Nomen from the string used in another instance of F12 Nomen that co-refers with the first nomen (the instances of F12 Nomen are related via the R56 has related form (is related form of) property). The source of this conversion may or may not be explicitly mentioned.
+This property is a shortcut from an instance of F12 Nomen, a subclass of E28 Conceptual Object, through the inverse of P94 has created (was created by), E65 Creation, a subclass of E7 Activity, P33 used specific technique (was used by), to an instance of E29 Design or Procedure used to create it, restricted to its subclass F36 Script Conversion.
 
 Examples of the inverse property:
 - ‘Du Fu’ as the name for a Chinese poet of the 8(th) century (F12) uses script conversion Pinyin (F36).
 - ‘Čajkovskij, Petr Ilʹič’ as the name of a Russian composer (F12) uses script conversion ‘ISO 9:1995 Information and documentation — Transliteration of Cyrillic characters into Latin characters — Slavic and non-Slavic languages’ (F36).
+
+In First Order Logic of the inverse property:
+- R36(x,y) ⇒ F12(x)
+- R36(x,y) ⇒ F36(y)
+- R36(x,y) ⇔ F12(x) ∧ F36(y) ∧ (∃z) [E65(z) ∧ P94i(x,z) ∧ P33(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R54_has_language">
@@ -1265,6 +1541,11 @@ Examples:
 - ‘Union européenne’ as a name of the European Union (F12) has language French [encoded as ‘fre’ in set 2 of ISO 639:2023] (E56).
 - ‘Vienna’ as a name of the city which is the capital of Austria (F12) has language English [encoded as ‘eng’ in set 2 of ISO 639:2023] (E56).
 - ‘Organic chemistry’ as a term for the branch of chemistry concerned with organic compounds (F12) has language English [encoded as ‘eng’ in set 2 of ISO 639:2023] (E56).
+
+In First Order Logic:
+- R54(x,y) ⇒ F12(x)
+- R54(x,y) ⇒ E56(y)
+- R54(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R54i_is_language_of">
@@ -1288,6 +1569,11 @@ Examples of the inverse property:
 - ‘Union européenne’ as a name of the European Union (F12) has language French [encoded as ‘fre’ in set 2 of ISO 639:2023] (E56).
 - ‘Vienna’ as a name of the city which is the capital of Austria (F12) has language English [encoded as ‘eng’ in set 2 of ISO 639:2023] (E56).
 - ‘Organic chemistry’ as a term for the branch of chemistry concerned with organic compounds (F12) has language English [encoded as ‘eng’ in set 2 of ISO 639:2023] (E56).
+
+In First Order Logic of the inverse property:
+- R54(x,y) ⇒ F12(x)
+- R54(x,y) ⇒ E56(y)
+- R54(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R56_has_related_form">
@@ -1299,10 +1585,11 @@ Examples of the inverse property:
     <owl:inverseOf rdf:resource="R56i_is_related_form_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: E89 Propositional Object (1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object (2)
+Shortcut Of: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
 
 Scope note:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen which co-refers to the same instance of E1 CRM Entity. This property is not transitive. It is symmetric and irreflexive.
+This property is a shortcut for a path from one instance of E89 Propositional Object, restricted to F12 Nomen, which, through the property P67 refers to (is referred to by) and its inverse, is associated with the same instance of E1 CRM Entity as another instance of F12 Nomen.
 
 Examples:
 - ‘Čajkovskij, Petr Ilʹič’ as the name of the Russian composer (F12) has related form ‘Пётр Ильич Чайковский’ as the name of the Russian composer (F12) with has type Transliteration (E55).
@@ -1315,6 +1602,14 @@ Properties:
 - R56.1 has type: 
   Scope note:
     This property allows for specifying the particular kind of relationship that holds between the domain nomen and the range nomen, such as by being a derivation, an alternative, a lexical variant, etc. Typing the association may cause loss of symmetry.
+
+In First Order Logic:
+- R56(x,y) ⇒ F12(x)
+- R56(x,y) ⇒ F12(y)
+- R56(x,y) ⇒ (∃z) [E1(z) ∧ P67(x,z) ∧ P67i(z,y)]
+- R56(x,y,z) ⇒ R56(x,y) ∧ E55(z)
+- R56(x,y) ⇒ R56(y,x)
+- ¬R56(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R56i_is_related_form_of">
@@ -1326,10 +1621,11 @@ Properties:
     <owl:inverseOf rdf:resource="R56_has_related_form"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: E89 Propositional Object (1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object (2)
+Shortcut Of of the inverse property: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
 
 Scope note of the inverse property:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen which co-refers to the same instance of E1 CRM Entity. This property is not transitive. It is symmetric and irreflexive.
+This property is a shortcut for a path from one instance of E89 Propositional Object, restricted to F12 Nomen, which, through the property P67 refers to (is referred to by) and its inverse, is associated with the same instance of E1 CRM Entity as another instance of F12 Nomen.
 
 Examples of the inverse property:
 - ‘Čajkovskij, Petr Ilʹič’ as the name of the Russian composer (F12) has related form ‘Пётр Ильич Чайковский’ as the name of the Russian composer (F12) with has type Transliteration (E55).
@@ -1337,6 +1633,14 @@ Examples of the inverse property:
 - ‘IFLA’ as the name of the international association in the library field (F12) has related form ‘International Federation of Library Associations and Institutions’ as the name of the international association in the library field (F12) with has type Acronym (E55).
 - ‘Siam’ as the name of the country in South Asia (F12) has related form ‘Thailand’ as the name of the country in South Asia (F12).
 - ‘595.7’ as a classification number referring to the taxonomic class insects (F12) has related form ‘Insecta’ as a term referring to the taxonomic class insects (F12). [The latter being the caption for the Dewey Decimal Classification number in the English language 23(rd) edition.]
+
+In First Order Logic of the inverse property:
+- R56(x,y) ⇒ F12(x)
+- R56(x,y) ⇒ F12(y)
+- R56(x,y) ⇒ (∃z) [E1(z) ∧ P67(x,z) ∧ P67i(z,y)]
+- R56(x,y,z) ⇒ R56(x,y) ∧ E55(z)
+- R56(x,y) ⇒ R56(y,x)
+- ¬R56(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R67_has_part">
@@ -1362,6 +1666,13 @@ Examples:
 - Giovanni Battista Piranesi’s graphic work entitled ‘Carceri’ (F1) has part Giovanni Battista Piranesi’s graphic work entitled ‘Carcere XVI: the pier with chains’ (F1).
 - Ludwig van Beethoven’s musical work entitled ‘Symphony No. 9’ (F1) has part Ludwig van Beethoven’s musical work ‘Finale’ (4(th) movement) (F1).
 - Johann Sebastian Bach’s musical work ‘Goldberg Variations’ (F1) has part the musical work entitled ‘Variatio 1. a 1 Clav’ (F1).
+
+In First Order Logic:
+- R67(x,y) ⇒ F1(x)
+- R67(x,y) ⇒ F1(y)
+- R67(x,y) ⇒ P148(x,y)
+- R67(x,y) ∧ R67(y,z) ⇒ R67(x,z)
+- R67(x,y) ⇒ ¬R67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R67i_forms_part_of">
@@ -1387,6 +1698,13 @@ Examples of the inverse property:
 - Giovanni Battista Piranesi’s graphic work entitled ‘Carceri’ (F1) has part Giovanni Battista Piranesi’s graphic work entitled ‘Carcere XVI: the pier with chains’ (F1).
 - Ludwig van Beethoven’s musical work entitled ‘Symphony No. 9’ (F1) has part Ludwig van Beethoven’s musical work ‘Finale’ (4(th) movement) (F1).
 - Johann Sebastian Bach’s musical work ‘Goldberg Variations’ (F1) has part the musical work entitled ‘Variatio 1. a 1 Clav’ (F1).
+
+In First Order Logic of the inverse property:
+- R67(x,y) ⇒ F1(x)
+- R67(x,y) ⇒ F1(y)
+- R67(x,y) ⇒ P148(x,y)
+- R67(x,y) ∧ R67(y,z) ⇒ R67(x,z)
+- R67(x,y) ⇒ ¬R67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R68_is_inspired_by">
@@ -1399,10 +1717,11 @@ Examples of the inverse property:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F1 Work (2). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work (1)
+Shortcut Of: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
 
 Scope note:
 This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other. This property is not transitive. It is irreflexive.
+This property is a shortcut of the path from one instance of F1 Work, through the inverse of R16 created (was created by), F27 Work Creation, P15 was influenced by (influenced), to another instance of F1 Work that provided inspiration for its creation.
 
 Examples:
 - The musical ‘West Side Story’ (F1) is inspired by the play ‘Romeo and Juliet’ by William Shakespeare (F1).
@@ -1410,6 +1729,14 @@ Examples:
 - The musical work ‘The Great Gate of Kiev’ (F1) from ‘Pictures at an Exhibition’ by Modest Mussorgsky is inspired by the painting ‘Plan for a City Gate in Kiev’ by Viktor Hartmann (F1).
 - The board game ‘War of the Ring’ by Roberto Di Meglio, Marco Maggi and Francesco Nepitello (F1) is inspired by the literary work ‘The Lord of the Rings’ by J. R. R. Tolkien (F1).
 - The literary work ‘Girl with a Pearl Earring’ by Tracy Chevalier (F1) is inspired by the painting ‘Girl with a Pearl Earring’ by Johannes Vermeer (F1).
+
+In First Order Logic:
+- R68(x,y) ⇒ F1(x)
+- R68(x,y) ⇒ F1(y)
+- R68(x,y) ⇒ P130(x,y)
+- R68(x,y) ⇔ F1(y) ∧ (∃z) [F27(z) ∧ R16i(x,z) ∧ P15(z,y)]
+- ¬R68(x,x)
+- R68(x,y) ⇒ ¬R67(x,y) ∧ ¬R67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R68i_is_inspiration_for">
@@ -1422,10 +1749,11 @@ Examples:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F1 Work (2). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work (1)
+Shortcut Of of the inverse property: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
 
 Scope note of the inverse property:
 This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other. This property is not transitive. It is irreflexive.
+This property is a shortcut of the path from one instance of F1 Work, through the inverse of R16 created (was created by), F27 Work Creation, P15 was influenced by (influenced), to another instance of F1 Work that provided inspiration for its creation.
 
 Examples of the inverse property:
 - The musical ‘West Side Story’ (F1) is inspired by the play ‘Romeo and Juliet’ by William Shakespeare (F1).
@@ -1433,6 +1761,14 @@ Examples of the inverse property:
 - The musical work ‘The Great Gate of Kiev’ (F1) from ‘Pictures at an Exhibition’ by Modest Mussorgsky is inspired by the painting ‘Plan for a City Gate in Kiev’ by Viktor Hartmann (F1).
 - The board game ‘War of the Ring’ by Roberto Di Meglio, Marco Maggi and Francesco Nepitello (F1) is inspired by the literary work ‘The Lord of the Rings’ by J. R. R. Tolkien (F1).
 - The literary work ‘Girl with a Pearl Earring’ by Tracy Chevalier (F1) is inspired by the painting ‘Girl with a Pearl Earring’ by Johannes Vermeer (F1).
+
+In First Order Logic of the inverse property:
+- R68(x,y) ⇒ F1(x)
+- R68(x,y) ⇒ F1(y)
+- R68(x,y) ⇒ P130(x,y)
+- R68(x,y) ⇔ F1(y) ∧ (∃z) [F27(z) ∧ R16i(x,z) ∧ P15(z,y)]
+- ¬R68(x,x)
+- R68(x,y) ⇒ ¬R67(x,y) ∧ ¬R67(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R69_has_physical_form">
@@ -1455,6 +1791,11 @@ Examples:
 - The photograph of Billie Holiday by Carl Van Vechten dated 23 March 1949, owned by the Library of Congress and identified by call number LOT 12735, no. 524 [P&amp;P] (F3) has physical form Gelatin silver print (E55).
 - The Long Play record entitled ‘Help!’ by The Beatles, released by Parlophone, 6 August 1965, with catalogue number PMC1255 (F3) has physical form Vinyl Long Play record (E55).
 - The ebook ‘Christianity: the first three thousand years’ by Diarmaid MacCulloch published by Viking in 2010 and identified by ISBN ‘978-1-101-18999-3’ (F3) has physical form Digital file in EPUB format for Kobo ebook reader (E55).
+
+In First Order Logic:
+- R69(x,y) ⇒ F3(x)
+- R69(x,y) ⇒ E55(y)
+- R69(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R69i_is_physical_form_of">
@@ -1477,6 +1818,11 @@ Examples of the inverse property:
 - The photograph of Billie Holiday by Carl Van Vechten dated 23 March 1949, owned by the Library of Congress and identified by call number LOT 12735, no. 524 [P&amp;P] (F3) has physical form Gelatin silver print (E55).
 - The Long Play record entitled ‘Help!’ by The Beatles, released by Parlophone, 6 August 1965, with catalogue number PMC1255 (F3) has physical form Vinyl Long Play record (E55).
 - The ebook ‘Christianity: the first three thousand years’ by Diarmaid MacCulloch published by Viking in 2010 and identified by ISBN ‘978-1-101-18999-3’ (F3) has physical form Digital file in EPUB format for Kobo ebook reader (E55).
+
+In First Order Logic of the inverse property:
+- R69(x,y) ⇒ F3(x)
+- R69(x,y) ⇒ E55(y)
+- R69(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R70_has_dimension">
@@ -1500,6 +1846,12 @@ Examples:
 - The publication (Blu-ray box set) entitled ‘Marvel Agents of S.H.I.E.L.D. the Complete Fourth Season’ produced by abc Studios, released in 2018 and identified by EAN ‘8717418521622’ (F3) has dimension number of discs (E54) [which has value (P90) 6 (E60)].
 - The jigsaw puzzle entitled ‘Map of the New York city subway system’, designed by Stephen J. Voorhies and released around 1954 by the Union Dimes Savings Bank (F3) has dimension length and height (E54) [which has note (P3) ‘46 x 29 cm’ (E62)].
 - The jigsaw puzzle entitled ‘Map of the New York city subway system’, designed by Stephen J. Voorhies and released around 1954 by the Union Dimes Savings Bank (F3) has dimension number of pieces (E54) [which has value (P90) 76 (E60)].
+
+In First Order Logic:
+- R70(x,y) ⇒ F3(x)
+- R70(x,y) ⇒ E54(y)
+- R70(x,y) ⇒ P43(x,y)
+- R70(x,y) ⇒ (∃z) [F5(z) ∧ R7i(x,z) ∧ P43(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R70i_is_dimension_of">
@@ -1523,6 +1875,12 @@ Examples of the inverse property:
 - The publication (Blu-ray box set) entitled ‘Marvel Agents of S.H.I.E.L.D. the Complete Fourth Season’ produced by abc Studios, released in 2018 and identified by EAN ‘8717418521622’ (F3) has dimension number of discs (E54) [which has value (P90) 6 (E60)].
 - The jigsaw puzzle entitled ‘Map of the New York city subway system’, designed by Stephen J. Voorhies and released around 1954 by the Union Dimes Savings Bank (F3) has dimension length and height (E54) [which has note (P3) ‘46 x 29 cm’ (E62)].
 - The jigsaw puzzle entitled ‘Map of the New York city subway system’, designed by Stephen J. Voorhies and released around 1954 by the Union Dimes Savings Bank (F3) has dimension number of pieces (E54) [which has value (P90) 76 (E60)].
+
+In First Order Logic of the inverse property:
+- R70(x,y) ⇒ F3(x)
+- R70(x,y) ⇒ E54(y)
+- R70(x,y) ⇒ P43(x,y)
+- R70(x,y) ⇒ (∃z) [F5(z) ∧ R7i(x,z) ∧ P43(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R71_has_part">
@@ -1542,6 +1900,13 @@ Examples:
 - The publication (set of 3 books) containing J. R. R. Tolkien’s ‘The Lord of the rings’ identified by ISBN ‘0618260587’ (F3) has part the publication containing J. R. R. Tolkien’s ‘The two towers’ identified by ISBN ‘0618260595’ (F3).
 - The compact disc publication issued by Deutsche Grammophon in 1998 and consisting of a recording of Richard Wagner’s ‘Der fliegende Holländer’ as performed in 1991 by Plácido Domingo, Cheryl Studer et al., and conducted by Giuseppe Sinopoli (F3) has part a publication consisting of the printed program notes and libretto (F3).
 - The compact disc publication issued as a 2-CD set identified as ‘M2K 42270’ by CBS Records in 1987 and consisting of recordings of J. S. Bach’s concertos for keyboard/clavier and strings performed by Glenn Gould (F3) has part the compact disc publication identified as ‘DIDC 10370’ consisting of the Glenn Gould recordings of Bach’s ‘Concertos nos. 1-4’ (F3).
+
+In First Order Logic:
+- R71(x,y) ⇒ F3(x)
+- R71(x,y) ⇒ F3(y)
+- R71(x,y) ⇒ P148(x,y)
+- R71(x,y) ∧ R71(y,z) ⇒ R71(x,z)
+- R71(x,y) ⇒ ¬R71(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R71i_is_part_of">
@@ -1561,6 +1926,13 @@ Examples of the inverse property:
 - The publication (set of 3 books) containing J. R. R. Tolkien’s ‘The Lord of the rings’ identified by ISBN ‘0618260587’ (F3) has part the publication containing J. R. R. Tolkien’s ‘The two towers’ identified by ISBN ‘0618260595’ (F3).
 - The compact disc publication issued by Deutsche Grammophon in 1998 and consisting of a recording of Richard Wagner’s ‘Der fliegende Holländer’ as performed in 1991 by Plácido Domingo, Cheryl Studer et al., and conducted by Giuseppe Sinopoli (F3) has part a publication consisting of the printed program notes and libretto (F3).
 - The compact disc publication issued as a 2-CD set identified as ‘M2K 42270’ by CBS Records in 1987 and consisting of recordings of J. S. Bach’s concertos for keyboard/clavier and strings performed by Glenn Gould (F3) has part the compact disc publication identified as ‘DIDC 10370’ consisting of the Glenn Gould recordings of Bach’s ‘Concertos nos. 1-4’ (F3).
+
+In First Order Logic of the inverse property:
+- R71(x,y) ⇒ F3(x)
+- R71(x,y) ⇒ F3(y)
+- R71(x,y) ⇒ P148(x,y)
+- R71(x,y) ∧ R71(y,z) ⇒ R71(x,z)
+- R71(x,y) ⇒ ¬R71(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R73_takes_representative_attribute_from">
@@ -1572,15 +1944,21 @@ Examples of the inverse property:
     <owl:inverseOf rdf:resource="R73i_bears_representative_attribute_for"/>
     <rdfs:comment xml:lang="en">Quantification: one to many, necessary (1,n:0,1)
 
-Shortcut Of: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 uses specific object: F2 Expression
+Shortcut Of: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
 
 Scope note:
 This property associates an instance of F1 Work with instances of F2 Expression that bear attributes which are used to characterize the work. The instance of F2 Expression in question must be one that realizes that instance of F1 Work. An instance of F2 Expression may or may not serve as source of representative expression attributes for its associated instance of F1 Work. If it does, it may provide one attribute or many. Only one or more than one of the instances of F2 Expression associated with an instance of F1 Work may provide attributes that characterize that instance of F1 Work. The representative expression attributes can all come from the same expression or from more than one expressions.
+This property is a shortcut of the path from F1 Work, through the inverse of P140 assigned attributed to (was attributed by), E13 Attribute Assignment, P16 used specific object (was used for), to the instance of F2 Expression that provided the source for the assignment of that particular representative attribute to the Work.
 
 Examples:
 - The work ‘Reading for life, a first book for adults and their tutors’ by Virginia French Allen (F1) takes representative attribute from the expression first published in 1987 by Spring Institute for International Studies with ISBN ‘094072300X’ (F2). [One attribute is the value for intended audience, which is adult literacy learners in the English language, another attribute is the language English.]
 - The expression of the work ‘Piglet has a bath’ by A. A. Milne, with illustrations by Ernest H. Shepard, realised in the edition published on sealed plastic pages by Dutton Children’s Books in 1998 with ISBN ‘0525460926’ (F2) bears representative attribute for the work ‘Piglet has a bath’ by A. A. Milne (F1). [One attribute is the language English; another is the value for intended audience, which is children.]
 - The work ‘Fugue in G Minor, BWV 1000’ by Johann Sebastian Bach (F1) takes representative attribute from the original expression (F2) (as composed around 1723). [The attribute is lute as the mode of performance; it is now mostly performed on the guitar.]
+
+In First Order Logic:
+- R73(x,y) ⇒ F1(x)
+- R73(x,y) ⇒ F2(y)
+- R73(x,y) ⇒ (∃z) [E13(z) ∧ P140i(x,z) ∧ P16(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R73i_bears_representative_attribute_for">
@@ -1592,15 +1970,21 @@ Examples:
     <owl:inverseOf rdf:resource="R73_takes_representative_attribute_from"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary (1,n:0,1)
 
-Shortcut Of of the inverse property: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 uses specific object: F2 Expression
+Shortcut Of of the inverse property: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
 
 Scope note of the inverse property:
 This property associates an instance of F1 Work with instances of F2 Expression that bear attributes which are used to characterize the work. The instance of F2 Expression in question must be one that realizes that instance of F1 Work. An instance of F2 Expression may or may not serve as source of representative expression attributes for its associated instance of F1 Work. If it does, it may provide one attribute or many. Only one or more than one of the instances of F2 Expression associated with an instance of F1 Work may provide attributes that characterize that instance of F1 Work. The representative expression attributes can all come from the same expression or from more than one expressions.
+This property is a shortcut of the path from F1 Work, through the inverse of P140 assigned attributed to (was attributed by), E13 Attribute Assignment, P16 used specific object (was used for), to the instance of F2 Expression that provided the source for the assignment of that particular representative attribute to the Work.
 
 Examples of the inverse property:
 - The work ‘Reading for life, a first book for adults and their tutors’ by Virginia French Allen (F1) takes representative attribute from the expression first published in 1987 by Spring Institute for International Studies with ISBN ‘094072300X’ (F2). [One attribute is the value for intended audience, which is adult literacy learners in the English language, another attribute is the language English.]
 - The expression of the work ‘Piglet has a bath’ by A. A. Milne, with illustrations by Ernest H. Shepard, realised in the edition published on sealed plastic pages by Dutton Children’s Books in 1998 with ISBN ‘0525460926’ (F2) bears representative attribute for the work ‘Piglet has a bath’ by A. A. Milne (F1). [One attribute is the language English; another is the value for intended audience, which is children.]
 - The work ‘Fugue in G Minor, BWV 1000’ by Johann Sebastian Bach (F1) takes representative attribute from the original expression (F2) (as composed around 1723). [The attribute is lute as the mode of performance; it is now mostly performed on the guitar.]
+
+In First Order Logic of the inverse property:
+- R73(x,y) ⇒ F1(x)
+- R73(x,y) ⇒ F2(y)
+- R73(x,y) ⇒ (∃z) [E13(z) ∧ P140i(x,z) ∧ P16(z,y)]
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R74_uses_expression_of">
@@ -1620,6 +2004,12 @@ Examples:
 - Ludwig van Beethoven’s ‘Symphony No. 9’ (F1) uses expression of the poem ‘An die Freude’ by Friedrich Schiller (F1).
 - Franz Schubert’s kunstlied ‘Erlkönig’ (F1) uses expression of the poem ‘Erlkönig’ by Johann Wolfgang von Goethe (F1).
 - The symphonic poem ‘Vltava’ by Bedřich Smetana (F1) uses expression of the melody ‘La Mantovana’ attributed to Giuseppe Cenci (F1).
+
+In First Order Logic:
+- R74(x,y) ⇒ F1(x)
+- R74(x,y) ⇒ F1(y)
+- R74(x,y) ⇒ P130(x,y)
+- ¬R74(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R74i_has_expression_used_in">
@@ -1639,6 +2029,12 @@ Examples of the inverse property:
 - Ludwig van Beethoven’s ‘Symphony No. 9’ (F1) uses expression of the poem ‘An die Freude’ by Friedrich Schiller (F1).
 - Franz Schubert’s kunstlied ‘Erlkönig’ (F1) uses expression of the poem ‘Erlkönig’ by Johann Wolfgang von Goethe (F1).
 - The symphonic poem ‘Vltava’ by Bedřich Smetana (F1) uses expression of the melody ‘La Mantovana’ attributed to Giuseppe Cenci (F1).
+
+In First Order Logic of the inverse property:
+- R74(x,y) ⇒ F1(x)
+- R74(x,y) ⇒ F1(y)
+- R74(x,y) ⇒ P130(x,y)
+- ¬R74(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R75_incorporates">
@@ -1658,6 +2054,13 @@ Examples:
 - The 1964 recording of Beethoven’s ‘Symphony No. 9’ by Leonard Bernstein and the New York Philharmonic (F2) incorporates the German text of the poem ‘An die Freude’ by Friedrich Schiller (F2).
 - Franz Schubert’s score for the kunstlied ‘Erlkönig’ that was created in 1815 (F2) incorporates the German text of the poem ‘Erlkönig’ by Johann Wolfgang von Goethe (F2).
 - Pyotr Ilyich Tchaikovsky’s graduation cantata performed by Leslie Head and the Kensington Symphony Orchestra in 1978 (F2) incorporates a Russian translation of the poem ‘An die Freude’ by Friedrich Schiller (F2).
+
+In First Order Logic:
+- R75(x,y) ⇒ F2(x)
+- R75(x,y) ⇒ F2(y)
+- R75(x,y) ⇒ P165(x,y)
+- R75(x,y) ∧ R75(y,z) ⇒ R75(x,z)
+- R75(x,y) ⇒ ¬R75(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R75i_is_incorporated_in">
@@ -1677,6 +2080,13 @@ Examples of the inverse property:
 - The 1964 recording of Beethoven’s ‘Symphony No. 9’ by Leonard Bernstein and the New York Philharmonic (F2) incorporates the German text of the poem ‘An die Freude’ by Friedrich Schiller (F2).
 - Franz Schubert’s score for the kunstlied ‘Erlkönig’ that was created in 1815 (F2) incorporates the German text of the poem ‘Erlkönig’ by Johann Wolfgang von Goethe (F2).
 - Pyotr Ilyich Tchaikovsky’s graduation cantata performed by Leslie Head and the Kensington Symphony Orchestra in 1978 (F2) incorporates a Russian translation of the poem ‘An die Freude’ by Friedrich Schiller (F2).
+
+In First Order Logic of the inverse property:
+- R75(x,y) ⇒ F2(x)
+- R75(x,y) ⇒ F2(y)
+- R75(x,y) ⇒ P165(x,y)
+- R75(x,y) ∧ R75(y,z) ⇒ R75(x,z)
+- R75(x,y) ⇒ ¬R75(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R76_is_derivative_of">
@@ -1688,6 +2098,8 @@ Examples of the inverse property:
     <owl:inverseOf rdf:resource="R76i_has_derivative"/>
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
+
+Shortcut Of: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
 
 Scope note:
 This property associates an instance of F2 Expression with another instance of F2 Expression which was its source or one of its sources. This property is not transitive. It is asymmetric and irreflexive.
@@ -1703,6 +2115,14 @@ Properties:
 - R76.1 has type: 
   Scope note:
     This property allows for specifying the kind of derivation, such as translation, revision, etc.
+
+In First Order Logic:
+- R76(x,y) ⇒ F2(x)
+- R76(x,y) ⇒ F2(y)
+- R76(x,y) ⇒ P130(x,y)
+- R76(x,y) ⇔ (∃z) [F28(z) ∧ P16i(x,z) ∧ R17(z,y)]
+- R76(x,y,z) ⇒ R76(x,y) ∧ E55(z)
+- R76(x,y) ⇒ ¬R76(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R76i_has_derivative">
@@ -1715,6 +2135,8 @@ Properties:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
+Shortcut Of of the inverse property: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
+
 Scope note of the inverse property:
 This property associates an instance of F2 Expression with another instance of F2 Expression which was its source or one of its sources. This property is not transitive. It is asymmetric and irreflexive.
 This property is also a shortcut of the fully developed path: F2 Expression (1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression (2).
@@ -1724,6 +2146,14 @@ Examples of the inverse property:
 - The text of Agatha Christie’s ‘Murder on the Orient Express Abridged’ (as published by HarperCollins) (F2) is derivative of the original text written by Agatha Christie for the novel (F2) with has type Abridgement (E55).
 - The musical score for Dmitry Sitkovetsky’s ‘Goldberg Variations’ arranged for string (F2) is derivative of the musical score for Johann Sebastian Bach’s ‘Goldberg Variations’ (F2) with has type Arrangement (E55).
 - The score for Beethoven’s 9th Symphony edited by Jonathan Del Mar (F2) is derivation of Beethoven’s original score for the 9th Symphony (F2) with has type Revision (E55).
+
+In First Order Logic of the inverse property:
+- R76(x,y) ⇒ F2(x)
+- R76(x,y) ⇒ F2(y)
+- R76(x,y) ⇒ P130(x,y)
+- R76(x,y) ⇔ (∃z) [F28(z) ∧ P16i(x,z) ∧ R17(z,y)]
+- R76(x,y,z) ⇒ R76(x,y) ∧ E55(z)
+- R76(x,y) ⇒ ¬R76(y,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R77_accompanies_or_complements">
@@ -1735,18 +2165,25 @@ Examples of the inverse property:
     <owl:inverseOf rdf:resource="R77i_is_accompanied_or_complemented_by"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F1 Work. P19i was made for: E7 Activity. P19 was intended use of: F1 Work
+Shortcut Of: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
 
 Scope note:
 This property associates one instance of F1 Work with another instance of F1 Work which is intended to accompany it or to function as a complement for it. This property is neither transitive nor intransitive. It is generally not symmetric and it is irreflexive.
 In many but not all cases, one of the instances of F1 Work is primary and can be used without the other work, while the other is secondary and depends on the first work (such as a work that is a concordance for another work).
 In some cases a work may have been created to accompany or complement a specific expression of another work. The link to the source expression can be indicated using the property P16 used specific object (was used for) using the path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F27 Work Creation. R16 created: F1 Work(2).
+This property is a shortcut for the path from one instance of F1 Work to another instance of F1 Work that are linked through P19 was intended use of (was made for) and its inverse, both associated with the same instance of E7 Activity.
 
 Examples:
 - Leigh Lowe’s ‘Prima Latina: an introduction to Christian Latin. Teacher manual’ (F1) accompanies or complements Leigh Lowe’s ‘Prima Latina: an introduction to Christian Latin. Student book’ (F1).
 - Eric Gill’s set of illustrations for the Song of Songs (F1) accompanies or complements the ‘Song of Songs’ in the 1931 publication by the Cranach Press (F1).
 - The periodical ‘Applied economics quarterly’ (ISSN 1611-6607) (F1) is accompanied or complemented by the periodical ‘Applied economics quarterly. Supplement’ (ISSN 1612-2127) (F1).
 - The novel ‘Le chevalier au lion’ by Chrétien de Troyes (F1) is accompanied or complemented by the concordance created by Pascal Bonnefois and Marie-Louise Ollier ‘Yvain ou Le chevalier au lion : concordance lemmatisée’ (F1). [The concordance is specifically based on the 1960 edition of the novel by Mario Roques.]
+
+In First Order Logic:
+- R77(x,y) ⇒ F1(x)
+- R77(x,y) ⇒ F1(y)
+- R77(x,y) ⇒ (∃z) [E7(z) ∧ P19i(x,z) ∧ P19(z,y)]
+- ¬R77(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R77i_is_accompanied_or_complemented_by">
@@ -1758,18 +2195,25 @@ Examples:
     <owl:inverseOf rdf:resource="R77_accompanies_or_complements"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F1 Work. P19i was made for: E7 Activity. P19 was intended use of: F1 Work
+Shortcut Of of the inverse property: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
 
 Scope note of the inverse property:
 This property associates one instance of F1 Work with another instance of F1 Work which is intended to accompany it or to function as a complement for it. This property is neither transitive nor intransitive. It is generally not symmetric and it is irreflexive.
 In many but not all cases, one of the instances of F1 Work is primary and can be used without the other work, while the other is secondary and depends on the first work (such as a work that is a concordance for another work).
 In some cases a work may have been created to accompany or complement a specific expression of another work. The link to the source expression can be indicated using the property P16 used specific object (was used for) using the path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F27 Work Creation. R16 created: F1 Work(2).
+This property is a shortcut for the path from one instance of F1 Work to another instance of F1 Work that are linked through P19 was intended use of (was made for) and its inverse, both associated with the same instance of E7 Activity.
 
 Examples of the inverse property:
 - Leigh Lowe’s ‘Prima Latina: an introduction to Christian Latin. Teacher manual’ (F1) accompanies or complements Leigh Lowe’s ‘Prima Latina: an introduction to Christian Latin. Student book’ (F1).
 - Eric Gill’s set of illustrations for the Song of Songs (F1) accompanies or complements the ‘Song of Songs’ in the 1931 publication by the Cranach Press (F1).
 - The periodical ‘Applied economics quarterly’ (ISSN 1611-6607) (F1) is accompanied or complemented by the periodical ‘Applied economics quarterly. Supplement’ (ISSN 1612-2127) (F1).
 - The novel ‘Le chevalier au lion’ by Chrétien de Troyes (F1) is accompanied or complemented by the concordance created by Pascal Bonnefois and Marie-Louise Ollier ‘Yvain ou Le chevalier au lion : concordance lemmatisée’ (F1). [The concordance is specifically based on the 1960 edition of the novel by Mario Roques.]
+
+In First Order Logic of the inverse property:
+- R77(x,y) ⇒ F1(x)
+- R77(x,y) ⇒ F1(y)
+- R77(x,y) ⇒ (∃z) [E7(z) ∧ P19i(x,z) ∧ P19(z,y)]
+- ¬R77(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R78_has_alternate">
@@ -1780,15 +2224,24 @@ Examples of the inverse property:
     <rdfs:range rdf:resource="F3_Manifestation"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Inverse Shortcut Of: F3 Manifestation. R4 embodies: F2 Expression. R4i is embodied by: F3 Manifestation
+Shortcut Of: F3 Manifestation. R4 embodies: F2 Expression. R4i is embodied by: F3 Manifestation
 
 Scope note:
 This property associates one instance of F3 Manifestation with another instance of F3 Manifestation that exemplifies the same instance of F2 Expression, when the two instances of F3 Manifestation can be used as alternatives for each other in particular use cases. This property is transitive and symmetric. It is irreflexive.
 The alternative manifestations may be in the same physical form, for example, simultaneous publications in different markets. More frequently, the alternative relationship is established when the alternative manifestations are in different physical forms, designed to enable use of the same content with different playback equipment (such as a DVD and Blu-ray disc version of the same videorecording).
+This property is a shortcut for the path from one instance of F3 Manifestation to another instance of F3 Manifestation that are linked through R4 embodies (is embodied by) and its inverse, to the same instance of F2 Expression.
 
 Examples:
 - Agatha Christie’s ‘The Sittaford Mystery’ published in 1931 in the UK by William Collins &amp; Sons (F3) has alternate the simultaneous US edition published as ‘The Murder at Hazelmoor’ by Dodd, Mead &amp; Co. (F3).
 - The LP release of the punk rock band the Soviettes’ album titled ‘LP III’ (F3) has alternate the CD release of the punk rock band the Soviettes’ album titled ‘LP III’ (F3).
+
+In First Order Logic:
+- R78(x,y) ⇒ F3(x)
+- R78(x,y) ⇒ F3(y)
+- R78(x,y) ⇒ (∃z) [F2(z) ∧ R4(x,z) ∧ R4i(z,y)]
+- R78(x,y) ∧ R78(y,z) ⇒ R78(x,z)
+- R78(x,y) ⇒ R78(y,x)
+- ¬R78(x,x)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R79_has_representative_expression_attribute">
@@ -1809,6 +2262,11 @@ Examples:
 - The work ‘Reading for life, a first book for adults and their tutors’ by Virginia French Allen (F1) has representative expression attribute language ‘English’ (E56).
 - The work ‘Piglet has a bath’ by A. A. Milne (F1) has representative expression attribute intended audience ‘children’ (E55).
 - The work ‘Fugue in G Minor, BWV 1000’ by Johann Sebastian Bach (F1) has representative expression attribute medium of performance ‘lute’ (E55). [The original 1723 composition was for lute; it is now mostly performed on the guitar.]
+
+In First Order Logic:
+- R79(x,y) ⇒ F1(x)
+- R79(x,y) ⇒ E55(y)
+- R79(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R79i_is_representative_expression_attribute_of">
@@ -1829,6 +2287,11 @@ Examples of the inverse property:
 - The work ‘Reading for life, a first book for adults and their tutors’ by Virginia French Allen (F1) has representative expression attribute language ‘English’ (E56).
 - The work ‘Piglet has a bath’ by A. A. Milne (F1) has representative expression attribute intended audience ‘children’ (E55).
 - The work ‘Fugue in G Minor, BWV 1000’ by Johann Sebastian Bach (F1) has representative expression attribute medium of performance ‘lute’ (E55). [The original 1723 composition was for lute; it is now mostly performed on the guitar.]
+
+In First Order Logic of the inverse property:
+- R79(x,y) ⇒ F1(x)
+- R79(x,y) ⇒ E55(y)
+- R79(x,y) ⇒ P2(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R80_performed">
@@ -1851,6 +2314,11 @@ Examples:
 - The performance on July 7, 1995 (at the Popes’ Palace in Avignon) of the ballet entitled ‘Rite of spring’ (F31) performed the choreographic work ‘Rite of spring’ by Pina Bausch (F1).
 - The Mariinsky Orchestra and Ballet’s performance of Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’ at the Mariinsky Theatre in Saint Petersburg, June 2008 (F31) performed Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’ (F1).
 - The performance of Daniel Humair (drums) and Damien Varaillon (double bass) improvising their ‘Hommage à John Coltrane’ in the Bal Blomet (Paris), on 18 January 2018 (F31) performed Daniel Humair and Damien Varaillon’s work ‘Hommage à John Coltrane’ (F1).
+
+In First Order Logic:
+- R80(x,y) ⇒ F31(x)
+- R80(x,y) ⇒ F1(y)
+- R80(x,y) ⇒ P130(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R80i_is_performed_in">
@@ -1873,6 +2341,11 @@ Examples of the inverse property:
 - The performance on July 7, 1995 (at the Popes’ Palace in Avignon) of the ballet entitled ‘Rite of spring’ (F31) performed the choreographic work ‘Rite of spring’ by Pina Bausch (F1).
 - The Mariinsky Orchestra and Ballet’s performance of Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’ at the Mariinsky Theatre in Saint Petersburg, June 2008 (F31) performed Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’ (F1).
 - The performance of Daniel Humair (drums) and Damien Varaillon (double bass) improvising their ‘Hommage à John Coltrane’ in the Bal Blomet (Paris), on 18 January 2018 (F31) performed Daniel Humair and Damien Varaillon’s work ‘Hommage à John Coltrane’ (F1).
+
+In First Order Logic of the inverse property:
+- R80(x,y) ⇒ F31(x)
+- R80(x,y) ⇒ F1(y)
+- R80(x,y) ⇒ P130(x,y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R81_recorded">
@@ -1894,6 +2367,10 @@ Examples:
 - The Deutsche Grammophon audio production of Verdi’s ‘La Traviata’ from the Salzburg Festival in 2005 (F28) recorded the live performance of ‘La Traviata’ performed by the Vienna Philharmonic, conducted by Carlo Rizzi featuring Anna Netrebko and Rolando Villazón (F31).
 - The Belair production (DVD) produced by François Duplat and directed for video by Denis Calozzi, of Michel Fokine’s choreography and libretto for Stravinsky’s ‘The Firebird’ (F28) recorded the Mariinsky Orchestra and Ballet’s performance of Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’, at the Mariinsky Theatre in Saint Petersburg, June 2008 (F31).
 - The Music Development Company production (for CD release) of Daniel Humair (drums) and Damien Varaillon (double bass) performing their improvisation ‘Hommage à John Coltrane’ (F28) recorded Daniel Humair and Damien Varaillon’s performance in the Bal Blomet (Paris), on 18 January 2018 (F31).
+
+In First Order Logic:
+- R81(x,y) ⇒ F28(x)
+- R81(x,y) ⇒ F31(y)
 </rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="R81i_is_recorded_in">
@@ -1915,6 +2392,10 @@ Examples of the inverse property:
 - The Deutsche Grammophon audio production of Verdi’s ‘La Traviata’ from the Salzburg Festival in 2005 (F28) recorded the live performance of ‘La Traviata’ performed by the Vienna Philharmonic, conducted by Carlo Rizzi featuring Anna Netrebko and Rolando Villazón (F31).
 - The Belair production (DVD) produced by François Duplat and directed for video by Denis Calozzi, of Michel Fokine’s choreography and libretto for Stravinsky’s ‘The Firebird’ (F28) recorded the Mariinsky Orchestra and Ballet’s performance of Michel Fokine’s choreography and libretto (choreographic work) for Stravinsky’s ‘The Firebird’, at the Mariinsky Theatre in Saint Petersburg, June 2008 (F31).
 - The Music Development Company production (for CD release) of Daniel Humair (drums) and Damien Varaillon (double bass) performing their improvisation ‘Hommage à John Coltrane’ (F28) recorded Daniel Humair and Damien Varaillon’s performance in the Bal Blomet (Paris), on 18 January 2018 (F31).
+
+In First Order Logic of the inverse property:
+- R81(x,y) ⇒ F28(x)
+- R81(x,y) ⇒ F31(y)
 </rdfs:comment>
   </owl:ObjectProperty>
 </rdf:RDF>

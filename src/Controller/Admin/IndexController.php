@@ -28,6 +28,13 @@ class IndexController extends AbstractActionController
      */
     const EXCERPT_LENGTH = 200;
 
+    /**
+     * Memory to read a vocabulary's file in. Core's importer holds the whole
+     * file in memory, and the largest files need more than PHP's default of
+     * 128M to compare.
+     */
+    const MEMORY_LIMIT = '256M';
+
     const CONTENT_TYPES = [
         'jsonld' => 'application/ld+json',
         'nt' => 'application/n-triples',
@@ -376,15 +383,40 @@ class IndexController extends AbstractActionController
 
     /**
      * Options for core's importer to read an entry's file. A null format is
-     * one the build check found by autodetecting.
+     * one the build check found by autodetecting. Every read of a file gets
+     * its options here, so this is also where the memory limit is raised.
      */
     protected function importerOptions(array $entry, $lang)
     {
+        $this->raiseMemoryLimit();
         return [
             'file' => $this->dataDir . '/' . $entry['file'],
             'format' => $entry['format'] ?? 'guess',
             'lang' => $lang,
         ];
+    }
+
+    /**
+     * Raises PHP's memory limit to MEMORY_LIMIT where it is lower, as Omeka's
+     * own Datascribe and OSII modules do for their jobs. A host that doesn't
+     * allow it keeps its limit.
+     */
+    protected function raiseMemoryLimit()
+    {
+        $limit = (string) ini_get('memory_limit');
+        if ($limit !== '-1' && self::bytes($limit) < self::bytes(self::MEMORY_LIMIT)) {
+            ini_set('memory_limit', self::MEMORY_LIMIT);
+        }
+    }
+
+    /**
+     * Bytes in a PHP memory size, such as "128M".
+     */
+    protected static function bytes($size)
+    {
+        $size = trim($size);
+        $units = ['k' => 1024, 'm' => 1024 ** 2, 'g' => 1024 ** 3];
+        return (int) $size * ($units[strtolower(substr($size, -1))] ?? 1);
     }
 
     /**

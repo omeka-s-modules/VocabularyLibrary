@@ -618,8 +618,8 @@
     "crmdig": {
         "alt_title": "CRMdig",
         "alt_title_source": "cidoc-crm.org",
-        "download": "https://cidoc-crm.org/sites/default/files/CRMdig_v3.2.1.rdfs",
-        "namespace": "http://www.ics.forth.gr/isl/CRMdig/",
+        "download": "http://www.cidoc-crm.org/extensions/crmdig/",
+        "namespace": "http://www.cidoc-crm.org/extensions/crmdig/",
         "prefix": "crmdig",
         "summary": "Classes and properties for documenting digitization and how digital objects are produced and transferred, including the devices and software involved, and for annotations.",
         "summary_basis": [
@@ -1236,10 +1236,11 @@
         ]
     },
     "ekc": {
+        "alt_title": "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current title is \"EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)\".",
         "alternates": [
             "http://dh.aks.ac.kr/ontologies/ekc#"
         ],
-        "copy_from": "LOV",
         "download": "https://raw.githubusercontent.com/dongshins/EKC_ontology/main/ekc_ontology.ttl",
         "namespace": "http://dh.aks.ac.kr/ontologies/ekc#",
         "prefix": "ekc",
@@ -1369,7 +1370,6 @@
     "frad": {
         "alt_title": "Functional Requirements for Authority Data (FRAD)",
         "alt_title_source": "Expansion: https://www.iflastandards.info/fr/frad Acronym: the file's title, \"FRAD model\".",
-        "copy_from": "LOV",
         "download": "http://iflastandards.info/ns/fr/frad/",
         "namespace": "http://iflastandards.info/ns/fr/frad/",
         "prefix": "frad",
@@ -1429,7 +1429,6 @@
         "alternates": [
             "http://iflastandards.info/ns/fr/frbr/frbrer/"
         ],
-        "copy_from": "LOV",
         "download": "http://iflastandards.info/ns/fr/frbr/frbrer/frbrer.rdf",
         "namespace": "http://iflastandards.info/ns/fr/frbr/frbrer/",
         "prefix": "frbrer",
@@ -1551,9 +1550,10 @@
     "geosparql": {
         "alt_title": "GeoSPARQL",
         "alt_title_source": "https://www.ogc.org/standards/geosparql/",
-        "download": "http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf",
+        "copy_from": "DBpedia Archivo",
+        "download": "http://www.opengis.net/ont/geosparql",
         "namespace": "http://www.opengis.net/ont/geosparql#",
-        "notes": "GeoSPARQL 1.0. The namespace URL returns an OGC catalog record, not the ontology (imports nothing). A current GeoSPARQL 1.1 file was not found at a stable URL; Archivo holds a 1.1 copy from 2024-04-05.",
+        "notes": "GeoSPARQL 1.1 (modified 2021-10-27), from Archivo's copy of 2024-04-05. OGC's current release, 1.1.1 (2026-02), changes only metadata; its namespace URL serves an annotated summary that imports nothing, and no stable URL serves the file.",
         "prefix": "geo",
         "summary": "Classes and properties for representing spatial features and their geometries, with relations such as contains, within, overlaps, and touches, and text encodings of geometries.",
         "summary_basis": [
@@ -1830,7 +1830,6 @@
         ]
     },
     "isbd": {
-        "copy_from": "LOV",
         "download": "http://iflastandards.info/ns/isbd/elements/",
         "namespace": "http://iflastandards.info/ns/isbd/elements/",
         "prefix": "isbd",
@@ -1872,7 +1871,6 @@
         ]
     },
     "kanzaki-music": {
-        "copy_from": "DBpedia Archivo",
         "download": "http://www.kanzaki.com/ns/music",
         "namespace": "http://www.kanzaki.com/ns/music#",
         "prefix": "music",
@@ -2124,7 +2122,7 @@
         ]
     },
     "lrmoo": {
-        "download": "https://cidoc-crm.org/extensions/lrmoo/owl/1.0/LRMoo_v1.0.owl",
+        "download": "https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl",
         "namespace": "http://iflastandards.info/ns/lrm/lrmoo/",
         "prefix": "lrmoo",
         "summary": "Classes and properties that extend CIDOC CRM for bibliographic information, such as works, expressions, manifestations, items, and the events that create, perform, and reproduce them.",
@@ -2527,7 +2525,6 @@
     "mpeg7": {
         "alt_title": "MPEG-7 Ontology",
         "alt_title_source": "Rhizomik; the namespace page carries no title.",
-        "copy_from": "DBpedia Archivo",
         "download": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl",
         "namespace": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#",
         "prefix": "mpeg7",
@@ -3280,13 +3277,8 @@
     "qudt": {
         "alt_title": "Quantities, Units, Dimensions and Types (QUDT) Schema",
         "alt_title_source": "https://qudt.org/doc/2023/07/DOC_SCHEMA-QUDT-v2.1.html",
-        "alternates": [
-            "http://qudt.org/schema/qudt/"
-        ],
-        "copy_from": "LOV",
-        "download": "http://qudt.org/2.1/schema/qudt",
+        "download": "http://qudt.org/schema/qudt/",
         "namespace": "http://qudt.org/schema/qudt/",
-        "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "qudt",
         "summary": "Classes and properties for describing quantities, units of measure, how to convert between units, dimensions, systems of units, and data types for storing values.",
         "summary_basis": [
@@ -3337,8 +3329,9 @@
         ]
     },
     "rda-n": {
-        "copy_from": "Open Metadata Registry",
-        "download": "http://metadataregistry.org/schema/show/id/157.rdf",
+        "alt_title": "RDA Nomen properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/n/",
         "namespace": "http://rdaregistry.info/Elements/n/",
         "prefix": "rdan",
         "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
@@ -3351,7 +3344,7 @@
         ]
     },
     "rda-onix-framework-element-set": {
-        "download": "http://metadataregistry.org/schema/show/id/96.rdf",
+        "download": "http://rdaregistry.info/Elements/rof/",
         "namespace": "http://rdaregistry.info/Elements/rof/",
         "prefix": "rof",
         "summary": "Classes and properties for categorizing the content and carriers of resources by attributes such as sensory mode, image movement, storage medium, and housing format.",
@@ -3364,8 +3357,9 @@
         ]
     },
     "rda-p": {
-        "copy_from": "Open Metadata Registry",
-        "download": "http://metadataregistry.org/schema/show/id/135.rdf",
+        "alt_title": "RDA Place properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/p/",
         "namespace": "http://rdaregistry.info/Elements/p/",
         "prefix": "rdap",
         "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
@@ -3378,8 +3372,9 @@
         ]
     },
     "rda-t": {
-        "copy_from": "Open Metadata Registry",
-        "download": "http://metadataregistry.org/schema/show/id/156.rdf",
+        "alt_title": "RDA Time-span properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/t/",
         "namespace": "http://rdaregistry.info/Elements/t/",
         "prefix": "rdat",
         "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
@@ -3393,7 +3388,7 @@
     },
     "rda-w": {
         "alt_title": "RDA Work properties",
-        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file drops \"RDA\", which the other RDA sets keep.",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml",
         "namespace": "http://rdaregistry.info/Elements/w/",
         "prefix": "rdaw",
@@ -3407,8 +3402,7 @@
         ]
     },
     "rda-x": {
-        "copy_from": "Open Metadata Registry",
-        "download": "http://metadataregistry.org/schema/show/id/151.rdf",
+        "download": "http://rdaregistry.info/Elements/x/",
         "namespace": "http://rdaregistry.info/Elements/x/",
         "prefix": "rdax",
         "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
@@ -3421,7 +3415,8 @@
         ]
     },
     "rdaa": {
-        "copy_from": "LOV",
+        "alt_title": "RDA Agent properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "http://rdaregistry.info/Elements/a/",
         "namespace": "http://rdaregistry.info/Elements/a/",
         "prefix": "rdaa",
@@ -3435,7 +3430,8 @@
         ]
     },
     "rdae": {
-        "copy_from": "LOV",
+        "alt_title": "RDA Expression properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "http://rdaregistry.info/Elements/e/",
         "namespace": "http://rdaregistry.info/Elements/e/",
         "prefix": "rdae",
@@ -3449,7 +3445,8 @@
         ]
     },
     "rdai": {
-        "copy_from": "LOV",
+        "alt_title": "RDA Item properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "http://rdaregistry.info/Elements/i/",
         "namespace": "http://rdaregistry.info/Elements/i/",
         "prefix": "rdai",
@@ -3463,7 +3460,8 @@
         ]
     },
     "rdam": {
-        "copy_from": "LOV",
+        "alt_title": "RDA Manifestation properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "http://rdaregistry.info/Elements/m/",
         "namespace": "http://rdaregistry.info/Elements/m/",
         "prefix": "rdam",
@@ -3477,7 +3475,8 @@
         ]
     },
     "rdau": {
-        "copy_from": "LOV",
+        "alt_title": "RDA Unconstrained properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
         "download": "http://rdaregistry.info/Elements/u/",
         "namespace": "http://rdaregistry.info/Elements/u/",
         "prefix": "rdau",

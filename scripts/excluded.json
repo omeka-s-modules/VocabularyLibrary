@@ -32,6 +32,14 @@
         "title": "ISO 3166 Country Codes"
     },
     {
+        "download": "https://cidoc-crm.org/sites/default/files/CRMdig_v3.2.1.rdfs",
+        "excluded": "CRMdig 3.2.1 (2016), made for CIDOC CRM 6.2. Superseded by CRMdig 5.0 (March 2026) under a new namespace, which the library has as crmdig.",
+        "namespace": "http://www.ics.forth.gr/isl/CRMdig/",
+        "prefix": "crmdig",
+        "slug": "crmdig-3",
+        "title": "CRMdig 3.2.1"
+    },
+    {
         "alternates": [
             "https://cidoc-crm.org/sites/default/files/CRMgeo_v1.2.1.rdfs",
             "http://www.ics.forth.gr/isl/CRMgeo/"

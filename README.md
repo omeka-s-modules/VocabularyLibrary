@@ -51,6 +51,11 @@ language a vocabulary was imported in, so each vocabulary is compared on its
 own. The release notes for each version of the module list the vocabularies
 whose files changed.
 
+The largest files need more memory than PHP's default limit of 128 MB: RDA
+Agent properties needs about 160 MB to compare. The library raises the limit
+to 256 MB where the server allows it. If the details, import, or comparison
+of a large vocabulary fails, raise PHP's `memory_limit`.
+
 ## About the collection
 
 The library holds vocabularies for describing resources in digital
