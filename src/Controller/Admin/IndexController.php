@@ -24,11 +24,9 @@ class IndexController extends AbstractActionController
     const TERM_MATCHES_SHOWN = 3;
 
     /**
-     * About where the description is cut: in the details sidebar, and in the
-     * comment the import form prefills from it.
+     * About where the description is cut in the details sidebar.
      */
     const EXCERPT_LENGTH = 200;
-    const COMMENT_LENGTH = 500;
 
     const CONTENT_TYPES = [
         'jsonld' => 'application/ld+json',
@@ -52,6 +50,12 @@ class IndexController extends AbstractActionController
     public function __construct(RdfImporter $rdfImporter, array $vocabularies, array $tags, $dataDir)
     {
         $this->rdfImporter = $rdfImporter;
+        // The name shown for a vocabulary: the library's alternative title,
+        // else the file's title. The build requires one of them.
+        foreach ($vocabularies as &$entry) {
+            $entry['name'] = $entry['alt_title'] ?? $entry['title'];
+        }
+        unset($entry);
         $this->vocabularies = $vocabularies;
         $this->tags = $tags;
         $this->dataDir = $dataDir;
@@ -85,7 +89,7 @@ class IndexController extends AbstractActionController
         // so an English option would hide most of them.
         unset($languageCounts['en']);
         usort($rows, function ($a, $b) {
-            return strnatcasecmp($a['entry']['title'], $b['entry']['title']);
+            return strnatcasecmp($a['entry']['name'], $b['entry']['name']);
         });
 
         $view = new ViewModel;
@@ -153,10 +157,12 @@ class IndexController extends AbstractActionController
         }
 
         $form = $this->getForm(ImportForm::class, ['languages' => $entry['languages']]);
+        // The label and comment the vocabulary gets in Omeka: the name shown in
+        // the library, and the library's summary.
         $form->setData([
             'o:prefix' => $entry['prefix'],
-            'o:label' => $entry['title'],
-            'o:comment' => $this->excerpt($entry['description'], self::COMMENT_LENGTH)[0] ?? '',
+            'o:label' => $entry['name'],
+            'o:comment' => $entry['summary'],
             'lang' => $this->defaultLanguage($entry),
         ]);
         $view->setVariable('form', $form);

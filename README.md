@@ -60,9 +60,22 @@ properties from it that are useful for describing resources. Thesauri and
 subject headings are not included, because Omeka imports classes and
 properties, not concepts.
 
-Titles and descriptions are the publisher's, taken from the file. Where a file
-has no title, none in English, or a misleading one, the library supplies one,
-usually the publisher's name for the vocabulary.
+Titles and descriptions are the publisher's, taken from the file. The library
+adds two things of its own, shown separately from them:
+
+- **An alternative title**, where the file has no title, none in English, or
+  one that hides or leaves out the name the vocabulary is known by. It is
+  another official name for the vocabulary, quoted from the file or the
+  publisher's documentation, and the file's title is still shown. It keeps
+  or adds the vocabulary's acronym, as in "Simple Knowledge Organization
+  System (SKOS)", but only one the file or the publisher uses. One that
+  shortens a long title only cuts from it: a publisher's name, a version
+  that distinguishes nothing, or a descriptive subtitle after a name that
+  stands on its own.
+- **A one-sentence summary** of every vocabulary, saying what its classes and
+  properties describe. The summaries were drafted with AI from each
+  vocabulary's file and the publisher's documentation, checked claim by
+  claim against them, and reviewed.
 
 Vocabulary files move, disappear, or stop importing as publishers change their
 sites. The files are bundled with the module, so importing a vocabulary does
@@ -100,9 +113,11 @@ set `OMEKA_DIR`.
 The collection is kept in these files:
 
 - `scripts/sources.json`: one entry per vocabulary, keyed by slug, with the
-  curated fields: `download`, `namespace`, `prefix`, and `tags` (one to
-  three, from `config/module.config.php`), and where needed `title`,
-  `title_source`, `alternates`, `format`, `copy_from`, and `notes`.
+  curated fields: `download`, `namespace`, `prefix`, `summary`,
+  `summary_basis` (what the summary was drafted from), and `tags` (one to
+  three, from `config/module.config.php`), and where needed `alt_title` with
+  `alt_title_source` (where the name is quoted from), `alternates`, `format`,
+  `copy_from`, and `notes`.
 - `scripts/excluded.json`: vocabularies left out or removed, and why.
 - `data/vocabs/<slug>.<ext>`: the file the module imports.
 - `data/vocabularies.json` and `data/term-index.json`: what the module reads,
@@ -111,7 +126,7 @@ The collection is kept in these files:
 
 To add a vocabulary:
 
-    php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa|term-list]
+    php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list]
 
 Use `--format=rdfa` for a vocabulary published only as RDFa in a web page,
 such as VRA. Use `--format=term-list` for one whose address serves only a
@@ -137,7 +152,8 @@ These scripts run `build.php` themselves. After editing
 `scripts/sources.json` by hand, run `php scripts/build.php`. Then review the
 diff and commit. For each release, list in the release notes the vocabularies
 whose files changed, as `update.php` reports them, so that administrators know
-which vocabularies to compare. Slugs are permanent once released, because they
+which vocabularies to compare, and check each one's summary against its new
+file. Slugs are permanent once released, because they
 are in the module's URLs. A vocabulary in `excluded.json` stays out: the build
 refuses its slug and its namespace.
 

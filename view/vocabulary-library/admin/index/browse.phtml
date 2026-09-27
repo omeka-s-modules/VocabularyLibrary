@@ -101,12 +101,11 @@ $selected = function ($name, $value) use ($query) {
         <?php foreach ($rows as $row): ?>
         <?php
         $entry = $row['entry'];
-        $description = explode("\n\n", (string) $entry['description'])[0];
         $detailsUrl = $this->url('admin/vocabulary-library', ['action' => 'show-details', 'slug' => $row['slug']]);
         ?>
         <tr data-slug="<?php echo $escape($row['slug']); ?>"
-            data-search="<?php echo $escape(implode(' ', [$entry['title'], $entry['prefix'], $entry['namespace'], $entry['description']])); ?>"
-            data-title="<?php echo $escape($entry['title']); ?>"
+            data-search="<?php echo $escape(implode(' ', array_filter([$entry['alt_title'], $entry['title'], $entry['prefix'], $entry['namespace'], $entry['summary'], $entry['description']]))); ?>"
+            data-title="<?php echo $escape($entry['name']); ?>"
             data-prefix="<?php echo $escape($entry['prefix']); ?>"
             data-classes="<?php echo $entry['classes']; ?>"
             data-properties="<?php echo $entry['properties']; ?>"
@@ -115,13 +114,12 @@ $selected = function ($name, $value) use ($query) {
             data-languages="<?php echo $escape(implode(' ', $row['languages'])); ?>">
             <td>
                 <div class="vocabulary-library-title">
-                    <?php echo $this->hyperlink($entry['title'], '#', [
+                    <?php echo $this->hyperlink($entry['name'], '#', [
                         'class' => 'sidebar-content',
                         'data-sidebar-content-url' => $detailsUrl,
                     ]); ?>
-                    <?php if ($description !== ''): ?>
-                    <p class="vocabulary-library-description"><?php echo $escape($description); ?></p>
-                    <?php endif; ?>
+                    <?php // The file's title, where it differs from the name, is in the sidebar and in the search text. ?>
+                    <p class="vocabulary-library-summary"><?php echo $escape($entry['summary']); ?></p>
                     <div class="vocabulary-library-term-matches" hidden>
                         <strong><?php echo $matchingTerms; ?></strong>
                         <ul class="vocabulary-library-term-list"></ul>

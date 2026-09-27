@@ -9,8 +9,12 @@ $terms = [
     ['label' => $translate('Properties'), 'members' => $properties],
 ];
 $file = basename($entry['file']);
+// Every section shows for every vocabulary, so sidebars keep one structure:
+// what the file lacks says so. Only "Vocabulary in Omeka", which reports the
+// site's state rather than the file, depends on it.
+$notProvided = $translate('Not provided by the publisher');
 ?>
-<h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['title']); ?></h3>
+<h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 
 <div class="meta-group">
     <h4><?php echo $translate('Status'); ?></h4>
@@ -23,11 +27,25 @@ $file = basename($entry['file']);
     <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
 </div>
 <?php endif; ?>
-<?php if ($excerpt !== null): ?>
+<div class="meta-group">
+    <h4><?php echo $translate('Title'); ?></h4>
+    <div class="value"><?php echo $entry['title'] === null ? $notProvided : $escape($entry['title']); ?></div>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('Summary'); ?></h4>
+    <div class="value">
+        <?php echo $escape($entry['summary']); ?>
+        <span class="vocabulary-library-summary-note"><?php echo $translate('Written for the Vocabulary Library, not by the publisher.'); ?></span>
+    </div>
+</div>
 <div class="meta-group">
     <h4><?php echo $translate('Description'); ?></h4>
     <div class="value">
+        <?php if ($excerpt === null): ?>
+        <?php echo $notProvided; ?>
+        <?php else: ?>
         <?php echo $escape($excerpt); ?>
+        <?php endif; ?>
         <?php if ($rest): ?>
         <div class="vocabulary-library-more">
             <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
@@ -40,7 +58,6 @@ $file = basename($entry['file']);
         <?php endif; ?>
     </div>
 </div>
-<?php endif; ?>
 <div class="meta-group">
     <h4><?php echo $translate('Namespace URI'); ?></h4>
     <div class="value"><?php echo $escape($entry['namespace']); ?></div>
@@ -59,7 +76,7 @@ $file = basename($entry['file']);
     <h4><?php echo $translate('License'); ?></h4>
     <div class="value">
         <?php if ($license === null): ?>
-        <?php echo $translate('Not stated in the file'); ?>
+        <?php echo $translate('Not stated by the publisher'); ?>
         <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
         <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
         <?php else: ?>
@@ -83,9 +100,13 @@ $file = basename($entry['file']);
 <?php endif; ?>
 
 <?php foreach ($terms as $group): ?>
-<?php if ($group['members']): ?>
+<?php $heading = sprintf('<h4 data-label="%s">%s</h4>', $escape($group['label']), $escape(sprintf('%s (%s)', $group['label'], count($group['members'])))); ?>
+<?php if (!$group['members']): ?>
+<?php // None to list, so a heading alone, with nothing to expand. ?>
+<div class="meta-group vocabulary-library-terms"><?php echo $heading; ?></div>
+<?php else: ?>
 <div class="meta-group vocabulary-library-terms">
-    <a href="#" class="expand" aria-expanded="false"><h4 data-label="<?php echo $escape($group['label']); ?>"><?php echo $escape(sprintf('%s (%s)', $group['label'], count($group['members']))); ?></h4></a>
+    <a href="#" class="expand" aria-expanded="false"><?php echo $heading; ?></a>
     <div class="collapsible">
         <?php foreach ($group['members'] as $localName => $member): ?>
         <div class="value">

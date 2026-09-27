@@ -6,12 +6,18 @@
  *
  * Runs the import check on each file in data/vocabs with the namespace in its
  * entry in scripts/sources.json, and writes what the module reads:
- * data/vocabularies.json (each vocabulary's title, prefix, tags, and what the
- * check found) and data/term-index.json. Touches nothing else.
+ * data/vocabularies.json (what the check found in each file, and the
+ * library's own prefix, tags, alternative title and summary) and
+ * data/term-index.json. Touches nothing else.
+ *
+ * The file's title and description are kept as the file gives them; what the
+ * library adds is kept in its own fields and never replaces them.
  *
  * Nothing is written if any entry has a problem: a file that does not parse,
  * imports nothing, or breaks one of Omeka's column limits; a slug with no
- * file or several; a stored HTML file; a missing or empty title; an invalid,
+ * file or several; a stored HTML file; no title in the file and no
+ * alternative title, an alternative title that repeats the file's title or
+ * has no source, or a missing or empty summary; an invalid,
  * reserved, duplicate or capitalized prefix; a duplicate namespace; a slug or namespace in
  * scripts/excluded.json; or missing, unknown or repeated tags. Each problem is
  * listed and the script exits non-zero.
@@ -93,11 +99,33 @@ foreach ($sources as $slug => $entry) {
         $problems[] = "$slug: $failure";
         continue;
     }
-    if (($entry['title'] ?? null) === null && $result['title'] === null) {
-        $problems[] = "$slug: the file has no title, so the entry needs one";
+    if (isset($entry['title'])) {
+        $problems[] = "$slug: \"title\" is the file's; give the library's as \"alt_title\"";
     }
-    if (isset($entry['title']) && trim($entry['title']) === '') {
-        $problems[] = "$slug: title is empty";
+    foreach (['alt_title', 'summary'] as $field) {
+        if (isset($entry[$field]) && trim($entry[$field]) === '') {
+            $problems[] = "$slug: $field is empty";
+        }
+    }
+    if (!isset($entry['alt_title']) && $result['title'] === null) {
+        $problems[] = "$slug: the file has no title, so the entry needs an alt_title";
+    }
+    if (isset($entry['alt_title']) && $entry['alt_title'] === $result['title']) {
+        $problems[] = "$slug: alt_title repeats the file's title; remove it";
+    }
+    if (isset($entry['alt_title']) && trim($entry['alt_title_source'] ?? '') === '') {
+        $problems[] = "$slug: alt_title needs an alt_title_source saying where the name comes from";
+    }
+    if (!isset($entry['summary'])) {
+        $problems[] = "$slug: no summary";
+    } else {
+        // The summary says what the admin gets: classes, properties, or both.
+        if ($result['classes'] && !preg_match('/\bclass(es)?\b/i', $entry['summary'])) {
+            $problems[] = "$slug: the vocabulary has classes, but the summary doesn't mention them";
+        }
+        if ($result['properties'] && !preg_match('/\bpropert(y|ies)\b/i', $entry['summary'])) {
+            $problems[] = "$slug: the vocabulary has properties, but the summary doesn't mention them";
+        }
     }
     $normalized = Repo::normalizedNamespace($result['namespace']);
     $namespaces[$normalized][] = $slug;
@@ -120,10 +148,9 @@ foreach ($sources as $slug => $entry) {
     }
     $index[$slug] = $terms;
 
-    // The namespace and format are the ones the check found to import, and
-    // the title is the curated one where the file has none or a misleading
-    // one.
+    // The namespace and format are the ones the check found to import.
     $vocabularies[$slug] = [
+        'alt_title' => $entry['alt_title'] ?? null,
         'classes' => $result['classes'],
         'description' => $result['description'],
         'file' => substr($files[0], strlen($repo->path('data')) + 1),
@@ -133,8 +160,9 @@ foreach ($sources as $slug => $entry) {
         'namespace' => $result['namespace'],
         'prefix' => $prefix,
         'properties' => $result['properties'],
+        'summary' => $entry['summary'] ?? null,
         'tags' => $entryTags,
-        'title' => $entry['title'] ?? $result['title'],
+        'title' => $result['title'],
     ];
 }
 

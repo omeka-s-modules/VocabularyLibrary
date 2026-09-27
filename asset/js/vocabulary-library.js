@@ -260,7 +260,9 @@
                     term.value.hidden = query !== '' && !term.text.includes(query);
                     count += term.value.hidden ? 0 : 1;
                 });
-                group.group.hidden = count === 0;
+                // Every group shows until there's a filter, even one with no
+                // terms at all, so the sidebar keeps one structure.
+                group.group.hidden = query !== '' && count === 0;
                 group.heading.textContent = group.heading.dataset.label + ' (' + count + ')';
                 if (query && count && group.toggle.classList.contains('expand')) {
                     group.toggle.classList.replace('expand', 'collapse');

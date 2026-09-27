@@ -2,8 +2,9 @@
 /**
  * Adds a vocabulary to the collection from the URL of its file.
  *
- * Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=]
- *            [--namespace=] [--title=] [--format=rdfa|term-list]
+ * Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary=
+ *            [--prefix=] [--slug=] [--namespace=]
+ *            [--alt-title= --alt-title-source=] [--format=rdfa|term-list]
  *            [--file=<path> --copy-from=<archive>]
  *
  * Downloads the file and runs the import check. The namespace is the one the
@@ -11,7 +12,10 @@
  * the vocabulary declares for itself (vann:preferredNamespacePrefix), unless
  * --prefix is given; most files declare none. The slug defaults to the
  * prefix, lowercased; slugs are permanent once released, so choose with
- * care. --title is needed only when the file has no title. --format=rdfa is
+ * care. --summary is the library's one-sentence summary of the vocabulary.
+ * --alt-title is the library's name for it, another official name such as its
+ * short name, needed when the file has no title, none in English, or a
+ * misleading one; --alt-title-source says where the name comes from. --format=rdfa is
  * for a vocabulary published only as RDFa in an HTML page, and
  * --format=term-list for one whose <url> serves only a list of its terms, each
  * described at its own URI, as TDWG publishes Darwin Core. --tags takes one to
@@ -35,8 +39,8 @@ use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
 
-const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] [--prefix=] [--slug=] [--namespace=] [--title=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
-const OPTIONS = ['tags', 'prefix', 'slug', 'namespace', 'title', 'format', 'file', 'copy-from'];
+const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
+const OPTIONS = ['tags', 'summary', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from'];
 // Extensions an archived copy may keep.
 const FILE_EXTENSIONS = ['jsonld', 'nt', 'owl', 'rdf', 'ttl', 'xml'];
 
@@ -56,6 +60,15 @@ $tags = array_values(array_unique(array_filter(array_map('trim', explode(',', (s
 $knownTags = array_keys($repo->tags());
 if (!$tags || count($tags) > Repo::MAX_TAGS || array_diff($tags, $knownTags)) {
     fail('Give one to three tags with --tags=, from: ' . implode(', ', $knownTags));
+}
+$summary = trim((string) option($argv, 'summary'));
+if ($summary === '') {
+    fail('Give the library\'s one-sentence summary of the vocabulary with --summary=.');
+}
+$altTitle = option($argv, 'alt-title');
+$altTitleSource = option($argv, 'alt-title-source');
+if ($altTitle !== null && (trim($altTitle) === '' || trim((string) $altTitleSource) === '')) {
+    fail('--alt-title needs a name, and --alt-title-source where the name comes from.');
 }
 $format = option($argv, 'format');
 if ($format !== null && !in_array($format, ['rdfa', 'term-list'], true)) {
@@ -147,17 +160,14 @@ if (isset($excluded[$slug])) {
     fail("The slug \"$slug\" is in scripts/excluded.json: {$excluded[$slug]['excluded']}\nRemove it from there first to add it again.");
 }
 
-$title = option($argv, 'title');
-if ($title !== null && trim($title) === '') {
-    fail('--title is empty.');
-}
-if ($title === null && $result['title'] === null) {
-    fail('The file has no title. Pass the publisher\'s name for the vocabulary with --title=.');
+if ($altTitle === null && $result['title'] === null) {
+    fail('The file has no title. Pass the publisher\'s name for the vocabulary with --alt-title= and --alt-title-source=.');
 }
 
-$entry = ['download' => $url, 'namespace' => $namespace, 'prefix' => $prefix, 'tags' => $tags];
-if ($title !== null) {
-    $entry['title'] = $title;
+$entry = ['download' => $url, 'namespace' => $namespace, 'prefix' => $prefix, 'summary' => $summary, 'tags' => $tags];
+if ($altTitle !== null) {
+    $entry['alt_title'] = $altTitle;
+    $entry['alt_title_source'] = $altTitleSource;
 }
 if ($format !== null) {
     $entry['format'] = $format;
@@ -171,7 +181,7 @@ $repo->storeFile($slug, $data, $extension);
 $repo->writeSources($sources);
 
 printf("Added %s: %s, prefix %s, namespace %s (%s), %d classes, %d properties\n",
-    $slug, $title ?? $result['title'], $prefix, $namespace, $result['namespace_source'], $result['classes'], $result['properties']);
+    $slug, $altTitle ?? $result['title'], $prefix, $namespace, $result['namespace_source'], $result['classes'], $result['properties']);
 
 passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/build.php'), $status);
 if ($status !== 0) {

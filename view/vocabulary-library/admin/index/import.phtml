@@ -7,7 +7,7 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import'
 $browseUrl = $this->url('admin/vocabulary-library');
 ?>
 
-<?php echo $this->pageTitle($entry['title'], 1, $translate('Vocabulary Library'), $translate('Import')); ?>
+<?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Import')); ?>
 
 <?php if ($installed): ?>
 

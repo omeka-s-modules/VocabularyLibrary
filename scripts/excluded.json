@@ -194,6 +194,14 @@
         "title": "Publication metadata"
     },
     {
+        "download": "http://rdvocab.info/roles/",
+        "excluded": "Deprecated by its publisher (its title says so) and under RDA's old rdvocab.info namespace. RDA now expresses roles as properties in its current element sets, which the library has.",
+        "namespace": "http://rdvocab.info/roles/",
+        "prefix": "rdarole",
+        "slug": "rdarole",
+        "title": "RDA Roles (deprecated)"
+    },
+    {
         "download": "http://rdf.muninn-project.org/ontologies/religion",
         "excluded": "Imports only a Religion class; by its own description it provides only basic taxonomy information.",
         "namespace": "http://rdf.muninn-project.org/ontologies/religion#",

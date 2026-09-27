@@ -3,26 +3,43 @@
         "download": "https://w3id.org/arco/ontology/location/",
         "namespace": "https://w3id.org/arco/ontology/location/",
         "prefix": "a-loc",
+        "summary": "Classes and properties for recording where a cultural property is or was located, including addresses, cadastral records, georeferencing, and geological and natural settings.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "places"
         ]
     },
     "ac": {
+        "alt_title": "Audiovisual Core",
+        "alt_title_source": "file: Core terms defined by Audiovisual Core",
         "download": "http://rs.tdwg.org/ac/terms/",
         "format": "term-list",
         "namespace": "http://rs.tdwg.org/ac/terms/",
         "prefix": "ac",
+        "summary": "Classes and properties for biodiversity media such as images, sound, video, and 3D files, including capture details, regions of interest, and related taxa and specimens.",
+        "summary_basis": [
+            "file",
+            "https://ac.tdwg.org/"
+        ],
         "tags": [
             "natural-history",
             "media"
         ]
     },
     "agls": {
+        "alt_title": "AGLS Metadata Terms",
+        "alt_title_source": "file: The AGLS Metadata Terms Namespace provides URIs for the AGLS Metadata Terms Vocabulary.",
         "copy_from": "LOV",
         "download": "http://www.agls.gov.au/agls/terms/",
         "namespace": "http://www.agls.gov.au/agls/terms/",
         "prefix": "agls",
+        "summary": "Classes and properties for describing resources and services to aid discovery, such as the jurisdiction they cover, the laws requiring them, their function, and availability.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "general"
         ]
@@ -31,6 +48,10 @@
         "download": "http://d-nb.info/standards/elementset/agrelon#",
         "namespace": "http://d-nb.info/standards/elementset/agrelon#",
         "prefix": "agrelon",
+        "summary": "Classes and properties for relationships between people and organizations, such as kinship, friendship, employment, and correspondence, with the source, reliability, and time span of each.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -40,6 +61,10 @@
         "download": "http://purl.org/vocab/aiiso/schema",
         "namespace": "http://purl.org/vocab/aiiso/schema#",
         "prefix": "aiiso",
+        "summary": "Classes and properties for describing how an academic institution is organized into faculties, schools, departments, and research groups, and the courses and programs they teach.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -48,6 +73,10 @@
         "download": "https://sparontologies.github.io/amo/current/amo.xml",
         "namespace": "http://purl.org/spar/amo/",
         "prefix": "amo",
+        "summary": "Classes and properties for describing arguments by their parts, such as claim, evidence, warrant, backing, qualifier, and rebuttal, following the Toulmin model of argument.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "humanities",
             "publishing",
@@ -58,6 +87,11 @@
         "download": "http://rdf.muninn-project.org/ontologies/appearances#",
         "namespace": "http://rdf.muninn-project.org/ontologies/appearances#",
         "prefix": "aos",
+        "summary": "Classes and properties for recording a person's sex, gender, and preferences, along with appearance such as skin, eye, and hair color and body measurements.",
+        "summary_basis": [
+            "file",
+            "http://rdf.muninn-project.org/ontologies/appearances"
+        ],
         "tags": [
             "people"
         ]
@@ -67,6 +101,10 @@
         "download": "http://purl.org/archival/vocab/arch#",
         "namespace": "http://purl.org/archival/vocab/arch#",
         "prefix": "arch",
+        "summary": "Classes and properties for describing archival collections, the archives that hold them, their dates, and the people, families, and organizations connected with them.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "archives"
         ]
@@ -75,6 +113,11 @@
         "download": "https://w3id.org/arco/ontology/core/",
         "namespace": "https://w3id.org/arco/ontology/core/",
         "prefix": "arco",
+        "summary": "Classes and properties for concepts used throughout a cultural heritage ontology network, such as parts and wholes, classification, identifiers, agent roles, and locations.",
+        "summary_basis": [
+            "file",
+            "https://github.com/ICCD-MiBACT/ArCo"
+        ],
         "tags": [
             "museums"
         ]
@@ -83,6 +126,10 @@
         "download": "https://www.w3.org/ns/activitystreams-owl",
         "namespace": "https://www.w3.org/ns/activitystreams#",
         "prefix": "as",
+        "summary": "Classes and properties for describing social activities, such as creating, liking, following, or inviting, and the people, content, and collections involved.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "general"
         ]
@@ -95,15 +142,27 @@
         "download": "http://bblfish.net/work/atom-owl/2006-06-06/AtomOwl.ttl",
         "namespace": "http://bblfish.net/work/atom-owl/2006-06-06/#",
         "prefix": "awol",
+        "summary": "Classes and properties for describing feeds in the Atom syndication format, including their entries, authors, links, categories, and content.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "aggregation"
         ]
     },
     "bdo": {
+        "alt_title": "Buddhist Digital Ontology",
+        "alt_title_source": "https://github.com/buda-base/owl-schema",
         "copy_from": "DBpedia Archivo",
         "download": "http://purl.bdrc.io/ontology/core/",
         "namespace": "http://purl.bdrc.io/ontology/core/",
         "prefix": "bdo",
+        "summary": "Classes and properties for describing texts of Asian Buddhist cultures, their versions, volumes, scans, and e-texts, and the people, lineages, and places connected with them.",
+        "summary_basis": [
+            "file",
+            "https://github.com/buda-base/owl-schema",
+            "https://raw.githubusercontent.com/buda-base/owl-schema/master/README.md"
+        ],
         "tags": [
             "humanities",
             "libraries",
@@ -114,6 +173,10 @@
         "download": "http://metadataregistry.org/schema/show/id/237.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/Hz/",
         "prefix": "bplamp",
+        "summary": "Classes and properties for describing Beijing Palace lamps, such as their material, patterns, techniques, and uses, and for recording how they were digitized.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -125,6 +188,11 @@
         "download": "http://id.loc.gov/ontologies/bflc.rdf",
         "namespace": "http://id.loc.gov/ontologies/bflc/",
         "prefix": "bflc",
+        "summary": "Classes and properties that add library cataloging details to Bibliographic Framework descriptions, such as series treatment, publication statements, encoding level, and authorized access points.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/bibframe/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -133,14 +201,24 @@
         "download": "http://id.loc.gov/ontologies/bibframe.rdf",
         "namespace": "http://id.loc.gov/ontologies/bibframe/",
         "prefix": "bf",
+        "summary": "Classes and properties for describing works, their instances, and items cataloged by libraries, museums, or archives, along with related agents, subjects, and titles.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "bibo": {
+        "alt_title": "The Bibliographic Ontology (BIBO)",
+        "alt_title_source": "The file's title, \"The Bibliographic Ontology\", with its acronym from https://www.dublincore.org/news/2018/11-30-bibo/ (DCMI, its maintainer: \"the Bibliographic Ontology (BIBO)\").",
         "download": "http://purl.org/ontology/bibo/",
         "namespace": "http://purl.org/ontology/bibo/",
         "prefix": "bibo",
+        "summary": "Classes and properties for describing documents such as books, articles, theses, letters, legal documents, and web pages, with their authors, identifiers, and citations.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -149,6 +227,10 @@
         "download": "http://purl.org/net/nknouf/ns/bibtex#",
         "namespace": "http://purl.org/net/nknouf/ns/bibtex#",
         "prefix": "bibtex",
+        "summary": "Classes and properties for recording BibTeX bibliographic entries, such as articles, books, and theses, with fields including author, title, publisher, and pages.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -158,6 +240,10 @@
         "download": "http://purl.org/vocab/bio/0.1/",
         "namespace": "http://purl.org/vocab/bio/0.1/",
         "prefix": "bio",
+        "summary": "Classes and properties for describing a person's life as a series of events, such as birth, marriage, employment, and death, and their relationships with others.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -169,6 +255,10 @@
         "download": "http://deductions.github.io/biological-collections.owl.ttl#",
         "namespace": "http://deductions.github.io/biological-collections.owl.ttl#",
         "prefix": "bioc",
+        "summary": "Classes and properties for recording specimens in botanical or zoological collections, such as arboretums, zoos, and herbaria, including their acquisition, provenance, and planting.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
@@ -177,16 +267,26 @@
         "download": "http://ldf.fi/schema/bioc/",
         "namespace": "http://ldf.fi/schema/bioc/",
         "prefix": "biocrm",
+        "summary": "Classes and properties for describing people and groups, including their roles in events, family, social, and group relationships, occupations, nationalities, gender, and names.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people",
             "humanities"
         ]
     },
     "biol": {
+        "alt_title": "Biological Taxonomy Vocabulary (Core)",
+        "alt_title_source": "file: shortened from its title, \"Biological Taxonomy Vocabulary 0.2 (Core)\", by cutting the version.",
         "copy_from": "LOV",
         "download": "http://purl.org/NET/biol/ns#",
         "namespace": "http://purl.org/NET/biol/ns#",
         "prefix": "biol",
+        "summary": "Classes and properties for recording the biological classification of plants and animals, from kingdom and phylum through order, family, genus, and species, plus common names.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
@@ -198,6 +298,10 @@
         "download": "http://speronitomcat.web.cs.unibo.it:8080/LODE/source?url=http://purl.org/spar/biro",
         "namespace": "http://purl.org/spar/biro/",
         "prefix": "biro",
+        "summary": "Classes and properties for describing bibliographic records and references and how they are gathered into reference lists and library catalogs.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -206,6 +310,10 @@
         "download": "https://budayakb.cs.ui.ac.id/ns",
         "namespace": "https://budayakb.cs.ui.ac.id/ns#",
         "prefix": "bkb",
+        "summary": "Classes and properties for relating Indonesian cultural heritage to the provinces, regencies, and cities where it originated, developed, was discovered, is located, or is spoken.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "places"
@@ -216,15 +324,25 @@
         "download": "http://www.bl.uk/schemas/bibliographic/blterms#",
         "namespace": "http://www.bl.uk/schemas/bibliographic/blterms#",
         "prefix": "blt",
+        "summary": "Classes and properties that supplement other vocabularies in describing bibliographic resources, such as publication events, Dewey Decimal numbers, and Library of Congress subject headings.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "botany": {
+        "alt_title": "Biological Taxonomy Vocabulary (Botany)",
+        "alt_title_source": "file: shortened from its title, \"Biological Taxonomy Vocabulary 0.2 (Botany)\", by cutting the version.",
         "copy_from": "LOV",
         "download": "http://purl.org/NET/biol/botany#",
         "namespace": "http://purl.org/NET/biol/botany#",
         "prefix": "botany",
+        "summary": "Classes and properties for recording a botanical classification at ranks from domain and kingdom through genus and species down to variety, cultivar, and hybrid.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
@@ -233,47 +351,70 @@
         "download": "http://purl.org/spar/c4o/",
         "namespace": "http://purl.org/spar/c4o/",
         "prefix": "c4o",
+        "summary": "Classes and properties for recording how often and where a work is cited, including in-text citations, their surrounding text, and counts from citation services.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
     },
     "cal": {
+        "alt_title": "RDF Calendar",
+        "alt_title_source": "W3C note \"RDF Calendar - an application of the Resource Description Framework to iCalendar Data\"; the namespace page was not reachable (406).",
         "copy_from": "LOV",
         "download": "http://www.w3.org/2002/12/cal/ical#",
         "namespace": "http://www.w3.org/2002/12/cal/ical#",
         "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "cal",
+        "summary": "Classes and properties for recording calendar information in the iCalendar format, such as events, to-dos, journal entries, alarms, time zones, and recurrence rules.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/rdfcal/"
+        ],
         "tags": [
             "time"
-        ],
-        "title": "RDF Calendar",
-        "title_source": "W3C note \"RDF Calendar - an application of the Resource Description Framework to iCalendar Data\"; the namespace page was not reachable (406)."
+        ]
     },
     "cbo": {
         "download": "http://comicmeta.org/cbo/",
         "namespace": "http://comicmeta.org/cbo/",
         "prefix": "cbo",
+        "summary": "Classes and properties for describing comic books and comic book collections, including issues and series, creators, characters, story content, physical condition, and grading.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "humanities",
             "libraries"
         ]
     },
     "cc": {
+        "alt_title": "Creative Commons Rights Expression Language (ccREL)",
+        "alt_title_source": "https://www.w3.org/submissions/ccREL/ (\"the Creative Commons Rights Expression Language (ccREL)\")",
         "alternates": [
             "http://creativecommons.org/ns#"
         ],
         "download": "http://creativecommons.org/schema.rdf",
         "namespace": "http://creativecommons.org/ns#",
         "prefix": "cc",
+        "summary": "Classes and properties for describing copyright licenses, the permissions, requirements, and prohibitions they set for a work, and how to attribute it.",
+        "summary_basis": [
+            "file",
+            "https://creativecommons.org/ns"
+        ],
         "tags": [
             "rights"
-        ],
-        "title": "Creative Commons Rights Expression Language"
+        ]
     },
     "cdesc": {
         "download": "https://w3id.org/arco/ontology/context-description/",
         "namespace": "https://w3id.org/arco/ontology/context-description/",
         "prefix": "cdesc",
+        "summary": "Classes and properties for describing the context of a cultural property, such as authorship, dating, acquisition, legal status, inventories, bibliography, documentation, surveys, and conservation work.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -282,16 +423,27 @@
         "download": "http://purl.org/cld/cdtype/",
         "namespace": "http://purl.org/cld/cdtype/",
         "prefix": "cdtype",
+        "summary": "Classes for identifying the type of a collection description, such as a catalog or index or an analytic, hierarchic, or indexing finding aid.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/dublin-core/collection-description/colldesc-type/"
+        ],
         "tags": [
             "libraries",
             "archives"
         ]
     },
     "cerif": {
+        "alt_title": "Common European Research Information Format (CERIF) Ontology",
+        "alt_title_source": "file: The Common European Research Information Format (CERIF) Ontology Specification provides basic concepts and properties for describing research information as semantic data.",
         "copy_from": "LOV",
         "download": "http://www.eurocris.org/ontologies/cerif/1.3#",
         "namespace": "http://www.eurocris.org/ontologies/cerif/1.3#",
         "prefix": "cerif",
+        "summary": "Classes and properties for describing research information, such as projects, people, organizations, publications, patents, funding, and equipment, and the dated links between them.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing",
             "people"
@@ -301,24 +453,40 @@
         "download": "https://w3id.org/arco/ontology/cultural-event/",
         "namespace": "https://w3id.org/arco/ontology/cultural-event/",
         "prefix": "cevent",
+        "summary": "Classes and properties for describing events involving cultural properties, such as exhibitions and competitions, along with their organizers, awards, and recurrence over time.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "time"
         ]
     },
     "cidoc-crm": {
+        "alt_title": "CIDOC CRM",
+        "alt_title_source": "file: CIDOC CRM v7.1.3 implemented in RDFS",
         "download": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3.rdfs",
         "namespace": "http://www.cidoc-crm.org/cidoc-crm/",
         "prefix": "crm",
+        "summary": "Classes and properties for documenting cultural heritage, including objects, people, groups, places, and the events, such as production and acquisition, that connect them.",
+        "summary_basis": [
+            "file",
+            "https://www.cidoc-crm.org/"
+        ],
         "tags": [
             "museums"
-        ],
-        "title": "CIDOC CRM"
+        ]
     },
     "cis": {
+        "alt_title": "Cultural-ON (Cultural ONtology)",
+        "alt_title_source": "file: shortened from its title, \"Cultural-ON (Cultural ONtology): Cultural Institute/Site and Cultural Event Ontology\", by cutting the descriptive subtitle.",
         "download": "http://dati.beniculturali.it/cis/",
         "namespace": "http://dati.beniculturali.it/cis/",
         "prefix": "cis",
+        "summary": "Classes and properties for describing cultural institutes and sites, such as museums, libraries, archives, and archaeological areas, with their collections, services, and events.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "places",
@@ -329,6 +497,10 @@
         "download": "http://purl.org/spar/cito/",
         "namespace": "http://purl.org/spar/cito/",
         "prefix": "cito",
+        "summary": "Properties for recording why one work cites another, such as to extend, support, dispute, or use data from it, plus classes for kinds of self-citation.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing",
             "value-annotations"
@@ -339,6 +511,10 @@
         "download": "http://www.essepuntato.it/2013/03/cito-functions/",
         "namespace": "http://www.essepuntato.it/2013/03/cito-functions/",
         "prefix": "citof",
+        "summary": "Classes for grouping citation types from the Citation Typing Ontology by their factual function or their positive, neutral, or negative rhetorical function.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -347,6 +523,10 @@
         "download": "http://advene.org/ns/cinelab/ld#",
         "namespace": "http://advene.org/ns/cinelab/ld#",
         "prefix": "cl",
+        "summary": "Classes and properties for annotating digital video, including annotation types, relations, time segments, and views for presenting annotations as hypervideos.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -355,6 +535,11 @@
         "download": "http://purl.org/cld/terms/",
         "namespace": "http://purl.org/cld/terms/",
         "prefix": "cld",
+        "summary": "Properties for describing collections, such as the types, formats, and creation dates of their items, where they are held, and how they are accessed.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/dublin-core/collection-description/collection-terms/"
+        ],
         "tags": [
             "libraries",
             "archives"
@@ -364,6 +549,11 @@
         "download": "http://www.w3.org/2011/content#",
         "namespace": "http://www.w3.org/2011/content#",
         "prefix": "cnt",
+        "summary": "Classes and properties for recording the content of web pages and other files as text, encoded binary data, or markup, with its character encoding.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/Content-in-RDF/"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -373,6 +563,10 @@
         "download": "http://purl.org/co/",
         "namespace": "http://purl.org/co/",
         "prefix": "co",
+        "summary": "Classes and properties for grouping resources into collections, sets, and ordered lists, with their members, each item's position and neighbors, and collection size.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -381,41 +575,62 @@
         "download": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
         "namespace": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
         "prefix": "lcc-cr",
+        "summary": "Classes and properties for describing countries and their subdivisions, with their letter and numeric codes, English and French names, coordinates, and parent regions.",
+        "summary_basis": [
+            "file",
+            "https://www.omg.org/spec/LCC/"
+        ],
         "tags": [
             "places"
         ]
     },
     "cpm": {
+        "alt_title": "Catalogus Professorum Model (CPM)",
+        "alt_title_source": "file: shortened from its title, \"Catalogus Professorum Model - Version 2.1 (CPM)\", by cutting the version.",
         "copy_from": "DBpedia Archivo",
         "download": "http://catalogus-professorum.org/cpm/2/",
         "namespace": "http://catalogus-professorum.org/cpm/2/",
         "prefix": "cpm",
+        "summary": "Classes and properties for a catalog of university professors, recording their lives, education, careers, offices, memberships, families, pictures, and publications.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people",
             "humanities"
         ]
     },
     "crmarchaeo": {
+        "alt_title": "CRMarchaeo",
+        "alt_title_source": "cidoc-crm.org",
         "download": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
         "prefix": "crmarchaeo",
+        "summary": "Classes and properties for documenting archaeological excavation, such as excavation units, stratigraphic layers and their interfaces, embedded objects, and the order of events in time.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/crmarchaeo/"
+        ],
         "tags": [
             "museums"
-        ],
-        "title": "CRMarchaeo",
-        "title_source": "cidoc-crm.org"
+        ]
     },
     "crmdig": {
+        "alt_title": "CRMdig",
+        "alt_title_source": "cidoc-crm.org",
         "download": "https://cidoc-crm.org/sites/default/files/CRMdig_v3.2.1.rdfs",
         "namespace": "http://www.ics.forth.gr/isl/CRMdig/",
         "prefix": "crmdig",
+        "summary": "Classes and properties for documenting digitization and how digital objects are produced and transferred, including the devices and software involved, and for annotations.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/crmdig/"
+        ],
         "tags": [
             "museums",
             "media",
             "rights"
-        ],
-        "title": "CRMdig",
-        "title_source": "cidoc-crm.org"
+        ]
     },
     "crmeh": {
         "alternates": [
@@ -424,47 +639,70 @@
         "download": "http://purl.org/crmeh#CRMEH",
         "namespace": "http://purl.org/crmeh#",
         "prefix": "crmeh",
+        "summary": "Classes and properties for recording archaeological excavation and analysis, such as excavation contexts, finds, samples, measurements, drawings, photographs, site divisions, and project teams.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
     },
     "crminf": {
+        "alt_title": "CRMinf",
+        "alt_title_source": "cidoc-crm.org",
         "download": "http://www.cidoc-crm.org/extensions/crminf/",
         "namespace": "http://www.cidoc-crm.org/extensions/crminf/",
         "prefix": "crminf",
+        "summary": "Classes and properties for recording reasoning in research, such as arguments, beliefs, inferences, the premises and evidence behind them, and provenance assessments.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/crminf/"
+        ],
         "tags": [
             "museums",
             "humanities",
             "value-annotations"
-        ],
-        "title": "CRMinf",
-        "title_source": "cidoc-crm.org"
+        ]
     },
     "crmsci": {
+        "alt_title": "CRMsci",
+        "alt_title_source": "cidoc-crm.org",
         "download": "http://www.cidoc-crm.org/extensions/crmsci/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmsci/",
         "prefix": "crmsci",
+        "summary": "Classes and properties for recording scientific observation, such as sampling, measurements, observed things, and the processes that create or alter physical things.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/crmsci/"
+        ],
         "tags": [
             "museums",
             "science"
-        ],
-        "title": "CRMsci",
-        "title_source": "cidoc-crm.org"
+        ]
     },
     "crmtex": {
+        "alt_title": "CRMtex",
+        "alt_title_source": "cidoc-crm.org",
         "download": "http://www.cidoc-crm.org/extensions/crmtex/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmtex/",
         "prefix": "crmtex",
+        "summary": "Classes and properties for studying ancient and handwritten texts, such as inscriptions and manuscripts, including their writing, scripts, glyphs, transliteration, and reading.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/crmtex/"
+        ],
         "tags": [
             "humanities"
-        ],
-        "title": "CRMtex",
-        "title_source": "cidoc-crm.org"
+        ]
     },
     "cro": {
         "download": "http://rhizomik.net/ontologies/copyrightonto.owl#",
         "namespace": "http://rhizomik.net/ontologies/copyrightonto.owl#",
         "prefix": "cro",
+        "summary": "Classes and properties for describing actions on copyrighted works, such as copying, adapting, translating, performing, broadcasting, and selling, and related agreements and conditions.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "rights"
         ]
@@ -477,6 +715,10 @@
         "download": "http://commontag.org/ns",
         "namespace": "http://commontag.org/ns#",
         "prefix": "ctag",
+        "summary": "Classes and properties for tagging documents and other resources with keywords linked to concepts, noting whether an author, reader, or tool added each tag.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -485,6 +727,10 @@
         "download": "https://w3id.org/arco/ontology/catalogue/",
         "namespace": "https://w3id.org/arco/ontology/catalogue/",
         "prefix": "ctlog",
+        "summary": "Classes and properties for describing catalog records of Italian cultural heritage, with their versions, identifiers, cataloging agents, access profiles, and privacy levels.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -494,6 +740,10 @@
         "download": "http://www.bbc.co.uk/ontologies/creativework/",
         "namespace": "http://www.bbc.co.uk/ontologies/creativework/",
         "prefix": "cwork",
+        "summary": "Classes and properties for describing creative works such as news items, programs, clips, and blog posts, with their titles, thumbnails, audiences, formats, and tags.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -503,6 +753,11 @@
         "download": "http://sparql.cwrc.ca/ontologies/cwrc#",
         "namespace": "http://sparql.cwrc.ca/ontologies/cwrc#",
         "prefix": "cwrc",
+        "summary": "Classes and properties for describing people's lives, such as their names, family relationships, education, occupations, places, and identities like gender, religion, and class.",
+        "summary_basis": [
+            "file",
+            "https://sparql.cwrc.ca/ontologies/cwrc.html"
+        ],
         "tags": [
             "humanities",
             "people"
@@ -516,6 +771,11 @@
         "download": "http://sparql.cwrc.ca/ontologies/ii#",
         "namespace": "http://sparql.cwrc.ca/ontologies/ii#",
         "prefix": "ii",
+        "summary": "Classes for categories of illness and injury, such as cancers, infectious diseases, and mental disorders, with properties for their World Health Organization chapters and codes.",
+        "summary_basis": [
+            "file",
+            "https://sparql.cwrc.ca/ontologies/ii.html"
+        ],
         "tags": [
             "humanities"
         ]
@@ -528,6 +788,10 @@
         "download": "https://github.com/gbv/daia/blob/implementations/schemas/daia.owl.n3",
         "namespace": "http://purl.org/ontology/daia/",
         "prefix": "daia",
+        "summary": "Classes and properties for describing the current availability of documents in libraries and similar institutions, including services like loans, their limitations, and expected delays.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -536,6 +800,11 @@
         "download": "https://w3id.org/dba/ontology/",
         "namespace": "https://w3id.org/dba/ontology/",
         "prefix": "dba",
+        "summary": "Classes and properties for describing historical banking records and the bank activities they document, such as loans, mortgages, guarantees, seizures, and confiscations.",
+        "summary_basis": [
+            "file",
+            "https://asisp.intesasanpaolo.com/intesa-web/resources/documenti/dba/index.html"
+        ],
         "tags": [
             "archives"
         ]
@@ -546,22 +815,41 @@
         "namespace": "http://dbpedia.org/ontology/",
         "notes": "The live file fails the import check (imports nothing); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "dbo",
+        "summary": "Classes and properties for general subjects across many fields, such as people, places, organizations, buildings, creative works, species, sports, and events.",
+        "summary_basis": [
+            "file",
+            "https://www.dbpedia.org/resources/ontology/"
+        ],
         "tags": [
             "general"
         ]
     },
     "dc11": {
+        "alt_title": "Dublin Core Metadata Element Set (DCMES), Version 1.1",
+        "alt_title_source": "The file's title, \"Dublin Core Metadata Element Set, Version 1.1\", with its acronym from https://www.dublincore.org/specifications/dublin-core/dces/ (\"DCMES Version 1.1\").",
         "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl",
         "namespace": "http://purl.org/dc/elements/1.1/",
         "prefix": "dc11",
+        "summary": "Fifteen properties for describing any resource, such as its title, creator, subject, description, date, format, language, and rights.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+        ],
         "tags": [
             "general"
         ]
     },
     "dcat": {
+        "alt_title": "The data catalog vocabulary (DCAT)",
+        "alt_title_source": "The file's title, \"The data catalog vocabulary\", with its acronym from the file's description.",
         "download": "https://www.w3.org/ns/dcat.ttl",
         "namespace": "http://www.w3.org/ns/dcat#",
         "prefix": "dcat",
+        "summary": "Classes and properties for describing data catalogs, the datasets and data services they list, and how each dataset can be accessed or downloaded.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/vocab-dcat-3/"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -570,35 +858,56 @@
         "download": "http://purl.org/spar/datacite/",
         "namespace": "http://purl.org/spar/datacite/",
         "prefix": "datacite",
+        "summary": "Classes and properties for describing identifiers and identifier schemes for bibliographic resources such as papers and datasets, and for people, organizations, funders, and licenses.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/datacite/current/datacite.html"
+        ],
         "tags": [
             "publishing"
         ]
     },
     "dcndl": {
+        "alt_title": "NDL Metadata Terms",
+        "alt_title_source": "The name in the publisher's title, which is only in Japanese: RDF Schemaによって定義したNDL Metadata Termsの語彙.",
         "download": "http://ndl.go.jp/dcndl/terms/",
         "namespace": "http://ndl.go.jp/dcndl/terms/",
         "prefix": "dcndl",
+        "summary": "Classes and properties for bibliographic and holdings records, such as title and name transcriptions, series, volumes, editions, dissertations, call numbers, and digitization details.",
+        "summary_basis": [
+            "file",
+            "https://www.ndl.go.jp/en/dlib/standards/meta/"
+        ],
         "tags": [
             "libraries"
-        ],
-        "title": "NDL Metadata Terms",
-        "title_source": "The name in the publisher's title, which is only in Japanese: RDF Schemaによって定義したNDL Metadata Termsの語彙."
+        ]
     },
     "dcterms": {
+        "alt_title": "DCMI Metadata Terms",
+        "alt_title_source": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
         "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
         "namespace": "http://purl.org/dc/terms/",
         "notes": "The file's own title is \"DCMI Metadata Terms - other\", naming the terms beyond the fifteen original elements; DCMI calls the whole set \"DCMI Metadata Terms\".",
         "prefix": "dcterms",
+        "summary": "Properties for describing any resource, such as its title, creator, dates, subject, rights, and related resources, plus classes for the kinds of values used.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+        ],
         "tags": [
             "general",
             "value-annotations"
-        ],
-        "title": "DCMI Metadata Terms"
+        ]
     },
     "dctype": {
         "download": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl",
         "namespace": "http://purl.org/dc/dcmitype/",
         "prefix": "dctype",
+        "summary": "Classes for the general type of a resource, such as text, still or moving image, sound, dataset, software, physical object, event, or collection.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+        ],
         "tags": [
             "general"
         ]
@@ -607,6 +916,10 @@
         "download": "https://w3id.org/arco/ontology/denotative-description/",
         "namespace": "https://w3id.org/arco/ontology/denotative-description/",
         "prefix": "ddesc",
+        "summary": "Classes and properties for the characteristics of cultural property recorded during cataloging, such as measurements, materials, techniques, conservation status, inscriptions, and decoration.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -615,6 +928,11 @@
         "download": "http://purl.org/spar/deo/",
         "namespace": "http://purl.org/spar/deo/",
         "prefix": "deo",
+        "summary": "Classes for the rhetorical parts of a document, such as its introduction, methods, results, discussion, acknowledgments, and references.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/deo/current/deo.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -626,6 +944,10 @@
         "download": "http://semweb.mmlab.be/ns/dicera#ontology",
         "namespace": "http://semweb.mmlab.be/ns/dicera#",
         "prefix": "dicera",
+        "summary": "Classes and properties for adding metadata to comics, such as issues, story arcs, pages, panels, speech balloons, captions, content ratings, and reading order.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "humanities",
             "media"
@@ -635,6 +957,11 @@
         "download": "http://rdf-vocabulary.ddialliance.org/discovery#",
         "namespace": "http://rdf-vocabulary.ddialliance.org/discovery#",
         "prefix": "disco",
+        "summary": "Classes and properties for describing research and survey data for discovery on the Web, such as studies, data files, variables, questionnaires, and statistics.",
+        "summary_basis": [
+            "file",
+            "https://rdf-vocabulary.ddialliance.org/discovery.html"
+        ],
         "tags": [
             "science"
         ]
@@ -644,6 +971,10 @@
         "download": "http://onto.dm2e.eu/schemas/dm2e/",
         "namespace": "http://onto.dm2e.eu/schemas/dm2e/",
         "prefix": "dm2e",
+        "summary": "Classes and properties for describing manuscripts and related documents, such as pages, fragments, and posters, with details like opening words, watermarks, shelfmarks, and previous owners.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "aggregation",
             "humanities"
@@ -653,6 +984,11 @@
         "download": "http://d-nb.info/standards/elementset/dnb#",
         "namespace": "http://d-nb.info/standards/elementset/dnb#",
         "prefix": "dnbt",
+        "summary": "Classes and properties for publication data, such as qualified subjects and languages, canonical and deprecated identifiers, copyright status, and whether an activity was automated.",
+        "summary_basis": [
+            "file",
+            "https://d-nb.info/standards/elementset/dnb"
+        ],
         "tags": [
             "libraries"
         ]
@@ -666,6 +1002,11 @@
         "download": "https://github.com/edumbill/doap/blob/master/schema/doap.rdf",
         "namespace": "http://usefulinc.com/ns/doap#",
         "prefix": "doap",
+        "summary": "Classes and properties for describing software projects, such as their releases, source code repositories, licenses, mailing lists, bug trackers, and the people involved.",
+        "summary_basis": [
+            "file",
+            "https://github.com/ewilderj/doap"
+        ],
         "tags": [
             "media"
         ]
@@ -674,6 +1015,11 @@
         "download": "http://purl.org/spar/doco/",
         "namespace": "http://purl.org/spar/doco/",
         "prefix": "doco",
+        "summary": "Classes for the structural parts of a document, such as front matter, chapters, sections, paragraphs, figures, tables, footnotes, and bibliographies.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/doco/current/doco.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -682,6 +1028,11 @@
         "download": "http://www.kanzaki.com/ns/dpd",
         "namespace": "http://www.kanzaki.com/ns/dpd#",
         "prefix": "dpd",
+        "summary": "Classes and properties for recording when and where a digital picture or document was photographed, developed, digitized, edited, or published, and its location's precision.",
+        "summary_basis": [
+            "file",
+            "http://www.kanzaki.com/ns/dpd"
+        ],
         "tags": [
             "media"
         ]
@@ -691,6 +1042,10 @@
         "download": "http://purl.org/swan/2.0/discourse-relationships/",
         "namespace": "http://purl.org/swan/2.0/discourse-relationships/",
         "prefix": "dr",
+        "summary": "Properties linking questions, hypotheses, interpretations, and other resources, such as when one responds to, agrees with, motivates, or is inconsistent with another.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing",
             "humanities",
@@ -701,6 +1056,10 @@
         "download": "http://www.purl.org/drammar#",
         "namespace": "http://www.purl.org/drammar#",
         "prefix": "drammar",
+        "summary": "Classes and properties for the elements of drama, such as characters and their goals, plans, beliefs, emotions, and values, and scenes, actions, and conflicts.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "performing-arts",
             "humanities"
@@ -711,34 +1070,53 @@
         "download": "http://purl.org/ontology/dso#",
         "namespace": "http://purl.org/ontology/dso#",
         "prefix": "dso",
+        "summary": "Classes and properties for document services like those of libraries, museums, and archives, such as loan, presentation, and open access.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "dsw": {
+        "alt_title": "Darwin-SW",
+        "alt_title_source": "Name used by its authors; the namespace page returned 404.",
         "copy_from": "DBpedia Archivo",
         "download": "http://purl.org/dsw/",
         "namespace": "http://purl.org/dsw/",
         "prefix": "dsw",
+        "summary": "Classes and properties for connecting organisms, occurrences, events, locations, identifications, taxa, and specimens or other evidence in biodiversity data.",
+        "summary_basis": [
+            "file",
+            "https://github.com/darwin-sw/dsw"
+        ],
         "tags": [
             "natural-history"
-        ],
-        "title": "Darwin-SW",
-        "title_source": "Name used by its authors; the namespace page returned 404."
+        ]
     },
     "dul": {
         "download": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
         "namespace": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
         "prefix": "dul",
+        "summary": "General classes and properties for modeling physical and social entities, such as objects, events, agents, roles, plans, and situations, as a basis for other ontologies.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "linked-data"
         ]
     },
     "dwc": {
+        "alt_title": "Darwin Core",
+        "alt_title_source": "file: Core terms defined by Darwin Core",
         "download": "http://rs.tdwg.org/dwc/terms/",
         "format": "term-list",
         "namespace": "http://rs.tdwg.org/dwc/terms/",
         "prefix": "dwc",
+        "summary": "Classes and properties for describing organisms, their occurrences, specimens and samples, taxa, identifications, events, locations, geological context, and measurements.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
@@ -747,26 +1125,41 @@
         "download": "http://purl.org/ceu/eco",
         "namespace": "http://purl.org/ceu/eco#",
         "prefix": "ecoll",
+        "summary": "Classes and properties for describing collections as structures, such as sets, lists, sequences, and tuples, based on order, uniqueness, element type, and size.",
+        "summary_basis": [
+            "file",
+            "http://aprendeconalf.es/ecollections/"
+        ],
         "tags": [
             "linked-data"
         ]
     },
     "eac-cpf": {
+        "alt_title": "EAC-CPF Descriptions Ontology for Linked Archival Data",
+        "alt_title_source": "LOV title without its trailing colon.",
         "download": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
         "namespace": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
         "prefix": "eac-cpf",
+        "summary": "Classes and properties for describing persons, families, and corporate bodies, with names, dates of existence, places, functions, occupations, biographical or historical notes, and relations.",
+        "summary_basis": [
+            "file",
+            "http://archivi.ibc.regione.emilia-romagna.it/ontology/semanticEnvironment/index.html"
+        ],
         "tags": [
             "archives",
             "people"
-        ],
-        "title": "EAC-CPF Descriptions Ontology for Linked Archival Data",
-        "title_source": "LOV title without its trailing colon."
+        ]
     },
     "ebucore": {
         "copy_from": "LOV",
         "download": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         "namespace": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         "prefix": "ebucore",
+        "summary": "Classes and properties for describing audiovisual media, including programs, series, cast and crew, rights, publication events, and the technical formats of audio and video.",
+        "summary_basis": [
+            "file",
+            "https://tech.ebu.ch/metadata/ebucore"
+        ],
         "tags": [
             "media"
         ]
@@ -776,18 +1169,28 @@
         "download": "http://www.eclap.eu/schema/eclap/",
         "namespace": "http://www.eclap.eu/schema/eclap/",
         "prefix": "eclap",
+        "summary": "Classes and properties for describing performing arts media, including the professionals involved, performance places and dates, and users' annotations, favorites, and groups.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "performing-arts",
             "media"
         ]
     },
     "ecpo": {
+        "alt_title": "Enumeration and Chronology of Periodicals Ontology (ECPO)",
+        "alt_title_source": "The file's title, \"Enumeration and Chronology of Periodicals Ontology\", with its acronym from http://purl.org/ontology/ecpo (its heading).",
         "alternates": [
             "http://purl.org/ontology/ecpo#"
         ],
         "download": "http://cklee.github.io/ecpo/ecpo.ttl",
         "namespace": "http://purl.org/ontology/ecpo#",
         "prefix": "ecpo",
+        "summary": "Classes and properties for recording the volume and issue numbering and dates of a periodical's beginning, ending, and individual issues, including gaps.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -796,6 +1199,11 @@
         "download": "http://erlangen-crm.org/current/",
         "namespace": "http://erlangen-crm.org/current/",
         "prefix": "ecrm",
+        "summary": "Classes and properties of CIDOC CRM, implemented in OWL, for documenting cultural heritage objects and related events, people, groups, places, and time spans.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/"
+        ],
         "tags": [
             "museums"
         ]
@@ -806,6 +1214,10 @@
         "namespace": "http://www.europeana.eu/schemas/edm/",
         "notes": "Official file returns 403 to scripted requests; europeana.eu blocks them. Kept in the core; served from the Archivo copy (2024) until Europeana is asked for a fetchable URL.",
         "prefix": "edm",
+        "summary": "Classes and properties for aggregating descriptions of cultural heritage objects from many providers, linking objects to their digital representations, agents, places, events, and time spans.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "aggregation"
         ]
@@ -814,6 +1226,10 @@
         "download": "http://erlangen-crm.org/efrbroo/",
         "namespace": "http://erlangen-crm.org/efrbroo/",
         "prefix": "efrbroo",
+        "summary": "Classes and properties of FRBRoo, implemented in OWL, for describing works, expressions, publications, items, performances, and recordings, and events that create, publish, and reproduce them.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries",
             "museums"
@@ -827,6 +1243,11 @@
         "download": "https://raw.githubusercontent.com/dongshins/EKC_ontology/main/ekc_ontology.ttl",
         "namespace": "http://dh.aks.ac.kr/ontologies/ekc#",
         "prefix": "ekc",
+        "summary": "Classes and properties for modeling Korean cultural heritage, including historical facts, source documents, persons, places, institutions, events, and the relationships among them.",
+        "summary_basis": [
+            "file",
+            "https://github.com/dongshins/EKC_ontology"
+        ],
         "tags": [
             "humanities",
             "people"
@@ -836,6 +1257,11 @@
         "download": "http://dh.aks.ac.kr/ontologies/ekcd#",
         "namespace": "http://dh.aks.ac.kr/ontologies/ekcd#",
         "prefix": "ekcd",
+        "summary": "Classes and properties for Korean cultural heritage data that record interpretive assertions with their evidence and confidence levels, and utterances such as royal commands.",
+        "summary_basis": [
+            "file",
+            "http://dh.aks.ac.kr/ontologies/ekcd"
+        ],
         "tags": [
             "humanities",
             "value-annotations"
@@ -846,6 +1272,10 @@
         "download": "http://eprints.org/ontology/",
         "namespace": "http://eprints.org/ontology/",
         "prefix": "ep",
+        "summary": "Classes and properties for describing EPrints repositories, their records, and the documents and files attached to each record.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -855,6 +1285,10 @@
         "download": "http://purl.org/NET/c4dm/event.owl#",
         "namespace": "http://purl.org/NET/c4dm/event.owl#",
         "prefix": "event",
+        "summary": "Classes and properties for describing events, such as performances, with their agents, passive factors, products, places, times, and sub-events.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "time"
         ]
@@ -863,6 +1297,11 @@
         "download": "http://www.w3.org/2003/12/exif/ns#",
         "namespace": "http://www.w3.org/2003/12/exif/ns#",
         "prefix": "exif",
+        "summary": "Classes and properties for recording technical data in digital image files, such as camera make and settings, image size and structure, dates taken, and location.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2003/12/exif/"
+        ],
         "tags": [
             "media"
         ]
@@ -871,6 +1310,11 @@
         "download": "http://purl.org/spar/fabio/",
         "namespace": "http://purl.org/spar/fabio/",
         "prefix": "fabio",
+        "summary": "Classes and properties for describing published and publishable resources, such as books, journal articles, theses, and datasets, as works, expressions, manifestations, and items.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/fabio/current/fabio.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -879,15 +1323,27 @@
         "download": "http://xmlns.com/foaf/spec/index.rdf",
         "namespace": "http://xmlns.com/foaf/0.1/",
         "prefix": "foaf",
+        "summary": "Classes and properties for describing people, groups, and organizations, their names, online accounts, homepages, images, projects, and the people they know.",
+        "summary_basis": [
+            "file",
+            "http://xmlns.com/foaf/spec/"
+        ],
         "tags": [
             "general",
             "people"
         ]
     },
     "fpo": {
+        "alt_title": "A Factoid Prosopography Ontology (FPO)",
+        "alt_title_source": "The file's title, \"A Factoid Prosopography Ontology\", with its acronym from the file's description.",
         "download": "https://raw.githubusercontent.com/johnBradley501/FPO/master/fpo.owl",
         "namespace": "https://github.com/johnBradley501/FPO/raw/master/fpo.owl#",
         "prefix": "fpo",
+        "summary": "Classes and properties for recording what historical sources say about people, such as events, occupations, offices, relationships, possessions, and titles, with citations.",
+        "summary_basis": [
+            "file",
+            "https://github.com/johnBradley501/FPO"
+        ],
         "tags": [
             "people",
             "humanities",
@@ -901,15 +1357,27 @@
         "download": "http://www.filmstandards.org/schemas/filmportal_relations#",
         "namespace": "http://www.filmstandards.org/schemas/filmportal_relations#",
         "prefix": "fpr",
+        "summary": "Properties for linking film works and agents to related cultural heritage objects, such as film copies, trailers, clips, posters, images, texts, and audio.",
+        "summary_basis": [
+            "file",
+            "https://www.filmstandards.org/schemas/filmportal_relations"
+        ],
         "tags": [
             "media"
         ]
     },
     "frad": {
+        "alt_title": "Functional Requirements for Authority Data (FRAD)",
+        "alt_title_source": "Expansion: https://www.iflastandards.info/fr/frad Acronym: the file's title, \"FRAD model\".",
         "copy_from": "LOV",
         "download": "http://iflastandards.info/ns/fr/frad/",
         "namespace": "http://iflastandards.info/ns/fr/frad/",
         "prefix": "frad",
+        "summary": "Classes and properties for authority data, describing the names, identifiers, and access points of persons, families, corporate bodies, and works, and how they relate.",
+        "summary_basis": [
+            "file",
+            "https://www.iflastandards.info/fr/frad"
+        ],
         "tags": [
             "libraries"
         ]
@@ -918,6 +1386,11 @@
         "download": "http://purl.org/cerif/frapo/",
         "namespace": "http://purl.org/cerif/frapo/",
         "prefix": "frapo",
+        "summary": "Classes and properties for describing the administration of research projects, such as grant applications, funding bodies, budgets, payments, partners, and project outputs.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/frapo/current/frapo.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -927,6 +1400,11 @@
         "download": "http://purl.org/vocab/frbr/core#",
         "namespace": "http://purl.org/vocab/frbr/core#",
         "prefix": "frbr",
+        "summary": "Classes and properties for describing bibliographic works, expressions, manifestations, and items, the people and organizations responsible for them, and relationships such as translation.",
+        "summary_basis": [
+            "file",
+            "https://vocab.org/frbr/core"
+        ],
         "tags": [
             "libraries"
         ]
@@ -936,11 +1414,18 @@
         "download": "http://purl.org/vocab/frbr/extended#",
         "namespace": "http://purl.org/vocab/frbr/extended#",
         "prefix": "frbre",
+        "summary": "Classes and properties for recording relationships among works, expressions, manifestations, and items, such as parts, adaptations, translations, supplements, summaries, and sequels.",
+        "summary_basis": [
+            "file",
+            "https://vocab.org/frbr/extended"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "frbrer": {
+        "alt_title": "FRBR Entity-Relationship Model (FRBRer)",
+        "alt_title_source": "Expansion: https://www.iflastandards.info/fr/frbr/frbrer Acronym: the file's title, \"FRBRer model\".",
         "alternates": [
             "http://iflastandards.info/ns/fr/frbr/frbrer/"
         ],
@@ -948,6 +1433,11 @@
         "download": "http://iflastandards.info/ns/fr/frbr/frbrer/frbrer.rdf",
         "namespace": "http://iflastandards.info/ns/fr/frbr/frbrer/",
         "prefix": "frbrer",
+        "summary": "Classes and properties for describing bibliographic works, expressions, manifestations, and items, with their attributes, relationships, subjects, and the persons and corporate bodies responsible.",
+        "summary_basis": [
+            "file",
+            "https://www.iflastandards.info/fr/frbr/frbrer"
+        ],
         "tags": [
             "libraries"
         ]
@@ -956,35 +1446,56 @@
         "download": "http://metadataregistry.org/schema/show/id/94.rdf",
         "namespace": "http://iflastandards.info/ns/fr/frbr/frbroo/",
         "prefix": "frbroo",
+        "summary": "Classes and properties for describing works, expressions, publications, items, performances, and recordings, the events that create them, and the names and identifiers assigned to them.",
+        "summary_basis": [
+            "file",
+            "https://www.iflastandards.info/fr/frbr/frbroo"
+        ],
         "tags": [
             "libraries",
             "museums"
         ]
     },
     "frsad": {
+        "alt_title": "Functional Requirements for Subject Authority Data (FRSAD)",
+        "alt_title_source": "Expansion: https://www.iflastandards.info/fr/frsad Acronym: the file's title, \"FRSAD model\".",
         "download": "http://metadataregistry.org/schema/show/id/26.rdf",
         "namespace": "http://iflastandards.info/ns/fr/frsad/",
         "prefix": "frsad",
+        "summary": "Classes and properties for subject authority data, linking subjects to the names used for them, with each name's type, form, language, script, and scheme.",
+        "summary_basis": [
+            "file",
+            "https://www.iflastandards.info/fr/frsad"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "gadm": {
+        "alt_title": "GADM Ontology",
+        "alt_title_source": "The library's name: neither the file nor the publisher names the ontology itself (the publisher's project is GADM-RDF, and the ontology is at http://gadm.geovocab.org/ontology).",
         "copy_from": "DBpedia Archivo",
         "download": "http://gadm.geovocab.org/ontology",
         "namespace": "http://gadm.geovocab.org/ontology#",
         "prefix": "gadm",
+        "summary": "Classes and properties for describing countries and their administrative regions, with names, identifying codes, population, area, and regional or economic classifications.",
+        "summary_basis": [
+            "file",
+            "http://web.archive.org/web/20240126132328/http://gadm.geovocab.org/"
+        ],
         "tags": [
             "places"
-        ],
-        "title": "GADM Ontology",
-        "title_source": "Descriptive name: the file has no title and the publisher (GeoVocab, gadm.geovocab.org) is unreachable."
+        ]
     },
     "gamecip": {
         "copy_from": "Open Metadata Registry",
         "download": "http://metadataregistry.org/schema/show/id/89.rdf",
         "namespace": "http://gamemetadata.org/uri/schema/gamecip/",
         "prefix": "gamecip",
+        "summary": "Properties for cataloging video games, such as title, platform, developer, publisher, genre, media format, system requirements, and version.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media",
             "libraries"
@@ -997,43 +1508,71 @@
         "download": "https://raw.githubusercontent.com/joshhansen/vocab-gen/master/releases/gen01.rdf",
         "namespace": "http://purl.org/gen/0.1#",
         "prefix": "gen",
+        "summary": "Classes and properties for linking genealogical data about families, parents and children, spouses, births, deaths, and personal names, and the sources supporting it.",
+        "summary_basis": [
+            "file",
+            "https://github.com/joshhansen/vocab-gen"
+        ],
         "tags": [
             "people"
         ]
     },
     "geop": {
+        "alt_title": "FAO Geopolitical Ontology",
+        "alt_title_source": "https://www.semantic-web-journal.net/sites/default/files/swj179_0.pdf",
         "copy_from": "LOV",
         "download": "http://aims.fao.org/aos/geopolitical.owl#",
         "namespace": "http://aims.fao.org/aos/geopolitical.owl#",
         "prefix": "geop",
+        "summary": "Classes and properties for describing countries, territories, and groups of countries, with their names in several languages, codes, borders, currencies, and statistics such as population.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "places"
-        ],
-        "title": "FAO Geopolitical Ontology"
+        ]
     },
     "georss": {
+        "alt_title": "GeoRSS",
+        "alt_title_source": "file: From the GeoRSS Simple vocabulary",
         "copy_from": "DBpedia Archivo",
         "download": "http://www.opengis.net/gml/",
         "namespace": "http://www.georss.org/georss/",
         "prefix": "georss",
+        "summary": "Properties for recording a location as a point, line, polygon, or box, with elevation, floor, and radius.",
+        "summary_basis": [
+            "file",
+            "https://www.ogc.org/standards/georss/"
+        ],
         "tags": [
             "places"
         ]
     },
     "geosparql": {
+        "alt_title": "GeoSPARQL",
+        "alt_title_source": "https://www.ogc.org/standards/geosparql/",
         "download": "http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf",
         "namespace": "http://www.opengis.net/ont/geosparql#",
         "notes": "GeoSPARQL 1.0. The namespace URL returns an OGC catalog record, not the ontology (imports nothing). A current GeoSPARQL 1.1 file was not found at a stable URL; Archivo holds a 1.1 copy from 2024-04-05.",
         "prefix": "geo",
+        "summary": "Classes and properties for representing spatial features and their geometries, with relations such as contains, within, overlaps, and touches, and text encodings of geometries.",
+        "summary_basis": [
+            "file",
+            "https://www.ogc.org/standards/geosparql/"
+        ],
         "tags": [
             "places"
-        ],
-        "title": "GeoSPARQL"
+        ]
     },
     "gesah": {
         "download": "https://raw.githubusercontent.com/tibonto/gesah/main/gesah.ttl",
         "namespace": "http://ontology.tib.eu/gesah/",
         "prefix": "gesah",
+        "summary": "Classes and properties for the inventory, classification, and description of works on paper, such as drawings and prints, with inscriptions, watermarks, collectors' marks, and provenance.",
+        "summary_basis": [
+            "file",
+            "https://github.com/tibonto/gesah"
+        ],
         "tags": [
             "museums"
         ]
@@ -1045,6 +1584,11 @@
         "download": "https://www.geonames.org/ontology/ontology_v3.3.rdf",
         "namespace": "http://www.geonames.org/ontology#",
         "prefix": "gn",
+        "summary": "Classes and properties for describing geographical features, especially those in the GeoNames database, with their names, types, coordinates, population, and parent, neighboring, and nearby features.",
+        "summary_basis": [
+            "file",
+            "https://www.geonames.org/ontology/documentation.html"
+        ],
         "tags": [
             "places"
         ]
@@ -1053,6 +1597,11 @@
         "download": "http://d-nb.info/standards/elementset/gnd#",
         "namespace": "http://d-nb.info/standards/elementset/gnd#",
         "prefix": "gndo",
+        "summary": "Classes and properties for describing persons, families, corporate bodies, conferences, places, works, and subject headings in authority records of the Integrated Authority File.",
+        "summary_basis": [
+            "file",
+            "https://d-nb.info/standards/elementset/gnd"
+        ],
         "tags": [
             "libraries",
             "people"
@@ -1062,6 +1611,10 @@
         "download": "http://gov.genealogy.net/ontology.owl#",
         "namespace": "http://gov.genealogy.net/ontology.owl#",
         "prefix": "gov",
+        "summary": "Classes and properties for describing historical settlements and administrative units, with their names, types, locations, time spans, relationships, and source citations.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "places",
             "humanities"
@@ -1071,6 +1624,11 @@
         "download": "http://rdf.muninn-project.org/ontologies/graves",
         "namespace": "http://rdf.muninn-project.org/ontologies/graves#",
         "prefix": "graves",
+        "summary": "Classes and properties for describing human remains, graves, cemeteries, monuments, and memorials, including inscriptions, epitaphs, monument surfaces, locations, and relocations.",
+        "summary_basis": [
+            "file",
+            "http://rdf.muninn-project.org/ontologies/graves"
+        ],
         "tags": [
             "humanities",
             "museums"
@@ -1080,38 +1638,61 @@
         "download": "https://www.goudatijdmachine.nl/def#",
         "namespace": "https://www.goudatijdmachine.nl/def#",
         "prefix": "gtm",
+        "summary": "Classes and properties for buildings, streets, plots, and addresses in the city of Gouda over time, and the deeds, permits, and tax records about them.",
+        "summary_basis": [
+            "file",
+            "https://www.goudatijdmachine.nl/def"
+        ],
         "tags": [
             "places",
             "humanities"
         ]
     },
     "gvp": {
+        "alt_title": "Getty Vocabulary Program (GVP) ontology",
+        "alt_title_source": "The file's title, \"Getty Vocabulary Program ontology\", with its acronym from the file's description (\"The GVP Ontology\").",
         "copy_from": "LOV",
         "download": "http://vocab.getty.edu/ontology#",
         "namespace": "http://vocab.getty.edu/ontology#",
         "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "gvp",
+        "summary": "Classes and properties for the Getty vocabularies of art and architecture concepts, places, and artists, including hierarchies, preferred terms, biographies, and relationships between entries.",
+        "summary_basis": [
+            "file",
+            "http://vocab.getty.edu/doc/"
+        ],
         "tags": [
             "museums"
         ]
     },
     "hht": {
+        "alt_title": "Historical Hierarchical Territories (HHT)",
+        "alt_title_source": "Expansion and acronym: https://www.irit.fr/recherches/MELODI/ontologies/HHT/index-en.html (heading \"Historical Hierarchical Territories: Overview\"; \"HHT is a modular ontology\").",
         "alternates": [
             "https://w3id.org/HHT#"
         ],
         "download": "https://www.irit.fr/recherches/MELODI/ontologies/HHT/ontology.ttl",
         "namespace": "https://w3id.org/HHT#",
         "prefix": "hht",
+        "summary": "Classes and properties for describing historical territories and their hierarchies as they change over time, including time-bound versions, hierarchy levels, areas, and managing actors.",
+        "summary_basis": [
+            "file",
+            "https://www.irit.fr/recherches/MELODI/ontologies/HHT/index-en.html"
+        ],
         "tags": [
             "places",
             "humanities"
-        ],
-        "title": "Historical Hierarchical Territories"
+        ]
     },
     "hico": {
         "download": "https://marilenadaquino.github.io/hico/1.1/hico.owl",
         "namespace": "http://purl.org/emmedi/hico/",
         "prefix": "hico",
+        "summary": "Classes and properties for recording scholarly interpretations of cultural heritage objects, such as attributions, with their type, supporting criteria, and the sources they come from.",
+        "summary_basis": [
+            "file",
+            "https://marilenadaquino.github.io/hico/"
+        ],
         "tags": [
             "humanities",
             "museums",
@@ -1119,16 +1700,21 @@
         ]
     },
     "histograph": {
+        "alt_title": "Histograph Ontology",
+        "alt_title_source": "Descriptive name: the file has no title and the publisher (histograph.io) is unreachable.",
         "copy_from": "DBpedia Archivo",
         "download": "http://rdf.histograph.io/",
         "namespace": "http://rdf.histograph.io/",
         "prefix": "hg",
+        "summary": "Classes and properties for relating places in time, such as one place being the same as, lying in, containing, absorbing, or originating from another.",
+        "summary_basis": [
+            "file",
+            "https://github.com/histograph/schemas"
+        ],
         "tags": [
             "places",
             "humanities"
-        ],
-        "title": "Histograph Ontology",
-        "title_source": "Descriptive name: the file has no title and the publisher (histograph.io) is unreachable."
+        ]
     },
     "holding": {
         "alternates": [
@@ -1137,6 +1723,11 @@
         "download": "http://dini-ag-kim.github.io/holding-ontology/holding.ttl",
         "namespace": "http://purl.org/ontology/holding#",
         "prefix": "holding",
+        "summary": "Classes and properties for library holdings that link documents to their copies, copies to agents that hold or collect them, and copies to call numbers.",
+        "summary_basis": [
+            "file",
+            "https://github.com/dini-ag-kim/holding-ontology"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1145,38 +1736,52 @@
         "download": "https://w3id.org/icon/ontology/",
         "namespace": "https://w3id.org/icon/ontology/",
         "prefix": "icon",
+        "summary": "Classes and properties for recording interpretations of what artworks depict and mean, from recognized motifs and subjects such as characters and symbols to cultural meanings.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "humanities"
         ]
     },
     "iiif-image-2": {
+        "alt_title": "IIIF Image API 2",
+        "alt_title_source": "IIIF names the specification \"IIIF Image API\"; this is the 2.x ontology.",
         "alternates": [
             "http://iiif.io/api/image/2"
         ],
         "download": "http://iiif.io/api/image/2#",
         "namespace": "http://iiif.io/api/image/2#",
         "prefix": "iiif",
+        "summary": "Classes and properties for describing IIIF images, such as sizes, tiles, scale factors, formats, qualities, and supported features.",
+        "summary_basis": [
+            "file",
+            "https://iiif.io/api/image/2.0/"
+        ],
         "tags": [
             "aggregation",
             "media"
-        ],
-        "title": "IIIF Image API 2",
-        "title_source": "IIIF names the specification \"IIIF Image API\"; this is the 2.x ontology."
+        ]
     },
     "iiif-presentation-2": {
+        "alt_title": "IIIF Presentation API 2",
+        "alt_title_source": "IIIF names the specification \"IIIF Presentation API\"; this is the 2.x ontology.",
         "alternates": [
             "http://iiif.io/api/presentation/2"
         ],
         "download": "http://iiif.io/api/presentation/2#",
         "namespace": "http://iiif.io/api/presentation/2#",
         "prefix": "sc",
+        "summary": "Classes and properties for arranging an object's pages or views for display, such as manifests, sequences, canvases, ranges, layers, annotation lists, and collections.",
+        "summary_basis": [
+            "file",
+            "https://iiif.io/api/presentation/2.1/"
+        ],
         "tags": [
             "aggregation",
             "media"
-        ],
-        "title": "IIIF Presentation API 2",
-        "title_source": "IIIF names the specification \"IIIF Presentation API\"; this is the 2.x ontology."
+        ]
     },
     "immovable-property-arco-network": {
         "alternates": [
@@ -1186,6 +1791,10 @@
         "download": "https://w3id.org/arco/ontology/immovable-property",
         "namespace": "https://w3id.org/arco/ontology/immovable-property/",
         "prefix": "a-ip",
+        "summary": "Classes and properties for describing buildings and other constructions as cultural heritage, including their layout, rooms, floors, roofs, stairs, windows, and technical systems.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -1198,6 +1807,10 @@
         "download": "http://visualartsdna.org/2021/07/16/model#",
         "namespace": "http://visualartsdna.org/2021/07/16/model#",
         "prefix": "vadna",
+        "summary": "Classes and properties for describing visual artworks and how they are made, such as media, materials, techniques, art elements and principles, artists, and collections.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -1207,6 +1820,11 @@
         "download": "https://w3id.org/lso/intro/beta202408#",
         "namespace": "https://w3id.org/lso/intro/beta202408#",
         "prefix": "intro",
+        "summary": "Classes and properties for recording relations between texts and images, such as citation or allusion, and the passages, shared features, and interpretations involved.",
+        "summary_basis": [
+            "file",
+            "https://boberreither.github.io/INTRO/"
+        ],
         "tags": [
             "humanities"
         ]
@@ -1216,6 +1834,11 @@
         "download": "http://iflastandards.info/ns/isbd/elements/",
         "namespace": "http://iflastandards.info/ns/isbd/elements/",
         "prefix": "isbd",
+        "summary": "Classes and properties for describing bibliographic resources according to the International Standard Bibliographic Description, such as titles, edition, publication, material description, series, and notes.",
+        "summary_basis": [
+            "file",
+            "https://iflastandards.github.io/platform/isbd/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1224,37 +1847,57 @@
         "download": "http://metadataregistry.org/schema/show/id/97.rdf",
         "namespace": "http://iflastandards.info/ns/isbd/unc/elements/",
         "prefix": "isbdu",
+        "summary": "Properties for recording International Standard Bibliographic Description elements, such as titles, edition, publication, material description, and notes, without limiting them to one class of resource.",
+        "summary_basis": [
+            "file",
+            "https://iflastandards.github.io/platform/isbd/"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "iso-thes": {
+        "alt_title": "SKOS-Thes",
+        "alt_title_source": "https://www.dublincore.org/specifications/skos-thes/",
         "download": "http://purl.org/iso25964/skos-thes",
         "namespace": "http://purl.org/iso25964/skos-thes#",
         "prefix": "iso-thes",
+        "summary": "Classes and properties for describing ISO 25964 thesauri in SKOS, such as concept groups, compound equivalence, and generic, partitive, and instantial broader and narrower terms.",
+        "summary_basis": [
+            "file",
+            "https://www.dublincore.org/specifications/skos-thes/"
+        ],
         "tags": [
             "linked-data"
-        ],
-        "title": "ISO 25964 SKOS extensions"
+        ]
     },
     "kanzaki-music": {
         "copy_from": "DBpedia Archivo",
         "download": "http://www.kanzaki.com/ns/music",
         "namespace": "http://www.kanzaki.com/ns/music#",
         "prefix": "music",
+        "summary": "Classes and properties for describing classical music works, performances, and performers, such as symphonies, operas, concerts, venues, composers, conductors, and instrumentalists.",
+        "summary_basis": [
+            "file",
+            "http://www.kanzaki.com/ns/music"
+        ],
         "tags": [
             "performing-arts"
         ]
     },
     "kbv": {
+        "alt_title": "KB Base Vocabulary",
+        "alt_title_source": "file: KB Base Vocabulary",
         "download": "https://id.kb.se/vocab/",
         "namespace": "https://id.kb.se/vocab/",
         "prefix": "kbv",
+        "summary": "Classes and properties for library catalog data, such as works, titles, identifiers, carrier types, publication and manufacture, series, shelf marks, and held items.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
-        ],
-        "title": "Basvokabulär",
-        "title_source": "Title of the publisher's page, id.kb.se/vocab/ (\"Basvokabulär | id.kb.se\")."
+        ]
     },
     "l4lod": {
         "alternates": [
@@ -1263,6 +1906,11 @@
         "download": "http://ns.inria.fr/l4lod/v2#",
         "namespace": "http://ns.inria.fr/l4lod/v2#",
         "prefix": "l4lod",
+        "summary": "Classes and properties for expressing the licensing terms of linked open data, such as permissions to share, prohibitions on commercial use, and obligations of attribution.",
+        "summary_basis": [
+            "file",
+            "http://ns.inria.fr/l4lod/v2/l4lod_v2.html"
+        ],
         "tags": [
             "rights"
         ]
@@ -1271,15 +1919,27 @@
         "download": "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/",
         "namespace": "https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/",
         "prefix": "lcc-lr",
+        "summary": "Classes and properties for describing languages, language families, dialects, and writing systems, along with language codes such as those in ISO 639.",
+        "summary_basis": [
+            "file",
+            "https://www.omg.org/spec/LCC/"
+        ],
         "tags": [
             "language"
         ]
     },
     "lawd": {
+        "alt_title": "Linking Ancient World Data Ontology (LAWD)",
+        "alt_title_source": "The file's title, \"Linking Ancient World Data Ontology\", with its acronym from the file's description.",
         "copy_from": "LOV",
         "download": "http://lawd.info/ontology/",
         "namespace": "http://lawd.info/ontology/",
         "prefix": "lawd",
+        "summary": "Classes and properties for describing people, deities, places, names, and written works of the ancient world, and the textual evidence that attests to them.",
+        "summary_basis": [
+            "file",
+            "https://github.com/lawdi/LAWD"
+        ],
         "tags": [
             "humanities"
         ]
@@ -1289,6 +1949,10 @@
         "download": "http://metadataregistry.org/schema/show/id/70.rdf",
         "namespace": "http://www.metadataregistry.org/uri/schema/lcmptade/",
         "prefix": "lcmpt",
+        "summary": "Properties for authority records of terms for musical instruments and other performing mediums, such as term source, related records, see also references, and time period.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries",
             "performing-arts"
@@ -1299,6 +1963,11 @@
         "download": "http://purl.oclc.org/NET/ldr/ns#",
         "namespace": "http://purl.oclc.org/NET/ldr/ns#",
         "prefix": "ldr",
+        "summary": "Classes and properties for expressing rights and licenses for linked data resources, such as reproduction, extraction, and reuse rights, attribution requirements, and access limits.",
+        "summary_basis": [
+            "file",
+            "http://cosasbuenas.es/static/vocab/ldr"
+        ],
         "tags": [
             "rights"
         ]
@@ -1307,6 +1976,11 @@
         "download": "http://www.w3.org/ns/lemon/lexicog#",
         "namespace": "http://www.w3.org/ns/lemon/lexicog#",
         "prefix": "lexicog",
+        "summary": "Classes and properties for representing dictionaries and other lexicographic resources as linked data, including their entries, entry structure, and usage examples.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2019/09/lexicog/"
+        ],
         "tags": [
             "language"
         ]
@@ -1315,6 +1989,11 @@
         "download": "http://www.lexinfo.net/ontology/3.0/lexinfo",
         "namespace": "http://www.lexinfo.net/ontology/3.0/lexinfo#",
         "prefix": "lexinfo",
+        "summary": "Classes and properties for the linguistic details of lexicon entries, such as part of speech, case, gender, tense, sentence frames, usage notes, and synonyms.",
+        "summary_basis": [
+            "file",
+            "https://lexinfo.net/"
+        ],
         "tags": [
             "language"
         ]
@@ -1324,6 +2003,10 @@
         "download": "http://purl.org/library/",
         "namespace": "http://purl.org/library/",
         "prefix": "lib",
+        "summary": "Classes and properties that extend Schema.org for library materials, such as kits, theses, and musical scores, with carriers, place of publication, and holdings counts.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1336,6 +2019,10 @@
         "download": "http://purl.org/LiMo/0.1#",
         "namespace": "http://purl.org/LiMo/0.1/",
         "prefix": "limo",
+        "summary": "Classes and properties for describing license models for datasets, including the rights, legal terms, and conditions, such as attribution, share alike, and noncommercial use.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "rights"
         ]
@@ -1344,23 +2031,38 @@
         "download": "https://w3id.org/vocab/lingvoj#",
         "namespace": "https://w3id.org/vocab/lingvoj#",
         "prefix": "lingvo",
+        "summary": "Classes and properties for describing languages, how well people understand, speak, read, and write them, their official or regional use, and translations.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "language"
         ]
     },
     "linked-art": {
+        "alt_title": "Linked Art",
+        "alt_title_source": "https://linked.art/",
         "download": "https://linked.art/ns/terms/",
         "namespace": "https://linked.art/ns/terms/",
         "prefix": "la",
+        "summary": "Classes and properties that extend CIDOC CRM for art and cultural heritage, such as payments, transfers, sets and members, custodians, digital services, and rights acquisitions.",
+        "summary_basis": [
+            "file",
+            "https://linked.art/ns/terms/",
+            "https://linked.art/"
+        ],
         "tags": [
             "museums"
-        ],
-        "title": "Linked Art"
+        ]
     },
     "lio": {
         "download": "http://purl.org/net/lio#",
         "namespace": "http://purl.org/net/lio#",
         "prefix": "lio",
+        "summary": "Classes and properties for describing what an image shows, such as depicted things, setting, foreground and background, visual parts, technique, materials, and style.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media",
             "museums"
@@ -1371,6 +2073,10 @@
         "download": "http://data.archiveshub.ac.uk/def/",
         "namespace": "http://data.archiveshub.ac.uk/def/",
         "prefix": "locah",
+        "summary": "Classes and properties for describing archival collections and their finding aids, including creators, repositories, extent, dates, access restrictions, and custodial history.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "archives"
         ]
@@ -1382,6 +2088,11 @@
         "download": "http://www.w3.org/ns/locn.ttl",
         "namespace": "http://www.w3.org/ns/locn#",
         "prefix": "locn",
+        "summary": "Classes and properties for describing any place by its name, address, or geometry, such as street, post code, administrative units, and coordinates.",
+        "summary_basis": [
+            "file",
+            "https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/"
+        ],
         "tags": [
             "places"
         ]
@@ -1391,6 +2102,10 @@
         "download": "http://linkedevents.org/ontology/",
         "namespace": "http://linkedevents.org/ontology/",
         "prefix": "lode",
+        "summary": "Classes and properties for describing historical events, including when and where they happened, the agents and things involved, and media that illustrate them.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "time"
         ]
@@ -1400,6 +2115,10 @@
         "download": "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#",
         "namespace": "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#",
         "prefix": "lom",
+        "summary": "Classes and properties for describing educational resources with IEEE LOM elements, such as intended users, age range, difficulty, learning time, technical requirements, rights, and classification.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -1408,18 +2127,30 @@
         "download": "https://cidoc-crm.org/extensions/lrmoo/owl/1.0/LRMoo_v1.0.owl",
         "namespace": "http://iflastandards.info/ns/lrm/lrmoo/",
         "prefix": "lrmoo",
+        "summary": "Classes and properties that extend CIDOC CRM for bibliographic information, such as works, expressions, manifestations, items, and the events that create, perform, and reproduce them.",
+        "summary_basis": [
+            "file",
+            "https://cidoc-crm.org/lrmoo/"
+        ],
         "tags": [
             "libraries",
             "museums"
         ]
     },
     "lto": {
+        "alt_title": "Library Transaction Ontology (LTO)",
+        "alt_title_source": "The file's title, \"Library Transaction Ontology\", with its acronym from the file's description.",
         "alternates": [
             "https://w3id.org/lto#"
         ],
         "download": "https://www.isibang.ac.in/ns/lto/ontology.ttl",
         "namespace": "https://w3id.org/lto#",
         "prefix": "lto",
+        "summary": "Classes and properties for recording library transactions, such as checkouts, returns, renewals, holds, recalls, interlibrary loans, fines, and patron and item status.",
+        "summary_basis": [
+            "file",
+            "https://www.isibang.ac.in/ns/lto/index.html"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1428,6 +2159,10 @@
         "download": "http://purl.org/lobid/lv#",
         "namespace": "http://purl.org/lobid/lv#",
         "prefix": "lv",
+        "summary": "Classes and properties for library catalog data, such as publication types, series and multivolume relations, library and union catalog identifiers, call numbers, and subject headings.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1439,19 +2174,28 @@
         "download": "http://lexvo.org/ontology",
         "namespace": "http://lexvo.org/ontology#",
         "prefix": "lvont",
+        "summary": "Classes and properties for describing languages, terms, scripts, and characters, with language codes, translations, and the regions where languages are used.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "language"
         ]
     },
     "ma-ont": {
+        "alt_title": "Ontology for Media Resources",
+        "alt_title_source": "The W3C Recommendation's title, \"Ontology for Media Resources 1.0\" (https://www.w3.org/TR/mediaont-10/), with the version cut.",
         "download": "http://www.w3.org/ns/ma-ont#",
         "namespace": "http://www.w3.org/ns/ma-ont#",
         "prefix": "ma-ont",
+        "summary": "Classes and properties for describing images and audiovisual media, such as titles, contributors, locations, fragments and tracks, ratings, target audiences, and technical details.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/mediaont-10/"
+        ],
         "tags": [
             "media"
-        ],
-        "title": "Ontology for Media Resources 1.0",
-        "title_source": "W3C Recommendation title."
+        ]
     },
     "mads": {
         "alternates": [
@@ -1460,6 +2204,11 @@
         "download": "http://www.loc.gov/standards/mads/rdf/v1.rdf",
         "namespace": "http://www.loc.gov/mads/rdf/v1#",
         "prefix": "mads",
+        "summary": "Classes and properties for describing authority data for names, subjects, places, genres, and titles, including their variant forms and relationships to one another.",
+        "summary_basis": [
+            "file",
+            "http://www.loc.gov/standards/mads/rdf/"
+        ],
         "tags": [
             "libraries",
             "people"
@@ -1469,6 +2218,12 @@
         "download": "http://metadataregistry.org/schema/show/id/38.rdf",
         "namespace": "http://marc21rdf.info/elements/00X/",
         "prefix": "marc00x",
+        "summary": "Properties for the MARC 21 bibliographic fields 00X, which hold coded data describing books, maps, music, sound recordings, films, and other materials.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/",
+            "https://www.loc.gov/marc/bibliographic/bd00x.html"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1477,6 +2232,11 @@
         "download": "http://metadataregistry.org/schema/show/id/39.rdf",
         "namespace": "http://marc21rdf.info/elements/0XX/",
         "prefix": "marc0xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 01X to 09X, which hold standard numbers, control numbers, codes, call numbers, and classification numbers.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1485,6 +2245,11 @@
         "download": "http://metadataregistry.org/schema/show/id/40.rdf",
         "namespace": "http://marc21rdf.info/elements/1XX/",
         "prefix": "marc1xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 1XX, which hold the main entry under a personal, corporate, or meeting name or a uniform title.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1493,6 +2258,11 @@
         "download": "http://metadataregistry.org/schema/show/id/41.rdf",
         "namespace": "http://marc21rdf.info/elements/2XX/",
         "prefix": "marc2xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 2XX, which hold titles, edition statements, and details of publication, distribution, and copyright.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1501,6 +2271,11 @@
         "download": "http://metadataregistry.org/schema/show/id/42.rdf",
         "namespace": "http://marc21rdf.info/elements/3XX/",
         "prefix": "marc3xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 3XX, which hold physical description, content and carrier types, and sound, video, and digital file characteristics.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1509,6 +2284,11 @@
         "download": "http://metadataregistry.org/schema/show/id/43.rdf",
         "namespace": "http://marc21rdf.info/elements/4XX/",
         "prefix": "marc4xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 4XX, which hold series statements, including series titles and volume or sequence numbers.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1517,6 +2297,11 @@
         "download": "http://metadataregistry.org/schema/show/id/44.rdf",
         "namespace": "http://marc21rdf.info/elements/5XX/",
         "prefix": "marc5xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 5XX, which hold notes, such as contents, summaries, dissertations, access and use restrictions, and ownership history.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1525,6 +2310,11 @@
         "download": "http://metadataregistry.org/schema/show/id/45.rdf",
         "namespace": "http://marc21rdf.info/elements/60X/",
         "prefix": "marc60x",
+        "summary": "Properties for the MARC 21 bibliographic fields 60X, which hold personal names used as subjects.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1533,6 +2323,11 @@
         "download": "http://metadataregistry.org/schema/show/id/46.rdf",
         "namespace": "http://marc21rdf.info/elements/61X/",
         "prefix": "marc61x",
+        "summary": "Properties for the MARC 21 bibliographic fields 61X, which hold corporate and meeting names used as subjects.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1541,6 +2336,11 @@
         "download": "http://metadataregistry.org/schema/show/id/47.rdf",
         "namespace": "http://marc21rdf.info/elements/63X/",
         "prefix": "marc63x",
+        "summary": "Properties for the MARC 21 bibliographic fields 63X, which hold uniform titles used as subjects.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1549,6 +2349,11 @@
         "download": "http://metadataregistry.org/schema/show/id/48.rdf",
         "namespace": "http://marc21rdf.info/elements/64X/",
         "prefix": "marc64x",
+        "summary": "Properties for the MARC 21 bibliographic fields 64X, which hold chronological terms used as subjects.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1557,6 +2362,11 @@
         "download": "http://metadataregistry.org/schema/show/id/49.rdf",
         "namespace": "http://marc21rdf.info/elements/65X/",
         "prefix": "marc65x",
+        "summary": "Properties for the MARC 21 bibliographic fields 65X, which hold topical terms, geographic names, genre or form terms, and other subject and index terms.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1565,6 +2375,11 @@
         "download": "http://metadataregistry.org/schema/show/id/50.rdf",
         "namespace": "http://marc21rdf.info/elements/7XX/",
         "prefix": "marc7xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 7XX, which hold added entries under personal, corporate, and meeting names, titles, and place names.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1573,14 +2388,26 @@
         "download": "http://metadataregistry.org/schema/show/id/51.rdf",
         "namespace": "http://marc21rdf.info/elements/8XX/",
         "prefix": "marc8xx",
+        "summary": "Properties for the MARC 21 bibliographic fields 8XX, which hold series added entries under personal, corporate, and meeting names and uniform titles.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/marc/bibliographic/"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "mdcs": {
+        "alt_title": "Monument Diagnosis and Conservation System (MDCS) damage atlas ontology",
+        "alt_title_source": "file: The Monument Diagnosis and Conservation System (MDCS) damage atlas ontology (MDCS-O) is derived from the original MDCS damage atlas web application",
         "download": "https://mdcs.monumentenkennis.nl/damageatlas/ontology#",
         "namespace": "https://mdcs.monumentenkennis.nl/damageatlas/ontology#",
         "prefix": "mdcs",
+        "summary": "Classes for classifying construction damage to monuments and buildings, such as cracking, deformation, biological growth, and surface changes in brick, stone, mortar, plaster, and concrete.",
+        "summary_basis": [
+            "file",
+            "https://mdcs.monumentenkennis.nl/damageatlas/ontology"
+        ],
         "tags": [
             "museums"
         ]
@@ -1590,6 +2417,10 @@
         "download": "http://purl.org/media#",
         "namespace": "http://purl.org/media#",
         "prefix": "media",
+        "summary": "Classes and properties for describing media recordings and collections of them, including position in a list, rating, duration, image, sample, and download link.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -1598,17 +2429,24 @@
         "download": "http://metadataregistry.org/schema/show/id/189.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/TheMediaPreserve/",
         "prefix": "mprel",
+        "summary": "Properties for describing audio, film, and video assets, such as filename, title, date, language, media type, format type, and reel size.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media",
             "preservation"
-        ],
-        "title": "The MediaPreserve Required Elements List"
+        ]
     },
     "memorix": {
         "copy_from": "DBpedia Archivo",
         "download": "http://memorix.io/ontology#",
         "namespace": "http://memorix.io/ontology#",
         "prefix": "memorix",
+        "summary": "Classes and properties for records in a collection management system, such as record types, collections, sets, access and rights, change history, and depot locations.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "archives"
@@ -1618,39 +2456,57 @@
         "download": "http://metadataregistry.org/schema/show/id/18.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/cr/",
         "prefix": "ceramic",
+        "summary": "Properties for describing ceramic resources, such as patent, report, and standard numbers, series, country, approving body, supervisor, and university.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
     },
     "mmms": {
+        "alt_title": "Mapping Manuscript Migrations Metadata Schema",
+        "alt_title_source": "ldf.fi documentation page.",
         "download": "http://ldf.fi/schema/mmm/",
         "namespace": "http://ldf.fi/schema/mmm/",
         "prefix": "mmms",
+        "summary": "Classes and properties for describing manuscripts, such as folio and line counts, decoration, binding, and the people who made, owned, or sold them.",
+        "summary_basis": [
+            "file",
+            "http://ldf.fi/schema/mmm/"
+        ],
         "tags": [
             "humanities"
-        ],
-        "title": "Mapping Manuscript Migrations Metadata Schema",
-        "title_source": "ldf.fi documentation page."
+        ]
     },
     "mo": {
         "copy_from": "LOV",
         "download": "http://purl.org/ontology/mo/",
         "namespace": "http://purl.org/ontology/mo/",
         "prefix": "mo",
+        "summary": "Classes and properties for describing music, including artists and groups, works, performances, recordings, releases and tracks, and media such as vinyl and magnetic tape.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "performing-arts",
             "media"
         ]
     },
     "mods-rdf": {
+        "alt_title": "MODS/RDF",
+        "alt_title_source": "loc.gov namespace document.",
         "download": "https://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl",
         "namespace": "http://www.loc.gov/mods/rdf/v1#",
         "prefix": "modsrdf",
+        "summary": "Classes and properties for describing bibliographic resources, such as titles, names and their roles, subjects, physical form, location and copies, parts, and related items.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/standards/mods/modsrdf/"
+        ],
         "tags": [
             "libraries"
-        ],
-        "title": "MODS/RDF",
-        "title_source": "loc.gov namespace document."
+        ]
     },
     "movable-property-arco-network": {
         "alternates": [
@@ -1660,20 +2516,29 @@
         "download": "https://w3id.org/arco/ontology/movable-property",
         "namespace": "https://w3id.org/arco/ontology/movable-property/",
         "prefix": "a-mp",
+        "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
     },
     "mpeg7": {
+        "alt_title": "MPEG-7 Ontology",
+        "alt_title_source": "Rhizomik; the namespace page carries no title.",
         "copy_from": "DBpedia Archivo",
         "download": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl",
         "namespace": "http://rhizomik.net/ontologies/2005/03/Mpeg7-2001.owl#",
         "prefix": "mpeg7",
+        "summary": "Classes and properties for describing multimedia content, such as audio and video segments, visual and audio features, creation and rights information, and user preferences.",
+        "summary_basis": [
+            "file",
+            "https://rhizomik.net/html/ontologies/mpeg7ontos/"
+        ],
         "tags": [
             "media"
-        ],
-        "title": "MPEG-7 Ontology",
-        "title_source": "Rhizomik; the namespace page carries no title."
+        ]
     },
     "mrel": {
         "copy_from": "LOV",
@@ -1681,6 +2546,10 @@
         "namespace": "http://id.loc.gov/vocabulary/relators/",
         "notes": "The live file fails the import check (literal with both a language and a datatype, which EasyRdf rejects); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "mrel",
+        "summary": "Properties for stating the relationship between a name and a bibliographic resource, such as author, illustrator, translator, composer, or place of publication.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries",
             "people"
@@ -1690,6 +2559,11 @@
         "download": "http://rdf.muninn-project.org/ontologies/military#",
         "namespace": "http://rdf.muninn-project.org/ontologies/military#",
         "prefix": "mil",
+        "summary": "Classes and properties for describing military people, organizations, and events, such as soldiers, ranks, units, service branches, uniforms, battles, and campaigns.",
+        "summary_basis": [
+            "file",
+            "http://rdf.muninn-project.org/"
+        ],
         "tags": [
             "humanities",
             "people"
@@ -1699,6 +2573,11 @@
         "download": "http://rdf.muninn-project.org/ontologies/organization#",
         "namespace": "http://rdf.muninn-project.org/ontologies/organization#",
         "prefix": "muninn-org",
+        "summary": "Classes and properties for describing people, organizations, and states, and the relationships between them, such as names, roles, ranks, leadership, command, and allegiance.",
+        "summary_basis": [
+            "file",
+            "http://rdf.muninn-project.org/"
+        ],
         "tags": [
             "people",
             "humanities"
@@ -1709,37 +2588,55 @@
         "download": "http://purl.oclc.org/NET/muo/muo-vocab.owl",
         "namespace": "http://purl.oclc.org/NET/muo/muo#",
         "prefix": "muo",
+        "summary": "Classes and properties for describing units of measurement, the physical qualities they measure, and measured values, including base and derived units and prefixes.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "science"
         ]
     },
     "mus": {
+        "alt_title": "DOREMUS Ontology",
+        "alt_title_source": "data.doremus.org/ontology/",
         "alternates": [
             "http://data.doremus.org/ontology#"
         ],
         "download": "https://raw.githubusercontent.com/DOREMUS-ANR/doremus-ontology/master/doremus.ttl",
         "namespace": "http://data.doremus.org/ontology#",
         "prefix": "mus",
+        "summary": "Classes and properties for describing musical works, their performances, recordings, and publications, including medium of performance, key, tempo, genre, catalog numbers, and publication statements.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "performing-arts",
             "libraries"
-        ],
-        "title": "DOREMUS Ontology",
-        "title_source": "data.doremus.org/ontology/"
+        ]
     },
     "musemeta": {
         "download": "http://metadataregistry.org/schema/show/id/63.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/musemeta/",
         "prefix": "musemeta",
+        "summary": "Properties for recording museum collection information, such as accessions, loans, exhibitions, condition, storage location, dimensions, creators, and the biological classification of specimens.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
     },
     "muto": {
+        "alt_title": "Modular and Unified Tagging Ontology (MUTO)",
+        "alt_title_source": "Expansion: file: The Modular and Unified Tagging Ontology (MUTO) is an ontology for tagging and folksonomies. Acronym: the file's title, \"MUTO Core Ontology\".",
         "copy_from": "LOV",
         "download": "http://purl.org/muto/core#",
         "namespace": "http://purl.org/muto/core#",
         "prefix": "muto",
+        "summary": "Classes and properties for describing how resources are tagged, including who tagged them, private and automatic tagging, tag order, and what each tag means.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -1748,6 +2645,10 @@
         "download": "http://metadataregistry.org/schema/show/id/64.rdf",
         "namespace": "http://nlsdata.info/dod/elements/",
         "prefix": "nlsdod",
+        "summary": "Classes and properties for describing items in a digital object database by title, description, people, places, dates or events, keywords, form or genre, and shelfmark.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -1756,11 +2657,17 @@
         "download": "http://rdf.muninn-project.org/ontologies/naval",
         "namespace": "http://rdf.muninn-project.org/ontologies/naval#",
         "prefix": "naval",
+        "summary": "Classes and properties for describing ships and their classes, types, hulls, identifying numbers, ports, owners, builders, dimensions, speed, and crew size.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "humanities"
         ]
     },
     "nfo": {
+        "alt_title": "Nepomuk File Ontology (NFO)",
+        "alt_title_source": "https://www.semanticdesktop.org/ontologies/2007/03/22/nfo/ (page title)",
         "alternates": [
             "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
         ],
@@ -1768,13 +2675,18 @@
         "download": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
         "namespace": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
         "prefix": "nfo",
+        "summary": "Classes and properties for describing files, folders, and other desktop resources, such as documents, images, audio, video, software, and archives, and their technical details.",
+        "summary_basis": [
+            "file",
+            "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/"
+        ],
         "tags": [
             "media"
-        ],
-        "title": "NEPOMUK File Ontology",
-        "title_source": "semanticdesktop.org"
+        ]
     },
     "nie": {
+        "alt_title": "Nepomuk Information Element Ontology (NIE)",
+        "alt_title_source": "https://www.semanticdesktop.org/ontologies/2007/01/19/nie/ (page title)",
         "alternates": [
             "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
         ],
@@ -1782,49 +2694,70 @@
         "download": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie",
         "namespace": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
         "prefix": "nie",
+        "summary": "Classes and properties for describing content on a computer desktop and the data objects that store it, such as titles, dates, sizes, languages, and licenses.",
+        "summary_basis": [
+            "file",
+            "http://www.semanticdesktop.org/ontologies/2007/01/19/nie/"
+        ],
         "tags": [
             "media"
-        ],
-        "title": "NEPOMUK Information Element Ontology",
-        "title_source": "semanticdesktop.org"
+        ]
     },
     "nlon": {
         "copy_from": "LOV",
         "download": "http://lod.nl.go.kr/ontology/",
         "namespace": "http://lod.nl.go.kr/ontology/",
         "prefix": "nlon",
+        "summary": "Classes and properties for describing library materials such as books, old books, scores, serials, and online materials, and their authors, subjects, classification numbers, and notes.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "nmo": {
+        "alt_title": "Nomisma Ontology",
+        "alt_title_source": "nomisma.org/ontology",
         "alternates": [
             "http://nomisma.org/ontology"
         ],
         "download": "http://nomisma.org/ontology.rdf",
         "namespace": "http://nomisma.org/ontology#",
         "prefix": "nmo",
+        "summary": "Classes and properties for describing coins, tokens, banknotes, and similar objects, including their mints, issuers, denominations, inscriptions, measurements, wear, and where they were found.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "humanities"
-        ],
-        "title": "Nomisma Ontology",
-        "title_source": "nomisma.org/ontology"
+        ]
     },
     "oa": {
         "download": "http://www.w3.org/ns/oa.ttl",
         "namespace": "http://www.w3.org/ns/oa#",
         "prefix": "oa",
+        "summary": "Classes and properties for describing annotations on web resources, including their content, targets, motivations, and the exact part of a resource being annotated.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "humanities",
             "aggregation"
         ]
     },
     "oad": {
+        "alt_title": "Ontology for archival description (OAD)",
+        "alt_title_source": "The file's title, \"Ontology for archival description\", with its acronym from the file's description.",
         "copy_from": "LOV",
         "download": "http://culturalis.org/oad#",
         "namespace": "http://culturalis.org/oad#",
         "prefix": "oad",
+        "summary": "Classes and properties for describing archival materials and finding aids, such as levels of description, creators, custody, extent, access conditions, and scope and content.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "archives"
         ]
@@ -1837,45 +2770,71 @@
         "download": "http://contextus.googlecode.com/svn/trunk/ontomedia/core/expression.owl",
         "namespace": "http://contextus.net/ontology/ontomedia/core/expression#",
         "prefix": "oc",
+        "summary": "Classes and properties for describing events within media, the items involved, the timelines they occur on, and how pieces of content relate to each other.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media",
             "humanities"
         ]
     },
     "odrl": {
+        "alt_title": "Open Digital Rights Language (ODRL)",
+        "alt_title_source": "Expansion: https://www.w3.org/TR/odrl-vocab/ Acronym: the file's title, \"ODRL Version 2.2\".",
         "download": "http://www.w3.org/ns/odrl/2/",
         "namespace": "http://www.w3.org/ns/odrl/2/",
         "prefix": "odrl",
+        "summary": "Classes and properties for expressing policies about the use of digital content, such as permissions, prohibitions, duties, constraints, and the parties and assets involved.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/odrl-vocab/"
+        ],
         "tags": [
             "rights"
         ]
     },
     "odrs": {
+        "alt_title": "Open Data Rights Statement Vocabulary (ODRS)",
+        "alt_title_source": "The file's title, \"Open Data Rights Statement Vocabulary\", with its acronym from http://schema.theodi.org/odrs/ (\"the ODRS vocabulary\").",
         "alternates": [
             "http://schema.theodi.org/odrs#"
         ],
         "download": "http://schema.theodi.org/odrs/index.ttl",
         "namespace": "http://schema.theodi.org/odrs#",
         "prefix": "odrs",
+        "summary": "Classes and properties for recording rights statements for published datasets, such as licenses, copyright and database right holders, and attribution requirements.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "rights"
         ]
     },
     "og": {
+        "alt_title": "Open Graph protocol",
+        "alt_title_source": "ogp.me; the namespace page returned 404.",
         "copy_from": "LOV",
         "download": "http://ogp.me/ns#",
         "namespace": "http://ogp.me/ns#",
         "prefix": "og",
+        "summary": "Properties for describing a web page as an object in a social graph, such as its title, type, image, web address, description, and site name.",
+        "summary_basis": [
+            "file",
+            "https://ogp.me/"
+        ],
         "tags": [
             "general"
-        ],
-        "title": "Open Graph protocol",
-        "title_source": "ogp.me; the namespace page returned 404."
+        ]
     },
     "oh": {
         "download": "http://semweb.mmlab.be/ns/oh#",
         "namespace": "http://semweb.mmlab.be/ns/oh#",
         "prefix": "oh",
+        "summary": "Classes and properties for linking something to its opening hours, described with calendars published on the web, and for marking which calendars give closing hours.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "time"
         ]
@@ -1889,6 +2848,10 @@
         "download": "http://smiy.sourceforge.net/olo/rdf/orderedlistontology.owl",
         "namespace": "http://purl.org/ontology/olo/core#",
         "prefix": "olo",
+        "summary": "Classes and properties for describing ordered lists, including their length, numbered slots, the item in each slot, and the next and previous slots.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -1900,6 +2863,10 @@
         "download": "https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf",
         "namespace": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
         "prefix": "om",
+        "summary": "Classes and properties for describing quantities and measurements in scientific research, including units, prefixes, scales, dimensions, and numerical values.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "science"
         ]
@@ -1908,6 +2875,11 @@
         "download": "http://www.w3.org/ns/lemon/ontolex#",
         "namespace": "http://www.w3.org/ns/lemon/ontolex#",
         "prefix": "ontolex",
+        "summary": "Classes and properties for describing words and multiword expressions, their written and spoken forms and senses, and how they relate to concepts in an ontology.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2016/05/ontolex/"
+        ],
         "tags": [
             "language"
         ]
@@ -1917,15 +2889,26 @@
         "download": "http://vocab.deri.ie/orca",
         "namespace": "http://vocab.deri.ie/orca#",
         "prefix": "orca",
+        "summary": "Classes and properties for recording how certain a piece of information is, the basis on which it is known, and its source.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "rights",
             "value-annotations"
         ]
     },
     "ore": {
+        "alt_title": "Open Archives Initiative Object Reuse and Exchange (OAI ORE)",
+        "alt_title_source": "Expansion: http://www.openarchives.org/ore/1.0/vocabulary Acronym: the file's title, \"The OAI ORE terms vocabulary\".",
         "download": "http://www.openarchives.org/ore/terms/",
         "namespace": "http://www.openarchives.org/ore/terms/",
         "prefix": "ore",
+        "summary": "Classes and properties for describing aggregations, groups of related web resources treated as one, and the resource maps that describe them.",
+        "summary_basis": [
+            "file",
+            "http://www.openarchives.org/ore/1.0/vocabulary"
+        ],
         "tags": [
             "aggregation"
         ]
@@ -1934,22 +2917,41 @@
         "download": "http://metadataregistry.org/schema/show/id/90.rdf",
         "namespace": "http://opaquenamespace.org/ns/",
         "prefix": "opaque",
+        "summary": "Properties for recording the contents, contributing institution, conversion specifications, exhibit, and set of items in a digital asset management system.",
+        "summary_basis": [
+            "file",
+            "http://opaquenamespace.org/"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "org": {
+        "alt_title": "The Organization Ontology",
+        "alt_title_source": "https://www.w3.org/TR/vocab-org/",
         "download": "http://www.w3.org/ns/org.ttl",
         "namespace": "http://www.w3.org/ns/org#",
         "prefix": "org",
+        "summary": "Classes and properties for describing organizations and their structure, including units, sites, posts, memberships and roles, reporting lines, and changes such as mergers.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/vocab-org/"
+        ],
         "tags": [
             "people"
         ]
     },
     "owl": {
+        "alt_title": "OWL 2 Web Ontology Language",
+        "alt_title_source": "https://www.w3.org/TR/owl2-overview/",
         "download": "http://www.w3.org/2002/07/owl",
         "namespace": "http://www.w3.org/2002/07/owl#",
         "prefix": "owl",
+        "summary": "Classes and properties of the OWL ontology language, for defining kinds of properties, class restrictions, equivalent and disjoint classes, and which individuals are the same.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/owl2-overview/"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -1963,6 +2965,10 @@
         "download": "http://vocab.org/participation/schema",
         "namespace": "http://vocab.org/participation/schema#",
         "prefix": "participation",
+        "summary": "Classes and properties for describing the roles people hold within groups, who holds each role, and the dates they began and stopped performing it.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -1971,40 +2977,68 @@
         "download": "http://purl.org/pav/",
         "namespace": "http://purl.org/pav/",
         "prefix": "pav",
+        "summary": "Properties for recording who authored, curated, or created a digital resource and when, where it was retrieved or imported from, and its earlier versions.",
+        "summary_basis": [
+            "file",
+            "https://pav-ontology.github.io/pav/"
+        ],
         "tags": [
             "rights",
             "value-annotations"
         ]
     },
     "pcdm": {
+        "alt_title": "Portland Common Data Model (PCDM)",
+        "alt_title_source": "The file's title, \"Portland Common Data Model\", with its acronym from https://github.com/duraspace/pcdm (the publisher's repository).",
         "alternates": [
             "https://raw.githubusercontent.com/duraspace/pcdm/master/models.rdf"
         ],
         "download": "http://pcdm.org/models",
         "namespace": "http://pcdm.org/models#",
         "prefix": "pcdm",
+        "summary": "Classes and properties for organizing digital repository content as collections, objects, and files, and for linking parts to wholes, such as pages to a book.",
+        "summary_basis": [
+            "file",
+            "https://pcdm.org/2016/04/18/models"
+        ],
         "tags": [
             "aggregation"
         ]
     },
     "pcdmuse": {
+        "alt_title": "Portland Common Data Model (PCDM): Use Extension",
+        "alt_title_source": "The file's title, \"Portland Common Data Model: Use Extension\", with its acronym from https://github.com/duraspace/pcdm (the publisher's repository).",
         "download": "http://pcdm.org/use",
         "namespace": "http://pcdm.org/use#",
         "prefix": "pcdmuse",
+        "summary": "Classes for the role a file plays for the repository object it is attached to, such as original, preservation, service, thumbnail, extracted text, or transcript.",
+        "summary_basis": [
+            "file",
+            "https://pcdm.org/2021/04/09/use"
+        ],
         "tags": [
             "aggregation",
             "media"
         ]
     },
     "pcdmworks": {
+        "alt_title": "Portland Common Data Model (PCDM): Works Extension",
+        "alt_title_source": "The file's title, \"Portland Common Data Model: Works Extension\", with its acronym from https://github.com/duraspace/pcdm (the publisher's repository).",
         "download": "http://pcdm.org/works",
         "namespace": "http://pcdm.org/works#",
         "prefix": "pcdmworks",
+        "summary": "Classes for describing works such as books or films, the sets of files that represent them, and their sections, such as chapters or scenes.",
+        "summary_basis": [
+            "file",
+            "https://pcdm.org/2021/04/09/works"
+        ],
         "tags": [
             "aggregation"
         ]
     },
     "pericles-born-digital-archives": {
+        "alt_title": "Born Digital Archives",
+        "alt_title_source": "The \"Name\" on its Ontology Design Patterns page, where the PERICLES project published it: http://web.archive.org/web/2019/http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives",
         "alternates": [
             "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP#"
         ],
@@ -2012,14 +3046,19 @@
         "download": "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl",
         "namespace": "http://mklab.iti.gr/pericles/BornDigitalArchives_ODP#",
         "prefix": "pericles-bda",
+        "summary": "Classes and properties for describing the units that make up born-digital archives, such as fonds, series, files, and items, how they nest, and their creators.",
+        "summary_basis": [
+            "file",
+            "http://web.archive.org/web/20191117080308/http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"
+        ],
         "tags": [
             "preservation",
             "archives"
-        ],
-        "title": "Born Digital Archives",
-        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Born Digital Archives), where the PERICLES project published it."
+        ]
     },
     "pericles-computer-system": {
+        "alt_title": "Computer System",
+        "alt_title_source": "The \"Name\" on its Ontology Design Patterns page, where the PERICLES project published it: http://web.archive.org/web/2019/http://ontologydesignpatterns.org/wiki/Submissions:Computer_System",
         "alternates": [
             "http://mklab.iti.gr/pericles/ComputerSystem_ODP#"
         ],
@@ -2027,13 +3066,18 @@
         "download": "http://mklab.iti.gr/pericles/ComputerSystem_ODP.owl",
         "namespace": "http://mklab.iti.gr/pericles/ComputerSystem_ODP#",
         "prefix": "pericles-cs",
+        "summary": "Classes and properties for describing computers and their hardware, software, operating systems, and drivers, and which components each one uses, requires, or is compatible with.",
+        "summary_basis": [
+            "file",
+            "http://web.archive.org/web/20191118003309/http://ontologydesignpatterns.org/wiki/Submissions:Computer_System"
+        ],
         "tags": [
             "preservation"
-        ],
-        "title": "Computer System",
-        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Computer System), where the PERICLES project published it."
+        ]
     },
     "pericles-digital-video": {
+        "alt_title": "Digital Video",
+        "alt_title_source": "The \"Name\" on its Ontology Design Patterns page, where the PERICLES project published it: http://web.archive.org/web/2019/http://ontologydesignpatterns.org/wiki/Submissions:DigitalVideo",
         "alternates": [
             "http://mklab.iti.gr/pericles/DigitalVideo_ODP#"
         ],
@@ -2041,14 +3085,19 @@
         "download": "http://mklab.iti.gr/pericles/DigitalVideo_ODP.owl",
         "namespace": "http://mklab.iti.gr/pericles/DigitalVideo_ODP#",
         "prefix": "pericles-dv",
+        "summary": "Classes and properties for describing digital video files, such as their containers, codecs, video, audio, and subtitle streams, frame rate, and aspect ratio.",
+        "summary_basis": [
+            "file",
+            "http://web.archive.org/web/20191117065220/http://ontologydesignpatterns.org/wiki/Submissions:DigitalVideo"
+        ],
         "tags": [
             "preservation",
             "media"
-        ],
-        "title": "DigitalVideo",
-        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:DigitalVideo), where the PERICLES project published it."
+        ]
     },
     "pericles-policy": {
+        "alt_title": "Policy",
+        "alt_title_source": "The \"Name\" on its Ontology Design Patterns page, where the PERICLES project published it: http://web.archive.org/web/2019/http://ontologydesignpatterns.org/wiki/Submissions:Policy",
         "alternates": [
             "http://mklab.iti.gr/pericles/Policy_ODP#"
         ],
@@ -2056,16 +3105,24 @@
         "download": "http://mklab.iti.gr/pericles/Policy_ODP.owl",
         "namespace": "http://mklab.iti.gr/pericles/Policy_ODP#",
         "prefix": "pericles-pol",
+        "summary": "Classes and properties for describing policies, such as their type, statements, version, requirement level, and implementation status, and the processes that implement or validate them.",
+        "summary_basis": [
+            "file",
+            "http://web.archive.org/web/20191117065252/http://ontologydesignpatterns.org/wiki/Submissions:Policy"
+        ],
         "tags": [
             "preservation"
-        ],
-        "title": "Policy",
-        "title_source": "Title of its page on the Ontology Design Patterns wiki (Submissions:Policy), where the PERICLES project published it."
+        ]
     },
     "persee": {
         "download": "http://data.persee.fr/ontology/persee-ontology/",
         "namespace": "http://data.persee.fr/ontology/persee-ontology/",
         "prefix": "persee",
+        "summary": "Classes for types of documents, such as articles, reviews, journal issues, monographs, maps, and parliamentary records, and properties for the dates and places of letters.",
+        "summary_basis": [
+            "file",
+            "http://data.persee.fr/ontology/persee-ontology/"
+        ],
         "tags": [
             "publishing",
             "humanities"
@@ -2076,6 +3133,10 @@
         "download": "http://www.w3.org/ns/person#",
         "namespace": "http://www.w3.org/ns/person#",
         "prefix": "person",
+        "summary": "Classes and properties for describing individual people, such as their birth name, patronymic name, places and countries of birth and death, citizenship, and residency.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -2085,6 +3146,10 @@
         "download": "http://purl.org/ontology/places#",
         "namespace": "http://purl.org/ontology/places#",
         "prefix": "place",
+        "summary": "Classes and properties for describing geographic places, such as countries, counties, towns, rivers, and mountains, which places lie within or overlap others, and their boundaries.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "places"
         ]
@@ -2094,6 +3159,10 @@
         "download": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
         "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
         "prefix": "personlink",
+        "summary": "Classes and properties for recording family relationships, such as parents, children, siblings, cousins, in-laws, spouses, and partners, with labels in English, French, and Arabic.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -2103,17 +3172,28 @@
         "download": "http://data.press.net/ontology/asset/",
         "namespace": "http://data.press.net/ontology/asset/",
         "prefix": "pna",
+        "summary": "Classes and properties for describing news assets, such as text, images, and video, with their titles, bylines, summaries, dates, embargoes, thumbnails, and transcripts.",
+        "summary_basis": [
+            "file",
+            "https://iptc.org/thirdparty/snap-ontology/"
+        ],
         "tags": [
             "media"
         ]
     },
     "pnv": {
+        "alt_title": "Person Name Vocabulary (PNV)",
+        "alt_title_source": "The file's title, \"Person Name Vocabulary\", with its acronym from the file's description.",
         "alternates": [
             "https://w3id.org/pnv"
         ],
         "download": "https://w3id.org/pnv#",
         "namespace": "https://w3id.org/pnv#",
         "prefix": "pnv",
+        "summary": "Classes and properties for recording people's names and their parts, such as given names, surnames and surname prefixes, patronyms, initials, and honorific suffixes.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
@@ -2123,6 +3203,10 @@
         "download": "http://purl.org/ontology/po/",
         "namespace": "http://purl.org/ontology/po/",
         "prefix": "po",
+        "summary": "Classes and properties for describing radio and television programs as brands, series, and episodes, with their versions, broadcasts, services, channels, genres, and credits.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -2131,6 +3215,11 @@
         "download": "https://id.loc.gov/ontologies/premis-3-0-0.rdf",
         "namespace": "http://www.loc.gov/premis/rdf/v3/",
         "prefix": "premis",
+        "summary": "Classes and properties for recording metadata that supports the long-term preservation of digital objects, covering events, agents, rights, storage, and integrity checks.",
+        "summary_basis": [
+            "file",
+            "https://www.loc.gov/standards/premis/"
+        ],
         "tags": [
             "preservation"
         ]
@@ -2139,6 +3228,11 @@
         "download": "http://purl.org/spar/pro/",
         "namespace": "http://purl.org/spar/pro/",
         "prefix": "pro",
+        "summary": "Classes and properties for recording who held a publishing role, such as author, editor, or reviewer, for which document or institution, and when.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/pro/current/pro.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -2147,6 +3241,11 @@
         "download": "http://www.w3.org/ns/prov-o",
         "namespace": "http://www.w3.org/ns/prov#",
         "prefix": "prov",
+        "summary": "Classes and properties for recording the provenance of things: the activities that produced or used them, who was responsible, and what they were derived from.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/prov-o/"
+        ],
         "tags": [
             "rights",
             "value-annotations"
@@ -2156,6 +3255,11 @@
         "download": "http://purl.org/spar/pso/",
         "namespace": "http://purl.org/spar/pso/",
         "prefix": "pso",
+        "summary": "Classes and properties for recording a document's publishing status over time, such as draft, under review, or published, and the events that change it.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/pso/current/pso.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -2164,11 +3268,18 @@
         "download": "http://purl.org/spar/pwo/",
         "namespace": "http://purl.org/spar/pwo/",
         "prefix": "pwo",
+        "summary": "Classes and properties for describing the steps in publishing a document, such as review and page design, their order, and what each needs and produces.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/pwo/current/pwo.html"
+        ],
         "tags": [
             "publishing"
         ]
     },
     "qudt": {
+        "alt_title": "Quantities, Units, Dimensions and Types (QUDT) Schema",
+        "alt_title_source": "https://qudt.org/doc/2023/07/DOC_SCHEMA-QUDT-v2.1.html",
         "alternates": [
             "http://qudt.org/schema/qudt/"
         ],
@@ -2177,6 +3288,11 @@
         "namespace": "http://qudt.org/schema/qudt/",
         "notes": "The live file fails the import check (Turtle parse error); the LOV copy imports. Serve the rescued copy until the live file imports again.",
         "prefix": "qudt",
+        "summary": "Classes and properties for describing quantities, units of measure, how to convert between units, dimensions, systems of units, and data types for storing values.",
+        "summary_basis": [
+            "file",
+            "https://qudt.org/doc/2023/07/DOC_SCHEMA-QUDT-v2.1.html"
+        ],
         "tags": [
             "science"
         ]
@@ -2185,6 +3301,10 @@
         "download": "https://w3id.org/arco/ontology/arco/",
         "namespace": "https://w3id.org/arco/ontology/arco/",
         "prefix": "r-arco",
+        "summary": "Classes and properties for describing cultural property, such as archaeological, artistic, photographic, musical, numismatic, and natural heritage, with categories, components, and catalog numbers.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums"
         ]
@@ -2194,6 +3314,10 @@
         "download": "https://collection.rcgs.jp/terms/",
         "namespace": "https://collection.rcgs.jp/terms/",
         "prefix": "rcgs",
+        "summary": "Classes and properties for describing video games, their versions and packages, related materials such as strategy guides and magazines, and game devices and platforms.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media",
             "libraries"
@@ -2203,6 +3327,11 @@
         "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml",
         "namespace": "http://rdaregistry.info/Elements/c/",
         "prefix": "rdac",
+        "summary": "Classes for the entities work, expression, manifestation, item, agent, collective agent, person, family, corporate body, nomen, place, and timespan.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2212,6 +3341,11 @@
         "download": "http://metadataregistry.org/schema/show/id/157.rdf",
         "namespace": "http://rdaregistry.info/Elements/n/",
         "prefix": "rdan",
+        "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/n.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2220,6 +3354,11 @@
         "download": "http://metadataregistry.org/schema/show/id/96.rdf",
         "namespace": "http://rdaregistry.info/Elements/rof/",
         "prefix": "rof",
+        "summary": "Classes and properties for categorizing the content and carriers of resources by attributes such as sensory mode, image movement, storage medium, and housing format.",
+        "summary_basis": [
+            "file",
+            "https://www.rdaregistry.info/rgROF/"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2229,6 +3368,11 @@
         "download": "http://metadataregistry.org/schema/show/id/135.rdf",
         "namespace": "http://rdaregistry.info/Elements/p/",
         "prefix": "rdap",
+        "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/p.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2238,14 +3382,26 @@
         "download": "http://metadataregistry.org/schema/show/id/156.rdf",
         "namespace": "http://rdaregistry.info/Elements/t/",
         "prefix": "rdat",
+        "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/t.xml"
+        ],
         "tags": [
             "libraries"
         ]
     },
     "rda-w": {
+        "alt_title": "RDA Work properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file drops \"RDA\", which the other RDA sets keep.",
         "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml",
         "namespace": "http://rdaregistry.info/Elements/w/",
         "prefix": "rdaw",
+        "summary": "Properties for recording the attributes and relationships of a work, including its creators, subjects, place of origin, and adaptations and other related works.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2255,6 +3411,11 @@
         "download": "http://metadataregistry.org/schema/show/id/151.rdf",
         "namespace": "http://rdaregistry.info/Elements/x/",
         "prefix": "rdax",
+        "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/x.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2264,6 +3425,11 @@
         "download": "http://rdaregistry.info/Elements/a/",
         "namespace": "http://rdaregistry.info/Elements/a/",
         "prefix": "rdaa",
+        "summary": "Properties for recording the attributes and relationships of persons, families, and corporate bodies, including names, dates, and roles such as composer or editor.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/a.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2273,6 +3439,11 @@
         "download": "http://rdaregistry.info/Elements/e/",
         "namespace": "http://rdaregistry.info/Elements/e/",
         "prefix": "rdae",
+        "summary": "Properties for recording the attributes and relationships of an expression of a work, including language, content type, translators, performers, and adaptations.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/e.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2282,6 +3453,11 @@
         "download": "http://rdaregistry.info/Elements/i/",
         "namespace": "http://rdaregistry.info/Elements/i/",
         "prefix": "rdai",
+        "summary": "Properties for recording the attributes and relationships of an item, including owners, donors, custodial history, annotators, and restrictions on access and use.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/i.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2291,14 +3467,11 @@
         "download": "http://rdaregistry.info/Elements/m/",
         "namespace": "http://rdaregistry.info/Elements/m/",
         "prefix": "rdam",
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rdarole": {
-        "download": "http://rdvocab.info/roles/",
-        "namespace": "http://rdvocab.info/roles/",
-        "prefix": "rdarole",
+        "summary": "Properties for recording the attributes and relationships of a manifestation, including titles, edition, publication details, carrier type, extent, and dimensions.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/m.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2308,6 +3481,11 @@
         "download": "http://rdaregistry.info/Elements/u/",
         "namespace": "http://rdaregistry.info/Elements/u/",
         "prefix": "rdau",
+        "summary": "Properties for recording the attributes and relationships of all entities without limiting each property to one entity, including titles, contributors, dates, and carrier types.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/u.xml"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2316,6 +3494,11 @@
         "download": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
         "namespace": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "prefix": "rdf",
+        "summary": "Classes and properties of RDF itself, for stating what class a resource belongs to, describing statements, and building lists and containers of items.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/rdf11-concepts/"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -2324,6 +3507,11 @@
         "download": "http://www.w3.org/2000/01/rdf-schema",
         "namespace": "http://www.w3.org/2000/01/rdf-schema#",
         "prefix": "rdfs",
+        "summary": "Classes and properties for describing RDF vocabularies, such as subclasses, subproperties, what a property applies to and takes as values, and labels and comments.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/rdf-schema/"
+        ],
         "tags": [
             "linked-data"
         ]
@@ -2332,6 +3520,10 @@
         "download": "http://metadataregistry.org/schema/show/id/84.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/geobibrs/",
         "prefix": "geobibrs",
+        "summary": "Properties for recording where resources are located in the Museo Reina Sofía Library, by type of place, floor, level, and coordinates.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2344,6 +3536,11 @@
         "download": "http://vocab.org/relationship/.rdf",
         "namespace": "http://purl.org/vocab/relationship/",
         "prefix": "rel",
+        "summary": "Classes and properties for describing how people are related to or know one another, such as family members, friends, colleagues, employers, mentors, and enemies.",
+        "summary_basis": [
+            "file",
+            "https://vocab.org/relationship/"
+        ],
         "tags": [
             "people"
         ]
@@ -2353,14 +3550,25 @@
         "download": "http://purl.org/stuff/rev#",
         "namespace": "http://purl.org/stuff/rev#",
         "prefix": "rev",
+        "summary": "Classes and properties for describing reviews of works, with their reviewer, text, and rating, plus comments on reviews and votes on their usefulness.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
     },
     "rico": {
+        "alt_title": "Records in Contexts Ontology (ICA RiC-O)",
+        "alt_title_source": "file: shortened from its title, \"International Council on Archives Records in Contexts Ontology (ICA RiC-O) version 1.1\", by cutting the publisher's name and the version.",
         "download": "https://www.ica.org/standards/RiC/ontology",
         "namespace": "https://www.ica.org/standards/RiC/ontology#",
         "prefix": "rico",
+        "summary": "Classes and properties for describing archival records and record sets, their carriers, and the people, groups, activities, places, dates, and rules that give them context.",
+        "summary_basis": [
+            "file",
+            "https://www.ica.org/standards/RiC/ontology"
+        ],
         "tags": [
             "archives"
         ]
@@ -2372,6 +3580,10 @@
         "download": "https://w3id.org/roar#",
         "namespace": "https://w3id.org/roar#",
         "prefix": "roar",
+        "summary": "Classes and properties for recording people and places mentioned in archival documents, and for combining several mentions into a single reconstructed person or place.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "archives",
             "people"
@@ -2384,54 +3596,84 @@
         "download": "http://www.w3.org/TR/vocab-regorg/",
         "namespace": "http://www.w3.org/ns/regorg#",
         "prefix": "rov",
+        "summary": "Classes and properties for describing legally registered organizations, such as companies, with their legal name, company type, status, activity, and registration.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/vocab-regorg/"
+        ],
         "tags": [
             "people"
         ]
     },
     "rss": {
+        "alt_title": "RDF Site Summary (RSS) 1.0",
+        "alt_title_source": "web.resource.org/rss/1.0/; LOV had \"Rich Site Summary\".",
         "alternates": [
             "http://purl.org/rss/1.0/"
         ],
         "download": "http://web.resource.org/rss/1.0/schema.rdf",
         "namespace": "http://purl.org/rss/1.0/",
         "prefix": "rss",
+        "summary": "Classes and properties for describing RSS channels: a channel with its title, link, and description, the items it lists, an image, and a text input.",
+        "summary_basis": [
+            "file",
+            "https://web.resource.org/rss/1.0/spec"
+        ],
         "tags": [
             "aggregation"
-        ],
-        "title": "RDF Site Summary (RSS) 1.0",
-        "title_source": "web.resource.org/rss/1.0/; LOV had \"Rich Site Summary\"."
+        ]
     },
     "san-lod": {
         "download": "http://dati.san.beniculturali.it/SAN/",
         "namespace": "http://dati.san.beniculturali.it/SAN/",
         "prefix": "san-lod",
+        "summary": "Classes and properties for describing archival holdings, the people, families, and organizations that created or keep them, their finding aids, and related places and dates.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "archives"
         ]
     },
     "saws": {
+        "alt_title": "Sharing Ancient Wisdoms (SAWS) ontology",
+        "alt_title_source": "https://kar.kent.ac.uk/42859/",
         "copy_from": "LOV",
         "download": "http://purl.org/saws/ontology#",
         "namespace": "http://purl.org/saws/ontology#",
         "prefix": "saws",
+        "summary": "Classes and properties for describing medieval manuscript collections of wise sayings, their scribes and editions, and how their texts were copied, translated, and passed on.",
+        "summary_basis": [
+            "file",
+            "https://kar.kent.ac.uk/42859/"
+        ],
         "tags": [
             "humanities"
-        ],
-        "title": "Sharing Ancient Wisdoms Ontology"
+        ]
     },
     "schema": {
+        "alt_title": "Schema.org",
+        "alt_title_source": "https://schema.org/",
         "download": "https://schema.org/version/latest/schemaorg-current-https.ttl",
         "namespace": "https://schema.org/",
         "prefix": "schema",
+        "summary": "Classes and properties for describing things in structured data on web pages, such as creative works, events, organizations, businesses, places, products, and actions.",
+        "summary_basis": [
+            "file",
+            "https://schema.org/"
+        ],
         "tags": [
             "general"
-        ],
-        "title": "Schema.org"
+        ]
     },
     "scholarly-data-model": {
         "download": "http://metadataregistry.org/schema/show/id/147.rdf",
         "namespace": "http://standard.k-history.kr/resource/",
         "prefix": "khist",
+        "summary": "Properties for describing scholarly works and researchers, such as authors, editors, affiliations, citations, datasets used, the degree of a thesis, and conferences attended.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing"
         ]
@@ -2440,6 +3682,11 @@
         "download": "http://purl.org/spar/scoro/",
         "namespace": "http://purl.org/spar/scoro/",
         "prefix": "scoro",
+        "summary": "Classes and properties for describing the contributions people make and the roles they hold in scholarly research and publications, including the effort involved.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/scoro/current/scoro.html"
+        ],
         "tags": [
             "publishing"
         ]
@@ -2448,79 +3695,124 @@
         "download": "http://www.sealitproject.eu/ontology/",
         "namespace": "http://www.sealitproject.eu/ontology/",
         "prefix": "sealit",
+        "summary": "Classes and properties for describing maritime history: ships and their registration, ownership, construction, and voyages, along with cargo, crews, employment, and wages.",
+        "summary_basis": [
+            "file",
+            "http://www.sealitproject.eu/ontology/"
+        ],
         "tags": [
             "humanities"
         ]
     },
     "sem": {
+        "alt_title": "Simple Event Model (SEM)",
+        "alt_title_source": "Name used by its authors; the namespace page was not reachable.",
         "copy_from": "LOV",
         "download": "http://semanticweb.cs.vu.nl/2009/11/sem/",
         "namespace": "http://semanticweb.cs.vu.nl/2009/11/sem/",
         "prefix": "sem",
+        "summary": "Classes and properties for describing events and the actors, places, and times involved in them, including roles, types, and uncertain time intervals.",
+        "summary_basis": [
+            "file",
+            "http://semanticweb.cs.vu.nl/2009/11/sem/"
+        ],
         "tags": [
             "time",
             "value-annotations"
-        ],
-        "title": "Simple Event Model (SEM)",
-        "title_source": "Name used by its authors; the namespace page was not reachable."
+        ]
     },
     "shoah": {
+        "alt_title": "Shoah Vocabulary Specification",
+        "alt_title_source": "Not confirmed with the publisher: the file has no title and the publisher's page was unreachable or carries none. Taken from LOV.",
         "copy_from": "LOV",
         "download": "http://dati.cdec.it/lod/shoah/",
         "namespace": "http://dati.cdec.it/lod/shoah/",
         "prefix": "shoah",
+        "summary": "Classes and properties for recording the persecution and deportation of Jews in Italy during the Holocaust: arrests, detention, convoys, camps, liberation, deaths, and family ties.",
+        "summary_basis": [
+            "file",
+            "https://dati.cdec.it/lod/shoah/reference-document.html"
+        ],
         "tags": [
             "humanities",
             "people"
-        ],
-        "title": "Shoah Vocabulary Specification",
-        "title_source": "Not confirmed with the publisher: the file has no title and the publisher's page was unreachable or carries none. Taken from LOV."
+        ]
     },
     "sioc": {
+        "alt_title": "Semantically-Interlinked Online Communities (SIOC)",
+        "alt_title_source": "Expansion: file: SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. Acronym: the file's title, \"SIOC Core Ontology Namespace\".",
         "download": "http://rdfs.org/sioc/ns",
         "namespace": "http://rdfs.org/sioc/ns#",
         "prefix": "sioc",
+        "summary": "Classes and properties for describing online communities such as blogs, message boards, and mailing lists: their sites, forums, user accounts, posts, replies, and topics.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "people"
         ]
     },
     "skos": {
+        "alt_title": "Simple Knowledge Organization System (SKOS)",
+        "alt_title_source": "Expansion: https://www.w3.org/TR/skos-reference/ Acronym: the file's title, \"SKOS Vocabulary\".",
         "download": "http://www.w3.org/2004/02/skos/core.rdf",
         "namespace": "http://www.w3.org/2004/02/skos/core#",
         "prefix": "skos",
+        "summary": "Classes and properties for describing thesauri, classification schemes, subject heading lists, and taxonomies: their concepts, labels, notes, hierarchies, and mappings to other schemes.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/skos-reference/"
+        ],
         "tags": [
             "linked-data"
         ]
     },
     "skosxl": {
+        "alt_title": "SKOS eXtension for Labels (SKOS-XL)",
+        "alt_title_source": "https://www.w3.org/TR/skos-reference/",
         "download": "http://www.w3.org/2008/05/skos-xl#",
         "namespace": "http://www.w3.org/2008/05/skos-xl#",
         "prefix": "skosxl",
+        "summary": "Classes and properties for treating the labels of concepts in thesauri and similar schemes as resources, so they can be described and linked.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/skos-reference/"
+        ],
         "tags": [
             "linked-data"
         ]
     },
     "soch": {
+        "alt_title": "K-samsök",
+        "alt_title_source": "Swedish National Heritage Board name; the namespace page carries no title.",
         "download": "http://kulturarvsdata.se/ksamsok",
         "namespace": "http://kulturarvsdata.se/ksamsok#",
         "prefix": "soch",
+        "summary": "Classes and properties for describing cultural heritage items from Swedish institutions, with names, materials, inscriptions, measurements, places, periods, images, licenses, and people's roles.",
+        "summary_basis": [
+            "file",
+            "https://www.raa.se/in-english/digital-services/about-soch/"
+        ],
         "tags": [
             "museums",
             "aggregation"
-        ],
-        "title": "K-samsök",
-        "title_source": "Swedish National Heritage Board name; the namespace page carries no title."
+        ]
     },
     "symbolic-music": {
+        "alt_title": "Symbolic Music Ontology",
+        "alt_title_source": "Name used by its author; the namespace page returned 403.",
         "copy_from": "DBpedia Archivo",
         "download": "http://purl.org/ontology/symbolic-music/",
         "namespace": "http://purl.org/ontology/symbolic-music/",
         "prefix": "so",
+        "summary": "Classes and properties for describing notated music, such as notes, rests, durations, pitches, bars, ties, slurs, voices, and motifs on a score's timeline.",
+        "summary_basis": [
+            "file",
+            "https://github.com/moustaki/motools"
+        ],
         "tags": [
             "performing-arts"
-        ],
-        "title": "Symbolic Music Ontology",
-        "title_source": "Name used by its author; the namespace page returned 403."
+        ]
     },
     "taxon-name-and-rank": {
         "alternates": [
@@ -2529,24 +3821,38 @@
         "download": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
         "namespace": "http://lod.taxonconcept.org/ontology/taxnomen/index.owl#",
         "prefix": "txn_nomen",
+        "summary": "Classes and properties for recording names of taxa, such as scientific, common, and synonym names with their authorship, and each taxon's rank and higher groups.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
     },
     "theatre": {
+        "alt_title": "Theatre Ontology",
+        "alt_title_source": "semweb.lukeblaney.co.uk/theatre",
         "download": "http://purl.org/theatre#",
         "namespace": "http://purl.org/theatre#",
         "prefix": "theatre",
+        "summary": "Classes and properties for describing theater productions, performances, seasons, venues, and the people and companies involved, along with rehearsals, premieres, and accessibility provisions.",
+        "summary_basis": [
+            "file",
+            "http://semweb.lukeblaney.co.uk/theatre"
+        ],
         "tags": [
             "performing-arts"
-        ],
-        "title": "Theatre Ontology",
-        "title_source": "semweb.lukeblaney.co.uk/theatre"
+        ]
     },
     "thematic-indexes": {
         "download": "http://metadataregistry.org/schema/show/id/31.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/ThematicIndexes/",
         "prefix": "thematic",
+        "summary": "Properties for describing the thematic indexes of music used in library authority files: composer, full and brief citations, and the abbreviation used in access points.",
+        "summary_basis": [
+            "file",
+            "http://metadataregistry.org/schema/show/id/31.html"
+        ],
         "tags": [
             "performing-arts",
             "libraries"
@@ -2556,6 +3862,11 @@
         "download": "https://www.w3.org/2006/time.ttl",
         "namespace": "http://www.w3.org/2006/time#",
         "prefix": "time",
+        "summary": "Classes and properties for describing instants and intervals of time, their order and overlap, their durations, and their dates and times in a calendar.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/owl-time/"
+        ],
         "tags": [
             "time"
         ]
@@ -2565,14 +3876,25 @@
         "download": "http://purl.org/NET/c4dm/timeline.owl#",
         "namespace": "http://purl.org/NET/c4dm/timeline.owl#",
         "prefix": "tl",
+        "summary": "Classes and properties for placing instants and intervals on timelines, such as those behind signals, videos, and scores, and mapping between timelines.",
+        "summary_basis": [
+            "file",
+            "http://motools.sourceforge.net/timeline/timeline.html"
+        ],
         "tags": [
             "time"
         ]
     },
     "tvc": {
+        "alt_title": "The Time-indexed Value in Context pattern (TVC)",
+        "alt_title_source": "The file's title, \"The Time-indexed Value in Context pattern\", with its acronym from the file's description.",
         "download": "https://sparontologies.github.io/tvc/current/tvc.xml",
         "namespace": "http://www.essepuntato.it/2012/04/tvc/",
         "prefix": "tvc",
+        "summary": "Classes and properties for recording that someone or something holds a value, such as a role or status, within a time and context.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "time",
             "value-annotations"
@@ -2582,23 +3904,38 @@
         "download": "http://lod.taxonconcept.org/ontology/txn.owl#",
         "namespace": "http://lod.taxonconcept.org/ontology/txn.owl#",
         "prefix": "txn",
+        "summary": "Classes and properties for describing species concepts, which can carry several names, and linking them to specimens, occurrences, identifications, images, habitats, and web pages.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
     },
     "un": {
+        "alt_title": "Uncertainty Ontology",
+        "alt_title_source": "https://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/",
         "download": "https://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/Uncertainty.owl",
         "namespace": "http://www.owl-ontologies.com/Ontology1181490123.owl#",
         "prefix": "un",
+        "summary": "Classes and properties for classifying the uncertainty in a statement by type, nature, whether it is objective or subjective, and the mathematical model used.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2005/Incubator/urw3/XGR-urw3-20080331/"
+        ],
         "tags": [
             "value-annotations"
-        ],
-        "title": "Uncertainty Ontology"
+        ]
     },
     "unimarc-b-elements-0xx": {
         "download": "http://metadataregistry.org/schema/show/id/126.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/0XX/",
         "prefix": "unimarcb0xx",
+        "summary": "Properties for the UNIMARC bibliographic fields 0XX, which hold standard numbers, national bibliography and legal deposit numbers, and other identifiers.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2607,6 +3944,11 @@
         "download": "http://metadataregistry.org/schema/show/id/127.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/1XX/",
         "prefix": "unimarcb1xx",
+        "summary": "Properties for the UNIMARC bibliographic fields 1XX, which hold coded data on language, country, and characteristics of maps, recordings, films, graphics, and other materials.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2615,6 +3957,11 @@
         "download": "http://metadataregistry.org/schema/show/id/102.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/2XX/",
         "prefix": "unimarcb2xx",
+        "summary": "Properties for the UNIMARC bibliographic fields 2XX, which hold the title and statement of responsibility, edition, publication details, physical description, and series.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2623,6 +3970,11 @@
         "download": "http://metadataregistry.org/schema/show/id/103.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/3XX/",
         "prefix": "unimarcb3xx",
+        "summary": "Properties for the UNIMARC bibliographic fields 3XX, which hold notes, such as contents, summaries, dissertations, provenance, awards, and system requirements.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2631,6 +3983,11 @@
         "download": "http://metadataregistry.org/schema/show/id/104.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/41X/",
         "prefix": "unimarcb41x",
+        "summary": "Properties for the UNIMARC bibliographic fields 41X, which link a resource to its series or subseries and link excerpts or offprints with their sources.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2639,6 +3996,11 @@
         "download": "http://metadataregistry.org/schema/show/id/105.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/42X/",
         "prefix": "unimarcb42x",
+        "summary": "Properties for the UNIMARC bibliographic fields 42X, which link supplements with their parent resources and link resources issued together or where one updates the other.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2647,6 +4009,11 @@
         "download": "http://metadataregistry.org/schema/show/id/106.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/43X/",
         "prefix": "unimarcb43x",
+        "summary": "Properties for the UNIMARC bibliographic fields 43X, which link a resource to earlier resources that it continues, supersedes, absorbed, or separated from.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2655,6 +4022,11 @@
         "download": "http://metadataregistry.org/schema/show/id/107.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/44X/",
         "prefix": "unimarcb44x",
+        "summary": "Properties for the UNIMARC bibliographic fields 44X, which link a resource to later resources that continue, supersede, or absorb it, or that it split into.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2663,6 +4035,11 @@
         "download": "http://metadataregistry.org/schema/show/id/108.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/45X/",
         "prefix": "unimarcb45x",
+        "summary": "Properties for the UNIMARC bibliographic fields 45X, which link a resource to other editions, translations, and reproductions, or to the original it translates or reproduces.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2671,6 +4048,11 @@
         "download": "http://metadataregistry.org/schema/show/id/109.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/46X/",
         "prefix": "unimarcb46x",
+        "summary": "Properties for the UNIMARC bibliographic fields 46X, which link a resource to related resources at the set, subset, piece, and piece-analytic levels.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2679,6 +4061,11 @@
         "download": "http://metadataregistry.org/schema/show/id/110.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/47X/",
         "prefix": "unimarcb47x",
+        "summary": "Properties for the UNIMARC bibliographic fields 47X, which link a review to the item it reviews.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2687,6 +4074,11 @@
         "download": "http://metadataregistry.org/schema/show/id/111.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/48X/",
         "prefix": "unimarcb48x",
+        "summary": "Properties for the UNIMARC bibliographic fields 48X, which link a resource to others bound in the same volume and to other related works.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2695,6 +4087,11 @@
         "download": "http://metadataregistry.org/schema/show/id/113.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/60X/",
         "prefix": "unimarcb60x",
+        "summary": "Properties for the UNIMARC bibliographic fields 60X, which hold names, titles, topics, and places used as subjects, and form or genre headings.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2703,6 +4100,11 @@
         "download": "http://metadataregistry.org/schema/show/id/114.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/61X/",
         "prefix": "unimarcb61x",
+        "summary": "Properties for the UNIMARC bibliographic fields 61X, which hold uncontrolled subject terms, subject categories, and trademarks and hierarchical geographical names used as subjects.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2711,6 +4113,11 @@
         "download": "http://metadataregistry.org/schema/show/id/115.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/62X/",
         "prefix": "unimarcb62x",
+        "summary": "Properties for the UNIMARC bibliographic fields 62X, which hold the places and dates of publication, performance, and provenance.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2719,6 +4126,11 @@
         "download": "http://metadataregistry.org/schema/show/id/116.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/66X/",
         "prefix": "unimarcb66x",
+        "summary": "Properties for the UNIMARC bibliographic fields 66X, which hold geographic area codes and time period codes.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2727,6 +4139,11 @@
         "download": "http://metadataregistry.org/schema/show/id/117.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/67X/",
         "prefix": "unimarcb67x",
+        "summary": "Properties for the UNIMARC bibliographic fields 67X, which hold Universal Decimal Classification and Dewey Decimal Classification numbers and subject index strings.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2735,6 +4152,11 @@
         "download": "http://metadataregistry.org/schema/show/id/118.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/68X/",
         "prefix": "unimarcb68x",
+        "summary": "Properties for the UNIMARC bibliographic fields 68X, which hold Library of Congress Classification numbers and class numbers from other schemes.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2743,6 +4165,11 @@
         "download": "http://metadataregistry.org/schema/show/id/119.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/7XX/",
         "prefix": "unimarcb7xx",
+        "summary": "Properties for the UNIMARC bibliographic fields 7XX, which hold names of persons, corporate bodies, and families responsible for a resource or tied to its ownership.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2751,6 +4178,11 @@
         "download": "http://metadataregistry.org/schema/show/id/121.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/801/",
         "prefix": "unimarcb801",
+        "summary": "Properties for the UNIMARC bibliographic field 801, which identifies the agencies that created, transcribed, modified, or issued a catalog record, with dates and cataloging rules.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2759,6 +4191,11 @@
         "download": "http://metadataregistry.org/schema/show/id/122.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/802/",
         "prefix": "unimarcb802",
+        "summary": "A property for the UNIMARC bibliographic field 802, which holds the code of an International Standard Serial Number center.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2767,6 +4204,11 @@
         "download": "http://metadataregistry.org/schema/show/id/123.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/830/",
         "prefix": "unimarcb830",
+        "summary": "A property for the UNIMARC bibliographic field 830, which holds a general note from the cataloger.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2775,6 +4217,11 @@
         "download": "http://metadataregistry.org/schema/show/id/124.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/850/",
         "prefix": "unimarcb850",
+        "summary": "A property for the UNIMARC bibliographic field 850, which holds the code of an institution where the resource is held.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2783,6 +4230,11 @@
         "download": "http://metadataregistry.org/schema/show/id/120.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/856/",
         "prefix": "unimarcb856",
+        "summary": "Properties for the UNIMARC bibliographic field 856, which holds the address, host, access method, and login details for reaching an electronic resource.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2791,6 +4243,11 @@
         "download": "http://metadataregistry.org/schema/show/id/125.rdf",
         "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/886/",
         "prefix": "unimarcb886",
+        "summary": "Properties for the UNIMARC bibliographic field 886, which holds fields not converted from another record format, with their original tags, indicators, and subfields.",
+        "summary_basis": [
+            "file",
+            "https://www.ifla.org/wp-content/uploads/2019/05/assets/uca/unimarc_updates/BIBLIOGRAPHIC/u-b_fieldlist_update.pdf"
+        ],
         "tags": [
             "libraries"
         ]
@@ -2799,6 +4256,11 @@
         "download": "http://www.w3.org/ns/lemon/vartrans",
         "namespace": "http://www.w3.org/ns/lemon/vartrans#",
         "prefix": "vartrans",
+        "summary": "Classes and properties for linking entries in a lexicon, and their senses, that are variants or translations of each other, within or across languages.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2016/05/ontolex/"
+        ],
         "tags": [
             "language"
         ]
@@ -2807,6 +4269,11 @@
         "download": "http://www.w3.org/2006/vcard/ns#",
         "namespace": "http://www.w3.org/2006/vcard/ns#",
         "prefix": "vcard",
+        "summary": "Classes and properties for describing people, organizations, groups, and locations with contact details, such as names, addresses, phone numbers, and email, and their relationships.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/vcard-rdf/"
+        ],
         "tags": [
             "people"
         ]
@@ -2815,6 +4282,11 @@
         "download": "http://metadataregistry.org/schema/show/id/249.rdf",
         "namespace": "http://metadataregistry.org/uri/schema/vgms-vn/",
         "prefix": "vgms-vn",
+        "summary": "Classes and properties that extend the Video Game Metadata Schema for visual novels, covering gameplay and narrative genres such as dating simulator, noir, and parody.",
+        "summary_basis": [
+            "file",
+            "https://github.com/uwgamergroup/video-game-metadata-schema"
+        ],
         "tags": [
             "media"
         ]
@@ -2823,6 +4295,10 @@
         "download": "http://purl.org/net/VideoGameOntology#",
         "namespace": "http://purl.org/net/VideoGameOntology#",
         "prefix": "vgo",
+        "summary": "Classes and properties for describing video games and their play: genres, players, characters, items, achievements, leaderboards, sessions, and in-game events and purchases.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -2832,6 +4308,11 @@
         "download": "http://viaf.org/",
         "namespace": "http://viaf.org/#",
         "prefix": "viaf",
+        "summary": "Classes and properties for describing name authority records, the clusters that group them, their established and cross-reference headings, and the agencies they come from.",
+        "summary_basis": [
+            "file",
+            "https://www.oclc.org/en/viaf.html"
+        ],
         "tags": [
             "libraries",
             "people"
@@ -2842,6 +4323,10 @@
         "download": "http://purl.org/ontology/video/",
         "namespace": "http://purl.org/ontology/video/",
         "prefix": "video",
+        "summary": "Classes and properties for describing videos and films: cast and crew, genres, releases, recording equipment, technical features, scenes, and actions shown on screen.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -2851,6 +4336,10 @@
         "download": "http://w3id.org/vir#",
         "namespace": "http://w3id.org/vir#",
         "prefix": "vir",
+        "summary": "Properties for recording interpretations of the visual elements in artworks, such as characters portrayed, attributes, personifications, symbolic meanings, and visual prototypes.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "museums",
             "humanities"
@@ -2860,6 +4349,10 @@
         "download": "http://vivoweb.org/ontology/core#",
         "namespace": "http://vivoweb.org/ontology/core#",
         "prefix": "vivo",
+        "summary": "Classes and properties for describing researchers and their positions, organizations, publications, grants, awards, degrees, courses, advising, and presentations.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "publishing",
             "people"
@@ -2870,48 +4363,72 @@
         "download": "http://rdfs.org/ns/void#",
         "namespace": "http://rdfs.org/ns/void#",
         "prefix": "void",
+        "summary": "Classes and properties for describing datasets published as linked data: how to access them, their size and subsets, their vocabularies, and links between them.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/TR/void/"
+        ],
         "tags": [
             "linked-data"
         ]
     },
     "vra": {
+        "alt_title": "VRA Ontology",
+        "alt_title_source": "Heading of the ontology page (s3.amazonaws.com/VRA/ontology.html).",
         "download": "http://purl.org/vra/",
         "format": "rdfa",
         "namespace": "http://purl.org/vra/",
         "notes": "Published only as RDFa in the HTML page at the namespace. Stored as N-Triples converted from that page, since an HTML file under modules/ would be served as a page on the Omeka site. The GitHub project (mixterj/VRA-RDF-Project) has a converter and samples but no ontology file.",
         "prefix": "vra",
+        "summary": "Classes and properties for describing works and images of them, with their creators, dates, places, materials, techniques, measurements, inscriptions, and relations to other works.",
+        "summary_basis": [
+            "file",
+            "https://s3.amazonaws.com/VRA/ontology.html"
+        ],
         "tags": [
             "museums"
-        ],
-        "title": "VRA Ontology",
-        "title_source": "Heading of the ontology page (s3.amazonaws.com/VRA/ontology.html)."
+        ]
     },
     "wgs84": {
         "download": "http://www.w3.org/2003/01/geo/wgs84_pos",
         "namespace": "http://www.w3.org/2003/01/geo/wgs84_pos#",
         "prefix": "wgs84",
+        "summary": "Classes and properties for recording the latitude, longitude, and altitude of points and other things that have a position.",
+        "summary_basis": [
+            "file",
+            "https://www.w3.org/2003/01/geo/"
+        ],
         "tags": [
             "places"
         ]
     },
     "wittgenstein": {
+        "alt_title": "Wittgenstein Ontology",
+        "alt_title_source": "Name used by the Wittgenstein Archives at the University of Bergen; the namespace page returned 404.",
         "alternates": [
             "http://discovery-project.eu/ontologies/wittgensteinsource/"
         ],
         "download": "http://wab.uib.no/cost-a32_rdf/wittgenstein_model.owl",
         "namespace": "http://discovery-project.eu/ontologies/wittgensteinsource/",
         "prefix": "wittgenstein",
+        "summary": "Classes and properties for describing Wittgenstein's manuscripts, typescripts, remarks, letters, and published works, with their parts, dates, and references, and the philosophical subjects they discuss.",
+        "summary_basis": [
+            "file",
+            "http://wab.uib.no/wab_philospace.page"
+        ],
         "tags": [
             "humanities"
-        ],
-        "title": "Wittgenstein Ontology",
-        "title_source": "Name used by the Wittgenstein Archives at the University of Bergen; the namespace page returned 404."
+        ]
     },
     "wo": {
         "copy_from": "LOV",
         "download": "http://purl.org/ontology/wo/",
         "namespace": "http://purl.org/ontology/wo/",
         "prefix": "wo",
+        "summary": "Classes and properties for describing species and other taxa, with their names and ranks, habitats, adaptations, behavior, and conservation status.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]
@@ -2920,6 +4437,10 @@
         "download": "http://purl.org/xtypes/",
         "namespace": "http://purl.org/xtypes/",
         "prefix": "xtypes",
+        "summary": "Classes for stating the file format and character encoding of a document at a web address, with properties for file extensions and media types.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "media"
         ]
@@ -2928,12 +4449,18 @@
         "download": "http://zbw.eu/namespaces/zbw-extensions/",
         "namespace": "http://zbw.eu/namespaces/zbw-extensions/",
         "prefix": "zbwext",
+        "summary": "Classes and properties for describing thesaurus descriptors and folders about persons, companies, subjects, and wares, with document counts, viewer links, and identifiers.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "libraries",
             "linked-data"
         ]
     },
     "zoology": {
+        "alt_title": "Biological Taxonomy Vocabulary (Zoology)",
+        "alt_title_source": "file: shortened from its title, \"Biological Taxonomy Vocabulary 0.2 (Zoology)\", by cutting the version.",
         "alternates": [
             "http://purl.org/NET/biol/zoology"
         ],
@@ -2941,6 +4468,10 @@
         "download": "http://purl.org/NET/biol/zoology#",
         "namespace": "http://purl.org/NET/biol/zoology#",
         "prefix": "zoology",
+        "summary": "Classes and properties for recording a biological classification, with ranks such as domain, kingdom, genus, species, variety, breed, and strain.",
+        "summary_basis": [
+            "file"
+        ],
         "tags": [
             "natural-history"
         ]

@@ -151,8 +151,11 @@ class ImportCheck
             'title' => $this->safely(function () use ($graph, $best) {
                 return $this->describe($graph, $best, 'dcterms:title|dc11:title|rdfs:label', false);
             }),
+            // A note only where there's no description: some element sets
+            // describe themselves in skos:note.
             'description' => $this->safely(function () use ($graph, $best) {
-                return $this->describe($graph, $best, 'dcterms:description|dc11:description|rdfs:comment|skos:definition', true);
+                return $this->describe($graph, $best, 'dcterms:description|dc11:description|rdfs:comment|skos:definition', true)
+                    ?? $this->describe($graph, $best, 'skos:note', true);
             }),
             'license' => $this->safely(function () use ($graph) {
                 return $this->license($graph);
@@ -327,12 +330,40 @@ class ImportCheck
     }
 
     /**
+     * The record most of the vocabulary's terms name with rdfs:isDefinedBy,
+     * or null if they name none.
+     */
+    protected function definingRecord(RdfGraph $graph, $namespace)
+    {
+        $counts = [];
+        foreach ($graph->resources() as $resource) {
+            if ($resource->isBNode() || strpos($resource->getUri(), $namespace) !== 0) {
+                continue;
+            }
+            foreach ($resource->allResources('rdfs:isDefinedBy') as $record) {
+                if (!$record->isBNode()) {
+                    $counts[$record->getUri()] = ($counts[$record->getUri()] ?? 0) + 1;
+                }
+            }
+        }
+        if (!$counts) {
+            return null;
+        }
+        arsort($counts);
+        return array_key_first($counts);
+    }
+
+    /**
      * The vocabulary's own title or description, as its publisher wrote it:
-     * from the ontology record, or else from the namespace resource. English
-     * if the file offers it, otherwise the first value in any language.
+     * from the ontology record, or else from the namespace resource, or else
+     * from the record its terms name with rdfs:isDefinedBy, as element sets
+     * from the Open Metadata Registry do. English if the file offers it,
+     * otherwise the first value in any language. A description the file
+     * gives as several values, such as a description and a changelog, keeps
+     * them all, each as its own paragraph.
      *
-     * @param bool $paragraphs Keep paragraph breaks (blank lines); otherwise
-     *   the text is one line
+     * @param bool $paragraphs Keep paragraph breaks (blank lines), and all of
+     *   the values; otherwise the text is one line, from one value
      */
     protected function describe(RdfGraph $graph, $namespace, $properties, $paragraphs)
     {
@@ -340,24 +371,67 @@ class ImportCheck
         if ($namespace !== '') {
             $subjects[] = $graph->resource($namespace);
             $subjects[] = $graph->resource(rtrim($namespace, '#/'));
+            $defining = $this->definingRecord($graph, $namespace);
+            if ($defining !== null) {
+                $subjects[] = $graph->resource($defining);
+            }
         }
         foreach ($subjects as $subject) {
-            $value = $subject->get($properties, 'literal', 'en') ?: $subject->get($properties, 'literal');
-            // Some files use XHTML literals, and some Markdown; keep the text.
-            $text = PlainText::from($value);
-            if (!mb_check_encoding($text, 'UTF-8')) {
-                continue;
+            $values = $paragraphs
+                ? self::allValues($subject, $properties)
+                : array_filter([$subject->get($properties, 'literal', 'en') ?: $subject->get($properties, 'literal')]);
+            $blocks = [];
+            foreach ($values as $value) {
+                // Some files use XHTML literals, and some Markdown; keep the text.
+                $text = PlainText::from($value);
+                if (!mb_check_encoding($text, 'UTF-8')) {
+                    continue;
+                }
+                $text = self::markdownToText($text);
+                $valueBlocks = $paragraphs ? preg_split('/\n\s*\n/u', $text) : [$text];
+                $blocks = array_merge($blocks, array_filter(array_map(function ($block) {
+                    return trim(preg_replace('/\s+/u', ' ', $block));
+                }, $valueBlocks), 'strlen'));
             }
-            $text = self::markdownToText($text);
-            $blocks = $paragraphs ? preg_split('/\n\s*\n/u', $text) : [$text];
-            $blocks = array_filter(array_map(function ($block) {
-                return trim(preg_replace('/\s+/u', ' ', $block));
-            }, $blocks), 'strlen');
             if ($blocks) {
                 return implode("\n\n", $blocks);
             }
         }
         return null;
+    }
+
+    /**
+     * All the values of a description, in the file's order, from the
+     * property a lookup of one value would choose: the first of the
+     * properties with an English value, taking its values in English and
+     * those with no language; or else the first with any value, taking its
+     * values in that value's language.
+     *
+     * @param \EasyRdf\Resource $subject
+     * @param string $properties Alternatives, as "a|b"
+     * @return \EasyRdf\Literal[]
+     */
+    protected static function allValues($subject, $properties)
+    {
+        foreach ([true, false] as $english) {
+            foreach (explode('|', $properties) as $property) {
+                $values = $subject->all($property, 'literal');
+                if (!$values) {
+                    continue;
+                }
+                $languages = array_map(function ($value) {
+                    return (string) $value->getLang();
+                }, $values);
+                if ($english && !in_array('en', $languages, true)) {
+                    continue;
+                }
+                $keep = $english ? ['en', ''] : [$languages[0]];
+                return array_values(array_filter($values, function ($value) use ($keep) {
+                    return in_array((string) $value->getLang(), $keep, true);
+                }));
+            }
+        }
+        return [];
     }
 
     /**
