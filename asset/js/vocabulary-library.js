@@ -252,8 +252,9 @@
     /**
      * The details sidebar's term filter: narrows the class and property lists
      * to terms whose label or prefixed name contains the text, as the table's
-     * search compares text, and opens the lists while it has any. It starts
-     * with the text from a term search's "All matching terms", if any.
+     * search compares text, and opens the lists while it has any. Emptied, it
+     * closes the lists it opened, leaving any the admin opened. It starts with
+     * the text from a term search's "All matching terms", if any.
      */
     const initTermFilter = function (sidebar) {
         const input = sidebar.querySelector('.vocabulary-library-term-filter input');
@@ -265,11 +266,28 @@
             group: group,
             toggle: group.querySelector(':scope > a'),
             heading: group.querySelector('h4'),
+            openedByFilter: false,
             values: [...group.querySelectorAll('.value')].map(value => ({
                 value: value,
                 text: fold(value.querySelector('.vocabulary-library-term-label').textContent + ' ' + value.querySelector('.field-term').textContent),
             })),
         }));
+        // Opens or closes a list as core's toggle does, without the events
+        // core fires for the admin's own clicks.
+        const setOpen = function (group, open) {
+            group.toggle.classList.replace(open ? 'expand' : 'collapse', open ? 'collapse' : 'expand');
+            group.toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            group.openedByFilter = open;
+        };
+        // A list the admin opens or closes is theirs, so emptying the filter
+        // leaves it as it is.
+        groups.forEach(function (group) {
+            if (group.toggle) {
+                $(group.toggle).on('o:expanded o:collapsed', function () {
+                    group.openedByFilter = false;
+                });
+            }
+        });
         const filter = function () {
             const query = fold(input.value.trim());
             let total = 0;
@@ -284,8 +302,9 @@
                 group.group.hidden = query !== '' && count === 0;
                 group.heading.textContent = group.heading.dataset.label + ' (' + count + ')';
                 if (query && count && group.toggle.classList.contains('expand')) {
-                    group.toggle.classList.replace('expand', 'collapse');
-                    group.toggle.setAttribute('aria-expanded', 'true');
+                    setOpen(group, true);
+                } else if (!query && group.openedByFilter) {
+                    setOpen(group, false);
                 }
                 total += count;
             });
