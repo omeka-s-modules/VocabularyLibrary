@@ -13,6 +13,15 @@ $file = basename($entry['file']);
 // what the file lacks says so. Only "Vocabulary in Omeka", which reports the
 // site's state rather than the file, depends on it.
 $notProvided = $translate('Not provided by the publisher');
+// The label languages, named as the browse page's language filter names
+// them: in the admin's language where PHP's intl extension can, otherwise
+// by code.
+$languageNames = [];
+foreach ($languages as $code) {
+    $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $this->lang()) : $code;
+    $languageNames[] = ($name === '' || $name === $code) ? $code : $name;
+}
+natcasesort($languageNames);
 ?>
 <h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 
@@ -71,6 +80,15 @@ $notProvided = $translate('Not provided by the publisher');
     <h4><?php echo $translate('Tags'); ?></h4>
     <?php foreach ($tags as $tag => $label): ?>
     <div class="value"><?php echo $this->hyperlink($translate($label), $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
+    <?php endforeach; ?>
+</div>
+<div class="meta-group">
+    <h4><?php echo $translate('Label languages'); ?></h4>
+    <?php if (!$languageNames): ?>
+    <div class="value"><?php echo $translate('Not stated by the publisher'); ?></div>
+    <?php endif; ?>
+    <?php foreach ($languageNames as $name): ?>
+    <div class="value"><?php echo $escape($name); ?></div>
     <?php endforeach; ?>
 </div>
 <div class="meta-group">

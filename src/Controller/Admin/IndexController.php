@@ -141,6 +141,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
+        $view->setVariable('languages', $this->labelLanguages($entry));
         $installedVocabularies = $this->installedVocabularies();
         $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
         $view->setVariable('prefixTakenBy', $this->installedPrefixes($installedVocabularies)[mb_strtolower($entry['prefix'])] ?? null);
