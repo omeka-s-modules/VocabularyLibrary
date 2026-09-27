@@ -71,6 +71,18 @@
     color: #676767;
 }
 
+/* For screen readers only. Core's .sr-only only moves text off the left of
+   an element that isn't positioned, so it would still take up space. */
+.vocabulary-library-announcement {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 /* The title cell: the name, the summary, and any term matches. The name opens
    the details sidebar, so the cell has no actions of its own. */
 .vocabulary-library-title {

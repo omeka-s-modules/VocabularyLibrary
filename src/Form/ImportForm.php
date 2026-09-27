@@ -11,9 +11,9 @@ use Omeka\Entity\Vocabulary;
  * the library; the admin chooses the prefix, label and comment, and the
  * language when the file has several.
  *
- * Get it with $this->getForm(ImportForm::class, ['languages' => […]]), so
- * core adds its CSRF element. Labels use core's import form wording, which
- * is already translated.
+ * Get it with $this->getForm(ImportForm::class, ['languages' => [tag =>
+ * option text, …]]), so core adds its CSRF element. Labels use core's import
+ * form wording, which is already translated.
  */
 class ImportForm extends Form
 {
@@ -60,7 +60,7 @@ class ImportForm extends Form
                 'options' => [
                     'label' => 'Preferred language', // @translate
                     'info' => 'The language of labels and comments. This vocabulary has them in several languages.', // @translate
-                    'value_options' => array_combine($languages, $languages),
+                    'value_options' => $languages,
                 ],
                 'attributes' => [
                     'id' => 'lang',

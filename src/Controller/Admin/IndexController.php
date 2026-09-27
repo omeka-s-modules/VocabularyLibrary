@@ -169,7 +169,7 @@ class IndexController extends AbstractActionController
             return $view;
         }
 
-        $form = $this->getForm(ImportForm::class, ['languages' => $entry['languages']]);
+        $form = $this->getForm(ImportForm::class, ['languages' => $this->languageOptions($entry)]);
         // The label and comment the vocabulary gets in Omeka: the name shown in
         // the library, and the library's summary.
         $form->setData([
@@ -295,6 +295,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('diff', $diff);
         $view->setVariable('missing', $missing);
         $view->setVariable('lang', $lang);
+        $view->setVariable('languageOptions', $this->languageOptions($entry));
         $view->setVariable('form', $form);
         return $view;
     }
@@ -458,6 +459,26 @@ class IndexController extends AbstractActionController
         }
         uasort($names, 'strnatcasecmp');
         return $names;
+    }
+
+    /**
+     * A menu of a vocabulary's language tags, each named as the filter and
+     * sidebar name it, with the tag itself, which a regional one needs and
+     * core's forms use: "German (de)", "English (en-US)". A language that
+     * can't be named is its tag alone. In alphabetical order of the text.
+     *
+     * @return array tag => option text
+     */
+    protected function languageOptions(array $entry)
+    {
+        $names = $this->languageNames($this->labelLanguages($entry));
+        $options = [];
+        foreach ($entry['languages'] as $tag) {
+            $primary = strtolower(explode('-', $tag)[0]);
+            $options[$tag] = $names[$primary] === $primary ? $tag : sprintf('%s (%s)', $names[$primary], $tag);
+        }
+        uasort($options, 'strnatcasecmp');
+        return $options;
     }
 
     /**

@@ -1,6 +1,8 @@
 (function ($) {
 
     const TERM_SEARCH_DELAY = 400;
+    // Long enough for a term search's results to change the count first.
+    const ANNOUNCE_DELAY = 1000;
 
     /**
      * Shows a tab of the details sidebar and its section, as core's resource
@@ -45,6 +47,8 @@
         const clearFiltersButton = empty.find('.vocabulary-library-clear-filters');
         const filterNames = ['tag', 'lang', 'show'];
         const shown = $('.vocabulary-library-shown');
+        const countText = () => $('.vocabulary-library-count').text().trim().replace(/\s+/g, ' ');
+        const announcement = document.querySelector('.vocabulary-library-announcement');
         const termItem = document.getElementById('vocabulary-library-term-item').content.firstElementChild;
         const allItem = document.getElementById('vocabulary-library-term-all').content.firstElementChild;
         // A matching term's text, as Omeka writes terms.
@@ -59,6 +63,20 @@
         let termQuery = null;
         let termRequest = null;
         let termTimer = null;
+        let announced = null;
+        let announceTimer = null;
+
+        // Reads the count out once the admin pauses, and only if it changed,
+        // so a screen reader doesn't speak it at every keystroke.
+        const announce = function () {
+            clearTimeout(announceTimer);
+            announceTimer = setTimeout(function () {
+                if (countText() !== announced) {
+                    announced = countText();
+                    announcement.textContent = announced;
+                }
+            }, ANNOUNCE_DELAY);
+        };
 
         const apply = function () {
             const query = fold(form.q.value.trim());
@@ -117,6 +135,7 @@
             searchTermsButton.prop('hidden', form.terms.checked || form.q.value.trim().length < termQueryMin);
             clearFiltersButton.prop('hidden', filterNames.every(name => form[name].value === ''));
             saveState();
+            announce();
         };
 
         const sort = function () {
@@ -134,6 +153,9 @@
             saveState();
         };
 
+        /**
+         * @return {jqXHR|null} The term search request, if one is made
+         */
         const searchTerms = function () {
             const query = form.q.value.trim();
             if (termRequest) {
@@ -143,7 +165,7 @@
             if (!form.terms.checked || query.length < termQueryMin) {
                 termMatches = null;
                 apply();
-                return;
+                return null;
             }
             termRequest = $.get(filters.data('term-search-url'), {q: query})
                 .done(function (data) {
@@ -151,6 +173,7 @@
                     termQuery = query.toLowerCase();
                     apply();
                 });
+            return termRequest;
         };
 
         // Keep the search, filters and sort in the URL, so a view can be
@@ -246,7 +269,13 @@
         // The template has already set the controls from the URL.
         sort();
         apply();
-        searchTerms();
+        // The page is read as a whole on load, count included, so nothing is
+        // announced until the admin changes something, not even the count a
+        // term search in the URL settles on.
+        $.when(searchTerms()).always(function () {
+            clearTimeout(announceTimer);
+            announced = countText();
+        });
     };
 
     /**

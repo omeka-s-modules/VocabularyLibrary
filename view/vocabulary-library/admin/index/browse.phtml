@@ -5,7 +5,6 @@ $this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css'
 $this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
 $this->htmlElement('body')->appendAttribute('class', 'vocabs browse vocabulary-library');
 $total = count($rows);
-$aboutUrl = 'https://github.com/omeka-s-modules/VocabularyLibrary#about-the-collection';
 // Tags in alphabetical order of their translated labels.
 $tagLabels = array_map($translate, $tags);
 uasort($tagLabels, 'strnatcasecmp');
@@ -23,10 +22,6 @@ $selected = function ($name, $value) use ($query) {
 ?>
 
 <?php echo $this->pageTitle($translate('Vocabulary Library')); ?>
-
-<div id="page-actions">
-    <?php echo $this->hyperlink($translate('About this collection'), $aboutUrl, ['class' => 'button', 'target' => '_blank']); ?>
-</div>
 
 <form id="vocabulary-library-filters" class="browse-controls" role="search"
     data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>"
@@ -74,9 +69,11 @@ $selected = function ($name, $value) use ($query) {
     </div>
 </form>
 
-<p class="vocabulary-library-count" aria-live="polite" aria-atomic="true">
+<p class="vocabulary-library-count">
     <?php echo sprintf($escape($translate('Showing %1$s of %2$s')), '<span class="vocabulary-library-shown">' . $total . '</span>', $total); ?>
 </p>
+<?php // The count read out once the admin pauses, rather than at every keystroke; filled in by the script. ?>
+<p class="vocabulary-library-announcement" aria-live="polite" aria-atomic="true"></p>
 
 <table id="vocabulary-library-table" class="tablesaw" data-tablesaw-mode="stack">
     <thead>

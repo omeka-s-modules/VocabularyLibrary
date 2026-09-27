@@ -70,8 +70,8 @@ array_unshift($sections, [
         <div class="inputs">
             <select name="lang" id="vocabulary-library-lang">
                 <option value=""<?php echo $lang === null ? ' selected' : ''; ?>><?php echo $translate('First available'); ?></option>
-                <?php foreach ($entry['languages'] as $code): ?>
-                <option value="<?php echo $escape($code); ?>"<?php echo $lang === $code ? ' selected' : ''; ?>><?php echo $escape($code); ?></option>
+                <?php foreach ($languageOptions as $code => $label): ?>
+                <option value="<?php echo $escape($code); ?>"<?php echo $lang === $code ? ' selected' : ''; ?>><?php echo $escape($label); ?></option>
                 <?php endforeach; ?>
             </select>
             <button type="submit"><?php echo $translate('Compare'); ?></button>
