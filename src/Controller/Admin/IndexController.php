@@ -11,6 +11,7 @@ use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
 use Omeka\Stdlib\RdfImporter;
 use VocabularyLibrary\Form\ImportForm;
+use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\PlainText;
 
 class IndexController extends AbstractActionController
@@ -104,6 +105,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('tags', $this->tags);
         $view->setVariable('tagCounts', $tagCounts);
         $view->setVariable('languageCounts', $languageCounts);
+        $view->setVariable('languageNames', $this->languageNames(array_keys($languageCounts)));
         // Only single values: a filter given as a list isn't one this page sets.
         $view->setVariable('query', array_filter($this->params()->fromQuery(), 'is_string'));
         $view->setVariable('termQueryMin', self::TERM_QUERY_MIN);
@@ -141,7 +143,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
-        $view->setVariable('languages', $this->labelLanguages($entry));
+        $view->setVariable('languageNames', $this->languageNames($this->labelLanguages($entry)));
         $installedVocabularies = $this->installedVocabularies();
         $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
         $view->setVariable('prefixTakenBy', $this->installedPrefixes($installedVocabularies)[mb_strtolower($entry['prefix'])] ?? null);
@@ -436,6 +438,26 @@ class IndexController extends AbstractActionController
     }
 
     /**
+     * Language codes named in the admin's language, where PHP's intl
+     * extension can name them, otherwise by code, in alphabetical order of
+     * their names.
+     *
+     * @param string[] $codes
+     * @return array code => name
+     */
+    protected function languageNames(array $codes)
+    {
+        $locale = $this->viewHelpers()->get('lang')();
+        $names = [];
+        foreach ($codes as $code) {
+            $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $locale) : $code;
+            $names[$code] = ($name === '' || $name === $code) ? $code : $name;
+        }
+        uasort($names, 'strnatcasecmp');
+        return $names;
+    }
+
+    /**
      * The language to import labels and comments in: English if the file has
      * it, else a regional English such as en-US, else its only or first
      * language, else none.
@@ -527,7 +549,7 @@ class IndexController extends AbstractActionController
                 $match = $vocabulary;
                 break;
             }
-            if (!$match && $this->normalizedNamespace($vocabulary->namespaceUri()) === $this->normalizedNamespace($namespace)) {
+            if (!$match && NamespaceUri::normalized($vocabulary->namespaceUri()) === NamespaceUri::normalized($namespace)) {
                 $match = $vocabulary;
             }
         }
@@ -561,15 +583,5 @@ class IndexController extends AbstractActionController
     protected function words($text)
     {
         return mb_strtolower(preg_replace('/(?<=\p{Ll})(?=\p{Lu})|(?<=\p{Lu})(?=\p{Lu}\p{Ll})/u', ' ', $text));
-    }
-
-    /**
-     * A namespace without its scheme, case or trailing #//, so a vocabulary
-     * installed as http://schema.org/ matches the library's
-     * https://schema.org/.
-     */
-    protected function normalizedNamespace($namespace)
-    {
-        return rtrim(preg_replace('#^https?://#i', '', mb_strtolower((string) $namespace)), '#/');
     }
 }

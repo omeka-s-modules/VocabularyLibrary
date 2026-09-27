@@ -35,6 +35,7 @@
 require __DIR__ . '/bootstrap.php';
 
 use Omeka\Entity\Vocabulary;
+use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
@@ -123,13 +124,13 @@ $namespace = $result['namespace'];
 
 $sources = $repo->sources();
 [$excluded, $excludedNamespaces] = $repo->excludedIndex();
-if ($record = $excludedNamespaces[Repo::normalizedNamespace($namespace)] ?? null) {
+if ($record = $excludedNamespaces[NamespaceUri::normalized($namespace)] ?? null) {
     fail("The namespace $namespace is in scripts/excluded.json as \"{$record['slug']}\": {$record['excluded']}\nRemove it from there first to add it again.");
 }
 // The namespace the build found to import can differ from the curated one
 // only in its #// or http/https form, which the comparison ignores.
 foreach ($sources as $slug => $entry) {
-    if (Repo::normalizedNamespace($entry['namespace']) === Repo::normalizedNamespace($namespace)) {
+    if (NamespaceUri::normalized($entry['namespace']) === NamespaceUri::normalized($namespace)) {
         fail("The namespace $namespace is already in the collection as \"$slug\" ({$entry['namespace']}).");
     }
 }

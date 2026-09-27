@@ -13,6 +13,7 @@ if (!is_file("$omekaDir/vendor/autoload.php")) {
 require "$omekaDir/vendor/autoload.php";
 // The module's src/ is autoloaded only inside Omeka.
 require dirname(__DIR__) . '/src/PlainText.php';
+require dirname(__DIR__) . '/src/NamespaceUri.php';
 
 // A script that stops on an error says why, whatever the CLI's display
 // settings: the message alone for the errors the scripts raise on purpose,

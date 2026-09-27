@@ -17,14 +17,6 @@ $sortBy = [
     'classes' => $translate('Classes'),
     'properties' => $translate('Properties'),
 ];
-// Label languages by name in the admin's language, where PHP's intl
-// extension can name them; otherwise by code.
-$languageNames = [];
-foreach (array_keys($languageCounts) as $code) {
-    $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $this->lang()) : $code;
-    $languageNames[$code] = ($name === '' || $name === $code) ? $code : $name;
-}
-uasort($languageNames, 'strnatcasecmp');
 $selected = function ($name, $value) use ($query) {
     return ($query[$name] ?? null) === $value ? ' selected' : '';
 };

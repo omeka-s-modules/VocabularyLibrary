@@ -14,15 +14,6 @@ $file = basename($entry['file']);
 // marks "None". Only "Vocabulary in Omeka", which reports the site's state
 // rather than the file, depends on it.
 $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
-// The label languages, named as the browse page's language filter names
-// them: in the admin's language where PHP's intl extension can, otherwise
-// by code.
-$languageNames = [];
-foreach ($languages as $code) {
-    $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $this->lang()) : $code;
-    $languageNames[] = ($name === '' || $name === $code) ? $code : $name;
-}
-natcasesort($languageNames);
 ?>
 <h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 

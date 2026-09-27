@@ -1,6 +1,8 @@
 <?php
 namespace VocabularyLibrary\Scripts;
 
+use VocabularyLibrary\NamespaceUri;
+
 /**
  * Reads and writes the collection's files.
  *
@@ -39,15 +41,6 @@ class Repo
     public function __construct($root)
     {
         $this->root = rtrim($root, '/');
-    }
-
-    /**
-     * A namespace without its scheme, case or trailing #//, for spotting the
-     * same namespace written two ways.
-     */
-    public static function normalizedNamespace($namespace)
-    {
-        return rtrim(preg_replace('#^https?://#i', '', mb_strtolower((string) $namespace)), '#/');
     }
 
     public function path($relative = '')
@@ -102,7 +95,7 @@ class Repo
         $bySlug = $byNamespace = [];
         foreach ($this->excluded() as $record) {
             $bySlug[$record['slug']] = $record;
-            $byNamespace[self::normalizedNamespace($record['namespace'])] = $record;
+            $byNamespace[NamespaceUri::normalized($record['namespace'])] = $record;
         }
         return [$bySlug, $byNamespace];
     }

@@ -27,6 +27,7 @@ require __DIR__ . '/bootstrap.php';
 use Omeka\Entity\Vocabulary;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
+use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\PlainText;
 use VocabularyLibrary\Scripts\Repo;
 
@@ -127,7 +128,7 @@ foreach ($sources as $slug => $entry) {
             $problems[] = "$slug: the vocabulary has properties, but the summary doesn't mention them";
         }
     }
-    $normalized = Repo::normalizedNamespace($result['namespace']);
+    $normalized = NamespaceUri::normalized($result['namespace']);
     $namespaces[$normalized][] = $slug;
     if (isset($excludedNamespaces[$normalized])) {
         $problems[] = "$slug: the namespace is in scripts/excluded.json as \"{$excludedNamespaces[$normalized]['slug']}\"";
