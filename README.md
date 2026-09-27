@@ -1,24 +1,48 @@
 # Vocabulary Library
 
-An [Omeka S](https://omeka.org/s/) module with a library of RDF vocabularies
-tested to import correctly.
+An [Omeka S](https://omeka.org/s/) module for finding and importing RDF
+vocabularies.
 
-Importing a vocabulary into Omeka S requires its file and its exact namespace
-URI. A namespace that is slightly off, such as one missing a trailing `#`,
-imports nothing. The library provides both for each vocabulary, tested with
-the Omeka S importer.
+Omeka describes resources with RDF vocabularies, and they are getting harder
+to find and to rely on. Publishers move or take down their files, and the
+registries that have kept vocabularies findable are no longer reliably
+maintained. The Vocabulary Library bundles more than 300 vocabularies with
+the module, each tested with the Omeka S importer, so they stay available to
+Omeka sites whatever happens to their publishers' servers.
 
-## Using the library
+The vocabularies range from general ones such as Dublin Core and Schema.org
+to those for museums, libraries, archives, the humanities, and the sciences.
+Administrators can browse them by tag, search them and their classes and
+properties, read a plain summary of each, and import one without looking for
+its file or namespace. A vocabulary already in Omeka can be compared with the
+library's file and updated.
+
+# For administrators
 
 The library is under **Modules > Vocabulary Library** in the admin menu, and
-**Vocabularies > Import new vocabulary** links to it. Global Administrators
-and Supervisors can use it.
+core's **Import new vocabulary** page links to it. Global Administrators and
+Supervisors can use it.
 
-Filter the list by tag or label language, or search it, optionally including
-class and property names. Select a vocabulary's title to see its details and
-download its file. Select **Import** to import it. The import form sets the
-prefix, label, and comment, and the **Preferred language** when the file has
-more than one language. The prefix cannot be changed after import.
+## Finding a vocabulary
+
+Filter the list by tag, by the languages of its labels, or by whether its
+namespace is already in use in Omeka. Search matches names, titles,
+summaries, prefixes, and namespaces. Check **Also search class and property
+names** to find vocabularies by their terms: each row then lists its best
+matches, and **All matching terms** opens the vocabulary's details filtered to
+them.
+
+Select a vocabulary's name to see its details: its status in Omeka, the
+publisher's title and description, the library's summary, its namespace,
+prefix, tags, label languages, and license, a link to download its file, and
+its classes and properties, which can be filtered.
+
+## Importing
+
+Select **Import** to open the import form. It sets the prefix, label, and
+comment, and the **Preferred language** when the file has more than one
+language. It warns when the prefix is already used in Omeka or reserved. The
+prefix cannot be changed after import.
 
 **Namespace in use** means that Omeka already has a vocabulary with this
 namespace, so this one cannot be imported. The vocabulary in Omeka may be a
@@ -27,9 +51,9 @@ Omeka has the namespace in another form, such as `http://schema.org/` for
 `https://schema.org/`. That vocabulary cannot be imported or updated from the
 library.
 
-### Comparing and updating
+## Comparing and updating
 
-For a vocabulary marked Namespace in use, **Compare and update** in its
+For a vocabulary whose namespace is in use, **Compare and update** in its
 details shows how the vocabulary in Omeka differs from the library's file, and
 **Update** applies the differences. Updating adds classes and properties and
 changes the labels and comments of existing ones, but never removes a class or
@@ -51,6 +75,8 @@ language a vocabulary was imported in, so each vocabulary is compared on its
 own. The release notes for each version of the module list the vocabularies
 whose files changed.
 
+## Server memory
+
 The largest files need more memory than PHP's default limit of 128 MB: RDA
 Agent properties needs about 160 MB to compare. The library raises the limit
 to 256 MB where the server allows it. If the details, import, or comparison
@@ -66,68 +92,69 @@ subject headings are not included, because Omeka imports classes and
 properties, not concepts.
 
 Titles and descriptions are the publisher's, taken from the file. The library
-adds two things of its own, shown separately from them:
+adds a few things of its own, shown separately from them:
 
-- **An alternative title**, where the file has no title, none in English, or
-  one that hides or leaves out the name the vocabulary is known by. It is
-  another official name for the vocabulary, quoted from the file or the
-  publisher's documentation, and the file's title is still shown. It keeps
-  or adds the vocabulary's acronym, as in "Simple Knowledge Organization
-  System (SKOS)", but only one the file or the publisher uses. One that
-  shortens a long title only cuts from it: a publisher's name, a version
-  that distinguishes nothing, or a descriptive subtitle after a name that
-  stands on its own.
-- **A one-sentence summary** of every vocabulary, saying what its classes and
-  properties describe. The summaries were drafted with AI from each
-  vocabulary's file and the publisher's documentation, checked claim by
-  claim against them, and reviewed.
+- **A name**, where the file's title is missing, not in English, long, or
+  leaves out the name the vocabulary is known by. It is quoted from the file
+  or the publisher's documentation, sometimes shortened or with the
+  vocabulary's acronym, and the file's title is still shown in the details.
+- **A one-sentence summary** of what each vocabulary's classes and properties
+  describe. The summaries were drafted with AI from each vocabulary's file and
+  the publisher's documentation, checked claim by claim against them, and
+  reviewed.
+- **Tags**, one to three for each vocabulary, for filtering by subject or
+  use.
 
-Vocabulary files move, disappear, or stop importing as publishers change their
-sites. The files are bundled with the module, so importing a vocabulary does
-not depend on its publisher's server. About a third of the files are archived
-copies, used because the publisher's file cannot be downloaded or does not
-import. They come from
+More than a quarter of the files are archived copies, used because the
+publisher's own file cannot be downloaded or does not import. They come from
 [Linked Open Vocabularies (LOV)](https://lov.linkeddata.es/),
 [DBpedia Archivo](https://archivo.dbpedia.org/), the
 [Open Metadata Registry](http://metadataregistry.org/), and
 [Ontology Design Patterns](http://ontologydesignpatterns.org/).
 
-### Licensing and takedown
-
-Files are redistributed without changes to their content, as LOV and Archivo
-do. Darwin Core and Audiovisual Core are published one term at a time, so
-their files combine the publisher's description of each term, unchanged. Most
-files state no license. Vocabularies whose license forbids redistribution
-are not included.
-
-If a vocabulary you publish is in the library and you want it removed, open an
-issue in this repository or contact the Omeka team through the
-[forum](https://forum.omeka.org/). It will be removed in the next release.
-
-### Requesting a vocabulary
+## Requesting a vocabulary
 
 Open an issue in this repository with the vocabulary's name and the address
 of its RDF file.
 
-## Maintaining the collection
+# For vocabulary publishers
 
-The scripts in `scripts/` maintain the collection, and are left out of release
-packages. They use the Omeka S installation the module is in. To use another,
-set `OMEKA_DIR`.
+Files are redistributed without changes to their content, as LOV and Archivo
+do. Darwin Core and Audiovisual Core are published one term at a time, so
+their files combine the publisher's description of each term, unchanged. Most
+files state no license. Vocabularies whose license forbids redistribution are
+not included.
 
-The collection is kept in these files:
+For each release, the library downloads each vocabulary from its publisher
+again, where it can. If your vocabulary has moved, or the library's name or
+summary for it is wrong, open an issue in this repository.
+
+If a vocabulary you publish is in the library and you want it removed, open an
+issue or contact the Omeka team through the
+[forum](https://forum.omeka.org/). It will be removed in the next release.
+
+# For developers
+
+The collection is maintained with the scripts in `scripts/`, which are left out
+of release packages. They use the Omeka S installation the module is in, for
+its RDF importer. To use another, set `OMEKA_DIR`.
+
+## Files
 
 - `scripts/sources.json`: one entry per vocabulary, keyed by slug, with the
   curated fields: `download`, `namespace`, `prefix`, `summary`,
-  `summary_basis` (what the summary was drafted from), and `tags` (one to
-  three, from `config/module.config.php`), and where needed `alt_title` with
-  `alt_title_source` (where the name is quoted from), `alternates`, `format`,
-  `copy_from`, and `notes`.
-- `scripts/excluded.json`: vocabularies left out or removed, and why.
+  `summary_basis` (what the summary was drafted from), and `tags`, and where
+  needed `alt_title` with `alt_title_source` (where the name is quoted from),
+  `alternates` (other download addresses to try), `format`, `copy_from`, and
+  `notes`.
+- `scripts/excluded.json`: vocabularies left out or removed, and why. The
+  build refuses their slugs and namespaces, so they stay out.
 - `data/vocabs/<slug>.<ext>`: the file the module imports.
 - `data/vocabularies.json` and `data/term-index.json`: what the module reads,
-  written by `build.php` from the sources and the files. They should not be
-  edited.
+  written by `build.php` from the sources and the files. Do not edit them.
+- `config/module.config.php`: the tags.
+
+## Scripts
 
 To add a vocabulary:
 
@@ -136,9 +163,9 @@ To add a vocabulary:
 Use `--format=rdfa` for a vocabulary published only as RDFa in a web page,
 such as VRA. Use `--format=term-list` for one whose address serves only a
 list of its terms, each described at its own address, such as Darwin Core;
-every term is fetched. Both are stored as N-Triples. For an archived copy, also give
-`--file=<path> --copy-from=<archive>`, where `<archive>` is one of the four
-sources above, such as `--copy-from="DBpedia Archivo"`.
+every term is fetched. Both are stored as N-Triples. For an archived copy,
+also give `--file=<path> --copy-from=<archive>`, where `<archive>` is one of
+the four sources above, such as `--copy-from="DBpedia Archivo"`.
 
 To download every vocabulary again, or only the slugs given, and rebuild:
 
@@ -154,18 +181,46 @@ To remove a vocabulary, for example after a takedown request:
     php scripts/remove.php <slug> "<reason>"
 
 These scripts run `build.php` themselves. After editing
-`scripts/sources.json` by hand, run `php scripts/build.php`. Then review the
-diff and commit. For each release, list in the release notes the vocabularies
-whose files changed, as `update.php` reports them, so that administrators know
-which vocabularies to compare, and check each one's summary against its new
-file. Slugs are permanent once released, because they
-are in the module's URLs. A vocabulary in `excluded.json` stays out: the build
-refuses its slug and its namespace.
+`scripts/sources.json` by hand, run `php scripts/build.php`. The build checks
+every file with the Omeka S importer and writes nothing if any entry has a
+problem, listing each one.
 
 To list what each file says about its version and date, and flag those that
 call themselves a draft, beta, or experimental version:
 
     php scripts/versions.php [<slug> …] [--drafts]
+
+## Curation rules
+
+- **Inclusion:** Omeka must import classes or properties from the file that
+  are useful for describing resources, and the license must allow
+  redistribution. Record a vocabulary left out, and why, in
+  `excluded.json`.
+- **Names:** add an `alt_title` only where the file's title is missing, not
+  in English, long, or hides or leaves out the name the vocabulary is known
+  by. Quote another official name from the file or the publisher's
+  documentation, and record where in `alt_title_source`. Keep or add the
+  vocabulary's acronym, as in "Simple Knowledge Organization System (SKOS)",
+  but only one the file or the publisher uses. To shorten a long title, only
+  cut from it: a publisher's name, a version that distinguishes nothing, or a
+  descriptive subtitle after a name that stands on its own. Never reorder or
+  compose.
+- **Summaries:** one plain sentence of 25 words or fewer, saying what the
+  classes and properties describe, drafted from the file and the publisher's
+  documentation (recorded in `summary_basis`) and checked claim by claim
+  against them. Open with "Classes and properties", "Properties", or
+  "Classes", matching what the vocabulary has. No judgments, history,
+  versions, or claims about the publisher.
+- **Tags:** one to three, for what an administrator filtering by the tag would
+  want, not for fields the vocabulary is only loosely related to.
+
+## Releasing
+
+Run `update.php`, then review the diff and commit. List in the release notes
+the vocabularies whose files changed, as `update.php` reports them, so that
+administrators know which vocabularies to compare, and check each one's
+summary against its new file. Slugs are permanent once released, because they
+are in the module's URLs.
 
 # Copyright
 
