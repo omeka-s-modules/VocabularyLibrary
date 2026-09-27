@@ -34,7 +34,8 @@ $notProvided = $translate('Not provided by the publisher');
 <div class="meta-group">
     <h4><?php echo $translate('Summary'); ?></h4>
     <div class="value">
-        <?php echo $escape($entry['summary']); ?>
+        <?php // Written in English, whatever the admin's language. ?>
+        <span lang="en"><?php echo $escape($entry['summary']); ?></span>
         <span class="vocabulary-library-summary-note"><?php echo $translate('Written for the Vocabulary Library, not by the publisher.'); ?></span>
     </div>
 </div>

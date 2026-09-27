@@ -9,18 +9,26 @@
  * Compare and update button when the user can update the vocabulary.
  *
  * @var string $slug
+ * @var string|null $name The vocabulary's name, where many statuses share a
+ *   page, as in the table: it names the Import button and the link to the
+ *   vocabulary in Omeka for screen readers, so the ones in different rows
+ *   can be told apart, as in a list of a page's links
  * @var array|null $installed From IndexController::installed()
  * @var string|null $prefixTakenBy Label of the vocabulary in Omeka that
  *   already has this vocabulary's default prefix
  * @var bool $long Whether to write the sidebar's status: a taken prefix
  *   explained in full, and the Compare and update button
  */
+$name = $name ?? null;
 $prefixTakenBy = $prefixTakenBy ?? null;
 $long = $long ?? false;
 ?>
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
-<?php echo $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), ['class' => 'button']); ?>
+<?php echo $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), array_filter([
+    'class' => 'button',
+    'aria-label' => $name === null ? null : sprintf($this->translate('Import %s'), $name),
+])); ?>
 <?php if ($prefixTakenBy !== null && $long): ?>
 <p class="vocabulary-library-prefix-note"><?php echo $this->escapeHtml(sprintf($this->translate('Its prefix is already used in Omeka by "%s". Choose another when importing.'), $prefixTakenBy)); ?></p>
 <?php elseif ($prefixTakenBy !== null): ?>
@@ -36,7 +44,9 @@ $long = $long ?? false;
 <p class="vocabulary-library-compare"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button']); ?></p>
 <?php endif; ?>
 <?php elseif ($installed['exact']): ?>
-<?php echo $this->hyperlink($this->translate('Namespace in use'), $installed['url']); ?>
+<?php echo $this->hyperlink($this->translate('Namespace in use'), $installed['url'], array_filter([
+    'aria-label' => $name === null ? null : sprintf($this->translate('Namespace in use: %s'), $name),
+])); ?>
 <?php else: ?>
 <?php echo sprintf($this->escapeHtml($this->translate('Namespace in use as %s')), $this->hyperlink($installed['vocabulary']->namespaceUri(), $installed['url'])); ?>
 <?php endif; ?>

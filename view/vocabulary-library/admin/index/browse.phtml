@@ -119,7 +119,8 @@ $selected = function ($name, $value) use ($query) {
                         'data-sidebar-content-url' => $detailsUrl,
                     ]); ?>
                     <?php // The file's title, where it differs from the name, is in the sidebar and in the search text. ?>
-                    <p class="vocabulary-library-summary"><?php echo $escape($entry['summary']); ?></p>
+                    <?php // Summaries are written in English, whatever the admin's language. ?>
+                    <p class="vocabulary-library-summary" lang="en"><?php echo $escape($entry['summary']); ?></p>
                     <div class="vocabulary-library-term-matches" hidden>
                         <strong><?php echo $matchingTerms; ?></strong>
                         <ul class="vocabulary-library-term-list"></ul>
@@ -136,7 +137,7 @@ $selected = function ($name, $value) use ($query) {
             <td><?php echo $escape($entry['prefix']); ?></td>
             <td><?php echo $entry['classes']; ?></td>
             <td><?php echo $entry['properties']; ?></td>
-            <td><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $row['slug'], 'installed' => $row['installed'], 'prefixTakenBy' => $row['prefixTakenBy']]); ?></td>
+            <td><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $row['slug'], 'name' => $entry['name'], 'installed' => $row['installed'], 'prefixTakenBy' => $row['prefixTakenBy']]); ?></td>
         </tr>
         <?php endforeach; ?>
     </tbody>

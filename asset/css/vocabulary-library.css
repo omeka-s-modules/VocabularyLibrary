@@ -248,17 +248,18 @@
     width: 100%;
 }
 
+/* Some local names are long runs with no spaces, such as
+   P186_produced_thing_of_product_type, so they break to fit the sidebar. */
 .vocabulary-library-terms .field-term {
     margin-left: 6px;
     color: #676767;
+    overflow-wrap: anywhere;
 }
 
-/* One line per comment, so long lists stay scannable. */
+/* Each comment in full, which the library shows nowhere else; the term
+   filter narrows long lists. */
 .vocabulary-library-term-comment {
     display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-size: 13px;
     color: #676767;
 }
