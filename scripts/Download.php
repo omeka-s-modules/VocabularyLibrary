@@ -11,7 +11,8 @@ class Download
 {
     const ACCEPT = 'text/turtle, application/rdf+xml;q=0.9, application/ld+json;q=0.8, application/n-triples;q=0.7, */*;q=0.1';
     const USER_AGENT = 'Omeka S Vocabulary Library (+https://omeka.org)';
-    const RDF_SIGNS = ['<rdf:RDF', '<?xml', '@prefix', '@base', 'PREFIX', '"@context"', 'owl:Ontology'];
+    // "@id" is for expanded JSON-LD, which has no "@context".
+    const RDF_SIGNS = ['<rdf:RDF', '<?xml', '@prefix', '@base', 'PREFIX', '"@context"', '"@id"', 'owl:Ontology'];
     const EXTENSIONS = ['text/turtle' => 'ttl', 'application/rdf+xml' => 'rdf', 'application/ld+json' => 'jsonld', 'application/json' => 'jsonld', 'application/n-triples' => 'nt'];
 
     /**

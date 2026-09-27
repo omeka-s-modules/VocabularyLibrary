@@ -538,6 +538,25 @@
         ],
         "title": null
     },
+    "cao": {
+        "alt_title": null,
+        "classes": 6,
+        "description": "The Critical Apparatus Ontology (CAO) is an OWL 2 DL ontology for representing the apparatus of textual variants and philological arguments that accompanies a digital critical edition.",
+        "file": "vocabs/cao.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).",
+        "namespace": "https://w3id.org/cao/",
+        "prefix": "cao",
+        "properties": 21,
+        "summary": "Classes and properties for the apparatus of a digital critical edition, such as units of variation, readings and variants, witnesses, scribal hands, and corrections.",
+        "tags": [
+            "humanities"
+        ],
+        "title": "Critical Apparatus Ontology (CAO)"
+    },
     "cbo": {
         "alt_title": null,
         "classes": 57,
@@ -840,6 +859,25 @@
             "linked-data"
         ],
         "title": "The Collections Ontology (CO)"
+    },
+    "costume-core": {
+        "alt_title": null,
+        "classes": 0,
+        "description": "The Costume Core ontology is for describing artifacts of historic clothing, and is meant to build upon VRA Core and Dublin Core. Work to develop this ontology was part of the Costume Core Toolkit project, funded by a Visual Resources Association Foundation Project Grant in 2019-2020. More information is at http://ardenkirkland.com/costumecore",
+        "file": "vocabs/costume-core.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": "This ontology is distributed under a Creative Commons BY SA 4.0 license  - https://creativecommons.org/licenses/by-sa/4.0/",
+        "namespace": "https://w3id.org/costumeCore/ontology/",
+        "prefix": "costume",
+        "properties": 52,
+        "summary": "Properties for describing historic clothing, such as garment types, necklines, sleeves, closures, fibers, colors, measurements, wearers, condition, and exhibitions.",
+        "tags": [
+            "museums"
+        ],
+        "title": "Costume Core Ontology"
     },
     "country-and-subdivision-representation": {
         "alt_title": null,
@@ -1364,6 +1402,26 @@
         ],
         "title": "The Discourse Elements Ontology (DEO)"
     },
+    "dhfc": {
+        "alt_title": "Digital History Facts and Criticism (DHFC)",
+        "classes": 36,
+        "description": "The DHFC ontology aims to capture the process of building historical knowledge. Its aim is to help to build reusable data in the context of historical digital humanities by providing insight as to how data was produced.",
+        "file": "vocabs/dhfc.jsonld",
+        "format": "jsonld",
+        "languages": [
+            "en"
+        ],
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/DHFC#",
+        "prefix": "dhfc",
+        "properties": 80,
+        "summary": "Classes and properties for recording how historians build knowledge from traces such as documents, including assertions and rejections, supporting and defeating arguments, confidence, and identifications.",
+        "tags": [
+            "humanities",
+            "value-annotations"
+        ],
+        "title": "Digital History Facts and Criticism"
+    },
     "dicera": {
         "alt_title": null,
         "classes": 13,
@@ -1402,6 +1460,26 @@
             "science"
         ],
         "title": "DDI-RDF Discovery Vocabulary"
+    },
+    "display": {
+        "alt_title": null,
+        "classes": 6,
+        "description": "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition, allowing the connection between space and exhibit to be formally defined using a topological approach.",
+        "file": "vocabs/display.ttl",
+        "format": null,
+        "languages": [
+            "en",
+            "fr"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/display#",
+        "prefix": "display",
+        "properties": 32,
+        "summary": "Classes and properties for the spatial arrangement of an exhibition or collection display, such as exhibits, exhibition spaces, hanging, circulation paths, and relative positions.",
+        "tags": [
+            "museums"
+        ],
+        "title": "The Display Ontology"
     },
     "dm2e": {
         "alt_title": null,
@@ -2884,7 +2962,7 @@
         "format": null,
         "languages": [],
         "license": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "namespace": "http://purl.org/net/lio#",
+        "namespace": "https://w3id.org/lio/v1#",
         "prefix": "lio",
         "properties": 18,
         "summary": "Classes and properties for describing what an image shows, such as depicted things, setting, foreground and background, visual parts, technique, materials, and style.",
@@ -3670,6 +3748,25 @@
             "natural-history"
         ],
         "title": "MuseMeta"
+    },
+    "music-meta": {
+        "alt_title": null,
+        "classes": 47,
+        "description": "The Music Meta ontology is a rich and flexible semantic model to describe music metadata related to artists, compositions, performances, recordings, and links. We follow eXtreme Design methodologies and best practices for data engineering, to reflect the perspectives and the requirements of various stakeholders into the design of the model, while leveraging ontology design patterns and accounting for provenance at different levels (claims, links). Music Meta provides alignments to other schema, such as Music Ontology, DOREMUS, and Wikidata.",
+        "file": "vocabs/music-meta.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "namespace": "https://w3id.org/polifonia/ontology/music-meta/",
+        "prefix": "mm",
+        "properties": 70,
+        "summary": "Classes and properties for describing music, such as artists and ensembles, compositions and their parts, scores, lyrics, performances, recordings, releases, broadcasts, and awards.",
+        "tags": [
+            "performing-arts"
+        ],
+        "title": "Music Meta Ontology"
     },
     "muto": {
         "alt_title": "Modular and Unified Tagging Ontology (MUTO)",

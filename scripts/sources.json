@@ -393,6 +393,18 @@
             "time"
         ]
     },
+    "cao": {
+        "download": "https://w3id.org/cao/",
+        "namespace": "https://w3id.org/cao/",
+        "prefix": "cao",
+        "summary": "Classes and properties for the apparatus of a digital critical edition, such as units of variation, readings and variants, witnesses, scribal hands, and corrections.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "humanities"
+        ]
+    },
     "cbo": {
         "download": "http://comicmeta.org/cbo/",
         "namespace": "http://comicmeta.org/cbo/",
@@ -602,6 +614,18 @@
         ],
         "tags": [
             "linked-data"
+        ]
+    },
+    "costume-core": {
+        "download": "https://w3id.org/costumeCore/ontology",
+        "namespace": "https://w3id.org/costumeCore/ontology/",
+        "prefix": "costume",
+        "summary": "Properties for describing historic clothing, such as garment types, necklines, sleeves, closures, fibers, colors, measurements, wearers, condition, and exhibitions.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
         ]
     },
     "country-and-subdivision-representation": {
@@ -971,6 +995,21 @@
             "publishing"
         ]
     },
+    "dhfc": {
+        "alt_title": "Digital History Facts and Criticism (DHFC)",
+        "alt_title_source": "The file's title, with its acronym from the file's description, \"The DHFC ontology aims to capture the process of building historical knowledge\".",
+        "download": "https://w3id.org/DHFC",
+        "namespace": "https://w3id.org/DHFC#",
+        "prefix": "dhfc",
+        "summary": "Classes and properties for recording how historians build knowledge from traces such as documents, including assertions and rejections, supporting and defeating arguments, confidence, and identifications.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "humanities",
+            "value-annotations"
+        ]
+    },
     "dicera": {
         "alternates": [
             "http://semweb.mmlab.be/ns/dicera"
@@ -998,6 +1037,18 @@
         ],
         "tags": [
             "science"
+        ]
+    },
+    "display": {
+        "download": "https://w3id.org/display",
+        "namespace": "https://w3id.org/display#",
+        "prefix": "display",
+        "summary": "Classes and properties for the spatial arrangement of an exhibition or collection display, such as exhibits, exhibition spaces, hanging, circulation paths, and relative positions.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
         ]
     },
     "dm2e": {
@@ -2091,7 +2142,7 @@
     },
     "lio": {
         "download": "http://purl.org/net/lio#",
-        "namespace": "http://purl.org/net/lio#",
+        "namespace": "https://w3id.org/lio/v1#",
         "prefix": "lio",
         "summary": "Classes and properties for describing what an image shows, such as depicted things, setting, foreground and background, visual parts, technique, materials, and style.",
         "summary_basis": [
@@ -2661,6 +2712,18 @@
         "tags": [
             "museums",
             "natural-history"
+        ]
+    },
+    "music-meta": {
+        "download": "https://w3id.org/polifonia/ontology/music-meta/",
+        "namespace": "https://w3id.org/polifonia/ontology/music-meta/",
+        "prefix": "mm",
+        "summary": "Classes and properties for describing music, such as artists and ensembles, compositions and their parts, scores, lyrics, performances, recordings, releases, broadcasts, and awards.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "performing-arts"
         ]
     },
     "muto": {
