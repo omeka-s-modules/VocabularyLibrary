@@ -3,6 +3,19 @@
     const TERM_SEARCH_DELAY = 400;
 
     /**
+     * Shows a tab of the details sidebar and its section, as core's resource
+     * form does for its sidebar tabs; core's handler isn't loaded here.
+     */
+    const showTab = function (tab) {
+        tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]').forEach(function (other) {
+            const selected = other === tab;
+            other.classList.toggle('active', selected);
+            other.setAttribute('aria-selected', selected ? 'true' : 'false');
+            document.getElementById(other.dataset.id).classList.toggle('active', selected);
+        });
+    };
+
+    /**
      * Lowercases and strips accents, so "Ontologie" matches "ontologié".
      */
     const fold = function (text) {
@@ -201,18 +214,24 @@
             $(this).removeAttr('aria-label title');
         });
 
+        $(document).on('click', '.sidebar .sidebar-section-nav [role="tab"]', function () {
+            showTab(this);
+        });
+
         // When the details sidebar opens, set up its term filter and move
-        // focus into it: to the term filter when it opened from "All matching
-        // terms", so the matches are in view, otherwise to the title. Core
-        // keeps the sidebar's content hidden, which can't take focus, until
-        // just after this event, so focusing waits for the next frame, when
-        // the browser has applied that.
+        // focus into it: to the term filter, on the Classes and properties
+        // tab, when it opened from "All matching terms", so the matches are in
+        // view, otherwise to the title. Core keeps the sidebar's content
+        // hidden, which can't take focus, until just after this event, so
+        // focusing waits for the next frame, when the browser has applied
+        // that.
         $(document).on('o:sidebar-content-loaded', '.sidebar', function () {
             const sidebar = this;
             initTermFilter(sidebar);
             requestAnimationFrame(function () {
                 const filter = sidebar.querySelector('.vocabulary-library-term-filter input');
                 if (filter && filter.value !== '') {
+                    showTab(sidebar.querySelector('#vocabulary-library-term-lists-label'));
                     filter.scrollIntoView({block: 'start'});
                     filter.focus({preventScroll: true});
                     return;

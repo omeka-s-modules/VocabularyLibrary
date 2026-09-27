@@ -10,9 +10,10 @@ $terms = [
 ];
 $file = basename($entry['file']);
 // Every section shows for every vocabulary, so sidebars keep one structure:
-// what the file lacks says so. Only "Vocabulary in Omeka", which reports the
-// site's state rather than the file, depends on it.
-$notProvided = $translate('Not provided by the publisher');
+// what the file lacks says so, styled apart from values, as the compare page
+// marks "None". Only "Vocabulary in Omeka", which reports the site's state
+// rather than the file, depends on it.
+$notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
 // The label languages, named as the browse page's language filter names
 // them: in the admin's language where PHP's intl extension can, otherwise
 // by code.
@@ -25,118 +26,125 @@ natcasesort($languageNames);
 ?>
 <h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 
-<div class="meta-group">
-    <h4><?php echo $translate('Status'); ?></h4>
-    <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true]); ?></div>
-</div>
-<?php if ($installed): ?>
-<div class="meta-group">
-    <h4><?php echo $translate('Vocabulary in Omeka'); ?></h4>
-    <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
-    <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
-</div>
-<?php endif; ?>
-<div class="meta-group">
-    <h4><?php echo $translate('Title'); ?></h4>
-    <div class="value"><?php echo $entry['title'] === null ? $notProvided : $escape($entry['title']); ?></div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Summary'); ?></h4>
-    <div class="value">
-        <?php // Written in English, whatever the admin's language. ?>
-        <span lang="en"><?php echo $escape($entry['summary']); ?></span>
-        <span class="vocabulary-library-summary-note"><?php echo $translate('Written for the Vocabulary Library, not by the publisher.'); ?></span>
+<?php // Core's sidebar tabs, as in its item selector, directly under the name, so the details and the long class and property lists take turns rather than one burying the other. ?>
+<?php echo $this->sidebarSectionNav([
+    'vocabulary-library-details' => $translate('Details'),
+    'vocabulary-library-term-lists' => $translate('Classes and properties'),
+], $escape($entry['name'])); ?>
+
+<div class="sidebar-section active" id="vocabulary-library-details" role="tabpanel" aria-labelledby="vocabulary-library-details-label">
+    <div class="meta-group">
+        <h4><?php echo $translate('Status'); ?></h4>
+        <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true]); ?></div>
     </div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Description'); ?></h4>
-    <div class="value">
-        <?php if ($excerpt === null): ?>
-        <?php echo $notProvided; ?>
-        <?php else: ?>
-        <?php echo $escape($excerpt); ?>
-        <?php endif; ?>
-        <?php if ($rest): ?>
-        <div class="vocabulary-library-more">
-            <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
-            <div class="collapsible">
-                <?php foreach ($rest as $paragraph): ?>
-                <p><?php echo $escape($paragraph); ?></p>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <?php endif; ?>
+    <?php if ($installed): ?>
+    <div class="meta-group">
+        <h4><?php echo $translate('Vocabulary in Omeka'); ?></h4>
+        <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
+        <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
     </div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Namespace URI'); ?></h4>
-    <div class="value"><?php echo $escape($entry['namespace']); ?></div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Namespace prefix'); ?></h4>
-    <div class="value"><?php echo $escape($entry['prefix']); ?></div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Tags'); ?></h4>
-    <?php foreach ($tags as $tag => $label): ?>
-    <div class="value"><?php echo $this->hyperlink($translate($label), $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
-    <?php endforeach; ?>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('Label languages'); ?></h4>
-    <?php if (!$languageNames): ?>
-    <div class="value"><?php echo $translate('Not stated by the publisher'); ?></div>
     <?php endif; ?>
-    <?php foreach ($languageNames as $name): ?>
-    <div class="value"><?php echo $escape($name); ?></div>
-    <?php endforeach; ?>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('License'); ?></h4>
-    <div class="value">
-        <?php if ($license === null): ?>
-        <?php echo $translate('Not stated by the publisher'); ?>
-        <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
-        <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
-        <?php else: ?>
-        <?php echo $escape($license); ?>
-        <?php endif; ?>
+    <div class="meta-group">
+        <h4><?php echo $translate('Title'); ?></h4>
+        <div class="value"><?php echo $entry['title'] === null ? $notProvided : $escape($entry['title']); ?></div>
     </div>
-</div>
-<div class="meta-group">
-    <h4><?php echo $translate('File'); ?></h4>
-    <div class="value"><?php echo $this->hyperlink($file, $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug]), ['title' => $translate('Download file')]); ?></div>
-</div>
-
-<?php if ($classes || $properties): ?>
-<?php // Filled in by the script, and from a term search's "All matching terms". ?>
-<div class="vocabulary-library-term-filter">
-    <input type="text" value="<?php echo $escape($termFilter); ?>"
-        placeholder="<?php echo $escape($translate('Filter terms')); ?>"
-        aria-label="<?php echo $escape($translate('Filter terms')); ?>">
-    <p class="vocabulary-library-term-filter-empty" hidden><?php echo $translate('No terms match.'); ?></p>
-</div>
-<?php endif; ?>
-
-<?php foreach ($terms as $group): ?>
-<?php $heading = sprintf('<h4 data-label="%s">%s</h4>', $escape($group['label']), $escape(sprintf('%s (%s)', $group['label'], count($group['members'])))); ?>
-<?php if (!$group['members']): ?>
-<?php // None to list, so a heading alone, with nothing to expand. ?>
-<div class="meta-group vocabulary-library-terms"><?php echo $heading; ?></div>
-<?php else: ?>
-<div class="meta-group vocabulary-library-terms">
-    <a href="#" class="expand" aria-expanded="false"><?php echo $heading; ?></a>
-    <div class="collapsible">
-        <?php foreach ($group['members'] as $localName => $member): ?>
+    <div class="meta-group">
+        <h4><?php echo $translate('Summary'); ?></h4>
+        <?php // Written in English, whatever the admin's language. ?>
+        <div class="value" lang="en"><?php echo $escape($entry['summary']); ?></div>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('Description'); ?></h4>
         <div class="value">
-            <span class="vocabulary-library-term-label"><?php echo $escape($member['label']); ?></span>
-            <span class="field-term"><?php echo $escape($entry['prefix'] . ':' . $localName); ?></span>
-            <?php if ($member['comment'] !== null && trim($member['comment']) !== ''): ?>
-            <span class="vocabulary-library-term-comment"><?php echo $escape($member['comment']); ?></span>
+            <?php if ($excerpt === null): ?>
+            <?php echo $notProvided; ?>
+            <?php else: ?>
+            <?php echo $escape($excerpt); ?>
+            <?php endif; ?>
+            <?php if ($rest): ?>
+            <div class="vocabulary-library-more">
+                <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
+                <div class="collapsible">
+                    <?php foreach ($rest as $paragraph): ?>
+                    <p><?php echo $escape($paragraph); ?></p>
+                    <?php endforeach; ?>
+                </div>
+            </div>
             <?php endif; ?>
         </div>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('Namespace URI'); ?></h4>
+        <div class="value"><?php echo $escape($entry['namespace']); ?></div>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('Namespace prefix'); ?></h4>
+        <div class="value"><?php echo $escape($entry['prefix']); ?></div>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('Tags'); ?></h4>
+        <?php foreach ($tags as $tag => $label): ?>
+        <div class="value"><?php echo $this->hyperlink($translate($label), $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
         <?php endforeach; ?>
     </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('Label languages'); ?></h4>
+        <?php if (!$languageNames): ?>
+        <div class="value"><?php echo $notProvided; ?></div>
+        <?php endif; ?>
+        <?php foreach ($languageNames as $name): ?>
+        <div class="value"><?php echo $escape($name); ?></div>
+        <?php endforeach; ?>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('License'); ?></h4>
+        <div class="value">
+            <?php if ($license === null): ?>
+            <?php echo $notProvided; ?>
+            <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
+            <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
+            <?php else: ?>
+            <?php echo $escape($license); ?>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="meta-group">
+        <h4><?php echo $translate('File'); ?></h4>
+        <div class="value"><?php echo $this->hyperlink($file, $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug]), ['title' => $translate('Download file')]); ?></div>
+    </div>
 </div>
-<?php endif; ?>
-<?php endforeach; ?>
+
+<div class="sidebar-section" id="vocabulary-library-term-lists" role="tabpanel" aria-labelledby="vocabulary-library-term-lists-label">
+    <?php if ($classes || $properties): ?>
+    <?php // Filled in by the script, and from a term search's "All matching terms". ?>
+    <div class="vocabulary-library-term-filter">
+        <input type="text" value="<?php echo $escape($termFilter); ?>"
+            placeholder="<?php echo $escape($translate('Filter classes and properties')); ?>"
+            aria-label="<?php echo $escape($translate('Filter classes and properties')); ?>">
+        <p class="vocabulary-library-term-filter-empty" hidden><?php echo $translate('No classes or properties match.'); ?></p>
+    </div>
+    <?php endif; ?>
+
+    <?php foreach ($terms as $group): ?>
+    <?php $heading = sprintf('<h4 data-label="%s">%s</h4>', $escape($group['label']), $escape(sprintf('%s (%s)', $group['label'], count($group['members'])))); ?>
+    <?php if (!$group['members']): ?>
+    <?php // None to list, so a heading alone, with nothing to expand. ?>
+    <div class="meta-group vocabulary-library-terms"><?php echo $heading; ?></div>
+    <?php else: ?>
+    <div class="meta-group vocabulary-library-terms">
+        <a href="#" class="expand" aria-expanded="false"><?php echo $heading; ?></a>
+        <div class="collapsible">
+            <?php foreach ($group['members'] as $localName => $member): ?>
+            <div class="value">
+                <span class="vocabulary-library-term-label"><?php echo $escape($member['label']); ?></span>
+                <span class="field-term"><?php echo $escape($entry['prefix'] . ':' . $localName); ?></span>
+                <?php if ($member['comment'] !== null && trim($member['comment']) !== ''): ?>
+                <span class="vocabulary-library-term-comment"><?php echo $escape($member['comment']); ?></span>
+                <?php endif; ?>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php endforeach; ?>
+</div>

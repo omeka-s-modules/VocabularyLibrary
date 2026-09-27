@@ -117,14 +117,6 @@
     color: #676767;
 }
 
-/* Under the summary in the sidebar: whose words these are. */
-.vocabulary-library-summary-note {
-    display: block;
-    margin-top: 3px;
-    font-size: 12px;
-    color: #676767;
-}
-
 /* Core tables have a fixed layout, so the short columns get set widths and
    the title takes the rest, and is what wraps when the sidebar is open. */
 .vocabulary-library-tags-column {
@@ -210,9 +202,9 @@
     margin: 6px 0 0;
 }
 
-/* The term filter above the class and property lists. */
+/* The term filter, at the top of the Classes and properties tab. */
 .vocabulary-library-term-filter {
-    margin: 12px 0;
+    margin: 0 0 6px;
 }
 
 .vocabulary-library-term-filter input {
@@ -281,6 +273,8 @@ table.tablesaw.vocabulary-library-compare-table td {
     white-space: pre-wrap;
 }
 
+/* Stands in for a missing value, set apart from real ones: "None" on the
+   compare page, and what the publisher didn't provide in the sidebar. */
 .vocabulary-library-none {
     color: #676767;
     font-style: italic;
