@@ -177,6 +177,26 @@
         ],
         "title": "Core Ontology (ArCo network)"
     },
+    "arm": {
+        "alt_title": "Art and Rare Materials (ARM) BIBFRAME Ontology Extensions",
+        "classes": 49,
+        "description": "The Art and Rare Materials Core Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.",
+        "file": "vocabs/arm.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": null,
+        "namespace": "https://w3id.org/arm/ontology/1.0/",
+        "prefix": "arm",
+        "properties": 54,
+        "summary": "Classes and properties that extend BIBFRAME for art and rare materials, such as bindings, bookplates, inscriptions, marginalia, watermarks, custodial history, condition, exhibitions, and awards.",
+        "tags": [
+            "libraries",
+            "museums"
+        ],
+        "title": "Art and Rare Materials Core Ontology"
+    },
     "as": {
         "alt_title": null,
         "classes": 55,
@@ -2924,7 +2944,7 @@
         "title": "A vocabulary for exposing IEEE LOM metadata as Linked Open Data"
     },
     "lrmoo": {
-        "alt_title": null,
+        "alt_title": "LRMoo",
         "classes": 16,
         "description": null,
         "file": "vocabs/lrmoo.rdf",

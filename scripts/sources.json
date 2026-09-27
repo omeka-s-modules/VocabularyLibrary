@@ -122,6 +122,22 @@
             "museums"
         ]
     },
+    "arm": {
+        "alt_title": "Art and Rare Materials (ARM) BIBFRAME Ontology Extensions",
+        "alt_title_source": "https://art-and-rare-materials-bf-ext.github.io/arm/ (the project's heading). The file's title, \"Art and Rare Materials Core Ontology\", is left over from version 0.1, whose modules version 1.0 merges.",
+        "download": "https://w3id.org/arm/ontology/1.0/arm.rdf",
+        "namespace": "https://w3id.org/arm/ontology/1.0/",
+        "prefix": "arm",
+        "summary": "Classes and properties that extend BIBFRAME for art and rare materials, such as bindings, bookplates, inscriptions, marginalia, watermarks, custodial history, condition, exhibitions, and awards.",
+        "summary_basis": [
+            "file",
+            "https://art-and-rare-materials-bf-ext.github.io/arm/v1.0/"
+        ],
+        "tags": [
+            "libraries",
+            "museums"
+        ]
+    },
     "as": {
         "download": "https://www.w3.org/ns/activitystreams-owl",
         "namespace": "https://www.w3.org/ns/activitystreams#",
@@ -2122,6 +2138,8 @@
         ]
     },
     "lrmoo": {
+        "alt_title": "LRMoo",
+        "alt_title_source": "cidoc-crm.org",
         "download": "https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl",
         "namespace": "http://iflastandards.info/ns/lrm/lrmoo/",
         "prefix": "lrmoo",
