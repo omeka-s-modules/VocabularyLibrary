@@ -11,6 +11,7 @@ use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
 use Omeka\Stdlib\RdfImporter;
 use VocabularyLibrary\Form\ImportForm;
+use VocabularyLibrary\LabelLanguage;
 use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\PlainText;
 
@@ -117,9 +118,11 @@ class IndexController extends AbstractActionController
         [$slug, $entry] = $this->entry();
         $members = $this->rdfImporter->getMembers('file', $entry['namespace'], $this->importerOptions($entry, $this->defaultLanguage($entry)));
         foreach ($members as &$terms) {
-            // Some files put HTML in their labels and comments.
+            // Some files put HTML in their labels and comments. Labels also
+            // have their whitespace collapsed, as the term index has them and
+            // the browser shows them, so the term filter matches what's shown.
             foreach ($terms as &$term) {
-                $term['label'] = PlainText::from($term['label']);
+                $term['label'] = trim(preg_replace('/\s+/u', ' ', PlainText::from($term['label'])));
                 if ($term['comment'] !== null) {
                     $term['comment'] = PlainText::from($term['comment']);
                 }
@@ -458,17 +461,12 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * The language to import labels and comments in: English if the file has
-     * it, else a regional English such as en-US, else its only or first
-     * language, else none.
+     * The language to import and show labels and comments in, as the build
+     * writes the term index: LabelLanguage::preferred().
      */
     protected function defaultLanguage(array $entry)
     {
-        $languages = $entry['languages'];
-        if (in_array('en', $languages, true)) {
-            return 'en';
-        }
-        return current(preg_grep('/^en-/i', $languages)) ?: ($languages[0] ?? null);
+        return LabelLanguage::preferred($entry['languages']);
     }
 
     /**

@@ -27,9 +27,12 @@ $files = [];
 foreach ($repo->files($slug) as $file) {
     $files[$file] = file_get_contents($file);
 }
+// Recorded by the name the library showed: its alternative title, else the
+// file's title.
+$built = $repo->vocabularies()[$slug] ?? [];
 $excluded[] = [
     'slug' => $slug,
-    'title' => $entry['title'] ?? $repo->vocabularies()[$slug]['title'] ?? null,
+    'title' => $built['alt_title'] ?? $built['title'] ?? null,
     'namespace' => $entry['namespace'],
     'prefix' => $entry['prefix'],
     'download' => $entry['download'],

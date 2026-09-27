@@ -5,6 +5,7 @@ use EasyRdf\Graph as RdfGraph;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
 use Throwable;
+use VocabularyLibrary\LabelLanguage;
 use VocabularyLibrary\PlainText;
 
 /**
@@ -37,8 +38,9 @@ class ImportCheck
     const MAX_NAMESPACE = 190;
 
     /**
-     * The language of labels and comments the check reads terms in, as the
-     * module imports by default.
+     * The language of labels and comments the check first reads terms in.
+     * Where a file has no English, the terms are read again in the language
+     * the module uses, LabelLanguage::preferred().
      */
     const LANG = 'en';
 
@@ -132,6 +134,16 @@ class ImportCheck
             }
         }
         $best = (string) $best;
+        $languages = $this->safely(function () use ($graph, $best) {
+            return $this->languages($graph, $best);
+        }) ?: [];
+        // Labels and comments in the language the module shows and imports
+        // them in, so the term index matches the sidebar. Only they change
+        // with the language, not which terms there are.
+        $lang = LabelLanguage::preferred($languages);
+        if ($bestCount && $lang !== null && $lang !== self::LANG) {
+            $bestMembers = $this->importer->members($graph, $best, $lang);
+        }
 
         return [
             'parsed' => true,
@@ -142,9 +154,7 @@ class ImportCheck
             'properties' => count($bestMembers['properties']),
             'members' => $bestMembers,
             'limits' => $this->limits($best, $bestMembers),
-            'languages' => $this->safely(function () use ($graph, $best) {
-                return $this->languages($graph, $best);
-            }) ?: [],
+            'languages' => $languages,
             'prefix' => $this->safely(function () use ($graph, $best) {
                 return $this->declaredPrefix($graph, $best);
             }),

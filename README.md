@@ -47,12 +47,14 @@ prefix cannot be changed after import.
 **Namespace in use** means that Omeka already has a vocabulary with this
 namespace, so this one cannot be imported. The vocabulary in Omeka may be a
 different version, or in another language. **Namespace in use as** means that
-Omeka has the namespace in another form, such as `http://schema.org/` for
-`https://schema.org/`. That vocabulary cannot be imported or updated from the
-library. To update it, first change its namespace to the library's in Omeka,
-by editing the vocabulary under **Vocabularies**. This changes the addresses
-of its classes and properties everywhere Omeka publishes them, though values
-stay attached to their properties. **Compare and update** is then available.
+Omeka has the namespace written another way: with `http` rather than `https`,
+in different capitals, or with a different closing `/` or `#`, such as
+`http://schema.org/` for `https://schema.org/`. That vocabulary cannot be
+imported or updated from the library. To update it, first change its namespace
+in Omeka to the library's, by editing the vocabulary under **Vocabularies**.
+This changes the addresses of its classes and properties everywhere Omeka
+publishes them, though values stay attached to their properties. It can then
+be compared and updated like any other vocabulary in use.
 
 ## Comparing and updating
 

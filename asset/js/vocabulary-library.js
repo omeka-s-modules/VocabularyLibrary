@@ -251,8 +251,8 @@
 
     /**
      * The details sidebar's term filter: narrows the class and property lists
-     * to terms whose label or prefixed name contains the text, as the table's
-     * search compares text, and opens the lists while it has any. Emptied, it
+     * to terms whose label or local name contains the text, as the term search
+     * matches them, and opens the lists while it has any. Emptied, it
      * closes the lists it opened, leaving any the admin opened. It starts with
      * the text from a term search's "All matching terms", if any.
      */
@@ -267,10 +267,14 @@
             toggle: group.querySelector(':scope > a'),
             heading: group.querySelector('h4'),
             openedByFilter: false,
-            values: [...group.querySelectorAll('.value')].map(value => ({
-                value: value,
-                text: fold(value.querySelector('.vocabulary-library-term-label').textContent + ' ' + value.querySelector('.field-term').textContent),
-            })),
+            values: [...group.querySelectorAll('.value')].map(function (value) {
+                // The local name without the prefix, which every term shares.
+                const term = value.querySelector('.field-term').textContent;
+                return {
+                    value: value,
+                    text: fold(value.querySelector('.vocabulary-library-term-label').textContent + ' ' + term.slice(term.indexOf(':') + 1)),
+                };
+            }),
         }));
         // Opens or closes a list as core's toggle does, without the events
         // core fires for the admin's own clicks.
