@@ -24,10 +24,12 @@ class Download
     /**
      * Fetches URLs in parallel, following redirects.
      *
+     * @param bool $decode Whether to ask for compressed responses, which curl
+     *   unzips
      * @return array Per key: body, type (content type), url (final URL),
      *   status, error, and retry_after (seconds, from a Retry-After header)
      */
-    public static function fetchAll(array $urls)
+    public static function fetchAll(array $urls, $decode = true)
     {
         $multi = curl_multi_init();
         $handles = [];
@@ -42,7 +44,7 @@ class Download
                 CURLOPT_TIMEOUT => 60,
                 CURLOPT_HTTPHEADER => ['Accept: ' . self::ACCEPT],
                 CURLOPT_USERAGENT => self::USER_AGENT,
-                CURLOPT_ENCODING => '',
+                CURLOPT_ENCODING => $decode ? '' : null,
                 CURLOPT_HEADERFUNCTION => function ($handle, $header) use (&$retryAfter, $key) {
                     if (preg_match('/^Retry-After:\s*(\d+)/i', $header, $match)) {
                         $retryAfter[$key] = (int) $match[1];
@@ -57,21 +59,39 @@ class Download
             curl_multi_exec($multi, $running);
             curl_multi_select($multi);
         } while ($running);
+        // Each transfer's result, which curl_error() doesn't report for
+        // transfers run together.
+        $codes = [];
+        while ($info = curl_multi_info_read($multi)) {
+            $codes[spl_object_id($info['handle'])] = $info['result'];
+        }
         $results = [];
+        $badEncoding = [];
         foreach ($handles as $key => $handle) {
             $status = curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
+            $code = $codes[spl_object_id($handle)] ?? CURLE_OK;
             $results[$key] = [
                 'body' => (string) curl_multi_getcontent($handle),
                 'type' => strtolower(trim(explode(';', (string) curl_getinfo($handle, CURLINFO_CONTENT_TYPE))[0])),
                 'url' => curl_getinfo($handle, CURLINFO_EFFECTIVE_URL),
                 'status' => $status,
-                'error' => curl_error($handle) ?: ($status >= 400 ? "HTTP $status" : null),
+                'error' => curl_error($handle) ?: ($code !== CURLE_OK ? curl_strerror($code) : ($status >= 400 ? "HTTP $status" : null)),
                 'retry_after' => $retryAfter[$key] ?? null,
             ];
+            if ($code === CURLE_BAD_CONTENT_ENCODING) {
+                $badEncoding[$key] = $urls[$key];
+            }
             curl_multi_remove_handle($multi, $handle);
             curl_close($handle);
         }
         curl_multi_close($multi);
+        // A server that names its compression wrongly, as one sending
+        // "Content-Encoding: application/gzip" does, fails curl's unzipping.
+        // Fetched again without asking for compression, the body arrives as
+        // sent, and storable() unzips it.
+        if ($decode && $badEncoding) {
+            $results = array_replace($results, self::fetchAll($badEncoding, false));
+        }
         return $results;
     }
 
@@ -116,6 +136,10 @@ class Download
      * and stored as N-Triples, which imports the same. So is one published
      * as a term list ("format": "term-list"), assembled by termList().
      *
+     * A gzipped body is unzipped first: some publishers serve a gzipped file
+     * without the Content-Encoding header that lets curl unzip it, as the
+     * Dutch Cultural Heritage Agency serves its dataset downloads.
+     *
      * @param array $response A result from fetchAll()
      * @param string|null $format The entry's curated format
      * @param string|null $namespace The base URI for parsing RDFa, and a term
@@ -124,6 +148,18 @@ class Download
      */
     public static function storable(array $response, $format, $namespace)
     {
+        if (strncmp($response['body'], "\x1f\x8b", 2) === 0) {
+            // Through zlib's stream reader, which reads every part of a gzip
+            // file made of several, as that agency's are; gzdecode() stops
+            // after the first.
+            $path = self::tempFile($response['body'], 'gz');
+            $unzipped = file_get_contents('compress.zlib://' . $path);
+            unlink($path);
+            if ($unzipped === false || $unzipped === '') {
+                return [null, 'gzipped, and did not unzip'];
+            }
+            $response['body'] = $unzipped;
+        }
         $body = $response['body'];
         if (trim($body) === '') {
             return [null, sprintf('empty response (HTTP %s)', $response['status'])];

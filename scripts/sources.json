@@ -236,7 +236,8 @@
             "file"
         ],
         "tags": [
-            "publishing"
+            "publishing",
+            "libraries"
         ]
     },
     "bibtex": {
@@ -447,6 +448,22 @@
         "tags": [
             "libraries",
             "archives"
+        ]
+    },
+    "ceo": {
+        "alt_title": "Cultural Heritage Ontology (CEO)",
+        "alt_title_source": "The file's title, \"Cultural Heritage Ontology\", with its acronym from the file's description, \"The Cultural Heritage Ontology (CEO) serves as…\".",
+        "download": "https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/ceo/download.nt",
+        "namespace": "https://linkeddata.cultureelerfgoed.nl/def/ceo#",
+        "prefix": "ceo",
+        "summary": "Classes and properties for describing monuments, archaeological sites, and finds in the Netherlands, with their dating, materials, style, functions, and links to Dutch registers.",
+        "summary_basis": [
+            "file",
+            "https://linkeddata.cultureelerfgoed.nl/rce/ceo"
+        ],
+        "tags": [
+            "museums",
+            "places"
         ]
     },
     "cerif": {
@@ -708,7 +725,8 @@
             "https://cidoc-crm.org/crmtex/"
         ],
         "tags": [
-            "humanities"
+            "humanities",
+            "museums"
         ]
     },
     "cro": {
@@ -1955,7 +1973,9 @@
             "https://github.com/lawdi/LAWD"
         ],
         "tags": [
-            "humanities"
+            "humanities",
+            "places",
+            "people"
         ]
     },
     "lcmpt": {
@@ -2537,7 +2557,8 @@
             "file"
         ],
         "tags": [
-            "museums"
+            "museums",
+            "natural-history"
         ]
     },
     "mpeg7": {
@@ -2638,7 +2659,8 @@
             "file"
         ],
         "tags": [
-            "museums"
+            "museums",
+            "natural-history"
         ]
     },
     "muto": {

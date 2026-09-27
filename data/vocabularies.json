@@ -325,7 +325,8 @@
         "properties": 67,
         "summary": "Classes and properties for describing documents such as books, articles, theses, letters, legal documents, and web pages, with their authors, identifiers, and citations.",
         "tags": [
-            "publishing"
+            "publishing",
+            "libraries"
         ],
         "title": "The Bibliographic Ontology"
     },
@@ -615,6 +616,27 @@
             "archives"
         ],
         "title": "The Collection Description Type Namespace"
+    },
+    "ceo": {
+        "alt_title": "Cultural Heritage Ontology (CEO)",
+        "classes": 30,
+        "description": "The Cultural Heritage Ontology (CEO) serves as the complete semantic representation of the logical data models CHO and KENNIS derived from the data layer of the Cultural Heritage Agency of the Netherlands (RCE).",
+        "file": "vocabs/ceo.nt",
+        "format": null,
+        "languages": [
+            "en",
+            "nl"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://linkeddata.cultureelerfgoed.nl/def/ceo#",
+        "prefix": "ceo",
+        "properties": 133,
+        "summary": "Classes and properties for describing monuments, archaeological sites, and finds in the Netherlands, with their dating, materials, style, functions, and links to Dutch registers.",
+        "tags": [
+            "museums",
+            "places"
+        ],
+        "title": "Cultural Heritage Ontology"
     },
     "cerif": {
         "alt_title": "Common European Research Information Format (CERIF) Ontology",
@@ -970,7 +992,8 @@
         "properties": 34,
         "summary": "Classes and properties for studying ancient and handwritten texts, such as inscriptions and manuscripts, including their writing, scripts, glyphs, transliteration, and reading.",
         "tags": [
-            "humanities"
+            "humanities",
+            "museums"
         ],
         "title": null
     },
@@ -2642,7 +2665,9 @@
         "properties": 17,
         "summary": "Classes and properties for describing people, deities, places, names, and written works of the ancient world, and the textual evidence that attests to them.",
         "tags": [
-            "humanities"
+            "humanities",
+            "places",
+            "people"
         ],
         "title": "Linking Ancient World Data Ontology"
     },
@@ -3486,7 +3511,8 @@
         "properties": 188,
         "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
         "tags": [
-            "museums"
+            "museums",
+            "natural-history"
         ],
         "title": "Movable property Ontology (ArCo network)"
     },
@@ -3640,7 +3666,8 @@
         "properties": 206,
         "summary": "Properties for recording museum collection information, such as accessions, loans, exhibitions, condition, storage location, dimensions, creators, and the biological classification of specimens.",
         "tags": [
-            "museums"
+            "museums",
+            "natural-history"
         ],
         "title": "MuseMeta"
     },
