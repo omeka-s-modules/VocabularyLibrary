@@ -1,9 +1,12 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
+use EasyRdf\Graph as RdfGraph;
 use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Stdlib\RdfImporter;
 use VocabularyLibrary\CommentProperty;
+use VocabularyLibrary\LabelLanguage;
+use VocabularyLibrary\LabelProperty;
 
 /**
  * Reads, imports and compares the library's files with core's importer, and
@@ -107,6 +110,46 @@ class Importer
     }
 
     /**
+     * The language the vocabulary in Omeka was most likely imported in: of
+     * the entry's languages, and none ("First available"), the one whose
+     * labels match the most of its labels. Ties go to the library's default
+     * language.
+     *
+     * The file is read once, and each term's label in each language read as
+     * core's importer reads it: in that language, else in any, else its local
+     * name. Reading the file once per language would take seconds for
+     * vocabularies with twenty languages.
+     *
+     * @return string|null A language tag, or null for none
+     */
+    public function matchingLanguage(array $entry, VocabularyRepresentation $vocabulary)
+    {
+        $labels = [];
+        foreach (array_merge($vocabulary->resourceClasses(), $vocabulary->properties()) as $term) {
+            $labels[$term->localName()] = $term->label();
+        }
+        $this->raiseMemoryLimit();
+        $graph = new RdfGraph;
+        $graph->parseFile($this->path($entry), $entry['format'] ?? 'guess', $entry['namespace']);
+        $default = LabelLanguage::preferred($entry['languages']);
+        $best = $default;
+        $bestMatches = -1;
+        foreach (array_unique(array_merge([$default], $entry['languages'], [null])) as $lang) {
+            $matches = 0;
+            foreach ($labels as $localName => $label) {
+                $term = $graph->resource($entry['namespace'] . $localName);
+                $read = $term->get(LabelProperty::LIBRARY, 'literal', $lang) ?: $term->get(LabelProperty::LIBRARY, 'literal');
+                $value = $read ? (string) $read->getValue() : '';
+                $matches += ($value === '' ? (string) $localName : $value) === $label ? 1 : 0;
+            }
+            if ($matches > $bestMatches) {
+                [$best, $bestMatches] = [$lang, $matches];
+            }
+        }
+        return $best;
+    }
+
+    /**
      * Applies a diff to the vocabulary in Omeka, with core's update.
      */
     public function update($vocabularyId, array $diff)
@@ -133,6 +176,7 @@ class Importer
             'file' => $this->path($entry),
             'format' => $entry['format'] ?? 'guess',
             'lang' => $lang,
+            'label_property' => LabelProperty::LIBRARY,
             'comment_property' => $commentProperty,
         ];
     }

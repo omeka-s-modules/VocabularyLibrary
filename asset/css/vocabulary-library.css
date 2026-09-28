@@ -281,6 +281,12 @@
     margin: 0 0 24px;
 }
 
+/* The Type column holds only "Label" or "Comment", so From and To get the
+   room; core's tables otherwise give every column the same width. */
+.vocabulary-library-change-table th:nth-child(2) {
+    width: 7rem;
+}
+
 /* Long comments make tall rows; keep each term beside the start of its
    values. */
 table.tablesaw.vocabulary-library-compare-table td {

@@ -68,21 +68,23 @@ For a vocabulary whose namespace is in use, **Compare and update** in its
 details shows how the vocabulary in Omeka differs from the library's file, and
 **Update** applies the differences. Updating adds classes and properties and
 changes the labels and comments of existing ones, but never removes a class or
-property. Terms listed under **Not in the library's file** are in Omeka but
-not in the file, and updating keeps them. Look over the changes before
-updating: the labels and comments in Omeka are replaced with the file's.
+property. Changes are listed for properties and classes separately, as on
+Omeka's own update page. Those listed as not in the library's file are in
+Omeka but not in the file, and updating keeps them. Look over the changes
+before updating: the labels and comments in Omeka are replaced with the
+file's.
 
-When the file has more than one language, set **Preferred language** to the
-language the vocabulary was imported in, or to **First available** if it was
-imported without one. Another language shows what switching its labels and
-comments to that language would change, which can correct a vocabulary
-imported with labels in mixed languages.
+When the file has more than one language, **Preferred language** starts with
+the language whose labels match the vocabulary in Omeka, or **First available**
+if it was imported without one. Another language shows what switching its
+labels and comments to that language would change, which can correct a
+vocabulary imported with labels in mixed languages.
 
-When the file's definitions and comments differ, **Comment property** chooses
-between `skos:definition, else rdfs:comment`, as the library imports terms,
-and `rdfs:comment`, as Omeka's own import does. It starts with the one that
-matches the vocabulary in Omeka, so only real changes show. Choose the other
-to see what switching its comments would change.
+When the file's definitions and comments differ, **Comments** chooses between
+reading comments as the library imports them (`skos:definition`, else
+`rdfs:comment`) and as Omeka's own import reads them (`rdfs:comment`). It
+starts with the one that matches the vocabulary in Omeka, so only real changes
+show. Choose the other to see what switching its comments would change.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.

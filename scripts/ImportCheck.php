@@ -7,6 +7,7 @@ use ReflectionClass;
 use Throwable;
 use VocabularyLibrary\CommentProperty;
 use VocabularyLibrary\LabelLanguage;
+use VocabularyLibrary\LabelProperty;
 use VocabularyLibrary\PlainText;
 
 /**
@@ -25,7 +26,8 @@ use VocabularyLibrary\PlainText;
  */
 class ImportCheck
 {
-    const LABEL_PROPERTY = 'skos:prefLabel|rdfs:label|foaf:name|rss:title|dc:title|dc11:title';
+    // As the module imports them.
+    const LABEL_PROPERTY = LabelProperty::LIBRARY;
     // As the module imports them.
     const COMMENT_PROPERTY = CommentProperty::LIBRARY;
     const VANN = 'http://purl.org/vocab/vann/';

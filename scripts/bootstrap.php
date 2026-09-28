@@ -16,6 +16,7 @@ require dirname(__DIR__) . '/src/PlainText.php';
 require dirname(__DIR__) . '/src/LabelLanguage.php';
 require dirname(__DIR__) . '/src/NamespaceUri.php';
 require dirname(__DIR__) . '/src/CommentProperty.php';
+require dirname(__DIR__) . '/src/LabelProperty.php';
 
 // A script that stops on an error says why, whatever the CLI's display
 // settings: the message alone for the errors the scripts raise on purpose,

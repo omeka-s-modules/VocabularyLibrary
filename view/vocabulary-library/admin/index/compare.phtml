@@ -6,16 +6,9 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library compare
 $browseUrl = $this->url('admin/vocabulary-library');
 $prefix = $vocabulary->prefix();
 
-// Terms as the site writes them, in alphabetical order.
-$rows = function (array $kinds) use ($prefix) {
-    $rows = [];
-    foreach ($kinds as $members) {
-        uksort($members, 'strnatcasecmp');
-        foreach ($members as $localName => $values) {
-            $rows[] = array_merge([$prefix . ':' . $localName], (array) $values);
-        }
-    }
-    return $rows;
+// A term as the site writes it.
+$term = function ($localName) use ($prefix, $escape) {
+    return $escape($prefix . ':' . $localName);
 };
 // A value as it would be stored: escaped, with its whitespace, and marked
 // when empty.
@@ -26,21 +19,50 @@ $value = function ($value) use ($none, $escape) {
     }
     return sprintf('<span class="vocabulary-library-value">%s</span>', $escape($value));
 };
+// A kind's changed terms, as core's update page lists them: each term, with
+// whether its label or comment changed, from what, to what. In alphabetical
+// order of term, so a term's changes are together.
+$changed = function (array $diff) use ($term, $value, $translate, $escape) {
+    $types = ['label' => $escape($translate('Label')), 'comment' => $escape($translate('Comment'))];
+    $localNames = array_keys($diff['label'] + $diff['comment']);
+    usort($localNames, 'strnatcasecmp');
+    $rows = [];
+    foreach ($localNames as $localName) {
+        foreach ($types as $type => $name) {
+            if (isset($diff[$type][$localName])) {
+                [$from, $to] = $diff[$type][$localName];
+                $rows[] = [$term($localName), $name, $value($from), $value($to)];
+            }
+        }
+    }
+    return $rows;
+};
+// Terms with their values, in alphabetical order of term.
+$listed = function (array $members) use ($term, $value) {
+    uksort($members, 'strnatcasecmp');
+    $rows = [];
+    foreach ($members as $localName => $values) {
+        $rows[] = array_merge([$term($localName)], array_map($value, (array) $values));
+    }
+    return $rows;
+};
+// Each section: its heading, its columns, its rows of rendered cells, and
+// any note and table class. Properties come before classes, as on core's
+// update page. A changed term's label and comment are rows of their own.
+$changeColumns = [$translate('Term'), $translate('Type'), $translate('From'), $translate('To')];
+$newColumns = [$translate('Term'), $translate('Label'), $translate('Comment')];
 $sections = [
-    [$translate('Changed labels'), [$translate('Term'), $translate('From'), $translate('To')], $rows([$diff['classes']['label'], $diff['properties']['label']])],
-    [$translate('Changed comments'), [$translate('Term'), $translate('From'), $translate('To')], $rows([$diff['classes']['comment'], $diff['properties']['comment']])],
-    [$translate('New classes'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['classes']['new']])],
-    [$translate('New properties'), [$translate('Term'), $translate('Label'), $translate('Comment')], $rows([$diff['properties']['new']])],
+    ['heading' => $translate('Changed properties'), 'columns' => $changeColumns, 'rows' => $changed($diff['properties']), 'class' => 'vocabulary-library-change-table'],
+    ['heading' => $translate('Changed classes'), 'columns' => $changeColumns, 'rows' => $changed($diff['classes']), 'class' => 'vocabulary-library-change-table'],
+    ['heading' => $translate('New properties'), 'columns' => $newColumns, 'rows' => $listed($diff['properties']['new'])],
+    ['heading' => $translate('New classes'), 'columns' => $newColumns, 'rows' => $listed($diff['classes']['new'])],
 ];
-$changes = array_sum(array_map('count', array_column($sections, 2)));
-// Terms Omeka has and the library's file doesn't come first, with a note.
+$changes = array_sum(array_map('count', array_column($sections, 'rows')));
+// Terms Omeka has and the library's file doesn't come last, with a note.
 // They aren't changes: updating keeps them.
-array_unshift($sections, [
-    $translate('Not in the library\'s file'),
-    [$translate('Term'), $translate('Label')],
-    $rows([$missing['classes'], $missing['properties']]),
-    $translate('Omeka has these and the library\'s file doesn\'t. Updating doesn\'t remove them.'),
-]);
+$notInFile = $translate('Omeka has these and the library\'s file doesn\'t. Updating doesn\'t remove them.');
+$sections[] = ['heading' => $translate('Properties not in the library\'s file'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['properties']), 'note' => $notInFile];
+$sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['classes']), 'note' => $notInFile];
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
@@ -70,7 +92,7 @@ array_unshift($sections, [
     <div class="field">
         <div class="field-meta">
             <label for="vocabulary-library-lang"><?php echo $translate('Preferred language'); ?></label>
-            <div class="field-description"><?php echo $translate('Choose the language the vocabulary was imported in to see what changed, or another language to switch its labels and comments to that language. First available matches an import with no preferred language.'); ?></div>
+            <div class="field-description"><?php echo $translate('Choose the language the vocabulary was imported in, or First available if it was imported without one, to see what changed. Choose another to see what switching its labels and comments would change. The page starts with the language that matches the vocabulary in Omeka.'); ?></div>
         </div>
         <div class="inputs">
             <select name="lang" id="vocabulary-library-lang">
@@ -85,14 +107,13 @@ array_unshift($sections, [
     <?php if ($commentReading !== null): ?>
     <div class="field">
         <div class="field-meta">
-            <?php // Core's label for the same setting on its import form. ?>
-            <label for="vocabulary-library-comments"><?php echo $translate('Comment property'); ?></label>
-            <div class="field-description"><?php echo $translate('The library imports each term\'s skos:definition, and its rdfs:comment where it has none. Omeka\'s own import reads rdfs:comment. Choose the one the vocabulary was imported with to see what changed, or the other to see what switching would change. The page starts with the one that matches.'); ?></div>
+            <label for="vocabulary-library-comments"><?php echo $translate('Comments'); ?></label>
+            <div class="field-description"><?php echo $translate('Choose how the vocabulary was imported to see what changed, or the other to see what switching would change. The page starts with the one that matches the vocabulary in Omeka.'); ?></div>
         </div>
         <div class="inputs">
             <select name="comments" id="vocabulary-library-comments">
-                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('skos:definition, else rdfs:comment'); ?></option>
-                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>>rdfs:comment</option>
+                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('As the library imports them (skos:definition, else rdfs:comment)'); ?></option>
+                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>><?php echo $translate('As Omeka\'s own import reads them (rdfs:comment)'); ?></option>
             </select>
         </div>
     </div>
@@ -110,26 +131,25 @@ array_unshift($sections, [
 <?php endif; ?>
 
 <?php foreach ($sections as $section): ?>
-<?php [$heading, $columns, $sectionRows] = $section; ?>
-<?php if ($sectionRows): ?>
-<h3><?php echo $escape(sprintf('%s (%s)', $heading, count($sectionRows))); ?></h3>
-<?php if (isset($section[3])): ?>
-<p><?php echo $section[3]; ?></p>
+<?php if ($section['rows']): ?>
+<?php // How many terms, which in the changed sections can have two rows each. ?>
+<h3><?php echo $escape(sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))))); ?></h3>
+<?php if (isset($section['note'])): ?>
+<p><?php echo $section['note']; ?></p>
 <?php endif; ?>
-<table class="tablesaw vocabulary-library-compare-table" data-tablesaw-mode="stack">
+<table class="tablesaw vocabulary-library-compare-table <?php echo $section['class'] ?? ''; ?>" data-tablesaw-mode="stack">
     <thead>
         <tr>
-            <?php foreach ($columns as $column): ?>
+            <?php foreach ($section['columns'] as $column): ?>
             <th><?php echo $escape($column); ?></th>
             <?php endforeach; ?>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($sectionRows as $row): ?>
+        <?php foreach ($section['rows'] as $row): ?>
         <tr>
-            <td><?php echo $escape(array_shift($row)); ?></td>
             <?php foreach ($row as $cell): ?>
-            <td><?php echo $value($cell); ?></td>
+            <td><?php echo $cell; ?></td>
             <?php endforeach; ?>
         </tr>
         <?php endforeach; ?>

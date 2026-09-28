@@ -242,12 +242,16 @@ class IndexController extends AbstractActionController
         }
         $vocabulary = $installed['vocabulary'];
         // An empty language is "First available": no preferred language, as
-        // core's import form defaults to.
+        // core's import form defaults to. Until the admin chooses, the page
+        // reads the file in the language the vocabulary was imported in, where
+        // the file has several, so only real changes show.
         $lang = $this->params()->fromPost('lang', $this->params()->fromQuery('lang'));
         if ($lang === '') {
             $lang = null;
         } elseif (!in_array($lang, $entry['languages'], true)) {
-            $lang = LabelLanguage::preferred($entry['languages']);
+            $lang = count($entry['languages']) > 1
+                ? $this->importer->matchingLanguage($entry, $vocabulary)
+                : LabelLanguage::preferred($entry['languages']);
         }
         // Computed on every request, never taken from the form.
         [$reading, $diff] = $this->commentReading($entry, $lang);
