@@ -5,6 +5,7 @@ use EasyRdf\Graph as RdfGraph;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
 use Throwable;
+use VocabularyLibrary\CommentProperty;
 use VocabularyLibrary\LabelLanguage;
 use VocabularyLibrary\PlainText;
 
@@ -25,7 +26,8 @@ use VocabularyLibrary\PlainText;
 class ImportCheck
 {
     const LABEL_PROPERTY = 'skos:prefLabel|rdfs:label|foaf:name|rss:title|dc:title|dc11:title';
-    const COMMENT_PROPERTY = 'rdfs:comment';
+    // As the module imports them.
+    const COMMENT_PROPERTY = CommentProperty::LIBRARY;
     const VANN = 'http://purl.org/vocab/vann/';
 
     /**

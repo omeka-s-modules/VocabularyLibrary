@@ -44,6 +44,12 @@ comment, and the **Preferred language** when the file has more than one
 language. It warns when the prefix is already used in Omeka or reserved. The
 prefix cannot be changed after import.
 
+Each class and property gets its `skos:definition` from the file as its
+comment, where it has one, and otherwise its `rdfs:comment`, or failing that
+its description. Many vocabularies define their terms only in
+`skos:definition`, which Omeka's own import doesn't read, so the library
+imports them with more of their comments filled in.
+
 **Namespace in use** means that Omeka already has a vocabulary with this
 namespace, so this one cannot be imported. The vocabulary in Omeka may be a
 different version, or in another language. **Namespace in use as** means that
@@ -62,14 +68,21 @@ For a vocabulary whose namespace is in use, **Compare and update** in its
 details shows how the vocabulary in Omeka differs from the library's file, and
 **Update** applies the differences. Updating adds classes and properties and
 changes the labels and comments of existing ones, but never removes a class or
-property. Terms listed under **Not in the library's file** can mean that the
-vocabulary in Omeka is newer. Update only when the library's file is newer.
+property. Terms listed under **Not in the library's file** are in Omeka but
+not in the file, and updating keeps them. Look over the changes before
+updating: the labels and comments in Omeka are replaced with the file's.
 
 When the file has more than one language, set **Preferred language** to the
 language the vocabulary was imported in, or to **First available** if it was
 imported without one. Another language shows what switching its labels and
 comments to that language would change, which can correct a vocabulary
 imported with labels in mixed languages.
+
+When the file's definitions and comments differ, **Comment property** chooses
+between `skos:definition, else rdfs:comment`, as the library imports terms,
+and `rdfs:comment`, as Omeka's own import does. It starts with the one that
+matches the vocabulary in Omeka, so only real changes show. Choose the other
+to see what switching its comments would change.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.

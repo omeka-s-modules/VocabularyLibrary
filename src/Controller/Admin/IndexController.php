@@ -10,6 +10,7 @@ use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
 use Omeka\Stdlib\RdfImporter;
+use VocabularyLibrary\CommentProperty;
 use VocabularyLibrary\Form\ImportForm;
 use VocabularyLibrary\LabelLanguage;
 use VocabularyLibrary\NamespaceUri;
@@ -36,6 +37,15 @@ class IndexController extends AbstractActionController
      * 128M to compare.
      */
     const MEMORY_LIMIT = '256M';
+
+    /**
+     * The ways Compare can read terms' comments: as the library imports them,
+     * or as Omeka's own import does.
+     */
+    const COMMENT_READINGS = [
+        'definitions' => CommentProperty::LIBRARY,
+        'comments' => CommentProperty::OMEKA,
+    ];
 
     const CONTENT_TYPES = [
         'jsonld' => 'application/ld+json',
@@ -255,9 +265,29 @@ class IndexController extends AbstractActionController
         } elseif (!in_array($lang, $entry['languages'], true)) {
             $lang = $this->defaultLanguage($entry);
         }
-        $options = $this->importerOptions($entry, $lang);
-        // Computed on every request, never taken from the form.
-        $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $options);
+        // The library imports a term's definition where the file has one, and
+        // Omeka's own import only its comment. Read the other way, every such
+        // comment would show as changed, so the admin chooses. Until they
+        // do, the page reads comments whichever way would change fewer of
+        // those in Omeka, which is the way the vocabulary was imported; where
+        // both ways read the same, there's no choice to offer. The diff is
+        // computed on every request, never taken from the form.
+        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
+        if (in_array($reading, array_keys(self::COMMENT_READINGS), true)) {
+            $diff = $this->diff($entry, $lang, self::COMMENT_READINGS[$reading]);
+        } else {
+            $diffs = [];
+            foreach (self::COMMENT_READINGS as $key => $property) {
+                $diffs[$key] = $this->diff($entry, $lang, $property);
+            }
+            if ($diffs['definitions'] == $diffs['comments']) {
+                $reading = null;
+            } else {
+                $reading = $this->changedComments($diffs['comments']) < $this->changedComments($diffs['definitions']) ? 'comments' : 'definitions';
+            }
+            $diff = $diffs[$reading ?? 'definitions'];
+        }
+        $options = $this->importerOptions($entry, $lang, self::COMMENT_READINGS[$reading ?? 'definitions']);
         $form = $this->getForm(ConfirmForm::class);
 
         if ($this->getRequest()->isPost()) {
@@ -296,6 +326,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('missing', $missing);
         $view->setVariable('lang', $lang);
         $view->setVariable('languageOptions', $this->languageOptions($entry));
+        $view->setVariable('commentReading', $reading);
         $view->setVariable('form', $form);
         return $view;
     }
@@ -392,14 +423,19 @@ class IndexController extends AbstractActionController
      * Options for core's importer to read an entry's file. A null format is
      * one the build check found by autodetecting. Every read of a file gets
      * its options here, so this is also where the memory limit is raised.
+     *
+     * @param string $commentProperty Where terms' comments are read from:
+     *   the library's CommentProperty::LIBRARY, or Omeka's own, to compare a
+     *   vocabulary imported outside the library
      */
-    protected function importerOptions(array $entry, $lang)
+    protected function importerOptions(array $entry, $lang, $commentProperty = CommentProperty::LIBRARY)
     {
         $this->raiseMemoryLimit();
         return [
             'file' => $this->dataDir . '/' . $entry['file'],
             'format' => $entry['format'] ?? 'guess',
             'lang' => $lang,
+            'comment_property' => $commentProperty,
         ];
     }
 
@@ -520,6 +556,31 @@ class IndexController extends AbstractActionController
             $excerpt = rtrim(mb_substr($excerpt, 0, $cut)) . '…';
         }
         return [$excerpt, array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs)];
+    }
+
+    /**
+     * How the vocabulary in Omeka differs from the entry's file, as core's
+     * importer computes it, less comments that go from none to an empty one
+     * or back: a file's empty definition reads as "", where Omeka has none,
+     * and Compare would show "None" changing to "None".
+     */
+    protected function diff(array $entry, $lang, $commentProperty)
+    {
+        $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $this->importerOptions($entry, $lang, $commentProperty));
+        foreach (['classes', 'properties'] as $kind) {
+            $diff[$kind]['comment'] = array_filter($diff[$kind]['comment'], function ($change) {
+                return (string) $change[0] !== '' || (string) $change[1] !== '';
+            });
+        }
+        return $diff;
+    }
+
+    /**
+     * How many of a vocabulary's comments in Omeka a diff would change.
+     */
+    protected function changedComments(array $diff)
+    {
+        return count($diff['classes']['comment']) + count($diff['properties']['comment']);
     }
 
     /**

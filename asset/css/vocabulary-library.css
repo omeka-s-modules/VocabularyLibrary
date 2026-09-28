@@ -274,8 +274,15 @@
     color: #a91919;
 }
 
-/* Compare and update page. Long comments make tall rows; keep each term
-   beside the start of its values. */
+/* Compare and update page. The Compare button follows the reading options
+   rather than sitting in a field, where core's button lacks contrast on the
+   field's gray. */
+.vocabulary-library-reading-actions {
+    margin: 0 0 24px;
+}
+
+/* Long comments make tall rows; keep each term beside the start of its
+   values. */
 table.tablesaw.vocabulary-library-compare-table td {
     vertical-align: top;
 }

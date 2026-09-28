@@ -39,13 +39,13 @@ array_unshift($sections, [
     $translate('Not in the library\'s file'),
     [$translate('Term'), $translate('Label')],
     $rows([$missing['classes'], $missing['properties']]),
-    $translate('These can mean the vocabulary in Omeka is newer than the library\'s file. Updating doesn\'t remove them.'),
+    $translate('Omeka has these and the library\'s file doesn\'t. Updating doesn\'t remove them.'),
 ]);
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
 
-<?php // Only the actions and hidden inputs, so the language form can't nest in it. ?>
+<?php // Only the actions and hidden inputs, so the form of reading options can't nest in it. ?>
 <?php $form->prepare(); ?>
 <?php echo $this->form()->openTag($form); ?>
 <div id="page-actions">
@@ -58,10 +58,15 @@ array_unshift($sections, [
 </div>
 <?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
 <input type="hidden" name="lang" value="<?php echo $escape((string) $lang); ?>">
+<?php if ($commentReading !== null): ?>
+<input type="hidden" name="comments" value="<?php echo $escape($commentReading); ?>">
+<?php endif; ?>
 <?php echo $this->form()->closeTag(); ?>
 
-<?php if (count($entry['languages']) > 1): ?>
-<form method="get" class="vocabulary-library-language">
+<?php // How to read the file, where there's a choice: its language, and where terms' comments come from (null when both ways read the same). ?>
+<?php if (count($entry['languages']) > 1 || $commentReading !== null): ?>
+<form method="get" class="vocabulary-library-reading">
+    <?php if (count($entry['languages']) > 1): ?>
     <div class="field">
         <div class="field-meta">
             <label for="vocabulary-library-lang"><?php echo $translate('Preferred language'); ?></label>
@@ -74,14 +79,32 @@ array_unshift($sections, [
                 <option value="<?php echo $escape($code); ?>"<?php echo $lang === $code ? ' selected' : ''; ?>><?php echo $escape($label); ?></option>
                 <?php endforeach; ?>
             </select>
-            <button type="submit"><?php echo $translate('Compare'); ?></button>
         </div>
+    </div>
+    <?php endif; ?>
+    <?php if ($commentReading !== null): ?>
+    <div class="field">
+        <div class="field-meta">
+            <?php // Core's label for the same setting on its import form. ?>
+            <label for="vocabulary-library-comments"><?php echo $translate('Comment property'); ?></label>
+            <div class="field-description"><?php echo $translate('The library imports each term\'s skos:definition, and its rdfs:comment where it has none. Omeka\'s own import reads rdfs:comment. Choose the one the vocabulary was imported with to see what changed, or the other to see what switching would change. The page starts with the one that matches.'); ?></div>
+        </div>
+        <div class="inputs">
+            <select name="comments" id="vocabulary-library-comments">
+                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('skos:definition, else rdfs:comment'); ?></option>
+                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>>rdfs:comment</option>
+            </select>
+        </div>
+    </div>
+    <?php endif; ?>
+    <div class="vocabulary-library-reading-actions">
+        <button type="submit"><?php echo $translate('Compare'); ?></button>
     </div>
 </form>
 <?php endif; ?>
 
 <?php if ($changes): ?>
-<p class="error"><?php echo $translate('Apply these changes only if the library\'s file is newer than the vocabulary in Omeka.'); ?></p>
+<p><?php echo $translate('Updating changes the labels and comments below to the library file\'s, and adds any new classes and properties. It removes nothing.'); ?></p>
 <?php else: ?>
 <p><?php echo $translate('Updating would change nothing in Omeka.'); ?></p>
 <?php endif; ?>
