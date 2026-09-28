@@ -4,39 +4,25 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
-use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Form\ConfirmForm;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
-use Omeka\Stdlib\RdfImporter;
 use VocabularyLibrary\CommentProperty;
 use VocabularyLibrary\Form\ImportForm;
 use VocabularyLibrary\LabelLanguage;
-use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\PlainText;
+use VocabularyLibrary\Stdlib\Importer;
+use VocabularyLibrary\Stdlib\LanguageNames;
+use VocabularyLibrary\Stdlib\SiteVocabularies;
+use VocabularyLibrary\Stdlib\TermSearch;
 
 class IndexController extends AbstractActionController
 {
     /**
-     * Term search needs a few characters to be useful, and a cap keeps a
-     * request cheap.
-     */
-    const TERM_QUERY_MIN = 3;
-    const TERM_QUERY_MAX = 100;
-    const TERM_MATCHES_SHOWN = 3;
-
-    /**
      * About where the description is cut in the details sidebar.
      */
     const EXCERPT_LENGTH = 200;
-
-    /**
-     * Memory to read a vocabulary's file in. Core's importer holds the whole
-     * file in memory, and the largest files need more than PHP's default of
-     * 128M to compare.
-     */
-    const MEMORY_LIMIT = '256M';
 
     /**
      * The ways Compare can read terms' comments: as the library imports them,
@@ -56,19 +42,23 @@ class IndexController extends AbstractActionController
         'xml' => 'application/rdf+xml',
     ];
 
-    protected $rdfImporter;
+    protected $importer;
+    protected $termSearch;
+    protected $languageNames;
+    protected $siteVocabularies;
     protected $vocabularies;
     protected $tags;
-    protected $dataDir;
 
     /**
      * @param array $vocabularies The library, keyed by slug
      * @param array $tags Tags to filter by, key => label
-     * @param string $dataDir The module's data directory
      */
-    public function __construct(RdfImporter $rdfImporter, array $vocabularies, array $tags, $dataDir)
+    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, array $vocabularies, array $tags)
     {
-        $this->rdfImporter = $rdfImporter;
+        $this->importer = $importer;
+        $this->termSearch = $termSearch;
+        $this->languageNames = $languageNames;
+        $this->siteVocabularies = $siteVocabularies;
         // The name shown for a vocabulary: the library's alternative title,
         // else the file's title. The build requires one of them.
         foreach ($vocabularies as &$entry) {
@@ -77,23 +67,20 @@ class IndexController extends AbstractActionController
         unset($entry);
         $this->vocabularies = $vocabularies;
         $this->tags = $tags;
-        $this->dataDir = $dataDir;
     }
 
     public function browseAction()
     {
-        $installedVocabularies = $this->installedVocabularies();
-        $prefixes = $this->installedPrefixes($installedVocabularies);
         $rows = [];
         $tagCounts = array_fill_keys(array_keys($this->tags), 0);
         $languageCounts = [];
         foreach ($this->vocabularies as $slug => $entry) {
-            $languages = $this->labelLanguages($entry);
+            $languages = $this->languageNames->primaries($entry['languages']);
             $rows[] = [
                 'slug' => (string) $slug,
                 'entry' => $entry,
-                'installed' => $this->installed($entry, $installedVocabularies),
-                'prefixTakenBy' => $prefixes[mb_strtolower($entry['prefix'])] ?? null,
+                'installed' => $this->siteVocabularies->installed($entry),
+                'prefixTakenBy' => $this->siteVocabularies->prefixHolder($entry['prefix']),
                 'languages' => $languages,
             ];
             foreach ($entry['tags'] as $tag) {
@@ -116,17 +103,17 @@ class IndexController extends AbstractActionController
         $view->setVariable('tags', $this->tags);
         $view->setVariable('tagCounts', $tagCounts);
         $view->setVariable('languageCounts', $languageCounts);
-        $view->setVariable('languageNames', $this->languageNames(array_keys($languageCounts)));
+        $view->setVariable('languageNames', $this->languageNames->names(array_keys($languageCounts)));
         // Only single values: a filter given as a list isn't one this page sets.
         $view->setVariable('query', array_filter($this->params()->fromQuery(), 'is_string'));
-        $view->setVariable('termQueryMin', self::TERM_QUERY_MIN);
+        $view->setVariable('termQueryMin', TermSearch::QUERY_MIN);
         return $view;
     }
 
     public function showDetailsAction()
     {
         [$slug, $entry] = $this->entry();
-        $members = $this->rdfImporter->getMembers('file', $entry['namespace'], $this->importerOptions($entry, $this->defaultLanguage($entry)));
+        $members = $this->importer->members($entry, LabelLanguage::preferred($entry['languages']));
         foreach ($members as &$terms) {
             // Some files put HTML in their labels and comments. Labels also
             // have their whitespace collapsed, as the term index has them and
@@ -156,10 +143,9 @@ class IndexController extends AbstractActionController
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
-        $view->setVariable('languageNames', $this->languageNames($this->labelLanguages($entry)));
-        $installedVocabularies = $this->installedVocabularies();
-        $view->setVariable('installed', $this->installed($entry, $installedVocabularies));
-        $view->setVariable('prefixTakenBy', $this->installedPrefixes($installedVocabularies)[mb_strtolower($entry['prefix'])] ?? null);
+        $view->setVariable('languageNames', $this->languageNames->names($this->languageNames->primaries($entry['languages'])));
+        $view->setVariable('installed', $this->siteVocabularies->installed($entry));
+        $view->setVariable('prefixTakenBy', $this->siteVocabularies->prefixHolder($entry['prefix']));
         $view->setVariable('classes', $members['classes']);
         $view->setVariable('properties', $members['properties']);
         return $view;
@@ -168,8 +154,7 @@ class IndexController extends AbstractActionController
     public function importAction()
     {
         [$slug, $entry] = $this->entry();
-        $installedVocabularies = $this->installedVocabularies();
-        $installed = $this->installed($entry, $installedVocabularies);
+        $installed = $this->siteVocabularies->installed($entry);
 
         $view = new ViewModel;
         $view->setVariable('slug', $slug);
@@ -179,17 +164,17 @@ class IndexController extends AbstractActionController
             return $view;
         }
 
-        $form = $this->getForm(ImportForm::class, ['languages' => $this->languageOptions($entry)]);
+        $form = $this->getForm(ImportForm::class, ['languages' => $this->languageNames->options($entry['languages'])]);
         // The label and comment the vocabulary gets in Omeka: the name shown in
         // the library, and the library's summary.
         $form->setData([
             'o:prefix' => $entry['prefix'],
             'o:label' => $entry['name'],
             'o:comment' => $entry['summary'],
-            'lang' => $this->defaultLanguage($entry),
+            'lang' => LabelLanguage::preferred($entry['languages']),
         ]);
         $view->setVariable('form', $form);
-        $view->setVariable('installedPrefixes', $this->installedPrefixes($installedVocabularies));
+        $view->setVariable('installedPrefixes', $this->siteVocabularies->prefixes());
 
         if (!$this->getRequest()->isPost()) {
             return $view;
@@ -200,14 +185,13 @@ class IndexController extends AbstractActionController
             return $view;
         }
         $data = $form->getData();
-        $lang = $form->has('lang') ? $data['lang'] : $this->defaultLanguage($entry);
+        $lang = $form->has('lang') ? $data['lang'] : LabelLanguage::preferred($entry['languages']);
         try {
-            $vocabulary = $this->rdfImporter->import('file', [
-                'o:namespace_uri' => $entry['namespace'],
+            $vocabulary = $this->importer->import($entry, [
                 'o:prefix' => $data['o:prefix'],
                 'o:label' => $data['o:label'],
                 'o:comment' => $data['o:comment'],
-            ], $this->importerOptions($entry, $lang))->getContent();
+            ], $lang);
         } catch (\Exception $e) {
             // As core's import does: the importer's message, and any from the
             // API's validation.
@@ -235,7 +219,7 @@ class IndexController extends AbstractActionController
         );
         $message->setEscapeHtml(false);
         $this->messenger()->addSuccess($message);
-        return $this->redirect()->toUrl($this->vocabularyUrl($vocabulary));
+        return $this->redirect()->toUrl($this->siteVocabularies->url($vocabulary));
     }
 
     /**
@@ -249,7 +233,7 @@ class IndexController extends AbstractActionController
     public function compareAction()
     {
         [, $entry] = $this->entry();
-        $installed = $this->installed($entry, $this->installedVocabularies());
+        $installed = $this->siteVocabularies->installed($entry);
         if (!$installed || !$installed['exact']) {
             throw new NotFoundException;
         }
@@ -263,38 +247,17 @@ class IndexController extends AbstractActionController
         if ($lang === '') {
             $lang = null;
         } elseif (!in_array($lang, $entry['languages'], true)) {
-            $lang = $this->defaultLanguage($entry);
+            $lang = LabelLanguage::preferred($entry['languages']);
         }
-        // The library imports a term's definition where the file has one, and
-        // Omeka's own import only its comment. Read the other way, every such
-        // comment would show as changed, so the admin chooses. Until they
-        // do, the page reads comments whichever way would change fewer of
-        // those in Omeka, which is the way the vocabulary was imported; where
-        // both ways read the same, there's no choice to offer. The diff is
-        // computed on every request, never taken from the form.
-        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
-        if (in_array($reading, array_keys(self::COMMENT_READINGS), true)) {
-            $diff = $this->diff($entry, $lang, self::COMMENT_READINGS[$reading]);
-        } else {
-            $diffs = [];
-            foreach (self::COMMENT_READINGS as $key => $property) {
-                $diffs[$key] = $this->diff($entry, $lang, $property);
-            }
-            if ($diffs['definitions'] == $diffs['comments']) {
-                $reading = null;
-            } else {
-                $reading = $this->changedComments($diffs['comments']) < $this->changedComments($diffs['definitions']) ? 'comments' : 'definitions';
-            }
-            $diff = $diffs[$reading ?? 'definitions'];
-        }
-        $options = $this->importerOptions($entry, $lang, self::COMMENT_READINGS[$reading ?? 'definitions']);
+        // Computed on every request, never taken from the form.
+        [$reading, $diff] = $this->commentReading($entry, $lang);
         $form = $this->getForm(ConfirmForm::class);
 
         if ($this->getRequest()->isPost()) {
             $form->setData($this->params()->fromPost());
             if ($form->isValid()) {
                 try {
-                    $this->rdfImporter->update($vocabulary->id(), $diff);
+                    $this->importer->update($vocabulary->id(), $diff);
                 } catch (\Exception $e) {
                     $this->messenger()->addError($e->getMessage());
                     return $this->redirect()->toRoute('admin/vocabulary-library');
@@ -307,25 +270,13 @@ class IndexController extends AbstractActionController
             $this->messenger()->addFormErrors($form);
         }
 
-        // Terms Omeka has and the library's file doesn't. Core's update keeps
-        // them, and they can mean the vocabulary in Omeka is newer.
-        $members = $this->rdfImporter->getMembers('file', $entry['namespace'], $options);
-        $missing = ['classes' => [], 'properties' => []];
-        foreach (['classes' => $vocabulary->resourceClasses(), 'properties' => $vocabulary->properties()] as $kind => $terms) {
-            foreach ($terms as $term) {
-                if (!isset($members[$kind][$term->localName()])) {
-                    $missing[$kind][$term->localName()] = $term->label();
-                }
-            }
-        }
-
         $view = new ViewModel;
         $view->setVariable('entry', $entry);
         $view->setVariable('vocabulary', $vocabulary);
         $view->setVariable('diff', $diff);
-        $view->setVariable('missing', $missing);
+        $view->setVariable('missing', $this->importer->missingTerms($entry, $vocabulary, $lang));
         $view->setVariable('lang', $lang);
-        $view->setVariable('languageOptions', $this->languageOptions($entry));
+        $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
         $view->setVariable('commentReading', $reading);
         $view->setVariable('form', $form);
         return $view;
@@ -334,57 +285,14 @@ class IndexController extends AbstractActionController
     /**
      * Finds the vocabularies with a class or property matching the query.
      *
-     * Terms are ranked: a label or local name that is the query itself, then
-     * one with a word that starts with it ("date" in "Date created" or
-     * "startDate"), then any other; within a rank, file order.
-     *
      * @return JsonModel {"matches": {slug: {"terms": [{"label": …, "term":
-     *   "prefix:localName"}, …], "count": number}}}: the best
-     *   TERM_MATCHES_SHOWN terms per vocabulary, and how many match in all.
-     *   Terms are written as Omeka writes them, with the library's default
-     *   prefix.
+     *   "prefix:localName"}, …], "count": number}}}, from TermSearch::search()
      */
     public function termSearchAction()
     {
         $query = $this->params()->fromQuery('q');
-        $query = is_string($query) ? trim($query) : '';
-        if (mb_strlen($query) < self::TERM_QUERY_MIN || mb_strlen($query) > self::TERM_QUERY_MAX) {
-            return new JsonModel(['matches' => new \stdClass]);
-        }
-        $lowerQuery = mb_strtolower($query);
-        $wordStart = '/(?:^|[^\p{L}\p{N}])' . preg_quote($lowerQuery, '/') . '/u';
-        $index = json_decode(file_get_contents($this->dataDir . '/term-index.json'), true);
-        $matches = [];
-        foreach ($index as $slug => $terms) {
-            $prefix = $this->vocabularies[$slug]['prefix'] ?? null;
-            if ($prefix === null) {
-                continue;
-            }
-            $found = [];
-            foreach ($terms as $term) {
-                [$localName, $label] = is_array($term) ? $term : [$term, $term];
-                if (mb_stripos($label, $query) === false && mb_stripos($localName, $query) === false) {
-                    continue;
-                }
-                if (mb_strtolower($label) === $lowerQuery || mb_strtolower($localName) === $lowerQuery) {
-                    $rank = 0;
-                } elseif (preg_match($wordStart, $this->words($label)) || preg_match($wordStart, $this->words($localName))) {
-                    $rank = 1;
-                } else {
-                    $rank = 2;
-                }
-                // A term with no label in its file shows its local name, as
-                // Omeka labels it on import.
-                $found[] = [$rank, count($found), ['label' => $label, 'term' => "$prefix:$localName"]];
-            }
-            if ($found) {
-                sort($found);
-                $matches[$slug] = [
-                    'terms' => array_column(array_slice($found, 0, self::TERM_MATCHES_SHOWN), 2),
-                    'count' => count($found),
-                ];
-            }
-        }
+        $matches = $this->termSearch->search(is_string($query) ? $query : '');
+        // An object even when empty, as the script reads it.
         return new JsonModel(['matches' => $matches ?: new \stdClass]);
     }
 
@@ -394,7 +302,7 @@ class IndexController extends AbstractActionController
     public function fileAction()
     {
         [$slug, $entry] = $this->entry();
-        $path = $this->dataDir . '/' . $entry['file'];
+        $path = $this->importer->path($entry);
         $extension = pathinfo($path, PATHINFO_EXTENSION);
         $response = $this->getResponse();
         $response->getHeaders()
@@ -417,113 +325,6 @@ class IndexController extends AbstractActionController
             throw new NotFoundException;
         }
         return [$slug, $this->vocabularies[$slug]];
-    }
-
-    /**
-     * Options for core's importer to read an entry's file. A null format is
-     * one the build check found by autodetecting. Every read of a file gets
-     * its options here, so this is also where the memory limit is raised.
-     *
-     * @param string $commentProperty Where terms' comments are read from:
-     *   the library's CommentProperty::LIBRARY, or Omeka's own, to compare a
-     *   vocabulary imported outside the library
-     */
-    protected function importerOptions(array $entry, $lang, $commentProperty = CommentProperty::LIBRARY)
-    {
-        $this->raiseMemoryLimit();
-        return [
-            'file' => $this->dataDir . '/' . $entry['file'],
-            'format' => $entry['format'] ?? 'guess',
-            'lang' => $lang,
-            'comment_property' => $commentProperty,
-        ];
-    }
-
-    /**
-     * Raises PHP's memory limit to MEMORY_LIMIT where it is lower, as Omeka's
-     * own Datascribe and OSII modules do for their jobs. A host that doesn't
-     * allow it keeps its limit.
-     */
-    protected function raiseMemoryLimit()
-    {
-        $limit = (string) ini_get('memory_limit');
-        if ($limit !== '-1' && self::bytes($limit) < self::bytes(self::MEMORY_LIMIT)) {
-            ini_set('memory_limit', self::MEMORY_LIMIT);
-        }
-    }
-
-    /**
-     * Bytes in a PHP memory size, such as "128M".
-     */
-    protected static function bytes($size)
-    {
-        $size = trim($size);
-        $units = ['k' => 1024, 'm' => 1024 ** 2, 'g' => 1024 ** 3];
-        return (int) $size * ($units[strtolower(substr($size, -1))] ?? 1);
-    }
-
-    /**
-     * The languages of a vocabulary's labels, as primary language subtags
-     * (en-GB and en-us are both en).
-     *
-     * @return string[]
-     */
-    protected function labelLanguages(array $entry)
-    {
-        $languages = [];
-        foreach ($entry['languages'] as $tag) {
-            $languages[strtolower(explode('-', $tag)[0])] = true;
-        }
-        return array_keys($languages);
-    }
-
-    /**
-     * Language codes named in the admin's language, where PHP's intl
-     * extension can name them, otherwise by code, in alphabetical order of
-     * their names.
-     *
-     * @param string[] $codes
-     * @return array code => name
-     */
-    protected function languageNames(array $codes)
-    {
-        $locale = $this->viewHelpers()->get('lang')();
-        $names = [];
-        foreach ($codes as $code) {
-            $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $locale) : $code;
-            $names[$code] = ($name === '' || $name === $code) ? $code : $name;
-        }
-        uasort($names, 'strnatcasecmp');
-        return $names;
-    }
-
-    /**
-     * A menu of a vocabulary's language tags, each named as the filter and
-     * sidebar name it, with the tag itself, which a regional one needs and
-     * core's forms use: "German (de)", "English (en-US)". A language that
-     * can't be named is its tag alone. In alphabetical order of the text.
-     *
-     * @return array tag => option text
-     */
-    protected function languageOptions(array $entry)
-    {
-        $names = $this->languageNames($this->labelLanguages($entry));
-        $options = [];
-        foreach ($entry['languages'] as $tag) {
-            $primary = strtolower(explode('-', $tag)[0]);
-            $options[$tag] = $names[$primary] === $primary ? $tag : sprintf('%s (%s)', $names[$primary], $tag);
-        }
-        uasort($options, 'strnatcasecmp');
-        return $options;
-    }
-
-    /**
-     * The language to import and show labels and comments in, as the build
-     * writes the term index: LabelLanguage::preferred().
-     */
-    protected function defaultLanguage(array $entry)
-    {
-        return LabelLanguage::preferred($entry['languages']);
     }
 
     /**
@@ -559,20 +360,33 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * How the vocabulary in Omeka differs from the entry's file, as core's
-     * importer computes it, less comments that go from none to an empty one
-     * or back: a file's empty definition reads as "", where Omeka has none,
-     * and Compare would show "None" changing to "None".
+     * How Compare reads terms' comments, and the diff read that way.
+     *
+     * The library imports a term's definition where the file has one, and
+     * Omeka's own import only its comment. Read the other way, every such
+     * comment would show as changed, so the admin chooses. Until they do,
+     * the page reads comments whichever way would change fewer of those in
+     * Omeka, which is the way the vocabulary was imported; where both ways
+     * read the same, there's no choice to offer.
+     *
+     * @return array [a key of COMMENT_READINGS, or null where both read the
+     *   same, and the diff]
      */
-    protected function diff(array $entry, $lang, $commentProperty)
+    protected function commentReading(array $entry, $lang)
     {
-        $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $this->importerOptions($entry, $lang, $commentProperty));
-        foreach (['classes', 'properties'] as $kind) {
-            $diff[$kind]['comment'] = array_filter($diff[$kind]['comment'], function ($change) {
-                return (string) $change[0] !== '' || (string) $change[1] !== '';
-            });
+        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
+        if (in_array($reading, array_keys(self::COMMENT_READINGS), true)) {
+            return [$reading, $this->importer->diff($entry, $lang, self::COMMENT_READINGS[$reading])];
         }
-        return $diff;
+        $diffs = [];
+        foreach (self::COMMENT_READINGS as $key => $property) {
+            $diffs[$key] = $this->importer->diff($entry, $lang, $property);
+        }
+        if ($diffs['definitions'] == $diffs['comments']) {
+            return [null, $diffs['definitions']];
+        }
+        $reading = $this->changedComments($diffs['comments']) < $this->changedComments($diffs['definitions']) ? 'comments' : 'definitions';
+        return [$reading, $diffs[$reading]];
     }
 
     /**
@@ -581,87 +395,5 @@ class IndexController extends AbstractActionController
     protected function changedComments(array $diff)
     {
         return count($diff['classes']['comment']) + count($diff['properties']['comment']);
-    }
-
-    /**
-     * @return VocabularyRepresentation[] The site's vocabularies
-     */
-    protected function installedVocabularies()
-    {
-        return $this->api()->search('vocabularies')->getContent();
-    }
-
-    /**
-     * The site's vocabulary prefixes, lowercased, with the label of the
-     * vocabulary that holds each. Omeka compares prefixes without regard to
-     * case.
-     *
-     * @param VocabularyRepresentation[] $installedVocabularies
-     * @return array prefix => label
-     */
-    protected function installedPrefixes(array $installedVocabularies)
-    {
-        $prefixes = [];
-        foreach ($installedVocabularies as $vocabulary) {
-            $prefixes[mb_strtolower($vocabulary->prefix())] = $vocabulary->label();
-        }
-        return $prefixes;
-    }
-
-    /**
-     * The site's vocabulary with this entry's namespace, written the same way
-     * or not. A site can have both forms, for example http://schema.org/ and
-     * https://schema.org/; an exact match wins.
-     *
-     * @return array|null ['vocabulary' => representation, 'url' => link,
-     *   'exact' => whether the namespace is written the same way,
-     *   'comparable' => whether this user can compare it with the library's
-     *   file and update it: written the same way, not one Omeka keeps fixed
-     *   (Dublin Core and its types), and one the user may change (site
-     *   administrators may change only their own)]
-     */
-    protected function installed(array $entry, array $installedVocabularies)
-    {
-        $namespace = $entry['namespace'];
-        $match = null;
-        foreach ($installedVocabularies as $vocabulary) {
-            if (mb_strtolower($vocabulary->namespaceUri()) === mb_strtolower($namespace)) {
-                $match = $vocabulary;
-                break;
-            }
-            if (!$match && NamespaceUri::normalized($vocabulary->namespaceUri()) === NamespaceUri::normalized($namespace)) {
-                $match = $vocabulary;
-            }
-        }
-        if (!$match) {
-            return null;
-        }
-        $exact = mb_strtolower($match->namespaceUri()) === mb_strtolower($namespace);
-        return [
-            'vocabulary' => $match,
-            'url' => $this->vocabularyUrl($match),
-            'exact' => $exact,
-            'comparable' => $exact && !$match->isPermanent() && $match->userIsAllowed('update'),
-        ];
-    }
-
-    /**
-     * Core's Vocabularies page, showing only this vocabulary. Core has no
-     * vocabulary show page, and its browse passes the query to the API, which
-     * filters by namespace_uri.
-     */
-    protected function vocabularyUrl(VocabularyRepresentation $vocabulary)
-    {
-        return $this->url()->fromRoute('admin/default', ['controller' => 'vocabulary', 'action' => 'browse'], ['query' => ['namespace_uri' => $vocabulary->namespaceUri()]]);
-    }
-
-    /**
-     * Text as lowercase words, splitting names written in camel case:
-     * startDate, GrandSonOf and URLTemplate are "start date", "grand son of"
-     * and "url template".
-     */
-    protected function words($text)
-    {
-        return mb_strtolower(preg_replace('/(?<=\p{Ll})(?=\p{Lu})|(?<=\p{Lu})(?=\p{Lu}\p{Ll})/u', ' ', $text));
     }
 }

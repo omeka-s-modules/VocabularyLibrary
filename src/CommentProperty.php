@@ -6,7 +6,9 @@ namespace VocabularyLibrary;
  * of properties, of which the first the term has wins.
  *
  * The module imports, shows and compares terms with the library's, and the
- * build checks files with it, so the two always agree.
+ * build checks files with it, so the two always agree. The build's scripts
+ * load it without starting Omeka, so it must not use Omeka's services,
+ * configuration or database.
  */
 class CommentProperty
 {

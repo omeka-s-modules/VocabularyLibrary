@@ -8,6 +8,8 @@ namespace VocabularyLibrary;
  *
  * The build uses it for the titles, descriptions and licenses it writes, and
  * the module for term labels and comments, which it reads from the files.
+ * The build's scripts load it without starting Omeka, so it must not use
+ * Omeka's services, configuration or database.
  */
 class PlainText
 {

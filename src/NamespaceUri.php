@@ -8,7 +8,9 @@ namespace VocabularyLibrary;
  *
  * The build uses it to refuse a namespace that is already in the collection or
  * excluded, and the module to find a site's vocabulary however the site
- * writes its namespace, so the two always agree.
+ * writes its namespace, so the two always agree. The build's scripts load it
+ * without starting Omeka, so it must not use Omeka's services, configuration
+ * or database.
  */
 class NamespaceUri
 {

@@ -7,7 +7,9 @@ namespace VocabularyLibrary;
  * first language, else none.
  *
  * The module imports and shows terms in it, and the build writes the term
- * index in it, so term search shows the labels the sidebar shows.
+ * index in it, so term search shows the labels the sidebar shows. The build's
+ * scripts load it without starting Omeka, so it must not use Omeka's
+ * services, configuration or database.
  */
 class LabelLanguage
 {
