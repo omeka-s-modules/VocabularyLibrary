@@ -21,7 +21,7 @@
      * Lowercases and strips accents, so "Ontologie" matches "ontologié".
      */
     const fold = function (text) {
-        return text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     };
 
     /**
@@ -80,6 +80,8 @@
 
         const apply = function () {
             const query = fold(form.q.value.trim());
+            // Every word must match a row, in any order.
+            const words = query.split(/\s+/).filter(Boolean);
             const tag = form.tag.value;
             const lang = form.lang.value;
             const show = form.show.value;
@@ -93,7 +95,7 @@
                 // this query rather than narrowed from an earlier one. The
                 // server compares accents, so this compares the text as typed.
                 const all = found && termQuery === form.q.value.trim().toLowerCase() ? found.count : 0;
-                let visible = !query || searchText.get(row).includes(query) || terms.length > 0;
+                let visible = words.every(word => searchText.get(row).includes(word)) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
                 }
@@ -323,11 +325,13 @@
         });
         const filter = function () {
             const query = fold(input.value.trim());
+            // Every word must match, in any order.
+            const words = query.split(/\s+/).filter(Boolean);
             let total = 0;
             groups.forEach(function (group) {
                 let count = 0;
                 group.values.forEach(function (term) {
-                    term.value.hidden = query !== '' && !term.text.includes(query);
+                    term.value.hidden = !words.every(word => term.text.includes(word));
                     count += term.value.hidden ? 0 : 1;
                 });
                 // Every group shows until there's a filter, even one with no
