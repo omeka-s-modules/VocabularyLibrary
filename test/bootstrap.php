@@ -6,7 +6,10 @@
  *
  * The unit tests need only Omeka's development dependencies. The script tests
  * run the collection's scripts on a small collection of their own in a
- * temporary directory, without the network. Neither uses a database.
+ * temporary directory, without the network. The database tests need core's
+ * test database, configured in application/test/config/database.ini, which
+ * they empty and install afresh; they read the small library in
+ * fixtures/library in place of the module's.
  */
 require dirname(__DIR__, 3) . '/bootstrap.php';
 

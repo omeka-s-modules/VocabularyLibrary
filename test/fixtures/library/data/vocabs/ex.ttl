@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix ex: <http://example.org/ns#> .
+
+<http://example.org/ns#> a owl:Ontology ;
+    dcterms:title "Example Vocabulary"@en ;
+    dcterms:description "The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened. This third sentence takes the first paragraph well past the length at which the details sidebar cuts a description.\n\nA second paragraph follows."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "ex" .
+
+ex:Thing a rdfs:Class ;
+    rdfs:label "Thing"@en, "Ding"@de ;
+    skos:definition "Anything at all."@en ;
+    rdfs:comment "A note about things."@en .
+
+ex:Part a rdfs:Class ;
+    rdfs:label "Part"@en, "Teil"@de .
+
+ex:hasPart a rdf:Property ;
+    rdfs:label "has part"@en, "hat Teil"@de ;
+    rdfs:comment "Relates a thing to a part of it."@en .
+
+ex:isPartOf a rdf:Property ;
+    rdfs:label "is part of"@en, "ist Teil von"@de ;
+    skos:definition ""@en .

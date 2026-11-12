@@ -1,0 +1,14 @@
+{
+    "ex": {
+        "download": "http://example.org/ns",
+        "namespace": "http://example.org/ns#",
+        "prefix": "ex",
+        "summary": "Classes and properties for describing things and their parts.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "general"
+        ]
+    }
+}

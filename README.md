@@ -127,10 +127,13 @@ The collection is maintained with the scripts in `scripts/`, which are left
 out of release packages. See [scripts/README.md](scripts/README.md).
 
 The tests are in `test/`, also left out of release packages. They use Omeka's
-own test framework and need its development dependencies, but no database.
-From Omeka's root:
+own test framework and need its development dependencies. The database tests
+also need the test database set in Omeka's
+`application/test/config/database.ini`, and they drop every table in it. From
+Omeka's root, run all of them, or leave those out:
 
     vendor/bin/phpunit -c modules/VocabularyLibrary/test/phpunit.xml
+    vendor/bin/phpunit -c modules/VocabularyLibrary/test/phpunit.xml --testsuite unit,script
 
 # Copyright
 

@@ -7,5 +7,8 @@
     <testsuite name="script">
       <directory>./VocabularyLibraryTest/Script</directory>
     </testsuite>
+    <testsuite name="database">
+      <directory>./VocabularyLibraryTest/Database</directory>
+    </testsuite>
   </testsuites>
 </phpunit>

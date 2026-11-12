@@ -27,6 +27,20 @@ class BuildTest extends ScriptTestCase
         $this->assertSame(['ex' => ['Thing', ['hasPart', 'has part']]], $this->read('data/term-index.json'));
     }
 
+    public function testTheDatabaseTestsLibraryIsWhatTheBuildWrites()
+    {
+        // test/fixtures/library is kept as built, so those tests read what
+        // the module would.
+        $library = dirname(self::fixture('library/data'));
+        copy("$library/scripts/sources.json", "$this->dir/scripts/sources.json");
+        copy("$library/data/vocabs/ex.ttl", "$this->dir/data/vocabs/ex.ttl");
+        [$status, $output] = $this->script('build');
+        $this->assertSame(0, $status, $output);
+        foreach (['vocabularies.json', 'term-index.json'] as $file) {
+            $this->assertFileEquals("$library/data/$file", "$this->dir/data/$file", "$file: run the build on test/fixtures/library again");
+        }
+    }
+
     /**
      * @dataProvider brokenEntries
      */

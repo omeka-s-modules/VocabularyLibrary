@@ -65,6 +65,9 @@ return [
         ],
     ],
     'vocabulary_library' => [
+        // Where the library is: vocabularies.json, term-index.json and the
+        // files in vocabs/, as the build writes them.
+        'data_dir' => dirname(__DIR__) . '/data',
         // Tags an admin can filter the library by. Each vocabulary has one to
         // three, in its "tags" field in data/vocabularies.json.
         'tags' => [

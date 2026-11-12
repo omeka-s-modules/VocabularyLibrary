@@ -1,0 +1,22 @@
+{
+    "ex": {
+        "alt_title": null,
+        "classes": 2,
+        "description": "The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened. This third sentence takes the first paragraph well past the length at which the details sidebar cuts a description.\n\nA second paragraph follows.",
+        "file": "vocabs/ex.ttl",
+        "format": null,
+        "languages": [
+            "de",
+            "en"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "http://example.org/ns#",
+        "prefix": "ex",
+        "properties": 2,
+        "summary": "Classes and properties for describing things and their parts.",
+        "tags": [
+            "general"
+        ],
+        "title": "Example Vocabulary"
+    }
+}
