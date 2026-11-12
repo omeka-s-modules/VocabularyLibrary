@@ -5,14 +5,6 @@ $this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css'
 $this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
 $this->htmlElement('body')->appendAttribute('class', 'vocabs browse vocabulary-library');
 $total = count($rows);
-// Tags in alphabetical order of their translated labels, as the admin's
-// language orders them where PHP's intl extension can.
-$tagLabels = array_map($translate, $tags);
-if (extension_loaded('intl')) {
-    (new Collator($this->lang()))->asort($tagLabels);
-} else {
-    uasort($tagLabels, 'strnatcasecmp');
-}
 // Row text, translated once rather than for each of the rows.
 $matchingTerms = $translate('Matching terms:');
 $sortBy = [

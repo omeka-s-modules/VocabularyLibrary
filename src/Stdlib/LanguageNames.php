@@ -11,14 +11,16 @@ use Laminas\I18n\Translator\TranslatorInterface;
 class LanguageNames
 {
     protected $translator;
+    protected $collation;
 
     /**
      * @param TranslatorInterface $translator The translator core's lang view
      *   helper gets, which holds the admin's locale
      */
-    public function __construct(TranslatorInterface $translator)
+    public function __construct(TranslatorInterface $translator, Collation $collation)
     {
         $this->translator = $translator;
+        $this->collation = $collation;
     }
 
     /**
@@ -54,7 +56,7 @@ class LanguageNames
             $name = extension_loaded('intl') ? \Locale::getDisplayLanguage($code, $locale) : $code;
             $names[$code] = ($name === '' || $name === $code) ? $code : $name;
         }
-        return $this->sorted($names);
+        return $this->collation->sorted($names);
     }
 
     /**
@@ -74,26 +76,6 @@ class LanguageNames
             $primary = strtolower(explode('-', $tag)[0]);
             $options[$tag] = $names[$primary] === $primary ? $tag : sprintf('%s (%s)', $names[$primary], $tag);
         }
-        return $this->sorted($options);
-    }
-
-    /**
-     * Texts in alphabetical order, with their keys: as the admin's language
-     * orders them, where PHP's intl extension can, so an accented name doesn't
-     * follow "z"; otherwise by their bytes, without regard to case.
-     *
-     * @param string[] $texts
-     * @return string[]
-     */
-    public function sorted(array $texts)
-    {
-        if (extension_loaded('intl')) {
-            $collator = new \Collator(str_replace('_', '-', $this->translator->getLocale()));
-            $collator->setAttribute(\Collator::NUMERIC_COLLATION, \Collator::ON);
-            $collator->asort($texts);
-        } else {
-            uasort($texts, 'strnatcasecmp');
-        }
-        return $texts;
+        return $this->collation->sorted($options);
     }
 }

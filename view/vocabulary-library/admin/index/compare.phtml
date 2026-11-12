@@ -22,10 +22,10 @@ $value = function ($value) use ($none, $escape) {
 // A kind's changed terms, as core's update page lists them: each term, with
 // whether its label or comment changed, from what, to what. In alphabetical
 // order of term, so a term's changes are together.
-$changed = function (array $diff) use ($term, $value, $translate, $escape) {
+$changed = function (array $diff) use ($term, $value, $translate, $escape, $collation) {
     $types = ['label' => $escape($translate('Label')), 'comment' => $escape($translate('Comment'))];
     $localNames = array_keys($diff['label'] + $diff['comment']);
-    usort($localNames, 'strnatcasecmp');
+    usort($localNames, [$collation, 'compare']);
     $rows = [];
     foreach ($localNames as $localName) {
         foreach ($types as $type => $name) {
@@ -38,8 +38,8 @@ $changed = function (array $diff) use ($term, $value, $translate, $escape) {
     return $rows;
 };
 // Terms with their values, in alphabetical order of term.
-$listed = function (array $members) use ($term, $value) {
-    uksort($members, 'strnatcasecmp');
+$listed = function (array $members) use ($term, $value, $collation) {
+    uksort($members, [$collation, 'compare']);
     $rows = [];
     foreach ($members as $localName => $values) {
         $rows[] = array_merge([$term($localName)], array_map($value, (array) $values));

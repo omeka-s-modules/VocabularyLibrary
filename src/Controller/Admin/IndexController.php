@@ -9,6 +9,7 @@ use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
 use VocabularyLibrary\Form\ImportForm;
+use VocabularyLibrary\Stdlib\Collation;
 use VocabularyLibrary\Stdlib\Importer;
 use VocabularyLibrary\Stdlib\LanguageNames;
 use VocabularyLibrary\Stdlib\PlainText;
@@ -43,6 +44,7 @@ class IndexController extends AbstractActionController
     protected $termSearch;
     protected $languageNames;
     protected $siteVocabularies;
+    protected $collation;
     protected $vocabularies;
     protected $tags;
 
@@ -50,12 +52,13 @@ class IndexController extends AbstractActionController
      * @param array $vocabularies The library, keyed by slug
      * @param array $tags Tags to filter by, key => label
      */
-    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, array $vocabularies, array $tags)
+    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, Collation $collation, array $vocabularies, array $tags)
     {
         $this->importer = $importer;
         $this->termSearch = $termSearch;
         $this->languageNames = $languageNames;
         $this->siteVocabularies = $siteVocabularies;
+        $this->collation = $collation;
         // The name shown for a vocabulary: the library's alternative title,
         // else the file's title. The build requires one of them.
         foreach ($vocabularies as &$entry) {
@@ -92,12 +95,12 @@ class IndexController extends AbstractActionController
         // so an English option would hide most of them.
         unset($languageCounts['en']);
         usort($rows, function ($a, $b) {
-            return strnatcasecmp($a['entry']['name'], $b['entry']['name']);
+            return $this->collation->compare($a['entry']['name'], $b['entry']['name']);
         });
 
         $view = new ViewModel;
         $view->setVariable('rows', $rows);
-        $view->setVariable('tags', $this->tags);
+        $view->setVariable('tagLabels', $this->tagLabels($this->tags));
         $view->setVariable('tagCounts', $tagCounts);
         $view->setVariable('languageCounts', $languageCounts);
         $view->setVariable('languageNames', $this->languageNames->names(array_keys($languageCounts)));
@@ -123,7 +126,7 @@ class IndexController extends AbstractActionController
             }
             unset($term);
             uasort($terms, function ($a, $b) {
-                return strnatcasecmp($a['label'], $b['label']);
+                return $this->collation->compare($a['label'], $b['label']);
             });
         }
         unset($terms);
@@ -139,7 +142,7 @@ class IndexController extends AbstractActionController
         [$excerpt, $rest] = PlainText::excerpt($entry['description'], self::EXCERPT_LENGTH);
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
-        $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
+        $view->setVariable('tagLabels', $this->tagLabels(array_intersect_key($this->tags, array_flip($entry['tags']))));
         $view->setVariable('languageNames', $this->languageNames->names($this->languageNames->primaries($entry['languages'])));
         $view->setVariable('installed', $this->siteVocabularies->installed($entry));
         $view->setVariable('prefixTakenBy', $this->siteVocabularies->prefixHolder($entry['prefix']));
@@ -276,6 +279,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('entry', $entry);
         $view->setVariable('vocabulary', $vocabulary);
         $view->setVariable('diff', $diff);
+        $view->setVariable('collation', $this->collation);
         $view->setVariable('missing', $this->importer->missingTerms($entry, $vocabulary, $lang));
         $view->setVariable('lang', $lang);
         $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
@@ -313,6 +317,17 @@ class IndexController extends AbstractActionController
             ->addHeaderLine('Content-Length', filesize($path));
         $response->setContent(file_get_contents($path));
         return $response;
+    }
+
+    /**
+     * Tags' labels in the admin's language, in alphabetical order.
+     *
+     * @param array $tags tag => label, as in the module's config
+     * @return array tag => label
+     */
+    protected function tagLabels(array $tags)
+    {
+        return $this->collation->sorted(array_map([$this, 'translate'], $tags));
     }
 
     /**

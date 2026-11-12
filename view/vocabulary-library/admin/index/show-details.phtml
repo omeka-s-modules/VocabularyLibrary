@@ -78,8 +78,8 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('Tags'); ?></h4>
-        <?php foreach ($tags as $tag => $label): ?>
-        <div class="value"><?php echo $this->hyperlink($translate($label), $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
+        <?php foreach ($tagLabels as $tag => $label): ?>
+        <div class="value"><?php echo $this->hyperlink($label, $this->url('admin/vocabulary-library', [], ['query' => ['tag' => $tag]]), ['class' => 'vocabulary-library-tag', 'data-tag' => $tag]); ?></div>
         <?php endforeach; ?>
     </div>
     <div class="meta-group">

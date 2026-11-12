@@ -3,6 +3,7 @@ namespace VocabularyLibraryTest\Unit;
 
 use Laminas\I18n\Translator\Translator;
 use PHPUnit\Framework\TestCase;
+use VocabularyLibrary\Stdlib\Collation;
 use VocabularyLibrary\Stdlib\LanguageNames;
 
 class LanguageNamesTest extends TestCase
@@ -18,7 +19,7 @@ class LanguageNamesTest extends TestCase
         }
         $translator = $this->createMock(Translator::class);
         $translator->method('getLocale')->willReturn($locale);
-        return new LanguageNames($translator);
+        return new LanguageNames($translator, new Collation($translator));
     }
 
     public function testPrimariesAreLanguagesWithoutRegionsOrRepeats()
