@@ -97,7 +97,7 @@ foreach ($rows as $row) {
     foreach ($row as $i => $cell) {
         $line .= $cell . str_repeat(' ', $widths[$i] - mb_strlen($cell) + 2);
     }
-    echo rtrim($line), "\n";
+    echo printable(rtrim($line)), "\n";
 }
 printf("%d with a version, %d with a date, %d with neither; %d flagged as drafts\n",
     $counts['version'], $counts['date'], $counts['neither'], $counts['draft']);

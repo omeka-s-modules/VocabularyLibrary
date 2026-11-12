@@ -1,6 +1,8 @@
 <?php
 namespace VocabularyLibraryTest\Script;
 
+use VocabularyLibrary\Scripts\Download;
+
 /**
  * Runs fetch.php against a web server on this machine that fails the way a
  * publisher's can: test/fixtures/publisher.php, run with PHP's built-in
@@ -8,41 +10,10 @@ namespace VocabularyLibraryTest\Script;
  */
 class FetchFromServerTest extends ScriptTestCase
 {
-    protected $server;
-    protected $address;
-
     protected function setUp(): void
     {
         parent::setUp();
-        // A port nothing uses: ask for any, then give it back.
-        $socket = stream_socket_server('tcp://127.0.0.1:0');
-        $port = (int) substr(strrchr(stream_socket_get_name($socket, false), ':'), 1);
-        fclose($socket);
-        $this->address = "http://127.0.0.1:$port";
-        $this->server = proc_open(
-            [PHP_BINARY, '-S', "127.0.0.1:$port", self::fixture('publisher.php')],
-            [['file', '/dev/null', 'r'], ['file', '/dev/null', 'w'], ['file', '/dev/null', 'w']],
-            $pipes,
-            null,
-            ['PUBLISHER_DIR' => $this->dir] + getenv()
-        );
-        for ($tries = 0; $tries < 100; $tries++) {
-            if ($connection = @fsockopen('127.0.0.1', $port, $errno, $error, 0.1)) {
-                fclose($connection);
-                return;
-            }
-            usleep(50000);
-        }
-        $this->fail('The test server did not start.');
-    }
-
-    protected function tearDown(): void
-    {
-        if ($this->server) {
-            proc_terminate($this->server);
-            proc_close($this->server);
-        }
-        parent::tearDown();
+        $this->startPublisher();
     }
 
     /**
@@ -98,6 +69,15 @@ class FetchFromServerTest extends ScriptTestCase
         $this->assertStringContainsString('failed: ex (no longer usable, needs a look)', $output);
         $this->assertStringContainsString('HTTP 404', $output);
         $this->assertStoredFileKept();
+    }
+
+    public function testABodyLargerThanTheLimitIsNotKept()
+    {
+        file_put_contents("$this->dir/published.ttl", str_repeat('# padding ', 2000));
+        $response = Download::fetchAll(["$this->address/vocabulary.ttl"], true, 1000)[0];
+        $this->assertSame('', $response['body']);
+        $this->assertSame('larger than 0 MB', $response['error']);
+        $this->assertSame(20000, strlen(Download::fetchAll(["$this->address/vocabulary.ttl"])[0]['body']));
     }
 
     public function testAnAlternateAddressIsUsedWhenTheFirstFails()

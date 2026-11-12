@@ -38,24 +38,53 @@ class Download
     const TERM_PAUSE = 250000;
 
     /**
-     * Fetches URLs in parallel, following redirects.
+     * The most terms a term list may name. Each is a request, and the list
+     * is the publisher's to write; the largest in the library has a few
+     * hundred.
+     */
+    const MAX_TERMS = 2000;
+
+    /**
+     * The largest body kept from a download, and the most a gzipped one may
+     * unzip to, in bytes. The largest file in the library is under 20 MB.
+     */
+    const MAX_BYTES = 100 * 1024 * 1024;
+
+    /**
+     * Fetches URLs in parallel, following redirects. Only from the web: an
+     * address or a redirect of another kind, such as a file on this machine,
+     * is refused, since a publisher's list of terms can name any address.
      *
      * @param bool $decode Whether to ask for compressed responses, which curl
      *   unzips
+     * @param int $maxBytes The largest body to keep; a larger one fails
      * @return array Per key: body, type (content type), url (final URL),
      *   status, error, retry_after (seconds, from a Retry-After header), and
      *   no_answer (whether the server did not answer in time or refused the
      *   connection)
      */
-    public static function fetchAll(array $urls, $decode = true)
+    public static function fetchAll(array $urls, $decode = true, $maxBytes = self::MAX_BYTES)
     {
         $multi = curl_multi_init();
         $handles = [];
         $retryAfter = [];
+        $bodies = $tooLarge = [];
         foreach ($urls as $key => $url) {
+            $bodies[$key] = '';
             $handle = curl_init($url);
             curl_setopt_array($handle, [
-                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+                CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+                // The body as it arrives, unzipped, so one that grows past
+                // the limit is cut off rather than held.
+                CURLOPT_WRITEFUNCTION => function ($handle, $chunk) use (&$bodies, &$tooLarge, $key, $maxBytes) {
+                    if (strlen($bodies[$key]) + strlen($chunk) > $maxBytes) {
+                        $tooLarge[$key] = true;
+                        return 0;
+                    }
+                    $bodies[$key] .= $chunk;
+                    return strlen($chunk);
+                },
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_MAXREDIRS => 10,
                 CURLOPT_CONNECTTIMEOUT => 20,
@@ -89,11 +118,13 @@ class Download
             $status = curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
             $code = $codes[spl_object_id($handle)] ?? CURLE_OK;
             $results[$key] = [
-                'body' => (string) curl_multi_getcontent($handle),
+                'body' => isset($tooLarge[$key]) ? '' : $bodies[$key],
                 'type' => strtolower(trim(explode(';', (string) curl_getinfo($handle, CURLINFO_CONTENT_TYPE))[0])),
                 'url' => curl_getinfo($handle, CURLINFO_EFFECTIVE_URL),
                 'status' => $status,
-                'error' => curl_error($handle) ?: ($code !== CURLE_OK ? curl_strerror($code) : ($status >= 400 ? "HTTP $status" : null)),
+                'error' => isset($tooLarge[$key])
+                    ? sprintf('larger than %d MB', $maxBytes / 1024 / 1024)
+                    : (curl_error($handle) ?: ($code !== CURLE_OK ? curl_strerror($code) : ($status >= 400 ? "HTTP $status" : null))),
                 'retry_after' => $retryAfter[$key] ?? null,
                 'no_answer' => in_array($code, [CURLE_OPERATION_TIMEDOUT, CURLE_COULDNT_CONNECT], true),
             ];
@@ -108,7 +139,7 @@ class Download
         // Fetched again without asking for compression, the body arrives as
         // sent, and storable() unzips it.
         if ($decode && $badEncoding) {
-            $results = array_replace($results, self::fetchAll($badEncoding, false));
+            $results = array_replace($results, self::fetchAll($badEncoding, false, $maxBytes));
         }
         return $results;
     }
@@ -239,13 +270,11 @@ class Download
     public static function storable(array $response, $format, $namespace)
     {
         if (strncmp($response['body'], "\x1f\x8b", 2) === 0) {
-            // Through zlib's stream reader, which reads every part of a gzip
-            // file made of several, as that agency's are; gzdecode() stops
-            // after the first.
-            $path = self::tempFile($response['body'], 'gz');
-            $unzipped = file_get_contents('compress.zlib://' . $path);
-            unlink($path);
-            if ($unzipped === false || $unzipped === '') {
+            $unzipped = self::unzipped($response['body']);
+            if ($unzipped === null) {
+                return [null, sprintf('gzipped, and unzips to more than %d MB', self::MAX_BYTES / 1024 / 1024)];
+            }
+            if ($unzipped === '') {
                 return [null, 'gzipped, and did not unzip'];
             }
             $response['body'] = $unzipped;
@@ -304,13 +333,18 @@ class Download
             $graph = new RdfGraph;
             $graph->parse($response['body'], $response['type'] ?: null, $namespace);
             $terms = [];
+            // Only terms in the namespace: the list is the publisher's to
+            // write, and each term is an address this machine then fetches.
             foreach ($graph->resourcesMatching('dcterms:isPartOf', $graph->resource($namespace)) as $term) {
-                if ($term->getUri() !== $namespace) {
+                if ($term->getUri() !== $namespace && strpos((string) $term->getUri(), $namespace) === 0) {
                     $terms[] = $term->getUri();
                 }
             }
             if (!$terms) {
-                return [null, 'the term list has no terms'];
+                return [null, 'the term list has no terms in its namespace'];
+            }
+            if (count($terms) > self::MAX_TERMS) {
+                return [null, sprintf('the term list has more than %d terms', self::MAX_TERMS)];
             }
             sort($terms);
             foreach (array_chunk($terms, self::TERM_BATCH) as $i => $batch) {
@@ -333,16 +367,39 @@ class Download
     }
 
     /**
-     * Writes data to a temporary file with the given extension.
+     * A gzipped body, unzipped: through zlib's stream reader, which reads
+     * every part of a gzip file made of several; gzdecode() stops after the
+     * first.
+     *
+     * @return string|null "" if it does not unzip, null if it unzips to more
+     *   than the limit
+     */
+    public static function unzipped($body, $maxBytes = self::MAX_BYTES)
+    {
+        $path = self::tempFile($body, 'gz');
+        $stream = @fopen('compress.zlib://' . $path, 'rb');
+        $unzipped = $stream ? (string) @stream_get_contents($stream, $maxBytes + 1) : '';
+        if ($stream) {
+            fclose($stream);
+        }
+        unlink($path);
+        return strlen($unzipped) > $maxBytes ? null : $unzipped;
+    }
+
+    /**
+     * Writes data to a temporary file with the given extension. The file is
+     * made under a name only this process can have, then given its
+     * extension, so nothing another user of the machine puts at the final
+     * name is written through.
      *
      * @return string The path; the caller deletes it
      */
     public static function tempFile($data, $extension)
     {
         $base = tempnam(sys_get_temp_dir(), 'vocabulary-library-');
-        unlink($base);
+        file_put_contents($base, $data);
         $path = "$base.$extension";
-        file_put_contents($path, $data);
+        rename($base, $path);
         return $path;
     }
 }

@@ -162,13 +162,13 @@ class AddRemoveTest extends ScriptTestCase
     }
 
     /**
-     * Point the collection's vocabulary at a file to download, in place of
-     * a publisher's server.
+     * Point the collection's vocabulary at a file to download from a server
+     * on this machine, in place of a publisher's.
      */
     protected function publish($content)
     {
         file_put_contents("$this->dir/published.ttl", $content);
-        $this->writeSources(['ex' => ['download' => "file://$this->dir/published.ttl"] + self::ENTRY]);
+        $this->writeSources(['ex' => ['download' => $this->startPublisher() . '/vocabulary.ttl'] + self::ENTRY]);
     }
 
     public function testFetchSaysHowAChangedVocabularysTermsDiffer()
@@ -246,12 +246,15 @@ class AddRemoveTest extends ScriptTestCase
         $this->assertFileEquals(self::fixture('basic.ttl'), "$this->dir/data/vocabs/ex.ttl");
     }
 
-    public function testAnAddressThatServesNothingNeedsALook()
+    public function testAnAddressThatIsNotOnTheWebIsNotFetched()
     {
-        $this->writeSources(['ex' => ['download' => "file://$this->dir/nothing-here.ttl"] + self::ENTRY]);
+        // A file on this machine, which a publisher's list could name.
+        file_put_contents("$this->dir/local.ttl", str_replace('"Thing"@en', '"Local"@en', file_get_contents(self::fixture('basic.ttl'))));
+        $this->writeSources(['ex' => ['download' => "file://$this->dir/local.ttl"] + self::ENTRY]);
         [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
         $this->assertSame(0, $status, $output);
         $this->assertStringContainsString('failed: ex (no longer usable, needs a look)', $output);
+        $this->assertFileEquals(self::fixture('basic.ttl'), "$this->dir/data/vocabs/ex.ttl");
     }
 
     public function testFetchRefusesAnOptionItDoesNotKnow()

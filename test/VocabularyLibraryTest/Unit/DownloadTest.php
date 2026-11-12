@@ -137,6 +137,41 @@ class DownloadTest extends TestCase
         $this->assertSame('jsonld', Download::storable(self::response('{"@context": {}, "@id": "http://example.org/a"}', 'text/plain'), null, null)[1]);
     }
 
+    public function testATermListsTermsMustBeInItsNamespace()
+    {
+        $namespace = 'http://example.org/terms/';
+        // A file on this machine and a term of another host: neither is
+        // fetched, so there is nothing to assemble.
+        $list = "<file:///etc/hostname> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n<http://other.example/terms/x> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n";
+        $this->assertSame([null, 'the term list has no terms in its namespace'], Download::termList(self::response($list, 'application/n-triples'), $namespace));
+    }
+
+    public function testATermListMayNotNameTooManyTerms()
+    {
+        $namespace = 'http://example.org/terms/';
+        $list = '';
+        for ($i = 0; $i <= Download::MAX_TERMS; $i++) {
+            $list .= "<{$namespace}t$i> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n";
+        }
+        $this->assertSame([null, 'the term list has more than 2000 terms'], Download::termList(self::response($list, 'application/n-triples'), $namespace));
+    }
+
+    public function testAGzippedBodyThatUnzipsPastTheLimitIsRefused()
+    {
+        $this->assertSame('small', Download::unzipped(gzencode('small'), 10));
+        $this->assertNull(Download::unzipped(gzencode(str_repeat('a', 5000)), 1000));
+        $this->assertSame('', Download::unzipped("\x1f\x8bnot gzip", 1000));
+    }
+
+    public function testATemporaryFileHasItsDataAndExtension()
+    {
+        $path = Download::tempFile('data', 'ttl');
+        $this->assertStringEndsWith('.ttl', $path);
+        $this->assertSame('data', file_get_contents($path));
+        $this->assertSame('0600', substr(sprintf('%o', fileperms($path)), -4));
+        unlink($path);
+    }
+
     public function testAGzippedBodyIsUnzipped()
     {
         $this->assertSame([self::TURTLE, 'ttl'], Download::storable(self::response(gzencode(self::TURTLE), 'application/gzip'), null, null));

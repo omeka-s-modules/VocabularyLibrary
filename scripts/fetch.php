@@ -188,7 +188,7 @@ foreach ($groups as $what => $slugs) {
     foreach ($slugs as $slug => $reasons) {
         echo "  failed: $slug ($what)\n";
         foreach ($reasons as $reason) {
-            echo "    $reason\n";
+            echo '    ', printable($reason), "\n";
         }
     }
 }

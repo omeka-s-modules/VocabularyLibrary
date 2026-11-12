@@ -217,7 +217,7 @@ $repo->storeFile($slug, $data, $extension);
 $repo->writeSources($sources);
 
 printf("Added %s: %s, prefix %s, namespace %s (%s), %d classes, %d properties\n",
-    $slug, $altTitle ?? $result['title'], $prefix, $namespace, $result['namespace_source'], $result['classes'], $result['properties']);
+    $slug, printable($altTitle ?? $result['title']), $prefix, $namespace, $result['namespace_source'], $result['classes'], $result['properties']);
 
 passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/build.php'), $status);
 if ($status !== 0) {

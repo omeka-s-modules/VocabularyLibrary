@@ -38,8 +38,18 @@ $omekaVersion = $match[1];
  */
 function fail($message)
 {
-    fwrite(STDERR, "$message\n");
+    fwrite(STDERR, printable($message) . "\n");
     exit(1);
+}
+
+/**
+ * Text safe to print: without the control characters a publisher's text or
+ * a server's answer may carry, which a terminal would act on. Line breaks
+ * and tabs stay.
+ */
+function printable($text)
+{
+    return preg_replace('/[^\P{C}\n\t]/u', '', (string) $text) ?? preg_replace('/[\x00-\x08\x0B-\x1F\x7F]/', '', (string) $text);
 }
 
 /**

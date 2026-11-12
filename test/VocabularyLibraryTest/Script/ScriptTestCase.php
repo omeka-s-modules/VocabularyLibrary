@@ -20,6 +20,12 @@ abstract class ScriptTestCase extends TempDirTestCase
         'tags' => ['general'],
     ];
 
+    /**
+     * The publisher's server, once startPublisher() has run, and its address.
+     */
+    protected $server;
+    protected $address;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -32,6 +38,44 @@ abstract class ScriptTestCase extends TempDirTestCase
         }
         copy(self::fixture('basic.ttl'), "$this->dir/data/vocabs/ex.ttl");
         $this->writeSources(['ex' => self::ENTRY]);
+    }
+
+    protected function tearDown(): void
+    {
+        if ($this->server) {
+            proc_terminate($this->server);
+            proc_close($this->server);
+            $this->server = null;
+        }
+        parent::tearDown();
+    }
+
+    /**
+     * Start a web server on this machine that stands in for a publisher's:
+     * test/fixtures/publisher.php, run with PHP's built-in server. It serves
+     * published.ttl in the test's directory, and stops after the test.
+     *
+     * @return string Its address, such as http://127.0.0.1:49152
+     */
+    protected function startPublisher()
+    {
+        if ($this->server) {
+            return $this->address;
+        }
+        // The server takes a port of its own choosing, read from its first
+        // line, so no other process can take it in between.
+        $this->server = proc_open(
+            [PHP_BINARY, '-S', '127.0.0.1:0', self::fixture('publisher.php')],
+            [['file', '/dev/null', 'r'], ['file', '/dev/null', 'w'], ['pipe', 'w']],
+            $pipes,
+            null,
+            ['PUBLISHER_DIR' => $this->dir] + getenv()
+        );
+        $started = fgets($pipes[2]);
+        if (!preg_match('#http://127\.0\.0\.1:\d+#', (string) $started, $match)) {
+            $this->fail('The test server did not start: ' . $started);
+        }
+        return $this->address = $match[0];
     }
 
     protected function writeSources(array $sources)

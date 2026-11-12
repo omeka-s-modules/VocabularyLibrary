@@ -4,6 +4,7 @@
  * web server. The directory to serve from is in the PUBLISHER_DIR environment
  * variable.
  *
+ * /vocabulary.ttl  serves the file
  * /flaky.ttl  answers 503 the first time it is asked, then serves the file
  * /down.ttl   always answers 503
  * /busy.ttl   answers 429 with a Retry-After the first time, then the file
@@ -23,7 +24,7 @@ if ($path === '/down.ttl' || ($path === '/flaky.ttl' && $asked === 1)) {
     http_response_code(429);
     header('Retry-After: 0');
     echo 'Too many requests.';
-} elseif (in_array($path, ['/flaky.ttl', '/busy.ttl'], true)) {
+} elseif (in_array($path, ['/vocabulary.ttl', '/flaky.ttl', '/busy.ttl'], true)) {
     header('Content-Type: text/turtle');
     readfile("$dir/published.ttl");
 } else {
