@@ -24,7 +24,7 @@ module is in, for its RDF importer. To use another, set `OMEKA_DIR`.
 
 The comment at the top of each script gives its usage and options in full.
 
-- `add.php <url> --tags= --summary=`: adds a vocabulary from the address of
+- `add.php [<url>] --tags= --summary=`: adds a vocabulary from the address of
   its file. Options cover a vocabulary published only as RDFa in a web page,
   one published as a list of terms, an archived copy, and a file sent to the
   library, which has no address.
@@ -46,9 +46,10 @@ The comment at the top of each script gives its usage and options in full.
 
 ## Curation rules
 
-- **Inclusion:** Omeka must import classes or properties from the file that
-  are useful for describing resources, and the license must allow
-  redistribution. A file sent to the library, with a namespace but no
+- **Inclusion:** the vocabulary must be valid RDF, as a file or at an
+  address. Omeka must import classes or properties from it that are useful
+  for describing resources, and the license must not forbid redistribution;
+  most files state none. A file sent to the library, with a namespace but no
   address, is included on the same terms. Whether a vocabulary belongs is the
   Omeka team's judgement. Record a vocabulary left out, and why, in
   `excluded.json`.
