@@ -19,6 +19,15 @@ class Importer
      */
     const MEMORY_LIMIT = '256M';
 
+    /**
+     * The ways Compare can read terms' comments: as the library imports them,
+     * or as Omeka's own import does.
+     */
+    const COMMENT_READINGS = [
+        'definitions' => TermReading::COMMENT_PROPERTY,
+        'comments' => TermReading::OMEKA_COMMENT_PROPERTY,
+    ];
+
     protected $rdfImporter;
     protected $dataDir;
 
@@ -83,6 +92,42 @@ class Importer
             });
         }
         return $diff;
+    }
+
+    /**
+     * How the vocabulary in Omeka differs from an entry's file, with its
+     * comments read the way asked, or else the way it was imported.
+     *
+     * The library imports a term's definition where the file has one, and
+     * Omeka's own import only its comment. Read the other way, every such
+     * comment would show as changed, so the admin chooses. Until they do,
+     * comments are read whichever way would change fewer of those in Omeka,
+     * which is the way the vocabulary was imported; where both ways read the
+     * same, there's no choice to offer.
+     *
+     * @param string|null $lang The language to read labels and comments in
+     * @param string|null $reading A key of COMMENT_READINGS; anything else
+     *   is no choice
+     * @return array [a key of COMMENT_READINGS, or null where no way was
+     *   asked and both read the same, and the diff]
+     */
+    public function diffAsImported(array $entry, $lang, $reading = null)
+    {
+        if (is_string($reading) && isset(self::COMMENT_READINGS[$reading])) {
+            return [$reading, $this->diff($entry, $lang, self::COMMENT_READINGS[$reading])];
+        }
+        $diffs = [];
+        foreach (self::COMMENT_READINGS as $key => $property) {
+            $diffs[$key] = $this->diff($entry, $lang, $property);
+        }
+        if ($diffs['definitions'] == $diffs['comments']) {
+            return [null, $diffs['definitions']];
+        }
+        $changed = function (array $diff) {
+            return count($diff['classes']['comment']) + count($diff['properties']['comment']);
+        };
+        $reading = $changed($diffs['comments']) < $changed($diffs['definitions']) ? 'comments' : 'definitions';
+        return [$reading, $diffs[$reading]];
     }
 
     /**

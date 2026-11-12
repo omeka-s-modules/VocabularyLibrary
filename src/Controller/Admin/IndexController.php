@@ -28,15 +28,6 @@ class IndexController extends AbstractActionController
     const EXCERPT_LENGTH = 200;
 
     /**
-     * The ways Compare can read terms' comments: as the library imports them,
-     * or as Omeka's own import does.
-     */
-    const COMMENT_READINGS = [
-        'definitions' => TermReading::COMMENT_PROPERTY,
-        'comments' => TermReading::OMEKA_COMMENT_PROPERTY,
-    ];
-
-    /**
      * The content type a vocabulary's file is sent with, by its extension.
      */
     const CONTENT_TYPES = [
@@ -121,11 +112,11 @@ class IndexController extends AbstractActionController
         [$slug, $entry] = $this->entry();
         $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
         foreach ($members as &$terms) {
-            // Some files put HTML in their labels and comments. Labels also
-            // have their whitespace collapsed, as the term index has them and
-            // the browser shows them, so the term filter matches what's shown.
+            // Some files put HTML in their labels and comments. Labels are
+            // one line, as the term index has them, so the term filter
+            // matches what's shown.
             foreach ($terms as &$term) {
-                $term['label'] = trim(preg_replace('/\s+/u', ' ', PlainText::from($term['label'])));
+                $term['label'] = PlainText::line($term['label']);
                 if ($term['comment'] !== null) {
                     $term['comment'] = PlainText::from($term['comment']);
                 }
@@ -145,7 +136,7 @@ class IndexController extends AbstractActionController
         // search's matches.
         $filter = $this->params()->fromQuery('filter');
         $view->setVariable('termFilter', is_string($filter) ? trim($filter) : '');
-        [$excerpt, $rest] = $this->excerpt($entry['description'], self::EXCERPT_LENGTH);
+        [$excerpt, $rest] = PlainText::excerpt($entry['description'], self::EXCERPT_LENGTH);
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
         $view->setVariable('tags', array_intersect_key($this->tags, array_flip($entry['tags'])));
@@ -260,7 +251,8 @@ class IndexController extends AbstractActionController
                 : TermReading::preferredLanguage($entry['languages']);
         }
         // Computed on every request, never taken from the form.
-        [$reading, $diff] = $this->commentReading($entry, $lang);
+        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
+        [$reading, $diff] = $this->importer->diffAsImported($entry, $lang, $reading);
         $form = $this->getForm(ConfirmForm::class);
 
         if ($this->getRequest()->isPost()) {
@@ -335,75 +327,5 @@ class IndexController extends AbstractActionController
             throw new NotFoundException;
         }
         return [$slug, $this->vocabularies[$slug]];
-    }
-
-    /**
-     * The start of the description, and the rest. The start is its first
-     * paragraph cut near $length characters, ending with a sentence where one
-     * ends in time; a first sentence much longer than that is cut at a word,
-     * and the rest continues from there. Some descriptions run to many
-     * thousands of characters.
-     *
-     * A sentence ends at ".", "?" or "!" followed by a capital, a digit, a
-     * quote or a parenthesis, so abbreviations such as "e.g." don't end one.
-     *
-     * @return array [the start, or null if there is no description, the rest
-     *   as paragraphs]
-     */
-    protected function excerpt($description, $length)
-    {
-        $paragraphs = array_filter(explode("\n\n", (string) $description), 'strlen');
-        if (!$paragraphs) {
-            return [null, []];
-        }
-        $sentences = preg_split('/(?<=[.!?])\s+(?=[\p{Lu}\p{N}"“(])/u', array_shift($paragraphs));
-        $excerpt = array_shift($sentences);
-        while ($sentences && mb_strlen($excerpt . ' ' . $sentences[0]) <= $length) {
-            $excerpt .= ' ' . array_shift($sentences);
-        }
-        if (mb_strlen($excerpt) > $length * 1.25) {
-            $cut = mb_strrpos(mb_substr($excerpt, 0, $length), ' ') ?: $length;
-            array_unshift($sentences, '…' . ltrim(mb_substr($excerpt, $cut)));
-            $excerpt = rtrim(mb_substr($excerpt, 0, $cut)) . '…';
-        }
-        return [$excerpt, array_merge($sentences ? [implode(' ', $sentences)] : [], $paragraphs)];
-    }
-
-    /**
-     * How Compare reads terms' comments, and the diff read that way.
-     *
-     * The library imports a term's definition where the file has one, and
-     * Omeka's own import only its comment. Read the other way, every such
-     * comment would show as changed, so the admin chooses. Until they do,
-     * the page reads comments whichever way would change fewer of those in
-     * Omeka, which is the way the vocabulary was imported; where both ways
-     * read the same, there's no choice to offer.
-     *
-     * @return array [a key of COMMENT_READINGS, or null where both read the
-     *   same, and the diff]
-     */
-    protected function commentReading(array $entry, $lang)
-    {
-        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
-        if (in_array($reading, array_keys(self::COMMENT_READINGS), true)) {
-            return [$reading, $this->importer->diff($entry, $lang, self::COMMENT_READINGS[$reading])];
-        }
-        $diffs = [];
-        foreach (self::COMMENT_READINGS as $key => $property) {
-            $diffs[$key] = $this->importer->diff($entry, $lang, $property);
-        }
-        if ($diffs['definitions'] == $diffs['comments']) {
-            return [null, $diffs['definitions']];
-        }
-        $reading = $this->changedComments($diffs['comments']) < $this->changedComments($diffs['definitions']) ? 'comments' : 'definitions';
-        return [$reading, $diffs[$reading]];
-    }
-
-    /**
-     * How many of a vocabulary's comments in Omeka a diff would change.
-     */
-    protected function changedComments(array $diff)
-    {
-        return count($diff['classes']['comment']) + count($diff['properties']['comment']);
     }
 }

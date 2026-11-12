@@ -159,10 +159,8 @@ foreach ($sources as $slug => $entry) {
     foreach (['classes', 'properties'] as $kind) {
         foreach ($result['members'][$kind] as $localName => $member) {
             $localName = (string) $localName;
-            // Without markup, as the sidebar shows it, and with whitespace
-            // collapsed, as the browser shows it, so a search for several
-            // words matches.
-            $label = trim(preg_replace('/\s+/u', ' ', PlainText::from($member['label'])));
+            // One line without markup, as the sidebar shows it.
+            $label = PlainText::line($member['label']);
             $terms[] = $label === $localName ? $localName : [$localName, $label];
         }
     }

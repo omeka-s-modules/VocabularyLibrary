@@ -51,6 +51,13 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame('https://creativecommons.org/licenses/by/4.0/', $result['license']);
     }
 
+    public function testATitleOverSeveralLinesIsOneLine()
+    {
+        $path = $this->dir . '/title.ttl';
+        file_put_contents($path, "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n<http://example.org/ns#> a <http://www.w3.org/2002/07/owl#Ontology> ; dcterms:title \"\"\"The *Example*\n\n  Vocabulary\"\"\"@en .\n<http://example.org/ns#Thing> a rdfs:Class .\n");
+        $this->assertSame('The Example Vocabulary', (new ImportCheck)->check($path, self::NS)['title']);
+    }
+
     public function testAFileThatSaysNothingOfItselfGivesNoMetadata()
     {
         $result = $this->check('no-metadata.ttl');

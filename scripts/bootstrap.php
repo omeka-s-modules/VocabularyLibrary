@@ -24,6 +24,7 @@ set_exception_handler(function (Throwable $e) {
     fail($e instanceof RuntimeException ? $e->getMessage() : (string) $e);
 });
 require __DIR__ . '/Repo.php';
+require __DIR__ . '/Markdown.php';
 require __DIR__ . '/ImportCheck.php';
 require __DIR__ . '/Download.php';
 

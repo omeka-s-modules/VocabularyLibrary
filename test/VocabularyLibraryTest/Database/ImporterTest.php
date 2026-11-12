@@ -13,6 +13,7 @@ class ImporterTest extends DbTestCase
 {
     protected $importer;
     protected $entry;
+    protected $temporary = [];
 
     public function setUp(): void
     {
@@ -100,6 +101,67 @@ class ImporterTest extends DbTestCase
             return array_map('strval', $change);
         }, $diff['classes']['comment']));
         $this->assertSame([], $diff['properties']['comment']);
+    }
+
+    public function testCommentsAreReadTheWayTheVocabularyWasImported()
+    {
+        // As the library imports: the definition matches, so no change.
+        $this->import('en');
+        [$reading, $diff] = $this->importer->diffAsImported($this->entry, 'en');
+        $this->assertSame('definitions', $reading);
+        $this->assertSame([], $diff['classes']['comment']);
+    }
+
+    public function testCommentsImportedAsOmekaDoesAreReadThatWay()
+    {
+        $vocabulary = $this->import('en');
+        $this->importer->update($vocabulary->id(), $this->importer->diff($this->entry, 'en', TermReading::OMEKA_COMMENT_PROPERTY));
+        self::services()->get('Omeka\EntityManager')->clear();
+        [$reading, $diff] = $this->importer->diffAsImported($this->entry, 'en');
+        $this->assertSame('comments', $reading);
+        $this->assertSame([], $diff['classes']['comment']);
+    }
+
+    public function testTheReadingAskedForIsUsed()
+    {
+        $this->import('en');
+        [$reading, $diff] = $this->importer->diffAsImported($this->entry, 'en', 'comments');
+        $this->assertSame('comments', $reading);
+        $this->assertSame(['Thing'], array_keys($diff['classes']['comment']));
+        // Anything else is no choice.
+        $this->assertSame('definitions', $this->importer->diffAsImported($this->entry, 'en', 'nonsense')[0]);
+        $this->assertSame('definitions', $this->importer->diffAsImported($this->entry, 'en', ['comments'])[0]);
+    }
+
+    public function testThereIsNoReadingToChooseWhereBothReadTheSame()
+    {
+        $entry = ['file' => 'vocabs/same.ttl', 'namespace' => 'http://example.org/same#', 'format' => null, 'languages' => []];
+        $importer = new Importer(self::services()->get('Omeka\RdfImporter'), $this->dir());
+        $importer->import($entry, ['o:prefix' => 'same', 'o:label' => 'Same'], null);
+        $this->assertNull($importer->diffAsImported($entry, null)[0]);
+    }
+
+    /**
+     * A library directory with a vocabulary whose terms have no definitions.
+     */
+    protected function dir()
+    {
+        $dir = sys_get_temp_dir() . '/vocabulary-library-test-' . bin2hex(random_bytes(6));
+        mkdir("$dir/vocabs", 0777, true);
+        file_put_contents("$dir/vocabs/same.ttl", "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n<http://example.org/same#Thing> a rdfs:Class ; rdfs:label \"Thing\" ; rdfs:comment \"A comment.\" .\n");
+        $this->temporary[] = $dir;
+        return $dir;
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+        foreach ($this->temporary as $dir) {
+            unlink("$dir/vocabs/same.ttl");
+            rmdir("$dir/vocabs");
+            rmdir($dir);
+        }
+        $this->temporary = [];
     }
 
     public function testAnotherLanguageShowsItsLabelsAsChanges()
