@@ -145,8 +145,20 @@ class ImportCheck
         // them in, so the term index matches the sidebar. Only they change
         // with the language, not which terms there are.
         $lang = LabelLanguage::preferred($languages);
+        $read = self::LANG;
         if ($bestCount && $lang !== null && $lang !== self::LANG) {
             $bestMembers = $this->importer->members($graph, $best, $lang);
+            $read = $lang;
+        }
+        // An admin can import the terms in any of the file's languages, so
+        // the limits are checked in each.
+        $limits = $this->limits($best, $bestMembers);
+        foreach ($bestCount ? array_diff($languages, [$read]) : [] as $language) {
+            foreach ($this->limits($best, $this->importer->members($graph, $best, $language)) as $limit) {
+                if (!in_array($limit, $limits, true)) {
+                    $limits[] = "$limit in \"$language\"";
+                }
+            }
         }
 
         return [
@@ -157,7 +169,7 @@ class ImportCheck
             'classes' => count($bestMembers['classes']),
             'properties' => count($bestMembers['properties']),
             'members' => $bestMembers,
-            'limits' => $this->limits($best, $bestMembers),
+            'limits' => $limits,
             'languages' => $languages,
             'prefix' => $this->safely(function () use ($graph, $best) {
                 return $this->declaredPrefix($graph, $best);

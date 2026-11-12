@@ -117,6 +117,9 @@ foreach ($sources as $slug => $entry) {
     if (isset($entry['alt_title']) && trim($entry['alt_title_source'] ?? '') === '') {
         $problems[] = "$slug: alt_title needs an alt_title_source saying where the name comes from";
     }
+    if (!is_array($entry['summary_basis'] ?? null) || !array_filter($entry['summary_basis'], 'is_string')) {
+        $problems[] = "$slug: no summary_basis, listing what the summary was drafted from";
+    }
     if (!isset($entry['summary'])) {
         $problems[] = "$slug: no summary";
     } else {

@@ -3,7 +3,7 @@
  * Adds a vocabulary to the collection from the URL of its file.
  *
  * Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary=
- *            [--prefix=] [--slug=] [--namespace=]
+ *            [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=]
  *            [--alt-title= --alt-title-source=] [--format=rdfa|term-list]
  *            [--file=<path> --copy-from=<archive>]
  *
@@ -13,6 +13,8 @@
  * --prefix is given; most files declare none. The slug defaults to the
  * prefix, lowercased; slugs are permanent once released, so choose with
  * care. --summary is the library's one-sentence summary of the vocabulary.
+ * --summary-basis is the address of the publisher's documentation, if the
+ * summary was drafted from it as well as from the file.
  * --alt-title is the library's name for it, another official name such as its
  * short name, needed when the file has no title, none in English, or a
  * misleading one; --alt-title-source says where the name comes from. --format=rdfa is
@@ -40,8 +42,8 @@ use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
 
-const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
-const OPTIONS = ['tags', 'summary', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from'];
+const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
+const OPTIONS = ['tags', 'summary', 'summary-basis', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from'];
 // Extensions an archived copy may keep.
 const FILE_EXTENSIONS = ['jsonld', 'nt', 'owl', 'rdf', 'ttl', 'xml'];
 
@@ -65,6 +67,14 @@ if (!$tags || count($tags) > Repo::MAX_TAGS || array_diff($tags, $knownTags)) {
 $summary = trim((string) option($argv, 'summary'));
 if ($summary === '') {
     fail('Give the library\'s one-sentence summary of the vocabulary with --summary=.');
+}
+// What the summary was drafted from: the file, and any documentation.
+$summaryBasis = ['file'];
+if (($documentation = option($argv, 'summary-basis')) !== null) {
+    if (!preg_match('#^https?://#', $documentation)) {
+        fail('--summary-basis takes the address of the publisher\'s documentation.');
+    }
+    $summaryBasis[] = $documentation;
 }
 $altTitle = option($argv, 'alt-title');
 $altTitleSource = option($argv, 'alt-title-source');
@@ -165,7 +175,7 @@ if ($altTitle === null && $result['title'] === null) {
     fail('The file has no title. Pass the publisher\'s name for the vocabulary with --alt-title= and --alt-title-source=.');
 }
 
-$entry = ['download' => $url, 'namespace' => $namespace, 'prefix' => $prefix, 'summary' => $summary, 'tags' => $tags];
+$entry = ['download' => $url, 'namespace' => $namespace, 'prefix' => $prefix, 'summary' => $summary, 'summary_basis' => $summaryBasis, 'tags' => $tags];
 if ($altTitle !== null) {
     $entry['alt_title'] = $altTitle;
     $entry['alt_title_source'] = $altTitleSource;
