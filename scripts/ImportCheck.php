@@ -26,10 +26,13 @@ use VocabularyLibrary\PlainText;
  */
 class ImportCheck
 {
-    // As the module imports them.
+    /**
+     * Where terms' labels and comments are read from, as the module imports
+     * them.
+     */
     const LABEL_PROPERTY = LabelProperty::LIBRARY;
-    // As the module imports them.
     const COMMENT_PROPERTY = CommentProperty::LIBRARY;
+
     const VANN = 'http://purl.org/vocab/vann/';
 
     /**
@@ -82,7 +85,22 @@ class ImportCheck
     /**
      * @param string $path The vocabulary file
      * @param string|null $namespace The namespace a user would enter, if known
-     * @return array The check result
+     * @return array The check result: "parsed", and "classes" and
+     *   "properties" as counts; "error" where the file doesn't parse; and
+     *   where it does:
+     *   - format: the format it parsed as, or null if autodetected
+     *   - namespace: the namespace found to import
+     *   - namespace_source: where that came from: "given", "declared" (the
+     *     file's vann:preferredNamespaceUri), "ontology" (its owl:Ontology),
+     *     "variant" (another #// or http/https form of one of those), or
+     *     "terms" (the one its terms use, which failure() refuses)
+     *   - members: the classes and properties, as CheckImporter::members()
+     *     returns them, in the language the module shows
+     *   - limits: Omeka's column limits broken in any of the languages, as
+     *     limits() words them
+     *   - languages: the language tags on the terms' labels
+     *   - prefix, title, description, license: what the file says of the
+     *     vocabulary, each null where it says nothing
      */
     public function check($path, $namespace = null)
     {

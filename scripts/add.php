@@ -17,11 +17,11 @@
  * summary was drafted from it as well as from the file.
  * --alt-title is the library's name for it, another official name such as its
  * short name, needed when the file has no title, none in English, or a
- * misleading one; --alt-title-source says where the name comes from. --format=rdfa is
- * for a vocabulary published only as RDFa in an HTML page, and
- * --format=term-list for one whose <url> serves only a list of its terms, each
- * described at its own URI, as TDWG publishes Darwin Core. --tags takes one to
- * three of the tags in config/module.config.php.
+ * misleading one; --alt-title-source says where the name comes from.
+ * --format=rdfa is for a vocabulary published only as RDFa in an HTML page,
+ * and --format=term-list for one whose <url> serves only a list of its terms,
+ * each described at its own URI, as TDWG publishes Darwin Core. --tags takes
+ * one to three of the tags in config/module.config.php.
  *
  * To add an archived copy when the publisher no longer serves a working file,
  * give the publisher's address as <url>, the copy as --file, and where it came
@@ -30,9 +30,8 @@
  *
  * Refuses a slug already used or excluded, a prefix already used or invalid,
  * and a namespace already in the collection or excluded, in any #//,
- * http/https form. On
- * success, writes the entry to scripts/sources.json and stores the file, then
- * runs build.php; if the build fails, both are undone.
+ * http/https form. On success, writes the entry to scripts/sources.json and
+ * stores the file, then runs build.php; if the build fails, both are undone.
  */
 require __DIR__ . '/bootstrap.php';
 
@@ -137,7 +136,7 @@ $sources = $repo->sources();
 if ($record = $excludedNamespaces[NamespaceUri::normalized($namespace)] ?? null) {
     fail("The namespace $namespace is in scripts/excluded.json as \"{$record['slug']}\": {$record['excluded']}\nRemove it from there first to add it again.");
 }
-// The namespace the build found to import can differ from the curated one
+// The namespace the check found to import can differ from the curated one
 // only in its #// or http/https form, which the comparison ignores.
 foreach ($sources as $slug => $entry) {
     if (NamespaceUri::normalized($entry['namespace']) === NamespaceUri::normalized($namespace)) {

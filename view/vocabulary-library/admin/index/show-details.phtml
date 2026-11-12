@@ -11,13 +11,17 @@ $terms = [
 $file = basename($entry['file']);
 // Every section shows for every vocabulary, so sidebars keep one structure:
 // what the file lacks says so, styled apart from values, as the compare page
-// marks "None". Only "Vocabulary in Omeka", which reports the site's state
-// rather than the file, depends on it.
+// marks "None". Only "Vocabulary in Omeka" shows for some vocabularies and
+// not others: it reports the site's state rather than the file.
 $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
 ?>
 <h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 
-<?php // Core's sidebar tabs, as in its item selector, directly under the name, so the details and the long class and property lists take turns rather than one burying the other. ?>
+<?php
+// Core's sidebar tabs, as in its item selector, directly under the name, so
+// the details and the long class and property lists take turns rather than
+// one burying the other.
+?>
 <?php echo $this->sidebarSectionNav([
     'vocabulary-library-details' => $translate('Details'),
     'vocabulary-library-term-lists' => $translate('Classes and properties'),

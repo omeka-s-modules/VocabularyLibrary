@@ -85,7 +85,10 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
 <?php endif; ?>
 <?php echo $this->form()->closeTag(); ?>
 
-<?php // How to read the file, where there's a choice: its language, and where terms' comments come from (null when both ways read the same). ?>
+<?php
+// How to read the file, where there's a choice: its language, and where
+// terms' comments come from (null when both ways read the same).
+?>
 <?php if (count($entry['languages']) > 1 || $commentReading !== null): ?>
 <form method="get" class="vocabulary-library-reading">
     <?php if (count($entry['languages']) > 1): ?>

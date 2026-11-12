@@ -3,8 +3,9 @@ namespace VocabularyLibrary;
 
 /**
  * Publisher text as plain text, for vocabularies whose files put HTML in their
- * literals: the listed HTML elements are removed and entities decoded. Other
- * angle brackets, as in "<= 5.0" or "<subject>", are text.
+ * literals: the tags of the listed HTML elements are removed, keeping the text
+ * between them, and entities decoded. Other angle brackets, as in "<= 5.0" or
+ * "<subject>", are text.
  *
  * The build uses it for the titles, descriptions and licenses it writes, and
  * the module for term labels and comments, which it reads from the files.

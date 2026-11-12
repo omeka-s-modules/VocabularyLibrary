@@ -16,6 +16,7 @@ require __DIR__ . '/bootstrap.php';
 
 use EasyRdf\Graph as RdfGraph;
 
+// Where the date is read from, in the order tried.
 const DATES = [
     'modified' => 'dcterms:modified',
     'issued' => 'dcterms:issued',
@@ -25,6 +26,7 @@ const DATES = [
 // Words a version gives itself when it isn't final. A leading word boundary
 // only, so "beta202408" matches.
 const DRAFT = '/\b(draft|beta|alpha|experimental|unstable|preview|work in progress)/i';
+// The most of a version that is printed, in characters.
 const WIDTH = 50;
 
 $vocabularies = $repo->vocabularies();

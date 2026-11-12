@@ -13,14 +13,10 @@
  * The file's title and description are kept as the file gives them; what the
  * library adds is kept in its own fields and never replaces them.
  *
- * Nothing is written if any entry has a problem: a file that does not parse,
- * imports nothing, or breaks one of Omeka's column limits; a slug with no
- * file or several; a stored HTML file; no title in the file and no
- * alternative title, an alternative title that repeats the file's title or
- * has no source, or a missing or empty summary; an invalid,
- * reserved, duplicate or capitalized prefix; a duplicate namespace; a slug or namespace in
- * scripts/excluded.json; or missing, unknown or repeated tags. Each problem is
- * listed and the script exits non-zero.
+ * Nothing is written if anything has a problem: a file that does not import
+ * or would run as a page on the site, or an entry that breaks one of the
+ * collection's rules, which are the checks below. Every problem is listed and
+ * the script exits non-zero.
  */
 require __DIR__ . '/bootstrap.php';
 

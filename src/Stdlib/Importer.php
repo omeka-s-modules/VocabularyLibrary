@@ -10,8 +10,8 @@ use VocabularyLibrary\LabelProperty;
 
 /**
  * Reads, imports and compares the library's files with core's importer, and
- * knows where they are. Every read of a file goes through here, so this is
- * where its options are set and the memory limit is raised.
+ * knows where they are. Every read of a file's terms goes through here, so
+ * this is where its options are set and the memory limit is raised.
  */
 class Importer
 {
@@ -67,9 +67,9 @@ class Importer
 
     /**
      * How the vocabulary in Omeka differs from an entry's file, as core's
-     * importer computes it, less comments that go from none to an empty one
-     * or back: a file's empty definition reads as "", where Omeka has none,
-     * and Compare would show "None" changing to "None".
+     * importer computes it. A comment that only goes from none to an empty
+     * one, or back, is left out: a file's empty definition reads as "", where
+     * Omeka has none, and Compare would show "None" changing to "None".
      *
      * @param string|null $lang The language to read labels and comments in
      * @param string $commentProperty Where terms' comments are read from:

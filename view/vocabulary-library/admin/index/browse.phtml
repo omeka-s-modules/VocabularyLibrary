@@ -97,7 +97,11 @@ $selected = function ($name, $value) use ($query) {
         $entry = $row['entry'];
         $detailsUrl = $this->url('admin/vocabulary-library', ['action' => 'show-details', 'slug' => $row['slug']]);
         ?>
-        <?php // The search text leaves out the publisher's description: the summary says what the vocabulary is for, and long descriptions match words in passing. ?>
+        <?php
+        // The search text leaves out the publisher's description: the summary
+        // says what the vocabulary is for, and long descriptions match words
+        // in passing.
+        ?>
         <tr data-slug="<?php echo $escape($row['slug']); ?>"
             data-search="<?php echo $escape(implode(' ', array_filter([$entry['alt_title'], $entry['title'], $entry['prefix'], $entry['namespace'], $entry['summary']]))); ?>"
             data-title="<?php echo $escape($entry['name']); ?>"

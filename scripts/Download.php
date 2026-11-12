@@ -9,10 +9,25 @@ use Throwable;
  */
 class Download
 {
+    /**
+     * The formats a request asks for, most wanted first.
+     */
     const ACCEPT = 'text/turtle, application/rdf+xml;q=0.9, application/ld+json;q=0.8, application/n-triples;q=0.7, */*;q=0.1';
+
+    /**
+     * How a request names itself to the publisher.
+     */
     const USER_AGENT = 'Omeka S Vocabulary Library (+https://omeka.org)';
-    // "@id" is for expanded JSON-LD, which has no "@context".
+
+    /**
+     * Text near the start of a body that marks it as RDF. "@id" is for
+     * expanded JSON-LD, which has no "@context".
+     */
     const RDF_SIGNS = ['<rdf:RDF', '<?xml', '@prefix', '@base', 'PREFIX', '"@context"', '"@id"', 'owl:Ontology'];
+
+    /**
+     * The extension a file is stored with, by its content type.
+     */
     const EXTENSIONS = ['text/turtle' => 'ttl', 'application/rdf+xml' => 'rdf', 'application/ld+json' => 'jsonld', 'application/json' => 'jsonld', 'application/n-triples' => 'nt'];
 
     /**
@@ -118,8 +133,8 @@ class Download
      * Whether a body is XML carrying a script element, in any namespace
      * prefix. The web server serves an RDF/XML file as XML, and a browser
      * opening it runs an XHTML script inside, as in a description written as
-     * an XML literal. Other formats are served as text, where it is only
-     * text.
+     * an XML literal. The other formats are not markup a browser parses, so
+     * there it is only text.
      */
     public static function hasScript($body)
     {

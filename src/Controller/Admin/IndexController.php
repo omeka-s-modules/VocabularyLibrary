@@ -17,6 +17,10 @@ use VocabularyLibrary\Stdlib\LanguageNames;
 use VocabularyLibrary\Stdlib\SiteVocabularies;
 use VocabularyLibrary\Stdlib\TermSearch;
 
+/**
+ * The library's pages: the list of vocabularies with its details sidebar and
+ * term search, the import form, Compare and update, and the file download.
+ */
 class IndexController extends AbstractActionController
 {
     /**
@@ -33,6 +37,9 @@ class IndexController extends AbstractActionController
         'comments' => CommentProperty::OMEKA,
     ];
 
+    /**
+     * The content type a vocabulary's file is sent with, by its extension.
+     */
     const CONTENT_TYPES = [
         'jsonld' => 'application/ld+json',
         'nt' => 'application/n-triples',

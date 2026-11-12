@@ -12,15 +12,19 @@
  * Entries with "copy_from" are skipped: their file is an archived copy
  * because the publisher's does not work; remove the field to try again.
  *
- * Makes one request per host at a time, and retries once on HTTP 429.
- * Prints what changed and what failed; run build.php afterwards.
+ * Fetches one vocabulary per host at a time, and retries once on HTTP 429. A
+ * term list's terms are fetched a few at a time from its host
+ * (Download::TERM_BATCH). Prints what changed and what failed; run build.php
+ * afterwards.
  */
 require __DIR__ . '/bootstrap.php';
 
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 
+// Requests made at a time, each to a different host.
 const PARALLEL = 8;
+// The longest a Retry-After is waited out, in seconds.
 const MAX_RETRY_WAIT = 60;
 
 $check = new ImportCheck;

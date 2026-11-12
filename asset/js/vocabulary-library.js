@@ -301,10 +301,10 @@
 
     /**
      * The details sidebar's term filter: narrows the class and property lists
-     * to terms whose label or local name contains the text, as the term search
-     * matches them, and opens the lists while it has any. Emptied, it
-     * closes the lists it opened, leaving any the admin opened. It starts with
-     * the text from a term search's "All matching terms", if any.
+     * to terms whose label or local name contains every word of the text, as
+     * the term search matches them, and opens the lists while it has any.
+     * Emptied, it closes the lists it opened, leaving any the admin opened. It
+     * starts with the text from a term search's "All matching terms", if any.
      */
     const initTermFilter = function (sidebar) {
         const input = sidebar.querySelector('.vocabulary-library-term-filter input');
