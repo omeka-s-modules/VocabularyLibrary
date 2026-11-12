@@ -4,9 +4,6 @@ namespace VocabularyLibrary\Stdlib;
 use EasyRdf\Graph as RdfGraph;
 use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Stdlib\RdfImporter;
-use VocabularyLibrary\CommentProperty;
-use VocabularyLibrary\LabelLanguage;
-use VocabularyLibrary\LabelProperty;
 
 /**
  * Reads, imports and compares the library's files with core's importer, and
@@ -43,7 +40,7 @@ class Importer
      * @return array ['classes' => [local name => ['label' => …, 'comment' =>
      *   …], …], 'properties' => […]]
      */
-    public function members(array $entry, $lang, $commentProperty = CommentProperty::LIBRARY)
+    public function members(array $entry, $lang, $commentProperty = TermReading::COMMENT_PROPERTY)
     {
         return $this->rdfImporter->getMembers('file', $entry['namespace'], $this->options($entry, $lang, $commentProperty));
     }
@@ -73,8 +70,9 @@ class Importer
      *
      * @param string|null $lang The language to read labels and comments in
      * @param string $commentProperty Where terms' comments are read from:
-     *   CommentProperty::LIBRARY, or CommentProperty::OMEKA, to compare a
-     *   vocabulary imported outside the library
+     *   TermReading::COMMENT_PROPERTY, or
+     *   TermReading::OMEKA_COMMENT_PROPERTY, to compare a vocabulary imported
+     *   outside the library
      */
     public function diff(array $entry, $lang, $commentProperty)
     {
@@ -131,14 +129,14 @@ class Importer
         $this->raiseMemoryLimit();
         $graph = new RdfGraph;
         $graph->parseFile($this->path($entry), $entry['format'] ?? 'guess', $entry['namespace']);
-        $default = LabelLanguage::preferred($entry['languages']);
+        $default = TermReading::preferredLanguage($entry['languages']);
         $best = $default;
         $bestMatches = -1;
         foreach (array_unique(array_merge([$default], $entry['languages'], [null])) as $lang) {
             $matches = 0;
             foreach ($labels as $localName => $label) {
                 $term = $graph->resource($entry['namespace'] . $localName);
-                $read = $term->get(LabelProperty::LIBRARY, 'literal', $lang) ?: $term->get(LabelProperty::LIBRARY, 'literal');
+                $read = $term->get(TermReading::LABEL_PROPERTY, 'literal', $lang) ?: $term->get(TermReading::LABEL_PROPERTY, 'literal');
                 $value = $read ? (string) $read->getValue() : '';
                 $matches += ($value === '' ? (string) $localName : $value) === $label ? 1 : 0;
             }
@@ -169,14 +167,14 @@ class Importer
      * Options for core's importer to read an entry's file. A null format is
      * one the build check found by autodetecting.
      */
-    protected function options(array $entry, $lang, $commentProperty = CommentProperty::LIBRARY)
+    protected function options(array $entry, $lang, $commentProperty = TermReading::COMMENT_PROPERTY)
     {
         $this->raiseMemoryLimit();
         return [
             'file' => $this->path($entry),
             'format' => $entry['format'] ?? 'guess',
             'lang' => $lang,
-            'label_property' => LabelProperty::LIBRARY,
+            'label_property' => TermReading::LABEL_PROPERTY,
             'comment_property' => $commentProperty,
         ];
     }

@@ -5,10 +5,8 @@ use EasyRdf\Graph as RdfGraph;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
 use Throwable;
-use VocabularyLibrary\CommentProperty;
-use VocabularyLibrary\LabelLanguage;
-use VocabularyLibrary\LabelProperty;
-use VocabularyLibrary\PlainText;
+use VocabularyLibrary\Stdlib\PlainText;
+use VocabularyLibrary\Stdlib\TermReading;
 
 /**
  * Tests a vocabulary file against Omeka's own importer, without a database or
@@ -30,8 +28,8 @@ class ImportCheck
      * Where terms' labels and comments are read from, as the module imports
      * them.
      */
-    const LABEL_PROPERTY = LabelProperty::LIBRARY;
-    const COMMENT_PROPERTY = CommentProperty::LIBRARY;
+    const LABEL_PROPERTY = TermReading::LABEL_PROPERTY;
+    const COMMENT_PROPERTY = TermReading::COMMENT_PROPERTY;
 
     const VANN = 'http://purl.org/vocab/vann/';
 
@@ -47,7 +45,7 @@ class ImportCheck
     /**
      * The language of labels and comments the check first reads terms in.
      * Where a file has no English, the terms are read again in the language
-     * the module uses, LabelLanguage::preferred().
+     * the module uses, TermReading::preferredLanguage().
      */
     const LANG = 'en';
 
@@ -162,7 +160,7 @@ class ImportCheck
         // Labels and comments in the language the module shows and imports
         // them in, so the term index matches the sidebar. Only they change
         // with the language, not which terms there are.
-        $lang = LabelLanguage::preferred($languages);
+        $lang = TermReading::preferredLanguage($languages);
         $read = self::LANG;
         if ($bestCount && $lang !== null && $lang !== self::LANG) {
             $bestMembers = $this->importer->members($graph, $best, $lang);

@@ -1,7 +1,7 @@
 <?php
 namespace VocabularyLibrary\Scripts;
 
-use VocabularyLibrary\NamespaceUri;
+use VocabularyLibrary\Stdlib\NamespaceUri;
 
 /**
  * Reads and writes the collection's files.

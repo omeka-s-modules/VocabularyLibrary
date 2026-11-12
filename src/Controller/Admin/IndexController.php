@@ -8,13 +8,12 @@ use Omeka\Form\ConfirmForm;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
-use VocabularyLibrary\CommentProperty;
 use VocabularyLibrary\Form\ImportForm;
-use VocabularyLibrary\LabelLanguage;
-use VocabularyLibrary\PlainText;
 use VocabularyLibrary\Stdlib\Importer;
 use VocabularyLibrary\Stdlib\LanguageNames;
+use VocabularyLibrary\Stdlib\PlainText;
 use VocabularyLibrary\Stdlib\SiteVocabularies;
+use VocabularyLibrary\Stdlib\TermReading;
 use VocabularyLibrary\Stdlib\TermSearch;
 
 /**
@@ -33,8 +32,8 @@ class IndexController extends AbstractActionController
      * or as Omeka's own import does.
      */
     const COMMENT_READINGS = [
-        'definitions' => CommentProperty::LIBRARY,
-        'comments' => CommentProperty::OMEKA,
+        'definitions' => TermReading::COMMENT_PROPERTY,
+        'comments' => TermReading::OMEKA_COMMENT_PROPERTY,
     ];
 
     /**
@@ -120,7 +119,7 @@ class IndexController extends AbstractActionController
     public function showDetailsAction()
     {
         [$slug, $entry] = $this->entry();
-        $members = $this->importer->members($entry, LabelLanguage::preferred($entry['languages']));
+        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
         foreach ($members as &$terms) {
             // Some files put HTML in their labels and comments. Labels also
             // have their whitespace collapsed, as the term index has them and
@@ -178,7 +177,7 @@ class IndexController extends AbstractActionController
             'o:prefix' => $entry['prefix'],
             'o:label' => $entry['name'],
             'o:comment' => $entry['summary'],
-            'lang' => LabelLanguage::preferred($entry['languages']),
+            'lang' => TermReading::preferredLanguage($entry['languages']),
         ]);
         $view->setVariable('form', $form);
         $view->setVariable('installedPrefixes', $this->siteVocabularies->prefixes());
@@ -192,7 +191,7 @@ class IndexController extends AbstractActionController
             return $view;
         }
         $data = $form->getData();
-        $lang = $form->has('lang') ? $data['lang'] : LabelLanguage::preferred($entry['languages']);
+        $lang = $form->has('lang') ? $data['lang'] : TermReading::preferredLanguage($entry['languages']);
         try {
             $vocabulary = $this->importer->import($entry, [
                 'o:prefix' => $data['o:prefix'],
@@ -258,7 +257,7 @@ class IndexController extends AbstractActionController
         } elseif (!in_array($lang, $entry['languages'], true)) {
             $lang = count($entry['languages']) > 1
                 ? $this->importer->matchingLanguage($entry, $vocabulary)
-                : LabelLanguage::preferred($entry['languages']);
+                : TermReading::preferredLanguage($entry['languages']);
         }
         // Computed on every request, never taken from the form.
         [$reading, $diff] = $this->commentReading($entry, $lang);

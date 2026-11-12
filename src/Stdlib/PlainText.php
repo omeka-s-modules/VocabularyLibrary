@@ -1,5 +1,5 @@
 <?php
-namespace VocabularyLibrary;
+namespace VocabularyLibrary\Stdlib;
 
 /**
  * Publisher text as plain text, for vocabularies whose files put HTML in their

@@ -4,7 +4,6 @@ namespace VocabularyLibrary\Stdlib;
 use Laminas\View\Helper\Url;
 use Omeka\Api\Manager as ApiManager;
 use Omeka\Api\Representation\VocabularyRepresentation;
-use VocabularyLibrary\NamespaceUri;
 
 /**
  * The site's vocabularies, matched to the library's: which library

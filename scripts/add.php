@@ -36,10 +36,10 @@
 require __DIR__ . '/bootstrap.php';
 
 use Omeka\Entity\Vocabulary;
-use VocabularyLibrary\NamespaceUri;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
+use VocabularyLibrary\Stdlib\NamespaceUri;
 
 const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
 const OPTIONS = ['tags', 'summary', 'summary-basis', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from'];

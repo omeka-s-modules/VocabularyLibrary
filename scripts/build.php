@@ -23,9 +23,9 @@ require __DIR__ . '/bootstrap.php';
 use Omeka\Entity\Vocabulary;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
-use VocabularyLibrary\NamespaceUri;
-use VocabularyLibrary\PlainText;
 use VocabularyLibrary\Scripts\Repo;
+use VocabularyLibrary\Stdlib\NamespaceUri;
+use VocabularyLibrary\Stdlib\PlainText;
 
 $check = new ImportCheck;
 $sources = $repo->sources();
