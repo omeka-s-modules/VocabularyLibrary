@@ -11,10 +11,13 @@
  */
 require __DIR__ . '/bootstrap.php';
 
-[$slug, $reason] = positionalArgs($argv) + [null, null];
-if (!$slug || !$reason) {
+// Exactly two arguments: a reason without its quotes would otherwise be
+// recorded as its first word.
+$args = array_slice($argv, 1);
+if (count($args) !== 2 || trim($args[0]) === '' || trim($args[1]) === '') {
     fail('Usage: php scripts/remove.php <slug> "<reason>"');
 }
+[$slug, $reason] = $args;
 $sources = $repo->sources();
 if (!isset($sources[$slug])) {
     fail("Unknown slug: $slug");

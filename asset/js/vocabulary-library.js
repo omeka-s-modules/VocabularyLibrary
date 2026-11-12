@@ -178,6 +178,15 @@
                     termMatches = data.matches;
                     termQuery = query.toLowerCase();
                     apply();
+                })
+                .fail(function (xhr, status) {
+                    // A request that fails leaves no matches, rather than
+                    // those of an earlier query. One aborted for a newer
+                    // query keeps them until that one answers.
+                    if (status !== 'abort') {
+                        termMatches = null;
+                        apply();
+                    }
                 });
             return termRequest;
         };
