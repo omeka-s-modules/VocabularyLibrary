@@ -161,6 +161,108 @@ class AddRemoveTest extends ScriptTestCase
         $this->assertStringContainsString('Unknown slug: nothing', $output);
     }
 
+    /**
+     * Point the collection's vocabulary at a file to download, in place of
+     * a publisher's server.
+     */
+    protected function publish($content)
+    {
+        file_put_contents("$this->dir/published.ttl", $content);
+        $this->writeSources(['ex' => ['download' => "file://$this->dir/published.ttl"] + self::ENTRY]);
+    }
+
+    public function testFetchSaysHowAChangedVocabularysTermsDiffer()
+    {
+        $file = file_get_contents(self::fixture('basic.ttl'));
+        $this->publish(str_replace('"has part"@en', '"has a part"@en', $file) . "\nex:Extra a rdfs:Class .\n");
+        [$status, $output] = $this->script('fetch');
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('1 fetched: 1 changed, 0 unchanged, 0 failed', $output);
+        $this->assertStringContainsString('changed: ex (1 added; 1 labels)', $output);
+        $this->assertStringContainsString("to list in the release notes:\n  ex\n", $output);
+        $this->assertStringContainsString("so check their summaries:\n  ex\n", $output);
+        $this->assertStringContainsString('ex:Extra', file_get_contents("$this->dir/data/vocabs/ex.ttl"));
+    }
+
+    public function testFetchSaysWhenOnlyTheFileChanged()
+    {
+        $this->publish(file_get_contents(self::fixture('basic.ttl')) . "\n# Saved again.\n");
+        [$status, $output] = $this->script('fetch');
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('changed: ex (file only)', $output);
+        $this->assertStringNotContainsString('release notes', $output);
+        $this->assertStringNotContainsString('summaries', $output);
+    }
+
+    public function testFetchSaysWhenALabelChangedInAnotherLanguage()
+    {
+        $this->publish(str_replace('"Ding"@de', '"Sache"@de', file_get_contents(self::fixture('basic.ttl'))));
+        [, $output] = $this->script('fetch');
+        $this->assertStringContainsString('changed: ex (1 labels)', $output);
+    }
+
+    public function testFetchSaysWhenOnlyWhatTheFileSaysOfTheVocabularyChanged()
+    {
+        $this->publish(str_replace('For describing things.', 'For describing all things.', file_get_contents(self::fixture('basic.ttl'))));
+        [, $output] = $this->script('fetch');
+        $this->assertStringContainsString('changed: ex (description)', $output);
+        // Nothing for administrators to compare, but the summary to check.
+        $this->assertStringNotContainsString('release notes', $output);
+        $this->assertStringContainsString("so check their summaries:\n  ex\n", $output);
+    }
+
+    public function testFetchDoesNotCallAReplacementANewFile()
+    {
+        file_put_contents("$this->dir/data/vocabs/ex.ttl", 'this is not RDF {{{');
+        $this->publish(file_get_contents(self::fixture('basic.ttl')));
+        [, $output] = $this->script('fetch');
+        $this->assertStringContainsString('changed: ex (differences unknown)', $output);
+    }
+
+    public function testFetchLeavesAnUnchangedFileAlone()
+    {
+        $this->publish(file_get_contents(self::fixture('basic.ttl')));
+        [, $output] = $this->script('fetch');
+        $this->assertStringContainsString('0 changed, 1 unchanged, 0 failed', $output);
+    }
+
+    public function testFetchKeepsTheStoredFileWhenTheAddressServesSomethingUnusable()
+    {
+        $this->publish('<!DOCTYPE html><html><body>Moved.</body></html>');
+        [$status, $output] = $this->script('fetch');
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('failed: ex (no longer usable, needs a look)', $output);
+        $this->assertFileEquals(self::fixture('basic.ttl'), "$this->dir/data/vocabs/ex.ttl");
+    }
+
+    public function testFetchKeepsTheStoredFileWhenTheServerIsUnavailable()
+    {
+        // Nothing listens on this port, so the connection is refused.
+        $this->writeSources(['ex' => ['download' => 'http://127.0.0.1:1/ex.ttl'] + self::ENTRY]);
+        // It is tried a second time, here without the wait.
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('failed: ex (server unavailable, stored file kept)', $output);
+        $this->assertFileEquals(self::fixture('basic.ttl'), "$this->dir/data/vocabs/ex.ttl");
+    }
+
+    public function testAnAddressThatServesNothingNeedsALook()
+    {
+        $this->writeSources(['ex' => ['download' => "file://$this->dir/nothing-here.ttl"] + self::ENTRY]);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('failed: ex (no longer usable, needs a look)', $output);
+    }
+
+    public function testFetchRefusesAnOptionItDoesNotKnow()
+    {
+        foreach (['--retry-wait=soon', '--retry-wait', '--retries=2'] as $option) {
+            [$status, $output] = $this->script('fetch', [$option]);
+            $this->assertSame(1, $status, $output);
+            $this->assertStringContainsString("Unknown option: $option", $output);
+        }
+    }
+
     public function testFetchHasNothingToDownloadForASubmittedFile()
     {
         $entry = ['submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'] + array_diff_key(self::ENTRY, ['download' => 1]);

@@ -30,7 +30,9 @@ The comment at the top of each script gives its usage and options in full.
   library, which has no address.
 - `update.php [<slug> …]`: downloads every vocabulary again, or only the
   slugs given, and rebuilds. A downloaded file replaces the stored one only
-  if it differs and still imports. Entries with `copy_from` or with no
+  if it differs and still imports. The report says how each changed
+  vocabulary differs, or that only its file does, and sets apart the
+  failures that need a look from servers that are unavailable for now. Entries with `copy_from` or with no
   `download` are not downloaded. To try the publisher's file again, remove
   the `copy_from` field and run `update.php` for that slug; if the download
   fails, the archived copy remains, so restore the field.
@@ -75,7 +77,7 @@ The comment at the top of each script gives its usage and options in full.
 ## Releasing
 
 Run `update.php`, then review the diff and commit. List in the release notes
-the vocabularies whose files changed, as `update.php` reports them, so that
+the vocabularies whose terms changed, as `update.php` reports them, so that
 administrators know which vocabularies to compare, and check each one's
 summary against its new file. Slugs are permanent once released, because they
 are in the module's URLs.

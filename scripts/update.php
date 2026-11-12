@@ -2,7 +2,7 @@
 /**
  * Fetches every vocabulary, then rebuilds.
  *
- * Usage: php scripts/update.php [<slug> ...]
+ * Usage: php scripts/update.php [<slug> ...] [--retry-wait=<seconds>]
  *
  * Runs fetch.php with the same arguments, then build.php. Review the diff
  * before committing.

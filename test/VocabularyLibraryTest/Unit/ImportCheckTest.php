@@ -121,6 +121,48 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame('imports no classes or properties', ImportCheck::failure($result));
     }
 
+    /**
+     * A check result for a copy of the basic fixture with some text replaced.
+     */
+    protected function changed(array $replacements, $append = '')
+    {
+        $path = $this->dir . '/changed-' . count(glob($this->dir . '/*')) . '.ttl';
+        file_put_contents($path, strtr(file_get_contents(self::fixture('basic.ttl')), $replacements) . $append);
+        return (new ImportCheck)->check($path, self::NS);
+    }
+
+    public function testAFileDoesNotDifferFromItself()
+    {
+        $result = $this->check('basic.ttl');
+        $this->assertSame(['added' => 0, 'removed' => 0, 'labels' => 0, 'comments' => 0, 'details' => []], ImportCheck::differences($result, $this->changed([], "\n# Saved again.\n")));
+    }
+
+    public function testDifferencesCountTermsLabelsAndComments()
+    {
+        $new = $this->changed(['"has part"@en' => '"has a part"@en', 'Anything at all.' => 'Anything.', 'ex:hasPart a' => 'ex:hasPiece a'], "\nex:Extra a rdfs:Class .\n");
+        $differences = ImportCheck::differences($this->check('basic.ttl'), $new);
+        // hasPart is renamed, so it is removed and hasPiece added.
+        $this->assertSame(['added' => 2, 'removed' => 1, 'labels' => 0, 'comments' => 1, 'details' => []], $differences);
+    }
+
+    public function testDifferencesAreFoundInEveryLanguage()
+    {
+        $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Ding"@de' => '"Sache"@de']));
+        $this->assertSame(1, $differences['labels']);
+    }
+
+    public function testDifferencesAreExact()
+    {
+        $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Anything at all."@en' => '"Anything at all. "@en']));
+        $this->assertSame(1, $differences['comments']);
+    }
+
+    public function testDifferencesNameWhatTheFileSaysOfTheVocabulary()
+    {
+        $new = $this->changed(['"Example Vocabulary"@en' => '"An Example"@en', 'licenses/by/4.0/' => 'licenses/by-sa/4.0/', ', "Ding"@de' => '', ', "hat Teil"@de' => '']);
+        $this->assertSame(['title', 'license', 'languages'], ImportCheck::differences($this->check('basic.ttl'), $new)['details']);
+    }
+
     public function testCandidatesAreTheNamespacesOtherForms()
     {
         $this->assertSame(

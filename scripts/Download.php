@@ -43,7 +43,9 @@ class Download
      * @param bool $decode Whether to ask for compressed responses, which curl
      *   unzips
      * @return array Per key: body, type (content type), url (final URL),
-     *   status, error, and retry_after (seconds, from a Retry-After header)
+     *   status, error, retry_after (seconds, from a Retry-After header), and
+     *   no_answer (whether the server did not answer in time or refused the
+     *   connection)
      */
     public static function fetchAll(array $urls, $decode = true)
     {
@@ -93,6 +95,7 @@ class Download
                 'status' => $status,
                 'error' => curl_error($handle) ?: ($code !== CURLE_OK ? curl_strerror($code) : ($status >= 400 ? "HTTP $status" : null)),
                 'retry_after' => $retryAfter[$key] ?? null,
+                'no_answer' => in_array($code, [CURLE_OPERATION_TIMEDOUT, CURLE_COULDNT_CONNECT], true),
             ];
             if ($code === CURLE_BAD_CONTENT_ENCODING) {
                 $badEncoding[$key] = $urls[$key];
@@ -108,6 +111,18 @@ class Download
             $results = array_replace($results, self::fetchAll($badEncoding, false));
         }
         return $results;
+    }
+
+    /**
+     * Whether a response says its server is busy, failing or not answering,
+     * which passes, rather than that the address no longer serves the file:
+     * HTTP 429, a 5xx status, a timeout or a refused connection. A name that
+     * doesn't resolve, a bad certificate or a missing page is not one: the
+     * address may be dead, and needs a look.
+     */
+    public static function serverUnavailable(array $response)
+    {
+        return $response['status'] === 429 || $response['status'] >= 500 || !empty($response['no_answer']);
     }
 
     /**
@@ -174,7 +189,9 @@ class Download
      * @param string|null $format The entry's curated format
      * @param string|null $namespace The base URI for parsing RDFa, and a term
      *   list's URI
-     * @return array [data, extension], or [null, reason] if not storable
+     * @return array [data, extension], or [null, reason] if not storable,
+     *   with true as a third value where the reason is a server that is
+     *   unavailable, as serverUnavailable() has it
      */
     public static function storable(array $response, $format, $namespace)
     {
@@ -228,7 +245,8 @@ class Download
      * are and stored as N-Triples, sorted so an unchanged vocabulary gives
      * an identical file. Fails if any term's document can't be fetched.
      *
-     * @return array [data, extension], or [null, reason]
+     * @return array [data, extension], or [null, reason], with true as a third
+     *   value where a term's server is unavailable
      */
     public static function termList(array $response, $namespace)
     {
@@ -255,7 +273,7 @@ class Download
                 }
                 foreach (self::fetchAll(array_combine($batch, $batch)) as $term => $termResponse) {
                     if ($termResponse['error'] || !self::looksLikeRdf($termResponse['body'])) {
-                        return [null, sprintf('term %s: %s', $term, $termResponse['error'] ?: 'not RDF')];
+                        return [null, sprintf('term %s: %s', $term, $termResponse['error'] ?: 'not RDF'), self::serverUnavailable($termResponse)];
                     }
                     $graph->parse($termResponse['body'], $termResponse['type'] ?: null, $term);
                 }

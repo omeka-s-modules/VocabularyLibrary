@@ -50,6 +50,18 @@ class DownloadTest extends TestCase
         ];
     }
 
+    public function testAServerIsUnavailableWhenItFailsOrDoesNotAnswer()
+    {
+        $response = ['status' => 200, 'error' => null, 'no_answer' => false];
+        $this->assertFalse(Download::serverUnavailable($response));
+        $this->assertTrue(Download::serverUnavailable(['status' => 503] + $response));
+        $this->assertTrue(Download::serverUnavailable(['status' => 429] + $response));
+        $this->assertTrue(Download::serverUnavailable(['status' => 0, 'error' => 'Timeout', 'no_answer' => true]));
+        // A missing page, or a name that doesn't resolve, may be for good.
+        $this->assertFalse(Download::serverUnavailable(['status' => 404, 'error' => 'HTTP 404'] + $response));
+        $this->assertFalse(Download::serverUnavailable(['status' => 0, 'error' => 'Could not resolve host'] + $response));
+    }
+
     public function testNTriplesLooksLikeRdfThoughItHasNoHeader()
     {
         $this->assertTrue(Download::looksLikeRdf("<http://example.org/a> <http://example.org/b> <http://example.org/c> .\n"));

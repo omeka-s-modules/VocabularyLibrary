@@ -81,6 +81,49 @@ class ImportCheck
     }
 
     /**
+     * How a vocabulary's file differs from an earlier one, in what the
+     * library and an administrator comparing the two would see.
+     *
+     * Labels and comments are compared in every language both files have,
+     * and exactly, as Compare shows them.
+     *
+     * @param array $old A check result
+     * @param array $new
+     * @return array Counts of terms "added" and "removed", and of the terms
+     *   in both whose "labels" or "comments" differ in any language; and
+     *   "details", the names of what the file says of the vocabulary that
+     *   differs: title, description, license, prefix, languages
+     */
+    public static function differences(array $old, array $new)
+    {
+        $labels = $comments = [];
+        foreach (array_intersect_key($new['readings'], $old['readings']) as $language => $members) {
+            foreach (['classes', 'properties'] as $kind) {
+                foreach (array_intersect_key($members[$kind], $old['readings'][$language][$kind]) as $localName => $member) {
+                    $before = $old['readings'][$language][$kind][$localName];
+                    if ((string) $member['label'] !== (string) $before['label']) {
+                        $labels["$kind $localName"] = true;
+                    }
+                    if ((string) $member['comment'] !== (string) $before['comment']) {
+                        $comments["$kind $localName"] = true;
+                    }
+                }
+            }
+        }
+        $differences = ['added' => 0, 'removed' => 0, 'labels' => count($labels), 'comments' => count($comments), 'details' => []];
+        foreach (['classes', 'properties'] as $kind) {
+            $differences['added'] += count(array_diff_key($new['members'][$kind], $old['members'][$kind]));
+            $differences['removed'] += count(array_diff_key($old['members'][$kind], $new['members'][$kind]));
+        }
+        foreach (['title', 'description', 'license', 'prefix', 'languages'] as $detail) {
+            if ($old[$detail] !== $new[$detail]) {
+                $differences['details'][] = $detail;
+            }
+        }
+        return $differences;
+    }
+
+    /**
      * @param string $path The vocabulary file
      * @param string|null $namespace The namespace a user would enter, if known
      * @return array The check result: "parsed", and "classes" and
@@ -94,6 +137,8 @@ class ImportCheck
      *     "terms" (the one its terms use, which failure() refuses)
      *   - members: the classes and properties, as CheckImporter::members()
      *     returns them, in the language the module shows
+     *   - readings: the same, in each of the file's languages, by language
+     *     tag
      *   - limits: Omeka's column limits broken in any of the languages, as
      *     limits() words them
      *   - languages: the language tags on the terms' labels
@@ -169,8 +214,10 @@ class ImportCheck
         // An admin can import the terms in any of the file's languages, so
         // the limits are checked in each.
         $limits = $this->limits($best, $bestMembers);
+        $readings = [$read => $bestMembers];
         foreach ($bestCount ? array_diff($languages, [$read]) : [] as $language) {
-            foreach ($this->limits($best, $this->importer->members($graph, $best, $language)) as $limit) {
+            $readings[$language] = $this->importer->members($graph, $best, $language);
+            foreach ($this->limits($best, $readings[$language]) as $limit) {
                 if (!in_array($limit, $limits, true)) {
                     $limits[] = "$limit in \"$language\"";
                 }
@@ -185,6 +232,7 @@ class ImportCheck
             'classes' => count($bestMembers['classes']),
             'properties' => count($bestMembers['properties']),
             'members' => $bestMembers,
+            'readings' => $readings,
             'limits' => $limits,
             'languages' => $languages,
             'prefix' => $this->safely(function () use ($graph, $best) {
