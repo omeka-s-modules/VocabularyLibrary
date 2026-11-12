@@ -100,8 +100,10 @@ publisher's own file cannot be downloaded or does not import. They come from
 [Open Metadata Registry](http://metadataregistry.org/), and
 [Ontology Design Patterns](http://ontologydesignpatterns.org/).
 
-To request a vocabulary, open an issue in this repository with its name and
-the address of its RDF file.
+To request a vocabulary, or to submit one of your own, open an issue in this
+repository with its name and its RDF file or the file's address. A vocabulary
+needs a namespace but not an address of its own. The Omeka team decides what
+is included.
 
 # For vocabulary publishers
 

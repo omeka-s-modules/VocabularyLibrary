@@ -31,9 +31,9 @@ The comment at the top of each script gives its usage and options in full.
 - `update.php [<slug> …]`: downloads every vocabulary again, or only the
   slugs given, and rebuilds. A downloaded file replaces the stored one only
   if it differs and still imports. Entries with `copy_from` or with no
-  `download` are not downloaded. To try the publisher's file again, remove the field and run
-  `update.php` for that slug; if the download fails, the archived copy
-  remains, so restore the field.
+  `download` are not downloaded. To try the publisher's file again, remove
+  the `copy_from` field and run `update.php` for that slug; if the download
+  fails, the archived copy remains, so restore the field.
 - `remove.php <slug> "<reason>"`: removes a vocabulary, for example after a
   takedown request, and records it in `excluded.json`.
 - `build.php`: checks every file with the Omeka S importer and writes what
@@ -48,7 +48,9 @@ The comment at the top of each script gives its usage and options in full.
 
 - **Inclusion:** Omeka must import classes or properties from the file that
   are useful for describing resources, and the license must allow
-  redistribution. Record a vocabulary left out, and why, in
+  redistribution. A file sent to the library, with a namespace but no
+  address, is included on the same terms. Whether a vocabulary belongs is the
+  Omeka team's judgement. Record a vocabulary left out, and why, in
   `excluded.json`.
 - **Names:** add an `alt_title` only where the file's title is missing, not
   in English, long, or hides or leaves out the name the vocabulary is known
