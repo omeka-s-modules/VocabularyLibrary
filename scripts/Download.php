@@ -83,7 +83,6 @@ class Download
                 $badEncoding[$key] = $urls[$key];
             }
             curl_multi_remove_handle($multi, $handle);
-            curl_close($handle);
         }
         curl_multi_close($multi);
         // A server that names its compression wrongly, as one sending
@@ -106,11 +105,13 @@ class Download
 
     /**
      * Whether a body is an HTML page, including XHTML that begins with an XML
-     * declaration.
+     * declaration: its doctype or first element is html, after any XML
+     * declaration, processing instructions and comments. RDF that only
+     * mentions the element, in a comment or a description, is not a page.
      */
     public static function isHtml($body)
     {
-        return (bool) preg_match('/<(!doctype\s+html|html[\s>])/i', self::head($body));
+        return (bool) preg_match('/^(?:<\?.*?\?>\s*|<!--.*?-->\s*)*<(?:!doctype\s+html|html[\s>])/is', self::head($body));
     }
 
     public static function looksLikeRdf($body)
