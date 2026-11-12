@@ -26,11 +26,6 @@ return [
             'VocabularyLibrary\Controller\Admin\Index' => Service\Controller\Admin\IndexControllerFactory::class,
         ],
     ],
-    'form_elements' => [
-        'factories' => [
-            Form\ImportForm::class => Service\Form\ImportFormFactory::class,
-        ],
-    ],
     'navigation' => [
         'AdminModule' => [
             [

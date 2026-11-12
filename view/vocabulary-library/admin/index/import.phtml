@@ -54,7 +54,7 @@ $browseUrl = $this->url('admin/vocabulary-library');
     <div class="inputs"><?php echo $escape($entry['namespace']); ?></div>
 </div>
 
-<?php echo $this->formHidden($form->get('csrf')); ?>
+<?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
 <?php echo $this->form()->closeTag(); ?>
 
 <?php endif; ?>
