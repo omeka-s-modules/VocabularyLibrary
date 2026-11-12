@@ -71,6 +71,47 @@ class FetchFromServerTest extends ScriptTestCase
         $this->assertStoredFileKept();
     }
 
+    public function testAHostThatFailsTwiceIsNotAskedAgainInTheRun()
+    {
+        $entries = [];
+        foreach (['a', 'b', 'c'] as $slug) {
+            $entries[$slug] = ['download' => "$this->address/down/$slug.ttl", 'prefix' => $slug] + self::ENTRY;
+            copy(self::fixture('basic.ttl'), "$this->dir/data/vocabs/$slug.ttl");
+        }
+        unlink("$this->dir/data/vocabs/ex.ttl");
+        $this->writeSources($entries);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        // The first is asked twice, and the others not at all.
+        $this->assertSame(['/down/a.ttl', '/down/a.ttl'], file("$this->dir/requests.log", FILE_IGNORE_NEW_LINES));
+        $this->assertStringContainsString('3 failed', $output);
+        $this->assertSame(3, substr_count($output, '(server unavailable, stored file kept)'));
+        $this->assertStringContainsString('its server failed twice earlier in this run', $output);
+    }
+
+    public function testATermListsTermIsTriedAgainWhenItsServerFails()
+    {
+        [$data, $extension, $unavailable] = Download::termList(Download::fetchAll(["$this->address/terms/"])[0], "$this->address/terms/");
+        $this->assertSame('nt', $extension);
+        $this->assertFalse($unavailable);
+        $this->assertStringContainsString("<$this->address/terms/Flaky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", $data);
+        $this->assertStringContainsString("<$this->address/terms/Steady> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", $data);
+        $requests = file("$this->dir/requests.log", FILE_IGNORE_NEW_LINES);
+        $this->assertSame(2, count(array_keys($requests, '/terms/Flaky', true)));
+        $this->assertSame(1, count(array_keys($requests, '/terms/Steady', true)));
+    }
+
+    public function testAnUnchangedFileIsNotCheckedAgain()
+    {
+        // The stored file would fail the check, but the download is the same.
+        $broken = 'this is not RDF {{{ @prefix';
+        file_put_contents("$this->dir/data/vocabs/ex.ttl", $broken);
+        file_put_contents("$this->dir/published.ttl", $broken);
+        $this->writeSources(['ex' => ['download' => "$this->address/vocabulary.ttl"] + self::ENTRY]);
+        [, $output] = $this->script('fetch');
+        $this->assertStringContainsString('0 changed, 1 unchanged, 0 failed', $output);
+    }
+
     public function testABodyLargerThanTheLimitIsNotKept()
     {
         file_put_contents("$this->dir/published.ttl", str_repeat('# padding ', 2000));

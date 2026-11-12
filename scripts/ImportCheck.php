@@ -84,8 +84,8 @@ class ImportCheck
      * How a vocabulary's file differs from an earlier one, in what the
      * library and an administrator comparing the two would see.
      *
-     * Labels and comments are compared in every language both files have,
-     * and exactly, as Compare shows them.
+     * Labels and comments are compared in every language both files have
+     * either in, and exactly, as Compare shows them.
      *
      * @param array $old A check result
      * @param array $new
@@ -97,10 +97,16 @@ class ImportCheck
     public static function differences(array $old, array $new)
     {
         $labels = $comments = [];
+        // Language by language, or as each file reads by default where they
+        // share no language, as when a file's labels gain language tags.
+        $pairs = [];
         foreach (array_intersect_key($new['readings'], $old['readings']) as $language => $members) {
+            $pairs[] = [$old['readings'][$language], $members];
+        }
+        foreach ($pairs ?: [[$old['members'], $new['members']]] as [$oldMembers, $members]) {
             foreach (['classes', 'properties'] as $kind) {
-                foreach (array_intersect_key($members[$kind], $old['readings'][$language][$kind]) as $localName => $member) {
-                    $before = $old['readings'][$language][$kind][$localName];
+                foreach (array_intersect_key($members[$kind], $oldMembers[$kind]) as $localName => $member) {
+                    $before = $oldMembers[$kind][$localName];
                     if ((string) $member['label'] !== (string) $before['label']) {
                         $labels["$kind $localName"] = true;
                     }
@@ -137,8 +143,8 @@ class ImportCheck
      *     "terms" (the one its terms use, which failure() refuses)
      *   - members: the classes and properties, as CheckImporter::members()
      *     returns them, in the language the module shows
-     *   - readings: the same, in each of the file's languages, by language
-     *     tag
+     *   - readings: the same, in each language the file has labels or
+     *     comments in, by language tag
      *   - limits: Omeka's column limits broken in any of the languages, as
      *     limits() words them
      *   - languages: the language tags on the terms' labels
@@ -215,7 +221,12 @@ class ImportCheck
         // the limits are checked in each.
         $limits = $this->limits($best, $bestMembers);
         $readings = [$read => $bestMembers];
-        foreach ($bestCount ? array_diff($languages, [$read]) : [] as $language) {
+        // And read in each, comments' languages included, to compare one
+        // file with another.
+        $commentLanguages = $this->safely(function () use ($graph, $best) {
+            return $this->languages($graph, $best, self::COMMENT_PROPERTY);
+        }) ?: [];
+        foreach ($bestCount ? array_diff(array_unique(array_merge($languages, $commentLanguages)), [$read]) : [] as $language) {
             $readings[$language] = $this->importer->members($graph, $best, $language);
             foreach ($this->limits($best, $readings[$language]) as $limit) {
                 if (!in_array($limit, $limits, true)) {
@@ -353,11 +364,13 @@ class ImportCheck
     }
 
     /**
-     * The language tags on the labels of the terms that would be imported.
+     * The language tags on the labels, or the values of another property, of
+     * the terms that would be imported.
      *
+     * @param string $property Alternatives, as "a|b"
      * @return string[]
      */
-    protected function languages(RdfGraph $graph, $namespace)
+    protected function languages(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
     {
         $tags = [];
         foreach ($this->importer->acceptedTypes() as $type) {
@@ -365,7 +378,7 @@ class ImportCheck
                 if ($resource->getUri() !== $namespace . $resource->localName()) {
                     continue;
                 }
-                foreach ($resource->all(self::LABEL_PROPERTY, 'literal') as $label) {
+                foreach ($resource->all($property, 'literal') as $label) {
                     if ($label->getLang()) {
                         $tags[$label->getLang()] = true;
                     }

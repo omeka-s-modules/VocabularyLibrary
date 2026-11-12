@@ -1,7 +1,7 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
-use Laminas\I18n\Translator\TranslatorInterface;
+use Laminas\I18n\Translator\Translator;
 
 /**
  * Alphabetical order as the admin's language has it, for what the library
@@ -19,26 +19,34 @@ class Collation
     protected $collator;
 
     /**
-     * @param TranslatorInterface $translator The translator core's lang view
-     *   helper gets, which holds the admin's locale
+     * @param Translator $translator The translator core's lang view helper
+     *   gets, which holds the admin's locale
      */
-    public function __construct(TranslatorInterface $translator)
+    public function __construct(Translator $translator)
     {
         $this->translator = $translator;
     }
 
     /**
-     * Compares two texts, as a sort function does.
+     * Compares two texts, as a sort function does. Text that isn't valid
+     * UTF-8, which a vocabulary's file may hold and the collator can't
+     * compare, follows all that is, in the order of its bytes, so the order
+     * is the same however a list is sorted.
      *
      * @return int Below, at or above zero
      */
     public function compare($a, $b)
     {
+        [$a, $b] = [(string) $a, (string) $b];
         $collator = $this->collator();
-        $order = $collator ? $collator->compare((string) $a, (string) $b) : false;
-        // The collator can't compare text that isn't valid UTF-8, which a
-        // vocabulary's file may hold.
-        return $order === false ? strnatcasecmp((string) $a, (string) $b) : $order;
+        if (!$collator) {
+            return strnatcasecmp($a, $b);
+        }
+        [$validA, $validB] = [mb_check_encoding($a, 'UTF-8'), mb_check_encoding($b, 'UTF-8')];
+        if ($validA && $validB) {
+            return (int) $collator->compare($a, $b);
+        }
+        return $validA === $validB ? strcmp($a, $b) : ($validA ? -1 : 1);
     }
 
     /**
@@ -49,11 +57,6 @@ class Collation
      */
     public function sorted(array $texts)
     {
-        $collator = $this->collator();
-        $sorted = $texts;
-        if ($collator && $collator->asort($sorted)) {
-            return $sorted;
-        }
         uasort($texts, [$this, 'compare']);
         return $texts;
     }

@@ -38,6 +38,13 @@ class Download
     const TERM_PAUSE = 250000;
 
     /**
+     * Results of a transfer that say the server did not answer, or not to
+     * the end: it timed out, refused the connection, dropped it, or sent
+     * nothing or only part.
+     */
+    const NO_ANSWER = [CURLE_OPERATION_TIMEDOUT, CURLE_COULDNT_CONNECT, CURLE_RECV_ERROR, CURLE_SEND_ERROR, CURLE_GOT_NOTHING, CURLE_PARTIAL_FILE];
+
+    /**
      * The most terms a term list may name. Each is a request, and the list
      * is the publisher's to write; the largest in the library has a few
      * hundred.
@@ -60,8 +67,7 @@ class Download
      * @param int $maxBytes The largest body to keep; a larger one fails
      * @return array Per key: body, type (content type), url (final URL),
      *   status, error, retry_after (seconds, from a Retry-After header), and
-     *   no_answer (whether the server did not answer in time or refused the
-     *   connection)
+     *   no_answer (whether the server did not answer, or not to the end)
      */
     public static function fetchAll(array $urls, $decode = true, $maxBytes = self::MAX_BYTES)
     {
@@ -126,7 +132,7 @@ class Download
                     ? sprintf('larger than %d MB', $maxBytes / 1024 / 1024)
                     : (curl_error($handle) ?: ($code !== CURLE_OK ? curl_strerror($code) : ($status >= 400 ? "HTTP $status" : null))),
                 'retry_after' => $retryAfter[$key] ?? null,
-                'no_answer' => in_array($code, [CURLE_OPERATION_TIMEDOUT, CURLE_COULDNT_CONNECT], true),
+                'no_answer' => in_array($code, self::NO_ANSWER, true),
             ];
             if ($code === CURLE_BAD_CONTENT_ENCODING) {
                 $badEncoding[$key] = $urls[$key];
@@ -147,7 +153,7 @@ class Download
     /**
      * Whether a response says its server is busy, failing or not answering,
      * which passes, rather than that the address no longer serves the file:
-     * HTTP 429, a 5xx status, a timeout or a refused connection. A name that
+     * HTTP 429, a 5xx status, or no answer, or not to the end. A name that
      * doesn't resolve, a bad certificate or a missing page is not one: the
      * address may be dead, and needs a look.
      */
@@ -263,25 +269,25 @@ class Download
      * @param string|null $format The entry's curated format
      * @param string|null $namespace The base URI for parsing RDFa, and a term
      *   list's URI
-     * @return array [data, extension], or [null, reason] if not storable,
-     *   with true as a third value where the reason is a server that is
-     *   unavailable, as serverUnavailable() has it
+     * @return array [data, extension, false], or if not storable [null,
+     *   reason, whether the reason is a server that is unavailable for now,
+     *   as serverUnavailable() has it]
      */
     public static function storable(array $response, $format, $namespace)
     {
         if (strncmp($response['body'], "\x1f\x8b", 2) === 0) {
             $unzipped = self::unzipped($response['body']);
             if ($unzipped === null) {
-                return [null, sprintf('gzipped, and unzips to more than %d MB', self::MAX_BYTES / 1024 / 1024)];
+                return [null, sprintf('gzipped, and unzips to more than %d MB', self::MAX_BYTES / 1024 / 1024), false];
             }
             if ($unzipped === '') {
-                return [null, 'gzipped, and did not unzip'];
+                return [null, 'gzipped, and did not unzip', false];
             }
             $response['body'] = $unzipped;
         }
         $body = $response['body'];
         if (trim($body) === '') {
-            return [null, sprintf('empty response (HTTP %s)', $response['status'])];
+            return [null, sprintf('empty response (HTTP %s)', $response['status']), false];
         }
         if ($format === 'term-list') {
             return self::termList($response, $namespace);
@@ -292,24 +298,24 @@ class Download
                 $graph->parse($body, 'rdfa', $namespace ?: $response['url']);
                 $data = $graph->serialise('ntriples');
             } catch (Throwable $e) {
-                return [null, 'RDFa did not parse: ' . mb_substr($e->getMessage(), 0, 200)];
+                return [null, 'RDFa did not parse: ' . mb_substr($e->getMessage(), 0, 200), false];
             }
-            return $data === '' ? [null, 'the page carries no RDFa'] : [$data, 'nt'];
+            return $data === '' ? [null, 'the page carries no RDFa', false] : [$data, 'nt', false];
         }
         if (!self::looksLikeRdf($body)) {
-            return [null, 'not RDF (' . ($response['type'] ?: 'no content type') . ')'];
+            return [null, 'not RDF (' . ($response['type'] ?: 'no content type') . ')', false];
         }
         if (self::hasScript($body)) {
-            return [null, 'carries markup a browser would run on the site'];
+            return [null, 'carries markup a browser would run on the site', false];
         }
         if (self::hasRemoteContext($body)) {
-            return [null, 'takes its JSON-LD context from an address; the file must carry it'];
+            return [null, 'takes its JSON-LD context from an address; the file must carry it', false];
         }
         // Otherwise by the first character: a Turtle file may begin with "[",
         // so only "{" means JSON-LD.
         $first = self::head($body)[0];
         $extension = self::EXTENSIONS[$response['type']] ?? ($first === '<' ? 'rdf' : ($first === '{' ? 'jsonld' : 'ttl'));
-        return [$body, $extension];
+        return [$body, $extension, false];
     }
 
     /**
@@ -318,16 +324,16 @@ class Download
      * dcterms:isPartOf the list, and each term's own URI serves the term's
      * description. The list and every term's document are combined as they
      * are and stored as N-Triples, sorted so an unchanged vocabulary gives
-     * an identical file. Fails if any term's document can't be fetched.
+     * an identical file. A term's document that can't be fetched is tried
+     * once more, after the rest; if any then fails, so does the vocabulary.
      *
-     * @return array [data, extension], or [null, reason], with true as a third
-     *   value where a term's server is unavailable
+     * @return array As storable() returns
      */
     public static function termList(array $response, $namespace)
     {
         // The list's URI, not the response's: the request may redirect.
         if (!$namespace) {
-            return [null, 'a term list needs its namespace'];
+            return [null, 'a term list needs its namespace', false];
         }
         try {
             $graph = new RdfGraph;
@@ -341,29 +347,40 @@ class Download
                 }
             }
             if (!$terms) {
-                return [null, 'the term list has no terms in its namespace'];
+                return [null, 'the term list has no terms in its namespace', false];
             }
             if (count($terms) > self::MAX_TERMS) {
-                return [null, sprintf('the term list has more than %d terms', self::MAX_TERMS)];
+                return [null, sprintf('the term list has more than %d terms', self::MAX_TERMS), false];
             }
             sort($terms);
-            foreach (array_chunk($terms, self::TERM_BATCH) as $i => $batch) {
-                if ($i) {
-                    usleep(self::TERM_PAUSE);
-                }
-                foreach (self::fetchAll(array_combine($batch, $batch)) as $term => $termResponse) {
-                    if ($termResponse['error'] || !self::looksLikeRdf($termResponse['body'])) {
-                        return [null, sprintf('term %s: %s', $term, $termResponse['error'] ?: 'not RDF'), self::serverUnavailable($termResponse)];
+            // Twice over: the second time for the terms whose server
+            // failed or did not answer the first.
+            $again = [];
+            foreach ([$terms, &$again] as $attempt => $toFetch) {
+                foreach (array_chunk($toFetch, self::TERM_BATCH) as $i => $batch) {
+                    if ($i || $attempt) {
+                        usleep(self::TERM_PAUSE);
                     }
-                    $graph->parse($termResponse['body'], $termResponse['type'] ?: null, $term);
+                    foreach (self::fetchAll(array_combine($batch, $batch)) as $term => $termResponse) {
+                        $noResponse = $termResponse['error'] && $termResponse['status'] < 400;
+                        if (!$attempt && (self::serverUnavailable($termResponse) || $noResponse)) {
+                            $again[] = $term;
+                            continue;
+                        }
+                        if ($termResponse['error'] || !self::looksLikeRdf($termResponse['body'])) {
+                            return [null, sprintf('term %s: %s', $term, $termResponse['error'] ?: 'not RDF'), self::serverUnavailable($termResponse)];
+                        }
+                        $graph->parse($termResponse['body'], $termResponse['type'] ?: null, $term);
+                    }
                 }
             }
+            unset($again);
         } catch (Throwable $e) {
-            return [null, 'term list did not parse: ' . mb_substr($e->getMessage(), 0, 200)];
+            return [null, 'term list did not parse: ' . mb_substr($e->getMessage(), 0, 200), false];
         }
         $lines = array_filter(explode("\n", $graph->serialise('ntriples')));
         sort($lines);
-        return [implode("\n", $lines) . "\n", 'nt'];
+        return [implode("\n", $lines) . "\n", 'nt', false];
     }
 
     /**

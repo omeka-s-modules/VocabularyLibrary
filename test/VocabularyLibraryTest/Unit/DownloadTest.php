@@ -111,7 +111,7 @@ class DownloadTest extends TestCase
     public function testJsonLdWithAContextAtAnAddressIsNotStored()
     {
         $this->assertSame(
-            [null, 'takes its JSON-LD context from an address; the file must carry it'],
+            [null, 'takes its JSON-LD context from an address; the file must carry it', false],
             Download::storable(self::response('{"@context": "http://example.org/context.jsonld", "@id": "http://example.org/ns#Thing"}', 'application/ld+json'), null, null)
         );
     }
@@ -126,7 +126,7 @@ class DownloadTest extends TestCase
 
     public function testAFileIsStoredWithTheExtensionOfItsContentType()
     {
-        $this->assertSame([self::TURTLE, 'ttl'], Download::storable(self::response(self::TURTLE, 'text/turtle'), null, null));
+        $this->assertSame([self::TURTLE, 'ttl', false], Download::storable(self::response(self::TURTLE, 'text/turtle'), null, null));
         $this->assertSame('nt', Download::storable(self::response(self::TURTLE, 'application/n-triples'), null, null)[1]);
     }
 
@@ -143,7 +143,7 @@ class DownloadTest extends TestCase
         // A file on this machine and a term of another host: neither is
         // fetched, so there is nothing to assemble.
         $list = "<file:///etc/hostname> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n<http://other.example/terms/x> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n";
-        $this->assertSame([null, 'the term list has no terms in its namespace'], Download::termList(self::response($list, 'application/n-triples'), $namespace));
+        $this->assertSame([null, 'the term list has no terms in its namespace', false], Download::termList(self::response($list, 'application/n-triples'), $namespace));
     }
 
     public function testATermListMayNotNameTooManyTerms()
@@ -153,7 +153,7 @@ class DownloadTest extends TestCase
         for ($i = 0; $i <= Download::MAX_TERMS; $i++) {
             $list .= "<{$namespace}t$i> <http://purl.org/dc/terms/isPartOf> <$namespace> .\n";
         }
-        $this->assertSame([null, 'the term list has more than 2000 terms'], Download::termList(self::response($list, 'application/n-triples'), $namespace));
+        $this->assertSame([null, 'the term list has more than 2000 terms', false], Download::termList(self::response($list, 'application/n-triples'), $namespace));
     }
 
     public function testAGzippedBodyThatUnzipsPastTheLimitIsRefused()
@@ -174,20 +174,20 @@ class DownloadTest extends TestCase
 
     public function testAGzippedBodyIsUnzipped()
     {
-        $this->assertSame([self::TURTLE, 'ttl'], Download::storable(self::response(gzencode(self::TURTLE), 'application/gzip'), null, null));
+        $this->assertSame([self::TURTLE, 'ttl', false], Download::storable(self::response(gzencode(self::TURTLE), 'application/gzip'), null, null));
     }
 
     public function testWhatIsNotRdfIsNotStored()
     {
-        $this->assertSame([null, 'empty response (HTTP 200)'], Download::storable(self::response("  \n"), null, null));
-        $this->assertSame([null, 'not RDF (text/html)'], Download::storable(self::response('<!DOCTYPE html><html></html>', 'text/html'), null, null));
-        $this->assertSame([null, 'not RDF (no content type)'], Download::storable(self::response('Not found.'), null, null));
+        $this->assertSame([null, 'empty response (HTTP 200)', false], Download::storable(self::response("  \n"), null, null));
+        $this->assertSame([null, 'not RDF (text/html)', false], Download::storable(self::response('<!DOCTYPE html><html></html>', 'text/html'), null, null));
+        $this->assertSame([null, 'not RDF (no content type)', false], Download::storable(self::response('Not found.'), null, null));
     }
 
     public function testXmlCarryingAScriptIsNotStored()
     {
         $body = sprintf(self::RDF_XML, '<script xmlns="http://www.w3.org/1999/xhtml">alert(1)</script>');
-        $this->assertSame([null, 'carries markup a browser would run on the site'], Download::storable(self::response($body, 'application/rdf+xml'), null, null));
+        $this->assertSame([null, 'carries markup a browser would run on the site', false], Download::storable(self::response($body, 'application/rdf+xml'), null, null));
     }
 
     public function testAnRdfaPageIsStoredAsNTriples()
@@ -196,6 +196,6 @@ class DownloadTest extends TestCase
         [$data, $extension] = Download::storable(self::response($page, 'text/html'), 'rdfa', 'http://example.org/ns#');
         $this->assertSame('nt', $extension);
         $this->assertStringContainsString('<http://example.org/ns#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>', $data);
-        $this->assertSame([null, 'the page carries no RDFa'], Download::storable(self::response('<html><body><p>Nothing here.</p></body></html>', 'text/html'), 'rdfa', 'http://example.org/ns#'));
+        $this->assertSame([null, 'the page carries no RDFa', false], Download::storable(self::response('<html><body><p>Nothing here.</p></body></html>', 'text/html'), 'rdfa', 'http://example.org/ns#'));
     }
 }

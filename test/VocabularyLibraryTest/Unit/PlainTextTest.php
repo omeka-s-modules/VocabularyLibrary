@@ -35,6 +35,8 @@ class PlainTextTest extends TestCase
     {
         $this->assertSame('A label over two lines', PlainText::line("  A <b>label</b>\n   over\ttwo lines "));
         $this->assertSame('', PlainText::line(null));
+        // Text that isn't valid UTF-8 keeps its text.
+        $this->assertSame("Caf\xe9 au lait", PlainText::line("Caf\xe9  au\nlait"));
     }
 
     public function testAShortDescriptionIsItsOwnExcerpt()

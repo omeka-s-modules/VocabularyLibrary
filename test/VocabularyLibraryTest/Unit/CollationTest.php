@@ -33,11 +33,17 @@ class CollationTest extends TestCase
 
     public function testTextThatIsNotValidUtf8IsStillOrdered()
     {
-        // The collator can't compare it, so it is ordered by its bytes.
+        // The collator can't compare it, so it follows all that is valid,
+        // in the order of its bytes, whichever way the list is sorted.
         $collation = $this->collation();
-        $this->assertLessThan(0, $collation->compare("a\xff", 'b'));
-        $this->assertGreaterThan(0, $collation->compare('b', "a\xff"));
-        $this->assertSame(['apple', "a\xff", 'b'], array_values($collation->sorted(['b', "a\xff", 'apple'])));
+        $this->assertGreaterThan(0, $collation->compare("a\xff", 'b'));
+        $this->assertLessThan(0, $collation->compare('b', "a\xff"));
+        $this->assertLessThan(0, $collation->compare("a\xff", "b\xff"));
+        $expected = ['apple', 'b', 'Événement', "a\xff", "b\xff"];
+        $this->assertSame($expected, array_values($collation->sorted(["b\xff", 'Événement', 'b', "a\xff", 'apple'])));
+        $texts = ['apple', "b\xff", 'b', "a\xff", 'Événement'];
+        usort($texts, [$collation, 'compare']);
+        $this->assertSame($expected, $texts);
     }
 
     public function testCompareOrdersTwoTexts()

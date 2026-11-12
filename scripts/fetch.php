@@ -16,8 +16,10 @@
  *
  * Fetches one vocabulary per host at a time, and tries an address once more
  * when its server fails or does not answer, after the wait the server names
- * or else --retry-wait, 10 seconds by default. A term list's terms are
- * fetched a few at a time from its host (Download::TERM_BATCH).
+ * or else --retry-wait, 10 seconds by default. A host that fails both times
+ * is not asked again in the run, so one that is down doesn't hold up the
+ * rest for each of its vocabularies. A term list's terms are fetched a few
+ * at a time from its host (Download::TERM_BATCH).
  *
  * Prints what changed and what failed. A changed file says how it differs
  * from the stored one: in its terms, their labels or their comments, in any
@@ -75,9 +77,24 @@ foreach ($sources as $slug => $entry) {
 // it, or a phrase where there is nothing to count. Needs look: whether a
 // failed slug has an address that no longer serves a usable file.
 $changed = $unchanged = $failed = $needsLook = [];
-// Retry-After describes a host, so the back-off is per host.
-$retried = $notBefore = [];
+// Retry-After describes a host, so the back-off is per host. Down: hosts
+// that failed on both tries.
+$retried = $notBefore = $down = [];
 while ($pending) {
+    // What a host that is down serves fails without being asked for.
+    foreach ($pending as $slug => $urls) {
+        while ($urls && isset($down[(string) parse_url($urls[0], PHP_URL_HOST)])) {
+            $failed[$slug][] = array_shift($urls) . ': its server failed twice earlier in this run';
+            $needsLook[$slug] = $needsLook[$slug] ?? false;
+        }
+        $pending[$slug] = $urls;
+        if (!$urls) {
+            unset($pending[$slug]);
+        }
+    }
+    if (!$pending) {
+        break;
+    }
     // One URL per vocabulary, one request per host, PARALLEL at a time.
     $batch = $hosts = [];
     foreach ($pending as $slug => $urls) {
@@ -110,11 +127,22 @@ while ($pending) {
         $entry = $sources[$slug];
         $reason = $response['error'];
         $unavailable = Download::serverUnavailable($response);
+        $same = false;
+        if ($unavailable && $host = (string) parse_url($url, PHP_URL_HOST)) {
+            $down[$host] = true;
+        }
         if (!$reason) {
-            [$data, $extension, $unavailable] = Download::storable($response, $entry['format'] ?? null, $entry['namespace']) + [2 => false];
-            if ($data === null) {
-                $reason = $extension;
-            } else {
+            [$data, $extension, $unavailable] = Download::storable($response, $entry['format'] ?? null, $entry['namespace']);
+            $reason = $data === null ? $extension : null;
+        }
+        if (!$reason) {
+            // The stored file was checked when it was stored, so one the
+            // same to the byte needs no check.
+            $current = $repo->files($slug);
+            $same = count($current) === 1
+                && pathinfo($current[0], PATHINFO_EXTENSION) === $extension
+                && hash_file('sha256', $current[0]) === hash('sha256', $data);
+            if (!$same) {
                 $path = Download::tempFile($data, $extension);
                 $result = $check->check($path, $entry['namespace']);
                 unlink($path);
@@ -130,10 +158,6 @@ while ($pending) {
             }
             continue;
         }
-        $current = $repo->files($slug);
-        $same = count($current) === 1
-            && pathinfo($current[0], PATHINFO_EXTENSION) === $extension
-            && hash_file('sha256', $current[0]) === hash('sha256', $data);
         if ($same) {
             $unchanged[] = $slug;
         } else {

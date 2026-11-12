@@ -151,6 +151,26 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame(1, $differences['labels']);
     }
 
+    public function testDifferencesAreFoundInALanguageOnlyCommentsHave()
+    {
+        $french = ['"Anything at all."@en ;' => '"Anything at all."@en, "Toute chose."@fr ;'];
+        $old = $this->changed($french);
+        $this->assertArrayHasKey('fr', $old['readings']);
+        // The labels' languages are still what the library lists.
+        $this->assertSame(['de', 'en'], $old['languages']);
+        $new = $this->changed(['"Anything at all."@en ;' => '"Anything at all."@en, "Toutes choses."@fr ;']);
+        $this->assertSame(1, ImportCheck::differences($old, $new)['comments']);
+    }
+
+    public function testDifferencesAreFoundWhenTheFilesShareNoLanguage()
+    {
+        // Labels that gain language tags, and one that changes.
+        $old = $this->changed(['@en' => '', '@de' => '']);
+        $new = $this->changed(['"has part"@en' => '"has a part"@fr', ', "Ding"@de' => '', ', "hat Teil"@de' => '', '@en' => '@fr']);
+        $this->assertSame([], array_values(array_intersect(array_keys($old['readings']), array_keys($new['readings']))));
+        $this->assertSame(1, ImportCheck::differences($old, $new)['labels']);
+    }
+
     public function testDifferencesAreExact()
     {
         $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Anything at all."@en' => '"Anything at all. "@en']));

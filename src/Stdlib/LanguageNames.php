@@ -1,7 +1,7 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
-use Laminas\I18n\Translator\TranslatorInterface;
+use Laminas\I18n\Translator\Translator;
 
 /**
  * The language tags of vocabularies' labels, named in the admin's language,
@@ -14,10 +14,10 @@ class LanguageNames
     protected $collation;
 
     /**
-     * @param TranslatorInterface $translator The translator core's lang view
-     *   helper gets, which holds the admin's locale
+     * @param Translator $translator The translator core's lang view helper
+     *   gets, which holds the admin's locale
      */
-    public function __construct(TranslatorInterface $translator, Collation $collation)
+    public function __construct(Translator $translator, Collation $collation)
     {
         $this->translator = $translator;
         $this->collation = $collation;

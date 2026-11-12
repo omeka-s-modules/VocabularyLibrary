@@ -32,7 +32,9 @@ class PlainText
      */
     public static function line($value)
     {
-        return trim(preg_replace('/\s+/u', ' ', self::from($value)));
+        $text = self::from($value);
+        // Text that isn't valid UTF-8 can't be matched as such.
+        return trim(preg_replace('/\s+/u', ' ', $text) ?? preg_replace('/\s+/', ' ', $text));
     }
 
     /**
