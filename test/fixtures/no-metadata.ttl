@@ -1,0 +1,5 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/ns#Thing> a rdfs:Class .
+<http://example.org/ns#Other> a rdfs:Class ;
+    rdfs:label "Other"@fr .

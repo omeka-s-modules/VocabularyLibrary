@@ -4,3 +4,4 @@
 /language/*.pot export-ignore
 /language/*.po export-ignore
 /scripts/ export-ignore
+/test/ export-ignore

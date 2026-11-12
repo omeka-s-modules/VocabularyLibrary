@@ -126,6 +126,12 @@ issue or contact the Omeka team through the
 The collection is maintained with the scripts in `scripts/`, which are left
 out of release packages. See [scripts/README.md](scripts/README.md).
 
+The tests are in `test/`, also left out of release packages. They use Omeka's
+own test framework and need its development dependencies, but no database.
+From Omeka's root:
+
+    vendor/bin/phpunit -c modules/VocabularyLibrary/test/phpunit.xml
+
 # Copyright
 
 Vocabulary Library is Copyright © 2026-present Corporation for Digital

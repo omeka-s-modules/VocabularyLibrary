@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://purl.org/dc/terms/> a owl:Ontology ;
+    dcterms:title "DCMI Metadata Terms"@en ;
+    dcterms:license <http://example.org/another-license> .
+
+<http://example.org/ns#> a owl:Ontology ;
+    dcterms:title "Example Vocabulary"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
+<http://example.org/ns#Thing> a rdfs:Class ;
+    rdfs:label "Thing"@en .
