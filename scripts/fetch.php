@@ -85,7 +85,7 @@ while ($pending) {
     foreach ($pending as $slug => $urls) {
         while ($urls && isset($down[(string) parse_url($urls[0], PHP_URL_HOST)])) {
             $failed[$slug][] = array_shift($urls) . ': its server failed twice earlier in this run';
-            $needsLook[$slug] = $needsLook[$slug] ?? false;
+            $needsLook[$slug] ??= false;
         }
         $pending[$slug] = $urls;
         if (!$urls) {

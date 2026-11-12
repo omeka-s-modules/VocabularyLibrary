@@ -8,7 +8,7 @@ class TermSearchTest extends TempDirTestCase
 {
     protected function search($query, ?array $index = null)
     {
-        $index = $index ?? [
+        $index ??= [
             'ex' => [
                 'Agent',
                 ['created', 'Date Created'],

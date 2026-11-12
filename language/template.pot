@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 18:39-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Module.php:36 view/vocabulary-library/admin/index/browse.phtml:21
+#: view/vocabulary-library/admin/index/compare.phtml:68
+#: view/vocabulary-library/admin/index/import.phtml:10
+msgid "Vocabulary Library"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:30
+#, php-format
+msgid "Import %s"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:33
+#, php-format
+msgid ""
+"Its prefix is already used in Omeka by \"%s\". Choose another when importing."
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:35
+#, php-format
+msgid "Used by \"%s\""
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:35
+msgid "Prefix in use"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:39
+#: view/common/vocabulary-library-status.phtml:47
+#: view/vocabulary-library/admin/index/browse.phtml:52
+msgid "Namespace in use"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:41
+#: view/common/vocabulary-library-status.phtml:51
+#, php-format
+msgid "Namespace in use as %s"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:44
+#: view/vocabulary-library/admin/index/compare.phtml:68
+msgid "Compare and update"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:48
+#, php-format
+msgid "Namespace in use: %s"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:9
+msgid "Matching terms:"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:26
+#, php-format
+msgid "All matching terms (%s)"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:30
+#: view/vocabulary-library/admin/index/browse.phtml:31
+msgid "Search vocabularies"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:34
+#: view/vocabulary-library/admin/index/browse.phtml:145
+msgid "Also search class and property names"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:38
+msgid "Tag"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:39
+msgid "All tags"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:44
+msgid "Label language"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:45
+msgid "Any label language"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:51
+msgid "All vocabularies"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:53
+msgid "Namespace not in use"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:70
+#, php-format
+msgid "Showing %1$s of %2$s"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:79
+#: view/vocabulary-library/admin/index/show-details.phtml:80
+msgid "Tags"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:143
+msgid "No vocabularies match."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:146
+msgid "Clear filters"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:52
+msgid "From"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:52
+msgid "To"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:55
+msgid "Changed properties"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:56
+msgid "Changed classes"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:57
+msgid "New properties"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:58
+msgid "New classes"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:63
+msgid ""
+"Omeka has these and the library's file doesn't. Updating doesn't remove them."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:64
+msgid "Properties not in the library's file"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:65
+msgid "Classes not in the library's file"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:78
+#: view/vocabulary-library/admin/index/import.phtml:15
+msgid "Back to the library"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:98
+msgid ""
+"Choose the language the vocabulary was imported in, or First available if it "
+"was imported without one, to see what changed. Choose another to see what "
+"switching its labels and comments would change. The page starts with the "
+"language that matches the vocabulary in Omeka."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:102
+msgid "First available"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:113
+msgid "Comments"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:114
+msgid ""
+"Choose how the vocabulary was imported to see what changed, or the other to "
+"see what switching would change. The page starts with the one that matches "
+"the vocabulary in Omeka."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:118
+msgid "As the library imports them (skos:definition, else rdfs:comment)"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:119
+msgid "As Omeka's own import reads them (rdfs:comment)"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:125
+msgid "Compare"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:131
+msgid ""
+"Updating changes the labels and comments below to the library file's, and "
+"adds any new classes and properties. It removes nothing."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:133
+msgid "Updating would change nothing in Omeka."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:17
+msgid "Omeka already has a vocabulary with this namespace."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:29
+#, php-format
+msgid "Adds %1$s classes and %2$s properties."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:35
+msgid "This prefix is already used in Omeka by:"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:39
+msgid "Omeka reserves the prefix \"o\" and prefixes beginning \"o-\"."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:52
+msgid "Tested with this file, and set by the library."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:16
+msgid "Not provided by the publisher"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:27
+msgid "Classes and properties"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:37
+msgid "Vocabulary in Omeka"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:61
+msgid "Full description"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:86
+msgid "Label languages"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:108
+msgid "Download file"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:117
+#: view/vocabulary-library/admin/index/show-details.phtml:118
+msgid "Filter classes and properties"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:119
+msgid "No classes or properties match."
+msgstr ""
+
+#: src/Form/ImportForm.php:27
+msgid "Cannot be changed after import."
+msgstr ""
+
+#: src/Form/ImportForm.php:62
+msgid ""
+"The language of labels and comments. This vocabulary has them in several "
+"languages."
+msgstr ""
+
+#: config/module.config.php:70
+msgid "Linked data and modeling"
+msgstr ""
+
+#: config/module.config.php:71
+msgid "Museums and art"
+msgstr ""
+
+#: config/module.config.php:72
+msgid "Libraries and cataloging"
+msgstr ""
+
+#: config/module.config.php:73
+msgid "Archives and records"
+msgstr ""
+
+#: config/module.config.php:74
+msgid "Aggregation and IIIF"
+msgstr ""
+
+#: config/module.config.php:75
+msgid "Scholarly publishing"
+msgstr ""
+
+#: config/module.config.php:76
+msgid "Digital humanities"
+msgstr ""
+
+#: config/module.config.php:77
+msgid "People and organizations"
+msgstr ""
+
+#: config/module.config.php:78
+msgid "Places and geography"
+msgstr ""
+
+#: config/module.config.php:79
+msgid "Time and events"
+msgstr ""
+
+#: config/module.config.php:80
+msgid "Rights and data provenance"
+msgstr ""
+
+#: config/module.config.php:81
+msgid "Media and files"
+msgstr ""
+
+#: config/module.config.php:82
+msgid "Digital preservation"
+msgstr ""
+
+#: config/module.config.php:83
+msgid "Science and measurement"
+msgstr ""
+
+#: config/module.config.php:84
+msgid "Natural history"
+msgstr ""
+
+#: config/module.config.php:85
+msgid "Music and performing arts"
+msgstr ""
+
+#: Module.php:35
+#, php-format
+msgid ""
+"Looking for a published vocabulary? The %s has tested vocabularies, ready to "
+"import."
+msgstr ""
