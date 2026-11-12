@@ -171,8 +171,8 @@ class ImportCheck
                 return $this->describe($graph, $best, 'dcterms:description|dc11:description|rdfs:comment|skos:definition', true)
                     ?? $this->describe($graph, $best, 'skos:note', true);
             }),
-            'license' => $this->safely(function () use ($graph) {
-                return $this->license($graph);
+            'license' => $this->safely(function () use ($graph, $best) {
+                return $this->license($graph, $best);
             }),
         ];
     }
@@ -325,15 +325,9 @@ class ImportCheck
         if ($namespace === '') {
             return null;
         }
-        $base = rtrim($namespace, '#/');
-        $subjects = [];
-        foreach ($graph->allOfType('owl:Ontology') as $ontology) {
-            if (rtrim((string) $ontology->getUri(), '#/') === $base) {
-                $subjects[] = $ontology;
-            }
-        }
+        $subjects = $this->ownOntologies($graph, $namespace);
         $subjects[] = $graph->resource($namespace);
-        $subjects[] = $graph->resource($base);
+        $subjects[] = $graph->resource(rtrim($namespace, '#/'));
         foreach ($subjects as $subject) {
             $value = trim((string) $subject->get('<' . self::VANN . 'preferredNamespacePrefix>'));
             if ($value !== '') {
@@ -341,6 +335,41 @@ class ImportCheck
             }
         }
         return null;
+    }
+
+    /**
+     * The file's ontology records for the namespace.
+     *
+     * @return \EasyRdf\Resource[]
+     */
+    protected function ownOntologies(RdfGraph $graph, $namespace)
+    {
+        $base = rtrim($namespace, '#/');
+        $own = [];
+        foreach ($graph->allOfType('owl:Ontology') as $ontology) {
+            if (rtrim((string) $ontology->getUri(), '#/') === $base) {
+                $own[] = $ontology;
+            }
+        }
+        return $own;
+    }
+
+    /**
+     * The ontology records that describe the vocabulary itself: those for
+     * the namespace, or else the file's only one, which many files give a
+     * URI other than the namespace. A file that also describes vocabularies
+     * it reuses has several, and theirs are not read.
+     *
+     * @return \EasyRdf\Resource[]
+     */
+    protected function describingOntologies(RdfGraph $graph, $namespace)
+    {
+        $own = $this->ownOntologies($graph, $namespace);
+        if ($own) {
+            return $own;
+        }
+        $all = $graph->allOfType('owl:Ontology');
+        return count($all) === 1 ? $all : [];
     }
 
     /**
@@ -369,7 +398,7 @@ class ImportCheck
 
     /**
      * The vocabulary's own title or description, as its publisher wrote it:
-     * from the ontology record, or else from the namespace resource, or else
+     * from its ontology record, or else from the namespace resource, or else
      * from the record its terms name with rdfs:isDefinedBy, as element sets
      * from the Open Metadata Registry do. English if the file offers it,
      * otherwise the first value in any language. A description the file
@@ -381,7 +410,7 @@ class ImportCheck
      */
     protected function describe(RdfGraph $graph, $namespace, $properties, $paragraphs)
     {
-        $subjects = $graph->allOfType('owl:Ontology');
+        $subjects = $this->describingOntologies($graph, $namespace);
         if ($namespace !== '') {
             $subjects[] = $graph->resource($namespace);
             $subjects[] = $graph->resource(rtrim($namespace, '#/'));
@@ -454,13 +483,25 @@ class ImportCheck
      * without its markers, and headings, list items and code blocks as their
      * own paragraphs. The patterns only match Markdown syntax, so names like
      * "E63_Beginning_of_Existence" are left alone.
+     *
+     * Plain prose wrapped onto several lines can start a line with a dash or
+     * a number. Such a line is not a list item when the lines before and
+     * after it are both prose, unless the one before ends with a colon, as a
+     * line introducing a list does.
      */
     public static function markdownToText($text)
     {
         $text = str_replace(["\r\n", "\r"], "\n", $text);
+        $source = explode("\n", $text);
+        $prose = function ($i) use ($source) {
+            return isset($source[$i]) && trim($source[$i]) !== '' && !preg_match('/^\s*(?:[-*+]|\d+[.)])\s+/', $source[$i]);
+        };
         $lines = [];
-        foreach (explode("\n", $text) as $line) {
-            if (preg_match('/^\s*(```|~~~)/', $line) || preg_match('/^\s*([-*_]\s*){3,}$/', $line)) {
+        foreach ($source as $i => $line) {
+            $wrapped = $prose($i - 1) && $prose($i + 1) && substr(rtrim($source[$i - 1]), -1) !== ':';
+            if ($wrapped) {
+                $lines[] = $line;
+            } elseif (preg_match('/^\s*(```|~~~)/', $line) || preg_match('/^\s*([-*_]\s*){3,}$/', $line)) {
                 // Code fences and horizontal rules end a paragraph.
                 $lines[] = '';
             } elseif (preg_match('/^\s{0,3}#{1,6}\s+(.*?)\s*#*\s*$/', $line, $match)) {
@@ -492,12 +533,12 @@ class ImportCheck
     }
 
     /**
-     * The license the ontology declares, if any.
+     * The license the vocabulary's ontology record declares, if any.
      */
-    protected function license(RdfGraph $graph)
+    protected function license(RdfGraph $graph, $namespace)
     {
         $properties = ['dcterms:license', 'dc11:rights', 'dcterms:rights', '<http://creativecommons.org/ns#license>', '<http://www.w3.org/1999/xhtml/vocab#license>'];
-        foreach ($graph->allOfType('owl:Ontology') as $ontology) {
+        foreach ($this->describingOntologies($graph, $namespace) as $ontology) {
             foreach ($properties as $property) {
                 $value = trim(PlainText::from($ontology->get($property)));
                 if ($value !== '' && mb_check_encoding($value, 'UTF-8')) {
