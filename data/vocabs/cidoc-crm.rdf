@@ -108,7 +108,7 @@ Another aspect considered for the implementation of properties in RDFS is whethe
 
 In this version we followed the following policies regarding CIDOC Properties implementation in RDFS:
 
-&gt; B1. CIDOC Property backwards/inverse direction is **not** defined, whenever no inverse name for the property has been specified in parentheses in the official CIDOC documentation and property domain is not equal with property range.
+&gt; B1. CIDOC Property inverse/backwards direction is **not** defined, whenever no inverse name for the property has been specified in parentheses in the official CIDOC documentation and property domain is not equal with property range.
 
 As a result, the following properties do not define an inverse direction.
 
@@ -123,29 +123,29 @@ As a result, the following properties do not define an inverse direction.
 - `E53 Place. P172 contains: E94 Space Primitive`
 - `E90 Symbolic Object. P190 has symbolic content: E62 String`
 
-&gt; B2. CIDOC Property forward direction is **not** defined whenever property domain is interpreted as rdfs:Literal (A.1). Similarly, CIDOC Property backwards/inverse direction is **not** defined, whenever property range is interpreted as rdfs:Literal (A.1). Further, the instances of classes interpreted as rdfs:Literal, cannot express in RDFs their **inherited** properties that could be expressed according to CIDOC Model.
+&gt; B2. CIDOC Property direct/forward direction is **not** defined whenever property domain is interpreted as rdfs:Literal (A.1). Similarly, CIDOC Property inverse/backwards direction is **not** defined, whenever property range is interpreted as rdfs:Literal (A.1). Further, the instances of classes interpreted as rdfs:Literal, cannot express in RDFs their **inherited** properties that could be expressed according to CIDOC Model.
 
 As a result,
 
-a) The following **direct forward direction** CIDOC Properties **cannot** be expressed and are **not defined** in RDFS:
+a) The following **direct/forward direction** CIDOC Properties **cannot** be expressed and are **not defined** in RDFS:
 
 - `E95 Spacetime Primitive. P169 defines spacetime volume (spacetime volume is defined by): E92 Spacetime Volume`
 - `E61 Time Primitive. P170 defines time (time is defined by): E52 Time-Span`
 
-b) The following **direct backwards direction** CIDOC Properties **cannot** be expressed and are **not defined** in RDFS:
+b) The following **inverse/backwards direction** CIDOC Properties **cannot** be expressed and are **not defined** in RDFS:
 
 - `E94 Space Primitive. P168i defines place (place is defined by): E53 Place`
 
-&gt; B3. Whenever no backwards/inverse property name is specified and property domain matches with property range, then the forward/direct property direction should be used for **both** directions and **no backwards/inverse property** needs to be defined.
+&gt; B3. Whenever no inverse/backwards property name is specified and property domain matches with property range, then the direct/forward property direction should be used for **both** directions and **no inverse/backwards property** needs to be defined.
 
-As a result, we did not implement a separate backwards/inverse direction for the following CIDOC Properties:
+As a result, we did not implement a separate inverse/backwards direction for the following CIDOC Properties:
 
 - `E53 Place. P121 overlaps with: E53 Place`
 - `E53 Place. P122 borders with: E53 Place`
 - `E92 Spacetime Volume. P132 spatiotemporally overlaps with: E92 Spacetime Volume`
 - `E92 Spacetime Volume. P133 is spatiotemporally separated from: E92 Spacetime Volume`
 
-Additionally, all aforementioned redundant backwards/inverse CIDOC Property direction references, are replaced by the respective direct/forward CIDOC Property direction.
+Additionally, all aforementioned redundant inverse/backwards CIDOC Property direction references, are replaced by the respective direct/forward CIDOC Property direction.
 
 - The hierarchical link of  `P10i` subPropertyOf `P132i` was replaced with `P10i` subPropertyOf `P132`.
 

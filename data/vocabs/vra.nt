@@ -7,16 +7,16 @@
 <http://purl.org/vra> <http://schema.org/creator> _:genid3 .
 <http://purl.org/vra> <http://schema.org/creator> _:genid4 .
 <http://viaf.org/viaf/315998461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-<http://viaf.org/viaf/315998461> <http://schema.org/name> "\r\nJeff Mixter,\r\n				" .
+<http://viaf.org/viaf/315998461> <http://schema.org/name> "\nJeff Mixter,\n				" .
 <http://viaf.org/viaf/315998461> <http://schema.org/url> <https://www.linkedin.com/pub/jeff-mixter/51/565/1b9> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:genid1 <http://schema.org/name> "\r\n Rebecca Guenther,\r\n				" .
+_:genid1 <http://schema.org/name> "\n Rebecca Guenther,\n				" .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:genid2 <http://schema.org/name> "\r\n Trish Rose-Sandler,\r\n				" .
+_:genid2 <http://schema.org/name> "\n Trish Rose-Sandler,\n				" .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:genid3 <http://schema.org/name> "\r\n Michael Dulock and\r\n				" .
+_:genid3 <http://schema.org/name> "\n Michael Dulock and\n				" .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:genid4 <http://schema.org/name> "\r\n Esme Cowles\r\n" .
+_:genid4 <http://schema.org/name> "\n Esme Cowles\n" .
 <http://purl.org/vra/AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative Area" .
 <http://purl.org/vra/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vra/Place> .

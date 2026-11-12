@@ -17,7 +17,7 @@
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-01</terms:modified>
         <terms:publisher rdf:resource="https://www.huygens.knaw.nl/"/>
         <vann:preferredNamespaceUri>https://w3id.org/pnv#</vann:preferredNamespaceUri>
-        <foaf:depiction rdf:resource="https://www.lodewijkpetram.nl/vocab/pnv/doc/img/PNV_visualization.png"/>
+        <foaf:depiction rdf:resource="https://huygensing.github.io/pnv/doc/img/PNV_visualization.png"/>
         <terms:creator>Gijsbert Kruithof, National Archives, The Netherlands</terms:creator>
         <terms:creator>Lodewijk Petram, Huygens Institute for the History of the Netherlands</terms:creator>
         <vann:preferredNamespacePrefix>pnv</vann:preferredNamespacePrefix>

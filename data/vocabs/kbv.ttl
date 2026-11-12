@@ -33,7 +33,7 @@ prefix sdo: <http://schema.org/>
     <http://id.loc.gov/ontologies/bibframe/> ,
     <http://id.loc.gov/ontologies/bflc/> ;
   :license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-  :version "1.45.4" ;
+  :version "1.46.2" ;
   :dataDisplay :display ;
   :title "KB Base Vocabulary"@en , "KB:s basvokabulär"@sv ;
   :comment "This vocabulary serves as a central mapping to public, well-known properties and classes."@en , "Detta vokabulär fungerar som en central mappning till publika, välkända egenskaper och klasser."@sv ;
@@ -391,7 +391,7 @@ prefix sdo: <http://schema.org/>
   rdfs:isDefinedBy : ;
   :label "Carrier type"@en , "Bärartyp"@sv ;
   owl:equivalentClass <http://id.loc.gov/ontologies/bibframe/Carrier> ,
-    [ owl:onProperty _:nd8f975caf83848b9a2d7de4ca7d7b3a9b67 ;
+    [ owl:onProperty _:n86be387abc994721903b1fca22c7a813b67 ;
       owl:hasSelf true ] .
 
 :Cartographic a owl:Class ;
@@ -648,7 +648,7 @@ prefix sdo: <http://schema.org/>
   rdfs:isDefinedBy : ;
   :label "Content type"@en , "Innehållstyp"@sv ;
   owl:equivalentClass <http://id.loc.gov/ontologies/bibframe/Content> ,
-    [ owl:onProperty _:nd8f975caf83848b9a2d7de4ca7d7b3a9b64 ;
+    [ owl:onProperty _:n86be387abc994721903b1fca22c7a813b64 ;
       owl:hasSelf true ] .
 
 :Continuing a owl:Class ;
@@ -1199,7 +1199,7 @@ prefix sdo: <http://schema.org/>
   :label "Genre/form"@en , "Genre/form"@sv ;
   owl:equivalentClass <http://id.loc.gov/ontologies/bibframe/GenreForm> ,
     <http://www.loc.gov/mads/rdf/v1#GenreForm> ,
-    [ owl:onProperty _:nb11fbd5ca1ff47b4ba1c8d1af03743a1b10 ;
+    [ owl:onProperty _:nd424eb5f2fb34abbafd791a439d145ebb10 ;
       owl:hasSelf true ] .
 
 :GenreFormScheme a owl:Class ;
@@ -2895,7 +2895,8 @@ prefix sdo: <http://schema.org/>
 
 :SourceData a owl:Class ;
   rdfs:subClassOf <http://www.loc.gov/mads/rdf/v1#Source> ,
-    :QualifiedRole ;
+    :QualifiedRole ,
+    :AdminMetadata ;
   rdfs:isDefinedBy : ;
   :label "Source data"@en , "Källa vid belagd uppgift"@sv .
 
@@ -3635,12 +3636,6 @@ prefix sdo: <http://schema.org/>
   :definition "En alternativ lexikal benämning för en resurs."@sv ;
   owl:equivalentProperty <http://www.w3.org/2004/02/skos/core#altLabel> .
 
-:alternative a owl:DatatypeProperty ;
-  :category :shorthand ;
-  rdfs:isDefinedBy : ;
-  :label "alternative title"@en , "alternativ titel"@sv ;
-  owl:equivalentProperty <http://purl.org/dc/terms/alternative> .
-
 :applicableInstitution a owl:ObjectProperty ;
   rdfs:range :Agent ;
   rdfs:domain :Endeavour ;
@@ -3893,7 +3888,7 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <http://rdaregistry.info/Elements/carrierType> ,
     <http://purl.org/dc/terms/format> ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/carrier> ;
-  owl:propertyChainAxiom ( :category _:nd8f975caf83848b9a2d7de4ca7d7b3a9b67 ) .
+  owl:propertyChainAxiom ( :category _:n86be387abc994721903b1fca22c7a813b67 ) .
 
 :cartographicAttributes a owl:ObjectProperty ;
   rdfs:range :Cartographic ;
@@ -3977,7 +3972,7 @@ prefix sdo: <http://schema.org/>
   sdo:domainIncludes :Endeavour ;
   :code "z3950.1040"^^ls:QueryCode ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/classification> ;
-  ls:filterDescriptionByLang "Classification code according to a classification system such as SAB, DDC, or UDC"@en , "Klassifikationskod enligt ett klassifikationssystem som till exempel SAB, DDK eller UDK"@sv .
+  ls:filterDescription "Classification code according to a classification system such as SAB, DDC, or UDC"@en , "Klassifikationskod enligt ett klassifikationssystem som till exempel SAB, DDK eller UDK"@sv .
 
 :classificationPortion a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
@@ -4072,10 +4067,10 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <http://schema.org/exampleOfWork> .
 
 :compositional a :ConceptCollection ;
-  :example "Exempelvis hasVariant, som anger variantbeskrivingar av en Agent som distinkta Agenter (men enbart i formen, de respresenterar samma ting)."@sv ;
   rdfs:isDefinedBy : ;
   :label "compositional"@en , "inneboende del"@sv ;
   :comment "Anges på egenskaper för att betrakta deras värde som en sammansatt del av entiteten, istället för en länkbar fristående entitet."@sv ;
+  :example "Exempelvis hasVariant, som anger variantbeskrivingar av en Agent som distinkta Agenter (men enbart i formen, de respresenterar samma ting)."@sv ;
   :scopeNote "Används i Libris katalogiseringsverktyg för att stödja arbetsflödet att endast skapa en lokal beskrivning."@sv ;
   <https://id.kb.se/vocab/code> "compositional" .
 
@@ -4124,7 +4119,7 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <http://rdaregistry.info/Elements/contentType> ,
     <http://purl.org/dc/terms/type> ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/content> ;
-  owl:propertyChainAxiom ( :category _:nd8f975caf83848b9a2d7de4ca7d7b3a9b64 ) .
+  owl:propertyChainAxiom ( :category _:n86be387abc994721903b1fca22c7a813b64 ) .
 
 :continuedBy a owl:ObjectProperty ;
   owl:inverseOf :continues ;
@@ -4413,10 +4408,10 @@ prefix sdo: <http://schema.org/>
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/degree> .
 
 :dependent a :ConceptCollection ;
-  :example "Egenskapen concerning"@sv ;
   rdfs:isDefinedBy : ;
   :label "dependent"@en , "avhängig"@sv ;
   :comment "Anges på egenskaper där en entitet inte kan existera utan en en entitet den länkar till. Entiteten tas automatiskt bort om den länkade entiteten tas bort."@sv ;
+  :example "Egenskapen concerning"@sv ;
   <https://id.kb.se/vocab/code> "dependent" .
 
 :derivativeOf a owl:ObjectProperty ;
@@ -4609,7 +4604,9 @@ prefix sdo: <http://schema.org/>
   rdfs:range :DOI ;
   :category :shorthand ;
   rdfs:isDefinedBy : ;
-  rdfs:subPropertyOf :identifier .
+  rdfs:subPropertyOf :identifier ;
+  owl:propertyChainAxiom ( [ rdfs:range :DOI ;
+        rdfs:subPropertyOf :identifiedBy ] :value ) .
 
 :duration a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
@@ -4625,7 +4622,9 @@ prefix sdo: <http://schema.org/>
   rdfs:range :EAN ;
   :category :shorthand ;
   rdfs:isDefinedBy : ;
-  rdfs:subPropertyOf :identifier .
+  rdfs:subPropertyOf :identifier ;
+  owl:propertyChainAxiom ( [ rdfs:range :EAN ;
+        rdfs:subPropertyOf :identifiedBy ] :value ) .
 
 :edition a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
@@ -4994,7 +4993,7 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <http://schema.org/genre> ;
   sdo:domainIncludes :Endeavour ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/genreForm> ;
-  owl:propertyChainAxiom ( :category _:nb11fbd5ca1ff47b4ba1c8d1af03743a1b10 ) .
+  owl:propertyChainAxiom ( :category _:nd424eb5f2fb34abbafd791a439d145ebb10 ) .
 
 :geographicCoverage a owl:ObjectProperty ;
   rdfs:range :GeographicCoverage ;
@@ -5350,18 +5349,18 @@ prefix sdo: <http://schema.org/>
     <http://purl.org/ontology/holding#heldBy> .
 
 :heuristicIdentifier a :ConceptCollection ;
-  :example "prefLabelByLang, altLabel, labelByLang osv."@sv ;
   rdfs:isDefinedBy : ;
   :label "heuristicIdentifier"@en , "heuristisk identifierare"@sv ;
   :comment "Anges för att markera egenskaper som kan identifiera blanka noder."@sv ;
+  :example "prefLabelByLang, altLabel, labelByLang osv."@sv ;
   :scopeNote "Används i XL för att automatiskt ersätta blanka noder med länkar"@sv ;
   <https://id.kb.se/vocab/code> "heuristicIdentifier" .
 
 :heuristicIdentity a :ConceptCollection ;
-  :example "Role, Country och Language kan identifieras via code, prefLabelByLang, altLabel osv."@sv ;
   rdfs:isDefinedBy : ;
   :label "heuristicIdentity"@en , "heuristisk identitet"@sv ;
   :comment "Anges för att markera klasser där blanka noder kan identifieras via en :heuristicIdentifier."@sv ;
+  :example "Role, Country och Language kan identifieras via code, prefLabelByLang, altLabel osv."@sv ;
   :scopeNote "Används i XL för att automatiskt ersätta blanka noder med länkar"@sv ;
   <https://id.kb.se/vocab/code> "heuristicIdentity" .
 
@@ -5462,10 +5461,10 @@ prefix sdo: <http://schema.org/>
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/immediateAcquisition> .
 
 :impliedByObject a :ConceptCollection ;
-  :example "language, category"@sv ;
   rdfs:isDefinedBy : ;
   :label "implied by object"@en , "impliceras av objektet"@sv ;
   :comment "Anges som kategori på relationer. Relationen är den vanligast förekommande för en typ och framgår därför av värdet."@sv ;
+  :example "language, category"@sv ;
   :scopeNote "Används i XL för att markera att etiketten för dessa egenskaper inte alltid behöver skrivas ut."@sv ;
   <https://id.kb.se/vocab/code> "impliedByObject" .
 
@@ -5627,10 +5626,10 @@ prefix sdo: <http://schema.org/>
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/instrumentalType> .
 
 :integral a :ConceptCollection ;
-  :example "instanceOf, translationOf, locatedIn"@sv ;
   rdfs:isDefinedBy : ;
   :label "integral relation"@en , "väsentlig relation"@sv ;
   :comment "Anges som kategori på relationer som är väsentliga för att ge en komplett förståelse för en resurs."@sv ;
+  :example "instanceOf, translationOf, locatedIn"@sv ;
   :scopeNote "Används i XL för att presentera relaterade resurser tillsammans med huvudsaklig resurs."@sv ;
   <https://id.kb.se/vocab/code> "integral" .
 
@@ -5645,7 +5644,7 @@ prefix sdo: <http://schema.org/>
   sdo:domainIncludes :Creation ;
   :code "ART"^^ls:QueryCode ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/intendedAudience> ;
-  ls:filterDescriptionByLang "Intended audience for the resource (for example, Juvenile)"@en , "Avsedd målgrupp för resursen, till exempel \"Barn och ungdom\""@sv ;
+  ls:filterDescription "Intended audience for the resource (for example, Juvenile)"@en , "Avsedd målgrupp för resursen, till exempel \"Barn och ungdom\""@sv ;
   :category :searchfilter ,
     :impliedByObject .
 
@@ -6264,7 +6263,7 @@ prefix sdo: <http://schema.org/>
   :label "note"@en , "anmärkning"@sv ;
   owl:equivalentProperty <http://www.w3.org/2004/02/skos/core#note> ;
   owl:propertyChainAxiom ( :hasNote :label ) ;
-  ls:filterDescriptionByLang "Supplementary details about the resource"@en , "Kompletterande uppgifter om resursen"@sv ;
+  ls:filterDescription "Supplementary details about the resource"@en , "Kompletterande uppgifter om resursen"@sv ;
   :category :pending ,
     :shorthand ,
     :searchfilter .
@@ -6418,10 +6417,10 @@ prefix sdo: <http://schema.org/>
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/pattern> .
 
 :pending a :ConceptCollection ;
-  :example "Egenskapen enumerationAndChronology som hittills inte använts i Libris praxis."@sv ;
   rdfs:isDefinedBy : ;
   :label "pending"@en , "ej fastställd"@sv ;
   :comment "Anges för att markera termer som icke stabila i väntan på fastställande av status."@sv ;
+  :example "Egenskapen enumerationAndChronology som hittills inte använts i Libris praxis."@sv ;
   :scopeNote "Används i Libris katalogiseringsverktyg för att dölja dessa vid listning av egenskaper"@sv ;
   <https://id.kb.se/vocab/code> "pending" .
 
@@ -6642,12 +6641,10 @@ prefix sdo: <http://schema.org/>
 
 :publisher a owl:ObjectProperty ;
   rdfs:range :Agent ;
-  :category :shorthand ;
   rdfs:isDefinedBy : ;
   :label "publisher"@en , "utgivare"@sv ;
   :comment "An entity responsible for making the resource available."@en , "En entitet ansvarig för att tillgängliggöra resursen."@sv ;
-  sdo:domainIncludes :MediaObject ,
-    :Instance ;
+  sdo:domainIncludes :MediaObject ;
   owl:equivalentProperty <http://purl.org/dc/terms/publisher> ,
     <http://schema.org/publisher> ,
     <https://id.kb.se/relator/publisher> ;
@@ -6952,7 +6949,7 @@ prefix sdo: <http://schema.org/>
   sdo:domainIncludes :Instance ;
   :code "WSER"^^ls:QueryCode ,
     "z3950.5"^^ls:QueryCode ;
-  ls:filterDescriptionByLang "Used to find parts belonging to the same series. Searches by, for example, the series title, part number, or ISSN."@en , "Används för att hitta delar tillhörande samma serie. Söker på till exempel seriens titel, delnummer eller ISSN."@sv .
+  ls:filterDescription "Used to find parts belonging to the same series. Searches by, for example, the series title, part number, or ISSN."@en , "Används för att hitta delar tillhörande samma serie. Söker på till exempel seriens titel, delnummer eller ISSN."@sv .
 
 :seriesOf a owl:ObjectProperty ;
   owl:inverseOf :hasSeries ;
@@ -7008,10 +7005,10 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf :status .
 
 :shorthand a :ConceptCollection ;
-  :example "Exempelvis isbn, som motsvarar identifiedBy(type=ISBN).value."@sv ;
   rdfs:isDefinedBy : ;
   :label "shorthand"@en , "kortform"@sv ;
   :comment "Anges som kategori på egenskaper som har en mer komplex bakomliggande struktur."@sv ;
+  :example "Exempelvis isbn, som motsvarar identifiedBy(type=ISBN).value."@sv ;
   :scopeNote "Används i Libris katalogiseringsverktyg för att dölja dessa vid listning av egenskaper."@sv ;
   <https://id.kb.se/vocab/code> "shorthand" .
 
@@ -7067,10 +7064,11 @@ prefix sdo: <http://schema.org/>
   rdfs:isDefinedBy : ;
   :label "source consulted"@en , "konsulterad källa"@sv ;
   :comment "Relates data to a resource used in determining a name, title, or other identifying attributes of an entity, or in determining a relationship between entities."@en , "En konsulterad källa är en resurs som använts för att bestämma namn, titel eller andra identifierande attribut för en person eller annan entitet"@sv ;
-  sdo:domainIncludes :Record ;
-  owl:equivalentProperty <http://www.loc.gov/mads/rdf/v1#hasSource> ,
+  rdfs:subPropertyOf <http://www.loc.gov/mads/rdf/v1#hasSource> ,
     <http://rdaregistry.info/Elements/z/P60001> ,
-    <http://rdaregistry.info/Elements/z/sourceConsulted.en> .
+    <http://rdaregistry.info/Elements/u/sourceConsulted.en> ,
+    <http://purl.org/dc/terms/source> ;
+  sdo:domainIncludes :Record .
 
 :sourceData a owl:ObjectProperty ;
   :category :platform ;
@@ -7130,7 +7128,6 @@ prefix sdo: <http://schema.org/>
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/status> .
 
 :subject a owl:ObjectProperty ;
-  :category :searchfilter ;
   rdfs:isDefinedBy : ;
   :label "Subject"@en , "ämne"@sv ;
   sdo:rangeIncludes :Person ,
@@ -7141,20 +7138,13 @@ prefix sdo: <http://schema.org/>
     :Subject ,
     :Work ,
     :Place ;
-  rdfs:subPropertyOf <http://schema.org/about> ;
+  rdfs:subPropertyOf <http://schema.org/about> ,
+    <https://id.kb.se/ns/librissearch/subject> ;
   sdo:domainIncludes :Work ,
     :Item ,
     :Event ;
-  :code "dc.subject"^^ls:QueryCode ,
-    "bath.topicalSubject"^^ls:QueryCode ,
-    "AMNE"^^ls:QueryCode ,
-    "z3950.21"^^ls:QueryCode ,
-    "z3950.27"^^ls:QueryCode ,
-    "z3950.1079"^^ls:QueryCode ,
-    "z3950.1099"^^ls:QueryCode ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/subject> ,
-    <http://purl.org/dc/terms/subject> ;
-  ls:filterDescriptionByLang "Used to filter by the subject covered by the resource using standardized subject headings from controlled vocabularies."@en , "Används för att filtrera på det ämne resursen behandlar med hjälp av standardiserade ämnesord från ämnesordslistor"@sv .
+    <http://purl.org/dc/terms/subject> .
 
 :subjectOf a owl:ObjectProperty ;
   rdfs:domain <http://www.w3.org/2000/01/rdf-schema#Resource> ;
@@ -7284,7 +7274,7 @@ prefix sdo: <http://schema.org/>
   :label "Table of contents content"@en , "har innehållsförteckning"@sv ;
   sdo:domainIncludes :Creation ;
   owl:equivalentProperty <http://id.loc.gov/ontologies/bibframe/tableOfContents> ;
-  ls:filterDescriptionByLang "Used to search for, for example, titles and chapter authors in anthologies and collected works, among other things."@en , "Används för att söka efter till exempel titlar och kapitelförfattare i antologier och samlingsverk, med mera"@sv .
+  ls:filterDescription "Used to search for, for example, titles and chapter authors in anthologies and collected works, among other things."@en , "Används för att söka efter till exempel titlar och kapitelförfattare i antologier och samlingsverk, med mera"@sv .
 
 :tableSeq a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
@@ -7449,7 +7439,9 @@ prefix sdo: <http://schema.org/>
   rdfs:range :UPC ;
   :category :shorthand ;
   rdfs:isDefinedBy : ;
-  rdfs:subPropertyOf :identifier .
+  rdfs:subPropertyOf :identifier ;
+  owl:propertyChainAxiom ( [ rdfs:range :UPC ;
+        rdfs:subPropertyOf :identifiedBy ] :value ) .
 
 :uri a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> ;
@@ -7518,6 +7510,14 @@ prefix sdo: <http://schema.org/>
   :category :platform ;
   rdfs:isDefinedBy : ;
   owl:equivalentProperty <http://www.w3.org/ns/hydra/core#variable> .
+
+:variantTitle a owl:DatatypeProperty ;
+  :category :shorthand ;
+  rdfs:isDefinedBy : ;
+  :label "variant title"@en , "varianttitel"@sv ;
+  owl:equivalentProperty <http://purl.org/dc/terms/alternative> ;
+  owl:propertyChainAxiom ( [ rdfs:range :VariantTitle ;
+        rdfs:subPropertyOf :hasTitle ] :mainTitle ) .
 
 :variantType a owl:DatatypeProperty ;
   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
@@ -11389,7 +11389,8 @@ prefix sdo: <http://schema.org/>
     [ owl:propertyChainAxiom ( <https://id.kb.se/marc/hasBindingInformation> :label ) ] ,
     [ owl:propertyChainAxiom ( :immediateAcquisition <https://id.kb.se/marc/sourceOfAcquisition> ) ] ,
     [ owl:propertyChainAxiom ( :immediateAcquisition :identifiedBy :value ) ] ,
-    [ owl:propertyChainAxiom ( :classification :code ) ] ;
+    [ owl:propertyChainAxiom ( :classification :code ) ] ,
+    [ owl:propertyChainAxiom ( :associatedMedia <https://id.kb.se/marc/publicNote> ) ] ;
   :category <https://id.kb.se/ns/librissearch/merged> ,
     :pending .
 
@@ -11421,18 +11422,20 @@ prefix sdo: <http://schema.org/>
   rdfs:range :Bibliography ;
   rdfs:domain :Instance ;
   :category :searchfilter ,
-    :shorthand ,
+    <https://id.kb.se/ns/librissearch/composite> ,
     :impliedByObject ,
     :pending ;
   :label "in bibliography"@en , "ingår i bibliografi"@sv ;
   :code "DB"^^ls:QueryCode ,
     "z3950.5001"^^ls:QueryCode ;
   owl:propertyChainAxiom ( [ rdfs:domain :Instance ;
-        rdfs:subPropertyOf :meta ] :bibliography ) ;
-  ls:descriptionRemarkByLang "Can also be searched using library code"@en , "Kan även sökas med sigel"@sv ;
-  ls:filterDescriptionByLang "Special collection that the resource is part of, such as subject-specific or local/regional bibliographies"@en , "Särskild samling som resursen ingår i, till exempel ämnesspecialiserade och lokala/regionala bibliografier"@sv ;
+        rdfs:subPropertyOf :meta ] :bibliography ) ,
+    ( [ rdfs:domain :Instance ;
+        rdfs:subPropertyOf :meta ] :bibliography :isPartOf ) ;
+  ls:descriptionRemark "Can also be searched using library code"@en , "Kan även sökas med sigel"@sv ;
+  ls:filterDescription "Special collection that the resource is part of, such as subject-specific or local/regional bibliographies"@en , "Särskild samling som resursen ingår i, till exempel ämnesspecialiserade och lokala/regionala bibliografier"@sv ;
   :category :searchfilter ,
-    :shorthand ,
+    <https://id.kb.se/ns/librissearch/composite> ,
     :impliedByObject ,
     :pending .
 
@@ -11476,7 +11479,7 @@ prefix sdo: <http://schema.org/>
         rdfs:subPropertyOf :hasPart ] :contribution :agent ) ,
     ( [ rdfs:domain :Work ;
         rdfs:subPropertyOf :relationship ] :entity :contribution :agent ) ;
-  ls:filterDescriptionByLang "Authors and other creators, such as illustrators, translators, editors, and others. Includes individuals, institutions, organizations, and groups."@en , "Författare och andra upphovspersoner som till exempel illustratörer, översättare, redaktörer med flera. Inkluderar personer, institutioner, organisationer och grupper."@sv ;
+  ls:filterDescription "Authors and other creators, such as illustrators, translators, editors, and others. Includes individuals, institutions, organizations, and groups."@en , "Författare och andra upphovspersoner som till exempel illustratörer, översättare, redaktörer med flera. Inkluderar personer, institutioner, organisationer och grupper."@sv ;
   :category :searchfilter ,
     :shorthand ,
     <https://id.kb.se/ns/librissearch/composite> ,
@@ -11497,7 +11500,7 @@ prefix sdo: <http://schema.org/>
     "z3950.5000"^^ls:QueryCode ,
     "z3950.7000"^^ls:QueryCode ;
   owl:propertyChainAxiom ( :meta <https://id.kb.se/ns/librissearch/controlNumbers> ) ;
-  ls:filterDescriptionByLang "Libris ID of the record, in the MARC21 format"@en , "Postens Libris-ID i MARC21-formatet"@sv ;
+  ls:filterDescription "Libris ID of the record, in the MARC21 format"@en , "Postens Libris-ID i MARC21-formatet"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11521,7 +11524,7 @@ prefix sdo: <http://schema.org/>
     "DDC2"^^ls:QueryCode ,
     "DDK"^^ls:QueryCode ,
     "z3950.13"^^ls:QueryCode ;
-  ls:filterDescriptionByLang "Classification code according to the Dewey Decimal Classification (DDC)"@en , "Klassifikationskod enligt Dewey decimalklassifikation (DDK)"@sv ;
+  ls:filterDescription "Classification code according to the Dewey Decimal Classification (DDC)"@en , "Klassifikationskod enligt Dewey decimalklassifikation (DDK)"@sv ;
   :category <https://id.kb.se/ns/librissearch/merged> ,
     :pending ,
     :searchfilter .
@@ -11557,10 +11560,10 @@ prefix sdo: <http://schema.org/>
         :label "Classification"@en , "Klassifikation"@sv ] [ a :PartialCollectionView ;
         :items ( <https://id.kb.se/ns/librissearch/library> <https://id.kb.se/ns/librissearch/itemInformation> <https://id.kb.se/ns/librissearch/itemShelf> <https://id.kb.se/ns/librissearch/hasItemStatement> <https://id.kb.se/ns/librissearch/itemSubject> <https://id.kb.se/ns/librissearch/hasInternalItemNote> <https://id.kb.se/ns/librissearch/hasAdditionalItemInformation> ) ;
         :label "Library-specific filters"@en , "Biblioteksspecifika filter"@sv ;
-        ls:filterGroupDescriptionByLang "Information relating to the copies’ location, placement, condition, origin, and more"@en , "Uppgifter som rör exemplarens plats, placering, skick, ursprung med mera"@sv ] [ a :PartialCollectionView ;
+        ls:filterGroupDescription "Information relating to the copies’ location, placement, condition, origin, and more"@en , "Uppgifter som rör exemplarens plats, placering, skick, ursprung med mera"@sv ] [ a :PartialCollectionView ;
         :items ( <https://id.kb.se/ns/librissearch/itemRecordCreated> <https://id.kb.se/ns/librissearch/instanceRecordCreated> <https://id.kb.se/ns/librissearch/instanceRecordModified> ) ;
         :label "Timestamps for catalog records"@en , "Tidsstämplar för katalogposter"@sv ;
-        ls:filterGroupDescriptionByLang """Specify in one of the following formats:
+        ls:filterGroupDescription """Specify in one of the following formats:
                                             yyyy
                                             yyyy-MM
                                             yyyy-MM-dd
@@ -11619,7 +11622,7 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <https://id.kb.se/ns/librissearch/itemInformation> ;
   :code "H8XZ"^^ls:QueryCode ;
   owl:propertyChainAxiom ( :hasItem <https://id.kb.se/ns/librissearch/itemStatement> ) ;
-  ls:filterDescriptionByLang "Additional information about shelf mark and holding"@en , "Kompletterande uppgift om hyllsignum och bestånd"@sv ;
+  ls:filterDescription "Additional information about shelf mark and holding"@en , "Kompletterande uppgift om hyllsignum och bestånd"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11633,7 +11636,8 @@ prefix sdo: <http://schema.org/>
     "z3950.1104"^^ls:QueryCode ,
     "LINKISXN"^^ls:QueryCode ,
     "NUMM"^^ls:QueryCode ;
-  ls:filterDescriptionByLang "Used for searching in all types of identifiers, such as ISBN or ISSN"@en , "Används för att söka i alla typer av identifikatorer, till exempel ISBN eller ISSN"@sv ;
+  owl:propertyChainAxiom ( :identifiedBy :value ) ;
+  ls:filterDescription "Used for searching in all types of identifiers, such as ISBN or ISSN"@en , "Används för att söka i alla typer av identifikatorer, till exempel ISBN eller ISSN"@sv ;
   :category :searchfilter ,
     <https://id.kb.se/ns/librissearch/composite> ,
     :pending .
@@ -11660,7 +11664,7 @@ prefix sdo: <http://schema.org/>
     :pending ;
   :label "format"@en , "format"@sv ;
   ls:indexKey "_categoryByCollection.@none" ;
-  ls:filterDescriptionByLang "Format of the resource, for example book, online resource, e-book, audio disc or braille"@en , "Resursens format, till exempel bok, onlineresurs, e-bok, ljudskiva, video eller punktskrift"@sv ;
+  ls:filterDescription "Format of the resource, for example book, online resource, e-book, audio disc or braille"@en , "Resursens format, till exempel bok, onlineresurs, e-bok, ljudskiva, video eller punktskrift"@sv ;
   :category :searchfilter ,
     :impliedByObject ,
     :pending .
@@ -11668,8 +11672,7 @@ prefix sdo: <http://schema.org/>
 <https://id.kb.se/ns/librissearch/instanceIdentifier> a owl:DatatypeProperty ;
   :category <https://id.kb.se/ns/librissearch/merged> ,
     :pending ;
-  ls:merges [ owl:propertyChainAxiom ( :identifiedBy :value ) ] ,
-    [ owl:propertyChainAxiom ( :indirectlyIdentifiedBy :value ) ] ,
+  ls:merges [ owl:propertyChainAxiom ( :indirectlyIdentifiedBy :value ) ] ,
     [ owl:propertyChainAxiom ( :identifiedBy <https://id.kb.se/marc/incorrectIssn> ) ] ,
     [ owl:propertyChainAxiom ( :identifiedBy <https://id.kb.se/marc/canceledIssn> ) ] ,
     [ owl:propertyChainAxiom ( :meta [ rdfs:range :LibrisIIINumber ;
@@ -11690,7 +11693,7 @@ prefix sdo: <http://schema.org/>
   :code "DAT"^^ls:QueryCode ;
   owl:propertyChainAxiom ( [ rdfs:domain :Instance ;
         rdfs:subPropertyOf :meta ] :created ) ;
-  ls:filterDescriptionByLang "The date when a bibliographic record was created"@en , "Det datum då en bibliografisk post skapats"@sv ;
+  ls:filterDescription "The date when a bibliographic record was created"@en , "Det datum då en bibliografisk post skapats"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11706,7 +11709,7 @@ prefix sdo: <http://schema.org/>
   :code "BDAT"^^ls:QueryCode ;
   owl:propertyChainAxiom ( [ rdfs:domain :Instance ;
         rdfs:subPropertyOf :meta ] :modified ) ;
-  ls:filterDescriptionByLang "The date when a bibliographic record was updated"@en , "Det datum då en bibliografisk post uppdaterats"@sv ;
+  ls:filterDescription "The date when a bibliographic record was updated"@en , "Det datum då en bibliografisk post uppdaterats"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11741,8 +11744,8 @@ prefix sdo: <http://schema.org/>
   owl:propertyChainAxiom ( [ rdfs:range :ISBN ;
         rdfs:domain :Instance ;
         rdfs:subPropertyOf :identifiedBy ] :value ) ;
-  ls:descriptionRemarkByLang "Can be searched with or without hyphen"@en , "Can be searched using either 10 or 13 digits"@en , "Kan sökas med eller utan bindestreck"@sv , "Kan sökas med 10 eller 13 siffror"@sv ;
-  ls:filterDescriptionByLang "Identifier for monographic publications such as books and maps"@en , "Identifikator för monografiska publikationer som till exempel böcker och kartor"@sv ;
+  ls:descriptionRemark "Can be searched with or without hyphen"@en , "Can be searched using either 10 or 13 digits"@en , "Kan sökas med eller utan bindestreck"@sv , "Kan sökas med 10 eller 13 siffror"@sv ;
+  ls:filterDescription "Identifier for monographic publications such as books and maps"@en , "Identifikator för monografiska publikationer som till exempel böcker och kartor"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11757,8 +11760,8 @@ prefix sdo: <http://schema.org/>
   owl:propertyChainAxiom ( [ rdfs:range :ISMN ;
         rdfs:domain :Instance ;
         rdfs:subPropertyOf :identifiedBy ] :value ) ;
-  ls:descriptionRemarkByLang "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
-  ls:filterDescriptionByLang "Identifier for printed music publications such as sheet music and scores"@en , "Identifikator för tryckta musikaliska publikationer som till exempel noter och partitur"@sv ;
+  ls:descriptionRemark "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
+  ls:filterDescription "Identifier for printed music publications such as sheet music and scores"@en , "Identifikator för tryckta musikaliska publikationer som till exempel noter och partitur"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11775,8 +11778,8 @@ prefix sdo: <http://schema.org/>
   owl:propertyChainAxiom ( [ rdfs:range :ISSN ;
         rdfs:domain :Instance ;
         rdfs:subPropertyOf :identifiedBy ] :value ) ;
-  ls:descriptionRemarkByLang "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
-  ls:filterDescriptionByLang "Identifier for serial resources such as journals and newspapers"@en , "Identifikator för seriella resurser som till exempel tidskrifter och dagstidningar"@sv ;
+  ls:descriptionRemark "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
+  ls:filterDescription "Identifier for serial resources such as journals and newspapers"@en , "Identifikator för seriella resurser som till exempel tidskrifter och dagstidningar"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11786,11 +11789,10 @@ prefix sdo: <http://schema.org/>
     :pending ,
     :searchfilter ;
   :label "ISXN"@en , "ISXN"@sv ;
-  rdfs:subPropertyOf <https://id.kb.se/ns/librissearch/linkisxn> ;
   :code "z3950.1007"^^ls:QueryCode ,
     "z3950.5002"^^ls:QueryCode ;
-  ls:descriptionRemarkByLang "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
-  ls:filterDescriptionByLang """Combination of the search filters:
+  ls:descriptionRemark "Can be searched with or without hyphen"@en , "Kan sökas med eller utan bindestreck"@sv ;
+  ls:filterDescription """Combination of the search filters:
                             ISBN
                             ISSN
                             ISMN"""@en , """Sammansättning av sökfiltren:
@@ -11829,8 +11831,8 @@ prefix sdo: <http://schema.org/>
     <https://id.kb.se/ns/librissearch/composite> ,
     :pending ;
   :label "item"@en , "bestånd"@sv ;
-  ls:descriptionRemarkByLang "To narrow down the search to a specific library, combine with the filter Library"@en , "För att avgränsa sökningen till ett specifikt bibliotek, kombinera med filtret Bibliotek"@sv ;
-  ls:filterDescriptionByLang """Combination of the search filters:
+  ls:descriptionRemark "To narrow down the search to a specific library, combine with the filter Library"@en , "För att avgränsa sökningen till ett specifikt bibliotek, kombinera med filtret Bibliotek"@sv ;
+  ls:filterDescription """Combination of the search filters:
                               Item statement
                               Shelf
                               Additional item information
@@ -11856,7 +11858,7 @@ prefix sdo: <http://schema.org/>
   :code "HDAT"^^ls:QueryCode ,
     "FORVDAT"^^ls:QueryCode ;
   owl:propertyChainAxiom ( :hasItem :meta :created ) ;
-  ls:filterDescriptionByLang "The date a holdings record was registered"@en , "Det datum då en beståndspost registrerats"@sv ;
+  ls:filterDescription "The date a holdings record was registered"@en , "Det datum då en beståndspost registrerats"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11870,7 +11872,7 @@ prefix sdo: <http://schema.org/>
   rdfs:subPropertyOf <https://id.kb.se/ns/librissearch/itemInformation> ;
   :code "WHYL"^^ls:QueryCode ;
   owl:propertyChainAxiom ( :hasItem <https://id.kb.se/ns/librissearch/shelf> ) ;
-  ls:filterDescriptionByLang "Used to find where a copy is shelved"@en , "Används för att hitta var ett exemplar finns uppställt"@sv ;
+  ls:filterDescription "Used to find where a copy is shelved"@en , "Används för att hitta var ett exemplar finns uppställt"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11896,8 +11898,8 @@ prefix sdo: <http://schema.org/>
     :Subject ,
     :Work ;
   rdfs:subPropertyOf <https://id.kb.se/ns/librissearch/itemInformation> ;
-  owl:propertyChainAxiom ( :hasItem :subject ) ;
-  ls:filterDescriptionByLang "Subject headings assigned for specific copies"@en , "Ämnesord angivna för specifika exemplar"@sv ;
+  owl:propertyChainAxiom ( :hasItem <https://id.kb.se/ns/librissearch/subject> ) ;
+  ls:filterDescription "Subject headings assigned for specific copies"@en , "Ämnesord angivna för specifika exemplar"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11911,7 +11913,7 @@ prefix sdo: <http://schema.org/>
   sdo:domainIncludes :Work ;
   owl:propertyChainAxiom ( [ rdfs:range :ClassificationLcc ;
         rdfs:subPropertyOf :classification ] :code ) ;
-  ls:filterDescriptionByLang "Classification code according to the Library of Congress classification system (LCC)"@en , "Klassifikationskod enligt Library of Congress klassifikationssystem (LCC)"@sv ;
+  ls:filterDescription "Classification code according to the Library of Congress classification system (LCC)"@en , "Klassifikationskod enligt Library of Congress klassifikationssystem (LCC)"@sv ;
   :category :shorthand ,
     :pending ,
     :searchfilter .
@@ -11926,7 +11928,7 @@ prefix sdo: <http://schema.org/>
   owl:propertyChainAxiom ( [ rdfs:range :LCCN ;
         rdfs:domain :Instance ;
         rdfs:subPropertyOf :identifiedBy ] :value ) ;
-  ls:filterDescriptionByLang "Library of Congress Control Number"@en , "Identifikator i Library of Congress nummersystem"@sv ;
+  ls:filterDescription "Library of Congress Control Number"@en , "Identifikator i Library of Congress nummersystem"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -11946,8 +11948,8 @@ prefix sdo: <http://schema.org/>
     "BIB"^^ls:QueryCode ,
     "OCODE"^^ls:QueryCode ,
     "z3950.1044"^^ls:QueryCode ;
-  ls:descriptionRemarkByLang "Can also be searched using organisation code or library code"@en , "Kan även sökas med organisationskod eller sigel"@sv ;
-  ls:filterDescriptionByLang "The library that holds the resource"@en , "Det bibliotek som innehar resursen"@sv ;
+  ls:descriptionRemark "Can also be searched using organisation code or library code"@en , "Kan även sökas med organisationskod eller sigel"@sv ;
+  ls:filterDescription "The library that holds the resource"@en , "Det bibliotek som innehar resursen"@sv ;
   :category :searchfilter ,
     :impliedByObject ,
     <https://id.kb.se/ns/librissearch/composite> ,
@@ -11969,7 +11971,7 @@ prefix sdo: <http://schema.org/>
   sdo:domainIncludes :Work ;
   owl:propertyChainAxiom ( [ rdfs:range :ClassificationNlm ;
         rdfs:subPropertyOf :classification ] :code ) ;
-  ls:filterDescriptionByLang "Classification code according to the National Library of Medicine (NLM) classification system"@en , "Klassifikationskod enligt National Library of Medicines (NLM) klassifikationssystem"@sv ;
+  ls:filterDescription "Classification code according to the National Library of Medicine (NLM) classification system"@en , "Klassifikationskod enligt National Library of Medicines (NLM) klassifikationssystem"@sv ;
   :category :shorthand ,
     :pending ,
     :searchfilter .
@@ -11995,7 +11997,7 @@ prefix sdo: <http://schema.org/>
   :comment "Language that resource was translated from."@en , "Språk som resursen översatts från."@sv ;
   :code "ÖVERS"^^ls:QueryCode ;
   owl:propertyChainAxiom ( :translationOf :language ) ;
-  ls:filterDescriptionByLang "The language from which a resource has been translated. Used, for example, to find books translated from a particular language. Combine with the Language filter to narrow the results further."@en , "Det språk som en resurs översatts från. Används för att exempelvis hitta böcker översatta från ett visst språk. Kombinera med filtret Språk för att avgränsa ytterligare."@sv ;
+  ls:filterDescription "The language from which a resource has been translated. Used, for example, to find books translated from a particular language. Combine with the Language filter to narrow the results further."@en , "Det språk som en resurs översatts från. Används för att exempelvis hitta böcker översatta från ett visst språk. Kombinera med filtret Språk för att avgränsa ytterligare."@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -12027,7 +12029,7 @@ prefix sdo: <http://schema.org/>
     :pending ;
   :label "end year"@en , "slutår"@sv ;
   owl:propertyChainAxiom ( :publication :endYear ) ;
-  ls:filterDescriptionByLang "End year for serial resources"@en , "Slutår för seriella (fortlöpande) resurser"@sv ;
+  ls:filterDescription "End year for serial resources"@en , "Slutår för seriella (fortlöpande) resurser"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -12052,7 +12054,7 @@ prefix sdo: <http://schema.org/>
     :pending ;
   :label "start year"@en , "startår"@sv ;
   owl:propertyChainAxiom ( :publication :startYear ) ;
-  ls:filterDescriptionByLang "Start year for serial resources"@en , "Startår för seriella (fortlöpande) resurser"@sv ;
+  ls:filterDescription "Start year for serial resources"@en , "Startår för seriella (fortlöpande) resurser"@sv ;
   :category :searchfilter ,
     :shorthand ,
     :pending .
@@ -12093,7 +12095,7 @@ prefix sdo: <http://schema.org/>
                 owl:hasValue "kssb" ;
                 owl:onProperty <https://id.kb.se/ns/librissearch/schemeCode> ] ] ;
         rdfs:subPropertyOf :classification ] :code ) ;
-  ls:filterDescriptionByLang "Classification code according to the Swedish library classification system (SAB)."@en , "Klassifikationskod enligt klassifikationssystemet för svenska bibliotek (SAB)"@sv ;
+  ls:filterDescription "Classification code according to the Swedish library classification system (SAB)."@en , "Klassifikationskod enligt klassifikationssystemet för svenska bibliotek (SAB)"@sv ;
   :category :shorthand ,
     :pending ,
     :searchfilter .
@@ -12117,6 +12119,29 @@ prefix sdo: <http://schema.org/>
     [ owl:propertyChainAxiom ( :shelfMark :label ) ] ;
   :category <https://id.kb.se/ns/librissearch/merged> ,
     :pending .
+
+<https://id.kb.se/ns/librissearch/subject> a owl:ObjectProperty ;
+  :category :searchfilter ,
+    :pending ,
+    <https://id.kb.se/ns/librissearch/composite> ;
+  :label "subject"@en , "ämne"@sv ;
+  sdo:rangeIncludes :Subject ,
+    :BibliographicAgent ,
+    :Work ;
+  sdo:domainIncludes :Work ,
+    :Item ;
+  :code "dc.subject"^^ls:QueryCode ,
+    "bath.topicalSubject"^^ls:QueryCode ,
+    "AMNE"^^ls:QueryCode ,
+    "z3950.21"^^ls:QueryCode ,
+    "z3950.27"^^ls:QueryCode ,
+    "z3950.1079"^^ls:QueryCode ,
+    "z3950.1099"^^ls:QueryCode ;
+  owl:propertyChainAxiom ( :subject :termComponentList ) ;
+  ls:filterDescription "Used to filter by the subject covered by the resource using standardized subject headings from controlled vocabularies."@en , "Används för att filtrera på det ämne resursen behandlar med hjälp av standardiserade ämnesord från ämnesordslistor"@sv ;
+  :category :searchfilter ,
+    :pending ,
+    <https://id.kb.se/ns/librissearch/composite> .
 
 <https://id.kb.se/ns/librissearch/title> a owl:ObjectProperty ;
   :category :searchfilter ,
@@ -12177,7 +12202,7 @@ prefix sdo: <http://schema.org/>
   :code "z3950.14"^^ls:QueryCode ;
   owl:propertyChainAxiom ( [ rdfs:range :ClassificationUdc ;
         rdfs:subPropertyOf :classification ] :code ) ;
-  ls:filterDescriptionByLang "Classification code according to the Universal Decimal Classification (UDC)"@en , "Klassifikationskod enligt Universella decimalklassifikationen (UDK)"@sv ;
+  ls:filterDescription "Classification code according to the Universal Decimal Classification (UDC)"@en , "Klassifikationskod enligt Universella decimalklassifikationen (UDK)"@sv ;
   :category :shorthand ,
     :pending ,
     :searchfilter .
@@ -12192,7 +12217,7 @@ prefix sdo: <http://schema.org/>
   :label "category"@en , "kategori"@sv ;
   :code "WGEN"^^ls:QueryCode ,
     "z3950.1075"^^ls:QueryCode ;
-  ls:filterDescriptionByLang "Describes the work's genre and content using terms from predefined lists. For example, poetry, video games, or journals."@en , "Beskriver verkets genre och innehåll med termer från fördefinierade listor. Till exempel poesi, datorspel eller tidskrifter."@sv ;
+  ls:filterDescription "Describes the work's genre and content using terms from predefined lists. For example, poetry, video games, or journals."@en , "Beskriver verkets genre och innehåll med termer från fördefinierade listor. Till exempel poesi, datorspel eller tidskrifter."@sv ;
   :category :searchfilter ,
     :impliedByObject ,
     :pending ,

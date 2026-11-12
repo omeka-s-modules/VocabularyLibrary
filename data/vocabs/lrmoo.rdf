@@ -478,7 +478,7 @@ In First Order Logic of the inverse property:
     <rdfs:subPropertyOf rdf:resource="R68_is_inspired_by"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
+Full path: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
 
 Scope note:
 This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive, asymmetric and irreflexive.
@@ -514,7 +514,7 @@ In First Order Logic:
     <rdfs:subPropertyOf rdf:resource="R68i_is_inspiration_for"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
+Full path of the inverse property: F1 Work(1). R3 is realised in: F2 Expression(1). R17i was created by: F28 Expression Creation. P16 used specific object: F2 Expression(2). R3i realises: F1 Work(2)
 
 Scope note of the inverse property:
 This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive, asymmetric and irreflexive.
@@ -900,7 +900,7 @@ In First Order Logic of the inverse property:
     <owl:inverseOf rdf:resource="R11i_is_issuing_rule_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F18 Serial Work. R19i was realised through: F30 Manifestation Creation. P16 used specific object (was used for): E29 Design or Procedure
+Full path: F18 Serial Work. R19i was realised through: F30 Manifestation Creation. P16 used specific object (was used for): E29 Design or Procedure
 
 Scope note:
 This property associates an instance of F18 Serial Work with the instance of E29 Design or Procedure that specifies the issuing policy planned by this instance of F18 Serial Work, such as sequencing pattern, expected frequency and expected regularity.
@@ -924,7 +924,7 @@ In First Order Logic:
     <owl:inverseOf rdf:resource="R11_has_issuing_rule"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F18 Serial Work. R19i was realised through: F30 Manifestation Creation. P16 used specific object (was used for): E29 Design or Procedure
+Full path of the inverse property: F18 Serial Work. R19i was realised through: F30 Manifestation Creation. P16 used specific object (was used for): E29 Design or Procedure
 
 Scope note of the inverse property:
 This property associates an instance of F18 Serial Work with the instance of E29 Design or Procedure that specifies the issuing policy planned by this instance of F18 Serial Work, such as sequencing pattern, expected frequency and expected regularity.
@@ -1479,7 +1479,7 @@ In First Order Logic of the inverse property:
     <owl:inverseOf rdf:resource="R36i_is_script_conversion_used_in"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
+Full path: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
 
 Scope note:
 This property associates an instance of F12 Nomen with an instance of F36 Script Conversion that is used to create the E62 String used in that instance of F12 Nomen from the string used in another instance of F12 Nomen that co-refers with the first nomen (the instances of F12 Nomen are related via the R56 has related form (is related form of) property). The source of this conversion may or may not be explicitly mentioned.
@@ -1504,7 +1504,7 @@ In First Order Logic:
     <owl:inverseOf rdf:resource="R36_uses_script_conversion"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
+Full path of the inverse property: F12 Nomen. P94i was created by: E65 Creation. P33 used specific technique (was used by): F36 Script Conversion
 
 Scope note of the inverse property:
 This property associates an instance of F12 Nomen with an instance of F36 Script Conversion that is used to create the E62 String used in that instance of F12 Nomen from the string used in another instance of F12 Nomen that co-refers with the first nomen (the instances of F12 Nomen are related via the R56 has related form (is related form of) property). The source of this conversion may or may not be explicitly mentioned.
@@ -1585,7 +1585,7 @@ In First Order Logic of the inverse property:
     <owl:inverseOf rdf:resource="R56i_is_related_form_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
+Full path: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
 
 Scope note:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen which co-refers to the same instance of E1 CRM Entity. This property is not transitive. It is symmetric and irreflexive.
@@ -1621,7 +1621,7 @@ In First Order Logic:
     <owl:inverseOf rdf:resource="R56_has_related_form"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
+Full path of the inverse property: E89 Propositional Object(1). P67 refers to: E1 CRM Entity. P67i is referred to by: E89 Propositional Object(2)
 
 Scope note of the inverse property:
 This property associates an instance of F12 Nomen with another instance of F12 Nomen which co-refers to the same instance of E1 CRM Entity. This property is not transitive. It is symmetric and irreflexive.
@@ -1717,7 +1717,7 @@ In First Order Logic of the inverse property:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
+Full path: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
 
 Scope note:
 This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other. This property is not transitive. It is irreflexive.
@@ -1749,7 +1749,7 @@ In First Order Logic:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
+Full path of the inverse property: F1 Work(1). R16i was created by: F27 Work Creation. P15 was influenced by: F1 Work(2)
 
 Scope note of the inverse property:
 This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other. This property is not transitive. It is irreflexive.
@@ -1944,7 +1944,7 @@ In First Order Logic of the inverse property:
     <owl:inverseOf rdf:resource="R73i_bears_representative_attribute_for"/>
     <rdfs:comment xml:lang="en">Quantification: one to many, necessary (1,n:0,1)
 
-Shortcut Of: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
+Full path: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
 
 Scope note:
 This property associates an instance of F1 Work with instances of F2 Expression that bear attributes which are used to characterize the work. The instance of F2 Expression in question must be one that realizes that instance of F1 Work. An instance of F2 Expression may or may not serve as source of representative expression attributes for its associated instance of F1 Work. If it does, it may provide one attribute or many. Only one or more than one of the instances of F2 Expression associated with an instance of F1 Work may provide attributes that characterize that instance of F1 Work. The representative expression attributes can all come from the same expression or from more than one expressions.
@@ -1970,7 +1970,7 @@ In First Order Logic:
     <owl:inverseOf rdf:resource="R73_takes_representative_attribute_from"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary (1,n:0,1)
 
-Shortcut Of of the inverse property: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
+Full path of the inverse property: F1 Work. P140i was attributed by: E13 Attribute Assignment. P16 used specific object: F2 Expression
 
 Scope note of the inverse property:
 This property associates an instance of F1 Work with instances of F2 Expression that bear attributes which are used to characterize the work. The instance of F2 Expression in question must be one that realizes that instance of F1 Work. An instance of F2 Expression may or may not serve as source of representative expression attributes for its associated instance of F1 Work. If it does, it may provide one attribute or many. Only one or more than one of the instances of F2 Expression associated with an instance of F1 Work may provide attributes that characterize that instance of F1 Work. The representative expression attributes can all come from the same expression or from more than one expressions.
@@ -2099,7 +2099,7 @@ In First Order Logic of the inverse property:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
+Full path: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
 
 Scope note:
 This property associates an instance of F2 Expression with another instance of F2 Expression which was its source or one of its sources. This property is not transitive. It is asymmetric and irreflexive.
@@ -2135,7 +2135,7 @@ In First Order Logic:
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
+Full path of the inverse property: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2)
 
 Scope note of the inverse property:
 This property associates an instance of F2 Expression with another instance of F2 Expression which was its source or one of its sources. This property is not transitive. It is asymmetric and irreflexive.
@@ -2165,7 +2165,7 @@ In First Order Logic of the inverse property:
     <owl:inverseOf rdf:resource="R77i_is_accompanied_or_complemented_by"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
+Full path: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
 
 Scope note:
 This property associates one instance of F1 Work with another instance of F1 Work which is intended to accompany it or to function as a complement for it. This property is neither transitive nor intransitive. It is generally not symmetric and it is irreflexive.
@@ -2195,7 +2195,7 @@ In First Order Logic:
     <owl:inverseOf rdf:resource="R77_accompanies_or_complements"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n)
 
-Shortcut Of of the inverse property: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
+Full path of the inverse property: F1 Work(1). P19i was made for: E7 Activity. P19 was intended use of: F1 Work(2)
 
 Scope note of the inverse property:
 This property associates one instance of F1 Work with another instance of F1 Work which is intended to accompany it or to function as a complement for it. This property is neither transitive nor intransitive. It is generally not symmetric and it is irreflexive.
@@ -2224,7 +2224,7 @@ In First Order Logic of the inverse property:
     <rdfs:range rdf:resource="F3_Manifestation"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n)
 
-Shortcut Of: F3 Manifestation. R4 embodies: F2 Expression. R4i is embodied by: F3 Manifestation
+Full path: F3 Manifestation. R4 embodies: F2 Expression. R4i is embodied by: F3 Manifestation
 
 Scope note:
 This property associates one instance of F3 Manifestation with another instance of F3 Manifestation that exemplifies the same instance of F2 Expression, when the two instances of F3 Manifestation can be used as alternatives for each other in particular use cases. This property is transitive and symmetric. It is irreflexive.
