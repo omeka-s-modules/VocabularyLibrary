@@ -114,6 +114,18 @@ class Download
         return (bool) preg_match('/^(?:<\?.*?\?>\s*|<!--.*?-->\s*)*<(?:!doctype\s+html|html[\s>])/is', self::head($body));
     }
 
+    /**
+     * Whether a body is XML carrying a script element, in any namespace
+     * prefix. The web server serves an RDF/XML file as XML, and a browser
+     * opening it runs an XHTML script inside, as in a description written as
+     * an XML literal. Other formats are served as text, where it is only
+     * text.
+     */
+    public static function hasScript($body)
+    {
+        return self::head($body)[0] === '<' && preg_match('/<(?:[\w.-]+:)?script[\s\/>]/i', $body);
+    }
+
     public static function looksLikeRdf($body)
     {
         if (self::isHtml($body)) {
@@ -136,7 +148,8 @@ class Download
      * web server, so an HTML file would run as a page on the Omeka site. A
      * vocabulary published as RDFa ("format": "rdfa") is parsed from its page
      * and stored as N-Triples, which imports the same. So is one published
-     * as a term list ("format": "term-list"), assembled by termList().
+     * as a term list ("format": "term-list"), assembled by termList(). XML
+     * carrying a script element is not stored either, for the same reason.
      *
      * A gzipped body is unzipped first: some publishers serve a gzipped file
      * without the Content-Encoding header that lets curl unzip it, as the
@@ -181,6 +194,9 @@ class Download
         }
         if (!self::looksLikeRdf($body)) {
             return [null, 'not RDF (' . ($response['type'] ?: 'no content type') . ')'];
+        }
+        if (self::hasScript($body)) {
+            return [null, 'carries a script element, which would run on the site'];
         }
         // Otherwise by the first character: a Turtle file may begin with "[",
         // so only "{" means JSON-LD.

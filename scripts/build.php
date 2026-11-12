@@ -90,9 +90,14 @@ foreach ($sources as $slug => $entry) {
         continue;
     }
     // Files under modules/ are served directly, so an HTML file would run as
-    // a page on the site.
-    if (Download::isHtml(file_get_contents($files[0]))) {
+    // a page on the site, and so would a script in an XML file.
+    $stored = file_get_contents($files[0]);
+    if (Download::isHtml($stored)) {
         $problems[] = "$slug: the stored file is HTML; give the entry \"format\": \"rdfa\" and fetch it again";
+        continue;
+    }
+    if (Download::hasScript($stored)) {
+        $problems[] = "$slug: the stored file carries a script element, which would run on the site";
         continue;
     }
     $result = $check->check($files[0], $entry['namespace'] ?? null);
