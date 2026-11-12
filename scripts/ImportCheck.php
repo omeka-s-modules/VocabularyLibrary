@@ -521,22 +521,35 @@ class ImportCheck
     {
         $text = str_replace(["\r\n", "\r"], "\n", $text);
         $source = explode("\n", $text);
-        $prose = function ($i) use ($source) {
-            return isset($source[$i]) && trim($source[$i]) !== '' && !preg_match('/^\s*(?:[-*+]|\d+[.)])\s+/', $source[$i]);
+        $fence = '/^\s*(```|~~~)/';
+        $rule = '/^\s*([-*_]\s*){3,}$/';
+        $heading = '/^\s{0,3}#{1,6}\s+(.*?)\s*#*\s*$/';
+        $bullet = '/^\s*[-*+]\s+(.*)$/';
+        $number = '/^\s*(\d+[.)])\s+(.*)$/';
+        // A line of ordinary text: not blank, and none of the above.
+        $prose = function ($i) use ($source, $fence, $rule, $heading, $bullet, $number) {
+            if (!isset($source[$i]) || trim($source[$i]) === '') {
+                return false;
+            }
+            foreach ([$fence, $rule, $heading, $bullet, $number] as $pattern) {
+                if (preg_match($pattern, $source[$i])) {
+                    return false;
+                }
+            }
+            return true;
         };
         $lines = [];
         foreach ($source as $i => $line) {
+            // A line that looks like a list item but is wrapped prose.
             $wrapped = $prose($i - 1) && $prose($i + 1) && substr(rtrim($source[$i - 1]), -1) !== ':';
-            if ($wrapped) {
-                $lines[] = $line;
-            } elseif (preg_match('/^\s*(```|~~~)/', $line) || preg_match('/^\s*([-*_]\s*){3,}$/', $line)) {
+            if (preg_match($fence, $line) || preg_match($rule, $line)) {
                 // Code fences and horizontal rules end a paragraph.
                 $lines[] = '';
-            } elseif (preg_match('/^\s{0,3}#{1,6}\s+(.*?)\s*#*\s*$/', $line, $match)) {
+            } elseif (preg_match($heading, $line, $match)) {
                 array_push($lines, '', $match[1], '');
-            } elseif (preg_match('/^\s*[-*+]\s+(.*)$/', $line, $match)) {
+            } elseif (!$wrapped && preg_match($bullet, $line, $match)) {
                 array_push($lines, '', '• ' . $match[1], '');
-            } elseif (preg_match('/^\s*(\d+[.)])\s+(.*)$/', $line, $match)) {
+            } elseif (!$wrapped && preg_match($number, $line, $match)) {
                 array_push($lines, '', $match[1] . ' ' . $match[2], '');
             } else {
                 $lines[] = $line;
