@@ -167,14 +167,15 @@ class ControllerTest extends AbstractHttpControllerTestCase
     public function testALongDescriptionIsCutAtASentence()
     {
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        $text = html_entity_decode(preg_replace('/\s+/', ' ', strip_tags($page)), ENT_QUOTES);
         // The second sentence's "e.g." doesn't end it, and the third
-        // sentence would take the start past its length.
-        $start = 'The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened.';
-        $this->assertStringContainsString($start, $text);
-        $rest = strpos($text, 'This third sentence takes the first paragraph');
-        $this->assertGreaterThan(strpos($text, $start) + strlen($start), $rest);
-        $this->assertGreaterThan($rest, strpos($text, 'A second paragraph follows.'));
+        // sentence would take the start past its length, so it and the
+        // second paragraph are the rest, behind "Full description".
+        $start = preg_quote('The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened.', '#');
+        $third = preg_quote('This third sentence takes the first paragraph well past the length at which the details sidebar cuts a description.', '#');
+        $this->assertMatchesRegularExpression(
+            "#$start\s*<div class=\"vocabulary-library-more\">\s*<a [^>]*>Full description</a>\s*<div class=\"collapsible\">\s*<p>$third</p>\s*<p>A second paragraph follows\.</p>\s*</div>#",
+            $page
+        );
     }
 
     public function testTheDetailsStartFilteredFromATermSearch()

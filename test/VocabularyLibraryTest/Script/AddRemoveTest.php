@@ -32,7 +32,7 @@ class AddRemoveTest extends ScriptTestCase
             'namespace' => 'http://example.org/other#',
             'prefix' => 'other',
             'submitted_by' => 'A. Potter',
-            'submitted_on' => date('Y-m-d'),
+            'submitted_on' => gmdate('Y-m-d'),
             'summary' => 'Classes for describing other things.',
             'summary_basis' => ['file'],
             'tags' => ['general'],
@@ -82,7 +82,7 @@ class AddRemoveTest extends ScriptTestCase
             'an unknown tag' => [['--tags=nonsense', '--summary=Classes.', '--file={file}', '--submitted-by=A. Potter'], 'Give one to three tags'],
             'no summary' => [['--tags=general', '--file={file}', '--submitted-by=A. Potter'], 'one-sentence summary'],
             'a file that does not say its namespace' => [array_merge($options, ['--file={file}', '--submitted-by=A. Potter']), "the file's terms use http://example.org/other#"],
-            'a prefix already used' => [array_merge($options, ['--file={file}', '--submitted-by=A. Potter', self::NAMESPACE_OPTION, '--prefix=ex', '--alt-title=Other', '--alt-title-source=x']), 'prefix'],
+            'a prefix already used' => [array_merge($options, ['--file={file}', '--submitted-by=A. Potter', self::NAMESPACE_OPTION, '--prefix=ex', '--alt-title=Other', '--alt-title-source=x']), 'The prefix "ex" is already used by "ex"'],
             'a file with no title and no name given' => [array_merge($options, ['--file={file}', '--submitted-by=A. Potter', self::NAMESPACE_OPTION, '--prefix=other']), 'The file has no title'],
         ];
     }
@@ -118,6 +118,35 @@ class AddRemoveTest extends ScriptTestCase
         [$status, $output] = $this->script('add', array_merge(self::OPTIONS, ["--file=$path", '--submitted-by=A. Potter']));
         $this->assertSame(1, $status, $output);
         $this->assertStringContainsString('is in scripts/excluded.json as "ex": taken down', $output);
+    }
+
+    public function testRemovingASubmittedVocabularyKeepsWhoSentIt()
+    {
+        $entry = ['submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'] + array_diff_key(self::ENTRY, ['download' => 1]);
+        $this->writeSources(['ex' => $entry]);
+        // Built first, for the title it is recorded by.
+        $this->script('build');
+        [$status, $output] = $this->script('remove', ['ex', 'taken down']);
+        $this->assertSame(0, $status, $output);
+        $this->assertSame([[
+            'excluded' => 'taken down',
+            'namespace' => 'http://example.org/ns#',
+            'prefix' => 'ex',
+            'slug' => 'ex',
+            'submitted_by' => 'A. Potter',
+            'submitted_on' => '2026-11-12',
+            'title' => 'Example Vocabulary',
+        ]], $this->read('scripts/excluded.json'));
+    }
+
+    public function testASubmittedPageIsNotToldToUseAFormatItCannot()
+    {
+        $path = "$this->dir/page.html";
+        file_put_contents($path, '<!DOCTYPE html><html><body></body></html>');
+        [$status, $output] = $this->script('add', array_merge(self::OPTIONS, ["--file=$path", '--submitted-by=A. Potter']));
+        $this->assertSame(1, $status, $output);
+        $this->assertStringContainsString('is HTML', $output);
+        $this->assertStringNotContainsString('--format', $output);
     }
 
     public function testRemoveNeedsItsReasonInOneArgument()

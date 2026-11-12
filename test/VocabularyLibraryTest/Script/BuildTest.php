@@ -67,6 +67,8 @@ class BuildTest extends ScriptTestCase
             'capitals in prefix' => [['prefix' => 'Ex'], 'ex: prefix "Ex" has capitals'],
             'no address and no submitter' => [['download' => null], 'ex: no download, or submitted_by'],
             'submitter without a date' => [['download' => null, 'submitted_by' => 'A. Potter'], 'ex: submitted_by needs submitted_on'],
+            'a date without a submitter' => [['submitted_on' => '2026-11-12'], 'ex: submitted_on needs submitted_by'],
+            'an address and a submitter' => [['submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'], 'ex: has both download and submitted_by'],
             'a title of its own' => [['title' => 'My title'], 'ex: "title" is the file\'s'],
             'wrong namespace' => [['namespace' => 'http://example.org/unrelated/'], 'ex: the namespace imports nothing'],
         ];
@@ -106,6 +108,15 @@ class BuildTest extends ScriptTestCase
         file_put_contents("$this->dir/data/vocabs/ex.rdf", '<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"><rdfs:Class rdf:about="http://example.org/ns#Thing"><rdfs:comment rdf:parseType="Literal"><script xmlns="http://www.w3.org/1999/xhtml">alert(1)</script></rdfs:comment></rdfs:Class></rdf:RDF>');
         [, $output] = $this->script('build');
         $this->assertStringContainsString('ex: the stored file carries a script element', $output);
+    }
+
+    public function testAnEmptyStoredFileIsReportedAsAProblemOfTheFile()
+    {
+        file_put_contents("$this->dir/data/vocabs/ex.ttl", '');
+        [$status, $output] = $this->script('build');
+        $this->assertSame(1, $status, $output);
+        $this->assertStringContainsString("Nothing written. Problems:\n  ex: ", $output);
+        $this->assertStringNotContainsString('Warning', $output);
     }
 
     public function testAnExcludedVocabularyStaysOutUnderAnySlug()

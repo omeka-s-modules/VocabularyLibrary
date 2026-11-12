@@ -127,8 +127,11 @@ class ImporterTest extends DbTestCase
     public function testTheLibrarysDefaultLanguageWinsATie()
     {
         // Imported with no preferred language, the labels are whichever
-        // come first in the file, which are the English ones.
-        $this->assertSame('en', $this->importer->matchingLanguage($this->entry, $this->reload($this->import('en'))));
+        // come first in the file, which are the English ones, so English
+        // and no language match equally.
+        $vocabulary = $this->reload($this->import(null));
+        $this->assertSame('Thing', self::terms($vocabulary->resourceClasses())['Thing'][0]);
+        $this->assertSame('en', $this->importer->matchingLanguage($this->entry, $vocabulary));
     }
 
     public function testTermsOmekaHasAndTheFileDoesNotAreMissingOnesAndAreKept()

@@ -7,9 +7,13 @@ use VocabularyLibrary\Stdlib\LanguageNames;
 
 class LanguageNamesTest extends TestCase
 {
-    protected function languageNames($locale)
+    /**
+     * @param bool $named Whether the test needs languages named, which needs
+     *   PHP's intl extension
+     */
+    protected function languageNames($locale, $named = true)
     {
-        if (!extension_loaded('intl')) {
+        if ($named && !extension_loaded('intl')) {
             $this->markTestSkipped('Naming languages needs PHP\'s intl extension.');
         }
         $translator = $this->createMock(Translator::class);
@@ -19,7 +23,7 @@ class LanguageNamesTest extends TestCase
 
     public function testPrimariesAreLanguagesWithoutRegionsOrRepeats()
     {
-        $this->assertSame(['en', 'de', 'zh'], $this->languageNames('en_US')->primaries(['en-GB', 'en-us', 'de', 'EN', 'zh-Hant']));
+        $this->assertSame(['en', 'de', 'zh'], $this->languageNames('en_US', false)->primaries(['en-GB', 'en-us', 'de', 'EN', 'zh-Hant']));
     }
 
     public function testLanguagesAreNamedInTheAdminsLanguage()

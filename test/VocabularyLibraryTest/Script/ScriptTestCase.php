@@ -59,7 +59,8 @@ abstract class ScriptTestCase extends TempDirTestCase
     protected function script($script, array $arguments = [])
     {
         $command = sprintf(
-            'OMEKA_DIR=%s %s -d error_reporting=%d %s %s 2>&1',
+            // In UTC, as Omeka sets the tests' own clock.
+            'OMEKA_DIR=%s %s -d date.timezone=UTC -d error_reporting=%d %s %s 2>&1',
             escapeshellarg(OMEKA_PATH),
             escapeshellarg(PHP_BINARY),
             E_ALL & ~E_DEPRECATED,

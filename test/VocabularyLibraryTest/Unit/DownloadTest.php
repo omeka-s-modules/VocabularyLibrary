@@ -65,6 +65,7 @@ class DownloadTest extends TestCase
     public function testTheWordScriptIsNotAScriptElement()
     {
         $this->assertFalse((bool) Download::hasScript(sprintf(self::RDF_XML, 'A manuscript, or the description of a script.')));
+        $this->assertFalse((bool) Download::hasScript(''));
         // Not XML, so only text.
         $this->assertFalse((bool) Download::hasScript("@prefix rdfs: <http://x/> .\n<http://a> rdfs:comment \"Use a <script> element\" ."));
     }
