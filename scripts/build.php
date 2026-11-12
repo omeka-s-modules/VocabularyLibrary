@@ -100,15 +100,21 @@ foreach ($sources as $slug => $entry) {
         $problems[] = sprintf('%s: %d files in data/vocabs, expected 1', $slug, count($files));
         continue;
     }
-    // Files under modules/ are served directly, so an HTML file would run as
-    // a page on the site, and so would a script in an XML file.
+    // Files under modules/ may be served directly, where data/.htaccess has
+    // no effect, so an HTML file would run as a page on the site, and so
+    // would a script in an XML file.
     $stored = file_get_contents($files[0]);
     if (Download::isHtml($stored)) {
         $problems[] = "$slug: the stored file is HTML; give the entry \"format\": \"rdfa\" and fetch it again";
         continue;
     }
     if (Download::hasScript($stored)) {
-        $problems[] = "$slug: the stored file carries a script element, which would run on the site";
+        $problems[] = "$slug: the stored file carries markup a browser would run on the site";
+        continue;
+    }
+    // The parser would fetch it on every site, each time the file is read.
+    if (Download::hasRemoteContext($stored)) {
+        $problems[] = "$slug: the stored file takes its JSON-LD context from an address; the file must carry it";
         continue;
     }
     $result = $check->check($files[0], $entry['namespace'] ?? null);

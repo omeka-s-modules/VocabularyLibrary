@@ -12,6 +12,14 @@ class RepoTest extends TempDirTestCase
         return new Repo($this->dir . '/');
     }
 
+    public function testTheWebServerIsToldNotToServeTheLibrarysFiles()
+    {
+        // A publisher's file opened directly would be a page on the site.
+        $rules = file_get_contents(dirname(__DIR__, 3) . '/data/.htaccess');
+        $this->assertStringContainsString('Require all denied', $rules);
+        $this->assertStringNotContainsString('<Files', $rules, 'The rule must cover every file.');
+    }
+
     public function testJsonIsWrittenWithSortedKeysAndReadBack()
     {
         $repo = $this->repo();

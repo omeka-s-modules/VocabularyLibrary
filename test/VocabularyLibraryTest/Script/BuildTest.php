@@ -107,7 +107,12 @@ class BuildTest extends ScriptTestCase
         unlink("$this->dir/data/vocabs/ex.ttl");
         file_put_contents("$this->dir/data/vocabs/ex.rdf", '<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"><rdfs:Class rdf:about="http://example.org/ns#Thing"><rdfs:comment rdf:parseType="Literal"><script xmlns="http://www.w3.org/1999/xhtml">alert(1)</script></rdfs:comment></rdfs:Class></rdf:RDF>');
         [, $output] = $this->script('build');
-        $this->assertStringContainsString('ex: the stored file carries a script element', $output);
+        $this->assertStringContainsString('ex: the stored file carries markup a browser would run', $output);
+
+        unlink("$this->dir/data/vocabs/ex.rdf");
+        file_put_contents("$this->dir/data/vocabs/ex.jsonld", '{"@context": "http://example.org/context.jsonld", "@id": "http://example.org/ns#Thing", "@type": "http://www.w3.org/2000/01/rdf-schema#Class"}');
+        [, $output] = $this->script('build');
+        $this->assertStringContainsString('ex: the stored file takes its JSON-LD context from an address', $output);
     }
 
     public function testAnEmptyStoredFileIsReportedAsAProblemOfTheFile()

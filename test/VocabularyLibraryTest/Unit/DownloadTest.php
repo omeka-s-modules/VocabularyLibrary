@@ -74,6 +74,48 @@ class DownloadTest extends TestCase
         $this->assertTrue((bool) Download::hasScript(sprintf(self::RDF_XML, '<h:script xmlns:h="http://www.w3.org/1999/xhtml"/>')));
     }
 
+    public function testOtherMarkupABrowserWouldRunIsFound()
+    {
+        $this->assertTrue((bool) Download::hasScript(sprintf(self::RDF_XML, '<h:img xmlns:h="http://www.w3.org/1999/xhtml" src="x" onerror="alert(1)"/>')));
+        $this->assertTrue((bool) Download::hasScript(sprintf(self::RDF_XML, "<a xmlns='http://www.w3.org/1999/xhtml' href='javascript:alert(1)'>x</a>")));
+    }
+
+    public function testOrdinaryRdfIsNotMarkupABrowserWouldRun()
+    {
+        // An attribute and prose that only resemble an event handler.
+        $this->assertFalse((bool) Download::hasScript(sprintf(self::RDF_XML, 'Based on one = two, and online="yes" in prose.')));
+        $this->assertFalse((bool) Download::hasScript('<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#"><owl:Restriction><owl:onProperty rdf:resource="http://example.org/p"/></owl:Restriction></rdf:RDF>'));
+    }
+
+    /**
+     * @dataProvider jsonLdContexts
+     */
+    public function testJsonLdMustCarryItsContext($body, $remote)
+    {
+        $this->assertSame($remote, Download::hasRemoteContext($body));
+    }
+
+    public function jsonLdContexts()
+    {
+        return [
+            'inline' => ['{"@context": {"ex": "http://example.org/ns#"}, "@id": "ex:Thing"}', false],
+            'none' => ['[{"@id": "http://example.org/ns#Thing"}]', false],
+            'an address' => ['{"@context": "http://example.org/context.jsonld", "@id": "ex:Thing"}', true],
+            'a list with an address' => ['{"@context": [{"ex": "http://example.org/ns#"}, "http://example.org/context.jsonld"]}', true],
+            'nested' => ['{"@context": {}, "@graph": [{"@context": "file:///etc/passwd", "@id": "x"}]}', true],
+            'the word in a value' => ['{"@context": {"ex": "http://example.org/ns#"}, "ex:note": "@context"}', false],
+            'not JSON' => ["@prefix ex: <http://example.org/ns#> .\nex:a ex:b \"@context\" .", false],
+        ];
+    }
+
+    public function testJsonLdWithAContextAtAnAddressIsNotStored()
+    {
+        $this->assertSame(
+            [null, 'takes its JSON-LD context from an address; the file must carry it'],
+            Download::storable(self::response('{"@context": "http://example.org/context.jsonld", "@id": "http://example.org/ns#Thing"}', 'application/ld+json'), null, null)
+        );
+    }
+
     public function testTheWordScriptIsNotAScriptElement()
     {
         $this->assertFalse((bool) Download::hasScript(sprintf(self::RDF_XML, 'A manuscript, or the description of a script.')));
@@ -110,7 +152,7 @@ class DownloadTest extends TestCase
     public function testXmlCarryingAScriptIsNotStored()
     {
         $body = sprintf(self::RDF_XML, '<script xmlns="http://www.w3.org/1999/xhtml">alert(1)</script>');
-        $this->assertSame([null, 'carries a script element, which would run on the site'], Download::storable(self::response($body, 'application/rdf+xml'), null, null));
+        $this->assertSame([null, 'carries markup a browser would run on the site'], Download::storable(self::response($body, 'application/rdf+xml'), null, null));
     }
 
     public function testAnRdfaPageIsStoredAsNTriples()

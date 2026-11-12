@@ -1,0 +1,10 @@
+# The library's files are read by the module, and downloaded through it. A
+# browser opening one directly would treat a publisher's file as a page on
+# this site, so nothing here is served.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order Allow,Deny
+    Deny from all
+</IfModule>

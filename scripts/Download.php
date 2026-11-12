@@ -145,15 +145,57 @@ class Download
     }
 
     /**
-     * Whether a body is XML carrying a script element, in any namespace
-     * prefix. The web server serves an RDF/XML file as XML, and a browser
-     * opening it runs an XHTML script inside, as in a description written as
-     * an XML literal. The other formats are not markup a browser parses, so
-     * there it is only text.
+     * Whether a body is XML carrying markup a browser would run: a script
+     * element, in any namespace prefix, an event handler attribute such as
+     * onerror, or a javascript: address. A browser that opens an RDF/XML file
+     * as XML runs XHTML inside it, as in a description written as an XML
+     * literal. The other formats are not markup a browser parses, so there
+     * it is only text.
+     *
+     * This is a second line of defence, and can't be a complete one: markup
+     * can be spelled in ways no pattern lists. The first is data/.htaccess,
+     * which stops the web server serving the files at all, where the server
+     * is Apache.
      */
     public static function hasScript($body)
     {
-        return strncmp(self::head($body), '<', 1) === 0 && preg_match('/<(?:[\w.-]+:)?script[\s\/>]/i', $body);
+        return strncmp(self::head($body), '<', 1) === 0 && preg_match(
+            '/<(?:[\w.-]+:)?script[\s\/>]|<[^>]*\son[a-z]+\s*=\s*["\']|=\s*["\']\s*javascript:/i',
+            $body
+        );
+    }
+
+    /**
+     * Whether a body is JSON-LD that takes its context from an address
+     * rather than carrying it. The parser fetches such a context each time
+     * the file is read, on every site, so the publisher would learn of each
+     * reading, could have the site request any address, and could change
+     * what the file's terms mean after it was checked.
+     */
+    public static function hasRemoteContext($body)
+    {
+        $first = substr(self::head($body), 0, 1);
+        $json = $first === '{' || $first === '[' ? json_decode($body, true) : null;
+        return is_array($json) && self::namesContext($json);
+    }
+
+    /**
+     * Whether any "@context" in decoded JSON-LD, at any depth, is an address
+     * or lists one.
+     */
+    protected static function namesContext(array $json)
+    {
+        foreach ($json as $key => $value) {
+            // A list's keys are numbers; an inline context's are its terms.
+            $isList = is_array($value) && array_keys($value) === array_keys(array_values($value));
+            if ($key === '@context' && (is_string($value) || ($isList && array_filter($value, 'is_string')))) {
+                return true;
+            }
+            if (is_array($value) && self::namesContext($value)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static function looksLikeRdf($body)
@@ -179,7 +221,8 @@ class Download
      * vocabulary published as RDFa ("format": "rdfa") is parsed from its page
      * and stored as N-Triples, which imports the same. So is one published
      * as a term list ("format": "term-list"), assembled by termList(). XML
-     * carrying a script element is not stored either, for the same reason.
+     * carrying markup a browser would run is not stored either, for the same
+     * reason, nor JSON-LD whose context is at an address (hasRemoteContext()).
      *
      * A gzipped body is unzipped first: some publishers serve a gzipped file
      * without the Content-Encoding header that lets curl unzip it, as the
@@ -228,7 +271,10 @@ class Download
             return [null, 'not RDF (' . ($response['type'] ?: 'no content type') . ')'];
         }
         if (self::hasScript($body)) {
-            return [null, 'carries a script element, which would run on the site'];
+            return [null, 'carries markup a browser would run on the site'];
+        }
+        if (self::hasRemoteContext($body)) {
+            return [null, 'takes its JSON-LD context from an address; the file must carry it'];
         }
         // Otherwise by the first character: a Turtle file may begin with "[",
         // so only "{" means JSON-LD.
