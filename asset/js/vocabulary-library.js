@@ -207,7 +207,13 @@
                 }
             });
             const search = params.toString();
-            history.replaceState(null, '', location.pathname + (search ? '?' + search : ''));
+            // A browser may refuse when the URL changes too often, as it
+            // does at every keystroke; the search itself must go on.
+            try {
+                history.replaceState(null, '', location.pathname + (search ? '?' + search : ''));
+            } catch (e) {
+                // The URL is only a convenience.
+            }
         };
 
         filters.on('submit', function (e) {
