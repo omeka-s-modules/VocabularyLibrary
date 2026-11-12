@@ -33,9 +33,13 @@ class TermSearch
     }
 
     /**
+     * A term matches when its label or local name contains every word of the
+     * query, in any order, as the details sidebar's term filter matches them.
+     *
      * Terms are ranked: a label or local name that is the query itself, then
-     * one with a word that starts with it ("date" in "Date created" or
-     * "startDate"), then any other; within a rank, file order.
+     * one with a word that starts with each of the query's words ("date" in
+     * "Date created" or "startDate"), then any other; within a rank, file
+     * order.
      *
      * @param string $query
      * @return array [slug => ['terms' => [['label' => …, 'term' =>
@@ -51,7 +55,11 @@ class TermSearch
             return [];
         }
         $lowerQuery = mb_strtolower($query);
-        $wordStart = '/(?:^|[^\p{L}\p{N}])' . preg_quote($lowerQuery, '/') . '/u';
+        $words = preg_split('/\s+/u', $lowerQuery);
+        $wordStarts = [];
+        foreach ($words as $word) {
+            $wordStarts[] = '/(?:^|[^\p{L}\p{N}])' . preg_quote($word, '/') . '/u';
+        }
         $index = json_decode(file_get_contents($this->indexPath), true);
         $matches = [];
         foreach ($index as $slug => $terms) {
@@ -62,15 +70,22 @@ class TermSearch
             $found = [];
             foreach ($terms as $term) {
                 [$localName, $label] = is_array($term) ? $term : [$term, $term];
-                if (mb_stripos($label, $query) === false && mb_stripos($localName, $query) === false) {
-                    continue;
+                foreach ($words as $word) {
+                    if (mb_stripos($label, $word) === false && mb_stripos($localName, $word) === false) {
+                        continue 2;
+                    }
                 }
                 if (mb_strtolower($label) === $lowerQuery || mb_strtolower($localName) === $lowerQuery) {
                     $rank = 0;
-                } elseif (preg_match($wordStart, $this->words($label)) || preg_match($wordStart, $this->words($localName))) {
-                    $rank = 1;
                 } else {
-                    $rank = 2;
+                    $names = $this->words($label) . ' ' . $this->words($localName);
+                    $rank = 1;
+                    foreach ($wordStarts as $wordStart) {
+                        if (!preg_match($wordStart, $names)) {
+                            $rank = 2;
+                            break;
+                        }
+                    }
                 }
                 // A term with no label in its file shows its local name, as
                 // Omeka labels it on import.

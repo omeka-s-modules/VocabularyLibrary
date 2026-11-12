@@ -88,9 +88,13 @@
             let count = 0;
             rows.forEach(function (row) {
                 // Matches held from the last term search, narrowed to what is
-                // typed now, so rows never show terms from an earlier query.
+                // typed now, word by word as the server matches them, so rows
+                // never show terms from an earlier query.
                 const found = own(termMatches, row.dataset.slug);
-                const terms = (found ? found.terms : []).filter(match => fold(termText(match)).includes(query));
+                const terms = (found ? found.terms : []).filter(function (match) {
+                    const text = fold(termText(match));
+                    return words.every(word => text.includes(word));
+                });
                 // How many match in all, while the terms shown are for exactly
                 // this query rather than narrowed from an earlier one. The
                 // server compares accents, so this compares the text as typed.
