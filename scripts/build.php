@@ -56,8 +56,15 @@ foreach ($sources as $slug => $entry) {
     if (empty($entry['download']) && empty($entry['submitted_by'])) {
         $problems[] = "$slug: no download, or submitted_by for a file sent to the library";
     }
+    // Not both: fetch.php would replace the file sent with the address's.
+    if (!empty($entry['download']) && !empty($entry['submitted_by'])) {
+        $problems[] = "$slug: has both download and submitted_by; a file sent to the library has no address";
+    }
     if (!empty($entry['submitted_by']) && !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($entry['submitted_on'] ?? ''))) {
         $problems[] = "$slug: submitted_by needs submitted_on, the date as YYYY-MM-DD";
+    }
+    if (empty($entry['submitted_by']) && isset($entry['submitted_on'])) {
+        $problems[] = "$slug: submitted_on needs submitted_by, who sent the file";
     }
     $entryTags = $entry['tags'] ?? [];
     if (!is_array($entryTags) || !$entryTags || count($entryTags) > Repo::MAX_TAGS) {

@@ -33,14 +33,20 @@ foreach ($repo->files($slug) as $file) {
 // Recorded by the name the library showed: its alternative title, else the
 // file's title.
 $built = $repo->vocabularies()[$slug] ?? [];
-$excluded[] = [
+$record = [
     'slug' => $slug,
     'title' => $built['alt_title'] ?? $built['title'] ?? null,
     'namespace' => $entry['namespace'],
     'prefix' => $entry['prefix'],
-    'download' => $entry['download'] ?? null,
     'excluded' => $reason,
 ];
+// Where the file came from: its address, or who sent it and when.
+foreach (['download', 'submitted_by', 'submitted_on'] as $field) {
+    if (isset($entry[$field])) {
+        $record[$field] = $entry[$field];
+    }
+}
+$excluded[] = $record;
 unset($sources[$slug]);
 foreach (array_keys($files) as $file) {
     unlink($file);

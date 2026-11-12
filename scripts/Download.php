@@ -138,7 +138,7 @@ class Download
      */
     public static function hasScript($body)
     {
-        return self::head($body)[0] === '<' && preg_match('/<(?:[\w.-]+:)?script[\s\/>]/i', $body);
+        return strncmp(self::head($body), '<', 1) === 0 && preg_match('/<(?:[\w.-]+:)?script[\s\/>]/i', $body);
     }
 
     public static function looksLikeRdf($body)

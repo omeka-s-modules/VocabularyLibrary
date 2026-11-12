@@ -127,7 +127,10 @@ if ($response['error']) {
     fail("$from: {$response['error']}");
 }
 if (!$format && Download::isHtml($response['body'])) {
-    fail("$from is HTML. If the page carries the vocabulary as RDFa, pass --format=rdfa.");
+    // --format is for a page at an address, not for a file sent in.
+    fail($url === null
+        ? "$from is HTML, which the library doesn't store. Ask for the vocabulary as an RDF file."
+        : "$from is HTML. If the page carries the vocabulary as RDFa, pass --format=rdfa.");
 }
 [$data, $extension] = Download::storable($response, $format, $namespace);
 if ($data === null) {
