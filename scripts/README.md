@@ -11,7 +11,8 @@ module is in, for its RDF importer. To use another, set `OMEKA_DIR`.
   `summary_basis` (what the summary was drafted from), and `tags`, and where
   needed `alt_title` with `alt_title_source` (where the name is quoted from),
   `alternates` (other download addresses to try), `format`, `copy_from`, and
-  `notes`.
+  `notes`. A file sent to the library has `submitted_by` and `submitted_on`
+  in place of `download`.
 - `scripts/excluded.json`: vocabularies left out or removed, and why. The
   build refuses their slugs and namespaces, so they stay out.
 - `data/vocabs/<slug>.<ext>`: the file the module imports.
@@ -25,11 +26,12 @@ The comment at the top of each script gives its usage and options in full.
 
 - `add.php <url> --tags= --summary=`: adds a vocabulary from the address of
   its file. Options cover a vocabulary published only as RDFa in a web page,
-  one published as a list of terms, and an archived copy.
+  one published as a list of terms, an archived copy, and a file sent to the
+  library, which has no address.
 - `update.php [<slug> …]`: downloads every vocabulary again, or only the
   slugs given, and rebuilds. A downloaded file replaces the stored one only
-  if it differs and still imports. Entries with `copy_from` are not
-  downloaded. To try the publisher's file again, remove the field and run
+  if it differs and still imports. Entries with `copy_from` or with no
+  `download` are not downloaded. To try the publisher's file again, remove the field and run
   `update.php` for that slug; if the download fails, the archived copy
   remains, so restore the field.
 - `remove.php <slug> "<reason>"`: removes a vocabulary, for example after a

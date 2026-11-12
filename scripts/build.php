@@ -46,10 +46,18 @@ foreach ($sources as $slug => $entry) {
     if (isset($excluded[$slug])) {
         $problems[] = "$slug: in scripts/excluded.json: {$excluded[$slug]['excluded']}";
     }
-    foreach (['download', 'namespace', 'prefix'] as $field) {
+    foreach (['namespace', 'prefix'] as $field) {
         if (empty($entry[$field])) {
             $problems[] = "$slug: no $field";
         }
+    }
+    // Where the file comes from: an address to download it from, or who sent
+    // it to the library and when.
+    if (empty($entry['download']) && empty($entry['submitted_by'])) {
+        $problems[] = "$slug: no download, or submitted_by for a file sent to the library";
+    }
+    if (!empty($entry['submitted_by']) && !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($entry['submitted_on'] ?? ''))) {
+        $problems[] = "$slug: submitted_by needs submitted_on, the date as YYYY-MM-DD";
     }
     $entryTags = $entry['tags'] ?? [];
     if (!is_array($entryTags) || !$entryTags || count($entryTags) > Repo::MAX_TAGS) {

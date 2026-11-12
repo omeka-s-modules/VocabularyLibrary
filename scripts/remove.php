@@ -38,7 +38,7 @@ $excluded[] = [
     'title' => $built['alt_title'] ?? $built['title'] ?? null,
     'namespace' => $entry['namespace'],
     'prefix' => $entry['prefix'],
-    'download' => $entry['download'],
+    'download' => $entry['download'] ?? null,
     'excluded' => $reason,
 ];
 unset($sources[$slug]);

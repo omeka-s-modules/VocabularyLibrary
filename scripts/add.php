@@ -1,11 +1,12 @@
 <?php
 /**
- * Adds a vocabulary to the collection from the URL of its file.
+ * Adds a vocabulary to the collection from the URL of its file, or from a
+ * file sent to the library.
  *
- * Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary=
+ * Usage: php scripts/add.php [<url>] --tags=<tag>[,<tag>…] --summary=
  *            [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=]
  *            [--alt-title= --alt-title-source=] [--format=rdfa|term-list]
- *            [--file=<path> --copy-from=<archive>]
+ *            [--file=<path> --copy-from=<archive>|--submitted-by=<who>]
  *
  * Downloads the file and runs the import check. The namespace is the one the
  * check finds to import, unless --namespace is given. The prefix is the one
@@ -28,6 +29,11 @@
  * from as --copy-from (LOV, DBpedia Archivo, Open Metadata Registry, or
  * Ontology Design Patterns).
  *
+ * To add a file sent to the library, which has a namespace but no address to
+ * download it from, give no <url>, the file as --file, and who sent it as
+ * --submitted-by. The entry records who and the date in place of an address,
+ * and fetch.php has nothing to download for it.
+ *
  * Refuses a slug already used or excluded, a prefix already used or invalid,
  * and a namespace already in the collection or excluded, in any #//,
  * http/https form. On success, writes the entry to scripts/sources.json and
@@ -41,8 +47,8 @@ use VocabularyLibrary\Scripts\ImportCheck;
 use VocabularyLibrary\Scripts\Repo;
 use VocabularyLibrary\Stdlib\NamespaceUri;
 
-const USAGE = 'Usage: php scripts/add.php <url> --tags=<tag>[,<tag>…] --summary= [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>]';
-const OPTIONS = ['tags', 'summary', 'summary-basis', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from'];
+const USAGE = 'Usage: php scripts/add.php [<url>] --tags=<tag>[,<tag>…] --summary= [--summary-basis=<url>] [--prefix=] [--slug=] [--namespace=] [--alt-title= --alt-title-source=] [--format=rdfa|term-list] [--file=<path> --copy-from=<archive>|--submitted-by=<who>]';
+const OPTIONS = ['tags', 'summary', 'summary-basis', 'prefix', 'slug', 'namespace', 'alt-title', 'alt-title-source', 'format', 'file', 'copy-from', 'submitted-by'];
 // Extensions an archived copy may keep.
 const FILE_EXTENSIONS = ['jsonld', 'nt', 'owl', 'rdf', 'ttl', 'xml'];
 
@@ -54,8 +60,9 @@ foreach (array_slice($argv, 1) as $arg) {
         fail("Unknown option: $arg\n" . USAGE);
     }
 }
+// No URL for a file sent to the library.
 $url = $positional[0] ?? null;
-if (count($positional) !== 1 || !preg_match('#^https?://#', $url)) {
+if (count($positional) > 1 || ($url !== null && !preg_match('#^https?://#', $url))) {
     fail(USAGE);
 }
 $tags = array_values(array_unique(array_filter(array_map('trim', explode(',', (string) option($argv, 'tags'))), 'strlen')));
@@ -92,9 +99,18 @@ if ($format === 'term-list' && $namespace === null) {
 }
 $file = option($argv, 'file');
 $copyFrom = option($argv, 'copy-from');
-if (($file === null) !== ($copyFrom === null)) {
+$submittedBy = option($argv, 'submitted-by');
+if ($url === null) {
+    if ($file === null || trim((string) $submittedBy) === '' || $copyFrom !== null || $format !== null) {
+        fail('Without a <url>, give the file with --file= and who sent it with --submitted-by=, and no --copy-from or --format.');
+    }
+} elseif ($submittedBy !== null) {
+    fail('--submitted-by is for a file with no <url>.');
+} elseif (($file === null) !== ($copyFrom === null)) {
     fail('--file and --copy-from go together.');
 }
+// What the file is called in messages: its address, else its path.
+$from = $url ?? $file;
 if ($copyFrom !== null && !in_array($copyFrom, Repo::COPY_SOURCES, true)) {
     fail('--copy-from must be one of: ' . implode(', ', Repo::COPY_SOURCES));
 }
@@ -108,17 +124,17 @@ if ($file !== null) {
     $response = Download::fetchAll([$url])[0];
 }
 if ($response['error']) {
-    fail("$url: {$response['error']}");
+    fail("$from: {$response['error']}");
 }
 if (!$format && Download::isHtml($response['body'])) {
-    fail("$url returns HTML. If the page carries the vocabulary as RDFa, pass --format=rdfa.");
+    fail("$from is HTML. If the page carries the vocabulary as RDFa, pass --format=rdfa.");
 }
 [$data, $extension] = Download::storable($response, $format, $namespace);
 if ($data === null) {
-    fail("$url: $extension");
+    fail("$from: $extension");
 }
-// An archived copy keeps its own extension where it's a known one, since it
-// has no content type to go by.
+// A file given with --file keeps its own extension where it's a known one,
+// since it has no content type to go by.
 $fileExtension = $file !== null ? strtolower(pathinfo($file, PATHINFO_EXTENSION)) : null;
 if ($format === null && in_array($fileExtension, FILE_EXTENSIONS, true)) {
     $extension = $fileExtension;
@@ -174,7 +190,14 @@ if ($altTitle === null && $result['title'] === null) {
     fail('The file has no title. Pass the publisher\'s name for the vocabulary with --alt-title= and --alt-title-source=.');
 }
 
-$entry = ['download' => $url, 'namespace' => $namespace, 'prefix' => $prefix, 'summary' => $summary, 'summary_basis' => $summaryBasis, 'tags' => $tags];
+$entry = ['namespace' => $namespace, 'prefix' => $prefix, 'summary' => $summary, 'summary_basis' => $summaryBasis, 'tags' => $tags];
+// Where the file comes from: its address, or who sent it and when.
+if ($url !== null) {
+    $entry['download'] = $url;
+} else {
+    $entry['submitted_by'] = trim($submittedBy);
+    $entry['submitted_on'] = date('Y-m-d');
+}
 if ($altTitle !== null) {
     $entry['alt_title'] = $altTitle;
     $entry['alt_title_source'] = $altTitleSource;

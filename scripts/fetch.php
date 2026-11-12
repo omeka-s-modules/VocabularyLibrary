@@ -11,6 +11,8 @@
  * publisher breaking their file leaves the last working copy in place.
  * Entries with "copy_from" are skipped: their file is an archived copy
  * because the publisher's does not work; remove the field to try again.
+ * Entries with no download address, whose file was sent to the library, have
+ * nothing to fetch.
  *
  * Fetches one vocabulary per host at a time, and retries once on HTTP 429. A
  * term list's terms are fetched a few at a time from its host
@@ -35,7 +37,7 @@ foreach (array_diff($only, array_keys($sources)) as $unknown) {
 }
 
 $pending = [];
-$skipped = 0;
+$skipped = $submitted = 0;
 foreach ($sources as $slug => $entry) {
     if ($only && !in_array((string) $slug, $only, true)) {
         continue;
@@ -44,7 +46,12 @@ foreach ($sources as $slug => $entry) {
         $skipped++;
         continue;
     }
-    $pending[$slug] = array_values(array_filter(array_merge([$entry['download']], $entry['alternates'] ?? [])));
+    $urls = array_values(array_filter(array_merge([$entry['download'] ?? null], $entry['alternates'] ?? [])));
+    if (!$urls) {
+        $submitted++;
+        continue;
+    }
+    $pending[$slug] = $urls;
 }
 
 $changed = $unchanged = $failed = [];
@@ -112,8 +119,8 @@ while ($pending) {
 
 sort($changed);
 ksort($failed);
-printf("%d fetched: %d changed, %d unchanged, %d failed; %d archived copies skipped\n",
-    count($changed) + count($unchanged) + count($failed), count($changed), count($unchanged), count($failed), $skipped);
+printf("%d fetched: %d changed, %d unchanged, %d failed; %d archived copies and %d submitted files skipped\n",
+    count($changed) + count($unchanged) + count($failed), count($changed), count($unchanged), count($failed), $skipped, $submitted);
 foreach ($changed as $slug) {
     echo "  changed: $slug\n";
 }
