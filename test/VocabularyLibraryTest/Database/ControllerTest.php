@@ -137,6 +137,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('Example Vocabulary', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.', $page);
         $this->assertStringContainsString('/admin/vocabulary-library/import/ex', $page);
+        // Clear filters is beside the filters, shown by the script while one
+        // is set, and not repeated in the message for no matches.
+        $this->assertMatchesRegularExpression('#</select>\s*<button type="button" class="vocabulary-library-clear-filters" hidden>Clear filters</button>\s*</div>#', $page);
+        $this->assertSame(1, substr_count($page, 'vocabulary-library-clear-filters'));
         // A failed term search has its message, hidden until then.
         $this->assertMatchesRegularExpression('/<p class="vocabulary-library-term-search-failed[^"]*" role="alert" hidden>/', $page);
         // Only the filter's option says so; no vocabulary's status does.

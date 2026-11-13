@@ -77,7 +77,7 @@
         const rows = tbody.children('tr').get();
         const empty = $('.vocabulary-library-empty');
         const searchTermsButton = empty.find('.vocabulary-library-search-terms');
-        const clearFiltersButton = empty.find('.vocabulary-library-clear-filters');
+        const clearFiltersButton = filters.find('.vocabulary-library-clear-filters');
         const filterNames = ['tag', 'lang', 'show'];
         const shown = $('.vocabulary-library-shown');
         const countText = () => $('.vocabulary-library-count').text().trim().replace(/\s+/g, ' ');
@@ -168,8 +168,8 @@
             table.prop('hidden', count === 0);
             empty.prop('hidden', count > 0);
             // When nothing matches, offer to search terms too, if the query
-            // is long enough for a term search, and to clear the filters,
-            // keeping the query.
+            // is long enough for a term search. Clear filters shows while any
+            // is set.
             searchTermsButton.prop('hidden', form.terms.checked || form.q.value.trim().length < termQueryMin);
             clearFiltersButton.prop('hidden', filterNames.every(name => form[name].value === ''));
             saveState();
@@ -274,8 +274,9 @@
             }
         });
 
-        // The empty state's buttons change the controls they stand for, and
-        // move focus there, since the buttons hide once something matches.
+        // The empty state's button, and Clear filters, change the controls
+        // they stand for and move focus there, since each hides once it has
+        // done its work.
         searchTermsButton.on('click', function () {
             form.terms.checked = true;
             form.terms.focus();

@@ -57,6 +57,12 @@
     margin-left: 0;
 }
 
+/* Clear filters, at the height of the menus beside it. */
+.vocabulary-library .browse-controls .vocabulary-library-clear-filters {
+    min-height: 0;
+    margin: 0;
+}
+
 /* The empty state's buttons, centered under its message as core centers it. */
 .vocabulary-library-empty-actions {
     display: flex;
