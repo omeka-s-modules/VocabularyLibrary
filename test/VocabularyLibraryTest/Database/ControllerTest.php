@@ -137,6 +137,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('Example Vocabulary', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.', $page);
         $this->assertStringContainsString('/admin/vocabulary-library/import/ex', $page);
+        // The page tells the script which controls its address keeps, as
+        // the controller reads them back.
+        $this->assertStringContainsString('data-state-names="q terms tag lang show sort_by sort_order"', $page);
         // Clear filters is beside the filters, shown by the script while one
         // is set, and not repeated in the message for no matches.
         $this->assertMatchesRegularExpression('#</select>\s*<button type="button" class="vocabulary-library-clear-filters" hidden>Clear filters</button>\s*</div>#', $page);
@@ -467,7 +470,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('>Show changes</button>', $page);
     }
 
-    public function testTermsOnlyInOmekaShareOneNote()
+    public function testEachSectionOfTermsOnlyInOmekaHasItsNote()
     {
         $this->import();
         // vocabulary() clears what Doctrine holds, so sign in after it.
@@ -479,7 +482,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
         [, $page] = $this->send('GET', '/admin/vocabulary-library/compare/ex');
         $this->assertStringContainsString('Properties only in Omeka (1)', $page);
         $this->assertStringContainsString('Classes only in Omeka (1)', $page);
-        $this->assertSame(1, substr_count($page, "Omeka's vocabulary has these and the library's doesn't."));
+        // The section links lead to either, so each says so.
+        $this->assertSame(2, substr_count($page, "Omeka's vocabulary has these and the library's doesn't."));
     }
 
     public function testCompareOffersTheOtherReadingOfComments()

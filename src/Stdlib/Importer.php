@@ -134,22 +134,35 @@ class Importer
      * The classes and properties the vocabulary in Omeka has and an entry's
      * file doesn't. Core's update keeps them.
      *
+     * @param array $labels The vocabulary in Omeka's, as labels() gives them
      * @param string|null $lang The language to read the file in
      * @return array ['classes' => [local name => label, …], 'properties' =>
      *   […]]
      */
-    public function missingTerms(array $entry, VocabularyRepresentation $vocabulary, $lang)
+    public function missingTerms(array $entry, array $labels, $lang)
     {
         $members = $this->members($entry, $lang);
-        $missing = ['classes' => [], 'properties' => []];
+        return [
+            'classes' => array_diff_key($labels['classes'], $members['classes']),
+            'properties' => array_diff_key($labels['properties'], $members['properties']),
+        ];
+    }
+
+    /**
+     * The labels a vocabulary's classes and properties have in Omeka.
+     *
+     * @return array ['classes' => [local name => label, …], 'properties' =>
+     *   […]]
+     */
+    public static function labels(VocabularyRepresentation $vocabulary)
+    {
+        $labels = ['classes' => [], 'properties' => []];
         foreach (['classes' => $vocabulary->resourceClasses(), 'properties' => $vocabulary->properties()] as $kind => $terms) {
             foreach ($terms as $term) {
-                if (!isset($members[$kind][$term->localName()])) {
-                    $missing[$kind][$term->localName()] = $term->label();
-                }
+                $labels[$kind][$term->localName()] = $term->label();
             }
         }
-        return $missing;
+        return $labels;
     }
 
     /**

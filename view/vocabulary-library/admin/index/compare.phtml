@@ -63,13 +63,6 @@ $listed = function (array $members) use ($term, $value, $collation) {
     }
     return $rows;
 };
-// The labels the terms have in Omeka, by local name.
-$labels = ['properties' => [], 'classes' => []];
-foreach (['properties' => $vocabulary->properties(), 'classes' => $vocabulary->resourceClasses()] as $kind => $members) {
-    foreach ($members as $member) {
-        $labels[$kind][$member->localName()] = $member->label();
-    }
-}
 // Each section: its id, its heading, its columns, its rows of rendered
 // cells, the term first, and any note and table class. Changed labels and changed comments
 // are sections of their own: labels are short and what everyone sees,
@@ -197,12 +190,10 @@ unset($section);
 </nav>
 <?php endif; ?>
 
-<?php $notesGiven = []; ?>
 <?php foreach ($sections as $section): ?>
 <h2 id="<?php echo $section['id']; ?>" tabindex="-1"><?php echo $escape($section['heading']); ?></h2>
-<?php // A note shared by sections is given once, above the first of them. ?>
-<?php if (isset($section['note']) && !isset($notesGiven[$section['note']])): ?>
-<?php $notesGiven[$section['note']] = true; ?>
+<?php // Each section's note, though two share one: the section links lead to either. ?>
+<?php if (isset($section['note'])): ?>
 <p><?php echo $section['note']; ?></p>
 <?php endif; ?>
 <table class="tablesaw vocabulary-library-compare-table <?php echo $section['class'] ?? ''; ?>" data-tablesaw-mode="stack">

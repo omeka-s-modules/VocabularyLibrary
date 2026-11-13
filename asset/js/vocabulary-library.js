@@ -70,10 +70,10 @@
                 if (!panel.isConnected) {
                     return;
                 }
+                // What was waiting for the lists still waits, for a retry.
                 panel.removeAttribute('aria-busy');
                 loading.hidden = true;
                 failed.hidden = false;
-                panel.waiting = [];
             });
     };
 
@@ -285,16 +285,22 @@
         // Keep the search, filters and sort in the URL, so a view can be
         // bookmarked or shared, and survives a reload.
         const saveState = function () {
+            // The controls the page keeps, as the server lists them, each
+            // where it differs from how the page first shows: a search typed,
+            // a box checked, or a menu not on its first choice.
             const params = new URLSearchParams();
-            if (form.q.value.trim()) {
-                params.set('q', form.q.value.trim());
-            }
-            if (form.terms.checked) {
-                params.set('terms', '1');
-            }
-            ['tag', 'lang', 'show', 'sort_by', 'sort_order'].forEach(function (name) {
-                if (form[name].value !== form[name].options[0].value) {
-                    params.set(name, form[name].value);
+            filters.data('state-names').split(' ').forEach(function (name) {
+                const control = form[name];
+                if (control.type === 'checkbox') {
+                    if (control.checked) {
+                        params.set(name, control.value);
+                    }
+                } else if (control.tagName === 'SELECT') {
+                    if (control.value !== control.options[0].value) {
+                        params.set(name, control.value);
+                    }
+                } else if (control.value.trim()) {
+                    params.set(name, control.value.trim());
                 }
             });
             const search = params.toString();
@@ -323,12 +329,16 @@
         // that their links back return to it as it is now. Without the
         // script, they lead back to the library as it first shows.
         $(document).on('click', 'a.vocabulary-library-keep-place', function () {
+            // The link may carry what was set when it was last followed, as
+            // after coming Back to this page, so it is set or removed anew.
             const state = location.search.slice(1);
+            const url = new URL(this.href, location.href);
             if (state) {
-                const url = new URL(this.href, location.href);
                 url.searchParams.set('return', state);
-                this.href = url.toString();
+            } else {
+                url.searchParams.delete('return');
             }
+            this.href = url.toString();
         });
 
         // The empty state's button, and Clear filters, change the controls
@@ -365,8 +375,13 @@
         $(document).on('click', '.sidebar .sidebar-section-nav [role="tab"]', function () {
             showTab(this);
         });
+        // Trying again hides the button, so focus goes first to the tab,
+        // where the lists, once in, are reached, and from where an "All
+        // matching terms" waiting for them moves it on to their filter.
         $(document).on('click', '.sidebar .vocabulary-library-terms-retry', function () {
-            loadTerms(this.closest('[data-terms-url]'));
+            const panel = this.closest('[data-terms-url]');
+            document.getElementById(panel.getAttribute('aria-labelledby')).focus();
+            loadTerms(panel);
         });
         $(document).on('keydown', '.sidebar .sidebar-section-nav [role="tab"]', function (e) {
             // With a modifier, the key is the browser's, as Alt+Left is Back.

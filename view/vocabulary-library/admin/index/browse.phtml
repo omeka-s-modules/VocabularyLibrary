@@ -23,6 +23,7 @@ $selected = function ($name, $value) use ($query) {
 <form id="vocabulary-library-filters" class="browse-controls" role="search"
     data-term-search-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'term-search'])); ?>"
     data-term-query-min="<?php echo $termQueryMin; ?>"
+    data-state-names="<?php echo $escape(implode(' ', $stateNames)); ?>"
     data-term-all="<?php echo $escape($translate('All matching terms (%s)')); ?>">
     <div class="vocabulary-library-search">
         <input type="text" name="q"

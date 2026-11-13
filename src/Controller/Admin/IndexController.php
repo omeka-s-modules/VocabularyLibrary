@@ -30,9 +30,10 @@ class IndexController extends AbstractActionController
     const EXCERPT_LENGTH = 200;
 
     /**
-     * The library page's search, filters and sort, as its URL keeps them (see
-     * saveState() in the script). Import and Compare carry them in "return",
-     * so their links back lead to the library as the admin left it.
+     * The library page's search, filters and sort, which its URL keeps: the
+     * page gives the script this list, for saveState(). Import and Compare
+     * carry them in "return", so their links back lead to the library as the
+     * admin left it.
      */
     const LIBRARY_STATE = ['q', 'terms', 'tag', 'lang', 'show', 'sort_by', 'sort_order'];
 
@@ -115,6 +116,7 @@ class IndexController extends AbstractActionController
         // Only single values: a filter given as a list isn't one this page sets.
         $view->setVariable('query', array_filter($this->params()->fromQuery(), 'is_string'));
         $view->setVariable('termQueryMin', TermSearch::QUERY_MIN);
+        $view->setVariable('stateNames', self::LIBRARY_STATE);
         return $view;
     }
 
@@ -259,7 +261,9 @@ class IndexController extends AbstractActionController
         $view->setVariable('vocabulary', $vocabulary);
         $view->setVariable('diff', $diff);
         $view->setVariable('collation', $this->collation);
-        $view->setVariable('missing', $this->importer->missingTerms($entry, $vocabulary, $lang));
+        $labels = Importer::labels($vocabulary);
+        $view->setVariable('labels', $labels);
+        $view->setVariable('missing', $this->importer->missingTerms($entry, $labels, $lang));
         $view->setVariable('lang', $lang);
         $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
         $view->setVariable('commentReading', $reading);

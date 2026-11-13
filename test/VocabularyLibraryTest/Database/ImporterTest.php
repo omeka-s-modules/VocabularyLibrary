@@ -207,7 +207,7 @@ class ImporterTest extends DbTestCase
         $vocabulary = $this->reload($vocabulary);
         $this->assertSame(
             ['classes' => ['Extra' => 'An extra class'], 'properties' => []],
-            $this->importer->missingTerms($this->entry, $vocabulary, 'en')
+            $this->importer->missingTerms($this->entry, Importer::labels($vocabulary), 'en')
         );
         $this->importer->update($vocabulary->id(), $this->importer->diff($this->entry, 'de', TermReading::COMMENT_PROPERTY));
         $this->assertArrayHasKey('Extra', self::terms($this->reload($vocabulary)->resourceClasses()));
