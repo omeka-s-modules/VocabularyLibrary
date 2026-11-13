@@ -300,10 +300,34 @@
     list-style: none;
 }
 
-/* The Type column holds only "Label" or "Comment", so From and To get the
-   room; core's tables otherwise give every column the same width. */
-.vocabulary-library-change-table th:nth-child(2) {
-    width: 7rem;
+/* In a table of changes the first column holds only a label and a term, so
+   the values from and to get the room; core's tables otherwise give every
+   column the same width. */
+.vocabulary-library-change-table th:first-child {
+    width: 25%;
+}
+
+/* What differs within a changed value: struck out where removed, underlined
+   where added, each on a tint, so it shows without colour and a changed
+   space shows at all. */
+.vocabulary-library-value del {
+    background-color: #fbe3e3;
+    text-decoration: line-through;
+}
+
+.vocabulary-library-value ins {
+    background-color: #dff3df;
+    text-decoration: underline;
+}
+
+/* The sign for a line break added or removed. */
+.vocabulary-library-line-break {
+    font-family: sans-serif;
+}
+
+/* A term, as its label and beneath it its term in core's style for terms. */
+.vocabulary-library-compare-table .field-term {
+    display: block;
 }
 
 /* Long comments make tall rows; keep each term beside the start of its

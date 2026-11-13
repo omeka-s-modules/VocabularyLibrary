@@ -371,11 +371,16 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertSame(200, $status);
         // Sections are headed one level below the page's title, and listed
         // first, each linked.
-        $this->assertMatchesRegularExpression('#<h2 id="vocabulary-library-changed-classes"[^>]*>Changed classes \(2\)</h2>#', $page);
+        $this->assertMatchesRegularExpression('#<h2 id="vocabulary-library-changed-class-labels"[^>]*>Changed class labels \(2\)</h2>#', $page);
         $this->assertStringNotContainsString('<h3>', $page);
-        $this->assertMatchesRegularExpression('#<nav class="vocabulary-library-compare-summary"[^>]*>\s*<ul>\s*<li><a href="\#vocabulary-library-changed-properties">Changed properties \(2\)</a></li>\s*<li><a href="\#vocabulary-library-changed-classes">Changed classes \(2\)</a></li>\s*</ul>#', $page);
-        $this->assertStringContainsString('Ding', $page);
-        $this->assertStringContainsString('Thing', $page);
+        $this->assertMatchesRegularExpression('#<nav class="vocabulary-library-compare-summary"[^>]*>\s*<ul>\s*<li><a href="\#vocabulary-library-changed-property-labels">Changed property labels \(2\)</a></li>\s*<li><a href="\#vocabulary-library-changed-class-labels">Changed class labels \(2\)</a></li>\s*</ul>#', $page);
+        // The first column is named for the section's kind of term.
+        $this->assertMatchesRegularExpression('#<th>Class</th>\s*<th>From</th>\s*<th>To</th>#', $page);
+        $this->assertStringNotContainsString('<th>Type</th>', $page);
+        $this->assertStringNotContainsString('<th>Term</th>', $page);
+        // The term heads its row, with its label in Omeka, and what differs
+        // in the value is marked.
+        $this->assertMatchesRegularExpression('#<td role="rowheader"><span class="vocabulary-library-term-label">Ding</span> <span class="field-term">ex:Thing</span></td>\s*<td><span class="vocabulary-library-value"><del>Ding</del></span></td>\s*<td><span class="vocabulary-library-value"><ins>Thing</ins></span></td>#', $page);
 
         $tokens = $this->csrf($path);
         [$status] = $this->send('POST', $path, ['lang' => 'en'] + $tokens);
@@ -384,6 +389,32 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // Its definition in the file is empty.
         $this->assertSame('is part of', $this->term('isPartOf')[0]);
         $this->assertSame('', (string) $this->term('isPartOf')[1]);
+    }
+
+    public function testLabelsComeBeforeComments()
+    {
+        $this->import(['lang' => 'de']);
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/compare/ex', ['lang' => 'en', 'comments' => 'comments']);
+        preg_match_all('#<h2 id="vocabulary-library-([a-z-]+)"#', $page, $sections);
+        $this->assertSame(['changed-property-labels', 'changed-class-labels', 'changed-class-comments'], $sections[1]);
+        // A comment, like a label, from what, to what.
+        $this->assertMatchesRegularExpression('#<span class="field-term">ex:Thing</span></td>\s*<td><span class="vocabulary-library-value"><del>Anything at all.</del></span></td>\s*<td><span class="vocabulary-library-value"><ins>A note about things.</ins></span></td>#', $page);
+        $this->assertStringContainsString('>Show changes</button>', $page);
+    }
+
+    public function testTermsOnlyInOmekaShareOneNote()
+    {
+        $this->import();
+        // vocabulary() clears what Doctrine holds, so sign in after it.
+        $id = $this->vocabulary()->id();
+        DbTestCase::signIn(DbTestCase::ADMIN);
+        $api = DbTestCase::services()->get('Omeka\ApiManager');
+        $api->create('resource_classes', ['o:vocabulary' => ['o:id' => $id], 'o:local_name' => 'Extra', 'o:label' => 'Extra']);
+        $api->create('properties', ['o:vocabulary' => ['o:id' => $id], 'o:local_name' => 'extra', 'o:label' => 'extra']);
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/compare/ex');
+        $this->assertStringContainsString('Properties only in Omeka (1)', $page);
+        $this->assertStringContainsString('Classes only in Omeka (1)', $page);
+        $this->assertSame(1, substr_count($page, "Omeka's vocabulary has these and the library's doesn't."));
     }
 
     public function testCompareOffersTheOtherReadingOfComments()

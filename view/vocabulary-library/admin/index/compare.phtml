@@ -6,9 +6,13 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library compare
 $browseUrl = $this->url('admin/vocabulary-library');
 $prefix = $vocabulary->prefix();
 
-// A term as the site writes it.
-$term = function ($localName) use ($prefix, $escape) {
-    return $escape($prefix . ':' . $localName);
+// A term as Omeka shows one: its label in Omeka where it has one, which is
+// how most admins know it, and beneath, its term as the site writes it, in
+// core's style for terms. A term with codes for local names, as in RDA's,
+// is otherwise hard to tell.
+$term = function ($localName, $label = null) use ($prefix, $escape) {
+    $term = sprintf('<span class="field-term">%s</span>', $escape($prefix . ':' . $localName));
+    return $label === null || $label === '' ? $term : sprintf('<span class="vocabulary-library-term-label">%s</span> %s', $escape($label), $term);
 };
 // A value as it would be stored: escaped, with its whitespace, and marked
 // when empty.
@@ -19,21 +23,35 @@ $value = function ($value) use ($none, $escape) {
     }
     return sprintf('<span class="vocabulary-library-value">%s</span>', $escape($value));
 };
-// A kind's changed terms, as core's update page lists them: each term, with
-// whether its label or comment changed, from what, to what. In alphabetical
-// order of term, so a term's changes are together.
-$changed = function (array $diff) use ($term, $value, $translate, $escape, $collation) {
-    $types = ['label' => $escape($translate('Label')), 'comment' => $escape($translate('Comment'))];
-    $localNames = array_keys($diff['label'] + $diff['comment']);
-    usort($localNames, [$collation, 'compare']);
+// A value that changed, with what differs from the other marked: struck out
+// where it is removed, underlined where it is added, so the difference
+// doesn't rest on colour. A line break, which would otherwise not show, is
+// given a sign.
+$marked = function (array $parts, $tag) use ($escape) {
+    $html = '';
+    foreach ($parts as [$text, $differs]) {
+        $text = $escape($text);
+        $html .= $differs ? sprintf('<%1$s>%2$s</%1$s>', $tag, str_replace("\n", '<span class="vocabulary-library-line-break" aria-hidden="true">↵</span>' . "\n", $text)) : $text;
+    }
+    return sprintf('<span class="vocabulary-library-value">%s</span>', $html);
+};
+// The terms whose label, or whose comment, changed, in alphabetical order of
+// term, each with its value from what, to what, side by side: each reads as
+// ordinary text, with what differs marked.
+$changed = function (array $changes, array $labels) use ($term, $value, $marked, $collation) {
+    uksort($changes, [$collation, 'compare']);
     $rows = [];
-    foreach ($localNames as $localName) {
-        foreach ($types as $type => $name) {
-            if (isset($diff[$type][$localName])) {
-                [$from, $to] = $diff[$type][$localName];
-                $rows[] = [$term($localName), $name, $value($from), $value($to)];
-            }
+    foreach ($changes as $localName => [$from, $to]) {
+        [$from, $to] = [(string) $from, (string) $to];
+        if ($from === '' || $to === '') {
+            // Where there was nothing, or is to be nothing, the whole value
+            // is the change.
+            $cells = [$value($from), $value($to)];
+        } else {
+            [$fromParts, $toParts] = \VocabularyLibrary\Stdlib\TextDiff::words($from, $to);
+            $cells = [$marked($fromParts, 'del'), $marked($toParts, 'ins')];
         }
+        $rows[] = array_merge([$term($localName, $labels[$localName] ?? null)], $cells);
     }
     return $rows;
 };
@@ -46,24 +64,45 @@ $listed = function (array $members) use ($term, $value, $collation) {
     }
     return $rows;
 };
+// The labels the terms have in Omeka, by local name.
+$labels = ['properties' => [], 'classes' => []];
+foreach (['properties' => $vocabulary->properties(), 'classes' => $vocabulary->resourceClasses()] as $kind => $members) {
+    foreach ($members as $member) {
+        $labels[$kind][$member->localName()] = $member->label();
+    }
+}
 // Each section: its id, its heading, its columns, its rows of rendered
-// cells, and any note and table class. Properties come before classes, as on core's
-// update page. A changed term's label and comment are rows of their own.
-$changeColumns = [$translate('Term'), $translate('Type'), $translate('From'), $translate('To')];
-$newColumns = [$translate('Term'), $translate('Label'), $translate('Comment')];
+// cells, the term first, and any note and table class. Changed labels and changed comments
+// are sections of their own: labels are short and what everyone sees,
+// comments long and mostly documentation. So labels come first, then new
+// terms, then comments, then terms only in Omeka, which aren't changes;
+// within each, properties before classes, as on core's update page.
+// The first column is named for the kind of term its section lists.
+$kinds = ['properties' => $translate('Property'), 'classes' => $translate('Class')];
+$changeColumns = function ($kind) use ($kinds, $translate) {
+    return [$kinds[$kind], $translate('From'), $translate('To')];
+};
+$newColumns = function ($kind) use ($kinds, $translate) {
+    return [$kinds[$kind], $translate('Label'), $translate('Comment')];
+};
+$onlyInOmekaColumns = function ($kind) use ($kinds, $translate) {
+    return [$kinds[$kind], $translate('Label')];
+};
 $sections = [
-    ['id' => 'vocabulary-library-changed-properties', 'heading' => $translate('Changed properties'), 'columns' => $changeColumns, 'rows' => $changed($diff['properties']), 'class' => 'vocabulary-library-change-table'],
-    ['id' => 'vocabulary-library-changed-classes', 'heading' => $translate('Changed classes'), 'columns' => $changeColumns, 'rows' => $changed($diff['classes']), 'class' => 'vocabulary-library-change-table'],
-    ['id' => 'vocabulary-library-new-properties', 'heading' => $translate('New properties'), 'columns' => $newColumns, 'rows' => $listed($diff['properties']['new'])],
-    ['id' => 'vocabulary-library-new-classes', 'heading' => $translate('New classes'), 'columns' => $newColumns, 'rows' => $listed($diff['classes']['new'])],
+    ['id' => 'vocabulary-library-changed-property-labels', 'heading' => $translate('Changed property labels'), 'columns' => $changeColumns('properties'), 'rows' => $changed($diff['properties']['label'], $labels['properties']), 'class' => 'vocabulary-library-change-table'],
+    ['id' => 'vocabulary-library-changed-class-labels', 'heading' => $translate('Changed class labels'), 'columns' => $changeColumns('classes'), 'rows' => $changed($diff['classes']['label'], $labels['classes']), 'class' => 'vocabulary-library-change-table'],
+    ['id' => 'vocabulary-library-new-properties', 'heading' => $translate('New properties'), 'columns' => $newColumns('properties'), 'rows' => $listed($diff['properties']['new'])],
+    ['id' => 'vocabulary-library-new-classes', 'heading' => $translate('New classes'), 'columns' => $newColumns('classes'), 'rows' => $listed($diff['classes']['new'])],
+    ['id' => 'vocabulary-library-changed-property-comments', 'heading' => $translate('Changed property comments'), 'columns' => $changeColumns('properties'), 'rows' => $changed($diff['properties']['comment'], $labels['properties']), 'class' => 'vocabulary-library-change-table'],
+    ['id' => 'vocabulary-library-changed-class-comments', 'heading' => $translate('Changed class comments'), 'columns' => $changeColumns('classes'), 'rows' => $changed($diff['classes']['comment'], $labels['classes']), 'class' => 'vocabulary-library-change-table'],
 ];
 $changes = array_sum(array_map('count', array_column($sections, 'rows')));
 // Terms Omeka's vocabulary has and the library's doesn't come last, with a
 // note.
 // They aren't changes: updating keeps them.
 $onlyInOmeka = $translate('Omeka\'s vocabulary has these and the library\'s doesn\'t. Updating doesn\'t remove them.');
-$sections[] = ['id' => 'vocabulary-library-properties-only-in-omeka', 'heading' => $translate('Properties only in Omeka'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['properties']), 'note' => $onlyInOmeka];
-$sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => $translate('Classes only in Omeka'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['classes']), 'note' => $onlyInOmeka];
+$sections[] = ['id' => 'vocabulary-library-properties-only-in-omeka', 'heading' => $translate('Properties only in Omeka'), 'columns' => $onlyInOmekaColumns('properties'), 'rows' => $listed($missing['properties']), 'note' => $onlyInOmeka];
+$sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => $translate('Classes only in Omeka'), 'columns' => $onlyInOmekaColumns('classes'), 'rows' => $listed($missing['classes']), 'note' => $onlyInOmeka];
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
@@ -123,7 +162,7 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
     </div>
     <?php endif; ?>
     <div class="vocabulary-library-reading-actions">
-        <button type="submit"><?php echo $translate('Compare'); ?></button>
+        <button type="submit"><?php echo $translate('Show changes'); ?></button>
     </div>
 </form>
 <?php endif; ?>
@@ -135,13 +174,12 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
 <?php endif; ?>
 
 <?php
-// The sections that have rows, each headed with how many terms it has, which
-// in the changed sections can have two rows each.
+// The sections that have rows, each headed with how many terms it has.
 $sections = array_filter($sections, function ($section) {
     return (bool) $section['rows'];
 });
 foreach ($sections as &$section) {
-    $section['heading'] = sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))));
+    $section['heading'] = sprintf('%s (%s)', $section['heading'], count($section['rows']));
 }
 unset($section);
 ?>
@@ -156,9 +194,12 @@ unset($section);
 </nav>
 <?php endif; ?>
 
+<?php $notesGiven = []; ?>
 <?php foreach ($sections as $section): ?>
 <h2 id="<?php echo $section['id']; ?>" tabindex="-1"><?php echo $escape($section['heading']); ?></h2>
-<?php if (isset($section['note'])): ?>
+<?php // A note shared by sections is given once, above the first of them. ?>
+<?php if (isset($section['note']) && !isset($notesGiven[$section['note']])): ?>
+<?php $notesGiven[$section['note']] = true; ?>
 <p><?php echo $section['note']; ?></p>
 <?php endif; ?>
 <table class="tablesaw vocabulary-library-compare-table <?php echo $section['class'] ?? ''; ?>" data-tablesaw-mode="stack">
@@ -172,8 +213,14 @@ unset($section);
     <tbody>
         <?php foreach ($section['rows'] as $row): ?>
         <tr>
-            <?php foreach ($row as $cell): ?>
-            <td><?php echo $cell; ?></td>
+            <?php
+            // The term heads its row, so a screen reader names it with each
+            // value. As a role on an ordinary cell: core's tables, and the
+            // stacked layout they take on a narrow screen, count on every
+            // cell of a row being one, the first its row's name.
+            ?>
+            <?php foreach ($row as $i => $cell): ?>
+            <td<?php echo $i === 0 ? ' role="rowheader"' : ''; ?>><?php echo $cell; ?></td>
             <?php endforeach; ?>
         </tr>
         <?php endforeach; ?>
