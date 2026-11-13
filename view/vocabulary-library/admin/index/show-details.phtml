@@ -2,12 +2,8 @@
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
 // Publisher text arrives as plain text: the build cleans the description and
-// license, and the controller the term labels and comments.
+// license.
 $license = $entry['license'];
-$terms = [
-    ['label' => $translate('Classes'), 'members' => $classes],
-    ['label' => $translate('Properties'), 'members' => $properties],
-];
 $file = basename($entry['file']);
 // Every section shows for every vocabulary, so sidebars keep one structure:
 // what the file lacks says so, styled apart from values, as the compare page
@@ -110,39 +106,18 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     </div>
 </div>
 
-<div class="sidebar-section" id="vocabulary-library-term-lists" role="tabpanel" aria-labelledby="vocabulary-library-term-lists-label">
-    <?php if ($classes || $properties): ?>
-    <?php // Filled in by the script, and from a term search's "All matching terms". ?>
-    <div class="vocabulary-library-term-filter">
-        <input type="text" value="<?php echo $escape($termFilter); ?>"
-            placeholder="<?php echo $escape($translate('Filter classes and properties')); ?>"
-            aria-label="<?php echo $escape($translate('Filter classes and properties')); ?>">
-        <p class="vocabulary-library-term-filter-empty" hidden><?php echo $translate('No classes or properties match.'); ?></p>
-        <?php // How many match, read out once the admin pauses; filled in by the script. ?>
-        <p class="vocabulary-library-announcement vocabulary-library-term-filter-status" aria-live="polite" aria-atomic="true"></p>
+<?php
+// The class and property lists come from the vocabulary's file, which for a
+// large vocabulary takes a moment to read, so the script loads them
+// (show-terms) when this tab is first shown, or at once when the sidebar
+// opens from a term search's matches. The details need nothing from the file.
+?>
+<div class="sidebar-section" id="vocabulary-library-term-lists" role="tabpanel" aria-labelledby="vocabulary-library-term-lists-label"
+    data-terms-url="<?php echo $escape($this->url('admin/vocabulary-library', ['action' => 'show-terms', 'slug' => $slug], $termFilter === '' ? [] : ['query' => ['filter' => $termFilter]])); ?>"
+    data-filter="<?php echo $escape($termFilter); ?>">
+    <p class="vocabulary-library-terms-loading"><?php echo $translate('Loading classes and properties…'); ?></p>
+    <div class="vocabulary-library-terms-failed" hidden>
+        <p class="error"><?php echo $translate('Could not load classes and properties.'); ?></p>
+        <button type="button" class="vocabulary-library-terms-retry"><?php echo $translate('Try again'); ?></button>
     </div>
-    <?php endif; ?>
-
-    <?php foreach ($terms as $group): ?>
-    <?php $heading = sprintf('<h4 data-label="%s">%s</h4>', $escape($group['label']), $escape(sprintf('%s (%s)', $group['label'], count($group['members'])))); ?>
-    <?php if (!$group['members']): ?>
-    <?php // None to list, so a heading alone, with nothing to expand. ?>
-    <div class="meta-group vocabulary-library-terms"><?php echo $heading; ?></div>
-    <?php else: ?>
-    <div class="meta-group vocabulary-library-terms">
-        <a href="#" class="expand" aria-expanded="false"><?php echo $heading; ?></a>
-        <div class="collapsible">
-            <?php foreach ($group['members'] as $localName => $member): ?>
-            <div class="value">
-                <span class="vocabulary-library-term-label"><?php echo $escape($member['label']); ?></span>
-                <span class="field-term"><?php echo $escape($entry['prefix'] . ':' . $localName); ?></span>
-                <?php if ($member['comment'] !== null && trim($member['comment']) !== ''): ?>
-                <span class="vocabulary-library-term-comment"><?php echo $escape($member['comment']); ?></span>
-                <?php endif; ?>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-    <?php endif; ?>
-    <?php endforeach; ?>
 </div>

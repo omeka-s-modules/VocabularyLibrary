@@ -164,24 +164,42 @@ class ControllerTest extends AbstractHttpControllerTestCase
     public function testAVocabularyNotInTheLibraryIsNotFound()
     {
         $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/show-details/nothing')[0]);
+        $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/show-terms/nothing')[0]);
         $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/import/nothing')[0]);
         $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/file/nothing')[0]);
     }
 
-    public function testTheDetailsShowTheVocabularyAndItsTerms()
+    public function testTheDetailsShowTheVocabularyAndLeaveItsTermsToLoad()
     {
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
         $this->assertSame(200, $status);
-        foreach (['Example Vocabulary', 'http://example.org/ns#', 'https://creativecommons.org/licenses/by/4.0/', 'ex:hasPart', 'has part', 'Anything at all.', 'German'] as $text) {
+        foreach (['Example Vocabulary', 'http://example.org/ns#', 'https://creativecommons.org/licenses/by/4.0/', 'German'] as $text) {
+            $this->assertStringContainsString($text, $page);
+        }
+        // The lists, read from the file, load when their tab is shown.
+        $this->assertStringNotContainsString('ex:hasPart', $page);
+        $this->assertMatchesRegularExpression('#<div class="sidebar-section" id="vocabulary-library-term-lists"[^>]*data-terms-url="/admin/vocabulary-library/show-terms/ex"\s+data-filter="">#', $page);
+        $this->assertStringContainsString('<p class="vocabulary-library-terms-loading">Loading classes and properties…</p>', $page);
+        $this->assertMatchesRegularExpression('#<div class="vocabulary-library-terms-failed" hidden>\s*<p class="error">Could not load classes and properties.</p>\s*<button type="button" class="vocabulary-library-terms-retry">Try again</button>#', $page);
+    }
+
+    public function testTheTermsAreTheVocabularysClassesAndProperties()
+    {
+        [$status, $page] = $this->send('GET', '/admin/vocabulary-library/show-terms/ex');
+        $this->assertSame(200, $status);
+        foreach (['ex:hasPart', 'has part', 'Anything at all.', 'Classes (2)', 'Properties (2)'] as $text) {
             $this->assertStringContainsString($text, $page);
         }
         // The comment gives way to the definition.
         $this->assertStringNotContainsString('A note about things.', $page);
+        // Only the lists, for the tab, not a page.
+        $this->assertStringNotContainsString('<html', $page);
+        $this->assertSame(403, $this->send('GET', '/admin/vocabulary-library/show-terms/ex', [], 'library-editor@example.com')[0]);
     }
 
     public function testTheTermFiltersResultHasSomewhereToBeReadOutFrom()
     {
-        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-terms/ex');
         $this->assertMatchesRegularExpression('/<p class="[^"]*vocabulary-library-term-filter-status"[^>]*aria-live="polite"/', $page);
     }
 
@@ -207,7 +225,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
 
     public function testTheDetailsStartFilteredFromATermSearch()
     {
+        // The details pass the search on to the lists, which start filtered.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', ['filter' => ' has part ']);
+        $this->assertMatchesRegularExpression('#data-terms-url="/admin/vocabulary-library/show-terms/ex\?filter=has%20part"\s+data-filter="has part"#', $page);
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-terms/ex', ['filter' => 'has part']);
         $this->assertMatchesRegularExpression('/<input[^>]*value="has part"/', $page);
     }
 

@@ -18,6 +18,63 @@
             other.tabIndex = selected ? 0 : -1;
             document.getElementById(other.dataset.id).classList.toggle('active', selected);
         });
+        // A tab whose content is loaded when wanted.
+        const panel = document.getElementById(tab.dataset.id);
+        if (panel.dataset.termsUrl) {
+            loadTerms(panel);
+        }
+    };
+
+    /**
+     * Loads the details sidebar's class and property lists into their tab,
+     * once: they come from the vocabulary's file, which for a large
+     * vocabulary takes a moment to read. The tab says it is loading, and if
+     * the request fails, says so and offers to try again.
+     *
+     * @param {Element} panel The "Classes and properties" tab's section
+     * @param {function()} [then] Called once the lists are in, now if they
+     *   already are
+     */
+    const loadTerms = function (panel, then) {
+        if (panel.dataset.loaded) {
+            if (then) {
+                then();
+            }
+            return;
+        }
+        panel.waiting = panel.waiting || [];
+        if (then) {
+            panel.waiting.push(then);
+        }
+        if (panel.getAttribute('aria-busy') === 'true') {
+            return;
+        }
+        const loading = panel.querySelector('.vocabulary-library-terms-loading');
+        const failed = panel.querySelector('.vocabulary-library-terms-failed');
+        panel.setAttribute('aria-busy', 'true');
+        loading.hidden = false;
+        failed.hidden = true;
+        $.get(panel.dataset.termsUrl)
+            .done(function (html) {
+                // The sidebar may show another vocabulary by now.
+                if (!panel.isConnected) {
+                    return;
+                }
+                panel.removeAttribute('aria-busy');
+                panel.dataset.loaded = '1';
+                $(panel).html(html);
+                initTermFilter(panel);
+                panel.waiting.splice(0).forEach(fn => fn());
+            })
+            .fail(function () {
+                if (!panel.isConnected) {
+                    return;
+                }
+                panel.removeAttribute('aria-busy');
+                loading.hidden = true;
+                failed.hidden = false;
+                panel.waiting = [];
+            });
     };
 
     /**
@@ -308,6 +365,9 @@
         $(document).on('click', '.sidebar .sidebar-section-nav [role="tab"]', function () {
             showTab(this);
         });
+        $(document).on('click', '.sidebar .vocabulary-library-terms-retry', function () {
+            loadTerms(this.closest('[data-terms-url]'));
+        });
         $(document).on('keydown', '.sidebar .sidebar-section-nav [role="tab"]', function (e) {
             // With a modifier, the key is the browser's, as Alt+Left is Back.
             if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
@@ -350,26 +410,33 @@
             }
         });
 
-        // When the details sidebar opens, set up its term filter and move
-        // focus into it: to the term filter, on the Classes and properties
-        // tab, when it opened from "All matching terms", so the matches are in
-        // view, otherwise to the title. Core keeps the sidebar's content
-        // hidden, which can't take focus, until just after this event, so
-        // focusing waits for the next frame, when the browser has applied
-        // that.
+        // When the details sidebar opens, move focus into it: to the title,
+        // or, when it opened from "All matching terms", to the Classes and
+        // properties tab, which loads its lists, and once they are in, to
+        // their filter, set to the search, so the matches are in view. Core
+        // keeps the sidebar's content hidden, which can't take focus, until
+        // just after this event, so focusing waits for the next frame, when
+        // the browser has applied that.
         $(document).on('o:sidebar-content-loaded', '.sidebar', function () {
             const sidebar = this;
-            initTermFilter(sidebar);
             const activeTab = sidebar.querySelector('[role="tab"].active');
             if (activeTab) {
                 showTab(activeTab);
             }
             requestAnimationFrame(function () {
-                const filter = sidebar.querySelector('.vocabulary-library-term-filter input');
-                if (filter && filter.value !== '') {
-                    showTab(sidebar.querySelector('#vocabulary-library-term-lists-label'));
-                    filter.scrollIntoView({block: 'start'});
-                    filter.focus({preventScroll: true});
+                const panel = sidebar.querySelector('#vocabulary-library-term-lists');
+                if (panel && panel.dataset.filter) {
+                    const tab = sidebar.querySelector('#vocabulary-library-term-lists-label');
+                    showTab(tab);
+                    tab.focus();
+                    loadTerms(panel, function () {
+                        // Unless the admin has moved on while they loaded.
+                        const filter = panel.querySelector('.vocabulary-library-term-filter input');
+                        if (filter && document.activeElement === tab) {
+                            filter.scrollIntoView({block: 'start'});
+                            filter.focus({preventScroll: true});
+                        }
+                    });
                     return;
                 }
                 const title = sidebar.querySelector('.vocabulary-library-details-title');
@@ -397,14 +464,14 @@
      * Emptied, it closes the lists it opened, leaving any the admin opened. It
      * starts with the text from a term search's "All matching terms", if any.
      */
-    const initTermFilter = function (sidebar) {
-        const input = sidebar.querySelector('.vocabulary-library-term-filter input');
+    const initTermFilter = function (panel) {
+        const input = panel.querySelector('.vocabulary-library-term-filter input');
         if (!input) {
             return;
         }
-        const empty = sidebar.querySelector('.vocabulary-library-term-filter-empty');
-        const status = announcer(sidebar.querySelector('.vocabulary-library-term-filter-status'));
-        const groups = [...sidebar.querySelectorAll('.vocabulary-library-terms')].map(group => ({
+        const empty = panel.querySelector('.vocabulary-library-term-filter-empty');
+        const status = announcer(panel.querySelector('.vocabulary-library-term-filter-status'));
+        const groups = [...panel.querySelectorAll('.vocabulary-library-terms')].map(group => ({
             group: group,
             toggle: group.querySelector(':scope > a'),
             heading: group.querySelector('h4'),

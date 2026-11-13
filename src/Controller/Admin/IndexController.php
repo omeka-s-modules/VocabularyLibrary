@@ -118,35 +118,18 @@ class IndexController extends AbstractActionController
         return $view;
     }
 
+    /**
+     * The details sidebar. It reads nothing from the vocabulary's file, so it
+     * opens at once; its class and property lists come from showTerms().
+     */
     public function showDetailsAction()
     {
         [$slug, $entry] = $this->entry();
-        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
-        foreach ($members as &$terms) {
-            // Some files put HTML in their labels and comments. Labels are
-            // one line, as the term index has them, so the term filter
-            // matches what's shown.
-            foreach ($terms as &$term) {
-                $term['label'] = PlainText::line($term['label']);
-                if ($term['comment'] !== null) {
-                    $term['comment'] = PlainText::from($term['comment']);
-                }
-            }
-            unset($term);
-            uasort($terms, function ($a, $b) {
-                return $this->collation->compare($a['label'], $b['label']);
-            });
-        }
-        unset($terms);
-
         $view = new ViewModel;
         $view->setTerminal(true);
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
-        // Text to filter the terms by, when the sidebar opens from a term
-        // search's matches.
-        $filter = $this->params()->fromQuery('filter');
-        $view->setVariable('termFilter', is_string($filter) ? trim($filter) : '');
+        $view->setVariable('termFilter', $this->termFilter());
         [$excerpt, $rest] = PlainText::excerpt($entry['description'], self::EXCERPT_LENGTH);
         $view->setVariable('excerpt', $excerpt);
         $view->setVariable('rest', $rest);
@@ -154,8 +137,6 @@ class IndexController extends AbstractActionController
         $view->setVariable('languageNames', $this->languageNames->names($this->languageNames->primaries($entry['languages'])));
         $view->setVariable('installed', $this->siteVocabularies->installed($entry));
         $view->setVariable('prefixTakenBy', $this->siteVocabularies->prefixHolder($entry['prefix']));
-        $view->setVariable('classes', $members['classes']);
-        $view->setVariable('properties', $members['properties']);
         return $view;
     }
 
@@ -289,6 +270,40 @@ class IndexController extends AbstractActionController
     }
 
     /**
+     * The details sidebar's class and property lists, read from the
+     * vocabulary's file in the language the library shows it in.
+     */
+    public function showTermsAction()
+    {
+        [, $entry] = $this->entry();
+        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
+        foreach ($members as &$terms) {
+            // Some files put HTML in their labels and comments. Labels are
+            // one line, as the term index has them, so the term filter
+            // matches what's shown.
+            foreach ($terms as &$term) {
+                $term['label'] = PlainText::line($term['label']);
+                if ($term['comment'] !== null) {
+                    $term['comment'] = PlainText::from($term['comment']);
+                }
+            }
+            unset($term);
+            uasort($terms, function ($a, $b) {
+                return $this->collation->compare($a['label'], $b['label']);
+            });
+        }
+        unset($terms);
+
+        $view = new ViewModel;
+        $view->setTerminal(true);
+        $view->setVariable('entry', $entry);
+        $view->setVariable('termFilter', $this->termFilter());
+        $view->setVariable('classes', $members['classes']);
+        $view->setVariable('properties', $members['properties']);
+        return $view;
+    }
+
+    /**
      * Finds the vocabularies with a class or property matching the query.
      *
      * @return JsonModel {"matches": {slug: {"terms": [{"label": …, "term":
@@ -347,6 +362,16 @@ class IndexController extends AbstractActionController
         ));
         $message->setEscapeHtml(false);
         $this->messenger()->addSuccess($message);
+    }
+
+    /**
+     * Text to filter the class and property lists by, when the sidebar opens
+     * from a term search's matches.
+     */
+    protected function termFilter()
+    {
+        $filter = $this->params()->fromQuery('filter');
+        return is_string($filter) ? trim($filter) : '';
     }
 
     /**
