@@ -97,7 +97,8 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
             <?php if ($license === null): ?>
             <?php echo $notProvided; ?>
             <?php elseif (preg_match('#^https?://\S+$#i', $license)): ?>
-            <?php echo $this->hyperlink($license, $license, ['target' => '_blank']); ?>
+            <?php // Written out, for the note inside the link, where a screen reader reads it with the link. ?>
+            <a href="<?php echo $escape($license); ?>" target="_blank"><?php echo $escape($license); ?> <span class="vocabulary-library-sr-only"><?php echo $translate('(opens in a new tab)'); ?></span></a>
             <?php else: ?>
             <?php echo $escape($license); ?>
             <?php endif; ?>
@@ -117,6 +118,8 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
             placeholder="<?php echo $escape($translate('Filter classes and properties')); ?>"
             aria-label="<?php echo $escape($translate('Filter classes and properties')); ?>">
         <p class="vocabulary-library-term-filter-empty" hidden><?php echo $translate('No classes or properties match.'); ?></p>
+        <?php // How many match, read out once the admin pauses; filled in by the script. ?>
+        <p class="vocabulary-library-announcement vocabulary-library-term-filter-status" aria-live="polite" aria-atomic="true"></p>
     </div>
     <?php endif; ?>
 

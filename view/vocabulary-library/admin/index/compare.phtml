@@ -136,7 +136,7 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
 <?php foreach ($sections as $section): ?>
 <?php if ($section['rows']): ?>
 <?php // How many terms, which in the changed sections can have two rows each. ?>
-<h3><?php echo $escape(sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))))); ?></h3>
+<h2><?php echo $escape(sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))))); ?></h2>
 <?php if (isset($section['note'])): ?>
 <p><?php echo $section['note']; ?></p>
 <?php endif; ?>

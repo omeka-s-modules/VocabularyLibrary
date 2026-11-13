@@ -71,6 +71,8 @@ $selected = function ($name, $value) use ($query) {
 </p>
 <?php // The count read out once the admin pauses, rather than at every keystroke; filled in by the script. ?>
 <p class="vocabulary-library-announcement" aria-live="polite" aria-atomic="true"></p>
+<?php // Shown by the script when a search of class and property names fails. ?>
+<p class="vocabulary-library-term-search-failed error" role="alert" hidden><?php echo $translate('Could not search class and property names. Try again.'); ?></p>
 
 <table id="vocabulary-library-table" class="tablesaw" data-tablesaw-mode="stack">
     <thead>

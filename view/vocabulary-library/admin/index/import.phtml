@@ -28,8 +28,10 @@ $browseUrl = $this->url('admin/vocabulary-library');
 
 <p><?php echo $escape(sprintf($translate('Adds %1$s classes and %2$s properties.'), $entry['classes'], $entry['properties'])); ?></p>
 
+<?php // The warnings describe the field, so they are read with it, and again when they change. ?>
+<?php $form->get('o:prefix')->setAttribute('aria-describedby', 'vocabulary-library-prefix-warnings'); ?>
 <?php echo $this->formRow($form->get('o:prefix')); ?>
-<div id="vocabulary-library-prefix-warnings" class="vocabulary-library-prefix-warnings" aria-live="polite"
+<div id="vocabulary-library-prefix-warnings" class="vocabulary-library-prefix-warnings"
     data-installed-prefixes="<?php echo $escape(json_encode($installedPrefixes ?: new \stdClass)); ?>">
     <p class="vocabulary-library-prefix-taken" hidden>
         <?php echo $translate('This prefix is already used in Omeka by:'); ?>
@@ -39,6 +41,8 @@ $browseUrl = $this->url('admin/vocabulary-library');
         <?php echo $translate('Omeka reserves the prefix "o" and prefixes beginning "o-".'); ?>
     </p>
 </div>
+<?php // The warning showing, read out once the admin pauses; filled in by the script. ?>
+<p class="vocabulary-library-announcement vocabulary-library-prefix-announcement" aria-live="polite" aria-atomic="true"></p>
 <?php echo $this->formRow($form->get('o:label')); ?>
 <?php echo $this->formRow($form->get('o:comment')); ?>
 <?php if ($form->has('lang')): ?>

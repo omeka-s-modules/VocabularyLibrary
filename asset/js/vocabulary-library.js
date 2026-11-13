@@ -6,15 +6,48 @@
 
     /**
      * Shows a tab of the details sidebar and its section, as core's resource
-     * form does for its sidebar tabs; core's handler isn't loaded here.
+     * form does for its sidebar tabs; core's handler isn't loaded here. Only
+     * the tab shown is in the tab order: the arrow keys move between tabs, as
+     * a screen reader's user expects of tabs.
      */
     const showTab = function (tab) {
         tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]').forEach(function (other) {
             const selected = other === tab;
             other.classList.toggle('active', selected);
             other.setAttribute('aria-selected', selected ? 'true' : 'false');
+            other.tabIndex = selected ? 0 : -1;
             document.getElementById(other.dataset.id).classList.toggle('active', selected);
         });
+    };
+
+    /**
+     * Reads text out through a live region once it has stopped changing, and
+     * only if it differs from what the admin last heard, so a screen reader
+     * speaks the result of typing and not every step of it.
+     *
+     * @param {Element} region
+     * @return {{say: function(string), heard: function(string)}} say() takes
+     *   the text to read out; heard() takes text the admin already has, such
+     *   as what the page showed when it loaded, which is then not read out
+     */
+    const announcer = function (region) {
+        let timer = null;
+        let last = null;
+        return {
+            say: function (text) {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    if (text !== last) {
+                        last = text;
+                        region.textContent = text;
+                    }
+                }, ANNOUNCE_DELAY);
+            },
+            heard: function (text) {
+                clearTimeout(timer);
+                last = text;
+            },
+        };
     };
 
     /**
@@ -48,7 +81,14 @@
         const filterNames = ['tag', 'lang', 'show'];
         const shown = $('.vocabulary-library-shown');
         const countText = () => $('.vocabulary-library-count').text().trim().replace(/\s+/g, ' ');
-        const announcement = document.querySelector('.vocabulary-library-announcement');
+        // Reads the count out once the admin pauses.
+        const count = announcer(document.querySelector('.vocabulary-library-announcement'));
+        const termSearchFailed = $('.vocabulary-library-term-search-failed');
+        // The link the details sidebar was opened from, and its row, to
+        // return focus to. The row is kept too, since a link to all matching
+        // terms is replaced whenever the rows are filled in again.
+        let sidebarOpener = null;
+        let sidebarOpenerRow = null;
         const termItem = document.getElementById('vocabulary-library-term-item').content.firstElementChild;
         const allItem = document.getElementById('vocabulary-library-term-all').content.firstElementChild;
         // A matching term's text, as Omeka writes terms.
@@ -63,20 +103,12 @@
         let termQuery = null;
         let termRequest = null;
         let termTimer = null;
-        let announced = null;
-        let announceTimer = null;
-
-        // Reads the count out once the admin pauses, and only if it changed,
-        // so a screen reader doesn't speak it at every keystroke.
-        const announce = function () {
-            clearTimeout(announceTimer);
-            announceTimer = setTimeout(function () {
-                if (countText() !== announced) {
-                    announced = countText();
-                    announcement.textContent = announced;
-                }
-            }, ANNOUNCE_DELAY);
-        };
+        // Whether the admin is leaving the page, which cancels a term search
+        // under way: that is not a search that failed.
+        let leaving = false;
+        window.addEventListener('beforeunload', function () {
+            leaving = true;
+        });
 
         const apply = function () {
             const query = fold(form.q.value.trim());
@@ -141,7 +173,7 @@
             searchTermsButton.prop('hidden', form.terms.checked || form.q.value.trim().length < termQueryMin);
             clearFiltersButton.prop('hidden', filterNames.every(name => form[name].value === ''));
             saveState();
-            announce();
+            count.say(countText());
         };
 
         const sort = function () {
@@ -168,6 +200,7 @@
                 termRequest.abort();
                 termRequest = null;
             }
+            termSearchFailed.prop('hidden', true);
             if (!form.terms.checked || query.length < termQueryMin) {
                 termMatches = null;
                 apply();
@@ -183,8 +216,9 @@
                     // A request that fails leaves no matches, rather than
                     // those of an earlier query. One aborted for a newer
                     // query keeps them until that one answers.
-                    if (status !== 'abort') {
+                    if (status !== 'abort' && !leaving) {
                         termMatches = null;
+                        termSearchFailed.prop('hidden', false);
                         apply();
                     }
                 });
@@ -261,6 +295,47 @@
         $(document).on('click', '.sidebar .sidebar-section-nav [role="tab"]', function () {
             showTab(this);
         });
+        $(document).on('keydown', '.sidebar .sidebar-section-nav [role="tab"]', function (e) {
+            // With a modifier, the key is the browser's, as Alt+Left is Back.
+            if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
+                return;
+            }
+            const tabs = [...this.closest('[role="tablist"]').querySelectorAll('[role="tab"]')];
+            const to = {
+                ArrowRight: tabs[(tabs.indexOf(this) + 1) % tabs.length],
+                ArrowLeft: tabs[(tabs.indexOf(this) + tabs.length - 1) % tabs.length],
+                Home: tabs[0],
+                End: tabs[tabs.length - 1],
+            }[e.key];
+            if (to) {
+                e.preventDefault();
+                showTab(to);
+                to.focus();
+            }
+        });
+
+        // Closing the sidebar returns focus to where it was opened from, or
+        // else to that vocabulary's name, or the search: the close link
+        // itself is hidden with the sidebar. Escape closes it too.
+        $(document).on('click', 'a.sidebar-content', function () {
+            sidebarOpener = this;
+            sidebarOpenerRow = this.closest('tr');
+        });
+        $(document).on('o:sidebar-closed', '.sidebar', function () {
+            const rowName = sidebarOpenerRow && sidebarOpenerRow.querySelector('.vocabulary-library-title > a.sidebar-content');
+            const target = [sidebarOpener, rowName, form.q].find(el => el && el.isConnected && !el.closest('[hidden]'));
+            sidebarOpener = sidebarOpenerRow = null;
+            if (target) {
+                target.focus();
+            }
+        });
+        // Not from a text field, where Escape is for the field: it cancels
+        // what is being composed, or dismisses the browser's suggestions.
+        $(document).on('keydown', '.sidebar.active', function (e) {
+            if (e.key === 'Escape' && !e.isComposing && !e.isDefaultPrevented() && !$(e.target).is('input, textarea, select')) {
+                Omeka.closeSidebar($(this));
+            }
+        });
 
         // When the details sidebar opens, set up its term filter and move
         // focus into it: to the term filter, on the Classes and properties
@@ -272,6 +347,10 @@
         $(document).on('o:sidebar-content-loaded', '.sidebar', function () {
             const sidebar = this;
             initTermFilter(sidebar);
+            const activeTab = sidebar.querySelector('[role="tab"].active');
+            if (activeTab) {
+                showTab(activeTab);
+            }
             requestAnimationFrame(function () {
                 const filter = sidebar.querySelector('.vocabulary-library-term-filter input');
                 if (filter && filter.value !== '') {
@@ -294,8 +373,7 @@
         // announced until the admin changes something, not even the count a
         // term search in the URL settles on.
         $.when(searchTerms()).always(function () {
-            clearTimeout(announceTimer);
-            announced = countText();
+            count.heard(countText());
         });
     };
 
@@ -312,6 +390,7 @@
             return;
         }
         const empty = sidebar.querySelector('.vocabulary-library-term-filter-empty');
+        const status = announcer(sidebar.querySelector('.vocabulary-library-term-filter-status'));
         const groups = [...sidebar.querySelectorAll('.vocabulary-library-terms')].map(group => ({
             group: group,
             toggle: group.querySelector(':scope > a'),
@@ -365,9 +444,15 @@
                 total += count;
             });
             empty.hidden = !(query && total === 0);
+            // What a screen reader is told: the headings with their counts,
+            // as they show, or that nothing matches.
+            return total ? groups.filter(group => !group.group.hidden).map(group => group.heading.textContent).join(', ') : empty.textContent.trim();
         };
-        input.addEventListener('input', filter);
-        filter();
+        // What typing leaves is read out; what the sidebar opens with is not.
+        input.addEventListener('input', function () {
+            status.say(filter());
+        });
+        status.heard(filter());
     };
 
     /**
@@ -380,15 +465,21 @@
         const installed = warnings.data('installed-prefixes');
         const taken = warnings.find('.vocabulary-library-prefix-taken');
         const reserved = warnings.find('.vocabulary-library-prefix-reserved');
+        const warning = announcer(document.querySelector('.vocabulary-library-prefix-announcement'));
         const check = function () {
             const prefix = input.value.trim();
             const holder = own(installed, prefix.toLowerCase());
             taken.prop('hidden', !holder);
             taken.find('.vocabulary-library-prefix-holder').text(holder || '');
             reserved.prop('hidden', !/^o(-|$)/.test(prefix));
+            return warnings.children(':not([hidden])').text().trim().replace(/\s+/g, ' ');
         };
-        $(input).on('input', check);
-        check();
+        // A warning that appears or changes while typing is read out. One
+        // the form opens with is read with the field, which it describes.
+        $(input).on('input', function () {
+            warning.say(check());
+        });
+        warning.heard(check());
     };
 
     $(document).ready(function () {

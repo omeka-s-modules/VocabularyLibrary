@@ -71,9 +71,12 @@
     color: #676767;
 }
 
-/* For screen readers only. Core's .sr-only only moves text off the left of
-   an element that isn't positioned, so it would still take up space. */
-.vocabulary-library-announcement {
+/* For screen readers only: what the script announces, and text that says
+   what a sighted admin sees another way. Core's .sr-only only moves text off
+   the left of an element that isn't positioned, so it would still take up
+   space. */
+.vocabulary-library-announcement,
+.vocabulary-library-sr-only {
     position: absolute;
     width: 1px;
     height: 1px;

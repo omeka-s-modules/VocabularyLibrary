@@ -32,7 +32,8 @@ $long = $long ?? false;
 <?php if ($prefixTakenBy !== null && $long): ?>
 <p class="vocabulary-library-prefix-note"><?php echo $this->escapeHtml(sprintf($this->translate('Its prefix is already used in Omeka by "%s". Choose another when importing.'), $prefixTakenBy)); ?></p>
 <?php elseif ($prefixTakenBy !== null): ?>
-<span class="vocabulary-library-prefix-note" title="<?php echo $this->escapeHtml(sprintf($this->translate('Used by "%s"'), $prefixTakenBy)); ?>"><?php echo $this->translate('Prefix in use'); ?></span>
+<?php // Who uses it is read out here, and shown in full in the sidebar: a tooltip would need a mouse. ?>
+<span class="vocabulary-library-prefix-note"><?php echo $this->translate('Prefix in use'); ?><span class="vocabulary-library-sr-only">: <?php echo $this->escapeHtml(sprintf($this->translate('Used by "%s"'), $prefixTakenBy)); ?></span></span>
 <?php endif; ?>
 <?php elseif ($long): ?>
 <?php if ($installed['exact']): ?>

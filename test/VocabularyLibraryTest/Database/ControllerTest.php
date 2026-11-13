@@ -128,6 +128,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('Example Vocabulary', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.', $page);
         $this->assertStringContainsString('/admin/vocabulary-library/import/ex', $page);
+        // A failed term search has its message, hidden until then.
+        $this->assertMatchesRegularExpression('/<p class="vocabulary-library-term-search-failed[^"]*" role="alert" hidden>/', $page);
         // Only the filter's option says so; no vocabulary's status does.
         $this->assertSame(1, substr_count($page, 'Namespace in use'));
     }
@@ -162,6 +164,18 @@ class ControllerTest extends AbstractHttpControllerTestCase
         }
         // The comment gives way to the definition.
         $this->assertStringNotContainsString('A note about things.', $page);
+    }
+
+    public function testTheTermFiltersResultHasSomewhereToBeReadOutFrom()
+    {
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
+        $this->assertMatchesRegularExpression('/<p class="[^"]*vocabulary-library-term-filter-status"[^>]*aria-live="polite"/', $page);
+    }
+
+    public function testTheLicenseLinkSaysItOpensInANewTab()
+    {
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
+        $this->assertMatchesRegularExpression('#<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">[^<]*<span class="vocabulary-library-sr-only">\(opens in a new tab\)</span></a>#', $page);
     }
 
     public function testALongDescriptionIsCutAtASentence()
@@ -211,6 +225,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
         $this->assertSame(200, $status);
         $this->assertMatchesRegularExpression('/<input[^>]*name="o:prefix"[^>]*value="ex"/', $page);
+        // The prefix's warnings are read with the field.
+        $this->assertMatchesRegularExpression('/<input[^>]*name="o:prefix"[^>]*aria-describedby="vocabulary-library-prefix-warnings"/', $page);
+        $this->assertStringContainsString('<div id="vocabulary-library-prefix-warnings"', $page);
         $this->assertMatchesRegularExpression('/<input[^>]*name="o:label"[^>]*value="Example Vocabulary"/', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.</textarea>', $page);
         // Two languages to choose from, English chosen.
@@ -289,6 +306,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $path = '/admin/vocabulary-library/compare/ex';
         [$status, $page] = $this->send('GET', $path, ['lang' => 'en']);
         $this->assertSame(200, $status);
+        // Sections are headed one level below the page's title.
+        $this->assertMatchesRegularExpression('#<h2>Changed classes \(\d+\)</h2>#', $page);
+        $this->assertStringNotContainsString('<h3>', $page);
         $this->assertStringContainsString('Ding', $page);
         $this->assertStringContainsString('Thing', $page);
 
