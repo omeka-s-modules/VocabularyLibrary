@@ -64,12 +64,13 @@ $listed = function (array $members) use ($term, $value, $collation) {
     return $rows;
 };
 // Each section: its id, its heading, its columns, its rows of rendered
-// cells, the term first, and any note and table class. Changed labels and changed comments
-// are sections of their own: labels are short and what everyone sees,
-// comments long and mostly documentation. So labels come first, then new
-// terms, then comments, then terms only in Omeka, which aren't changes;
-// within each, properties before classes, as on core's update page.
-// The first column is named for the kind of term its section lists.
+// cells, the term first, and any note and table class. Changed labels and
+// changed comments are sections of their own: labels are short and what
+// everyone sees, comments long and mostly documentation. So labels come
+// first, then new terms, then comments, then terms only in Omeka, which
+// aren't changes; within each, properties before classes, as on core's
+// update page. The first column is named for the kind of term its section
+// lists.
 $kinds = ['properties' => $translate('Property'), 'classes' => $translate('Class')];
 $changeColumns = function ($kind) use ($kinds, $translate) {
     return [$kinds[$kind], $translate('From'), $translate('To')];
@@ -90,8 +91,7 @@ $sections = [
 ];
 $changes = array_sum(array_map('count', array_column($sections, 'rows')));
 // Terms Omeka's vocabulary has and the library's doesn't come last, with a
-// note.
-// They aren't changes: updating keeps them.
+// note. They aren't changes: updating keeps them.
 $onlyInOmeka = $translate('Omeka\'s vocabulary has these and the library\'s doesn\'t. Updating doesn\'t remove them.');
 $sections[] = ['id' => 'vocabulary-library-properties-only-in-omeka', 'heading' => $translate('Properties only in Omeka'), 'columns' => $onlyInOmekaColumns('properties'), 'rows' => $listed($missing['properties']), 'note' => $onlyInOmeka];
 $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => $translate('Classes only in Omeka'), 'columns' => $onlyInOmekaColumns('classes'), 'rows' => $listed($missing['classes']), 'note' => $onlyInOmeka];

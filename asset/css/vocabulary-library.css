@@ -289,9 +289,9 @@
     color: #a91919;
 }
 
-/* Compare and update page. The Compare button follows the reading options
-   rather than sitting in a field, where core's button lacks contrast on the
-   field's gray. */
+/* Compare and update page. The Show changes button follows the reading
+   options rather than sitting in a field, where core's button lacks contrast
+   on the field's gray. */
 .vocabulary-library-reading-actions {
     margin: 0 0 24px;
 }

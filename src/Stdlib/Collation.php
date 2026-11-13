@@ -7,7 +7,7 @@ use Laminas\I18n\Translator\Translator;
  * Alphabetical order as the admin's language has it, for what the library
  * lists: vocabularies, their terms, tags and language names. Where PHP's
  * intl extension is loaded, an accented name doesn't follow "z"; otherwise
- * texts are ordered by their bytes, without regard to case.
+ * it does, and texts are in PHP's natural order, without regard to case.
  */
 class Collation
 {
