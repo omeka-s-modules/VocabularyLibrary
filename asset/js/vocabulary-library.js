@@ -139,7 +139,7 @@
         const shown = $('.vocabulary-library-shown');
         const countText = () => $('.vocabulary-library-count').text().trim().replace(/\s+/g, ' ');
         // Reads the count out once the admin pauses.
-        const count = announcer(document.querySelector('.vocabulary-library-announcement'));
+        const countStatus = announcer(document.querySelector('.vocabulary-library-announcement'));
         const termSearchFailed = $('.vocabulary-library-term-search-failed');
         // The link the details sidebar was opened from, and its row, to
         // return focus to. The row is kept too, since a link to all matching
@@ -230,7 +230,7 @@
             searchTermsButton.prop('hidden', form.terms.checked || form.q.value.trim().length < termQueryMin);
             clearFiltersButton.prop('hidden', filterNames.every(name => form[name].value === ''));
             saveState();
-            count.say(countText());
+            countStatus.say(countText());
         };
 
         const sort = function () {
@@ -468,7 +468,7 @@
         // announced until the admin changes something, not even the count a
         // term search in the URL settles on.
         $.when(searchTerms()).always(function () {
-            count.heard(countText());
+            countStatus.heard(countText());
         });
     };
 
