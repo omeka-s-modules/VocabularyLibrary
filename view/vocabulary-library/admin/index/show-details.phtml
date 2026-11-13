@@ -102,7 +102,8 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('File'); ?></h4>
-        <div class="value"><?php echo $this->hyperlink($file, $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug]), ['title' => $translate('Download file')]); ?></div>
+        <?php // The link says what it does, which a tooltip couldn't for a screen reader or a touch screen. ?>
+        <div class="value"><?php echo $this->hyperlink(sprintf($translate('Download %s'), $file), $this->url('admin/vocabulary-library', ['action' => 'file', 'slug' => $slug])); ?></div>
     </div>
 </div>
 

@@ -186,6 +186,12 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchesRegularExpression('#<div class="vocabulary-library-terms-failed" hidden>\s*<p class="error">Could not load classes and properties.</p>\s*<button type="button" class="vocabulary-library-terms-retry">Try again</button>#', $page);
     }
 
+    public function testTheDownloadLinkSaysWhatItDoes()
+    {
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
+        $this->assertStringContainsString('<a href="/admin/vocabulary-library/file/ex">Download ex.ttl</a>', $page);
+    }
+
     public function testTheTermsAreTheVocabularysClassesAndProperties()
     {
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/show-terms/ex');
