@@ -1,0 +1,413 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 14:11-0500\n"
+"PO-Revision-Date: 2026-11-12 23:40+0000\n"
+"Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2026\n"
+"Language-Team: Catalan (Spain) (https://app.transifex.com/omeka/teams/14184/ca_ES/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Module.php:36 view/vocabulary-library/admin/index/browse.phtml:21
+#: view/vocabulary-library/admin/index/compare.phtml:100
+#: view/vocabulary-library/admin/index/import.phtml:9
+msgid "Vocabulary Library"
+msgstr "Biblioteca de vocabularis"
+
+#: src/Controller/Admin/IndexController.php:365
+msgid "View it in Omeka"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:40
+#, php-format
+msgid "Import %s"
+msgstr "Importa %s"
+
+#: view/common/vocabulary-library-status.phtml:43
+#, php-format
+msgid ""
+"Its prefix is already used in Omeka by \"%s\". Choose another when "
+"importing."
+msgstr ""
+"El prefix ja l'utilitza \"%s\". a Omeka. Trieu-ne un altre en fer la "
+"importació."
+
+#: view/common/vocabulary-library-status.phtml:46
+msgid "Prefix in use"
+msgstr "Prefix en ús"
+
+#: view/common/vocabulary-library-status.phtml:46
+#, php-format
+msgid "Used by \"%s\""
+msgstr "Utilitzat per \"%s\""
+
+#: view/common/vocabulary-library-status.phtml:49
+#: view/common/vocabulary-library-status.phtml:53
+#: view/vocabulary-library/admin/index/browse.phtml:53
+msgid "Namespace in use"
+msgstr "Espai de noms en ús"
+
+#: view/common/vocabulary-library-status.phtml:50
+#, php-format
+msgid "Namespace in use: %s"
+msgstr "Espai de noms en ús: %s"
+
+#: view/common/vocabulary-library-status.phtml:55
+#: view/vocabulary-library/admin/index/compare.phtml:100
+msgid "Compare and update"
+msgstr "Compara i actualitza"
+
+#: view/common/vocabulary-library-status.phtml:63
+#, php-format
+msgid ""
+"To compare and update Omeka's vocabulary, change its namespace from %1$s to "
+"%2$s."
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:64
+msgid "Edit vocabulary"
+msgstr ""
+
+#: view/common/vocabulary-library-status.phtml:66
+#, php-format
+msgid ""
+"Omeka's vocabulary can't be compared or updated: its namespace is %1$s, not "
+"%2$s."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/browse.phtml:9
+msgid "Matching terms:"
+msgstr "Termes coincidents:"
+
+#: view/vocabulary-library/admin/index/browse.phtml:27
+#, php-format
+msgid "All matching terms (%s)"
+msgstr "Tots els termes coincidents (%s)"
+
+#: view/vocabulary-library/admin/index/browse.phtml:31
+#: view/vocabulary-library/admin/index/browse.phtml:32
+msgid "Search vocabularies"
+msgstr "Cerca vocabularis"
+
+#: view/vocabulary-library/admin/index/browse.phtml:35
+#: view/vocabulary-library/admin/index/browse.phtml:150
+msgid "Also search class and property names"
+msgstr "Cerca també els noms de les classes i les propietats."
+
+#: view/vocabulary-library/admin/index/browse.phtml:39
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: view/vocabulary-library/admin/index/browse.phtml:40
+msgid "All tags"
+msgstr "Totes les etiquetes"
+
+#: view/vocabulary-library/admin/index/browse.phtml:45
+msgid "Label language"
+msgstr "Idioma de l'etiqueta"
+
+#: view/vocabulary-library/admin/index/browse.phtml:46
+msgid "Any label language"
+msgstr "Qualsevol idioma de les etiquetes"
+
+#: view/vocabulary-library/admin/index/browse.phtml:52
+msgid "All vocabularies"
+msgstr "Tots els vocabularis"
+
+#: view/vocabulary-library/admin/index/browse.phtml:54
+msgid "Namespace not in use"
+msgstr "Espai de noms no utilitzat"
+
+#: view/vocabulary-library/admin/index/browse.phtml:57
+msgid "Clear filters"
+msgstr "Elimina els filtres"
+
+#: view/vocabulary-library/admin/index/browse.phtml:73
+#, php-format
+msgid "Showing %1$s of %2$s"
+msgstr "S'està mostrant %1$s de %2$s"
+
+#: view/vocabulary-library/admin/index/browse.phtml:78
+msgid "Could not search class and property names. Try again."
+msgstr ""
+"No s'han pogut cercar els noms de les classes i les propietats. Torneu-ho a "
+"provar."
+
+#: view/vocabulary-library/admin/index/browse.phtml:84
+#: view/vocabulary-library/admin/index/show-details.phtml:76
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: view/vocabulary-library/admin/index/browse.phtml:148
+msgid "No vocabularies match."
+msgstr "No coincideix cap vocabulari."
+
+#: view/vocabulary-library/admin/index/compare.phtml:75
+msgid "From"
+msgstr "Des de"
+
+#: view/vocabulary-library/admin/index/compare.phtml:75
+msgid "To"
+msgstr "Fins a"
+
+#: view/vocabulary-library/admin/index/compare.phtml:84
+msgid "Changed property labels"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:85
+msgid "Changed class labels"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:86
+msgid "New properties"
+msgstr "Propietats noves"
+
+#: view/vocabulary-library/admin/index/compare.phtml:87
+msgid "New classes"
+msgstr "Classes noves"
+
+#: view/vocabulary-library/admin/index/compare.phtml:88
+msgid "Changed property comments"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:89
+msgid "Changed class comments"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:95
+msgid ""
+"Omeka's vocabulary has these and the library's doesn't. Updating doesn't "
+"remove them."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:96
+msgid "Properties only in Omeka"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:97
+msgid "Classes only in Omeka"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:110
+#: view/vocabulary-library/admin/index/import.phtml:14
+msgid "Back to the library"
+msgstr "Torna a la biblioteca"
+
+#: view/vocabulary-library/admin/index/compare.phtml:134
+msgid ""
+"Selected to match Omeka's vocabulary. Choose another to see what switching "
+"to it would change."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:138
+msgid "First available"
+msgstr "Primer disponible"
+
+#: view/vocabulary-library/admin/index/compare.phtml:149
+msgid "Comment source"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:150
+msgid ""
+"Selected to match Omeka's vocabulary. Choose the other to see what switching"
+" to it would change."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:154
+msgid "Definitions, or comments where there are none (as the library imports)"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:155
+msgid "Comments only (as Omeka's own import does)"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:161
+msgid "Show changes"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:167
+msgid ""
+"Updating changes the labels and comments below to match the library's "
+"vocabulary, and adds any new classes and properties. It removes nothing."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:169
+msgid "Omeka's vocabulary already matches the library's."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/compare.phtml:184
+msgid "Sections"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/import.phtml:16
+msgid "Omeka already has a vocabulary with this namespace."
+msgstr "Omeka ja té un vocabulari amb aquest espai de noms."
+
+#: view/vocabulary-library/admin/index/import.phtml:28
+#, php-format
+msgid "Adds %1$s classes and %2$s properties."
+msgstr "Afegeix %1$s classes i %2$s propietats."
+
+#: view/vocabulary-library/admin/index/import.phtml:36
+msgid "This prefix is already used in Omeka by:"
+msgstr "Aquest prefix ja s'utilitza a Omeka per a:"
+
+#: view/vocabulary-library/admin/index/import.phtml:40
+msgid "Omeka reserves the prefix \"o\" and prefixes beginning \"o-\"."
+msgstr "Omeka reserva el prefix \"o\" i els prefixos que comencen per \"o-\"."
+
+#: view/vocabulary-library/admin/index/import.phtml:55
+msgid "Set by the library."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:12
+msgid "Not provided by the publisher"
+msgstr "No especificat per l'editor."
+
+#: view/vocabulary-library/admin/index/show-details.phtml:23
+msgid "Classes and properties"
+msgstr "Classes i propietats"
+
+#: view/vocabulary-library/admin/index/show-details.phtml:33
+msgid "Omeka's vocabulary"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:57
+msgid "Full description"
+msgstr "Descripció completa"
+
+#: view/vocabulary-library/admin/index/show-details.phtml:82
+msgid "Label languages"
+msgstr "Idiomes de les etiquetes"
+
+#: view/vocabulary-library/admin/index/show-details.phtml:97
+msgid "(opens in a new tab)"
+msgstr "(s'obre en una nova pestanya)"
+
+#: view/vocabulary-library/admin/index/show-details.phtml:105
+msgid "Download file"
+msgstr "Descarrega el fitxer"
+
+#: view/vocabulary-library/admin/index/show-details.phtml:118
+msgid "Loading classes and properties…"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:120
+msgid "Could not load classes and properties."
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-details.phtml:121
+msgid "Try again"
+msgstr ""
+
+#: view/vocabulary-library/admin/index/show-terms.phtml:20
+#: view/vocabulary-library/admin/index/show-terms.phtml:21
+msgid "Filter classes and properties"
+msgstr "Filtra classes i propietats"
+
+#: view/vocabulary-library/admin/index/show-terms.phtml:22
+msgid "No classes or properties match."
+msgstr "No coincideix cap classe o propietat."
+
+#: src/Controller/Admin/IndexController.php:253
+#, php-format
+msgid "Changes to the vocabulary successfully made. %s"
+msgstr ""
+
+#: src/Form/ImportForm.php:27
+msgid "Cannot be changed after import."
+msgstr "No es pot modificar després de la importació."
+
+#: src/Form/ImportForm.php:62
+msgid ""
+"The language of labels and comments. This vocabulary has them in several "
+"languages."
+msgstr ""
+"L'idioma de les etiquetes i els comentaris. Aquest vocabulari els inclou en "
+"diversos idiomes."
+
+#: config/module.config.php:70
+msgid "Linked data and modeling"
+msgstr "Dades enllaçades i modelatge"
+
+#: config/module.config.php:71
+msgid "Museums and art"
+msgstr "Museus i art"
+
+#: config/module.config.php:72
+msgid "Libraries and cataloging"
+msgstr "Biblioteques i catalogació"
+
+#: config/module.config.php:73
+msgid "Archives and records"
+msgstr "Arxius i gestió documental"
+
+#: config/module.config.php:74
+msgid "Aggregation and IIIF"
+msgstr "Agregació i IIIF"
+
+#: config/module.config.php:75
+msgid "Scholarly publishing"
+msgstr "Publicació acadèmica"
+
+#: config/module.config.php:76
+msgid "Digital humanities"
+msgstr "Humanitats Digitals"
+
+#: config/module.config.php:77
+msgid "People and organizations"
+msgstr "Persones i institucions"
+
+#: config/module.config.php:78
+msgid "Places and geography"
+msgstr "Llocs i geografia"
+
+#: config/module.config.php:79
+msgid "Time and events"
+msgstr "Temps i esdeveniments"
+
+#: config/module.config.php:80
+msgid "Rights and data provenance"
+msgstr "Drets i procedència de les dades"
+
+#: config/module.config.php:81
+msgid "Media and files"
+msgstr "Mitjans i fitxers"
+
+#: config/module.config.php:82
+msgid "Digital preservation"
+msgstr "Preservació digital"
+
+#: config/module.config.php:83
+msgid "Science and measurement"
+msgstr "Ciència i dades científiques"
+
+#: config/module.config.php:84
+msgid "Natural history"
+msgstr "Història natural"
+
+#: config/module.config.php:85
+msgid "Music and performing arts"
+msgstr "Música i arts escèniques"
+
+#: Module.php:35
+#, php-format
+msgid ""
+"Looking for a published vocabulary? The %s has tested vocabularies, ready to"
+" import."
+msgstr ""
+"Cerqueu un vocabulari publicat? %s ofereix vocabularis verificats i a punt "
+"per importar."
