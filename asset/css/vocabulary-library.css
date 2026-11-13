@@ -185,8 +185,14 @@
     white-space: nowrap;
 }
 
-/* The Compare and update button in the sidebar, under the status text. */
-.vocabulary-library-compare {
+/* A namespace in a sentence, which breaks anywhere to fit the sidebar. */
+.vocabulary-library-namespace {
+    overflow-wrap: anywhere;
+}
+
+/* What follows the status in the sidebar: the Compare and update button,
+   or how a namespace in another form differs and where to change it. */
+.vocabulary-library-status-next {
     margin: 6px 0 0;
 }
 
@@ -282,6 +288,16 @@
    field's gray. */
 .vocabulary-library-reading-actions {
     margin: 0 0 24px;
+}
+
+/* The sections below, as one line of links. */
+.vocabulary-library-compare-summary ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
 }
 
 /* The Type column holds only "Label" or "Comment", so From and To get the

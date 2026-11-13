@@ -11,7 +11,7 @@ $terms = [
 $file = basename($entry['file']);
 // Every section shows for every vocabulary, so sidebars keep one structure:
 // what the file lacks says so, styled apart from values, as the compare page
-// marks "None". Only "Vocabulary in Omeka" shows for some vocabularies and
+// marks "None". Only "Omeka's vocabulary" shows for some vocabularies and
 // not others: it reports the site's state rather than the file.
 $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
 ?>
@@ -30,11 +30,11 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
 <div class="sidebar-section active" id="vocabulary-library-details" role="tabpanel" aria-labelledby="vocabulary-library-details-label">
     <div class="meta-group">
         <h4><?php echo $translate('Status'); ?></h4>
-        <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true]); ?></div>
+        <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true, 'namespace' => $entry['namespace']]); ?></div>
     </div>
     <?php if ($installed): ?>
     <div class="meta-group">
-        <h4><?php echo $translate('Vocabulary in Omeka'); ?></h4>
+        <h4><?php echo $translate('Omeka\'s vocabulary'); ?></h4>
         <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
         <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
     </div>

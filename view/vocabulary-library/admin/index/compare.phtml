@@ -46,23 +46,24 @@ $listed = function (array $members) use ($term, $value, $collation) {
     }
     return $rows;
 };
-// Each section: its heading, its columns, its rows of rendered cells, and
-// any note and table class. Properties come before classes, as on core's
+// Each section: its id, its heading, its columns, its rows of rendered
+// cells, and any note and table class. Properties come before classes, as on core's
 // update page. A changed term's label and comment are rows of their own.
 $changeColumns = [$translate('Term'), $translate('Type'), $translate('From'), $translate('To')];
 $newColumns = [$translate('Term'), $translate('Label'), $translate('Comment')];
 $sections = [
-    ['heading' => $translate('Changed properties'), 'columns' => $changeColumns, 'rows' => $changed($diff['properties']), 'class' => 'vocabulary-library-change-table'],
-    ['heading' => $translate('Changed classes'), 'columns' => $changeColumns, 'rows' => $changed($diff['classes']), 'class' => 'vocabulary-library-change-table'],
-    ['heading' => $translate('New properties'), 'columns' => $newColumns, 'rows' => $listed($diff['properties']['new'])],
-    ['heading' => $translate('New classes'), 'columns' => $newColumns, 'rows' => $listed($diff['classes']['new'])],
+    ['id' => 'vocabulary-library-changed-properties', 'heading' => $translate('Changed properties'), 'columns' => $changeColumns, 'rows' => $changed($diff['properties']), 'class' => 'vocabulary-library-change-table'],
+    ['id' => 'vocabulary-library-changed-classes', 'heading' => $translate('Changed classes'), 'columns' => $changeColumns, 'rows' => $changed($diff['classes']), 'class' => 'vocabulary-library-change-table'],
+    ['id' => 'vocabulary-library-new-properties', 'heading' => $translate('New properties'), 'columns' => $newColumns, 'rows' => $listed($diff['properties']['new'])],
+    ['id' => 'vocabulary-library-new-classes', 'heading' => $translate('New classes'), 'columns' => $newColumns, 'rows' => $listed($diff['classes']['new'])],
 ];
 $changes = array_sum(array_map('count', array_column($sections, 'rows')));
-// Terms Omeka has and the library's file doesn't come last, with a note.
+// Terms Omeka's vocabulary has and the library's doesn't come last, with a
+// note.
 // They aren't changes: updating keeps them.
-$notInFile = $translate('Omeka has these and the library\'s file doesn\'t. Updating doesn\'t remove them.');
-$sections[] = ['heading' => $translate('Properties not in the library\'s file'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['properties']), 'note' => $notInFile];
-$sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['classes']), 'note' => $notInFile];
+$onlyInOmeka = $translate('Omeka\'s vocabulary has these and the library\'s doesn\'t. Updating doesn\'t remove them.');
+$sections[] = ['id' => 'vocabulary-library-properties-only-in-omeka', 'heading' => $translate('Properties only in Omeka'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['properties']), 'note' => $onlyInOmeka];
+$sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => $translate('Classes only in Omeka'), 'columns' => [$translate('Term'), $translate('Label')], 'rows' => $listed($missing['classes']), 'note' => $onlyInOmeka];
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Compare and update')); ?>
@@ -95,7 +96,7 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
     <div class="field">
         <div class="field-meta">
             <label for="vocabulary-library-lang"><?php echo $translate('Preferred language'); ?></label>
-            <div class="field-description"><?php echo $translate('Choose the language the vocabulary was imported in, or First available if it was imported without one, to see what changed. Choose another to see what switching its labels and comments would change. The page starts with the language that matches the vocabulary in Omeka.'); ?></div>
+            <div class="field-description"><?php echo $translate('Selected to match Omeka\'s vocabulary. Choose another to see what switching to it would change.'); ?></div>
         </div>
         <div class="inputs">
             <select name="lang" id="vocabulary-library-lang">
@@ -110,13 +111,13 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
     <?php if ($commentReading !== null): ?>
     <div class="field">
         <div class="field-meta">
-            <label for="vocabulary-library-comments"><?php echo $translate('Comments'); ?></label>
-            <div class="field-description"><?php echo $translate('Choose how the vocabulary was imported to see what changed, or the other to see what switching would change. The page starts with the one that matches the vocabulary in Omeka.'); ?></div>
+            <label for="vocabulary-library-comments"><?php echo $translate('Comment source'); ?></label>
+            <div class="field-description"><?php echo $translate('Selected to match Omeka\'s vocabulary. Choose the other to see what switching to it would change.'); ?></div>
         </div>
         <div class="inputs">
             <select name="comments" id="vocabulary-library-comments">
-                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('As the library imports them (skos:definition, else rdfs:comment)'); ?></option>
-                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>><?php echo $translate('As Omeka\'s own import reads them (rdfs:comment)'); ?></option>
+                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('Definitions, or comments where there are none (as the library imports)'); ?></option>
+                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>><?php echo $translate('Comments only (as Omeka\'s own import does)'); ?></option>
             </select>
         </div>
     </div>
@@ -128,15 +129,35 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
 <?php endif; ?>
 
 <?php if ($changes): ?>
-<p><?php echo $translate('Updating changes the labels and comments below to the library file\'s, and adds any new classes and properties. It removes nothing.'); ?></p>
+<p><?php echo $translate('Updating changes the labels and comments below to match the library\'s vocabulary, and adds any new classes and properties. It removes nothing.'); ?></p>
 <?php else: ?>
-<p><?php echo $translate('Updating would change nothing in Omeka.'); ?></p>
+<p><?php echo $translate('Omeka\'s vocabulary already matches the library\'s.'); ?></p>
+<?php endif; ?>
+
+<?php
+// The sections that have rows, each headed with how many terms it has, which
+// in the changed sections can have two rows each.
+$sections = array_filter($sections, function ($section) {
+    return (bool) $section['rows'];
+});
+foreach ($sections as &$section) {
+    $section['heading'] = sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))));
+}
+unset($section);
+?>
+<?php // What is below, where there is more than one section: a long one hides those after it. ?>
+<?php if (count($sections) > 1): ?>
+<nav class="vocabulary-library-compare-summary" aria-label="<?php echo $escape($translate('Sections')); ?>">
+    <ul>
+        <?php foreach ($sections as $section): ?>
+        <li><a href="#<?php echo $section['id']; ?>"><?php echo $escape($section['heading']); ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</nav>
 <?php endif; ?>
 
 <?php foreach ($sections as $section): ?>
-<?php if ($section['rows']): ?>
-<?php // How many terms, which in the changed sections can have two rows each. ?>
-<h2><?php echo $escape(sprintf('%s (%s)', $section['heading'], count(array_unique(array_column($section['rows'], 0))))); ?></h2>
+<h2 id="<?php echo $section['id']; ?>" tabindex="-1"><?php echo $escape($section['heading']); ?></h2>
 <?php if (isset($section['note'])): ?>
 <p><?php echo $section['note']; ?></p>
 <?php endif; ?>
@@ -158,5 +179,4 @@ $sections[] = ['heading' => $translate('Classes not in the library\'s file'), 'c
         <?php endforeach; ?>
     </tbody>
 </table>
-<?php endif; ?>
 <?php endforeach; ?>

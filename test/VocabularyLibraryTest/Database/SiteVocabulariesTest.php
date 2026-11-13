@@ -29,6 +29,7 @@ class SiteVocabulariesTest extends DbTestCase
         $this->assertSame('foaf', $installed['vocabulary']->prefix());
         $this->assertTrue($installed['exact']);
         $this->assertTrue($installed['comparable']);
+        $this->assertNull($installed['editUrl']);
         // Core's Vocabularies page, showing only this one.
         $this->assertSame('/admin/vocabulary?namespace_uri=' . self::FOAF, $installed['url']);
     }
@@ -42,6 +43,8 @@ class SiteVocabulariesTest extends DbTestCase
         $this->assertSame('foaf', $installed['vocabulary']->prefix());
         $this->assertFalse($installed['exact']);
         $this->assertFalse($installed['comparable']);
+        // Editing its namespace in core is what would make it comparable.
+        $this->assertSame('/admin/vocabulary/' . $installed['vocabulary']->id() . '/edit', $installed['editUrl']);
     }
 
     public function otherForms()
@@ -71,6 +74,8 @@ class SiteVocabulariesTest extends DbTestCase
         self::makeUser('supervisor@example.com', 'site_admin');
         self::signIn('supervisor@example.com');
         $this->assertFalse($this->siteVocabularies()->installed(['namespace' => self::FOAF])['comparable']);
+        // Nor edit one whose namespace is written another way.
+        $this->assertNull($this->siteVocabularies()->installed(['namespace' => 'https://xmlns.com/foaf/0.1/'])['editUrl']);
 
         self::services()->get('Omeka\ApiManager')->create('vocabularies', [
             'o:namespace_uri' => 'http://example.org/mine#',

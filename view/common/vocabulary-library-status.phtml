@@ -1,12 +1,19 @@
 <?php
 /**
  * A library vocabulary's status in Omeka: its namespace in use, meaning Omeka
- * has a vocabulary with it, whatever file or version that came from; in use in
- * another form; or an Import button.
+ * has a vocabulary with it, whatever file or version that came from, or an
+ * Import button.
  *
  * In the table the status links to the vocabulary in core. The sidebar names
  * that vocabulary in its own group, so there the status is text, with a
- * Compare and update button when the user can update the vocabulary.
+ * Compare and update button when the user can update the vocabulary. The
+ * table has no such link: on every row it would read as something to do,
+ * when most vocabularies in Omeka have nothing to update.
+ *
+ * A namespace Omeka has in another form, such as http for https, is in use
+ * all the same, and the table says no more. The sidebar, where there is room
+ * and where updating starts, says how it differs and links to core's page for
+ * editing the vocabulary, which is what would make it comparable.
  *
  * @var string $slug
  * @var string|null $name The vocabulary's name, where many statuses share a
@@ -17,11 +24,14 @@
  * @var string|null $prefixTakenBy Label of the vocabulary in Omeka that
  *   already has this vocabulary's default prefix
  * @var bool $long Whether to write the sidebar's status: a taken prefix
- *   explained in full, and the Compare and update button
+ *   explained in full, and what the user can do next
+ * @var string|null $namespace The library's namespace for the vocabulary,
+ *   which the sidebar's status needs
  */
 $name = $name ?? null;
 $prefixTakenBy = $prefixTakenBy ?? null;
 $long = $long ?? false;
+$namespace = $namespace ?? null;
 ?>
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
@@ -35,20 +45,26 @@ $long = $long ?? false;
 <?php // Who uses it is read out here, and shown in full in the sidebar: a tooltip would need a mouse. ?>
 <span class="vocabulary-library-prefix-note"><?php echo $this->translate('Prefix in use'); ?><span class="vocabulary-library-sr-only">: <?php echo $this->escapeHtml(sprintf($this->translate('Used by "%s"'), $prefixTakenBy)); ?></span></span>
 <?php endif; ?>
-<?php elseif ($long): ?>
-<?php if ($installed['exact']): ?>
-<?php echo $this->translate('Namespace in use'); ?>
-<?php else: ?>
-<?php echo $this->escapeHtml(sprintf($this->translate('Namespace in use as %s'), $installed['vocabulary']->namespaceUri())); ?>
-<?php endif; ?>
-<?php if ($installed['comparable']): ?>
-<p class="vocabulary-library-compare"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button']); ?></p>
-<?php endif; ?>
-<?php elseif ($installed['exact']): ?>
+<?php elseif (!$long): ?>
 <?php echo $this->hyperlink($this->translate('Namespace in use'), $installed['url'], array_filter([
     'aria-label' => $name === null ? null : sprintf($this->translate('Namespace in use: %s'), $name),
 ])); ?>
 <?php else: ?>
-<?php echo sprintf($this->escapeHtml($this->translate('Namespace in use as %s')), $this->hyperlink($installed['vocabulary']->namespaceUri(), $installed['url'])); ?>
+<?php echo $this->translate('Namespace in use'); ?>
+<?php if ($installed['comparable']): ?>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button']); ?></p>
+<?php elseif (!$installed['exact']): ?>
+<?php
+// Both namespaces in full, since they can differ by one closing character.
+$inOmeka = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this->escapeHtml($installed['vocabulary']->namespaceUri()));
+$inLibrary = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this->escapeHtml($namespace));
+?>
+<?php if ($installed['editUrl']): ?>
+<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('To compare and update Omeka\'s vocabulary, change its namespace from %1$s to %2$s.')), $inOmeka, $inLibrary); ?></p>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Edit vocabulary'), $installed['editUrl'], ['class' => 'button']); ?></p>
+<?php else: ?>
+<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('Omeka\'s vocabulary can\'t be compared or updated: its namespace is %1$s, not %2$s.')), $inOmeka, $inLibrary); ?></p>
+<?php endif; ?>
+<?php endif; ?>
 <?php endif; ?>
 </div>

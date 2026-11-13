@@ -44,7 +44,11 @@ class SiteVocabularies
      *   'comparable' => whether this user can compare it with the library's
      *   file and update it: written the same way, not one Omeka keeps fixed
      *   (Dublin Core and its types), and one the user may change (site
-     *   administrators may change only their own)]
+     *   administrators may change only their own), 'editUrl' => core's page
+     *   to edit it on, where its namespace is written another way and this
+     *   user can change that, which makes it comparable; otherwise null].
+     *   The pages treat both forms as in use, and only the details sidebar
+     *   says which
      */
     public function installed(array $entry)
     {
@@ -63,11 +67,13 @@ class SiteVocabularies
             return null;
         }
         $exact = mb_strtolower($match->namespaceUri()) === mb_strtolower($namespace);
+        $editable = !$match->isPermanent() && $match->userIsAllowed('update');
         return [
             'vocabulary' => $match,
             'url' => $this->url($match),
             'exact' => $exact,
-            'comparable' => $exact && !$match->isPermanent() && $match->userIsAllowed('update'),
+            'comparable' => $exact && $editable,
+            'editUrl' => !$exact && $editable ? $match->adminUrl('edit') : null,
         ];
     }
 

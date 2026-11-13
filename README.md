@@ -39,37 +39,32 @@ and **Import** to import it.
 namespace, so this one cannot be imported. In most cases it can be compared
 and updated, as described below.
 
-**Namespace in use as** means that Omeka has the namespace written another
-way: with `http` rather than `https`, in different capitals, or with a
-different closing `/` or `#`. That vocabulary cannot be imported or updated
-from the library. To update it:
-
-1. Under **Vocabularies**, edit the vocabulary and change its namespace to
-   the library's.
-2. Return to the library, where it can now be compared and updated.
-
-Changing the namespace changes the addresses of the vocabulary's classes and
+The exception is a vocabulary whose namespace in Omeka differs slightly from
+the library's: `http` for `https`, or a different closing `/` or `#`. Its
+details say so. To update it, edit the vocabulary in Omeka and change its
+namespace to the library's. This changes the addresses of its classes and
 properties everywhere Omeka publishes them. Values stay attached to their
 properties.
 
 ## Comparing and updating
 
 **Compare and update**, in the details of a vocabulary whose namespace is in
-use, shows how the vocabulary in Omeka differs from the library's file, and
-**Update** applies the differences. Updating adds classes and properties and
-replaces the labels and comments of existing ones with the file's, so look
-over the changes first. It never removes a class or property.
+use, shows how Omeka's vocabulary differs from the library's, and **Update**
+applies the differences. Updating adds classes and properties and changes the
+labels and comments of existing ones to match the library's vocabulary, so
+look over the changes first. It never removes a class or property.
 
-Where the file has several languages, or gives its terms both definitions and
-comments, the page offers a choice of how to read it. It starts with the
-choice that matches the vocabulary in Omeka, so only real changes show.
+Where the library's vocabulary has several languages, or gives its terms both
+definitions and comments, the page offers a choice of which to compare. It
+starts with the choice that matches Omeka's vocabulary, so only real changes
+show.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.
 
 The library does not list which vocabularies need updating, because it cannot
-tell whether its file or the vocabulary in Omeka is newer. The release notes
-for each version of the module list the vocabularies whose files changed.
+tell whether its vocabulary or Omeka's is newer. The release notes for each
+version of the module list the vocabularies that changed.
 
 ## Server memory
 
