@@ -36,7 +36,7 @@ $namespace = $namespace ?? null;
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
 <?php echo $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), array_filter([
-    'class' => 'button',
+    'class' => 'button vocabulary-library-keep-place',
     'aria-label' => $name === null ? null : sprintf($this->translate('Import %s'), $name),
 ])); ?>
 <?php if ($prefixTakenBy !== null && $long): ?>
@@ -52,7 +52,7 @@ $namespace = $namespace ?? null;
 <?php else: ?>
 <?php echo $this->translate('Namespace in use'); ?>
 <?php if ($installed['comparable']): ?>
-<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button']); ?></p>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
 <?php elseif (!$installed['exact']): ?>
 <?php
 // Both namespaces in full, since they can differ by one closing character.

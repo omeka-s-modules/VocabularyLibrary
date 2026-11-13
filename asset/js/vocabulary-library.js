@@ -262,6 +262,18 @@
         $(form.tag).add(form.lang).add(form.show).on('change', apply);
         $(form.sort_by).add(form.sort_order).on('change', sort);
 
+        // Import and Compare carry the library's search, filters and sort, so
+        // that their links back return to it as it is now. Without the
+        // script, they lead back to the library as it first shows.
+        $(document).on('click', 'a.vocabulary-library-keep-place', function () {
+            const state = location.search.slice(1);
+            if (state) {
+                const url = new URL(this.href, location.href);
+                url.searchParams.set('return', state);
+                this.href = url.toString();
+            }
+        });
+
         // The empty state's buttons change the controls they stand for, and
         // move focus there, since the buttons hide once something matches.
         searchTermsButton.on('click', function () {

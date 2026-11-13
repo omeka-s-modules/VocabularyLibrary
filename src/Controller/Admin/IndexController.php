@@ -4,6 +4,7 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
+use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Form\ConfirmForm;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
@@ -27,6 +28,13 @@ class IndexController extends AbstractActionController
      * About where the description is cut in the details sidebar.
      */
     const EXCERPT_LENGTH = 200;
+
+    /**
+     * The library page's search, filters and sort, as its URL keeps them (see
+     * saveState() in the script). Import and Compare carry them in "return",
+     * so their links back lead to the library as the admin left it.
+     */
+    const LIBRARY_STATE = ['q', 'terms', 'tag', 'lang', 'show', 'sort_by', 'sort_order'];
 
     /**
      * The content type a vocabulary's file is sent with, by its extension.
@@ -160,6 +168,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
         $view->setVariable('installed', $installed);
+        $view->setVariable('libraryUrl', $this->libraryUrl());
         if ($installed) {
             return $view;
         }
@@ -208,18 +217,9 @@ class IndexController extends AbstractActionController
             return $view;
         }
 
-        // Core's own message, already translated, linking back to the library.
-        $message = new Message(
-            'Vocabulary successfully imported. %s', // @translate
-            sprintf(
-                '<a href="%s">%s</a>',
-                htmlspecialchars($this->url()->fromRoute('admin/vocabulary-library')),
-                $this->translate('Import another vocabulary?')
-            )
-        );
-        $message->setEscapeHtml(false);
-        $this->messenger()->addSuccess($message);
-        return $this->redirect()->toUrl($this->siteVocabularies->url($vocabulary));
+        // Core's own message, already translated.
+        $this->succeeded('Vocabulary successfully imported. %s', $vocabulary); // @translate
+        return $this->redirect()->toUrl($this->libraryUrl());
     }
 
     /**
@@ -265,12 +265,10 @@ class IndexController extends AbstractActionController
                     $this->importer->update($vocabulary->id(), $diff);
                 } catch (\Exception $e) {
                     $this->messenger()->addError($e->getMessage());
-                    return $this->redirect()->toRoute('admin/vocabulary-library');
+                    return $this->redirect()->toUrl($this->libraryUrl());
                 }
-                // Core's message after applying a diff, then core's page for
-                // the vocabulary, as after an import.
-                $this->messenger()->addSuccess('Changes to the vocabulary successfully made'); // @translate
-                return $this->redirect()->toUrl($installed['url']);
+                $this->succeeded('Changes to the vocabulary successfully made. %s', $vocabulary); // @translate
+                return $this->redirect()->toUrl($this->libraryUrl());
             }
             $this->messenger()->addFormErrors($form);
         }
@@ -285,6 +283,8 @@ class IndexController extends AbstractActionController
         $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
         $view->setVariable('commentReading', $reading);
         $view->setVariable('form', $form);
+        $view->setVariable('libraryUrl', $this->libraryUrl());
+        $view->setVariable('libraryState', http_build_query($this->libraryState()));
         return $view;
     }
 
@@ -328,6 +328,56 @@ class IndexController extends AbstractActionController
     protected function tagLabels(array $tags)
     {
         return $this->collation->sorted(array_map([$this, 'translate'], $tags));
+    }
+
+    /**
+     * Says an import or update succeeded, with a link to the vocabulary in
+     * Omeka. Both lead back to the library, as the admin left it, so that
+     * choosing vocabularies isn't interrupted; the link is there for when
+     * the vocabulary itself is wanted.
+     *
+     * @param string $message With %s for the link
+     */
+    protected function succeeded($message, VocabularyRepresentation $vocabulary)
+    {
+        $message = new Message($message, sprintf(
+            '<a href="%s">%s</a>',
+            htmlspecialchars($this->siteVocabularies->url($vocabulary)),
+            htmlspecialchars($this->translate('View it in Omeka'))
+        ));
+        $message->setEscapeHtml(false);
+        $this->messenger()->addSuccess($message);
+    }
+
+    /**
+     * The library page's state carried in "return", as only the names it
+     * keeps, each a single value.
+     *
+     * @return array name => value
+     */
+    protected function libraryState()
+    {
+        $return = $this->params()->fromQuery('return');
+        if (!is_string($return)) {
+            return [];
+        }
+        parse_str($return, $params);
+        $state = [];
+        foreach (self::LIBRARY_STATE as $name) {
+            if (isset($params[$name]) && is_string($params[$name]) && $params[$name] !== '') {
+                $state[$name] = $params[$name];
+            }
+        }
+        return $state;
+    }
+
+    /**
+     * The library page, as the admin left it when they came here from it.
+     */
+    protected function libraryUrl()
+    {
+        $state = $this->libraryState();
+        return $this->url()->fromRoute('admin/vocabulary-library', [], $state ? ['query' => $state] : []);
     }
 
     /**

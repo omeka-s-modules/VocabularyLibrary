@@ -247,8 +247,11 @@ class ControllerTest extends AbstractHttpControllerTestCase
     public function testImportingMakesTheVocabularyInOmeka()
     {
         [$status] = $this->import(['o:prefix' => 'example', 'o:label' => 'My label', 'lang' => 'de']);
+        // Back to the library, which says so and links to the vocabulary.
         $this->assertSame(302, $status);
-        $this->assertSame('/admin/vocabulary?namespace_uri=http://example.org/ns%23', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
+        $this->assertSame('/admin/vocabulary-library', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
+        [, $page] = $this->send('GET', '/admin/vocabulary-library');
+        $this->assertStringContainsString('Vocabulary successfully imported. <a href="/admin/vocabulary?namespace_uri=http://example.org/ns%23">View it in Omeka</a>', $page);
         $vocabulary = $this->vocabulary();
         $this->assertSame('example', $vocabulary->prefix());
         $this->assertSame('My label', $vocabulary->label());
@@ -276,6 +279,38 @@ class ControllerTest extends AbstractHttpControllerTestCase
             'no label' => [['o:label' => ' '], "Value is required and can't be empty"],
             'a language the file lacks' => [['lang' => 'fr'], 'The input was not found in the haystack'],
         ];
+    }
+
+    public function testTheLibraryIsReturnedToAsTheAdminLeftIt()
+    {
+        $return = http_build_query(['q' => 'part', 'tag' => 'general', 'sort_order' => 'desc', 'evil' => 'x', 'show' => ['a']]);
+        $back = '/admin/vocabulary-library?q=part&tag=general&sort_order=desc';
+        $path = '/admin/vocabulary-library/import/ex?return=' . rawurlencode($return);
+        [, $page] = $this->send('GET', '/admin/vocabulary-library');
+        $this->assertStringContainsString('class="button vocabulary-library-keep-place"', $page);
+
+        // Cancel leads back with only the library's own state, and the form
+        // posts to where it came from, keeping it.
+        [, $page] = $this->send('GET', $path);
+        $this->assertStringContainsString('href="' . $back . '">Cancel</a>', $page);
+        $this->assertMatchesRegularExpression('#<form[^>]*action=""#', $page);
+
+        // An import leads there too.
+        $tokens = $this->csrf($path);
+        [$status] = $this->send('POST', $path, ['o:prefix' => 'ex', 'o:label' => 'Example Vocabulary', 'lang' => 'en'] + $tokens);
+        $this->assertSame(302, $status);
+        $this->assertSame($back, $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
+
+        // Compare keeps it through a change of reading, and leads back.
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/compare/ex', ['return' => $return]);
+        $this->assertStringContainsString('<input type="hidden" name="return" value="q=part&tag=general&sort_order=desc">', $page);
+        $this->assertStringContainsString('href="' . $back . '"', $page);
+    }
+
+    public function testWithoutAPlaceToReturnToTheLibraryIsAsItFirstShows()
+    {
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'http://example.com/elsewhere']);
+        $this->assertStringContainsString('href="/admin/vocabulary-library">Cancel</a>', $page);
     }
 
     public function testAnImportWithoutItsCsrfTokenMakesNothing()
@@ -307,7 +342,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('Namespace in use: Example Vocabulary', $page);
         $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        $this->assertMatchesRegularExpression('#<a class="button" href="/admin/vocabulary-library/compare/ex">Compare and update</a>#', $page);
+        $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/compare/ex">Compare and update</a>#', $page);
         // Nor by a supervisor, who doesn't own it.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
         $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
@@ -384,7 +419,12 @@ class ControllerTest extends AbstractHttpControllerTestCase
 
         $tokens = $this->csrf($path);
         [$status] = $this->send('POST', $path, ['lang' => 'en'] + $tokens);
+        // Back to the library, as after an import, which says so and links
+        // to the vocabulary.
         $this->assertSame(302, $status);
+        $this->assertSame('/admin/vocabulary-library', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
+        [, $page] = $this->send('GET', '/admin/vocabulary-library');
+        $this->assertStringContainsString('Changes to the vocabulary successfully made. <a href="/admin/vocabulary?namespace_uri=http://example.org/ns%23">View it in Omeka</a>', $page);
         $this->assertSame(['Thing', 'Anything at all.'], $this->term('Thing'));
         // Its definition in the file is empty.
         $this->assertSame('is part of', $this->term('isPartOf')[0]);

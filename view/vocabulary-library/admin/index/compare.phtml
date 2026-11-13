@@ -3,7 +3,6 @@ $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
 $this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
 $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library compare');
-$browseUrl = $this->url('admin/vocabulary-library');
 $prefix = $vocabulary->prefix();
 
 // A term as Omeka shows one: its label in Omeka where it has one, which is
@@ -112,10 +111,10 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
 <?php echo $this->form()->openTag($form); ?>
 <div id="page-actions">
     <?php if ($changes): ?>
-    <?php echo $this->hyperlink($translate('Cancel'), $browseUrl, ['class' => 'button']); ?>
+    <?php echo $this->hyperlink($translate('Cancel'), $libraryUrl, ['class' => 'button']); ?>
     <button type="submit"><?php echo $translate('Update'); ?></button>
     <?php else: ?>
-    <?php echo $this->hyperlink($translate('Back to the library'), $browseUrl, ['class' => 'button']); ?>
+    <?php echo $this->hyperlink($translate('Back to the library'), $libraryUrl, ['class' => 'button']); ?>
     <?php endif; ?>
 </div>
 <?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
@@ -131,6 +130,10 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
 ?>
 <?php if (count($entry['languages']) > 1 || $commentReading !== null): ?>
 <form method="get" class="vocabulary-library-reading">
+    <?php // The library as the admin left it, still to return to. ?>
+    <?php if ($libraryState !== ''): ?>
+    <input type="hidden" name="return" value="<?php echo $escape($libraryState); ?>">
+    <?php endif; ?>
     <?php if (count($entry['languages']) > 1): ?>
     <div class="field">
         <div class="field-meta">

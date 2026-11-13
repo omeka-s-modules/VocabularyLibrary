@@ -4,7 +4,6 @@ $escape = $this->plugin('escapeHtml');
 $this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
 $this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
 $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import');
-$browseUrl = $this->url('admin/vocabulary-library');
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Import')); ?>
@@ -12,7 +11,7 @@ $browseUrl = $this->url('admin/vocabulary-library');
 <?php if ($installed): ?>
 
 <div id="page-actions">
-    <?php echo $this->hyperlink($translate('Back to the library'), $browseUrl, ['class' => 'button']); ?>
+    <?php echo $this->hyperlink($translate('Back to the library'), $libraryUrl, ['class' => 'button']); ?>
 </div>
 <p><?php echo $translate('Omeka already has a vocabulary with this namespace.'); ?></p>
 <?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed]); ?>
@@ -22,7 +21,7 @@ $browseUrl = $this->url('admin/vocabulary-library');
 <?php $form->prepare(); ?>
 <?php echo $this->form()->openTag($form); ?>
 <div id="page-actions">
-    <?php echo $this->hyperlink($translate('Cancel'), $browseUrl, ['class' => 'button']); ?>
+    <?php echo $this->hyperlink($translate('Cancel'), $libraryUrl, ['class' => 'button']); ?>
     <button type="submit"><?php echo $translate('Import'); ?></button>
 </div>
 
