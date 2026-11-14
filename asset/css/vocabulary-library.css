@@ -78,9 +78,9 @@
 }
 
 /* For screen readers only: what the script announces, and text that says
-   what a sighted admin sees another way. Core's .sr-only only moves text off
-   the left of an element that isn't positioned, so it would still take up
-   space. */
+   what a sighted admin sees another way. Core's .sr-only sets only left,
+   which does nothing to an element that isn't positioned, so the text would
+   still show. */
 .vocabulary-library-announcement,
 .vocabulary-library-sr-only {
     position: absolute;

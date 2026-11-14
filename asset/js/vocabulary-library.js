@@ -124,8 +124,9 @@
 
     /**
      * The library page: filters, sorting and term search over the rows the
-     * page already has. The markup, including every message, is in
-     * browse.phtml; this only hides, reorders and fills in rows.
+     * page already has, kept in the URL, and the details sidebar's tabs,
+     * term lists, focus and closing. The markup, including every message, is
+     * in the templates; this only hides, reorders and fills it in.
      */
     const initBrowse = function (filters) {
         const form = filters[0];
@@ -161,10 +162,16 @@
         let termRequest = null;
         let termTimer = null;
         // Whether the admin is leaving the page, which cancels a term search
-        // under way: that is not a search that failed.
+        // under way: that is not a search that failed. Set when the page is
+        // hidden, not before it unloads, which a browser also announces for a
+        // link that turns out to be a download, leaving the admin here; and
+        // cleared when the page shows again, as on coming Back to it.
         let leaving = false;
-        window.addEventListener('beforeunload', function () {
+        window.addEventListener('pagehide', function () {
             leaving = true;
+        });
+        window.addEventListener('pageshow', function () {
+            leaving = false;
         });
 
         const apply = function () {
@@ -174,12 +181,15 @@
             const tag = form.tag.value;
             const lang = form.lang.value;
             const show = form.show.value;
+            // Matches held from the last term search apply only while there
+            // is one to run, or they would show until it runs and clears them.
+            const held = form.terms.checked && form.q.value.trim().length >= termQueryMin ? termMatches : null;
             let count = 0;
             rows.forEach(function (row) {
                 // Matches held from the last term search, narrowed to what is
                 // typed now, word by word as the server matches them, so rows
                 // never show terms from an earlier query.
-                const found = own(termMatches, row.dataset.slug);
+                const found = own(held, row.dataset.slug);
                 const terms = (found ? found.terms : []).filter(function (match) {
                     const text = fold(termText(match));
                     return words.every(word => text.includes(word));
@@ -475,7 +485,8 @@
     /**
      * The details sidebar's term filter: narrows the class and property lists
      * to terms whose label or local name contains every word of the text, as
-     * the term search matches them, and opens the lists while it has any.
+     * the term search matches them, though this also ignores accents, and
+     * opens the lists while it has any.
      * Emptied, it closes the lists it opened, leaving any the admin opened. It
      * starts with the text from a term search's "All matching terms", if any.
      */

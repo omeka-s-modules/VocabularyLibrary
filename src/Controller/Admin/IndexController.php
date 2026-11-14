@@ -236,8 +236,8 @@ class IndexController extends AbstractActionController
                 ? $this->importer->matchingLanguage($entry, $vocabulary)
                 : TermReading::preferredLanguage($entry['languages']);
         }
-        // Computed on every request, never taken from the form.
         $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
+        // The diff is computed on every request, never taken from the form.
         [$reading, $diff] = $this->importer->diffAsImported($entry, $lang, $reading);
         $form = $this->getForm(ConfirmForm::class);
 
@@ -282,9 +282,10 @@ class IndexController extends AbstractActionController
         [, $entry] = $this->entry();
         $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
         foreach ($members as &$terms) {
-            // Some files put HTML in their labels and comments. Labels are
-            // one line, as the term index has them, so the term filter
-            // matches what's shown.
+            // Some files put HTML in their labels and comments, which is
+            // shown here as text; import stores them as they are, as Omeka's
+            // own import does. Labels are one line, as the term index has
+            // them, so the term filter matches what's shown.
             foreach ($terms as &$term) {
                 $term['label'] = PlainText::line($term['label']);
                 if ($term['comment'] !== null) {

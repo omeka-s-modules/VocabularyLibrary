@@ -34,7 +34,9 @@ class TermSearch
 
     /**
      * A term matches when its label or local name contains every word of the
-     * query, in any order, as the details sidebar's term filter matches them.
+     * query, in any order and in any case, as the details sidebar's term
+     * filter matches them; but accents count here, where the filter ignores
+     * them.
      *
      * Terms are ranked: a label or local name that is the query itself, then
      * one with a word that starts with each of the query's words ("date" in
