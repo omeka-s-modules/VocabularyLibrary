@@ -121,6 +121,26 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame('imports no classes or properties', ImportCheck::failure($result));
     }
 
+    public function testALabelThatIsNotAValidValueOfItsTypeFails()
+    {
+        // EasyRdf checks a literal against its datatype only when it's read.
+        file_put_contents($this->dir . '/typed.ttl', "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n<http://example.org/ns#Thing> a rdfs:Class ; rdfs:label \"1.0.0\"^^xsd:decimal .\n");
+        $result = (new ImportCheck)->check($this->dir . '/typed.ttl', self::NS);
+        $this->assertFalse($result['parsed']);
+        $this->assertSame('does not parse: a term\'s label or comment: \'1.0.0\' doesn\'t look like a valid decimal', ImportCheck::failure($result));
+    }
+
+    public function testAFormatGuessedWrongIsTriedAgainAsTheOthers()
+    {
+        // Given a namespace, EasyRdf guesses a Turtle file that mentions
+        // RDFa near its start is RDFa, and reads nothing from it.
+        file_put_contents($this->dir . '/mentions.ttl', "# Not RDFa.\n" . file_get_contents(self::fixture('basic.ttl')));
+        $result = (new ImportCheck)->check($this->dir . '/mentions.ttl', self::NS);
+        $this->assertNull(ImportCheck::failure($result));
+        $this->assertSame('turtle', $result['format']);
+        $this->assertSame(1, $result['classes']);
+    }
+
     /**
      * A check result for a copy of the basic fixture with some text replaced.
      */

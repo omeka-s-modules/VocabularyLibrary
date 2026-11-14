@@ -17,9 +17,9 @@ require dirname(__DIR__) . '/src/Stdlib/NamespaceUri.php';
 require dirname(__DIR__) . '/src/Stdlib/TermReading.php';
 
 // A script that stops on an error says why, whatever the CLI's display
-// settings: the message alone for the errors the scripts raise on purpose,
-// such as a file that isn't valid JSON, and everything PHP knows for any
-// other, such as a bug.
+// settings: the message alone for a RuntimeException, which the scripts
+// raise on purpose, such as for a file that isn't valid JSON, and libraries
+// raise for bad data; and everything PHP knows for any other, such as a bug.
 set_exception_handler(function (Throwable $e) {
     fail($e instanceof RuntimeException ? $e->getMessage() : (string) $e);
 });

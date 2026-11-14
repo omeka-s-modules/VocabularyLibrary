@@ -60,6 +60,10 @@ foreach ($sources as $slug => $entry) {
     if (!empty($entry['download']) && !empty($entry['submitted_by'])) {
         $problems[] = "$slug: has both download and submitted_by; a file sent to the library has no address";
     }
+    // Nor any other address, which fetch.php would try as well.
+    if (!empty($entry['alternates']) && !empty($entry['submitted_by'])) {
+        $problems[] = "$slug: has both alternates and submitted_by; a file sent to the library has no address";
+    }
     if (!empty($entry['submitted_by']) && !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($entry['submitted_on'] ?? ''))) {
         $problems[] = "$slug: submitted_by needs submitted_on, the date as YYYY-MM-DD";
     }

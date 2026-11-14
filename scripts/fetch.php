@@ -16,10 +16,12 @@
  *
  * Fetches one vocabulary per host at a time, and tries an address once more
  * when its server fails or does not answer, after the wait the server names
- * or else --retry-wait, 10 seconds by default. A host that fails both times
+ * or else --retry-wait, 10 seconds by default. A server that fails both times
  * is not asked again in the run, so one that is down doesn't hold up the
- * rest for each of its vocabularies. A term list's terms are fetched a few
- * at a time from its host (Download::TERM_BATCH).
+ * rest for each of its vocabularies; that is the server that answered, as an
+ * address may redirect, as purl.org's do, to another publisher's server. A
+ * term list's terms are fetched a few at a time from its host
+ * (Download::TERM_BATCH).
  *
  * Prints what changed and what failed. A changed file says how it differs
  * from the stored one: in its terms, their labels or their comments, in any
@@ -39,13 +41,13 @@ use VocabularyLibrary\Scripts\ImportCheck;
 const PARALLEL = 8;
 // The longest a Retry-After is waited out, in seconds.
 const MAX_RETRY_WAIT = 60;
-// The wait before trying an address again, in seconds, where its server
-// names none.
 foreach (array_slice($argv, 1) as $argument) {
     if (strpos($argument, '--') === 0 && !preg_match('/^--retry-wait=\d+$/', $argument)) {
         fail("Unknown option: $argument\nUsage: php scripts/fetch.php [<slug> ...] [--retry-wait=<seconds>]");
     }
 }
+// The wait before trying an address again, in seconds, where its server
+// names none.
 define('RETRY_WAIT', (int) (option($argv, 'retry-wait') ?? 10));
 
 $check = new ImportCheck;
@@ -77,8 +79,9 @@ foreach ($sources as $slug => $entry) {
 // it, or a phrase where there is nothing to count. Needs look: whether a
 // failed slug has an address that no longer serves a usable file.
 $changed = $unchanged = $failed = $needsLook = [];
-// Retry-After describes a host, so the back-off is per host. Down: hosts
-// that failed on both tries.
+// Retry-After describes a host, so the back-off is per host asked. Down: the
+// hosts that answered failing on both tries, which may not be the ones asked,
+// as when purl.org redirects to a publisher whose server is down.
 $retried = $notBefore = $down = [];
 while ($pending) {
     // What a host that is down serves fails without being asked for.
@@ -128,7 +131,7 @@ while ($pending) {
         $reason = $response['error'];
         $unavailable = Download::serverUnavailable($response);
         $same = false;
-        if ($unavailable && $host = (string) parse_url($url, PHP_URL_HOST)) {
+        if ($unavailable && $host = (string) parse_url($response['url'] ?: $url, PHP_URL_HOST)) {
             $down[$host] = true;
         }
         if (!$reason) {

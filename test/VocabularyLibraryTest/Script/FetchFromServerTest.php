@@ -89,6 +89,24 @@ class FetchFromServerTest extends ScriptTestCase
         $this->assertStringContainsString('its server failed twice earlier in this run', $output);
     }
 
+    public function testAServerThatFailsBehindARedirectLeavesTheOthersBehindItAsked()
+    {
+        // One server under two names: localhost stands for purl.org, which
+        // redirects, and 127.0.0.1 for the publishers it redirects to.
+        $redirector = str_replace('127.0.0.1', 'localhost', $this->address);
+        file_put_contents("$this->dir/published.ttl", file_get_contents(self::fixture('basic.ttl')) . "\nex:Extra a rdfs:Class .\n");
+        $this->writeSources([
+            'a' => ['download' => "$redirector/via/down/a.ttl", 'prefix' => 'a'] + self::ENTRY,
+            'ex' => ['download' => "$redirector/via/vocabulary.ttl"] + self::ENTRY,
+        ]);
+        copy(self::fixture('basic.ttl'), "$this->dir/data/vocabs/a.ttl");
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('failed: a (server unavailable, stored file kept)', $output);
+        $this->assertStringContainsString('changed: ex (1 added)', $output);
+        $this->assertContains('/vocabulary.ttl', file("$this->dir/requests.log", FILE_IGNORE_NEW_LINES));
+    }
+
     public function testATermListsTermIsTriedAgainWhenItsServerFails()
     {
         [$data, $extension, $unavailable] = Download::termList(Download::fetchAll(["$this->address/terms/"])[0], "$this->address/terms/");

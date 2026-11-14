@@ -9,7 +9,8 @@
  *            [--file=<path> --copy-from=<archive>|--submitted-by=<who>]
  *
  * Downloads the file and runs the import check. The namespace is the one the
- * check finds to import, unless --namespace is given. The prefix is the one
+ * check finds to import, starting from --namespace where it is given, which
+ * may then be stored in another #// or http/https form. The prefix is the one
  * the vocabulary declares for itself (vann:preferredNamespacePrefix), unless
  * --prefix is given; most files declare none. The slug defaults to the
  * prefix, lowercased; slugs are permanent once released, so choose with

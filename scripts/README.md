@@ -68,9 +68,9 @@ The comment at the top of each script gives its usage and options in full.
   classes and properties describe, drafted from the file and the publisher's
   documentation (recorded in `summary_basis`) and checked claim by claim
   against them. Say whether the vocabulary has classes, properties, or
-  both, which the build checks; most summaries open with "Classes and
-  properties", "Properties", or "Classes". No judgments, history, versions,
-  or claims about the publisher.
+  both; the build checks that the summary names each kind it has. Most
+  summaries open with "Classes and properties", "Properties", or "Classes".
+  No judgments, history, versions, or claims about the publisher.
 - **Tags:** one to three, for what an administrator filtering by the tag would
   want, not for fields the vocabulary is only loosely related to.
 

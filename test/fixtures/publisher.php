@@ -11,6 +11,9 @@
  * /down/<n>.ttl  always answers 503, for any n
  * /terms/ and /terms/<name>  a term list and its terms' documents, of which
  *             /terms/Flaky answers 503 the first time it is asked
+ * /via/<path>  redirects to <path> at 127.0.0.1, so that a request made to
+ *             localhost is answered by another host, as purl.org redirects
+ *             to a publisher's server
  * anything else is not found
  *
  * The file served is published.ttl in the directory, and each request is
@@ -21,7 +24,9 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 file_put_contents("$dir/requests.log", "$path\n", FILE_APPEND);
 $asked = count(array_keys(file("$dir/requests.log", FILE_IGNORE_NEW_LINES), $path, true));
 $host = 'http://' . $_SERVER['HTTP_HOST'];
-if ($path === '/terms/') {
+if (strpos($path, '/via/') === 0) {
+    header('Location: http://127.0.0.1:' . $_SERVER['SERVER_PORT'] . substr($path, strlen('/via')), true, 302);
+} elseif ($path === '/terms/') {
     header('Content-Type: application/n-triples');
     foreach (['Steady', 'Flaky'] as $name) {
         echo "<$host/terms/$name> <http://purl.org/dc/terms/isPartOf> <$host/terms/> .\n";

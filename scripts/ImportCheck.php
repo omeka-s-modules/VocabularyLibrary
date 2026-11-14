@@ -85,7 +85,10 @@ class ImportCheck
      * library and an administrator comparing the two would see.
      *
      * Labels and comments are compared in every language both files have
-     * either in, and exactly, as Compare shows them.
+     * either in, and exactly, as Compare shows them, with comments read as
+     * the library imports them, a definition first. So a change only to the
+     * comment of a term that also has a definition, which Compare shows for
+     * a vocabulary imported through Omeka's own form, isn't counted.
      *
      * @param array $old A check result
      * @param array $new
@@ -133,8 +136,8 @@ class ImportCheck
      * @param string $path The vocabulary file
      * @param string|null $namespace The namespace a user would enter, if known
      * @return array The check result: "parsed", and "classes" and
-     *   "properties" as counts; "error" where the file doesn't parse; and
-     *   where it does:
+     *   "properties" as counts; "error" where the file, or a term's label or
+     *   comment, doesn't parse; and where they do:
      *   - format: the format it parsed as, or null if autodetected
      *   - namespace: the namespace found to import
      *   - namespace_source: where that came from: "given", "declared" (the
@@ -154,7 +157,11 @@ class ImportCheck
     public function check($path, $namespace = null)
     {
         // As Omeka's form does by default, autodetect the format. If that
-        // fails, try the formats a user can choose explicitly.
+        // fails, try the formats a user can choose explicitly. A guess can
+        // also be wrong without failing: given a namespace, EasyRdf takes a
+        // Turtle file that mentions RDFa near its start for RDFa, which
+        // reads nothing. So a guess that reads nothing gives way to the
+        // first of those formats that parses, and is kept if none does.
         $graph = null;
         $error = null;
         $format = null;
@@ -162,16 +169,37 @@ class ImportCheck
             $attempt = new RdfGraph;
             try {
                 $attempt->parseFile($path, $try, $namespace);
-                [$graph, $format] = [$attempt, $try];
-                break;
             } catch (Throwable $e) {
                 $error = $error ?: mb_substr($e->getMessage(), 0, 300);
+                continue;
+            }
+            [$graph, $format] = [$attempt, $try];
+            if ($try !== 'guess' || $attempt->countTriples()) {
+                break;
             }
         }
         if (!$graph) {
             return ['parsed' => false, 'error' => $error, 'classes' => 0, 'properties' => 0];
         }
+        // Reading the terms reads their labels and comments, which EasyRdf
+        // checks against their datatypes only then. One that isn't valid,
+        // such as a label typed as a number that isn't one, throws, as it
+        // would in Omeka's importer, and the file doesn't import.
+        try {
+            return $this->checkParsed($graph, $namespace, $format);
+        } catch (Throwable $e) {
+            return ['parsed' => false, 'error' => 'a term\'s label or comment: ' . mb_substr($e->getMessage(), 0, 300), 'classes' => 0, 'properties' => 0];
+        }
+    }
 
+    /**
+     * The rest of check(), for a file that parsed.
+     *
+     * @param string|null $format The format it parsed as, "guess" if
+     *   autodetected
+     */
+    protected function checkParsed(RdfGraph $graph, $namespace, $format)
+    {
         $source = $namespace ? 'given' : null;
         if (!$namespace) {
             $declared = $this->safely(function () use ($graph) {

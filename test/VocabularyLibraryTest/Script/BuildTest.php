@@ -69,6 +69,7 @@ class BuildTest extends ScriptTestCase
             'submitter without a date' => [['download' => null, 'submitted_by' => 'A. Potter'], 'ex: submitted_by needs submitted_on'],
             'a date without a submitter' => [['submitted_on' => '2026-11-12'], 'ex: submitted_on needs submitted_by'],
             'an address and a submitter' => [['submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'], 'ex: has both download and submitted_by'],
+            'other addresses and a submitter' => [['download' => null, 'alternates' => ['http://example.org/ns.ttl'], 'submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'], 'ex: has both alternates and submitted_by'],
             'a title of its own' => [['title' => 'My title'], 'ex: "title" is the file\'s'],
             'wrong namespace' => [['namespace' => 'http://example.org/unrelated/'], 'ex: the namespace imports nothing'],
         ];
