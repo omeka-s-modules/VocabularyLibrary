@@ -118,7 +118,7 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     data-filter="<?php echo $escape($termFilter); ?>">
     <p class="vocabulary-library-terms-loading"><?php echo $translate('Loading classes and properties…'); ?></p>
     <div class="vocabulary-library-terms-failed" hidden>
-        <p class="error"><?php echo $translate('Could not load classes and properties.'); ?></p>
+        <p class="error" role="alert"><?php echo $translate('Could not load classes and properties.'); ?></p>
         <button type="button" class="vocabulary-library-terms-retry"><?php echo $translate('Try again'); ?></button>
     </div>
 </div>

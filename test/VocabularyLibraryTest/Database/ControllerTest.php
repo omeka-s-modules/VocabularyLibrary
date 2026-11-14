@@ -183,7 +183,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringNotContainsString('ex:hasPart', $page);
         $this->assertMatchesRegularExpression('#<div class="sidebar-section" id="vocabulary-library-term-lists"[^>]*data-terms-url="/admin/vocabulary-library/show-terms/ex"\s+data-filter="">#', $page);
         $this->assertStringContainsString('<p class="vocabulary-library-terms-loading">Loading classes and properties…</p>', $page);
-        $this->assertMatchesRegularExpression('#<div class="vocabulary-library-terms-failed" hidden>\s*<p class="error">Could not load classes and properties.</p>\s*<button type="button" class="vocabulary-library-terms-retry">Try again</button>#', $page);
+        $this->assertMatchesRegularExpression('#<div class="vocabulary-library-terms-failed" hidden>\s*<p class="error" role="alert">Could not load classes and properties.</p>\s*<button type="button" class="vocabulary-library-terms-retry">Try again</button>#', $page);
     }
 
     public function testTheDownloadLinkSaysWhatItDoes()
