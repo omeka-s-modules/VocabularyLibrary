@@ -131,7 +131,7 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
     <div class="field">
         <div class="field-meta">
             <label for="vocabulary-library-lang"><?php echo $translate('Preferred language'); ?></label>
-            <div class="field-description"><?php echo $translate('Starts on the one that matches Omeka\'s vocabulary. Choose another to see what switching to it would change.'); ?></div>
+            <div class="field-description"><?php echo $translate('Defaults to the choice closest to Omeka\'s vocabulary. Choose another to see what switching to it would change.'); ?></div>
         </div>
         <div class="inputs">
             <select name="lang" id="vocabulary-library-lang">
@@ -146,13 +146,13 @@ $sections[] = ['id' => 'vocabulary-library-classes-only-in-omeka', 'heading' => 
     <?php if ($commentReading !== null): ?>
     <div class="field">
         <div class="field-meta">
-            <label for="vocabulary-library-comments"><?php echo $translate('Comment source'); ?></label>
-            <div class="field-description"><?php echo $translate('Starts on the one that matches Omeka\'s vocabulary. Choose another to see what switching to it would change.'); ?></div>
+            <label for="vocabulary-library-comments"><?php echo $translate('Comments'); ?></label>
+            <div class="field-description"><?php echo $translate('Omeka can use a term\'s definition (skos:definition) as its comment, in place of rdfs:comment.'); ?> <?php echo $translate('Defaults to the choice closest to Omeka\'s vocabulary. Choose another to see what switching to it would change.'); ?></div>
         </div>
         <div class="inputs">
             <select name="comments" id="vocabulary-library-comments">
-                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('Definitions, or comments where there are none (as the library imports)'); ?></option>
-                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>><?php echo $translate('Comments only (as Omeka\'s own import does)'); ?></option>
+                <option value="definitions"<?php echo $commentReading === 'definitions' ? ' selected' : ''; ?>><?php echo $translate('Definition where there is one, else comment'); ?></option>
+                <option value="comments"<?php echo $commentReading === 'comments' ? ' selected' : ''; ?>><?php echo $translate('Comment only'); ?></option>
             </select>
         </div>
     </div>
