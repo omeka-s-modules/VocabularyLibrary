@@ -160,7 +160,7 @@ class IndexController extends AbstractActionController
             'o:prefix' => $entry['prefix'],
             'o:label' => $entry['name'],
             'o:comment' => $entry['summary'],
-            'lang' => TermReading::preferredLanguage($entry['languages']),
+            'lang' => $this->importLanguage($entry),
         ]);
         $view->setVariable('form', $form);
         $view->setVariable('installedPrefixes', $this->siteVocabularies->prefixes());
@@ -396,6 +396,17 @@ class IndexController extends AbstractActionController
             }
         }
         return $state;
+    }
+
+    /**
+     * The language the import form starts on: the one the library was
+     * filtered by, where the vocabulary has it, else the library's default
+     * for the vocabulary.
+     */
+    protected function importLanguage(array $entry)
+    {
+        $lang = $this->libraryState()['lang'] ?? null;
+        return in_array($lang, $entry['languages'], true) ? $lang : TermReading::preferredLanguage($entry['languages']);
     }
 
     /**

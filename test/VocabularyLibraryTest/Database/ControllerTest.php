@@ -271,6 +271,15 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('German (de)', $page);
     }
 
+    public function testTheImportFormStartsOnTheLanguageTheLibraryWasFilteredBy()
+    {
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'lang=de']);
+        $this->assertMatchesRegularExpression('/<option value="de" selected[^>]*>German \(de\)/', $page);
+        // Not one the vocabulary doesn't have.
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'lang=fr']);
+        $this->assertMatchesRegularExpression('/<option value="en" selected[^>]*>English \(en\)/', $page);
+    }
+
     public function testImportingMakesTheVocabularyInOmeka()
     {
         [$status] = $this->import(['o:prefix' => 'example', 'o:label' => 'My label', 'lang' => 'de']);
