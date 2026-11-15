@@ -51,6 +51,16 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame('https://creativecommons.org/licenses/by/4.0/', $result['license']);
     }
 
+    public function testAFileWithNoOntologyRecordDescribesItselfOnItsNamespace()
+    {
+        // As OAI-ORE's does: its title and its license on the namespace.
+        $path = $this->dir . '/namespace-record.ttl';
+        file_put_contents($path, "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n<http://example.org/ns#> dcterms:title \"Example Vocabulary\" ; dcterms:license <https://creativecommons.org/licenses/by/4.0/> .\n<http://example.org/ns#Thing> a rdfs:Class .\n");
+        $result = (new ImportCheck)->check($path, self::NS);
+        $this->assertSame('Example Vocabulary', $result['title']);
+        $this->assertSame('https://creativecommons.org/licenses/by/4.0/', $result['license']);
+    }
+
     public function testATitleOverSeveralLinesIsOneLine()
     {
         $path = $this->dir . '/title.ttl';

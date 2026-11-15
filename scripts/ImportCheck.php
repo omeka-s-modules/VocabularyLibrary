@@ -514,11 +514,33 @@ class ImportCheck
     }
 
     /**
-     * The vocabulary's own title or description, as its publisher wrote it:
-     * from its ontology record, or else from the namespace resource, or else
-     * from the record its terms name with rdfs:isDefinedBy, as element sets
-     * from the Open Metadata Registry do. English if the file offers it,
-     * otherwise the first value in any language. A description the file
+     * The records a file may describe the vocabulary in, in the order they
+     * are read: its ontology records, then the namespace resource, with and
+     * without its closing # or /, then the record its terms name with
+     * rdfs:isDefinedBy, as element sets from the Open Metadata Registry do.
+     * Some files have no ontology record and describe themselves on the
+     * namespace, as OAI-ORE does.
+     *
+     * @return \EasyRdf\Resource[]
+     */
+    protected function records(RdfGraph $graph, $namespace)
+    {
+        $records = $this->describingOntologies($graph, $namespace);
+        if ($namespace !== '') {
+            $records[] = $graph->resource($namespace);
+            $records[] = $graph->resource(rtrim($namespace, '#/'));
+            $defining = $this->definingRecord($graph, $namespace);
+            if ($defining !== null) {
+                $records[] = $graph->resource($defining);
+            }
+        }
+        return $records;
+    }
+
+    /**
+     * The vocabulary's own title or description, as its publisher wrote it,
+     * from the first of its records that has one. English if the file offers
+     * it, otherwise the first value in any language. A description the file
      * gives as several values, such as a description and a changelog, keeps
      * them all, each as its own paragraph.
      *
@@ -527,16 +549,7 @@ class ImportCheck
      */
     protected function describe(RdfGraph $graph, $namespace, $properties, $paragraphs)
     {
-        $subjects = $this->describingOntologies($graph, $namespace);
-        if ($namespace !== '') {
-            $subjects[] = $graph->resource($namespace);
-            $subjects[] = $graph->resource(rtrim($namespace, '#/'));
-            $defining = $this->definingRecord($graph, $namespace);
-            if ($defining !== null) {
-                $subjects[] = $graph->resource($defining);
-            }
-        }
-        foreach ($subjects as $subject) {
+        foreach ($this->records($graph, $namespace) as $subject) {
             $values = $paragraphs
                 ? self::allValues($subject, $properties)
                 : array_filter([$subject->get($properties, 'literal', 'en') ?: $subject->get($properties, 'literal')]);
@@ -591,14 +604,15 @@ class ImportCheck
     }
 
     /**
-     * The license the vocabulary's ontology record declares, if any.
+     * The license the vocabulary's records declare, from the first that
+     * declares one, if any.
      */
     protected function license(RdfGraph $graph, $namespace)
     {
         $properties = ['dcterms:license', 'dc11:rights', 'dcterms:rights', '<http://creativecommons.org/ns#license>', '<http://www.w3.org/1999/xhtml/vocab#license>'];
-        foreach ($this->describingOntologies($graph, $namespace) as $ontology) {
+        foreach ($this->records($graph, $namespace) as $record) {
             foreach ($properties as $property) {
-                $value = trim(PlainText::from($ontology->get($property)));
+                $value = trim(PlainText::from($record->get($property)));
                 if ($value !== '' && mb_check_encoding($value, 'UTF-8')) {
                     return $value;
                 }

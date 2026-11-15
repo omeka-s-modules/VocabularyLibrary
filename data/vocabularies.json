@@ -46,7 +46,7 @@
         "languages": [
             "en-au"
         ],
-        "license": null,
+        "license": "Copyright Commonwealth of Australia 2007",
         "namespace": "http://www.agls.gov.au/agls/terms/",
         "prefix": "agls",
         "properties": 13,
@@ -3936,7 +3936,7 @@
         "file": "vocabs/ore.rdf",
         "format": null,
         "languages": [],
-        "license": null,
+        "license": "http://creativecommons.org/licenses/by-sa/3.0/",
         "namespace": "http://www.openarchives.org/ore/terms/",
         "prefix": "ore",
         "properties": 8,
