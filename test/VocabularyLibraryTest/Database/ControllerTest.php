@@ -397,7 +397,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
 
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
             $this->assertSame(
-                "To compare and update Omeka's vocabulary, change its namespace from https://example.org/ns/ to http://example.org/ns#.",
+                "To compare and update Omeka's vocabulary, change its namespace from https://example.org/ns/ to http://example.org/ns#. This changes the addresses of its classes and properties everywhere Omeka publishes them. Values stay attached to their properties.",
                 $this->statusNote($page)
             );
             $this->assertMatchesRegularExpression('#<a class="button" href="' . $edit . '">Edit vocabulary</a>#', $page);

@@ -70,7 +70,8 @@ $inOmeka = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this
 $inLibrary = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this->escapeHtml($namespace));
 ?>
 <?php if ($installed['editUrl']): ?>
-<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('To compare and update Omeka\'s vocabulary, change its namespace from %1$s to %2$s.')), $inOmeka, $inLibrary); ?></p>
+<?php // What changing it does, which the admin should know before doing it. ?>
+<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('To compare and update Omeka\'s vocabulary, change its namespace from %1$s to %2$s.')), $inOmeka, $inLibrary); ?> <?php echo $this->escapeHtml($this->translate('This changes the addresses of its classes and properties everywhere Omeka publishes them. Values stay attached to their properties.')); ?></p>
 <p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Edit vocabulary'), $installed['editUrl'], ['class' => 'button']); ?></p>
 <?php else: ?>
 <p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('Omeka\'s vocabulary can\'t be compared or updated: its namespace is %1$s, not %2$s.')), $inOmeka, $inLibrary); ?></p>
