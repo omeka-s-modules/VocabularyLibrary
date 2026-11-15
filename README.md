@@ -28,8 +28,8 @@ Supervisors can use it.
 ## Finding and importing
 
 Filter the list by tag, by label language, or by whether a vocabulary's
-namespace is already in use in Omeka, and search it by name, summary, prefix,
-or namespace. Check **Also search class and property names** to find
+namespace is already in use in Omeka, and search it by name, summary, tag,
+prefix, or namespace. Check **Also search class and property names** to find
 vocabularies by their terms. Select a vocabulary's name to see its details,
 and **Import** to import it.
 
@@ -56,8 +56,8 @@ look over the changes first. It never removes a class or property.
 
 Where the library's vocabulary has several languages, or gives its terms both
 definitions and comments, the page offers a choice of which to compare. It
-starts with the choice that matches Omeka's vocabulary, so only real changes
-show.
+starts with the choice closest to Omeka's vocabulary, so in most cases only
+real changes show.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.
@@ -75,10 +75,22 @@ details, import, or comparison of a large vocabulary fails, raise PHP's
 
 ## About the library
 
-A vocabulary is included when its license does not forbid redistribution and
-Omeka imports classes or properties from it that are useful for describing
-resources. Thesauri and subject headings are not included, because Omeka
-imports classes and properties, not concepts.
+A vocabulary must be valid RDF with classes or properties that Omeka can
+import, and its license must not forbid redistribution. So thesauri, subject
+headings and code lists, whose terms are values rather than classes and
+properties, aren't included, and neither is a vocabulary with no RDF file, a
+namespace that isn't a valid address, or labels longer than Omeka allows.
+
+Beyond that, the Omeka team decides what is included. A vocabulary is usually
+left out when:
+
+- it describes something other than resources, such as other vocabularies,
+  standards, or a system's internals;
+- it is one collection's or one system's local fields, or a few properties
+  that Dublin Core or a vocabulary already in the library covers;
+- its properties are too fine-grained to choose from in Omeka, such as one for
+  every field, indicator and subfield of a cataloguing format;
+- its publisher has replaced or withdrawn it.
 
 The library adds a few things of its own to what the files say:
 
@@ -95,7 +107,7 @@ archives, used because the publisher's own file cannot be downloaded or does
 not import.
 
 To request a vocabulary, open an issue in this repository with its name and
-where it is published. The Omeka team decides what is included.
+where it is published.
 
 # For vocabulary publishers
 
@@ -103,11 +115,12 @@ where it is published. The Omeka team decides what is included.
 
 To submit a vocabulary of your own, open an issue in this repository with its
 name and the vocabulary as valid RDF, either as a file or as the address of
-one. A vocabulary needs a namespace but not an address of its own. The Omeka
-team decides what is included.
+one. A vocabulary needs a namespace but not an address of its own. It must
+meet the requirements in [About the library](#about-the-library), which also
+says what is usually left out.
 
-Valid RDF is the only requirement. These are recommendations, each of which
-makes a vocabulary more useful in Omeka:
+These are recommendations, each of which makes a vocabulary more useful in
+Omeka:
 
 - **A namespace that will not change,** not even from `http` to `https`.
   Omeka identifies a vocabulary by its namespace: under a new one it is a
@@ -120,8 +133,10 @@ makes a vocabulary more useful in Omeka:
 - **A label and a definition for every class and property, with language
   tags.**
 
-Labels are read from `skos:prefLabel` or `rdfs:label`, and comments from
-`skos:definition`, or otherwise `rdfs:comment`.
+Labels are read from `skos:prefLabel`, or otherwise `rdfs:label`, and
+comments from `skos:definition`, or otherwise `rdfs:comment`. Where a term has
+neither, a few other common properties are read, such as
+`dcterms:description` for comments.
 
 ## Vocabularies in the library
 
