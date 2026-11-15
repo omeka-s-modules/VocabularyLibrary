@@ -10,6 +10,8 @@ $file = basename($entry['file']);
 // marks "None". Only "Omeka's vocabulary" shows for some vocabularies and
 // not others: it reports the site's state rather than the file.
 $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
+// Labels with no language tag: the labels are there, but not their language.
+$notStated = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not stated in the file')));
 ?>
 <h3 class="o-title vocabulary-library-details-title" tabindex="-1"><?php echo $escape($entry['name']); ?></h3>
 
@@ -58,7 +60,7 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     <div class="meta-group">
         <h4><?php echo $translate('Label languages'); ?></h4>
         <?php // On one line: some vocabularies have dozens, which one per line would make taller than the screen. ?>
-        <div class="value"><?php echo $languageNames ? $escape(implode(', ', $languageNames)) : $notProvided; ?></div>
+        <div class="value"><?php echo $languageNames ? $escape(implode(', ', $languageNames)) : $notStated; ?></div>
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('License'); ?></h4>

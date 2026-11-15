@@ -125,8 +125,10 @@ Labels are read from `skos:prefLabel` or `rdfs:label`, and comments from
 
 ## Vocabularies in the library
 
-Files are redistributed without changes to their content. For each release,
-the library downloads each vocabulary from its publisher again, where it can.
+Files are redistributed without changes to what they say. A vocabulary
+published only within a web page, or as a list of terms each at its own
+address, is stored as one file of the same statements. For each release, the
+library downloads each vocabulary from its publisher again, where it can.
 If your vocabulary has moved, or the library's name or summary for it is
 wrong, open an issue in this repository.
 
