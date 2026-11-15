@@ -6,7 +6,9 @@
  *
  * In the table the status links to the vocabulary in core. The sidebar names
  * that vocabulary in its own group, so there the status is text, with a
- * Compare and update button when the user can update the vocabulary. The
+ * Compare and update button when the user can update the vocabulary; and a
+ * namespace not in use is said too, in the same words as the table's filter,
+ * with the Import button under it, so the status reads as one. The
  * table has no such link: on every row it would read as something to do,
  * when most vocabularies in Omeka have nothing to update.
  *
@@ -35,10 +37,18 @@ $namespace = $namespace ?? null;
 ?>
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
-<?php echo $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), array_filter([
+<?php
+$import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabulary-library', ['action' => 'import', 'slug' => $slug]), array_filter([
     'class' => 'button vocabulary-library-keep-place',
     'aria-label' => $name === null ? null : sprintf($this->translate('Import %s'), $name),
-])); ?>
+]));
+?>
+<?php if ($long): ?>
+<?php echo $this->translate('Namespace not in use'); ?>
+<p class="vocabulary-library-status-next"><?php echo $import; ?></p>
+<?php else: ?>
+<?php echo $import; ?>
+<?php endif; ?>
 <?php if ($prefixTakenBy !== null && $long): ?>
 <p class="vocabulary-library-prefix-note"><?php echo $this->escapeHtml(sprintf($this->translate('Its prefix is already used in Omeka by "%s". Choose another when importing.'), $prefixTakenBy)); ?></p>
 <?php elseif ($prefixTakenBy !== null): ?>
