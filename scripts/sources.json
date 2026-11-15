@@ -1906,9 +1906,8 @@
         ]
     },
     "intro": {
-        "copy_from": "LOV",
-        "download": "https://w3id.org/lso/intro/beta202408#",
-        "namespace": "https://w3id.org/lso/intro/beta202408#",
+        "download": "https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_beta202506.owl",
+        "namespace": "https://w3id.org/lso/intro/beta202506#",
         "prefix": "intro",
         "summary": "Classes and properties for recording relations between texts and images, such as citation or allusion, and the passages, shared features, and interpretations involved.",
         "summary_basis": [

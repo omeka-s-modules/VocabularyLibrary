@@ -2455,13 +2455,13 @@
     "intro": {
         "alt_title": null,
         "classes": 87,
-        "file": "vocabs/intro.nt",
+        "file": "vocabs/intro.rdf",
         "format": null,
         "languages": [
             "en"
         ],
-        "license": "This ontology is distributed under the creative commons attribution 4.0 international licence (CC-BY 4.0): https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/lso/intro/beta202408#",
+        "license": "This ontology is distributed under the creative commons attribution 4.0 international licence (CC-BY 4.0).",
+        "namespace": "https://w3id.org/lso/intro/beta202506#",
         "prefix": "intro",
         "properties": 43,
         "summary": "Classes and properties for recording relations between texts and images, such as citation or allusion, and the passages, shared features, and interpretations involved.",
