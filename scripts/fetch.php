@@ -7,8 +7,9 @@
  *
  * Tries the entry's download URL, then each of its alternates, asking for RDF
  * by content negotiation and following redirects. A downloaded file replaces
- * the stored one only if it differs and passes the import check, so a
- * publisher breaking their file leaves the last working copy in place.
+ * the stored one only if it differs and passes the import check under the
+ * entry's namespace, as written, so a publisher breaking their file, or
+ * moving its terms to https, leaves the last working copy in place.
  * An entry with "copy_from" has an archived copy because the publisher's
  * file didn't work. Its publisher's addresses are tried too, once each, but
  * the copy is never replaced, since a file that imports may still be a
@@ -82,7 +83,8 @@ foreach ($sources as $slug => $entry) {
 // it, or a phrase where there is nothing to count. Needs look: whether a
 // failed slug has an address that no longer serves a usable file. Working
 // again: per archived copy whose publisher's file now passes the check, how
-// that file differs from the copy.
+// that file differs from the copy, and the namespace its terms use if that
+// is another form of the entry's.
 $changed = $unchanged = $failed = $needsLook = $workingAgain = [];
 // Retry-After describes a host, so the back-off is per host asked. Down: the
 // hosts that answered failing on both tries, which may not be the ones asked,
@@ -155,7 +157,10 @@ while ($pending) {
                 $path = Download::tempFile($data, $extension);
                 $result = $check->check($path, $entry['namespace']);
                 unlink($path);
-                $reason = ImportCheck::failure($result);
+                // In the entry's namespace, not another form of it, which to
+                // Omeka is a new vocabulary: a decision, not an update. An
+                // archived copy's publisher is reported either way.
+                $reason = ImportCheck::failure($result, isset($archived[$slug]) ? null : $entry['namespace']);
             }
         }
         if ($reason) {
@@ -169,7 +174,10 @@ while ($pending) {
         }
         if (isset($archived[$slug])) {
             // The copy stays; how the publisher's file differs from it.
-            $workingAgain[$slug] = $same ? null : ImportCheck::differences($check->check($current[0], $entry['namespace']), $result);
+            $workingAgain[$slug] = $same ? [null, null] : [
+                ImportCheck::differences($check->check($current[0], $entry['namespace']), $result),
+                $result['namespace'] !== $entry['namespace'] ? $result['namespace'] : null,
+            ];
             unset($pending[$slug], $failed[$slug], $needsLook[$slug]);
             continue;
         }
@@ -236,12 +244,15 @@ foreach ($groups as $what => $slugs) {
 }
 if ($workingAgain) {
     echo "Archived copies whose publisher's file works again (copy kept; to switch back, see scripts/README.md):\n";
-    foreach ($workingAgain as $slug => $differences) {
+    foreach ($workingAgain as $slug => [$differences, $namespace]) {
         $parts = [];
         foreach (['added', 'removed', 'labels', 'comments'] as $kind) {
             if ($differences[$kind] ?? 0) {
                 $parts[] = "{$differences[$kind]} $kind";
             }
+        }
+        if ($namespace !== null) {
+            $parts[] = "its terms now under $namespace";
         }
         printf("  %s (%s)\n", $slug, $differences === null ? 'same file' : ($parts ? implode(', ', $parts) : 'same terms'));
     }

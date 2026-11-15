@@ -122,7 +122,8 @@ foreach ($sources as $slug => $entry) {
         continue;
     }
     $result = $check->check($files[0], $entry['namespace'] ?? null);
-    if ($failure = ImportCheck::failure($result)) {
+    // In the namespace the entry records, not another form of it.
+    if ($failure = ImportCheck::failure($result, $entry['namespace'] ?? null)) {
         $problems[] = "$slug: $failure";
         continue;
     }

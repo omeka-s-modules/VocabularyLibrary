@@ -139,6 +139,27 @@ class FetchFromServerTest extends ScriptTestCase
         $this->assertSame(20000, strlen(Download::fetchAll(["$this->address/vocabulary.ttl"])[0]['body']));
     }
 
+    public function testAFileWhoseTermsMovedToAnotherFormOfTheNamespaceIsNotKept()
+    {
+        file_put_contents("$this->dir/published.ttl", str_replace('http://example.org/ns#', 'https://example.org/ns#', file_get_contents(self::fixture('basic.ttl'))));
+        $this->writeSources(['ex' => ['download' => "$this->address/vocabulary.ttl"] + self::ENTRY]);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('failed: ex (no longer usable, needs a look)', $output);
+        $this->assertStringContainsString("the file's terms use the namespace https://example.org/ns#, not http://example.org/ns#", $output);
+        $this->assertStoredFileKept();
+    }
+
+    public function testAnArchivedCopysPublisherInAnotherFormOfTheNamespaceIsReported()
+    {
+        file_put_contents("$this->dir/published.ttl", str_replace('http://example.org/ns#', 'https://example.org/ns#', file_get_contents(self::fixture('basic.ttl'))));
+        $this->writeSources(['ex' => ['copy_from' => 'LOV', 'download' => "$this->address/vocabulary.ttl"] + self::ENTRY]);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('  ex (its terms now under https://example.org/ns#)', $output);
+        $this->assertStoredFileKept();
+    }
+
     public function testAnArchivedCopysPublisherIsTriedAndReportedButTheCopyKept()
     {
         file_put_contents("$this->dir/published.ttl", file_get_contents(self::fixture('basic.ttl')) . "\nex:Extra a rdfs:Class .\n");

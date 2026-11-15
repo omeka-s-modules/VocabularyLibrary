@@ -71,6 +71,7 @@ class BuildTest extends ScriptTestCase
             'other addresses and a submitter' => [['download' => null, 'alternates' => ['http://example.org/ns.ttl'], 'submitted_by' => 'A. Potter', 'submitted_on' => '2026-11-12'], 'ex: has both alternates and submitted_by'],
             'a title of its own' => [['title' => 'My title'], 'ex: "title" is the file\'s'],
             'wrong namespace' => [['namespace' => 'http://example.org/unrelated/'], 'ex: the namespace imports nothing'],
+            'another form of the namespace' => [['namespace' => 'https://example.org/ns#'], "ex: the file's terms use the namespace http://example.org/ns#, not https://example.org/ns#"],
         ];
     }
 

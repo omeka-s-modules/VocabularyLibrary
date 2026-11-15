@@ -30,9 +30,11 @@ The comment at the top of each script gives its usage and options in full.
   library, which has no address.
 - `update.php [<slug> …]`: downloads every vocabulary again, or only the
   slugs given, and rebuilds. A downloaded file replaces the stored one only
-  if it differs and still imports. The report says how each changed
-  vocabulary differs, or that only its file does, and sets apart the
-  failures that need a look from servers that are unavailable for now. An
+  if it differs and still imports under the same namespace, so a file whose
+  terms move, even from `http` to `https`, is reported for a look instead
+  (see Versions). The report says how each changed vocabulary differs, or
+  that only its file does, and sets apart the failures that need a look
+  from servers that are unavailable for now. An
   archived copy (`copy_from`) is never replaced, but its publisher's address
   is tried too, and the report lists those whose publisher's file works
   again, with how it differs from the copy. To switch one back, remove its

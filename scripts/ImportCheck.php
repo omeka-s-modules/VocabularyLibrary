@@ -61,9 +61,13 @@ class ImportCheck
      *
      * A result whose namespace was inferred from the file's terms, because
      * the given namespace and its variants import nothing, counts as a
-     * failure: the file is likely another vocabulary's.
+     * failure: the file is likely another vocabulary's. So does, given the
+     * namespace an entry records, a result in another form of it, http for
+     * https or another closing # or /: to Omeka that is another vocabulary
+     * (scripts/README.md, Versions). Adding a vocabulary gives none, to take
+     * the form its file uses.
      */
-    public static function failure(array $result)
+    public static function failure(array $result, $namespace = null)
     {
         if (!$result['parsed']) {
             return 'does not parse: ' . $result['error'];
@@ -73,6 +77,9 @@ class ImportCheck
         }
         if ($result['namespace_source'] === 'terms') {
             return sprintf('the namespace imports nothing; the file\'s terms use %s', $result['namespace']);
+        }
+        if ($namespace !== null && $result['namespace'] !== $namespace) {
+            return sprintf('the file\'s terms use the namespace %s, not %s', $result['namespace'], $namespace);
         }
         if (!empty($result['limits'])) {
             return implode('; ', $result['limits']);

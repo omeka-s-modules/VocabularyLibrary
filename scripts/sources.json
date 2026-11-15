@@ -46,7 +46,7 @@
     },
     "agrelon": {
         "download": "http://d-nb.info/standards/elementset/agrelon#",
-        "namespace": "http://d-nb.info/standards/elementset/agrelon#",
+        "namespace": "https://d-nb.info/standards/elementset/agrelon#",
         "prefix": "agrelon",
         "summary": "Classes and properties for relationships between people and organizations, such as kinship, friendship, employment, and correspondence, with the source, reliability, and time span of each.",
         "summary_basis": [
@@ -775,7 +775,7 @@
     },
     "cro": {
         "download": "http://rhizomik.net/ontologies/copyrightonto.owl#",
-        "namespace": "http://rhizomik.net/ontologies/copyrightonto.owl#",
+        "namespace": "https://rhizomik.net/ontologies/copyrightonto.owl#",
         "prefix": "cro",
         "summary": "Classes and properties for describing actions on copyrighted works, such as copying, adapting, translating, performing, broadcasting, and selling, and related agreements and conditions.",
         "summary_basis": [
@@ -1087,7 +1087,7 @@
     },
     "dnbt": {
         "download": "http://d-nb.info/standards/elementset/dnb#",
-        "namespace": "http://d-nb.info/standards/elementset/dnb#",
+        "namespace": "https://d-nb.info/standards/elementset/dnb#",
         "prefix": "dnbt",
         "summary": "Classes and properties for publication data, such as qualified subjects and languages, canonical and deprecated identifiers, copyright status, and whether an activity was automated.",
         "summary_basis": [
@@ -1689,7 +1689,7 @@
             "http://www.geonames.org/ontology"
         ],
         "download": "https://www.geonames.org/ontology/ontology_v3.4.rdf",
-        "namespace": "http://www.geonames.org/ontology#",
+        "namespace": "https://www.geonames.org/ontology#",
         "prefix": "gn",
         "summary": "Classes and properties for describing geographical features, especially those in the GeoNames database, with their names, types, coordinates, population, and parent, neighboring, and nearby features.",
         "summary_basis": [
@@ -1702,7 +1702,7 @@
     },
     "gndo": {
         "download": "http://d-nb.info/standards/elementset/gnd#",
-        "namespace": "http://d-nb.info/standards/elementset/gnd#",
+        "namespace": "https://d-nb.info/standards/elementset/gnd#",
         "prefix": "gndo",
         "summary": "Classes and properties for describing persons, families, corporate bodies, conferences, places, works, and subject headings in authority records of the Integrated Authority File.",
         "summary_basis": [
