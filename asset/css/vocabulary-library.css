@@ -156,9 +156,14 @@
     width: 7.5rem;
 }
 
-/* With the sidebar open, which lists the tags, the title needs the room. */
+/* With the sidebar open, which has the tags, prefix and counts, the title
+   and its summary need the room. */
 .sidebar-open .vocabulary-library-tags-column,
-.sidebar-open #vocabulary-library-table .vocabulary-library-tags {
+.sidebar-open .vocabulary-library-prefix-column,
+.sidebar-open .vocabulary-library-count-column,
+.sidebar-open #vocabulary-library-table .vocabulary-library-tags,
+.sidebar-open #vocabulary-library-table .vocabulary-library-prefix,
+.sidebar-open #vocabulary-library-table .vocabulary-library-count {
     display: none;
 }
 

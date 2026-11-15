@@ -125,9 +125,9 @@ $selected = function ($name, $value) use ($query) {
                     <?php endforeach; ?>
                 </ul>
             </td>
-            <td><?php echo $escape($entry['prefix']); ?></td>
-            <td><?php echo $entry['classes']; ?></td>
-            <td><?php echo $entry['properties']; ?></td>
+            <td class="vocabulary-library-prefix"><?php echo $escape($entry['prefix']); ?></td>
+            <td class="vocabulary-library-count"><?php echo $entry['classes']; ?></td>
+            <td class="vocabulary-library-count"><?php echo $entry['properties']; ?></td>
             <td><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $row['slug'], 'name' => $entry['name'], 'installed' => $row['installed'], 'prefixTakenBy' => $row['prefixTakenBy']]); ?></td>
         </tr>
         <?php endforeach; ?>
