@@ -10,8 +10,8 @@
  * library's own prefix, tags, alternative title and summary) and
  * data/term-index.json. Touches nothing else.
  *
- * The file's title and description are kept as the file gives them; what the
- * library adds is kept in its own fields and never replaces them.
+ * The file's title is kept as the file gives it; what the library adds is
+ * kept in its own fields and never replaces it.
  *
  * Nothing is written if anything has a problem: a file that does not import
  * or would run as a page on the site, or an entry that breaks one of the
@@ -180,7 +180,6 @@ foreach ($sources as $slug => $entry) {
     $vocabularies[$slug] = [
         'alt_title' => $entry['alt_title'] ?? null,
         'classes' => $result['classes'],
-        'description' => $result['description'],
         'file' => substr($files[0], strlen($repo->path('data')) + 1),
         'format' => $result['format'],
         'languages' => $result['languages'],

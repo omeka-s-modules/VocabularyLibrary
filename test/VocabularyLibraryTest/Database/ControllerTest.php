@@ -218,20 +218,6 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchesRegularExpression('#<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">[^<]*<span class="vocabulary-library-sr-only">\(opens in a new tab\)</span></a>#', $page);
     }
 
-    public function testALongDescriptionIsCutAtASentence()
-    {
-        [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        // The second sentence's "e.g." doesn't end it, and the third
-        // sentence would take the start past its length, so it and the
-        // second paragraph are the rest, behind "Full description".
-        $start = preg_quote('The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened.', '#');
-        $third = preg_quote('This third sentence takes the first paragraph well past the length at which the details sidebar cuts a description.', '#');
-        $this->assertMatchesRegularExpression(
-            "#$start\s*<div class=\"vocabulary-library-more\">\s*<a [^>]*>Full description</a>\s*<div class=\"collapsible\">\s*<p>$third</p>\s*<p>A second paragraph follows\.</p>\s*</div>#",
-            $page
-        );
-    }
-
     public function testTheDetailsStartFilteredFromATermSearch()
     {
         // The details pass the search on to the lists, which start filtered.

@@ -11,7 +11,6 @@ class BuildTest extends ScriptTestCase
         $this->assertSame(['ex' => [
             'alt_title' => null,
             'classes' => 1,
-            'description' => "For describing things.\n\nSecond paragraph.",
             'file' => 'vocabs/ex.ttl',
             'format' => null,
             'languages' => ['de', 'en'],

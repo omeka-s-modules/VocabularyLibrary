@@ -8,7 +8,7 @@
 
 <http://example.org/ns#> a owl:Ontology ;
     dcterms:title "Example Vocabulary"@en ;
-    dcterms:description "The Example Vocabulary describes things and their parts. It was written for tests, e.g. of how a description is shortened. This third sentence takes the first paragraph well past the length at which the details sidebar cuts a description.\n\nA second paragraph follows."@en ;
+    dcterms:description "The Example Vocabulary describes things and their parts."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "ex" .
 

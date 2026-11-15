@@ -378,7 +378,7 @@
         // Core's expand toggle names each link "Expand" or "Collapse". The
         // sidebar's toggles have visible text, which names them better, and
         // aria-expanded already says which state they're in.
-        $(document).on('o:expanded o:collapsed', '.vocabulary-library-more > a, .vocabulary-library-terms > a', function () {
+        $(document).on('o:expanded o:collapsed', '.vocabulary-library-terms > a', function () {
             $(this).removeAttr('aria-label title');
         });
 

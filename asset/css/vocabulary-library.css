@@ -211,24 +211,6 @@
     color: #a91919;
 }
 
-/* Details sidebar, on core's detail sidebars: title, description, then
-   meta groups. */
-.vocabulary-library-more {
-    margin-bottom: 12px;
-}
-
-.vocabulary-library-more > a.expand,
-.vocabulary-library-more > a.collapse {
-    display: inline-flex;
-    gap: 6px;
-    text-align: left;
-    font-size: 13px;
-}
-
-.vocabulary-library-more .collapsible p {
-    margin: 6px 0 0;
-}
-
 /* The term filter, at the top of the Classes and properties tab. */
 .vocabulary-library-term-filter {
     margin: 0 0 6px;

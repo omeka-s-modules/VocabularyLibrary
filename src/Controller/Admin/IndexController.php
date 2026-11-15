@@ -25,11 +25,6 @@ use VocabularyLibrary\Stdlib\TermSearch;
 class IndexController extends AbstractActionController
 {
     /**
-     * About where the description is cut in the details sidebar.
-     */
-    const EXCERPT_LENGTH = 200;
-
-    /**
      * The library page's search, filters and sort, which its URL keeps: the
      * page gives the script this list, for saveState(). Import and Compare
      * carry them in "return", so their links back lead to the library as the
@@ -132,9 +127,6 @@ class IndexController extends AbstractActionController
         $view->setVariable('slug', $slug);
         $view->setVariable('entry', $entry);
         $view->setVariable('termFilter', $this->termFilter());
-        [$excerpt, $rest] = PlainText::excerpt($entry['description'], self::EXCERPT_LENGTH);
-        $view->setVariable('excerpt', $excerpt);
-        $view->setVariable('rest', $rest);
         $view->setVariable('tagLabels', $this->tagLabels(array_intersect_key($this->tags, array_flip($entry['tags']))));
         $view->setVariable('languageNames', $this->languageNames->names($this->languageNames->primaries($entry['languages'])));
         $view->setVariable('installed', $this->siteVocabularies->installed($entry));

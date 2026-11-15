@@ -1,7 +1,7 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
-// Publisher text arrives as plain text: the build cleans the description and
+// Publisher text arrives as plain text: the build cleans the title and
 // license.
 $license = $entry['license'];
 $file = basename($entry['file']);
@@ -36,33 +36,9 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     </div>
     <?php endif; ?>
     <div class="meta-group">
-        <h4><?php echo $translate('Title'); ?></h4>
-        <div class="value"><?php echo $entry['title'] === null ? $notProvided : $escape($entry['title']); ?></div>
-    </div>
-    <div class="meta-group">
         <h4><?php echo $translate('Summary'); ?></h4>
         <?php // Written in English, whatever the admin's language. ?>
         <div class="value" lang="en"><?php echo $escape($entry['summary']); ?></div>
-    </div>
-    <div class="meta-group">
-        <h4><?php echo $translate('Description'); ?></h4>
-        <div class="value">
-            <?php if ($excerpt === null): ?>
-            <?php echo $notProvided; ?>
-            <?php else: ?>
-            <?php echo $escape($excerpt); ?>
-            <?php endif; ?>
-            <?php if ($rest): ?>
-            <div class="vocabulary-library-more">
-                <a href="#" class="expand" aria-expanded="false"><?php echo $translate('Full description'); ?></a>
-                <div class="collapsible">
-                    <?php foreach ($rest as $paragraph): ?>
-                    <p><?php echo $escape($paragraph); ?></p>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-            <?php endif; ?>
-        </div>
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('Namespace URI'); ?></h4>

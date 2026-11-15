@@ -80,12 +80,11 @@ Omeka imports classes or properties from it that are useful for describing
 resources. Thesauri and subject headings are not included, because Omeka
 imports classes and properties, not concepts.
 
-Titles and descriptions are the publisher's, taken from the file. The library
-adds a few things of its own, shown separately from them:
+The library adds a few things of its own to what the files say:
 
-- **A name**, where the file's title is missing, not in English, long, or
-  leaves out the name the vocabulary is known by. It is quoted from the file
-  or the publisher's documentation.
+- **A name**, in place of the file's title where that is missing, not in
+  English, long, or leaves out the name the vocabulary is known by. It is
+  quoted from the file or the publisher's documentation.
 - **A one-sentence summary** of what the classes and properties describe,
   drafted with AI from the file and the publisher's documentation, checked
   claim by claim against them, and reviewed.
@@ -117,7 +116,7 @@ makes a vocabulary more useful in Omeka:
 - **A stable address for the file,** if it has one, so that each release can
   include your current version.
 - **A stated license.**
-- **A title and a description of the vocabulary, in the file.**
+- **A title for the vocabulary, in the file.**
 - **A label and a definition for every class and property, with language
   tags.**
 
