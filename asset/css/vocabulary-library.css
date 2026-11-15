@@ -128,12 +128,13 @@
     list-style-type: none;
 }
 
-/* The summary: a sentence, so up to two lines. */
+/* The summary: a sentence, so up to three lines, which shows it whole at
+   most widths. */
 .vocabulary-library-summary {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
     color: #676767;
 }
