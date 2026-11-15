@@ -148,6 +148,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchesRegularExpression('/<p class="vocabulary-library-term-search-failed[^"]*" role="alert" hidden>/', $page);
         // Only the filter's option says so; no vocabulary's status does.
         $this->assertSame(1, substr_count($page, 'Namespace in use'));
+        // A search finds a vocabulary by its tags' names too.
+        $this->assertMatchesRegularExpression('/data-search="[^"]*General"/', $page);
     }
 
     public function testTheLibraryIsForAdministratorsAndSupervisors()

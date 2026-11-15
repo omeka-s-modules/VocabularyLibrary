@@ -98,8 +98,13 @@ class IndexController extends AbstractActionController
         // Most vocabularies are in English, and many leave English untagged,
         // so an English option would hide most of them.
         unset($languageCounts['en']);
-        usort($rows, function ($a, $b) {
-            return $this->collation->compare($a['entry']['name'], $b['entry']['name']);
+        // As the page's script sorts titles: without a leading English
+        // article, so The Music Ontology files under M.
+        $sortable = function ($name) {
+            return preg_replace('/^(?:the|an?)\s+/i', '', $name);
+        };
+        usort($rows, function ($a, $b) use ($sortable) {
+            return $this->collation->compare($sortable($a['entry']['name']), $sortable($b['entry']['name']));
         });
 
         $view = new ViewModel;

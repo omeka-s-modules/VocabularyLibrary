@@ -95,7 +95,7 @@ $selected = function ($name, $value) use ($query) {
         $detailsUrl = $this->url('admin/vocabulary-library', ['action' => 'show-details', 'slug' => $row['slug']]);
         ?>
         <tr data-slug="<?php echo $escape($row['slug']); ?>"
-            data-search="<?php echo $escape(implode(' ', array_filter([$entry['alt_title'], $entry['title'], $entry['prefix'], $entry['namespace'], $entry['summary']]))); ?>"
+            data-search="<?php echo $escape(implode(' ', array_filter(array_merge([$entry['alt_title'], $entry['title'], $entry['prefix'], $entry['namespace'], $entry['summary']], array_intersect_key($tagLabels, array_flip($entry['tags'])))))); ?>"
             data-title="<?php echo $escape($entry['name']); ?>"
             data-prefix="<?php echo $escape($entry['prefix']); ?>"
             data-classes="<?php echo $entry['classes']; ?>"
@@ -109,7 +109,7 @@ $selected = function ($name, $value) use ($query) {
                         'class' => 'sidebar-content',
                         'data-sidebar-content-url' => $detailsUrl,
                     ]); ?>
-                    <?php // The file's title, where it differs from the name, is in the sidebar and in the search text. ?>
+                    <?php // The file's title, where it differs from the name, is in the search text, as are the tags' names. ?>
                     <?php // Summaries are written in English, whatever the admin's language. ?>
                     <p class="vocabulary-library-summary" lang="en"><?php echo $escape($entry['summary']); ?></p>
                     <div class="vocabulary-library-term-matches" hidden>

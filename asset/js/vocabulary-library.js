@@ -151,7 +151,15 @@
         const allItem = document.getElementById('vocabulary-library-term-all').content.firstElementChild;
         // A matching term's text, as Omeka writes terms.
         const termText = match => match.label + ' (' + match.term + ')';
-        const searchText = new Map(rows.map(row => [row, fold(row.dataset.search)]));
+        // Each row's search text as its words, each after a space, split
+        // wherever the text has anything but a letter or digit, so a query
+        // word can be matched to the start of one: "ore" finds OAI ORE, not
+        // every "core".
+        const wordsOf = text => text.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+        const searchText = new Map(rows.map(row => [row, ' ' + wordsOf(fold(row.dataset.search)).join(' ')]));
+        // Titles sort without a leading English article, so The Music
+        // Ontology files under M, as in a library catalogue.
+        const sortable = (row, key) => key === 'title' ? row.dataset.title.replace(/^(?:the|an?)\s+/i, '') : row.dataset[key];
         // Term search needs as many characters as the server asks for.
         const termQueryMin = filters.data('term-query-min');
         const collator = new Intl.Collator(document.documentElement.lang || undefined, {sensitivity: 'base', numeric: true});
@@ -175,9 +183,9 @@
         });
 
         const apply = function () {
-            const query = fold(form.q.value.trim());
-            // Every word must match a row, in any order.
-            const words = query.split(/\s+/).filter(Boolean);
+            // Every word of the query must start a word of the row, in any
+            // order.
+            const queryWords = wordsOf(fold(form.q.value.trim()));
             const tag = form.tag.value;
             const lang = form.lang.value;
             const show = form.show.value;
@@ -192,13 +200,13 @@
                 const found = own(held, row.dataset.slug);
                 const terms = (found ? found.terms : []).filter(function (match) {
                     const text = fold(termText(match));
-                    return words.every(word => text.includes(word));
+                    return queryWords.every(word => text.includes(word));
                 });
                 // How many match in all, while the terms shown are for exactly
                 // this query rather than narrowed from an earlier one. The
                 // server compares accents, so this compares the text as typed.
                 const all = found && termQuery === form.q.value.trim().toLowerCase() ? found.count : 0;
-                let visible = words.every(word => searchText.get(row).includes(word)) || terms.length > 0;
+                let visible = queryWords.every(word => searchText.get(row).includes(' ' + word)) || terms.length > 0;
                 if (tag !== '' && !row.dataset.tags.split(' ').includes(tag)) {
                     visible = false;
                 }
@@ -250,9 +258,9 @@
             rows.sort(function (a, b) {
                 const order = numeric
                     ? Number(a.dataset[key]) - Number(b.dataset[key])
-                    : collator.compare(a.dataset[key], b.dataset[key]);
+                    : collator.compare(sortable(a, key), sortable(b, key));
                 // Ties fall back to the title.
-                return (direction === 'desc' ? -order : order) || collator.compare(a.dataset.title, b.dataset.title);
+                return (direction === 'desc' ? -order : order) || collator.compare(sortable(a, 'title'), sortable(b, 'title'));
             });
             tbody.append(rows);
             saveState();
