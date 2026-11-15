@@ -179,6 +179,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         foreach (['Example Vocabulary', 'http://example.org/ns#', 'https://creativecommons.org/licenses/by/4.0/', 'German'] as $text) {
             $this->assertStringContainsString($text, $page);
         }
+        // What the vocabulary is comes first, and its languages are one line.
+        $this->assertLessThan(strpos($page, '<h4>Status</h4>'), strpos($page, '<h4>Summary</h4>'));
+        $this->assertStringContainsString('<div class="value">English, German</div>', $page);
         // The status is a state, with the next step under it.
         $this->assertMatchesRegularExpression('#Namespace not in use\s*<p class="vocabulary-library-status-next"><a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/import/ex">Import</a></p>#', $page);
         // The lists, read from the file, load when their tab is shown.

@@ -24,6 +24,12 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
 ], $escape($entry['name'])); ?>
 
 <div class="sidebar-section active" id="vocabulary-library-details" role="tabpanel" aria-labelledby="vocabulary-library-details-label">
+    <?php // What the vocabulary is, first, as core's sidebars open with a description. ?>
+    <div class="meta-group">
+        <h4><?php echo $translate('Summary'); ?></h4>
+        <?php // Written in English, whatever the admin's language. ?>
+        <div class="value" lang="en"><?php echo $escape($entry['summary']); ?></div>
+    </div>
     <div class="meta-group">
         <h4><?php echo $translate('Status'); ?></h4>
         <div class="value"><?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'prefixTakenBy' => $prefixTakenBy, 'long' => true, 'namespace' => $entry['namespace']]); ?></div>
@@ -35,11 +41,6 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
         <div class="value"><?php echo $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']); ?></div>
     </div>
     <?php endif; ?>
-    <div class="meta-group">
-        <h4><?php echo $translate('Summary'); ?></h4>
-        <?php // Written in English, whatever the admin's language. ?>
-        <div class="value" lang="en"><?php echo $escape($entry['summary']); ?></div>
-    </div>
     <div class="meta-group">
         <h4><?php echo $translate('Namespace URI'); ?></h4>
         <div class="value"><?php echo $escape($entry['namespace']); ?></div>
@@ -56,12 +57,8 @@ $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escap
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('Label languages'); ?></h4>
-        <?php if (!$languageNames): ?>
-        <div class="value"><?php echo $notProvided; ?></div>
-        <?php endif; ?>
-        <?php foreach ($languageNames as $name): ?>
-        <div class="value"><?php echo $escape($name); ?></div>
-        <?php endforeach; ?>
+        <?php // On one line: some vocabularies have dozens, which one per line would make taller than the screen. ?>
+        <div class="value"><?php echo $languageNames ? $escape(implode(', ', $languageNames)) : $notProvided; ?></div>
     </div>
     <div class="meta-group">
         <h4><?php echo $translate('License'); ?></h4>
