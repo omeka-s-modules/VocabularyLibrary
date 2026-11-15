@@ -1,4 +1,69 @@
 {
+    "a-cat": {
+        "download": "https://w3id.org/arco/ontology/catalogue/",
+        "namespace": "https://w3id.org/arco/ontology/catalogue/",
+        "prefix": "a-cat",
+        "summary": "Classes and properties for describing catalog records of Italian cultural heritage, with their versions, identifiers, cataloging agents, access profiles, and privacy levels.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
+        ]
+    },
+    "a-cd": {
+        "download": "https://w3id.org/arco/ontology/context-description/",
+        "namespace": "https://w3id.org/arco/ontology/context-description/",
+        "prefix": "a-cd",
+        "summary": "Classes and properties for describing the context of a cultural property, such as authorship, dating, acquisition, legal status, inventories, bibliography, documentation, surveys, and conservation work.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
+        ]
+    },
+    "a-ce": {
+        "download": "https://w3id.org/arco/ontology/cultural-event/",
+        "namespace": "https://w3id.org/arco/ontology/cultural-event/",
+        "prefix": "a-ce",
+        "summary": "Classes and properties for describing events involving cultural properties, such as exhibitions and competitions, along with their organizers, awards, and recurrence over time.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums",
+            "time"
+        ]
+    },
+    "a-dd": {
+        "download": "https://w3id.org/arco/ontology/denotative-description/",
+        "namespace": "https://w3id.org/arco/ontology/denotative-description/",
+        "prefix": "a-dd",
+        "summary": "Classes and properties for the characteristics of cultural property recorded during cataloging, such as measurements, materials, techniques, conservation status, inscriptions, and decoration.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
+        ]
+    },
+    "a-ip": {
+        "alternates": [
+            "https://w3id.org/arco/ontology/immovable-property/"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "https://w3id.org/arco/ontology/immovable-property",
+        "namespace": "https://w3id.org/arco/ontology/immovable-property/",
+        "prefix": "a-ip",
+        "summary": "Classes and properties for describing buildings and other constructions as cultural heritage, including their layout, rooms, floors, roofs, stairs, windows, and technical systems.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
+        ]
+    },
     "a-loc": {
         "download": "https://w3id.org/arco/ontology/location/",
         "namespace": "https://w3id.org/arco/ontology/location/",
@@ -10,6 +75,23 @@
         "tags": [
             "museums",
             "places"
+        ]
+    },
+    "a-mp": {
+        "alternates": [
+            "https://w3id.org/arco/ontology/movable-property/"
+        ],
+        "copy_from": "DBpedia Archivo",
+        "download": "https://w3id.org/arco/ontology/movable-property",
+        "namespace": "https://w3id.org/arco/ontology/movable-property/",
+        "prefix": "a-mp",
+        "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums",
+            "natural-history"
         ]
     },
     "ac": {
@@ -110,9 +192,21 @@
         ]
     },
     "arco": {
+        "download": "https://w3id.org/arco/ontology/arco/",
+        "namespace": "https://w3id.org/arco/ontology/arco/",
+        "prefix": "arco",
+        "summary": "Classes and properties for describing cultural property, such as archaeological, artistic, photographic, musical, numismatic, and natural heritage, with categories, components, and catalog numbers.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "museums"
+        ]
+    },
+    "arco-core": {
         "download": "https://w3id.org/arco/ontology/core/",
         "namespace": "https://w3id.org/arco/ontology/core/",
-        "prefix": "arco",
+        "prefix": "core",
         "summary": "Classes and properties for concepts used throughout a cultural heritage ontology network, such as parts and wholes, classification, identifiers, agent roles, and locations.",
         "summary_basis": [
             "file",
@@ -424,18 +518,6 @@
             "rights"
         ]
     },
-    "cdesc": {
-        "download": "https://w3id.org/arco/ontology/context-description/",
-        "namespace": "https://w3id.org/arco/ontology/context-description/",
-        "prefix": "cdesc",
-        "summary": "Classes and properties for describing the context of a cultural property, such as authorship, dating, acquisition, legal status, inventories, bibliography, documentation, surveys, and conservation work.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums"
-        ]
-    },
     "cdtype": {
         "download": "http://purl.org/cld/cdtype/",
         "namespace": "http://purl.org/cld/cdtype/",
@@ -480,19 +562,6 @@
         "tags": [
             "publishing",
             "people"
-        ]
-    },
-    "cevent": {
-        "download": "https://w3id.org/arco/ontology/cultural-event/",
-        "namespace": "https://w3id.org/arco/ontology/cultural-event/",
-        "prefix": "cevent",
-        "summary": "Classes and properties for describing events involving cultural properties, such as exhibitions and competitions, along with their organizers, awards, and recurrence over time.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums",
-            "time"
         ]
     },
     "chrono": {
@@ -789,18 +858,6 @@
             "linked-data"
         ]
     },
-    "ctlog": {
-        "download": "https://w3id.org/arco/ontology/catalogue/",
-        "namespace": "https://w3id.org/arco/ontology/catalogue/",
-        "prefix": "ctlog",
-        "summary": "Classes and properties for describing catalog records of Italian cultural heritage, with their versions, identifiers, cataloging agents, access profiles, and privacy levels.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums"
-        ]
-    },
     "cwork": {
         "copy_from": "LOV",
         "download": "http://www.bbc.co.uk/ontologies/creativework/",
@@ -976,18 +1033,6 @@
         ],
         "tags": [
             "general"
-        ]
-    },
-    "ddesc": {
-        "download": "https://w3id.org/arco/ontology/denotative-description/",
-        "namespace": "https://w3id.org/arco/ontology/denotative-description/",
-        "prefix": "ddesc",
-        "summary": "Classes and properties for the characteristics of cultural property recorded during cataloging, such as measurements, materials, techniques, conservation status, inscriptions, and decoration.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums"
         ]
     },
     "deo": {
@@ -1878,22 +1923,6 @@
             "media"
         ]
     },
-    "immovable-property-arco-network": {
-        "alternates": [
-            "https://w3id.org/arco/ontology/immovable-property/"
-        ],
-        "copy_from": "DBpedia Archivo",
-        "download": "https://w3id.org/arco/ontology/immovable-property",
-        "namespace": "https://w3id.org/arco/ontology/immovable-property/",
-        "prefix": "a-ip",
-        "summary": "Classes and properties for describing buildings and other constructions as cultural heritage, including their layout, rooms, floors, roofs, stairs, windows, and technical systems.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums"
-        ]
-    },
     "information-model-for-visual-arts": {
         "alternates": [
             "http://visualartsdna.org/2021/07/16/model"
@@ -2366,23 +2395,6 @@
         ],
         "tags": [
             "libraries"
-        ]
-    },
-    "movable-property-arco-network": {
-        "alternates": [
-            "https://w3id.org/arco/ontology/movable-property/"
-        ],
-        "copy_from": "DBpedia Archivo",
-        "download": "https://w3id.org/arco/ontology/movable-property",
-        "namespace": "https://w3id.org/arco/ontology/movable-property/",
-        "prefix": "a-mp",
-        "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums",
-            "natural-history"
         ]
     },
     "mpeg7": {
@@ -3167,18 +3179,6 @@
         ],
         "tags": [
             "science"
-        ]
-    },
-    "r-arco": {
-        "download": "https://w3id.org/arco/ontology/arco/",
-        "namespace": "https://w3id.org/arco/ontology/arco/",
-        "prefix": "r-arco",
-        "summary": "Classes and properties for describing cultural property, such as archaeological, artistic, photographic, musical, numismatic, and natural heritage, with categories, components, and catalog numbers.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "museums"
         ]
     },
     "rcgs": {

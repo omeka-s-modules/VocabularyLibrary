@@ -1,4 +1,100 @@
 {
+    "a-cat": {
+        "alt_title": null,
+        "classes": 52,
+        "file": "vocabs/a-cat.rdf",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/catalogue/",
+        "prefix": "a-cat",
+        "properties": 70,
+        "summary": "Classes and properties for describing catalog records of Italian cultural heritage, with their versions, identifiers, cataloging agents, access profiles, and privacy levels.",
+        "tags": [
+            "museums"
+        ],
+        "title": "Catalogue Ontology (ArCo network)"
+    },
+    "a-cd": {
+        "alt_title": null,
+        "classes": 176,
+        "file": "vocabs/a-cd.rdf",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/context-description/",
+        "prefix": "a-cd",
+        "properties": 430,
+        "summary": "Classes and properties for describing the context of a cultural property, such as authorship, dating, acquisition, legal status, inventories, bibliography, documentation, surveys, and conservation work.",
+        "tags": [
+            "museums"
+        ],
+        "title": "Context Description Ontology (ArCo network)"
+    },
+    "a-ce": {
+        "alt_title": null,
+        "classes": 15,
+        "file": "vocabs/a-ce.rdf",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/cultural-event/",
+        "prefix": "a-ce",
+        "properties": 33,
+        "summary": "Classes and properties for describing events involving cultural properties, such as exhibitions and competitions, along with their organizers, awards, and recurrence over time.",
+        "tags": [
+            "museums",
+            "time"
+        ],
+        "title": "Cultural Event Ontology (ArCo network)"
+    },
+    "a-dd": {
+        "alt_title": null,
+        "classes": 51,
+        "file": "vocabs/a-dd.rdf",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/denotative-description/",
+        "prefix": "a-dd",
+        "properties": 181,
+        "summary": "Classes and properties for the characteristics of cultural property recorded during cataloging, such as measurements, materials, techniques, conservation status, inscriptions, and decoration.",
+        "tags": [
+            "museums"
+        ],
+        "title": "Denotative Description Ontology (ArCo network)"
+    },
+    "a-ip": {
+        "alt_title": null,
+        "classes": 62,
+        "file": "vocabs/a-ip.owl",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/immovable-property/",
+        "prefix": "a-ip",
+        "properties": 50,
+        "summary": "Classes and properties for describing buildings and other constructions as cultural heritage, including their layout, rooms, floors, roofs, stairs, windows, and technical systems.",
+        "tags": [
+            "museums"
+        ],
+        "title": "Immovable property Ontology (ArCo network)"
+    },
     "a-loc": {
         "alt_title": null,
         "classes": 75,
@@ -18,6 +114,26 @@
             "places"
         ],
         "title": "Location Ontology (ArCo network)"
+    },
+    "a-mp": {
+        "alt_title": null,
+        "classes": 125,
+        "file": "vocabs/a-mp.owl",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/movable-property/",
+        "prefix": "a-mp",
+        "properties": 188,
+        "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
+        "tags": [
+            "museums",
+            "natural-history"
+        ],
+        "title": "Movable property Ontology (ArCo network)"
     },
     "ac": {
         "alt_title": "Audiovisual Core",
@@ -151,7 +267,7 @@
     },
     "arco": {
         "alt_title": null,
-        "classes": 23,
+        "classes": 46,
         "file": "vocabs/arco.rdf",
         "format": null,
         "languages": [
@@ -159,8 +275,27 @@
             "it"
         ],
         "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/core/",
+        "namespace": "https://w3id.org/arco/ontology/arco/",
         "prefix": "arco",
+        "properties": 74,
+        "summary": "Classes and properties for describing cultural property, such as archaeological, artistic, photographic, musical, numismatic, and natural heritage, with categories, components, and catalog numbers.",
+        "tags": [
+            "museums"
+        ],
+        "title": "ArCo Ontology (ArCo network)"
+    },
+    "arco-core": {
+        "alt_title": null,
+        "classes": 23,
+        "file": "vocabs/arco-core.rdf",
+        "format": null,
+        "languages": [
+            "en",
+            "it"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "namespace": "https://w3id.org/arco/ontology/core/",
+        "prefix": "core",
         "properties": 76,
         "summary": "Classes and properties for concepts used throughout a cultural heritage ontology network, such as parts and wholes, classification, identifiers, agent roles, and locations.",
         "tags": [
@@ -547,25 +682,6 @@
         ],
         "title": null
     },
-    "cdesc": {
-        "alt_title": null,
-        "classes": 176,
-        "file": "vocabs/cdesc.rdf",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/context-description/",
-        "prefix": "cdesc",
-        "properties": 430,
-        "summary": "Classes and properties for describing the context of a cultural property, such as authorship, dating, acquisition, legal status, inventories, bibliography, documentation, surveys, and conservation work.",
-        "tags": [
-            "museums"
-        ],
-        "title": "Context Description Ontology (ArCo network)"
-    },
     "cdtype": {
         "alt_title": null,
         "classes": 4,
@@ -621,26 +737,6 @@
             "people"
         ],
         "title": "CERIF Ontology 1.3"
-    },
-    "cevent": {
-        "alt_title": null,
-        "classes": 15,
-        "file": "vocabs/cevent.rdf",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/cultural-event/",
-        "prefix": "cevent",
-        "properties": 33,
-        "summary": "Classes and properties for describing events involving cultural properties, such as exhibitions and competitions, along with their organizers, awards, and recurrence over time.",
-        "tags": [
-            "museums",
-            "time"
-        ],
-        "title": "Cultural Event Ontology (ArCo network)"
     },
     "chrono": {
         "alt_title": "Chronometric Age Vocabulary",
@@ -1019,25 +1115,6 @@
         ],
         "title": "Common Tag vocabulary"
     },
-    "ctlog": {
-        "alt_title": null,
-        "classes": 52,
-        "file": "vocabs/ctlog.rdf",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/catalogue/",
-        "prefix": "ctlog",
-        "properties": 70,
-        "summary": "Classes and properties for describing catalog records of Italian cultural heritage, with their versions, identifiers, cataloging agents, access profiles, and privacy levels.",
-        "tags": [
-            "museums"
-        ],
-        "title": "Catalogue Ontology (ArCo network)"
-    },
     "cwork": {
         "alt_title": null,
         "classes": 16,
@@ -1295,25 +1372,6 @@
             "general"
         ],
         "title": "DCMI Type Vocabulary"
-    },
-    "ddesc": {
-        "alt_title": null,
-        "classes": 51,
-        "file": "vocabs/ddesc.rdf",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/denotative-description/",
-        "prefix": "ddesc",
-        "properties": 181,
-        "summary": "Classes and properties for the characteristics of cultural property recorded during cataloging, such as measurements, materials, techniques, conservation status, inscriptions, and decoration.",
-        "tags": [
-            "museums"
-        ],
-        "title": "Denotative Description Ontology (ArCo network)"
     },
     "deo": {
         "alt_title": null,
@@ -2418,25 +2476,6 @@
         ],
         "title": null
     },
-    "immovable-property-arco-network": {
-        "alt_title": null,
-        "classes": 62,
-        "file": "vocabs/immovable-property-arco-network.owl",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/immovable-property/",
-        "prefix": "a-ip",
-        "properties": 50,
-        "summary": "Classes and properties for describing buildings and other constructions as cultural heritage, including their layout, rooms, floors, roofs, stairs, windows, and technical systems.",
-        "tags": [
-            "museums"
-        ],
-        "title": "Immovable property Ontology (ArCo network)"
-    },
     "information-model-for-visual-arts": {
         "alt_title": null,
         "classes": 144,
@@ -3067,26 +3106,6 @@
             "libraries"
         ],
         "title": null
-    },
-    "movable-property-arco-network": {
-        "alt_title": null,
-        "classes": 125,
-        "file": "vocabs/movable-property-arco-network.owl",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/movable-property/",
-        "prefix": "a-mp",
-        "properties": 188,
-        "summary": "Classes and properties for describing movable cultural property, chiefly specimens such as minerals, rocks, fossils, meteorites, and plant samples, and how they were collected.",
-        "tags": [
-            "museums",
-            "natural-history"
-        ],
-        "title": "Movable property Ontology (ArCo network)"
     },
     "mpeg7": {
         "alt_title": "MPEG-7 Ontology",
@@ -4057,25 +4076,6 @@
             "science"
         ],
         "title": "QUDT Schema - Version 3.5.3"
-    },
-    "r-arco": {
-        "alt_title": null,
-        "classes": 46,
-        "file": "vocabs/r-arco.rdf",
-        "format": null,
-        "languages": [
-            "en",
-            "it"
-        ],
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "namespace": "https://w3id.org/arco/ontology/arco/",
-        "prefix": "r-arco",
-        "properties": 74,
-        "summary": "Classes and properties for describing cultural property, such as archaeological, artistic, photographic, musical, numismatic, and natural heritage, with categories, components, and catalog numbers.",
-        "tags": [
-            "museums"
-        ],
-        "title": "ArCo Ontology (ArCo network)"
     },
     "rcgs": {
         "alt_title": null,
