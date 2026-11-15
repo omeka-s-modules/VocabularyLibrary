@@ -57,9 +57,10 @@ The comment at the top of each script gives its usage and options in full.
   address, is included on the same terms. Whether a vocabulary belongs is the
   Omeka team's judgement. Record a vocabulary left out, and why, in
   `excluded.json`.
-- **Versions:** `update.php` follows new files at the same namespace. A
-  release under a new namespace is a different vocabulary, so the library
-  keeps the namespace it has.
+- **Versions:** the library carries a vocabulary's current release, not a
+  draft of the next one, whatever the version label says. `update.php`
+  follows new files at the same namespace. A release under a new namespace
+  is a different vocabulary, so the library keeps the namespace it has.
 - **Names:** add an `alt_title` only where the file's title is missing, not
   in English, long, or hides or leaves out the name the vocabulary is known
   by. Quote another official name from the file or the publisher's
@@ -83,8 +84,10 @@ The comment at the top of each script gives its usage and options in full.
 
 Run `update.php`, then review the diff and commit. Switch back any archived
 copy whose publisher's file works again and has all of the copy's terms.
-List in the release notes
-the vocabularies whose terms changed, as `update.php` reports them, so that
-administrators know which vocabularies to compare, and check each one's
-summary against its new file. Slugs are permanent once released, because they
-are in the module's URLs.
+Where a `download` address names a version, as in `ontology_v3.3.rdf`,
+`update.php` can't see a newer release at another address, so check the
+publisher's site for one. List in the release notes the vocabularies whose
+terms changed, as `update.php` reports them, so that administrators know
+which vocabularies to compare, and check each one's summary against its new
+file. Slugs are permanent once released, because they are in the module's
+URLs.
