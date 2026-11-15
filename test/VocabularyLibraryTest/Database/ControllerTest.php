@@ -355,6 +355,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
         $this->assertSame(200, $status);
         $this->assertStringNotContainsString('name="o:prefix"', $page);
+        // Reached anyway, the page names Omeka's vocabulary and the next step.
+        $this->assertMatchesRegularExpression('#Omeka already has this vocabulary: <a href="[^"]*">Example Vocabulary \(ex\)</a>\.#', $page);
+        $this->assertStringContainsString('/admin/vocabulary-library/compare/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
         $this->assertStringContainsString('/admin/vocabulary-library/compare/ex', $page);
     }

@@ -13,8 +13,13 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import'
 <div id="page-actions">
     <?php echo $this->hyperlink($translate('Back to the library'), $libraryUrl, ['class' => 'button']); ?>
 </div>
-<p><?php echo $translate('Omeka already has a vocabulary with this namespace.'); ?></p>
-<?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed]); ?>
+<?php
+// Reached from a stale tab or the Back button. Which vocabulary, as core
+// writes one in its selectors, and the next step, as the details give it.
+$inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']);
+?>
+<p><?php echo sprintf($escape($translate('Omeka already has this vocabulary: %s.')), $inOmeka); ?></p>
+<?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'long' => true, 'namespace' => $entry['namespace']]); ?>
 
 <?php else: ?>
 
