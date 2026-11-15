@@ -74,6 +74,7 @@ return [
             'aggregation' => 'Aggregation and IIIF', // @translate
             'publishing' => 'Scholarly publishing', // @translate
             'humanities' => 'Digital humanities', // @translate
+            'history' => 'History', // @translate
             'people' => 'People and organizations', // @translate
             'places' => 'Places and geography', // @translate
             'time' => 'Time and events', // @translate

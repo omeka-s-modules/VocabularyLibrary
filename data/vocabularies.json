@@ -168,7 +168,7 @@
         "properties": 13,
         "summary": "Classes and properties for describing resources and services to aid discovery, such as the jurisdiction they cover, the laws requiring them, their function, and availability.",
         "tags": [
-            "general"
+            "archives"
         ],
         "title": "The AGLS Metadata Terms Namespace providing access to its content by means of an RDF Schema."
     },
@@ -336,7 +336,7 @@
         "properties": 69,
         "summary": "Classes and properties for describing social activities, such as creating, liking, following, or inviting, and the people, content, and collections involved.",
         "tags": [
-            "general"
+            "aggregation"
         ],
         "title": "Activity Streams 2.0"
     },
@@ -498,7 +498,7 @@
         "summary": "Classes and properties that extend CIDOC CRM for people and groups, including their roles in events, family, social, and group relationships, occupations, nationalities, and names.",
         "tags": [
             "people",
-            "humanities"
+            "history"
         ],
         "title": "Bio CRM schema"
     },
@@ -963,7 +963,7 @@
         "summary": "Classes and properties for a catalog of university professors, recording their lives, education, careers, offices, memberships, families, pictures, and publications.",
         "tags": [
             "people",
-            "humanities"
+            "history"
         ],
         "title": "Catalogus Professorum Model - Version 2.1 (CPM)"
     },
@@ -1405,6 +1405,7 @@
         "properties": 80,
         "summary": "Classes and properties for recording how historians build knowledge from traces such as documents, including assertions and rejections, supporting and defeating arguments, confidence, and identifications.",
         "tags": [
+            "history",
             "humanities",
             "value-annotations"
         ],
@@ -1835,7 +1836,7 @@
         "properties": 213,
         "summary": "Classes and properties for modeling Korean cultural heritage, including historical facts, source documents, persons, places, institutions, events, and the relationships among them.",
         "tags": [
-            "humanities",
+            "history",
             "people"
         ],
         "title": "EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)"
@@ -1958,7 +1959,7 @@
         "summary": "Classes and properties for recording what historical sources say about people, such as events, occupations, offices, relationships, possessions, and titles, with citations.",
         "tags": [
             "people",
-            "humanities",
+            "history",
             "value-annotations"
         ],
         "title": "A Factoid Prosopography Ontology"
@@ -1996,7 +1997,8 @@
         "properties": 138,
         "summary": "Classes and properties for authority data, describing the names, identifiers, and access points of persons, families, corporate bodies, and works, and how they relate.",
         "tags": [
-            "libraries"
+            "libraries",
+            "people"
         ],
         "title": "FRAD model"
     },
@@ -2288,7 +2290,7 @@
         "summary": "Classes and properties for describing historical settlements and administrative units, with their names, types, locations, time spans, relationships, and source citations.",
         "tags": [
             "places",
-            "humanities"
+            "history"
         ],
         "title": "Ontology for modelling historic administrative information."
     },
@@ -2308,7 +2310,7 @@
         "properties": 41,
         "summary": "Classes and properties for describing human remains, graves, cemeteries, monuments, and memorials, including inscriptions, epitaphs, monument surfaces, locations, and relocations.",
         "tags": [
-            "humanities",
+            "history",
             "museums"
         ],
         "title": "The Muninn Graves Ontology"
@@ -2329,7 +2331,7 @@
         "summary": "Classes and properties for buildings, streets, plots, and addresses in the city of Gouda over time, and the deeds, permits, and tax records about them.",
         "tags": [
             "places",
-            "humanities"
+            "history"
         ],
         "title": "Gouda Time Machine Ontology"
     },
@@ -2364,7 +2366,7 @@
         "summary": "Classes and properties for describing historical territories and their hierarchies as they change over time, including time-bound versions, hierarchy levels, areas, and managing actors.",
         "tags": [
             "places",
-            "humanities"
+            "history"
         ],
         "title": null
     },
@@ -2401,7 +2403,7 @@
         "summary": "Classes and properties for relating places in time, such as one place being the same as, lying in, containing, absorbing, or originating from another.",
         "tags": [
             "places",
-            "humanities"
+            "history"
         ],
         "title": null
     },
@@ -2643,7 +2645,7 @@
         "properties": 17,
         "summary": "Classes and properties for describing people, deities, places, names, and written works of the ancient world, and the textual evidence that attests to them.",
         "tags": [
-            "humanities",
+            "history",
             "places",
             "people"
         ],
@@ -3172,7 +3174,7 @@
         "properties": 18,
         "summary": "Classes and properties for describing military people, organizations, and events, such as soldiers, ranks, units, service branches, uniforms, battles, and campaigns.",
         "tags": [
-            "humanities",
+            "history",
             "people"
         ],
         "title": "The Muninn Military Ontology"
@@ -3194,7 +3196,7 @@
         "summary": "Classes and properties for describing people, organizations, and states, and the relationships between them, such as names, roles, ranks, leadership, command, and allegiance.",
         "tags": [
             "people",
-            "humanities"
+            "history"
         ],
         "title": "The Muninn Organization Ontology"
     },
@@ -3269,7 +3271,8 @@
         "properties": 70,
         "summary": "Classes and properties for describing music, such as artists and ensembles, compositions and their parts, scores, lyrics, performances, recordings, releases, broadcasts, and awards.",
         "tags": [
-            "performing-arts"
+            "performing-arts",
+            "media"
         ],
         "title": "Music Meta Ontology"
     },
@@ -3325,7 +3328,7 @@
         "properties": 33,
         "summary": "Classes and properties for describing ships and their classes, types, hulls, identifying numbers, ports, owners, builders, dimensions, speed, and crew size.",
         "tags": [
-            "humanities"
+            "history"
         ],
         "title": "The Muninn Naval Ontology"
     },
@@ -3395,7 +3398,7 @@
         "summary": "Classes and properties for describing coins, tokens, banknotes, and similar objects, including their mints, issuers, denominations, inscriptions, measurements, wear, and where they were found.",
         "tags": [
             "museums",
-            "humanities"
+            "history"
         ],
         "title": null
     },
@@ -4618,7 +4621,8 @@
         "summary": "Classes and properties for recording people and places mentioned in archival documents, and for combining several mentions into a single reconstructed person or place.",
         "tags": [
             "archives",
-            "people"
+            "people",
+            "history"
         ],
         "title": "Reconstructions and Observations in Archival Resources"
     },
@@ -4740,7 +4744,7 @@
         "properties": 154,
         "summary": "Classes and properties for describing maritime history: ships and their registration, ownership, construction, and voyages, along with cargo, crews, employment, and wages.",
         "tags": [
-            "humanities"
+            "history"
         ],
         "title": "SeaLiT Ontology"
     },
@@ -4775,7 +4779,7 @@
         "properties": 53,
         "summary": "Classes and properties for recording the persecution and deportation of Jews in Italy during the Holocaust: arrests, detention, convoys, camps, liberation, deaths, and family ties.",
         "tags": [
-            "humanities",
+            "history",
             "people"
         ],
         "title": null

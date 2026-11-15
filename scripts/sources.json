@@ -123,7 +123,7 @@
             "file"
         ],
         "tags": [
-            "general"
+            "archives"
         ]
     },
     "agrelon": {
@@ -241,7 +241,7 @@
             "file"
         ],
         "tags": [
-            "general"
+            "aggregation"
         ]
     },
     "awol": {
@@ -372,7 +372,7 @@
         ],
         "tags": [
             "people",
-            "humanities"
+            "history"
         ]
     },
     "biol": {
@@ -731,7 +731,7 @@
         ],
         "tags": [
             "people",
-            "humanities"
+            "history"
         ]
     },
     "crmarchaeo": {
@@ -1059,6 +1059,7 @@
             "file"
         ],
         "tags": [
+            "history",
             "humanities",
             "value-annotations"
         ]
@@ -1391,7 +1392,7 @@
             "https://github.com/dongshins/EKC_ontology"
         ],
         "tags": [
-            "humanities",
+            "history",
             "people"
         ]
     },
@@ -1488,7 +1489,7 @@
         ],
         "tags": [
             "people",
-            "humanities",
+            "history",
             "value-annotations"
         ]
     },
@@ -1520,7 +1521,8 @@
             "https://www.iflastandards.info/fr/frad"
         ],
         "tags": [
-            "libraries"
+            "libraries",
+            "people"
         ]
     },
     "frapo": {
@@ -1757,7 +1759,7 @@
         ],
         "tags": [
             "places",
-            "humanities"
+            "history"
         ]
     },
     "graves": {
@@ -1770,7 +1772,7 @@
             "http://rdf.muninn-project.org/ontologies/graves"
         ],
         "tags": [
-            "humanities",
+            "history",
             "museums"
         ]
     },
@@ -1785,7 +1787,7 @@
         ],
         "tags": [
             "places",
-            "humanities"
+            "history"
         ]
     },
     "gvp": {
@@ -1821,7 +1823,7 @@
         ],
         "tags": [
             "places",
-            "humanities"
+            "history"
         ]
     },
     "hico": {
@@ -1853,7 +1855,7 @@
         ],
         "tags": [
             "places",
-            "humanities"
+            "history"
         ]
     },
     "holding": {
@@ -2062,7 +2064,7 @@
             "https://github.com/lawdi/LAWD"
         ],
         "tags": [
-            "humanities",
+            "history",
             "places",
             "people"
         ]
@@ -2437,7 +2439,7 @@
             "http://rdf.muninn-project.org/"
         ],
         "tags": [
-            "humanities",
+            "history",
             "people"
         ]
     },
@@ -2452,7 +2454,7 @@
         ],
         "tags": [
             "people",
-            "humanities"
+            "history"
         ]
     },
     "muo": {
@@ -2508,7 +2510,8 @@
             "file"
         ],
         "tags": [
-            "performing-arts"
+            "performing-arts",
+            "media"
         ]
     },
     "muto": {
@@ -2547,7 +2550,7 @@
             "file"
         ],
         "tags": [
-            "humanities"
+            "history"
         ]
     },
     "nfo": {
@@ -2616,7 +2619,7 @@
         ],
         "tags": [
             "museums",
-            "humanities"
+            "history"
         ]
     },
     "oa": {
@@ -3453,7 +3456,8 @@
         ],
         "tags": [
             "archives",
-            "people"
+            "people",
+            "history"
         ]
     },
     "rov": {
@@ -3556,7 +3560,7 @@
             "http://www.sealitproject.eu/ontology/"
         ],
         "tags": [
-            "humanities"
+            "history"
         ]
     },
     "sem": {
@@ -3589,7 +3593,7 @@
             "https://dati.cdec.it/lod/shoah/reference-document.html"
         ],
         "tags": [
-            "humanities",
+            "history",
             "people"
         ]
     },
