@@ -9,10 +9,14 @@
  * by content negotiation and following redirects. A downloaded file replaces
  * the stored one only if it differs and passes the import check, so a
  * publisher breaking their file leaves the last working copy in place.
- * Entries with "copy_from" are skipped: their file is an archived copy
- * because the publisher's does not work; remove the field to try again.
- * Entries with no download address, whose file was sent to the library, have
- * nothing to fetch.
+ * An entry with "copy_from" has an archived copy because the publisher's
+ * file didn't work. Its publisher's addresses are tried too, once each, but
+ * the copy is never replaced, since a file that imports may still be a
+ * partial one: the report lists those whose publisher's file works again,
+ * and how each differs from the copy, for a maintainer to decide. One that
+ * still fails is expected, so it isn't reported, and its server isn't
+ * marked as down for the others. Entries with no download address, whose
+ * file was sent to the library, have nothing to fetch.
  *
  * Fetches one vocabulary per host at a time, and tries an address once more
  * when its server fails or does not answer, after the wait the server names
@@ -57,14 +61,10 @@ foreach (array_diff($only, array_keys($sources)) as $unknown) {
     fail("Unknown slug: $unknown");
 }
 
-$pending = [];
-$skipped = $submitted = 0;
+$pending = $archived = [];
+$submitted = 0;
 foreach ($sources as $slug => $entry) {
     if ($only && !in_array((string) $slug, $only, true)) {
-        continue;
-    }
-    if (isset($entry['copy_from'])) {
-        $skipped++;
         continue;
     }
     $urls = array_values(array_filter(array_merge([$entry['download'] ?? null], $entry['alternates'] ?? [])));
@@ -72,13 +72,18 @@ foreach ($sources as $slug => $entry) {
         $submitted++;
         continue;
     }
+    if (isset($entry['copy_from'])) {
+        $archived[$slug] = true;
+    }
     $pending[$slug] = $urls;
 }
 
 // Changed: per slug, how it differs, as ImportCheck::differences() counts
 // it, or a phrase where there is nothing to count. Needs look: whether a
-// failed slug has an address that no longer serves a usable file.
-$changed = $unchanged = $failed = $needsLook = [];
+// failed slug has an address that no longer serves a usable file. Working
+// again: per archived copy whose publisher's file now passes the check, how
+// that file differs from the copy.
+$changed = $unchanged = $failed = $needsLook = $workingAgain = [];
 // Retry-After describes a host, so the back-off is per host asked. Down: the
 // hosts that answered failing on both tries, which may not be the ones asked,
 // as when purl.org redirects to a publisher whose server is down.
@@ -118,9 +123,10 @@ while ($pending) {
     foreach (Download::fetchAll($batch) as $slug => $response) {
         $url = $batch[$slug];
         // Any failure to get an answer is tried once more: a server error,
-        // or no response at all.
+        // or no response at all. Not an archived copy's publisher, whose
+        // failing is expected.
         $noResponse = $response['error'] && $response['status'] < 400;
-        if ((Download::serverUnavailable($response) || $noResponse) && !isset($retried[$url])) {
+        if ((Download::serverUnavailable($response) || $noResponse) && !isset($retried[$url]) && !isset($archived[$slug])) {
             $retried[$url] = true;
             $wait = isset($response['retry_after']) ? min($response['retry_after'], MAX_RETRY_WAIT) : RETRY_WAIT;
             $notBefore[parse_url($url, PHP_URL_HOST)] = time() + $wait;
@@ -131,7 +137,7 @@ while ($pending) {
         $reason = $response['error'];
         $unavailable = Download::serverUnavailable($response);
         $same = false;
-        if ($unavailable && $host = (string) parse_url($response['url'] ?: $url, PHP_URL_HOST)) {
+        if ($unavailable && !isset($archived[$slug]) && $host = (string) parse_url($response['url'] ?: $url, PHP_URL_HOST)) {
             $down[$host] = true;
         }
         if (!$reason) {
@@ -161,6 +167,12 @@ while ($pending) {
             }
             continue;
         }
+        if (isset($archived[$slug])) {
+            // The copy stays; how the publisher's file differs from it.
+            $workingAgain[$slug] = $same ? null : ImportCheck::differences($check->check($current[0], $entry['namespace']), $result);
+            unset($pending[$slug], $failed[$slug], $needsLook[$slug]);
+            continue;
+        }
         if ($same) {
             $unchanged[] = $slug;
         } else {
@@ -180,10 +192,13 @@ while ($pending) {
     }
 }
 
+// An archived copy's publisher failing is expected, so it isn't reported.
+$failed = array_diff_key($failed, $archived);
 ksort($changed);
 ksort($failed);
-printf("%d fetched: %d changed, %d unchanged, %d failed; %d archived copies and %d submitted files skipped\n",
-    count($changed) + count($unchanged) + count($failed), count($changed), count($unchanged), count($failed), $skipped, $submitted);
+ksort($workingAgain);
+printf("%d fetched: %d changed, %d unchanged, %d failed; %d archived copies tried at their publishers; %d submitted files skipped\n",
+    count($changed) + count($unchanged) + count($failed), count($changed), count($unchanged), count($failed), count($archived), $submitted);
 $inTerms = $inDetails = [];
 foreach ($changed as $slug => $differences) {
     if (!is_array($differences)) {
@@ -217,6 +232,18 @@ foreach ($groups as $what => $slugs) {
         foreach ($reasons as $reason) {
             echo '    ', printable($reason), "\n";
         }
+    }
+}
+if ($workingAgain) {
+    echo "Archived copies whose publisher's file works again (copy kept; to switch back, see scripts/README.md):\n";
+    foreach ($workingAgain as $slug => $differences) {
+        $parts = [];
+        foreach (['added', 'removed', 'labels', 'comments'] as $kind) {
+            if ($differences[$kind] ?? 0) {
+                $parts[] = "{$differences[$kind]} $kind";
+            }
+        }
+        printf("  %s (%s)\n", $slug, $differences === null ? 'same file' : ($parts ? implode(', ', $parts) : 'same terms'));
     }
 }
 if ($inTerms) {

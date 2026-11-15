@@ -139,6 +139,31 @@ class FetchFromServerTest extends ScriptTestCase
         $this->assertSame(20000, strlen(Download::fetchAll(["$this->address/vocabulary.ttl"])[0]['body']));
     }
 
+    public function testAnArchivedCopysPublisherIsTriedAndReportedButTheCopyKept()
+    {
+        file_put_contents("$this->dir/published.ttl", file_get_contents(self::fixture('basic.ttl')) . "\nex:Extra a rdfs:Class .\n");
+        $this->writeSources(['ex' => ['copy_from' => 'LOV', 'download' => "$this->address/vocabulary.ttl"] + self::ENTRY]);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertStringContainsString('0 fetched: 0 changed, 0 unchanged, 0 failed; 1 archived copies tried at their publishers', $output);
+        $this->assertStringContainsString("Archived copies whose publisher's file works again", $output);
+        $this->assertStringContainsString('  ex (1 added)', $output);
+        $this->assertStringNotContainsString('build.php', $output);
+        $this->assertStoredFileKept();
+    }
+
+    public function testAnArchivedCopysPublisherThatStillFailsIsNotTriedAgainOrReported()
+    {
+        $this->writeSources(['ex' => ['copy_from' => 'LOV', 'download' => "$this->address/down.ttl"] + self::ENTRY]);
+        [$status, $output] = $this->script('fetch', ['--retry-wait=0']);
+        $this->assertSame(0, $status, $output);
+        $this->assertSame(['/down.ttl'], file("$this->dir/requests.log", FILE_IGNORE_NEW_LINES));
+        $this->assertStringContainsString('0 failed; 1 archived copies tried at their publishers', $output);
+        $this->assertStringNotContainsString('failed: ex', $output);
+        $this->assertStringNotContainsString('works again', $output);
+        $this->assertStoredFileKept();
+    }
+
     public function testAnAlternateAddressIsUsedWhenTheFirstFails()
     {
         file_put_contents("$this->dir/published.ttl", file_get_contents(self::fixture('basic.ttl')));

@@ -32,10 +32,12 @@ The comment at the top of each script gives its usage and options in full.
   slugs given, and rebuilds. A downloaded file replaces the stored one only
   if it differs and still imports. The report says how each changed
   vocabulary differs, or that only its file does, and sets apart the
-  failures that need a look from servers that are unavailable for now. Entries with `copy_from` or with no
-  `download` are not downloaded. To try the publisher's file again, remove
-  the `copy_from` field and run `update.php` for that slug; if the download
-  fails, the archived copy remains, so restore the field.
+  failures that need a look from servers that are unavailable for now. An
+  archived copy (`copy_from`) is never replaced, but its publisher's address
+  is tried too, and the report lists those whose publisher's file works
+  again, with how it differs from the copy. To switch one back, remove its
+  `copy_from` field and run `update.php` for that slug. Entries with no
+  `download` are not downloaded.
 - `remove.php <slug> "<reason>"`: removes a vocabulary, for example after a
   takedown request, and records it in `excluded.json`.
 - `build.php`: checks every file with the Omeka S importer and writes what
@@ -79,7 +81,9 @@ The comment at the top of each script gives its usage and options in full.
 
 ## Releasing
 
-Run `update.php`, then review the diff and commit. List in the release notes
+Run `update.php`, then review the diff and commit. Switch back any archived
+copy whose publisher's file works again and has all of the copy's terms.
+List in the release notes
 the vocabularies whose terms changed, as `update.php` reports them, so that
 administrators know which vocabularies to compare, and check each one's
 summary against its new file. Slugs are permanent once released, because they
