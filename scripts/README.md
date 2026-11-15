@@ -55,6 +55,9 @@ The comment at the top of each script gives its usage and options in full.
   address, is included on the same terms. Whether a vocabulary belongs is the
   Omeka team's judgement. Record a vocabulary left out, and why, in
   `excluded.json`.
+- **Versions:** `update.php` follows new files at the same namespace. A
+  release under a new namespace is a different vocabulary, so the library
+  keeps the namespace it has.
 - **Names:** add an `alt_title` only where the file's title is missing, not
   in English, long, or hides or leaves out the name the vocabulary is known
   by. Quote another official name from the file or the publisher's

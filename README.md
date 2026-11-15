@@ -111,8 +111,8 @@ makes a vocabulary more useful in Omeka:
 
 - **A namespace that will not change,** not even from `http` to `https`.
   Omeka identifies a vocabulary by its namespace: under a new one it is a
-  different vocabulary, and sites that imported the old one cannot update
-  from the new.
+  different vocabulary, and sites that imported the old one can update from
+  the new only by changing its namespace by hand.
 - **A stable address for the file,** if it has one, so that each release can
   include your current version.
 - **A stated license.**
