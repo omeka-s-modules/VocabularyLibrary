@@ -32,7 +32,17 @@ class PlainText
      */
     public static function line($value)
     {
-        $text = self::from($value);
+        return self::spaced(self::from($value));
+    }
+
+    /**
+     * Text with each run of whitespace as one space and none at either end:
+     * for comparing values that differ only in spacing, which Omeka's pages
+     * show the same.
+     */
+    public static function spaced($value)
+    {
+        $text = (string) $value;
         // Text that isn't valid UTF-8 can't be matched as such.
         return trim(preg_replace('/\s+/u', ' ', $text) ?? preg_replace('/\s+/', ' ', $text));
     }

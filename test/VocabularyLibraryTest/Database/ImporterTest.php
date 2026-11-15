@@ -93,6 +93,19 @@ class ImporterTest extends DbTestCase
         }
     }
 
+    public function testSpacingAloneIsNotAChange()
+    {
+        $vocabulary = $this->import('en');
+        $em = self::services()->get('Omeka\EntityManager');
+        $thing = $em->getRepository(\Omeka\Entity\ResourceClass::class)->findOneBy(['vocabulary' => $vocabulary->id(), 'localName' => 'Thing']);
+        $thing->setLabel($thing->getLabel() . ' ');
+        $thing->setComment(str_replace(' ', '  ', $thing->getComment()) . "\n");
+        $em->flush();
+        $diff = $this->importer->diff($this->entry, 'en', TermReading::COMMENT_PROPERTY);
+        $this->assertSame([], $diff['classes']['label']);
+        $this->assertSame([], $diff['classes']['comment']);
+    }
+
     public function testReadAsOmekaReadsCommentsADefinitionShowsAsChanged()
     {
         $this->import('en');

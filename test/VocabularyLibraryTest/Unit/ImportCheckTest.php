@@ -201,9 +201,12 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame(1, ImportCheck::differences($old, $new)['labels']);
     }
 
-    public function testDifferencesAreExact()
+    public function testSpacingAloneIsNoDifference()
     {
-        $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Anything at all."@en' => '"Anything at all. "@en']));
+        // As Compare shows them: Omeka's pages show both the same.
+        $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Anything at all."@en' => '"Anything  at all.\n"@en']));
+        $this->assertSame(0, $differences['comments']);
+        $differences = ImportCheck::differences($this->check('basic.ttl'), $this->changed(['"Anything at all."@en' => '"Anything at all!"@en']));
         $this->assertSame(1, $differences['comments']);
     }
 

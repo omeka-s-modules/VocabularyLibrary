@@ -92,10 +92,11 @@ class ImportCheck
      * library and an administrator comparing the two would see.
      *
      * Labels and comments are compared in every language both files have
-     * either in, and exactly, as Compare shows them, with comments read as
-     * the library imports them, a definition first. So a change only to the
-     * comment of a term that also has a definition, which Compare shows for
-     * a vocabulary imported through Omeka's own form, isn't counted.
+     * either in, and regardless of spacing, as Compare shows them, with
+     * comments read as the library imports them, a definition first. So a
+     * change only to the comment of a term that also has a definition, which
+     * Compare shows for a vocabulary imported through Omeka's own form, isn't
+     * counted.
      *
      * @param array $old A check result
      * @param array $new
@@ -117,10 +118,10 @@ class ImportCheck
             foreach (['classes', 'properties'] as $kind) {
                 foreach (array_intersect_key($members[$kind], $oldMembers[$kind]) as $localName => $member) {
                     $before = $oldMembers[$kind][$localName];
-                    if ((string) $member['label'] !== (string) $before['label']) {
+                    if (PlainText::spaced($member['label']) !== PlainText::spaced($before['label'])) {
                         $labels["$kind $localName"] = true;
                     }
-                    if ((string) $member['comment'] !== (string) $before['comment']) {
+                    if (PlainText::spaced($member['comment']) !== PlainText::spaced($before['comment'])) {
                         $comments["$kind $localName"] = true;
                     }
                 }

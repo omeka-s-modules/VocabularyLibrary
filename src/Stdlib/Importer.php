@@ -73,9 +73,11 @@ class Importer
 
     /**
      * How the vocabulary in Omeka differs from an entry's file, as core's
-     * importer computes it. A comment that only goes from none to an empty
-     * one, or back, is left out: a file's empty definition reads as "", where
-     * Omeka has none, and Compare would show "None" changing to "None".
+     * importer computes it. A label or comment that differs only in its
+     * spacing is left out: a double space, a line break for a space, or a
+     * comment going from none to an empty one (a file's empty definition
+     * reads as "", where Omeka has none). Omeka's pages show both the same,
+     * and Compare could only mark spaces, or show "None" changing to "None".
      *
      * @param string|null $lang The language to read labels and comments in
      * @param string $commentProperty Where terms' comments are read from:
@@ -87,9 +89,11 @@ class Importer
     {
         $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $this->options($entry, $lang, $commentProperty));
         foreach (['classes', 'properties'] as $kind) {
-            $diff[$kind]['comment'] = array_filter($diff[$kind]['comment'], function ($change) {
-                return (string) $change[0] !== '' || (string) $change[1] !== '';
-            });
+            foreach (['label', 'comment'] as $field) {
+                $diff[$kind][$field] = array_filter($diff[$kind][$field], function ($change) {
+                    return PlainText::spaced($change[0]) !== PlainText::spaced($change[1]);
+                });
+            }
         }
         return $diff;
     }
@@ -196,7 +200,7 @@ class Importer
                 $term = $graph->resource($entry['namespace'] . $localName);
                 $read = $term->get(TermReading::LABEL_PROPERTY, 'literal', $lang) ?: $term->get(TermReading::LABEL_PROPERTY, 'literal');
                 $value = $read ? (string) $read->getValue() : '';
-                $matches += ($value === '' ? (string) $localName : $value) === $label ? 1 : 0;
+                $matches += PlainText::spaced($value === '' ? $localName : $value) === PlainText::spaced($label) ? 1 : 0;
             }
             if ($matches > $bestMatches) {
                 [$best, $bestMatches] = [$lang, $matches];
