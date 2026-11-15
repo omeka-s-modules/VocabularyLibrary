@@ -87,7 +87,7 @@
         "download": "http://rdf.muninn-project.org/ontologies/appearances#",
         "namespace": "http://rdf.muninn-project.org/ontologies/appearances#",
         "prefix": "aos",
-        "summary": "Classes and properties for recording a person's sex, gender, and preferences, along with appearance such as skin, eye, and hair color and body measurements.",
+        "summary": "Classes and properties for recording a person's sex, gender, sexual and romantic preferences, race, ethnicity, religion, nationality, skin and eye color, and body measurements.",
         "summary_basis": [
             "file",
             "http://rdf.muninn-project.org/ontologies/appearances"
@@ -272,7 +272,7 @@
         "download": "http://ldf.fi/schema/bioc/",
         "namespace": "http://ldf.fi/schema/bioc/",
         "prefix": "biocrm",
-        "summary": "Classes and properties for describing people and groups, including their roles in events, family, social, and group relationships, occupations, nationalities, gender, and names.",
+        "summary": "Classes and properties that extend CIDOC CRM for people and groups, including their roles in events, family, social, and group relationships, occupations, nationalities, and names.",
         "summary_basis": [
             "file"
         ],
@@ -344,7 +344,7 @@
         "download": "http://purl.org/NET/biol/botany#",
         "namespace": "http://purl.org/NET/biol/botany#",
         "prefix": "botany",
-        "summary": "Classes and properties for recording a botanical classification at ranks from domain and kingdom through genus and species down to variety, cultivar, and hybrid.",
+        "summary": "Classes and properties for recording a botanical classification, with ranks from domain and kingdom through genus and species to subspecies and variety.",
         "summary_basis": [
             "file"
         ],
@@ -671,7 +671,7 @@
         "download": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmarchaeo/",
         "prefix": "crmarchaeo",
-        "summary": "Classes and properties for documenting archaeological excavation, such as excavation units, stratigraphic layers and their interfaces, embedded objects, and the order of events in time.",
+        "summary": "Classes and properties that extend CIDOC CRM for archaeological excavation, such as excavation units, stratigraphic layers and interfaces, embedded objects, and the order of events.",
         "summary_basis": [
             "file",
             "https://cidoc-crm.org/crmarchaeo/"
@@ -686,7 +686,7 @@
         "download": "http://www.cidoc-crm.org/extensions/crmdig/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmdig/",
         "prefix": "crmdig",
-        "summary": "Classes and properties for documenting digitization and how digital objects are produced and transferred, including the devices and software involved, and for annotations.",
+        "summary": "Classes and properties that extend CIDOC CRM for digitization and how digital objects are produced and transferred, including the devices and software involved, and annotations.",
         "summary_basis": [
             "file",
             "https://cidoc-crm.org/crmdig/"
@@ -704,7 +704,7 @@
         "download": "http://purl.org/crmeh#CRMEH",
         "namespace": "http://purl.org/crmeh#",
         "prefix": "crmeh",
-        "summary": "Classes and properties for recording archaeological excavation and analysis, such as excavation contexts, finds, samples, measurements, drawings, photographs, site divisions, and project teams.",
+        "summary": "Classes and properties that extend CIDOC CRM for English Heritage's archaeological recording, such as contexts, finds, samples, measurements, drawings, photographs, site divisions, and project teams.",
         "summary_basis": [
             "file"
         ],
@@ -718,7 +718,7 @@
         "download": "http://www.cidoc-crm.org/extensions/crminf/",
         "namespace": "http://www.cidoc-crm.org/extensions/crminf/",
         "prefix": "crminf",
-        "summary": "Classes and properties for recording reasoning in research, such as arguments, beliefs, inferences, the premises and evidence behind them, and provenance assessments.",
+        "summary": "Classes and properties that extend CIDOC CRM for reasoning in research, such as arguments, beliefs, inferences, the premises and evidence behind them, and provenance assessments.",
         "summary_basis": [
             "file",
             "https://cidoc-crm.org/crminf/"
@@ -735,7 +735,7 @@
         "download": "http://www.cidoc-crm.org/extensions/crmsci/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmsci/",
         "prefix": "crmsci",
-        "summary": "Classes and properties for recording scientific observation, such as sampling, measurements, observed things, and the processes that create or alter physical things.",
+        "summary": "Classes and properties that extend CIDOC CRM for scientific observation, such as sampling, measurements, observed things, and the processes that create or alter physical things.",
         "summary_basis": [
             "file",
             "https://cidoc-crm.org/crmsci/"
@@ -751,7 +751,7 @@
         "download": "http://www.cidoc-crm.org/extensions/crmtex/",
         "namespace": "http://www.cidoc-crm.org/extensions/crmtex/",
         "prefix": "crmtex",
-        "summary": "Classes and properties for studying ancient and handwritten texts, such as inscriptions and manuscripts, including their writing, scripts, glyphs, transliteration, and reading.",
+        "summary": "Classes and properties that extend CIDOC CRM for studying ancient and handwritten texts, such as inscriptions and manuscripts, their writing, scripts, glyphs, transliteration, and reading.",
         "summary_basis": [
             "file",
             "https://cidoc-crm.org/crmtex/"
@@ -3985,7 +3985,7 @@
         "download": "http://purl.org/NET/biol/zoology#",
         "namespace": "http://purl.org/NET/biol/zoology#",
         "prefix": "zoology",
-        "summary": "Classes and properties for recording a biological classification, with ranks such as domain, kingdom, genus, species, variety, breed, and strain.",
+        "summary": "Classes and properties for recording a zoological classification, with ranks from domain and kingdom through genus and species to subspecies and variety.",
         "summary_basis": [
             "file"
         ],
