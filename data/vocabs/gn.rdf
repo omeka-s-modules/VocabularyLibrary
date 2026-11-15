@@ -13,15 +13,14 @@
          xmlns:dcterms="http://purl.org/dc/terms/"
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:mrel="http://id.loc.gov/vocabulary/relators/"
-         xmlns:adms="http://www.w3.org/ns/adms#"
-		 xmlns:spatial="http://geovocab.org/spatial#">
+         xmlns:adms="http://www.w3.org/ns/adms#">
 
 <!-- Ontology Information -->  
       <owl:Ontology rdf:about="https://www.geonames.org/ontology">
       <dcterms:title xml:lang="en">The Geonames ontology</dcterms:title>
       <dcterms:description xml:lang="en">The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base</dcterms:description>
       <adms:relatedDocumentation rdf:resource="https://www.geonames.org/ontology/documentation.html"/>
-      <cc:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+      <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
       <dcterms:creator>Bernard Vatant</dcterms:creator>
       <dcterms:contributor>Elisa Kendall (version 3.2)</dcterms:contributor>
       <dcterms:contributor>Erik Bolstad (norwegian and swedish translations)</dcterms:contributor>
@@ -42,16 +41,15 @@
             Deleted : References to mindswap, whose site is no longer available
             Modified : Namespace for the geonames ontology from http to https
       </rdfs:comment>
-      <rdfs:isDefinedBy rdf:resource="https://www.geonames.org/ontology/ontology_v3.3.rdf"/>
-      <owl:priorVersion rdf:resource="https://www.geonames.org/ontology/ontology_v3.2.rdf"/>
-      <owl:versionInfo xml:lang="en">Version 3.3 - 2022-01-30</owl:versionInfo>
+      <rdfs:isDefinedBy rdf:resource="https://www.geonames.org/ontology/ontology_v3.4.rdf"/>
+      <owl:priorVersion rdf:resource="https://www.geonames.org/ontology/ontology_v3.3.rdf"/>
+      <owl:versionInfo xml:lang="en">Version 3.4 - 2026-10-23</owl:versionInfo>
       <foaf:homepage rdf:resource="https://www.geonames.org/ontology/documentation.html"/>
       <dcterms:issued>2006-10-14</dcterms:issued>
-      <dcterms:modified>2022-01-30</dcterms:modified>
+      <dcterms:modified>2026-10-23</dcterms:modified>
   <vann:preferredNamespacePrefix>gn</vann:preferredNamespacePrefix>
   <vann:preferredNamespaceUri>https://www.geonames.org/ontology#</vann:preferredNamespaceUri>
   <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-  <owl:imports rdf:resource="http://geovocab.org/spatial"/>
   </owl:Ontology>
 
 <!-- Classes -->
@@ -148,6 +146,7 @@
       <skos:historyNote xml:lang="en">Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base</skos:historyNote>
       <rdfs:label xml:lang="en">Feature</rdfs:label>
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      <!-- http://geovocab.org/spatial is no longer online and is not imported since version 3.4; the class is kept as a plain link. -->
       <owl:equivalentClass rdf:resource="http://geovocab.org/spatial#Feature"/>  
 	  <rdfs:seeAlso rdf:resource="http://schema.org/Place"/>
 </owl:Class>
@@ -217,6 +216,13 @@
     <rdfs:comment xml:lang="en">The main international name of a feature. The value has no xml:lang tag.</rdfs:comment>
     <rdfs:domain rdf:resource="#Feature"/>
     <rdfs:label xml:lang="en">name</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="#toponymName">
+    <rdfs:comment xml:lang="en">The name of the feature as recorded in the GeoNames database (its toponym). Not language dependent; the value has no xml:lang tag. See gn:name for the name in a language.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:label xml:lang="en">toponym name</rdfs:label>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
   </owl:DatatypeProperty>
 
   <owl:DatatypeProperty rdf:about="#officialName">
@@ -361,6 +367,19 @@
         <owl:onProperty rdf:resource="#featureCode"/>
       </owl:Restriction>
     </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="#parentFeature"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#parentADM5">
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:label xml:lang="en">level 5 administrative parent</rdfs:label>
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#A.ADM5"/>
+        <owl:onProperty rdf:resource="#featureCode"/>
+      </owl:Restriction>
+    </rdfs:range>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
     <rdfs:subPropertyOf rdf:resource="#parentFeature"/>
   </owl:ObjectProperty>
 
@@ -691,7 +710,7 @@
 
   <gn:Code rdf:about="#H.CAPG"
                  skos:notation="H.CAPG">
-    <skos:definition xml:lang="en">a dome-shaped mass of glacial ice covering an area of  mountain summits or other high lands; smaller than an ice sheet</skos:definition>
+    <skos:definition xml:lang="en">a dome-shaped mass of glacial ice covering an area of mountain summits or other high lands; smaller than an ice sheet</skos:definition>
     <skos:definition xml:lang="ru">куполообразная масса ледникового льда, покрывающая гонные вершины; по размеру меньше ледникового щита</skos:definition>
     <skos:inScheme rdf:resource="#H"/>
     <skos:prefLabel xml:lang="en">icecap</skos:prefLabel>
@@ -699,6 +718,7 @@
     <skos:prefLabel xml:lang="no">iskappe</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">ледена покривка</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">шапка полярного льда</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#H.CHN"
@@ -1828,7 +1848,7 @@
     <skos:prefLabel xml:lang="en">stream</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">å, bäck, ström</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">поток</skos:prefLabel>
-    <skos:prefLabel xml:lang="ru">ручей</skos:prefLabel>
+    <skos:prefLabel xml:lang="ru">река</skos:prefLabel>
   </gn:Code>
 
   <gn:Code rdf:about="#H.STMA"
@@ -2304,7 +2324,7 @@
 
   <gn:Code rdf:about="#L.CONT"
                  skos:notation="L.CONT">
-    <skos:definition xml:lang="en">continent : Europe, Africa, Asia, North America, South America, Oceania,Antarctica</skos:definition>
+    <skos:definition xml:lang="en">continent: Europe, Africa, Asia, North America, South America, Oceania, Antarctica</skos:definition>
     <skos:definition xml:lang="ru">континент: Евразия, Африка, Северная Америка, Южная Америка, Антарктида, Австралия, Океания</skos:definition>
     <skos:inScheme rdf:resource="#L"/>
     <skos:prefLabel xml:lang="en">continent</skos:prefLabel>
@@ -2312,6 +2332,7 @@
     <skos:prefLabel xml:lang="sv">kontinent</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">континент</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">континент</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#L.CST"
@@ -2571,6 +2592,8 @@
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     <skos:inScheme rdf:resource="#L"/>
     <skos:prefLabel xml:lang="en">republic</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#L.RES"
@@ -2758,6 +2781,8 @@
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     <skos:inScheme rdf:resource="#L"/>
     <skos:prefLabel xml:lang="en">master source holdings list</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Class rdf:about="#P">
@@ -2781,12 +2806,12 @@
     <skos:definition xml:lang="en">seat of a first-order administrative division (PPLC takes precedence over PPLA)</skos:definition>
     <skos:definition xml:lang="ru">центр административного деления первого порядка (столица политического образования предшествует центру АТД первого порядка)</skos:definition>
     <skos:inScheme rdf:resource="#P"/>
-    <skos:prefLabel xml:lang="en">seat of a first-order administrative
-            division</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">seat of a first-order administrative division</skos:prefLabel>
     <skos:prefLabel xml:lang="no">sete for primær administrativ inndeling</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">säte för en första ordningens administrativ enhet</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">центр административного деления первого порядка</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">център на първостепенна административна единица</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#P.PPLA2"
@@ -2939,6 +2964,8 @@
     <skos:definition xml:lang="en">a causeway no longer used for transportation</skos:definition>
     <skos:inScheme rdf:resource="#R"/>
     <skos:prefLabel xml:lang="en">former causeway</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#R.OILP"
@@ -3294,11 +3321,12 @@
     <skos:definition xml:lang="en">a place where archeological remains, old structures, or cultural artifacts are located</skos:definition>
     <skos:definition xml:lang="ru">остатки древнего укрепленного поселения или города</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
-    <skos:prefLabel xml:lang="en">ancient site</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">archaeological/prehistoric site</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">forntida lämning</skos:prefLabel>
     <skos:prefLabel xml:lang="no">historisk sted</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">антични останки</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">городище</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.AQC"
@@ -3375,6 +3403,7 @@
     <skos:definition xml:lang="ru">особые экономические институты, осуществляющие: аккумуляцию денежных средств и накоплений, предоставление кредита, проведение денежных расчётов, выпуск в обращение определённых видов денег</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">bank</skos:prefLabel>
+    <skos:prefLabel xml:lang="ru">банк</skos:prefLabel>
   </gn:Code>
 
   <gn:Code rdf:about="#S.BCN"
@@ -3512,6 +3541,7 @@
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">bus station</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">автостанция</skos:prefLabel>
+    <skos:prefLabel xml:lang="sv">Busstation</skos:prefLabel>
   </gn:Code>
 
   <gn:Code rdf:about="#S.BUSTP"
@@ -3554,6 +3584,8 @@
     <skos:definition xml:lang="en">Centres for Continuous Learning</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">Centre Continuous Learning</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.CH"
@@ -3670,6 +3702,8 @@
     <skos:prefLabel xml:lang="en">communication center</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">комуникационен център</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">узел связи</skos:prefLabel>
+    <skos:prefLabel xml:lang="sv">kommunikationscenter</skos:prefLabel>
+    <skos:prefLabel xml:lang="no">kommunikasjonssenter</skos:prefLabel>
   </gn:Code>
 
   <gn:Code rdf:about="#S.CRRL"
@@ -3902,11 +3936,12 @@
 
   <gn:Code rdf:about="#S.DIP"
                  skos:notation="S.DIP">
-    <skos:definition xml:lang="en">office, residence, or facility of a foreign government, which may include an embassy, consulate, chancery, office of charge d?affaires, or other diplomatic, economic, military, or cultural mission</skos:definition>
+    <skos:definition xml:lang="en">office, residence, or facility of a foreign government, which may include an embassy, consulate, chancery, office of charge d'affaires, or other diplomatic, economic, military, or cultural mission</skos:definition>
     <skos:definition xml:lang="ru">office, residence, or facility of a foreign government, which may include an embassy, consulate, chancery, office of charge d?affaires, or other diplomatic, economic, military, or cultural mission</skos:definition>
     <skos:historyNote xml:lang="en">Added in v3.0</skos:historyNote>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">diplomatic facility</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.DPOF"
@@ -3939,6 +3974,8 @@
     <skos:definition xml:lang="en">an estate that specializes in the growing of bananas</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">banana plantation</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.ESTC"
@@ -3947,6 +3984,8 @@
     <skos:definition xml:lang="en">an estate specializing in the cultivation of cotton</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">cotton plantation</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.ESTO"
@@ -3991,6 +4030,8 @@
     <skos:definition xml:lang="en">an estate that specializes in growing sisal</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">sisal plantation</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.ESTT"
@@ -4742,6 +4783,8 @@
     <skos:definition xml:lang="en">a place where diatomaceous earth is extracted</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">diatomite mine(s)</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MNFE"
@@ -4786,6 +4829,8 @@
     <skos:definition xml:lang="en">a mine where nickel ore is extracted</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">nickel mine(s)</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MNPB"
@@ -4794,6 +4839,8 @@
     <skos:definition xml:lang="en">a mine where lead ore is extracted</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">lead mine(s)</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MNPL"
@@ -4802,6 +4849,8 @@
     <skos:definition xml:lang="en">a place where heavy metals are concentrated and running water is used to extract them from unconsolidated sediments</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">placer mine(s)</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MNQ"
@@ -4832,6 +4881,8 @@
     <skos:definition xml:lang="en">a mine where tin ore is extracted</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">tin mine(s)</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MOLE"
@@ -4894,7 +4945,7 @@
 
   <gn:Code rdf:about="#S.MTRO"
                  skos:notation="S.MTRO">
-    <skos:definition xml:lang="en">metro station (Underground, Tube, or Métro)</skos:definition>
+    <skos:definition xml:lang="en">metro station (Underground, Tube, or Metro)</skos:definition>
     <skos:definition xml:lang="ru">пункт остановки электропоездов в  метрополитене</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="bg">metro station</skos:prefLabel>
@@ -4902,6 +4953,7 @@
     <skos:prefLabel xml:lang="no">metro station</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">tunnelbanestation</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">станция метро</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.MUS"
@@ -5552,6 +5604,8 @@
     <skos:definition xml:lang="en">Driving School</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">Driving School</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.SCHL"
@@ -5559,12 +5613,13 @@
     <skos:definition xml:lang="en">Language Schools &amp; Institutions</skos:definition>
     <skos:definition xml:lang="ru">языковые учебные заведения</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
-    <skos:prefLabel xml:lang="en">Language School</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">language school</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Språkskola</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">language school</skos:prefLabel>
     <skos:prefLabel xml:lang="en">language school</skos:prefLabel>
     <skos:prefLabel xml:lang="no">language school</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">языковая школа</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.SCHM"
@@ -5863,7 +5918,7 @@
 
   <gn:Code rdf:about="#S.THTR"
                  skos:notation="S.THTR">
-    <skos:definition xml:lang="en">A building, room, or outdoor structure for the presentation of plays, films, or other dramatic performances</skos:definition>
+    <skos:definition xml:lang="en">a building or outdoor area used for live theatrical presentations, concerts, opera or dance productions, cinema, and/or other stage productions</skos:definition>
     <skos:definition xml:lang="ru">учреждение, организация, занимающиеся устройством представлений</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="no">teater</skos:prefLabel>
@@ -5871,6 +5926,7 @@
     <skos:prefLabel xml:lang="en">theater</skos:prefLabel>
     <skos:prefLabel xml:lang="ru">театр</skos:prefLabel>
     <skos:prefLabel xml:lang="bg">театър</skos:prefLabel>
+    <skos:historyNote xml:lang="en">Modified in v3.4: the English text follows the current list of feature codes.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.TMB"
@@ -5972,6 +6028,8 @@
     <skos:definition xml:lang="en">Post Universitary Education Institutes (post graduate studies and highly specialised master programs) &amp; MBA</skos:definition>
     <skos:inScheme rdf:resource="#S"/>
     <skos:prefLabel xml:lang="en">postgrad &amp; MBA</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#S.UNIP"
@@ -7353,6 +7411,8 @@
     <skos:definition xml:lang="en">a small terrace</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">bench</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.BNKU"
@@ -7493,6 +7553,8 @@
     <skos:definition xml:lang="en">a branch of a canyon or valley</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">fork</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.FRSU"
@@ -7501,6 +7563,8 @@
     <skos:definition xml:lang="en">a branch of a canyon or valley</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">forks</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.FRZU"
@@ -7641,6 +7705,8 @@
     <skos:definition xml:lang="en">the axial depression of the mid-oceanic ridge system</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">median valley</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.MESU"
@@ -7685,6 +7751,8 @@
     <skos:definition xml:lang="en">well-delineated subdivisions of a large and complex positive feature</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">mountains</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.MTU"
@@ -7729,6 +7797,8 @@
     <skos:definition xml:lang="en">a flat or gently sloping underwater surface extending seaward from the shore</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">platform</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.PLNU"
@@ -7785,6 +7855,8 @@
     <skos:definition xml:lang="en">a small canyon</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">ravine</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.RDGU"
@@ -7853,6 +7925,8 @@
     <skos:definition xml:lang="en">a gentle slope connecting areas of different elevations</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">ramp</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.RNGU"
@@ -7861,6 +7935,8 @@
     <skos:definition xml:lang="en">a series of associated ridges or seamounts</skos:definition>
     <skos:inScheme rdf:resource="#U"/>
     <skos:prefLabel xml:lang="en">range</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
   </gn:Code>
 
   <gn:Code rdf:about="#U.SCNU"
@@ -8344,6 +8420,9 @@
             <skos:historyNote xml:lang="en">Added in v3.1</skos:historyNote>
             <skos:inScheme rdf:resource="#A"/>
             <skos:prefLabel xml:lang="en">historical administrative division</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
+    <dcterms:isReplacedBy rdf:resource="#A.ADMDH"/>
       </gn:Code>
       
       <gn:Code rdf:about="#A.PCLH"
@@ -8358,6 +8437,9 @@
             <skos:historyNote xml:lang="en">Added in v3.1</skos:historyNote>
             <skos:inScheme rdf:resource="#P"/>
             <skos:prefLabel xml:lang="en">historical capital of a political entity</skos:prefLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:historyNote xml:lang="en">Deprecated in v3.4: the code is not in the list of feature codes any more and no feature has it.</skos:historyNote>
+    <dcterms:isReplacedBy rdf:resource="#P.PPLCH"/>
       </gn:Code>
       
       <gn:Code rdf:about="#P.PPLH"
@@ -8381,5 +8463,159 @@
             <skos:prefLabel xml:lang="en">homestead</skos:prefLabel>
             <skos:definition>a residence, owner's or manager's, on a sheep or cattle station, woolshed, outcamp, or Aboriginal outstation, specific to Australia and New Zealand</skos:definition>
       </gn:Code>
+
+
+  <!-- Added in version 3.4 -->
+
+  <gn:Code rdf:about="#A.ADM5H"
+                 skos:notation="A.ADM5H">
+    <skos:definition xml:lang="en">a former fifth-order administrative division</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#A"/>
+    <skos:prefLabel xml:lang="en">historical fifth-order administrative division</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#A.ADMDH"
+                 skos:notation="A.ADMDH">
+    <skos:definition xml:lang="en">a former administrative division of a political entity, undifferentiated as to administrative level</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#A"/>
+    <skos:prefLabel xml:lang="en">historical administrative division</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#A.ADMS"
+                 skos:notation="A.ADMS">
+    <skos:definition xml:lang="en">school district</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#A"/>
+    <skos:prefLabel xml:lang="en">school district</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#P.PPLA5"
+                 skos:notation="P.PPLA5">
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#P"/>
+    <skos:prefLabel xml:lang="en">seat of a fifth-order administrative division</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#P.PPLCD"
+                 skos:notation="P.PPLCD">
+    <skos:definition xml:lang="en">capital or administrative center of a dependent political territory or area of special sovereignty</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#P"/>
+    <skos:prefLabel xml:lang="en">capital of a dependency or special area</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#P.PPLCH"
+                 skos:notation="P.PPLCH">
+    <skos:definition xml:lang="en">a former capital of a political entity</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#P"/>
+    <skos:prefLabel xml:lang="en">historical capital of a political entity</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.AIRT"
+                 skos:notation="S.AIRT">
+    <skos:definition xml:lang="en">airport facilities for the handling of freight and passengers</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">terminal</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.ARCHV"
+                 skos:notation="S.ARCHV">
+    <skos:definition xml:lang="en">a place or institution where documents are preserved</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">archive</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.ART"
+                 skos:notation="S.ART">
+    <skos:definition xml:lang="en">a piece of art, like a sculpture, painting. In contrast to monument (MNMT) it is not commemorative.</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">piece of art</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.BLDA"
+                 skos:notation="S.BLDA">
+    <skos:definition xml:lang="en">a building containing several individual apartments</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">apartment building</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.CTYD"
+                 skos:notation="S.CTYD">
+    <skos:definition xml:lang="en">an area surrounded by a building or complex and open to the sky</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">courtyard</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.FIRE"
+                 skos:notation="S.FIRE">
+    <skos:definition xml:lang="en">building housing firefighters and/or fire fighting equipment</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">fire station</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.FYT"
+                 skos:notation="S.FYT">
+    <skos:definition xml:lang="en">a place where ferries pick-up and discharge passengers, vehicles and or cargo</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">ferry terminal</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.PSN"
+                 skos:notation="S.PSN">
+    <skos:definition xml:lang="en">nuclear power station</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">nuclear power station</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.RDIN"
+                 skos:notation="S.RDIN">
+    <skos:definition xml:lang="en">a junction of two or more highways by a system of separate levels that permit traffic to pass from one to another without the crossing of traffic streams</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">intersection</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.SYG"
+                 skos:notation="S.SYG">
+    <skos:definition xml:lang="en">a place for Jewish worship and religious instruction</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">synagogue</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.TOLL"
+                 skos:notation="S.TOLL">
+    <skos:definition xml:lang="en">highway toll collection station</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">toll gate/barrier</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#S.TRAM"
+                 skos:notation="S.TRAM">
+    <skos:definition xml:lang="en">rail vehicle along urban streets (also known as streetcar or trolley)</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#S"/>
+    <skos:prefLabel xml:lang="en">tram</skos:prefLabel>
+  </gn:Code>
+
+  <gn:Code rdf:about="#V.GROVE"
+                 skos:notation="V.GROVE">
+    <skos:definition xml:lang="en">a small wooded area or collection of trees growing closely together, occurring naturally or deliberately planted</skos:definition>
+    <skos:historyNote xml:lang="en">Added in v3.4</skos:historyNote>
+    <skos:inScheme rdf:resource="#V"/>
+    <skos:prefLabel xml:lang="en">grove</skos:prefLabel>
+  </gn:Code>
 
 </rdf:RDF>

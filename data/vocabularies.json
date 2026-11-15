@@ -2186,7 +2186,7 @@
         "license": null,
         "namespace": "https://www.geonames.org/ontology#",
         "prefix": "gn",
-        "properties": 28,
+        "properties": 30,
         "summary": "Classes and properties for describing geographical features, especially those in the GeoNames database, with their names, types, coordinates, population, and parent, neighboring, and nearby features.",
         "tags": [
             "places"

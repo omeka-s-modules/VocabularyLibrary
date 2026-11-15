@@ -125,7 +125,7 @@
     "arm": {
         "alt_title": "Art and Rare Materials (ARM) BIBFRAME Ontology Extensions",
         "alt_title_source": "https://art-and-rare-materials-bf-ext.github.io/arm/ (the project's heading). The file's title, \"Art and Rare Materials Core Ontology\", is left over from version 0.1, whose modules version 1.0 merges.",
-        "download": "https://w3id.org/arm/ontology/1.0/arm.rdf",
+        "download": "https://w3id.org/arm/ontology/1.0.1/arm.rdf",
         "namespace": "https://w3id.org/arm/ontology/1.0/",
         "prefix": "arm",
         "summary": "Classes and properties that extend BIBFRAME for art and rare materials, such as bindings, bookplates, inscriptions, marginalia, watermarks, custodial history, condition, exhibitions, and awards.",
@@ -617,6 +617,9 @@
         ]
     },
     "costume-core": {
+        "alternates": [
+            "https://ardenkirkland.com/ontologies/costumeCore/costumeCore-0.4.1/index.rdf"
+        ],
         "download": "https://w3id.org/costumeCore/ontology",
         "namespace": "https://w3id.org/costumeCore/ontology/",
         "prefix": "costume",
@@ -1222,6 +1225,9 @@
     "eac-cpf": {
         "alt_title": "EAC-CPF Descriptions Ontology for Linked Archival Data",
         "alt_title_source": "LOV title without its trailing colon.",
+        "alternates": [
+            "https://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/eac-cpf.rdf"
+        ],
         "download": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
         "namespace": "http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/",
         "prefix": "eac-cpf",
@@ -1572,7 +1578,6 @@
         ]
     },
     "gamecip": {
-        "copy_from": "Open Metadata Registry",
         "download": "http://metadataregistry.org/schema/show/id/89.rdf",
         "namespace": "http://gamemetadata.org/uri/schema/gamecip/",
         "prefix": "gamecip",
@@ -1666,7 +1671,7 @@
         "alternates": [
             "http://www.geonames.org/ontology"
         ],
-        "download": "https://www.geonames.org/ontology/ontology_v3.3.rdf",
+        "download": "https://www.geonames.org/ontology/ontology_v3.4.rdf",
         "namespace": "http://www.geonames.org/ontology#",
         "prefix": "gn",
         "summary": "Classes and properties for describing geographical features, especially those in the GeoNames database, with their names, types, coordinates, population, and parent, neighboring, and nearby features.",
@@ -2030,7 +2035,6 @@
         ]
     },
     "lcmpt": {
-        "copy_from": "Open Metadata Registry",
         "download": "http://metadataregistry.org/schema/show/id/70.rdf",
         "namespace": "http://www.metadataregistry.org/uri/schema/lcmptade/",
         "prefix": "lcmpt",
