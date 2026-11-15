@@ -4239,6 +4239,23 @@
         ],
         "title": "PersonLink Ontology"
     },
+    "pmo": {
+        "alt_title": "Performed Music Ontology (PMO)",
+        "classes": 16,
+        "file": "vocabs/pmo.rdf",
+        "format": null,
+        "languages": [],
+        "license": null,
+        "namespace": "http://performedmusicontology.org/ontology/",
+        "prefix": "pmo",
+        "properties": 28,
+        "summary": "Classes and properties for describing performed music, such as medium of performance, ensemble sizes, keys and tempo, performances and recordings of works, remixes, and samples.",
+        "tags": [
+            "performing-arts",
+            "libraries"
+        ],
+        "title": null
+    },
     "pna": {
         "alt_title": null,
         "classes": 4,

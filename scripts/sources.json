@@ -3287,6 +3287,23 @@
             "people"
         ]
     },
+    "pmo": {
+        "alt_title": "Performed Music Ontology (PMO)",
+        "alt_title_source": "https://performedmusicontology.org/ontology/PMO.html (title \"Performed Music Ontology\"); the acronym from https://performedmusicontology.org/ (\"PMO Ensemble Size Vocabulary\").",
+        "download": "https://raw.githubusercontent.com/LD4P/PerformedMusicOntology/HEAD/PMO%202.0/Ontology/PMO.rdf",
+        "namespace": "http://performedmusicontology.org/ontology/",
+        "notes": "The namespace address returns 404 (2026-11-14); the file is in LD4P's GitHub repository (PMO 2.0/Ontology).",
+        "prefix": "pmo",
+        "summary": "Classes and properties for describing performed music, such as medium of performance, ensemble sizes, keys and tempo, performances and recordings of works, remixes, and samples.",
+        "summary_basis": [
+            "file",
+            "https://performedmusicontology.org/ontology/PMO.html"
+        ],
+        "tags": [
+            "performing-arts",
+            "libraries"
+        ]
+    },
     "pna": {
         "copy_from": "LOV",
         "download": "http://data.press.net/ontology/asset/",
