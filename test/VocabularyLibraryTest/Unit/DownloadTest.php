@@ -120,8 +120,16 @@ class DownloadTest extends TestCase
     {
         $this->assertFalse((bool) Download::hasScript(sprintf(self::RDF_XML, 'A manuscript, or the description of a script.')));
         $this->assertFalse((bool) Download::hasScript(''));
-        // Not XML, so only text.
+        // Not XML, so only text: Turtle, and N-Triples, which opens with an
+        // address in angle brackets.
         $this->assertFalse((bool) Download::hasScript("@prefix rdfs: <http://x/> .\n<http://a> rdfs:comment \"Use a <script> element\" ."));
+        $this->assertFalse((bool) Download::hasScript("<http://a> <http://www.w3.org/2000/01/rdf-schema#comment> \"Use a <script> element, or onclick=\\\"\\\"\" ."));
+        // XML however it opens: a comment, a processing instruction, its
+        // root element, a name in any script.
+        $this->assertTrue((bool) Download::hasScript('<!-- A vocabulary --><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><script>alert(1)</script></rdf:RDF>'));
+        $this->assertTrue((bool) Download::hasScript('<?foo bar?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><script>alert(1)</script></rdf:RDF>'));
+        $this->assertTrue((bool) Download::hasScript('<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><script>alert(1)</script></rdf:RDF>'));
+        $this->assertTrue((bool) Download::hasScript('<ns:Élément xmlns:ns="http://example.org/"><script>alert(1)</script></ns:Élément>'));
     }
 
     public function testAFileIsStoredWithTheExtensionOfItsContentType()

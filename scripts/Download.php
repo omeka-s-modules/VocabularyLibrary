@@ -196,7 +196,12 @@ class Download
      */
     public static function hasScript($body)
     {
-        return strncmp(self::head($body), '<', 1) === 0 && preg_match(
+        // Anything opening with "<" may be XML, except an address in angle
+        // brackets, as N-Triples and some Turtle open with: an XML name
+        // can't hold "://".
+        $head = self::head($body);
+        $xml = strncmp($head, '<', 1) === 0 && !preg_match('#^<[a-z][a-z0-9+.-]*://#i', $head);
+        return $xml && preg_match(
             '/<(?:[\w.-]+:)?script[\s\/>]|<[^>]*\son[a-z]+\s*=\s*["\']|=\s*["\']\s*javascript:/i',
             $body
         );
