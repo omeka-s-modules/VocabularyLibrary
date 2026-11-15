@@ -507,6 +507,23 @@
             "time"
         ]
     },
+    "chrono": {
+        "alt_title": "Chronometric Age Vocabulary",
+        "alt_title_source": "file: Terms defined by the Chronometric Age Vocabulary",
+        "download": "http://rs.tdwg.org/chrono/terms/",
+        "format": "term-list",
+        "namespace": "http://rs.tdwg.org/chrono/terms/",
+        "prefix": "chrono",
+        "summary": "Classes and properties for recording a specimen's chronometric age, such as its earliest and latest possible ages, uncertainty, dating method, and material dated.",
+        "summary_basis": [
+            "file",
+            "https://chrono.tdwg.org/"
+        ],
+        "tags": [
+            "natural-history",
+            "science"
+        ]
+    },
     "cidoc-crm": {
         "alt_title": "CIDOC CRM",
         "alt_title_source": "file: CIDOC CRM v7.1.3 implemented in RDFS",

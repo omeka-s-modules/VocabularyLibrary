@@ -660,6 +660,25 @@
         ],
         "title": "Cultural Event Ontology (ArCo network)"
     },
+    "chrono": {
+        "alt_title": "Chronometric Age Vocabulary",
+        "classes": 1,
+        "file": "vocabs/chrono.nt",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": null,
+        "namespace": "http://rs.tdwg.org/chrono/terms/",
+        "prefix": "chrono",
+        "properties": 22,
+        "summary": "Classes and properties for recording a specimen's chronometric age, such as its earliest and latest possible ages, uncertainty, dating method, and material dated.",
+        "tags": [
+            "natural-history",
+            "science"
+        ],
+        "title": "Terms defined by the Chronometric Age Vocabulary"
+    },
     "cidoc-crm": {
         "alt_title": "CIDOC CRM",
         "classes": 76,

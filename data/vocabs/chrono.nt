@@ -1,0 +1,615 @@
+<http://rs.tdwg.org/chrono/terms.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms.rdf> <http://purl.org/dc/terms/modified> "2026-06-05T03:56:31-03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/elements/1.1/publisher> "Biodiversity Information Standards (TDWG)"@en .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/description> "This list includes terms defined by the Chronometric Age Vocabulary"@en .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeID> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/earliestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/latestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/materialDatedRelationship> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasPart> <http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2020-10-05> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2021-02-02> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2021-02-05> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2021-02-21> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/version/terms/2026-05-26> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/publisher> <https://www.grid.ac/institutes/grid.480498.9> .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/dc/terms/title> "Terms defined by the Chronometric Age Vocabulary"@en .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "chrono" .
+<http://rs.tdwg.org/chrono/terms/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://rs.tdwg.org/chrono/terms/" .
+<http://rs.tdwg.org/chrono/terms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rs.tdwg.org/dwc/terms/attributes/TermList> .
+<http://rs.tdwg.org/chrono/terms/> <http://www.w3.org/2000/01/rdf-schema#comment> "This list includes terms defined by the Chronometric Age Vocabulary"@en .
+<http://rs.tdwg.org/chrono/terms/> <http://www.w3.org/2000/01/rdf-schema#label> "Terms defined by the Chronometric Age Vocabulary"@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T21:39:45-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/description> "The age of a specimen and how this age is known, whether by a dating assay, a relative association with dated material, or legacy collections information."@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2021-02-21> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/modified> "2021-02-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-RadiometricDates" .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "extension" .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "An approximation of a temporal position (in the sense conveyed by https://www.w3.org/TR/owl-time/#time:TemporalPosition) that is supported via evidence."@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "An approximation of a temporal position (in the sense conveyed by https://www.w3.org/TR/owl-time/#time:TemporalPosition) that is supported via evidence."@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`An age range associated with a specimen derived from an AMS dating assay applied to an oyster shell in the same stratum`; `An age range associated with a specimen derived from a ceramics analysis based on other materials found in the same stratum`; `A maximum age associated with a specimen derived from K-Ar dating applied to a proximal volcanic tuff found stratigraphically below the specimen`; `An age range of a specimen based on its biostratigraphic context`; `An age of a specimen based on what is reported in legacy collections data`."@en .
+<http://rs.tdwg.org/chrono/terms/ChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/description> "For example, calibration of conventional radiocarbon age or the currently accepted age range of a cultural or geological period. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2021-02-02> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/verbatimChronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-Method" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "The method used for converting the chrono:uncalibratedChronometricAge into a chronometric age in years, as captured in the chrono:earliestChronometricAge, chrono:earliestChronometricAgeReferenceSystem, chrono:latestChronometricAge, and chrono:latestChronometricAgeReferenceSystem fields."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Conversion Protocol"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2004/02/skos/core#definition> "The method used for converting the chrono:uncalibratedChronometricAge into a chronometric age in years, as captured in the chrono:earliestChronometricAge, chrono:earliestChronometricAgeReferenceSystem, chrono:latestChronometricAge, and chrono:latestChronometricAgeReferenceSystem fields."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2004/02/skos/core#example> "`INTCAL13`; `sequential 6 phase Bayesian model and IntCal13 calibration`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Conversion Protocol"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/created> "2020-10-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space ( | ). This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2020-10-05> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2021-02-02> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-Identifiers" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A list (concatenated and separated) of names of people, groups, or organizations who determined the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Determined By"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2004/02/skos/core#definition> "A list (concatenated and separated) of names of people, groups, or organizations who determined the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2004/02/skos/core#example> "`Michelle LeFebvre | Neill Wallis`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Determined By"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/created> "2020-10-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/description> "Recommended best practice is to use a date that conforms to ISO 8601-1:2019."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2020-10-05> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-RadiometricDate-AnalysisDateTime" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the chrono:ChronometricAge was determined."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Determined Date"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2004/02/skos/core#definition> "The date on which the chrono:ChronometricAge was determined."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2004/02/skos/core#example> "`1963-03-08T14:07-0600` (8 Mar 1963 at 2:07pm in the time zone six hours earlier than UTC); `2009-02-20T08:40Z` (20 February 2009 8:40am UTC); `2018-08-29T15:19` (3:19pm local time on 29 August 2018); `1809-02-12` (some time during 12 February 1809); `1906-06` (some time in June 1906); `1971` (some time in the year 1971)"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Determined Date"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeID> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/description> "May be a global unique identifier or an identifier specific to the dataset. This can be used to link this record to another repository where more information about the dataset is shared."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeID-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeID-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeID> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the set of information associated with a chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age ID"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the set of information associated with a chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2004/02/skos/core#example> "`https://www.canadianarchaeology.ca/samples/70673`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeID> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age ID"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/description> "This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-Method" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of or reference to the methods used to determine the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Protocol"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2004/02/skos/core#definition> "A description of or reference to the methods used to determine the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2004/02/skos/core#example> "`radiocarbon AMS`; `K-Ar dates for the lower most marker tuff`; `historic documentation`; `ceramic seriation`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Protocol"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space ( | )."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-MeasurementOrFactReference" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2000/01/rdf-schema#comment> "A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age References"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2004/02/skos/core#definition> "A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2004/02/skos/core#example> "`Pluckhahn, Thomas J., Neill J. Wallis, and Victor D. Thompson. 2020 The History and Future of Migrationist Explanation in the Archaeology of the Eastern Woodlands: A Review and Case Study of the Woodland Period Gulf Coast. Journal of Archaeological Research. https://doi.org/10.1007/s10814-019-09140-x`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age References"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-DatingComment" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2000/01/rdf-schema#comment> "Notes or comments about the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Remarks"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2004/02/skos/core#definition> "Notes or comments about the chrono:ChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2004/02/skos/core#example> "`Beta Analytic number: 323913 | One of the Crassostrea virginica right valve specimens from North Midden Feature 17 was chosen for AMS dating, but it is unclear exactly which specimen it was.`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Remarks"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears.rdf> <http://purl.org/dc/terms/modified> "2026-06-05T03:56:31-03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/description> "The expected unit for this field is years. The value in this field is number of years before and after the values given in the chrono:earliestChronometricAge and chrono:latestChronometricAge fields within which the actual values are estimated to be."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2021-02-02> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2026-05-26> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/modified> "2026-05-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "extension" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2000/01/rdf-schema#comment> "The temporal uncertainty of the chrono:earliestChronometricAge and chrono:latestChronometricAge in years."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Uncertainty In Years"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2004/02/skos/core#definition> "The temporal uncertainty of the chrono:earliestChronometricAge and chrono:latestChronometricAge in years."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2004/02/skos/core#example> "`100`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Uncertainty In Years"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/description> "This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-Method" .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "The method used to generate the value of chrono:chronometricAgeUncertaintyInYears."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Chronometric Age Uncertainty Method"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2004/02/skos/core#definition> "The method used to generate the value of chrono:chronometricAgeUncertaintyInYears."@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2004/02/skos/core#example> "`2-sigma calibrated range`; `Half of 95% confidence interval`"@en .
+<http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chronometric Age Uncertainty Method"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/earliestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/created> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/description> "The expected unit for this field is years. This field, if populated, must have an associated chrono:earliestChronometricAgeReferenceSystem."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/earliestChronometricAge-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/earliestChronometricAge-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/chrono/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-UpperValue" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum/earliest/oldest possible age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Earliest Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "The maximum/earliest/oldest possible age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`100`"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Earliest Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/created> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/earliestChronometricAgeReferenceSystem-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/earliestChronometricAgeReferenceSystem-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference system associated with the chrono:earliestChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Earliest Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#definition> "The reference system associated with the chrono:earliestChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#example> "`kya`; `mya`; `BP`; `AD`; `BCE`; `ka`; `Ma`; `Ga`"@en .
+<http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Earliest Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/latestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/created> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/description> "The expected unit for this field is years. This field, if populated, must have an associated chrono:latestChronometricAgeReferenceSystem."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/latestChronometricAge-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/latestChronometricAge-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/chrono/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-ChronostratigraphicAttribution-LowerValue" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimum/latest/youngest possible age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Latest Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "The minimum/latest/youngest possible age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`27`"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Latest Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/created> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/latestChronometricAgeReferenceSystem-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/latestChronometricAgeReferenceSystem-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference system associated with the chrono:latestChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Latest Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#definition> "The reference system associated with the chrono:latestChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#example> "`kya`; `mya`; `BP`; `AD`; `BCE`; `ka`; `Ma`; `Ga`"@en .
+<http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Latest Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/materialDated.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/materialDated.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/materialDated.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/materialDated.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/materialDated.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/description> "This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value."@en .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDated-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDated-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDated-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-MaterialDated" .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the material on which the chrono:chronometricAgeProtocol was actually performed, if known."@en .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2000/01/rdf-schema#label> "Material Dated"@en .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2004/02/skos/core#definition> "A description of the material on which the chrono:chronometricAgeProtocol was actually performed, if known."@en .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2004/02/skos/core#example> "`Double Tuff`; `Charcoal found in Stratum V`; `charred wood`; `tooth`"@en .
+<http://rs.tdwg.org/chrono/terms/materialDated> <http://www.w3.org/2004/02/skos/core#prefLabel> "Material Dated"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedID.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/materialDatedID.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/materialDatedID.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedID-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedID-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedID-2021-02-05> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedID-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the dwc:MaterialEntity on which the chrono:chronometricAgeProtocol was performed, if applicable."@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2000/01/rdf-schema#label> "Material Dated ID"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the dwc:MaterialEntity on which the chrono:chronometricAgeProtocol was performed, if applicable."@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2004/02/skos/core#example> "`dwc:materialEntityID: https://www.ebi.ac.uk/metagenomics/samples/SRS1930158`"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedID> <http://www.w3.org/2004/02/skos/core#prefLabel> "Material Dated ID"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship.rdf> <http://purl.org/dc/terms/modified> "2025-07-07T15:53:13-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/materialDatedRelationship> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/created> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedRelationship-2021-01-26> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/materialDatedRelationship-2025-06-12> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://purl.org/dc/terms/modified> "2025-06-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship of the chrono:materialDated to the subject of the chrono:ChronometricAge record, from which the chrono:ChronometricAge of the subject is inferred."@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Material Dated Relationship"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2004/02/skos/core#definition> "The relationship of the chrono:materialDated to the subject of the chrono:ChronometricAge record, from which the chrono:ChronometricAge of the subject is inferred."@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2004/02/skos/core#example> "`sameAs` (cases where the subject material was completely destructively subsampled to get the ChronometricAge); `subsampleOf` (cases where part of the original specimen was extracted as the material used to determine the ChronometricAge); `inContextWith` (cases where the ChronometricAge is inferred from materialDated, such as sediments or cultural objects, in related temporal context); `stratigraphicallyCorrelatedWith` (cases where the ChronometricAge is inferred from materialDated in a stratigraphically correlated context)"@en .
+<http://rs.tdwg.org/chrono/terms/materialDatedRelationship> <http://www.w3.org/2004/02/skos/core#prefLabel> "Material Dated Relationship"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:50:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/description> "The expected unit for this field is years. This field, if populated, must have an associated maximumChronometricAgeReferenceSystem."@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/maximumChronometricAge-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/maximumChronometricAge-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/isReplacedBy> <http://rs.tdwg.org/chrono/terms/earliestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/modified> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:StratigraphicAttributions-ChronostratigraphicAttribution-UpperValue" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper limit for the age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "Upper limit for the age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`27`"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maximum Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:50:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/maximumChronometricAgeReferenceSystem-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/maximumChronometricAgeReferenceSystem-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isReplacedBy> <http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/modified> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-TimeUnit" .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference system associated with the maximumChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#definition> "The reference system associated with the maximumChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#example> "`kya`,`mya`,`BP`,`AD`,`BCE`"@en .
+<http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maximum Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:50:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/description> "The expected unit for this field is years. This field, if populated, must have an associated maximumChronometricAgeReferenceSystem."@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/minimumChronometricAge-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/minimumChronometricAge-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/isReplacedBy> <http://rs.tdwg.org/chrono/terms/latestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/modified> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-ChronostratigraphicAttribution-LowerValue" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Lower limit for the age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "Lower limit for the age of a specimen as determined by a dating method."@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`100`"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minimum Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:50:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/minimumChronometricAgeReferenceSystem-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/minimumChronometricAgeReferenceSystem-2020-11-17> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/isReplacedBy> <http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/modified> "2021-01-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "https://terms.tdwg.org/wiki/abcd-efg:UnitStratigraphicDetermination-TimeUnit" .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference system associated with the minimumChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#definition> "The reference system associated with the minimumChronometricAge."@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#example> "`kya`,`mya`,`BP`,`AD`,`BCE`"@en .
+<http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minimum Chronometric Age Reference System"@en .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:24:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/uncalibratedChronometricAge-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://purl.org/dc/terms/modified> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The output of a dating assay before it is calibrated into an age using a specific conversion protocol."@en .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Uncalibrated Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "The output of a dating assay before it is calibrated into an age using a specific conversion protocol."@en .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`1510 +/- 25 14C yr BP`, `16.26 Ma +/- 0.016`"@en .
+<http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Uncalibrated Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge.rdf> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge.rdf> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge.rdf> <http://purl.org/dc/terms/modified> "2021-05-04T20:24:26-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge.rdf> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/document> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/created> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/description> "For example, this could be the radiocarbon age as given in an AMS dating report. This could also be simply what is reported as the age of a specimen in legacy collections data."@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/chrono/terms/version/verbatimChronometricAge-2020-09-14> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/modified> "2020-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://purl.org/dc/terms/replaces> <http://zooarchnet.org/dwc/terms/verbatimChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The verbatim age for a specimen, whether reported by a dating assay, associated references, or legacy information."@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2000/01/rdf-schema#label> "Verbatim Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2004/02/skos/core#definition> "The verbatim age for a specimen, whether reported by a dating assay, associated references, or legacy information."@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2004/02/skos/core#example> "`27 BC to 14 AD`, `stratigraphically pre-1104`"@en .
+<http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verbatim Chronometric Age"@en .
+<http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/ChronometricAge-2021-02-21> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/ChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2021-02-02> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeConversionProtocol-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2020-10-05> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2021-02-02> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedBy-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2020-10-05> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeDeterminedDate-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeID-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeID> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeID-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeID> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeProtocol-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeReferences-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeReferences> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeRemarks-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2021-02-02> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyInYears-2026-05-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/version/chronometricAgeUncertaintyMethod-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod> .
+<http://rs.tdwg.org/chrono/terms/version/earliestChronometricAge-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/earliestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/earliestChronometricAge-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/earliestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/earliestChronometricAgeReferenceSystem-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/earliestChronometricAgeReferenceSystem-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/latestChronometricAge-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/latestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/latestChronometricAge-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/latestChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/latestChronometricAgeReferenceSystem-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/latestChronometricAgeReferenceSystem-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/materialDated-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/version/materialDated-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/version/materialDated-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDated> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedID-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedID-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedID-2021-02-05> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedID-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedID> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedRelationship-2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedRelationship> .
+<http://rs.tdwg.org/chrono/terms/version/materialDatedRelationship-2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/materialDatedRelationship> .
+<http://rs.tdwg.org/chrono/terms/version/maximumChronometricAge-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/maximumChronometricAge-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/maximumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/maximumChronometricAgeReferenceSystem-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/maximumChronometricAgeReferenceSystem-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/maximumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/minimumChronometricAge-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/minimumChronometricAge-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/minimumChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/minimumChronometricAgeReferenceSystem-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/minimumChronometricAgeReferenceSystem-2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/minimumChronometricAgeReferenceSystem> .
+<http://rs.tdwg.org/chrono/terms/version/uncalibratedChronometricAge-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/uncalibratedChronometricAge> .
+<http://rs.tdwg.org/chrono/terms/version/verbatimChronometricAge-2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/verbatimChronometricAge> .
+<http://rs.tdwg.org/chrono/version/terms/2020-09-14> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2020-10-05> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2020-11-17> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2021-01-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2021-02-02> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2021-02-05> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2021-02-21> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2025-06-12> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
+<http://rs.tdwg.org/chrono/version/terms/2026-05-26> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/chrono/terms/> .
