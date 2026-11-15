@@ -6,7 +6,7 @@ vocabularies.
 Omeka describes resources with RDF vocabularies, and they are getting harder
 to find and to rely on. Publishers move or take down their files, and the
 registries that have kept vocabularies findable are no longer reliably
-maintained. The Vocabulary Library bundles more than 300 vocabularies with
+maintained. The Vocabulary Library bundles more than 250 vocabularies with
 the module, each tested with the Omeka S importer, so they stay available to
 Omeka sites whatever happens to their publishers' servers. They range from
 general-purpose vocabularies to those for museums, libraries, archives, the

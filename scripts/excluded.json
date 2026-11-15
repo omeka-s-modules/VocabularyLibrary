@@ -16,6 +16,14 @@
         "title": "The Biological Collections Ontology"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/237.rdf",
+        "excluded": "One museum's schema for its lamps, with machine-translated labels and a term labelled only with a number.",
+        "namespace": "http://metadataregistry.org/uri/schema/Hz/",
+        "prefix": "bplamp",
+        "slug": "beijing-palace-lamp-metadata-standards",
+        "title": "Beijing Palace lamp metadata standards"
+    },
+    {
         "download": "http://metadataregistry.org/schema/show/id/91.rdf",
         "excluded": "Two undefined properties from an Open Metadata Registry schema, not the CCO standard, which has no RDF vocabulary.",
         "namespace": "http://opaquenamespace/ns/cco/",
@@ -114,6 +122,14 @@
         "title": "ISIL"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/70.rdf",
+        "excluded": "The administrative fields of one Library of Congress authority file (sponsoring agency code, MARC record number), not for describing resources.",
+        "namespace": "http://www.metadataregistry.org/uri/schema/lcmptade/",
+        "prefix": "lcmpt",
+        "slug": "lcmpt",
+        "title": "LCMPT Authority Data Elements"
+    },
+    {
         "download": "http://www.w3.org/ns/ldp.ttl",
         "excluded": "A server protocol's internals (containers, membership relations, an inbox), not for describing resources.",
         "namespace": "http://www.w3.org/ns/ldp#",
@@ -140,6 +156,142 @@
         "slug": "lpo",
         "source": "added",
         "title": "Linked Places Ontology"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/38.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/00X/",
+        "prefix": "marc00x",
+        "slug": "marc-21-elements-00x",
+        "title": "MARC 21 Elements 00X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/39.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/0XX/",
+        "prefix": "marc0xx",
+        "slug": "marc-21-elements-0xx",
+        "title": "MARC 21 Elements 0XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/40.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/1XX/",
+        "prefix": "marc1xx",
+        "slug": "marc-21-elements-1xx",
+        "title": "MARC 21 Elements 1XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/41.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/2XX/",
+        "prefix": "marc2xx",
+        "slug": "marc-21-elements-2xx",
+        "title": "MARC 21 Elements 2XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/42.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/3XX/",
+        "prefix": "marc3xx",
+        "slug": "marc-21-elements-3xx",
+        "title": "MARC 21 Elements 3XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/43.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/4XX/",
+        "prefix": "marc4xx",
+        "slug": "marc-21-elements-4xx",
+        "title": "MARC 21 Elements 4XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/44.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/5XX/",
+        "prefix": "marc5xx",
+        "slug": "marc-21-elements-5xx",
+        "title": "MARC 21 Elements 5XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/45.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/60X/",
+        "prefix": "marc60x",
+        "slug": "marc-21-elements-60x",
+        "title": "MARC 21 Elements 60X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/46.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/61X/",
+        "prefix": "marc61x",
+        "slug": "marc-21-elements-61x",
+        "title": "MARC 21 Elements 61X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/47.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/63X/",
+        "prefix": "marc63x",
+        "slug": "marc-21-elements-63x",
+        "title": "MARC 21 Elements 63X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/48.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/64X/",
+        "prefix": "marc64x",
+        "slug": "marc-21-elements-64x",
+        "title": "MARC 21 Elements 64X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/49.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/65X/",
+        "prefix": "marc65x",
+        "slug": "marc-21-elements-65x",
+        "title": "MARC 21 Elements 65X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/50.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/7XX/",
+        "prefix": "marc7xx",
+        "slug": "marc-21-elements-7xx",
+        "title": "MARC 21 Elements 7XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/51.rdf",
+        "excluded": "A MARC 21 element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things. MARC relators (mrel) stay.",
+        "namespace": "http://marc21rdf.info/elements/8XX/",
+        "prefix": "marc8xx",
+        "slug": "marc-21-elements-8xx",
+        "title": "MARC 21 Elements 8XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/189.rdf",
+        "excluded": "One vendor's list of required elements (filename, title, date, language, media type, format type, reel size), which Dublin Core covers but for reel size.",
+        "namespace": "http://metadataregistry.org/uri/schema/TheMediaPreserve/",
+        "prefix": "mprel",
+        "slug": "mediapreserve-required-elements-list",
+        "title": "The MediaPreserve Required Elements List"
+    },
+    {
+        "download": "http://memorix.io/ontology#",
+        "excluded": "One collection management system's application model (pagination, editors, internal and external audiences), not for describing resources.",
+        "namespace": "http://memorix.io/ontology#",
+        "prefix": "memorix",
+        "slug": "memorix",
+        "title": "Memorix Application Ontology"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/18.rdf",
+        "excluded": "Generic report and patent fields (patent, report and standard numbers, supervisor, university), with nothing about ceramics; Dublin Core and BIBO cover them.",
+        "namespace": "http://metadataregistry.org/uri/schema/cr/",
+        "prefix": "ceramic",
+        "slug": "metadata-schema-for-ceramic-resources",
+        "title": "Metadata Schema for Ceramic Resources"
     },
     {
         "download": "http://deductions.github.io/nature_observation.owl.ttl#",
@@ -178,6 +330,14 @@
         "title": "Traditional village Metadata"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/90.rdf",
+        "excluded": "Five local fields of one repository (contents, contributing institution, conversion specifications, exhibit, set).",
+        "namespace": "http://opaquenamespace.org/ns/",
+        "prefix": "opaque",
+        "slug": "oregon-digital",
+        "title": "Oregon Digital"
+    },
+    {
         "download": "http://data.lirmm.fr/ontologies/passim#",
         "excluded": "Describes transport information services, outside the collection's scope.",
         "namespace": "http://data.lirmm.fr/ontologies/passim#",
@@ -210,12 +370,124 @@
         "title": "RDA Roles (deprecated)"
     },
     {
+        "download": "http://metadataregistry.org/schema/show/id/84.rdf",
+        "excluded": "Shelf locations in one library (floor, level, coordinates), too narrow for describing resources.",
+        "namespace": "http://metadataregistry.org/uri/schema/geobibrs/",
+        "prefix": "geobibrs",
+        "slug": "reina-sofia-library-geolocation",
+        "title": "Geolocation Museo Reina Sofía Library"
+    },
+    {
         "download": "http://rdf.muninn-project.org/ontologies/religion",
         "excluded": "Imports only a Religion class; by its own description it provides only basic taxonomy information.",
         "namespace": "http://rdf.muninn-project.org/ontologies/religion#",
         "prefix": "religion",
         "slug": "religion",
         "title": "The Muninn Religion Ontology"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/147.rdf",
+        "excluded": "Properties for scholarly works that BIBO, FOAF and VIVO cover, with misspelled labels and comments in Korean tagged as English.",
+        "namespace": "http://standard.k-history.kr/resource/",
+        "prefix": "khist",
+        "slug": "scholarly-data-model",
+        "title": "Scholarly Data Model"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/126.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/0XX/",
+        "prefix": "unimarcb0xx",
+        "slug": "unimarc-b-elements-0xx",
+        "title": "UNIMARC/B elements 0XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/127.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/1XX/",
+        "prefix": "unimarcb1xx",
+        "slug": "unimarc-b-elements-1xx",
+        "title": "UNIMARC/B elements 1XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/102.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/2XX/",
+        "prefix": "unimarcb2xx",
+        "slug": "unimarc-b-elements-2xx",
+        "title": "UNIMARC/B elements 2XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/103.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/3XX/",
+        "prefix": "unimarcb3xx",
+        "slug": "unimarc-b-elements-3xx",
+        "title": "UNIMARC/B elements 3XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/104.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/41X/",
+        "prefix": "unimarcb41x",
+        "slug": "unimarc-b-elements-41x",
+        "title": "UNIMARC/B elements 41X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/105.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/42X/",
+        "prefix": "unimarcb42x",
+        "slug": "unimarc-b-elements-42x",
+        "title": "UNIMARC/B elements 42X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/106.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/43X/",
+        "prefix": "unimarcb43x",
+        "slug": "unimarc-b-elements-43x",
+        "title": "UNIMARC/B elements 43X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/107.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/44X/",
+        "prefix": "unimarcb44x",
+        "slug": "unimarc-b-elements-44x",
+        "title": "UNIMARC/B elements 44X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/108.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/45X/",
+        "prefix": "unimarcb45x",
+        "slug": "unimarc-b-elements-45x",
+        "title": "UNIMARC/B elements 45X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/109.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/46X/",
+        "prefix": "unimarcb46x",
+        "slug": "unimarc-b-elements-46x",
+        "title": "UNIMARC/B elements 46X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/110.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/47X/",
+        "prefix": "unimarcb47x",
+        "slug": "unimarc-b-elements-47x",
+        "title": "UNIMARC/B elements 47X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/111.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/48X/",
+        "prefix": "unimarcb48x",
+        "slug": "unimarc-b-elements-48x",
+        "title": "UNIMARC/B elements 48X"
     },
     {
         "alternates": [],
@@ -226,6 +498,118 @@
         "slug": "unimarc-b-elements-5xx",
         "source": "OMR",
         "title": "UNIMARC/B elements 5XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/113.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/60X/",
+        "prefix": "unimarcb60x",
+        "slug": "unimarc-b-elements-60x",
+        "title": "UNIMARC/B elements 60X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/114.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/61X/",
+        "prefix": "unimarcb61x",
+        "slug": "unimarc-b-elements-61x",
+        "title": "UNIMARC/B elements 61X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/115.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/62X/",
+        "prefix": "unimarcb62x",
+        "slug": "unimarc-b-elements-62x",
+        "title": "UNIMARC/B elements 62X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/116.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/66X/",
+        "prefix": "unimarcb66x",
+        "slug": "unimarc-b-elements-66x",
+        "title": "UNIMARC/B elements 66X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/117.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/67X/",
+        "prefix": "unimarcb67x",
+        "slug": "unimarc-b-elements-67x",
+        "title": "UNIMARC/B elements 67X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/118.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/68X/",
+        "prefix": "unimarcb68x",
+        "slug": "unimarc-b-elements-68x",
+        "title": "UNIMARC/B elements 68X"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/119.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/7XX/",
+        "prefix": "unimarcb7xx",
+        "slug": "unimarc-b-elements-7xx",
+        "title": "UNIMARC/B elements 7XX"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/121.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/801/",
+        "prefix": "unimarcb801",
+        "slug": "unimarc-b-elements-801",
+        "title": "UNIMARC/B elements 801"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/122.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/802/",
+        "prefix": "unimarcb802",
+        "slug": "unimarc-b-elements-802",
+        "title": "UNIMARC/B elements 802"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/123.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/830/",
+        "prefix": "unimarcb830",
+        "slug": "unimarc-b-elements-830",
+        "title": "UNIMARC/B elements 830"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/124.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/850/",
+        "prefix": "unimarcb850",
+        "slug": "unimarc-b-elements-850",
+        "title": "UNIMARC/B elements 850"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/120.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/856/",
+        "prefix": "unimarcb856",
+        "slug": "unimarc-b-elements-856",
+        "title": "UNIMARC/B elements 856"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/125.rdf",
+        "excluded": "A UNIMARC/B element set: each property is one combination of a field, its indicators and a subfield, too fine-grained to choose from in Omeka, where Dublin Core, BIBFRAME, RDA and MODS describe the same things.",
+        "namespace": "http://iflastandards.info/ns/unimarc/unimarcb/elements/886/",
+        "prefix": "unimarcb886",
+        "slug": "unimarc-b-elements-886",
+        "title": "UNIMARC/B elements 886"
+    },
+    {
+        "download": "http://metadataregistry.org/schema/show/id/249.rdf",
+        "excluded": "An extension of the Video Game Metadata Schema, which the library doesn't have; its genres are values defined as classes.",
+        "namespace": "http://metadataregistry.org/uri/schema/vgms-vn/",
+        "prefix": "vgms-vn",
+        "slug": "vgms-expansion-pack-visual-novel",
+        "title": "VGMS Expansion Pack: Visual Novel Metadata Schema"
     },
     {
         "download": "http://www.w3.org/2003/06/sw-vocab-status/ns",

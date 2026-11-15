@@ -25,8 +25,8 @@ class TermReading
      * definition, else its comment, else a description. Many files define
      * their terms in skos:definition, which Omeka's own import doesn't read,
      * and where a term has both, the definition is nearly always the
-     * definition and the comment a note (MARC 21's field codes, BIBFRAME's
-     * suggested values).
+     * definition and the comment a note (BIBFRAME's suggested values, EDM's
+     * usage notes).
      */
     const COMMENT_PROPERTY = 'skos:definition|rdfs:comment|dcterms:description|dc11:description';
 
