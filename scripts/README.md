@@ -93,3 +93,9 @@ terms changed, as `update.php` reports them, so that administrators know
 which vocabularies to compare, and check each one's summary against its new
 file. Slugs are permanent once released, because they are in the module's
 URLs.
+
+Then, before tagging the release: run the tests (`../../../vendor/bin/phpunit`
+from `test/`), set the version in `config/module.ini`, and run `build.php`
+once more with `OMEKA_DIR` set to an installation of the oldest Omeka S
+version the module supports, since the build checks every file with that
+installation's importer.
