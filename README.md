@@ -21,6 +21,10 @@ This page has a part for each kind of reader:
 
 # For administrators
 
+Install it as any module (see
+[Installing modules](https://omeka.org/s/docs/user-manual/modules/#installing-modules)
+in the Omeka S user manual). It needs Omeka S 4.2.1 or later.
+
 The library is under **Modules > Vocabulary Library** in the admin menu, and
 Omeka's **Import new vocabulary** page links to it. Global Administrators and
 Supervisors can use it.
@@ -76,6 +80,31 @@ details, import, or comparison of a large vocabulary fails, raise PHP's
 
 ## About the library
 
+The library adds a few things of its own to what the files say:
+
+- **A name**, in place of the file's title where that is missing, not in
+  English, long, or leaves out the name the vocabulary is known by. It is
+  quoted from the file or the publisher's documentation.
+- **A one-sentence summary** of what the classes and properties describe,
+  drafted with AI from the file and the publisher's documentation, checked
+  claim by claim against them, and reviewed.
+- **Tags**, one to three, for filtering by subject or use.
+
+Thesauri, subject headings and code lists aren't included, because their
+terms are values, not the classes and properties that Omeka imports.
+
+To request a vocabulary, open an issue in this repository with its name and
+where it is published. What a vocabulary must meet, and what is usually left
+out, is under [Submitting a vocabulary](#submitting-a-vocabulary).
+
+# For vocabulary publishers
+
+## Submitting a vocabulary
+
+To submit a vocabulary of your own, open an issue in this repository with its
+name and the vocabulary, either as a file or as the address of one. A
+vocabulary needs a namespace but not an address of its own.
+
 A vocabulary must be valid RDF with classes or properties that Omeka can
 import, and its license must not forbid redistribution. So thesauri, subject
 headings and code lists, whose terms are values rather than classes and
@@ -93,40 +122,13 @@ left out when:
   every field, indicator and subfield of a cataloguing format;
 - its publisher has replaced or withdrawn it.
 
-The library adds a few things of its own to what the files say:
-
-- **A name**, in place of the file's title where that is missing, not in
-  English, long, or leaves out the name the vocabulary is known by. It is
-  quoted from the file or the publisher's documentation.
-- **A one-sentence summary** of what the classes and properties describe,
-  drafted with AI from the file and the publisher's documentation, checked
-  claim by claim against them, and reviewed.
-- **Tags**, one to three, for filtering by subject or use.
-
-More than a quarter of the files are archived copies from public vocabulary
-archives, used because the publisher's own file cannot be downloaded or does
-not import.
-
-To request a vocabulary, open an issue in this repository with its name and
-where it is published.
-
-# For vocabulary publishers
-
-## Submitting a vocabulary
-
-To submit a vocabulary of your own, open an issue in this repository with its
-name and the vocabulary as valid RDF, either as a file or as the address of
-one. A vocabulary needs a namespace but not an address of its own. It must
-meet the requirements in [About the library](#about-the-library), which also
-says what is usually left out.
-
 These are recommendations, each of which makes a vocabulary more useful in
 Omeka:
 
 - **A namespace that will not change,** not even from `http` to `https`.
   Omeka identifies a vocabulary by its namespace: under a new one it is a
   different vocabulary, and sites that imported the old one can update from
-  the new only by changing its namespace by hand.
+  the new only by changing its namespace.
 - **A stable address for the file,** if it has one, so that each release can
   include your current version.
 - **A stated license.**
@@ -145,8 +147,10 @@ Files are redistributed without changes to what they say. A vocabulary
 published only within a web page, or as a list of terms each at its own
 address, is stored as one file of the same statements. For each release, the
 library downloads each vocabulary from its publisher again, where it can.
-If your vocabulary has moved, or the library's name or summary for it is
-wrong, open an issue in this repository.
+More than a quarter of the files are archived copies from public vocabulary
+archives, used because the publisher's own file cannot be downloaded or does
+not import. If your vocabulary has moved, or the library's name or summary
+for it is wrong, open an issue in this repository.
 
 If a vocabulary you publish is in the library and you want it removed, open an
 issue or contact the Omeka team through the
