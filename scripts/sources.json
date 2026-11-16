@@ -919,6 +919,19 @@
             "libraries"
         ]
     },
+    "datacite": {
+        "download": "http://purl.org/spar/datacite/",
+        "namespace": "http://purl.org/spar/datacite/",
+        "prefix": "datacite",
+        "summary": "Classes and properties for describing identifiers and identifier schemes for bibliographic resources such as papers and datasets, and for people, organizations, funders, and licenses.",
+        "summary_basis": [
+            "file",
+            "https://sparontologies.github.io/datacite/current/datacite.html"
+        ],
+        "tags": [
+            "publishing"
+        ]
+    },
     "dba": {
         "download": "https://w3id.org/dba/ontology/",
         "namespace": "https://w3id.org/dba/ontology/",
@@ -975,19 +988,6 @@
         ],
         "tags": [
             "linked-data"
-        ]
-    },
-    "dcite": {
-        "download": "http://purl.org/spar/datacite/",
-        "namespace": "http://purl.org/spar/datacite/",
-        "prefix": "datacite",
-        "summary": "Classes and properties for describing identifiers and identifier schemes for bibliographic resources such as papers and datasets, and for people, organizations, funders, and licenses.",
-        "summary_basis": [
-            "file",
-            "https://sparontologies.github.io/datacite/current/datacite.html"
-        ],
-        "tags": [
-            "publishing"
         ]
     },
     "dcndl": {
@@ -1191,7 +1191,7 @@
             "value-annotations"
         ]
     },
-    "drama": {
+    "drammar": {
         "download": "http://www.purl.org/drammar#",
         "namespace": "http://www.purl.org/drammar#",
         "prefix": "drammar",
@@ -2831,7 +2831,7 @@
             "linked-data"
         ]
     },
-    "part": {
+    "participation": {
         "alternates": [
             "http://purl.org/vocab/participation/schema#",
             "http://vocab.org/participation/schema#"
@@ -3016,6 +3016,19 @@
             "people"
         ]
     },
+    "personlink": {
+        "copy_from": "LOV",
+        "download": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
+        "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
+        "prefix": "personlink",
+        "summary": "Classes and properties for recording family relationships, such as parents, children, siblings, cousins, in-laws, spouses, and partners, with labels in English, French, and Arabic.",
+        "summary_basis": [
+            "file"
+        ],
+        "tags": [
+            "people"
+        ]
+    },
     "place": {
         "copy_from": "LOV",
         "download": "http://purl.org/ontology/places#",
@@ -3027,19 +3040,6 @@
         ],
         "tags": [
             "places"
-        ]
-    },
-    "plink": {
-        "copy_from": "LOV",
-        "download": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
-        "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
-        "prefix": "personlink",
-        "summary": "Classes and properties for recording family relationships, such as parents, children, siblings, cousins, in-laws, spouses, and partners, with labels in English, French, and Arabic.",
-        "summary_basis": [
-            "file"
-        ],
-        "tags": [
-            "people"
         ]
     },
     "pmo": {
@@ -3198,34 +3198,6 @@
             "libraries"
         ]
     },
-    "rda-c": {
-        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml",
-        "namespace": "http://rdaregistry.info/Elements/c/",
-        "prefix": "rdac",
-        "summary": "Classes for the entities work, expression, manifestation, item, agent, collective agent, person, family, corporate body, nomen, place, and timespan.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rda-n": {
-        "alt_title": "RDA Nomen properties",
-        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
-        "download": "http://rdaregistry.info/Elements/n/",
-        "namespace": "http://rdaregistry.info/Elements/n/",
-        "prefix": "rdan",
-        "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/n.xml"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
     "rda-onix-framework-element-set": {
         "download": "http://rdaregistry.info/Elements/rof/",
         "namespace": "http://rdaregistry.info/Elements/rof/",
@@ -3234,64 +3206,6 @@
         "summary_basis": [
             "file",
             "https://www.rdaregistry.info/rgROF/"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rda-p": {
-        "alt_title": "RDA Place properties",
-        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
-        "download": "http://rdaregistry.info/Elements/p/",
-        "namespace": "http://rdaregistry.info/Elements/p/",
-        "prefix": "rdap",
-        "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/p.xml"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rda-t": {
-        "alt_title": "RDA Time-span properties",
-        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
-        "download": "http://rdaregistry.info/Elements/t/",
-        "namespace": "http://rdaregistry.info/Elements/t/",
-        "prefix": "rdat",
-        "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/t.xml"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rda-w": {
-        "alt_title": "RDA Work properties",
-        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
-        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml",
-        "namespace": "http://rdaregistry.info/Elements/w/",
-        "prefix": "rdaw",
-        "summary": "Properties for recording the attributes and relationships of a work, including its creators, subjects, place of origin, and adaptations and other related works.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml"
-        ],
-        "tags": [
-            "libraries"
-        ]
-    },
-    "rda-x": {
-        "download": "http://rdaregistry.info/Elements/x/",
-        "namespace": "http://rdaregistry.info/Elements/x/",
-        "prefix": "rdax",
-        "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
-        "summary_basis": [
-            "file",
-            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/x.xml"
         ],
         "tags": [
             "libraries"
@@ -3307,6 +3221,19 @@
         "summary_basis": [
             "file",
             "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/a.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdac": {
+        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml",
+        "namespace": "http://rdaregistry.info/Elements/c/",
+        "prefix": "rdac",
+        "summary": "Classes for the entities work, expression, manifestation, item, agent, collective agent, person, family, corporate body, nomen, place, and timespan.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/c.xml"
         ],
         "tags": [
             "libraries"
@@ -3357,6 +3284,51 @@
             "libraries"
         ]
     },
+    "rdan": {
+        "alt_title": "RDA Nomen properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/n/",
+        "namespace": "http://rdaregistry.info/Elements/n/",
+        "prefix": "rdan",
+        "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/n.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdap": {
+        "alt_title": "RDA Place properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/p/",
+        "namespace": "http://rdaregistry.info/Elements/p/",
+        "prefix": "rdap",
+        "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/p.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdat": {
+        "alt_title": "RDA Time-span properties",
+        "alt_title_source": "The title of the publisher's earlier file, as the Open Metadata Registry kept it; the current file's title drops \"RDA\".",
+        "download": "http://rdaregistry.info/Elements/t/",
+        "namespace": "http://rdaregistry.info/Elements/t/",
+        "prefix": "rdat",
+        "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/t.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
     "rdau": {
         "alt_title": "RDA Unconstrained properties",
         "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
@@ -3367,6 +3339,34 @@
         "summary_basis": [
             "file",
             "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/u.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdaw": {
+        "alt_title": "RDA Work properties",
+        "alt_title_source": "The title of the publisher's earlier file, as LOV kept it; the current file's title drops \"RDA\".",
+        "download": "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml",
+        "namespace": "http://rdaregistry.info/Elements/w/",
+        "prefix": "rdaw",
+        "summary": "Properties for recording the attributes and relationships of a work, including its creators, subjects, place of origin, and adaptations and other related works.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/w.xml"
+        ],
+        "tags": [
+            "libraries"
+        ]
+    },
+    "rdax": {
+        "download": "http://rdaregistry.info/Elements/x/",
+        "namespace": "http://rdaregistry.info/Elements/x/",
+        "prefix": "rdax",
+        "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
+        "summary_basis": [
+            "file",
+            "https://raw.githubusercontent.com/RDARegistry/RDA-Vocabularies/master/xml/Elements/x.xml"
         ],
         "tags": [
             "libraries"

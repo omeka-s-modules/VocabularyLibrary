@@ -1190,6 +1190,24 @@
         ],
         "title": "Document Availability Information Ontology (DAIA)"
     },
+    "datacite": {
+        "alt_title": null,
+        "classes": 19,
+        "file": "vocabs/datacite.rdf",
+        "format": null,
+        "languages": [
+            "en"
+        ],
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "namespace": "http://purl.org/spar/datacite/",
+        "prefix": "datacite",
+        "properties": 12,
+        "summary": "Classes and properties for describing identifiers and identifier schemes for bibliographic resources such as papers and datasets, and for people, organizations, funders, and licenses.",
+        "tags": [
+            "publishing"
+        ],
+        "title": "The DataCite Ontology (DataCite)"
+    },
     "dba": {
         "alt_title": null,
         "classes": 32,
@@ -1301,24 +1319,6 @@
             "linked-data"
         ],
         "title": "The data catalog vocabulary"
-    },
-    "dcite": {
-        "alt_title": null,
-        "classes": 19,
-        "file": "vocabs/dcite.rdf",
-        "format": null,
-        "languages": [
-            "en"
-        ],
-        "license": "http://creativecommons.org/licenses/by/4.0/",
-        "namespace": "http://purl.org/spar/datacite/",
-        "prefix": "datacite",
-        "properties": 12,
-        "summary": "Classes and properties for describing identifiers and identifier schemes for bibliographic resources such as papers and datasets, and for people, organizations, funders, and licenses.",
-        "tags": [
-            "publishing"
-        ],
-        "title": "The DataCite Ontology (DataCite)"
     },
     "dcndl": {
         "alt_title": "NDL Metadata Terms",
@@ -1578,10 +1578,10 @@
         ],
         "title": "Discourse relationships vocabulary"
     },
-    "drama": {
+    "drammar": {
         "alt_title": null,
         "classes": 48,
-        "file": "vocabs/drama.rdf",
+        "file": "vocabs/drammar.rdf",
         "format": null,
         "languages": [],
         "license": "Ontology Drammar is available at the url http://purl.org/drammar, under the license Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). The canonical citation for Drammar is \"Vincenzo Lombardo, Rossana Damiano, Antonio Pizzo. Drammar: a comprehensive ontology of drama (2018). http://purl.org/drammar\"",
@@ -3662,10 +3662,10 @@
         ],
         "title": "The OWL 2 Schema vocabulary (OWL 2)"
     },
-    "part": {
+    "participation": {
         "alt_title": null,
         "classes": 1,
-        "file": "vocabs/part.nt",
+        "file": "vocabs/participation.nt",
         "format": null,
         "languages": [
             "en"
@@ -3858,6 +3858,26 @@
         ],
         "title": "ISA Programme Person Core Vocabulary"
     },
+    "personlink": {
+        "alt_title": null,
+        "classes": 3,
+        "file": "vocabs/personlink.nt",
+        "format": "turtle",
+        "languages": [
+            "ar",
+            "en",
+            "fr"
+        ],
+        "license": "Copyright 2015, CNAM",
+        "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
+        "prefix": "personlink",
+        "properties": 103,
+        "summary": "Classes and properties for recording family relationships, such as parents, children, siblings, cousins, in-laws, spouses, and partners, with labels in English, French, and Arabic.",
+        "tags": [
+            "people"
+        ],
+        "title": "PersonLink Ontology"
+    },
     "place": {
         "alt_title": null,
         "classes": 47,
@@ -3879,26 +3899,6 @@
             "places"
         ],
         "title": "The Places Ontology"
-    },
-    "plink": {
-        "alt_title": null,
-        "classes": 3,
-        "file": "vocabs/plink.nt",
-        "format": "turtle",
-        "languages": [
-            "ar",
-            "en",
-            "fr"
-        ],
-        "license": "Copyright 2015, CNAM",
-        "namespace": "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#",
-        "prefix": "personlink",
-        "properties": 103,
-        "summary": "Classes and properties for recording family relationships, such as parents, children, siblings, cousins, in-laws, spouses, and partners, with labels in English, French, and Arabic.",
-        "tags": [
-            "people"
-        ],
-        "title": "PersonLink Ontology"
     },
     "pmo": {
         "alt_title": "Performed Music Ontology (PMO)",
@@ -4100,77 +4100,6 @@
         ],
         "title": "RCGS Video Game Terms"
     },
-    "rda-c": {
-        "alt_title": null,
-        "classes": 13,
-        "file": "vocabs/rda-c.rdf",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "el",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "sv",
-            "tr",
-            "vi",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/c/",
-        "prefix": "rdac",
-        "properties": 0,
-        "summary": "Classes for the entities work, expression, manifestation, item, agent, collective agent, person, family, corporate body, nomen, place, and timespan.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "RDA Classes"
-    },
-    "rda-n": {
-        "alt_title": "RDA Nomen properties",
-        "classes": 0,
-        "file": "vocabs/rda-n.nt",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "tr",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/n/",
-        "prefix": "rdan",
-        "properties": 184,
-        "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "Nomen properties"
-    },
     "rda-onix-framework-element-set": {
         "alt_title": null,
         "classes": 9,
@@ -4199,148 +4128,6 @@
             "libraries"
         ],
         "title": "RDA/ONIX Framework element set"
-    },
-    "rda-p": {
-        "alt_title": "RDA Place properties",
-        "classes": 0,
-        "file": "vocabs/rda-p.nt",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "el",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "tr",
-            "vi",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/p/",
-        "prefix": "rdap",
-        "properties": 57,
-        "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "Place properties"
-    },
-    "rda-t": {
-        "alt_title": "RDA Time-span properties",
-        "classes": 0,
-        "file": "vocabs/rda-t.nt",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "tr",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/t/",
-        "prefix": "rdat",
-        "properties": 63,
-        "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "Timespan properties"
-    },
-    "rda-w": {
-        "alt_title": "RDA Work properties",
-        "classes": 0,
-        "file": "vocabs/rda-w.rdf",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "el",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "sv",
-            "tr",
-            "vi",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/w/",
-        "prefix": "rdaw",
-        "properties": 638,
-        "summary": "Properties for recording the attributes and relationships of a work, including its creators, subjects, place of origin, and adaptations and other related works.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "Work properties"
-    },
-    "rda-x": {
-        "alt_title": null,
-        "classes": 0,
-        "file": "vocabs/rda-x.nt",
-        "format": null,
-        "languages": [
-            "ar",
-            "ca",
-            "cs",
-            "da",
-            "de",
-            "en",
-            "es",
-            "et",
-            "fi",
-            "fr",
-            "hu",
-            "it",
-            "lv",
-            "nl",
-            "no",
-            "sv",
-            "tr",
-            "zh-Hans-CN"
-        ],
-        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
-        "namespace": "http://rdaregistry.info/Elements/x/",
-        "prefix": "rdax",
-        "properties": 30,
-        "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
-        "tags": [
-            "libraries"
-        ],
-        "title": "RDA Entity properties"
     },
     "rdaa": {
         "alt_title": "RDA Agent properties",
@@ -4377,6 +4164,43 @@
             "libraries"
         ],
         "title": "Agent properties"
+    },
+    "rdac": {
+        "alt_title": null,
+        "classes": 13,
+        "file": "vocabs/rdac.rdf",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/c/",
+        "prefix": "rdac",
+        "properties": 0,
+        "summary": "Classes for the entities work, expression, manifestation, item, agent, collective agent, person, family, corporate body, nomen, place, and timespan.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "RDA Classes"
     },
     "rdae": {
         "alt_title": "RDA Expression properties",
@@ -4488,6 +4312,110 @@
         ],
         "title": "Manifestation properties"
     },
+    "rdan": {
+        "alt_title": "RDA Nomen properties",
+        "classes": 0,
+        "file": "vocabs/rdan.nt",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/n/",
+        "prefix": "rdan",
+        "properties": 184,
+        "summary": "Properties for recording the attributes and relationships of a nomen, such as a name, title, or identifier, including its scheme, language, and script.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "Nomen properties"
+    },
+    "rdap": {
+        "alt_title": "RDA Place properties",
+        "classes": 0,
+        "file": "vocabs/rdap.nt",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/p/",
+        "prefix": "rdap",
+        "properties": 57,
+        "summary": "Properties for recording the attributes and relationships of a place, including its names and its role as a place of birth, publication, or production.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "Place properties"
+    },
+    "rdat": {
+        "alt_title": "RDA Time-span properties",
+        "classes": 0,
+        "file": "vocabs/rdat.nt",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "tr",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/t/",
+        "prefix": "rdat",
+        "properties": 63,
+        "summary": "Properties for recording the attributes and relationships of a timespan, including its beginning, ending, and role as a date of birth, death, or publication.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "Timespan properties"
+    },
     "rdau": {
         "alt_title": "RDA Unconstrained properties",
         "classes": 0,
@@ -4516,6 +4444,78 @@
             "libraries"
         ],
         "title": "Unconstrained properties"
+    },
+    "rdaw": {
+        "alt_title": "RDA Work properties",
+        "classes": 0,
+        "file": "vocabs/rdaw.rdf",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "vi",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/w/",
+        "prefix": "rdaw",
+        "properties": 638,
+        "summary": "Properties for recording the attributes and relationships of a work, including its creators, subjects, place of origin, and adaptations and other related works.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "Work properties"
+    },
+    "rdax": {
+        "alt_title": null,
+        "classes": 0,
+        "file": "vocabs/rdax.nt",
+        "format": null,
+        "languages": [
+            "ar",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "et",
+            "fi",
+            "fr",
+            "hu",
+            "it",
+            "lv",
+            "nl",
+            "no",
+            "sv",
+            "tr",
+            "zh-Hans-CN"
+        ],
+        "license": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals",
+        "namespace": "http://rdaregistry.info/Elements/x/",
+        "prefix": "rdax",
+        "properties": 30,
+        "summary": "Properties for recording the attributes and relationships of an entity of any kind, including its names, identifiers, access points, notes, and related entities.",
+        "tags": [
+            "libraries"
+        ],
+        "title": "RDA Entity properties"
     },
     "rdf": {
         "alt_title": null,
