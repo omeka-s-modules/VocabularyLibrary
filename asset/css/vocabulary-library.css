@@ -197,7 +197,7 @@
     white-space: nowrap;
 }
 
-/* A namespace in a sentence, which breaks anywhere to fit the sidebar. */
+/* A namespace, which breaks anywhere to fit the sidebar. */
 .vocabulary-library-namespace {
     overflow-wrap: anywhere;
 }

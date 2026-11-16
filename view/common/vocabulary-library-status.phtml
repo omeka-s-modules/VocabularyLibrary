@@ -5,17 +5,18 @@
  * Import button.
  *
  * In the table the status links to the vocabulary in core. The sidebar names
- * that vocabulary in its own group, so there the status is text, with a
- * Compare and update button when the user can update the vocabulary; and a
- * namespace not in use is said too, in the same words as the table's filter,
- * with the Import button under it, so the status reads as one. The
- * table has no such link: on every row it would read as something to do,
- * when most vocabularies in Omeka have nothing to update.
+ * that vocabulary, linked, with a Compare and update button when the user can
+ * update it; and a namespace not in use is said too, in the same words as the
+ * table's filter, with the Import button under it, so the status reads as
+ * one. The table has no Compare and update button: on every row it would read
+ * as something to do, when most vocabularies in Omeka have nothing to update.
  *
  * A namespace Omeka has in another form, such as http for https, is in use
- * all the same, and the table says no more. The sidebar, where there is room
- * and where updating starts, says how it differs and links to core's page for
- * editing the vocabulary, which is what would make it comparable.
+ * all the same, and the table says no more. The sidebar, where updating
+ * starts, shows Omeka's form under the vocabulary's name, says why it matters
+ * and, for someone who may change it, opens a confirmation for changing it to
+ * the library's form, which is what makes it comparable; the confirmation
+ * gives both namespaces and what the change does.
  *
  * @var string $slug
  * @var string|null $name The vocabulary's name, where many statuses share a
@@ -25,15 +26,16 @@
  * @var array|null $installed From SiteVocabularies::installed()
  * @var string|null $prefixTakenBy Label of the vocabulary in Omeka that
  *   already has this vocabulary's default prefix
- * @var bool $long Whether to write the sidebar's status: a taken prefix
- *   explained in full, and what the user can do next
- * @var string|null $namespace The library's namespace for the vocabulary,
- *   which the sidebar's status needs
+ * @var bool $long Whether to write the status in full: a taken prefix
+ *   explained, and what the user can do next
+ * @var bool $sidebar Whether it is in the details sidebar, which names Omeka's
+ *   vocabulary in the status and confirms changing a namespace. Elsewhere, as
+ *   on the import page, the page names it.
  */
 $name = $name ?? null;
 $prefixTakenBy = $prefixTakenBy ?? null;
 $long = $long ?? false;
-$namespace = $namespace ?? null;
+$sidebar = $sidebar ?? false;
 ?>
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
@@ -60,21 +62,29 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
     'aria-label' => $name === null ? null : sprintf($this->translate('Namespace in use: %s'), $name),
 ])); ?>
 <?php else: ?>
+<?php if ($sidebar): ?>
+<?php // As core writes a vocabulary in its selectors: label (prefix). ?>
+<?php echo sprintf($this->translate('Namespace in use by %s'), $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url'])); ?>
+<?php if (!$installed['exact']): ?>
+<?php // Omeka's form of the namespace, under the vocabulary that has it; the sentence below says why it matters. ?>
+<div class="vocabulary-library-namespace"><?php echo $this->escapeHtml($installed['vocabulary']->namespaceUri()); ?></div>
+<?php endif; ?>
+<?php else: ?>
 <?php echo $this->translate('Namespace in use'); ?>
+<?php endif; ?>
 <?php if ($installed['comparable']): ?>
 <p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
 <?php elseif (!$installed['exact']): ?>
-<?php
-// Both namespaces in full, since they can differ by one closing character.
-$inOmeka = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this->escapeHtml($installed['vocabulary']->namespaceUri()));
-$inLibrary = sprintf('<span class="vocabulary-library-namespace">%s</span>', $this->escapeHtml($namespace));
-?>
-<?php if ($installed['editUrl']): ?>
-<?php // What changing it does, which the admin should know before doing it. ?>
-<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('To compare and update Omeka\'s vocabulary, change its namespace from %1$s to %2$s.')), $inOmeka, $inLibrary); ?> <?php echo $this->escapeHtml($this->translate('This changes the addresses of its classes and properties everywhere Omeka publishes them. Values stay attached to their properties.')); ?></p>
-<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Edit vocabulary'), $installed['editUrl'], ['class' => 'button']); ?></p>
+<?php // Both namespaces in full, and what changing it does, are in the confirmation that Change namespace opens. ?>
+<?php if ($installed['changeable'] && $sidebar): ?>
+<p class="vocabulary-library-status-next"><?php echo $this->escapeHtml($this->translate('Omeka\'s vocabulary has a slightly different namespace, so the library can\'t compare it. To compare and update it, you can change its namespace to the library\'s.')); ?></p>
+<?php // The confirmation opens over the details, in a sidebar of its own. ?>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Change namespace'), '#', ['class' => 'button sidebar-content', 'data-sidebar-selector' => '#vocabulary-library-confirm-sidebar', 'data-sidebar-content-url' => $this->url('admin/vocabulary-library', ['action' => 'change-namespace', 'slug' => $slug])]); ?></p>
+<?php elseif ($installed['changeable']): ?>
+<?php // Elsewhere, as on the import page, there is no sidebar to confirm in. ?>
+<p class="vocabulary-library-status-next"><?php echo $this->escapeHtml($this->translate('Omeka\'s vocabulary has a slightly different namespace. Its details in the library can change it to the library\'s, to compare and update.')); ?></p>
 <?php else: ?>
-<p class="vocabulary-library-status-next"><?php echo sprintf($this->escapeHtml($this->translate('Omeka\'s vocabulary can\'t be compared or updated: its namespace is %1$s, not %2$s.')), $inOmeka, $inLibrary); ?></p>
+<p class="vocabulary-library-status-next"><?php echo $this->escapeHtml($this->translate('Omeka\'s vocabulary has a slightly different namespace, so it can\'t be compared or updated.')); ?></p>
 <?php endif; ?>
 <?php endif; ?>
 <?php endif; ?>

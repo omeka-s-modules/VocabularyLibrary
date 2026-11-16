@@ -346,17 +346,25 @@
         // Import and Compare carry the library's search, filters and sort, so
         // that their links back return to it as it is now. Without the
         // script, they lead back to the library as it first shows.
-        $(document).on('click', 'a.vocabulary-library-keep-place', function () {
-            // The link may carry what was set when it was last followed, as
-            // after coming Back to this page, so it is set or removed anew.
+        // The confirmation for changing a namespace, in the details sidebar,
+        // does the same for its form.
+        const keepPlace = function (address) {
+            // The address may carry what was set when it was last followed,
+            // as after coming Back to this page, so it is set or removed anew.
             const state = location.search.slice(1);
-            const url = new URL(this.href, location.href);
+            const url = new URL(address, location.href);
             if (state) {
                 url.searchParams.set('return', state);
             } else {
                 url.searchParams.delete('return');
             }
-            this.href = url.toString();
+            return url.toString();
+        };
+        $(document).on('click', 'a.vocabulary-library-keep-place', function () {
+            this.href = keepPlace(this.href);
+        });
+        $(document).on('submit', 'form.vocabulary-library-keep-place', function () {
+            this.action = keepPlace(this.action);
         });
 
         // The empty state's button, and Clear filters, change the controls
@@ -420,19 +428,43 @@
             }
         });
 
+        // The sidebar a confirmation opens in, over the details.
+        const confirmSidebar = document.getElementById('vocabulary-library-confirm-sidebar');
         // Closing the sidebar returns focus to where it was opened from, or
         // else to that vocabulary's name, or the search: the close link
         // itself is hidden with the sidebar. Escape closes it too.
         $(document).on('click', 'a.sidebar-content', function () {
-            sidebarOpener = this;
-            sidebarOpenerRow = this.closest('tr');
+            // A link in a row, which opens the sidebar. Not one within the
+            // sidebar, such as Change namespace: core has replaced the
+            // sidebar's content, and with it the link, by the time this runs.
+            const row = this.closest('tr');
+            if (row) {
+                sidebarOpener = this;
+                sidebarOpenerRow = row;
+            }
         });
         $(document).on('o:sidebar-closed', '.sidebar', function () {
+            // A confirmation closing returns to the details under it, at the
+            // button that opened it, where they are still there to return to.
+            if (this === confirmSidebar) {
+                const button = document.querySelector('.sidebar.active [data-sidebar-selector="#vocabulary-library-confirm-sidebar"]');
+                if (button) {
+                    button.focus();
+                }
+                return;
+            }
             const rowName = sidebarOpenerRow && sidebarOpenerRow.querySelector('.vocabulary-library-title > a.sidebar-content');
             const target = [sidebarOpener, rowName, form.q].find(el => el && el.isConnected && !el.closest('[hidden]'));
             sidebarOpener = sidebarOpenerRow = null;
             if (target) {
                 target.focus();
+            }
+        });
+        // A confirmation is for the details under it, so it closes when they
+        // close or show another vocabulary.
+        $(document).on('o:sidebar-closed o:sidebar-content-loaded', '.sidebar', function () {
+            if (this !== confirmSidebar && confirmSidebar.classList.contains('active')) {
+                Omeka.closeSidebar($(confirmSidebar));
             }
         });
         // Not from a text field, where Escape is for the field: it cancels
@@ -444,9 +476,10 @@
         });
 
         // When the details sidebar opens, move focus into it: to the title,
-        // or, when it opened from "All matching terms", to the Classes and
-        // properties tab, which loads its lists, and once they are in, to
-        // their filter, set to the search, so the matches are in view. Core
+        // the details' or a confirmation's, or, when it opened from "All
+        // matching terms", to the Classes and properties tab, which loads its
+        // lists, and once they are in, to their filter, set to the search, so
+        // the matches are in view. Core
         // keeps the sidebar's content hidden, which can't take focus, until
         // just after this event, so focusing waits for the next frame, when
         // the browser has applied that.
@@ -472,7 +505,7 @@
                     });
                     return;
                 }
-                const title = sidebar.querySelector('.vocabulary-library-details-title');
+                const title = sidebar.querySelector('.vocabulary-library-details-title, .vocabulary-library-confirm-title');
                 if (title) {
                     title.focus();
                 }

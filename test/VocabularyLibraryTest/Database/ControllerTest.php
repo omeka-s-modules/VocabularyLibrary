@@ -134,6 +134,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
     {
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library');
         $this->assertSame(200, $status);
+        // A sidebar for confirmations, which isn't one of the content's own,
+        // so core's sidebar links don't load into it by default.
+        $this->assertMatchesRegularExpression('#<div class="vocabulary-library-confirm">\s*<div class="sidebar" id="vocabulary-library-confirm-sidebar">#', $page);
         $this->assertStringContainsString('Example Vocabulary', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.', $page);
         $this->assertStringContainsString('/admin/vocabulary-library/import/ex', $page);
@@ -382,6 +385,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
         $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/compare/ex">Compare and update</a>#', $page);
+        // The status names Omeka's vocabulary; its namespace is the
+        // library's, so it isn't repeated.
+        $this->assertMatchesRegularExpression('#Namespace in use by <a href="/admin/vocabulary\?namespace_uri=http://example.org/ns%23">Example Vocabulary \(ex\)</a>#', $page);
+        $this->assertSame(1, substr_count($page, '>http://example.org/ns#</div>'));
         // Nor by a supervisor, who doesn't own it.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
         $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
@@ -395,35 +402,87 @@ class ControllerTest extends AbstractHttpControllerTestCase
             'o:prefix' => 'variant',
             'o:label' => 'Variant',
         ])->getContent();
-        $edit = '/admin/vocabulary/' . $vocabulary->id() . '/edit';
+        $change = '/admin/vocabulary-library/change-namespace/ex';
         try {
             // The table says it is in use, as of any other, and no more.
             [, $page] = $this->send('GET', '/admin/vocabulary-library');
             $this->assertMatchesRegularExpression('#<a aria-label="Namespace in use: Example Vocabulary" href="[^"]*">Namespace in use</a>#', $page);
             $this->assertStringNotContainsString('vocabulary-library-status-next', $page);
-            $this->assertStringNotContainsString($edit, $page);
+            $this->assertStringNotContainsString($change, $page);
             $this->assertStringNotContainsString('/admin/vocabulary-library/import/ex', $page);
 
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
             $this->assertSame(
-                "To compare and update Omeka's vocabulary, change its namespace from https://example.org/ns/ to http://example.org/ns#. This changes the addresses of its classes and properties everywhere Omeka publishes them. Values stay attached to their properties.",
+                "Omeka's vocabulary has a slightly different namespace, so the library can't compare it. To compare and update it, you can change its namespace to the library's.",
                 $this->statusNote($page)
             );
-            $this->assertMatchesRegularExpression('#<a class="button" href="' . $edit . '">Edit vocabulary</a>#', $page);
+            // The status names Omeka's vocabulary, with its namespace under
+            // it, so the difference shows.
+            $this->assertMatchesRegularExpression('#Namespace in use by <a href="[^"]*">Variant \(variant\)</a>\s*<div class="vocabulary-library-namespace">https://example.org/ns/</div>#', $page);
+            $this->assertStringNotContainsString('<h4>Omeka', $page);
+            // It opens the confirmation in a sidebar over the details.
+            $this->assertMatchesRegularExpression('#<a class="button sidebar-content" [^>]*data-sidebar-selector="\#vocabulary-library-confirm-sidebar"[^>]*>Change namespace</a>#', $page);
+            $this->assertMatchesRegularExpression('#<a class="button sidebar-content" [^>]*data-sidebar-content-url="' . $change . '"[^>]*>Change namespace</a>#', $page);
             $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
 
             // A supervisor, who can't change it, is told but not sent there.
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
             $this->assertSame(
-                "Omeka's vocabulary can't be compared or updated: its namespace is https://example.org/ns/, not http://example.org/ns#.",
+                "Omeka's vocabulary has a slightly different namespace, so it can't be compared or updated.",
                 $this->statusNote($page)
             );
-            $this->assertStringNotContainsString($edit, $page);
+            $this->assertStringNotContainsString($change, $page);
+            $this->assertSame(403, $this->send('GET', $change, [], 'library-supervisor@example.com')[0]);
 
             $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/compare/ex')[0]);
         } finally {
             DbTestCase::signIn(DbTestCase::ADMIN);
             DbTestCase::services()->get('Omeka\ApiManager')->delete('vocabularies', $vocabulary->id());
+        }
+    }
+
+    public function testANamespaceInAnotherFormIsChangedToTheLibrarysThenCompared()
+    {
+        DbTestCase::signIn(DbTestCase::ADMIN);
+        $api = DbTestCase::services()->get('Omeka\ApiManager');
+        $vocabulary = $api->create('vocabularies', [
+            'o:namespace_uri' => 'https://example.org/ns/',
+            'o:prefix' => 'variant',
+            'o:label' => 'Variant',
+        ])->getContent();
+        $path = '/admin/vocabulary-library/change-namespace/ex';
+        try {
+            // The confirmation, for the sidebar, says which vocabulary, from
+            // what, to what, and what changing it does.
+            [$status, $page] = $this->send('GET', $path);
+            $this->assertSame(200, $status);
+            $this->assertStringNotContainsString('<html', $page);
+            $this->assertMatchesRegularExpression('#<a href="[^"]*">Variant \(variant\)</a>#', $page);
+            $this->assertMatchesRegularExpression('#<h4>From</h4>\s*<div class="value"><span class="vocabulary-library-namespace">https://example.org/ns/</span>#', $page);
+            $this->assertMatchesRegularExpression('#<h4>To</h4>\s*<div class="value"><span class="vocabulary-library-namespace">http://example.org/ns\#</span>#', $page);
+            // Why, in the details' own words, and what it does, together,
+            // under the heading and before the namespaces.
+            $this->assertMatchesRegularExpression('#</h3>\s*<p>Omeka\S*s vocabulary has a slightly different namespace, so the library can\S*t compare it. Changing the namespace gives the vocabulary\S*s classes and properties new addresses everywhere Omeka publishes them. Nothing is deleted, and values stay attached to their properties.</p>\s*<div class="meta-group">#', $page);
+            $this->assertMatchesRegularExpression('#<form [^>]*action="/admin/vocabulary-library/change-namespace/ex"[^>]*class="vocabulary-library-keep-place"|<form [^>]*class="vocabulary-library-keep-place"[^>]*action="/admin/vocabulary-library/change-namespace/ex"#', $page);
+            $this->assertStringContainsString('Confirm change', $page);
+            $this->assertSame('https://example.org/ns/', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
+
+            // Confirmed, it has the library's namespace, and Compare follows,
+            // with the library as the admin left it to return to.
+            $tokens = $this->csrf($path . '?return=tag%3Dgeneral');
+            [$status] = $this->send('POST', $path . '?return=tag%3Dgeneral', $tokens);
+            $this->assertSame(302, $status);
+            $this->assertSame('/admin/vocabulary-library/compare/ex?return=tag%3Dgeneral', $this->getResponse()->getHeaders()->get('Location')->getUri());
+            DbTestCase::services()->get('Omeka\EntityManager')->clear();
+            $this->assertSame('http://example.org/ns#', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
+            [, $page] = $this->send('GET', '/admin/vocabulary-library/compare/ex');
+            $this->assertStringContainsString('Namespace successfully changed', $page);
+
+            // Nothing left to change.
+            $this->assertSame(404, $this->send('GET', $path)[0]);
+        } finally {
+            DbTestCase::signIn(DbTestCase::ADMIN);
+            $api->delete('vocabularies', $vocabulary->id());
         }
     }
 

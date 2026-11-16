@@ -271,6 +271,53 @@ class IndexController extends AbstractActionController
     }
 
     /**
+     * Changes the namespace of Omeka's vocabulary, which has the library's in
+     * another form (http for https, another closing # or /), to the
+     * library's, then goes on to compare it. Asked for, it gives the
+     * confirmation for the details sidebar, as core confirms a deletion;
+     * confirmed, it makes the change core's Edit vocabulary form makes,
+     * through the API, which checks the user may make it. Only the library
+     * knows the form to change it to.
+     */
+    public function changeNamespaceAction()
+    {
+        [$slug, $entry] = $this->entry();
+        $installed = $this->siteVocabularies->installed($entry);
+        if (!$installed || $installed['exact']) {
+            throw new NotFoundException;
+        }
+        if (!$installed['changeable']) {
+            throw new PermissionDeniedException('Cannot change this vocabulary');
+        }
+        $vocabulary = $installed['vocabulary'];
+        $form = $this->getForm(ConfirmForm::class);
+
+        if ($this->getRequest()->isPost()) {
+            $form->setData($this->params()->fromPost());
+            if (!$form->isValid()) {
+                $this->messenger()->addFormErrors($form);
+                return $this->redirect()->toUrl($this->libraryUrl());
+            }
+            $response = $this->api($form)->update('vocabularies', $vocabulary->id(), ['o:namespace_uri' => $entry['namespace']], [], ['isPartial' => true]);
+            if (!$response) {
+                $this->messenger()->addFormErrors($form);
+                return $this->redirect()->toUrl($this->libraryUrl());
+            }
+            $this->messenger()->addSuccess('Namespace successfully changed'); // @translate
+            $state = $this->libraryState();
+            return $this->redirect()->toRoute('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug], $state ? ['query' => ['return' => http_build_query($state)]] : []);
+        }
+
+        $form->setAttribute('action', $this->url()->fromRoute('admin/vocabulary-library', ['action' => 'change-namespace', 'slug' => $slug]));
+        $view = new ViewModel;
+        $view->setTerminal(true);
+        $view->setVariable('entry', $entry);
+        $view->setVariable('installed', $installed);
+        $view->setVariable('form', $form);
+        return $view;
+    }
+
+    /**
      * The details sidebar's class and property lists, read from the
      * vocabulary's file in the language the library shows it in.
      */

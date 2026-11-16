@@ -40,11 +40,12 @@ namespace, so this one cannot be imported. In most cases it can be compared
 and updated, as described below.
 
 The exception is a vocabulary whose namespace in Omeka differs slightly from
-the library's: `http` for `https`, or a different closing `/` or `#`. Its
-details say so. To update it, edit the vocabulary in Omeka and change its
-namespace to the library's. This changes the addresses of its classes and
-properties everywhere Omeka publishes them. Values stay attached to their
-properties.
+the library's: `http` for `https`, or a different closing `/` or `#`. Omeka
+identifies a vocabulary by its exact namespace, so the library can't compare
+one that differs, even by a character. Its details say so, and offer **Change
+namespace**, which changes it to the library's after you confirm, then
+compares it. This changes the addresses of its classes and properties
+everywhere Omeka publishes them. Values stay attached to their properties.
 
 ## Comparing and updating
 
