@@ -64,7 +64,7 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
 <?php else: ?>
 <?php if ($sidebar): ?>
 <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
-<?php echo sprintf($this->translate('Namespace in use by %s'), $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url'])); ?>
+<?php echo sprintf($this->escapeHtml($this->translate('Namespace in use by %s')), $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url'])); ?>
 <?php if (!$installed['exact']): ?>
 <?php // Omeka's form of the namespace, under the vocabulary that has it; the sentence below says why it matters. ?>
 <div class="vocabulary-library-namespace"><?php echo $this->escapeHtml($installed['vocabulary']->namespaceUri()); ?></div>

@@ -182,8 +182,8 @@
     line-height: 18px;
 }
 
-/* The Import and Compare and update buttons in a status, in the table and
-   the sidebar: sized as core's buttons in browse controls, without the bottom
+/* The Import, Compare and update, and Change namespace buttons in a status,
+   in the table and the sidebar: sized as core's buttons in browse controls, without the bottom
    margin core gives buttons. The status is one block, so core's flex cell
    layout doesn't put the note beside the button. */
 .vocabulary-library-status .button {
@@ -202,8 +202,8 @@
     overflow-wrap: anywhere;
 }
 
-/* What follows the status in the sidebar: the Compare and update button,
-   or how a namespace in another form differs and where to change it. */
+/* What follows the status in the sidebar: its button and, for a namespace
+   in another form, why it can't be compared. */
 .vocabulary-library-status-next {
     margin: 6px 0 0;
 }

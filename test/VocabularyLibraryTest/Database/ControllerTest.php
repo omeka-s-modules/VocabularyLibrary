@@ -466,6 +466,20 @@ class ControllerTest extends AbstractHttpControllerTestCase
             $this->assertMatchesRegularExpression('#<form [^>]*action="/admin/vocabulary-library/change-namespace/ex"[^>]*class="vocabulary-library-keep-place"|<form [^>]*class="vocabulary-library-keep-place"[^>]*action="/admin/vocabulary-library/change-namespace/ex"#', $page);
             $this->assertStringContainsString('Confirm change', $page);
             $this->assertSame('https://example.org/ns/', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
+            // Not core's confirmation box, whose button is red as for a delete.
+            $this->assertStringNotContainsString('id="sidebar-confirm"', $page);
+
+            // With a stale token, as from a form left open too long, nothing
+            // changes, and the admin is back in the library as they left it,
+            // told why.
+            $stale = array_fill_keys(array_keys($this->csrf($path)), 'stale');
+            [$status] = $this->send('POST', $path . '?return=tag%3Dgeneral', $stale);
+            $this->assertSame(302, $status);
+            $this->assertSame('/admin/vocabulary-library?tag=general', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
+            DbTestCase::services()->get('Omeka\EntityManager')->clear();
+            $this->assertSame('https://example.org/ns/', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
+            [, $page] = $this->send('GET', '/admin/vocabulary-library');
+            $this->assertStringContainsString('Invalid or missing CSRF token', $page);
 
             // Confirmed, it has the library's namespace, and Compare follows,
             // with the library as the admin left it to return to.

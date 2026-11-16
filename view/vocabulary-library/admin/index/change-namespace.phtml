@@ -10,8 +10,11 @@ $escape = $this->plugin('escapeHtml');
 $vocabulary = $installed['vocabulary'];
 $form->setAttribute('class', 'vocabulary-library-keep-place');
 $form->setButtonLabel('Confirm change'); // @translate
+// As the sidebar's other buttons, such as Change namespace, which opened it.
+$form->get('submit')->setAttribute('class', 'button');
 ?>
-<div id="sidebar-confirm">
+<?php // Not core's #sidebar-confirm, which colors its button as for a delete: this deletes nothing. ?>
+<div class="vocabulary-library-change-namespace">
     <h3 class="vocabulary-library-confirm-title" tabindex="-1"><?php echo $translate('Change namespace'); ?></h3>
     <?php // Why, in the details' own words, and what it does, under the heading as in core's confirmations; the namespaces below show the difference. It deletes nothing, so it isn't styled as a warning. ?>
     <p><?php echo $escape($translate('Omeka\'s vocabulary has a slightly different namespace, so the library can\'t compare it. Changing the namespace gives the vocabulary\'s classes and properties new addresses everywhere Omeka publishes them. Nothing is deleted, and values stay attached to their properties.')); ?></p>

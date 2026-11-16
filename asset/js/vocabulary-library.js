@@ -434,9 +434,9 @@
         // else to that vocabulary's name, or the search: the close link
         // itself is hidden with the sidebar. Escape closes it too.
         $(document).on('click', 'a.sidebar-content', function () {
-            // A link in a row, which opens the sidebar. Not one within the
-            // sidebar, such as Change namespace: core has replaced the
-            // sidebar's content, and with it the link, by the time this runs.
+            // A link in a row, which opens the details. Not one within the
+            // details, such as Change namespace: it is hidden once they
+            // close, so focus goes back to the row.
             const row = this.closest('tr');
             if (row) {
                 sidebarOpener = this;
@@ -468,9 +468,11 @@
             }
         });
         // Not from a text field, where Escape is for the field: it cancels
-        // what is being composed, or dismisses the browser's suggestions.
+        // what is being composed, or dismisses the browser's suggestions. A
+        // button made with an input, as core's confirmations make theirs, is
+        // not one.
         $(document).on('keydown', '.sidebar.active', function (e) {
-            if (e.key === 'Escape' && !e.isComposing && !e.isDefaultPrevented() && !$(e.target).is('input, textarea, select')) {
+            if (e.key === 'Escape' && !e.isComposing && !e.isDefaultPrevented() && !$(e.target).is('input:not([type=submit], [type=button]), textarea, select')) {
                 Omeka.closeSidebar($(this));
             }
         });

@@ -300,7 +300,7 @@ class IndexController extends AbstractActionController
             }
             $response = $this->api($form)->update('vocabularies', $vocabulary->id(), ['o:namespace_uri' => $entry['namespace']], [], ['isPartial' => true]);
             if (!$response) {
-                $this->messenger()->addFormErrors($form);
+                // Core's api plugin has already shown the API's errors.
                 return $this->redirect()->toUrl($this->libraryUrl());
             }
             $this->messenger()->addSuccess('Namespace successfully changed'); // @translate
