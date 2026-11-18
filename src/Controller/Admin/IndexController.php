@@ -4,11 +4,13 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
+use Omeka\Api\Exception\ValidationException;
 use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Form\ConfirmForm;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
+use Omeka\Stdlib\VocabularyReview;
 use VocabularyLibrary\Form\ImportForm;
 use VocabularyLibrary\Stdlib\Collation;
 use VocabularyLibrary\Stdlib\Importer;
@@ -20,7 +22,8 @@ use VocabularyLibrary\Stdlib\TermSearch;
 
 /**
  * The library's pages: the list of vocabularies with its details sidebar and
- * term search, the import form, Compare and update, and the file download.
+ * term search, the import form, and the file download; and Compare and
+ * update, which hands the library's file to core's review.
  */
 class IndexController extends AbstractActionController
 {
@@ -48,6 +51,7 @@ class IndexController extends AbstractActionController
     protected $termSearch;
     protected $languageNames;
     protected $siteVocabularies;
+    protected $vocabularyReview;
     protected $collation;
     protected $vocabularies;
     protected $tags;
@@ -56,12 +60,13 @@ class IndexController extends AbstractActionController
      * @param array $vocabularies The library, keyed by slug
      * @param array $tags Tags to filter by, key => label
      */
-    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, Collation $collation, array $vocabularies, array $tags)
+    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, VocabularyReview $vocabularyReview, Collation $collation, array $vocabularies, array $tags)
     {
         $this->importer = $importer;
         $this->termSearch = $termSearch;
         $this->languageNames = $languageNames;
         $this->siteVocabularies = $siteVocabularies;
+        $this->vocabularyReview = $vocabularyReview;
         $this->collation = $collation;
         // The name shown for a vocabulary: the library's alternative title,
         // else the file's title. The build requires one of them.
@@ -182,24 +187,50 @@ class IndexController extends AbstractActionController
                 'o:comment' => $data['o:comment'],
             ], $lang);
         } catch (\Exception $e) {
-            // As core's import does: the importer's message, and any from the
-            // API's validation.
-            $messages = [];
-            if ($e->getMessage()) {
-                $messages[] = $e->getMessage();
-            }
-            if (method_exists($e, 'getErrorStore')) {
-                foreach ($e->getErrorStore()->getErrors() as $message) {
-                    $messages[] = $message;
-                }
-            }
-            $this->messenger()->addErrors($messages);
+            $this->messenger()->addErrors($this->errorMessages($e));
             return $view;
         }
 
         // Core's own message, already translated.
         $this->succeeded('Vocabulary successfully imported. %s', $vocabulary); // @translate
         return $this->redirect()->toUrl($this->libraryUrl());
+    }
+
+    /**
+     * Starts core's review of the changes the library's file would make to
+     * Omeka's vocabulary, and goes there. Core's review reads the file as the
+     * vocabulary was read, or else guesses how, offers the choices, checks
+     * the user may update it, and applies the changes on Accept. Where
+     * Omeka's vocabulary has the library's namespace in another form, the
+     * review changes it to the library's along with the rest. Accept and
+     * Cancel return to the library as the admin left it.
+     */
+    public function reviewAction()
+    {
+        [, $entry] = $this->entry();
+        $installed = $this->siteVocabularies->installed($entry);
+        if (!$installed) {
+            throw new NotFoundException;
+        }
+        if (!$installed['updatable']) {
+            throw new PermissionDeniedException('Cannot update this vocabulary');
+        }
+        try {
+            $url = $this->vocabularyReview->start(
+                $installed['vocabulary']->id(),
+                $this->importer->path($entry),
+                ['format' => $entry['format'] ?? null],
+                [
+                    'new_namespace_uri' => $installed['exact'] ? null : $entry['namespace'],
+                    'return_url' => $this->libraryUrl(),
+                    'source_label' => $this->translate('the library\'s vocabulary'),
+                ]
+            );
+        } catch (ValidationException $e) {
+            $this->messenger()->addErrors($this->errorMessages($e));
+            return $this->redirect()->toUrl($this->libraryUrl());
+        }
+        return $this->redirect()->toUrl($url);
     }
 
     /**
@@ -411,6 +442,26 @@ class IndexController extends AbstractActionController
         ));
         $message->setEscapeHtml(false);
         $this->messenger()->addSuccess($message);
+    }
+
+    /**
+     * The messages for an error from core's importer, as core's import shows
+     * them: the importer's own, and any from the API's validation.
+     *
+     * @return string[]
+     */
+    protected function errorMessages(\Exception $e)
+    {
+        $messages = [];
+        if ($e->getMessage()) {
+            $messages[] = $e->getMessage();
+        }
+        if (method_exists($e, 'getErrorStore')) {
+            foreach ($e->getErrorStore()->getErrors() as $message) {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
     }
 
     /**

@@ -26,6 +26,7 @@ class IndexControllerFactory implements FactoryInterface
             new TermSearch("$dataDir/term-index.json", $vocabularies),
             new LanguageNames($translator, $collation),
             new SiteVocabularies($services->get('Omeka\ApiManager'), $services->get('ViewHelperManager')->get('Url')),
+            $services->get('Omeka\VocabularyReview'),
             $collation,
             $vocabularies,
             $config['vocabulary_library']['tags'] ?? []

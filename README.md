@@ -23,7 +23,7 @@ This page has a part for each kind of reader:
 
 Install it as any module (see
 [Installing modules](https://omeka.org/s/docs/user-manual/modules/#installing-modules)
-in the Omeka S user manual). It needs Omeka S 4.2.1 or later.
+in the Omeka S user manual). It needs Omeka S 4.3.0 or later.
 
 The library is under **Modules > Vocabulary Library** in the admin menu, and
 Omeka's **Import new vocabulary** page links to it. Global Administrators and
@@ -40,29 +40,28 @@ and **Import** to import it.
 ## Namespaces already in use
 
 **Namespace in use** means that Omeka already has a vocabulary with this
-namespace, so this one cannot be imported. In most cases it can be compared
-and updated, as described below.
+namespace, so this one cannot be imported. It can be compared and updated
+instead, as described below.
 
-The exception is a vocabulary whose namespace in Omeka differs slightly from
-the library's: `http` for `https`, or a different closing `/` or `#`. Omeka
-identifies a vocabulary by its exact namespace, so the library can't compare
-one that differs, even by a character. Its details say so, and offer **Change
-namespace**, which changes it to the library's after you confirm, then
-compares it. This changes the addresses of its classes and properties
+A vocabulary whose namespace in Omeka differs slightly from the library's,
+`http` for `https` or a different closing `/` or `#`, is in use too. Its
+details say so, and comparing and updating it also changes its namespace to
+the library's. This changes the addresses of its classes and properties
 everywhere Omeka publishes them. Values stay attached to their properties.
 
 ## Comparing and updating
 
 **Compare and update**, in the details of a vocabulary whose namespace is in
-use, shows how Omeka's vocabulary differs from the library's, and **Update**
-applies the differences. Updating adds classes and properties and changes the
-labels and comments of existing ones to match the library's vocabulary, so
-look over the changes first. It never removes a class or property.
+use, opens Omeka's review of how the library's vocabulary differs from
+Omeka's, and **Accept changes** applies the differences. Updating adds
+classes and properties and changes the labels and comments of existing ones
+to match the library's vocabulary, so look over the changes first. It never
+removes a class or property. Accepting or cancelling returns to the library.
 
 Where the library's vocabulary has several languages, or gives its terms both
-definitions and comments, the page offers a choice of which to compare. It
-starts with the choice closest to Omeka's vocabulary, so in most cases only
-real changes show.
+definitions and comments, the review offers a choice of which to compare. It
+starts with the choice Omeka's vocabulary was imported with, or else the
+closest, so in most cases only real changes show.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.

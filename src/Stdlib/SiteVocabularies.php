@@ -41,12 +41,14 @@ class SiteVocabularies
      *
      * @return array|null ['vocabulary' => representation, 'url' => link,
      *   'exact' => whether the namespace is written the same way,
-     *   'comparable' => whether this user can compare it with the library's
-     *   file and update it: written the same way, not one Omeka keeps fixed
+     *   'updatable' => whether this user can compare it with the library's
+     *   file and update it, in core's review, which also changes a namespace
+     *   written another way to the library's: not one Omeka keeps fixed
      *   (Dublin Core and its types), and one the user may change
-     *   (Supervisors may change only their own), 'changeable' => whether
-     *   its namespace is written another way and this user can change it to
-     *   the library's, which makes it comparable].
+     *   (Supervisors may change only their own), 'comparable' and
+     *   'changeable' => the same, split by whether the namespace is written
+     *   the same way, for the module's own Compare and Change namespace,
+     *   which go once core's review replaces them].
      *   The pages treat both forms as in use, and only the details sidebar
      *   says which
      */
@@ -72,6 +74,7 @@ class SiteVocabularies
             'vocabulary' => $match,
             'url' => $this->url($match),
             'exact' => $exact,
+            'updatable' => $editable,
             'comparable' => $exact && $editable,
             'changeable' => !$exact && $editable,
         ];
@@ -106,13 +109,11 @@ class SiteVocabularies
     }
 
     /**
-     * Core's Vocabularies page, showing only this vocabulary. Core has no
-     * vocabulary show page, and its browse passes the query to the API, which
-     * filters by namespace_uri.
+     * Core's page for the vocabulary.
      */
     public function url(VocabularyRepresentation $vocabulary)
     {
-        return ($this->url)('admin/default', ['controller' => 'vocabulary', 'action' => 'browse'], ['query' => ['namespace_uri' => $vocabulary->namespaceUri()]]);
+        return ($this->url)('admin/id', ['controller' => 'vocabulary', 'id' => $vocabulary->id()]);
     }
 
     /**

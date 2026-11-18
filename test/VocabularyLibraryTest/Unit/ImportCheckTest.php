@@ -137,7 +137,8 @@ class ImportCheckTest extends TempDirTestCase
         file_put_contents($this->dir . '/typed.ttl', "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n<http://example.org/ns#Thing> a rdfs:Class ; rdfs:label \"1.0.0\"^^xsd:decimal .\n");
         $result = (new ImportCheck)->check($this->dir . '/typed.ttl', self::NS);
         $this->assertFalse($result['parsed']);
-        $this->assertSame('does not parse: a term\'s label or comment: \'1.0.0\' doesn\'t look like a valid decimal', ImportCheck::failure($result));
+        // Core's message, which doesn't quote the value.
+        $this->assertSame('does not parse: a term\'s label or comment: A class or property has a label or comment that isn\'t valid for its datatype.', ImportCheck::failure($result));
     }
 
     public function testAFormatGuessedWrongIsTriedAgainAsTheOthers()

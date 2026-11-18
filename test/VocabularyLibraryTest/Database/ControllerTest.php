@@ -290,8 +290,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertSame(302, $status);
         $this->assertSame('/admin/vocabulary-library', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
         [, $page] = $this->send('GET', '/admin/vocabulary-library');
-        $this->assertStringContainsString('Vocabulary successfully imported. <a href="/admin/vocabulary?namespace_uri=http://example.org/ns%23">View it in Omeka</a>', $page);
         $vocabulary = $this->vocabulary();
+        $this->assertStringContainsString('Vocabulary successfully imported. <a href="/admin/vocabulary/' . $vocabulary->id() . '">View it in Omeka</a>', $page);
         $this->assertSame('example', $vocabulary->prefix());
         $this->assertSame('My label', $vocabulary->label());
         $this->assertSame('Summary.', $vocabulary->comment());
@@ -371,9 +371,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringNotContainsString('name="o:prefix"', $page);
         // Reached anyway, the page names Omeka's vocabulary and the next step.
         $this->assertMatchesRegularExpression('#Omeka already has this vocabulary: <a href="[^"]*">Example Vocabulary \(ex\)</a>\.#', $page);
-        $this->assertStringContainsString('/admin/vocabulary-library/compare/ex', $page);
+        $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        $this->assertStringContainsString('/admin/vocabulary-library/compare/ex', $page);
+        $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
     }
 
     public function testAVocabularyInUseIsComparedFromItsDetailsNotItsRow()
@@ -382,19 +382,73 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // On every row the link would read as something to do.
         [, $page] = $this->send('GET', '/admin/vocabulary-library');
         $this->assertStringContainsString('Namespace in use: Example Vocabulary', $page);
-        $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
+        $this->assertStringNotContainsString('/admin/vocabulary-library/review/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/compare/ex">Compare and update</a>#', $page);
-        // The status names Omeka's vocabulary; its namespace is the
-        // library's, so it isn't repeated.
-        $this->assertMatchesRegularExpression('#Namespace in use by <a href="/admin/vocabulary\?namespace_uri=http://example.org/ns%23">Example Vocabulary \(ex\)</a>#', $page);
+        $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Compare and update</a>#', $page);
+        // The status names Omeka's vocabulary, linked to its page in core;
+        // its namespace is the library's, so it isn't repeated.
+        $this->assertMatchesRegularExpression('#Namespace in use by <a href="/admin/vocabulary/' . $this->vocabulary()->id() . '">Example Vocabulary \(ex\)</a>#', $page);
         $this->assertSame(1, substr_count($page, '>http://example.org/ns#</div>'));
         // Nor by a supervisor, who doesn't own it.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
-        $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
+        $this->assertStringNotContainsString('/admin/vocabulary-library/review/ex', $page);
+        $this->assertSame(403, $this->send('GET', '/admin/vocabulary-library/review/ex', [], 'library-supervisor@example.com')[0]);
     }
 
-    public function testANamespaceInAnotherFormIsInUseAndItsDetailsSayHowToChangeIt()
+    public function testCompareAndUpdateOpensCoresReviewOfTheLibrarysFile()
+    {
+        $this->import();
+        $id = $this->vocabulary()->id();
+        [$status] = $this->send('GET', '/admin/vocabulary-library/review/ex', ['return' => 'tag=general']);
+        $this->assertSame(302, $status);
+        $review = $this->getResponse()->getHeaders()->get('Location')->getUri();
+        $this->assertMatchesRegularExpression('#^/admin/vocabulary/' . $id . '/review\?review=[0-9a-f]{32}$#', $review);
+
+        // Core's review calls the file the library's vocabulary.
+        [$status, $page] = $this->send('GET', $review);
+        $this->assertSame(200, $status);
+        $this->assertMatchesRegularExpression('#This vocabulary already matches the library\S*s vocabulary\.#', $page);
+
+        // Leaving it returns to the library as the admin left it.
+        parse_str((string) parse_url($review, PHP_URL_QUERY), $query);
+        $tokens = $this->csrf($review);
+        [$status] = $this->send('POST', '/admin/vocabulary/' . $id . '/cancel-review', ['review' => $query['review']] + $tokens);
+        $this->assertSame(302, $status);
+        $this->assertSame('/admin/vocabulary-library?tag=general', $this->getResponse()->getHeaders()->get('Location')->getUri());
+    }
+
+    public function testCompareAndUpdateNeedsTheVocabularyInOmeka()
+    {
+        $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/review/ex')[0]);
+    }
+
+    public function testCompareAndUpdateOfANamespaceInAnotherFormReviewsChangingIt()
+    {
+        DbTestCase::signIn(DbTestCase::ADMIN);
+        $api = DbTestCase::services()->get('Omeka\ApiManager');
+        $vocabulary = $api->create('vocabularies', [
+            'o:namespace_uri' => 'https://example.org/ns/',
+            'o:prefix' => 'variant',
+            'o:label' => 'Variant',
+        ])->getContent();
+        try {
+            [$status] = $this->send('GET', '/admin/vocabulary-library/review/ex');
+            $this->assertSame(302, $status);
+            // The review changes the namespace to the library's, with the
+            // classes and properties, on one Accept.
+            [, $page] = $this->send('GET', $this->getResponse()->getHeaders()->get('Location')->getUri());
+            $this->assertMatchesRegularExpression('#<span class="review-value">https://example.org/ns/</span></td>\s*<td><span class="review-value">http://example.org/ns\#</span>#', $page);
+            $this->assertMatchesRegularExpression('#Accepting makes the changes below, from the library\S*s vocabulary\.#', $page);
+            // Nothing changes until it's accepted.
+            DbTestCase::services()->get('Omeka\EntityManager')->clear();
+            $this->assertSame('https://example.org/ns/', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
+        } finally {
+            DbTestCase::signIn(DbTestCase::ADMIN);
+            $api->delete('vocabularies', $vocabulary->id());
+        }
+    }
+
+    public function testANamespaceInAnotherFormIsInUseAndItsDetailsSayComparingChangesIt()
     {
         DbTestCase::signIn(DbTestCase::ADMIN);
         $vocabulary = DbTestCase::services()->get('Omeka\ApiManager')->create('vocabularies', [
@@ -413,26 +467,24 @@ class ControllerTest extends AbstractHttpControllerTestCase
 
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
             $this->assertSame(
-                "Omeka's vocabulary has a slightly different namespace, so the library can't compare it. To compare and update it, you can change its namespace to the library's.",
+                "Omeka's vocabulary has a slightly different namespace. Comparing and updating it also changes its namespace to the library's.",
                 $this->statusNote($page)
             );
             // The status names Omeka's vocabulary, with its namespace under
             // it, so the difference shows.
             $this->assertMatchesRegularExpression('#Namespace in use by <a href="[^"]*">Variant \(variant\)</a>\s*<div class="vocabulary-library-namespace">https://example.org/ns/</div>#', $page);
             $this->assertStringNotContainsString('<h4>Omeka', $page);
-            // It opens the confirmation in a sidebar over the details.
-            $this->assertMatchesRegularExpression('#<a class="button sidebar-content" [^>]*data-sidebar-selector="\#vocabulary-library-confirm-sidebar"[^>]*>Change namespace</a>#', $page);
-            $this->assertMatchesRegularExpression('#<a class="button sidebar-content" [^>]*data-sidebar-content-url="' . $change . '"[^>]*>Change namespace</a>#', $page);
-            $this->assertStringNotContainsString('/admin/vocabulary-library/compare/ex', $page);
-
-            // A supervisor, who can't change it, is told but not sent there.
-            [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
-            $this->assertSame(
-                "Omeka's vocabulary has a slightly different namespace, so it can't be compared or updated.",
-                $this->statusNote($page)
-            );
+            // Compare and update opens core's review, as for any vocabulary
+            // in use, which changes the namespace with the rest.
+            $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Compare and update</a>#', $page);
             $this->assertStringNotContainsString($change, $page);
-            $this->assertSame(403, $this->send('GET', $change, [], 'library-supervisor@example.com')[0]);
+
+            // A supervisor, who can't update it, is told it differs, and no
+            // more.
+            [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
+            $this->assertSame("Omeka's vocabulary has a slightly different namespace.", $this->statusNote($page));
+            $this->assertStringNotContainsString('/admin/vocabulary-library/review/ex', $page);
+            $this->assertSame(403, $this->send('GET', '/admin/vocabulary-library/review/ex', [], 'library-supervisor@example.com')[0]);
 
             $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/compare/ex')[0]);
         } finally {
@@ -536,7 +588,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertSame(302, $status);
         $this->assertSame('/admin/vocabulary-library', $this->getResponse()->getHeaders()->get('Location')->getFieldValue());
         [, $page] = $this->send('GET', '/admin/vocabulary-library');
-        $this->assertStringContainsString('Changes to the vocabulary successfully made. <a href="/admin/vocabulary?namespace_uri=http://example.org/ns%23">View it in Omeka</a>', $page);
+        $this->assertStringContainsString('Changes to the vocabulary successfully made. <a href="/admin/vocabulary/' . $this->vocabulary()->id() . '">View it in Omeka</a>', $page);
         $this->assertSame(['Thing', 'Anything at all.'], $this->term('Thing'));
         // Its definition in the file is empty.
         $this->assertSame('is part of', $this->term('isPartOf')[0]);
