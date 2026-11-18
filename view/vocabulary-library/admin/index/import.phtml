@@ -29,7 +29,18 @@ $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label()
     <?php echo $this->hyperlink($translate('Cancel'), $libraryUrl, ['class' => 'button']); ?>
     <button type="submit"><?php echo $translate('Import'); ?></button>
 </div>
+<?php // As core's import details page opens, and in its order: label, comment, namespace, prefix, language. ?>
+<p><?php echo $translate('The details below are filled in from the library\'s vocabulary. Check them and change any as needed, then click Import.'); ?></p>
 
+<?php echo $this->formRow($form->get('o:label')); ?>
+<?php echo $this->formRow($form->get('o:comment')); ?>
+<div class="field">
+    <div class="field-meta">
+        <?php // Not a form control, so core's label style without a <label>. ?>
+        <span class="label"><?php echo $translate('Namespace URI'); ?></span>
+    </div>
+    <div class="inputs"><?php echo $escape($entry['namespace']); ?></div>
+</div>
 <?php // The warnings describe the field, so they are read with it, and again when they change. ?>
 <?php $form->get('o:prefix')->setAttribute('aria-describedby', 'vocabulary-library-prefix-warnings'); ?>
 <?php echo $this->formRow($form->get('o:prefix')); ?>
@@ -45,20 +56,9 @@ $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label()
 </div>
 <?php // The warning showing, read out once the admin pauses; filled in by the script. ?>
 <p class="vocabulary-library-announcement vocabulary-library-prefix-announcement" aria-live="polite" aria-atomic="true"></p>
-<?php echo $this->formRow($form->get('o:label')); ?>
-<?php echo $this->formRow($form->get('o:comment')); ?>
 <?php if ($form->has('lang')): ?>
 <?php echo $this->formRow($form->get('lang')); ?>
 <?php endif; ?>
-
-<div class="field">
-    <div class="field-meta">
-        <?php // Not a form control, so core's label style without a <label>. ?>
-        <span class="label"><?php echo $translate('Namespace URI'); ?></span>
-        <div class="field-description"><?php echo $translate('Set by the library.'); ?></div>
-    </div>
-    <div class="inputs"><?php echo $escape($entry['namespace']); ?></div>
-</div>
 
 <?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
 <?php echo $this->form()->closeTag(); ?>

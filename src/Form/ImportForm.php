@@ -36,6 +36,8 @@ class ImportForm extends Form
             'name' => 'o:label',
             'options' => [
                 'label' => 'Label', // @translate
+                // Core's own, as is the comment's, from its import form.
+                'info' => 'Enter a human-readable title of the vocabulary.', // @translate
             ],
             'attributes' => [
                 'id' => 'o:label',
@@ -47,6 +49,7 @@ class ImportForm extends Form
             'name' => 'o:comment',
             'options' => [
                 'label' => 'Comment', // @translate
+                'info' => 'Enter a human-readable description of the vocabulary.', // @translate
             ],
             'attributes' => [
                 'id' => 'o:comment',
@@ -59,7 +62,8 @@ class ImportForm extends Form
                 'name' => 'lang',
                 'options' => [
                     'label' => 'Preferred language', // @translate
-                    'info' => 'The language of labels and comments. This vocabulary has them in several languages.', // @translate
+                    // Core's own, from its import form.
+                    'info' => 'The language of the labels and comments to use, where the file has them in more than one.', // @translate
                     'value_options' => $languages,
                 ],
                 'attributes' => [
