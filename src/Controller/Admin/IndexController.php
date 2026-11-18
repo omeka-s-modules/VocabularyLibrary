@@ -498,13 +498,19 @@ class IndexController extends AbstractActionController
 
     /**
      * The language the import form starts on: the one the library was
-     * filtered by, where the vocabulary has it, else the library's default
-     * for the vocabulary.
+     * filtered by, else the installation's, each matched to the vocabulary's
+     * languages as core's import matches them, so the filter's "zh" finds
+     * "zh-Hans-CN"; else the library's default for the vocabulary.
      */
     protected function importLanguage(array $entry)
     {
-        $lang = $this->libraryState()['lang'] ?? null;
-        return in_array($lang, $entry['languages'], true) ? $lang : TermReading::preferredLanguage($entry['languages']);
+        foreach ([$this->libraryState()['lang'] ?? null, $this->settings()->get('locale')] as $wanted) {
+            $lang = TermReading::matchingLanguage($wanted, $entry['languages']);
+            if (null !== $lang) {
+                return $lang;
+            }
+        }
+        return TermReading::preferredLanguage($entry['languages']);
     }
 
     /**

@@ -68,7 +68,6 @@ class ImportForm extends Form
                 ],
                 'attributes' => [
                     'id' => 'lang',
-                    'required' => true,
                 ],
             ]);
         }

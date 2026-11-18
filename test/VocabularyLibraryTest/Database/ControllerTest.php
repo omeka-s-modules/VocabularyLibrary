@@ -291,6 +291,26 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // Not one the vocabulary doesn't have.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'lang=fr']);
         $this->assertMatchesRegularExpression('/<option value="en" selected[^>]*>English \(en\)/', $page);
+        // The language required only adds a marker: the select always has a
+        // value, and the server checks it is one of the vocabulary's.
+        $this->assertDoesNotMatchRegularExpression('/<select[^>]*name="lang"[^>]*required/', $page);
+    }
+
+    public function testTheImportFormThenStartsOnTheInstallationsLanguage()
+    {
+        $settings = DbTestCase::services()->get('Omeka\Settings');
+        $locale = $settings->get('locale');
+        // A locale in Omeka's form, with a region the file doesn't have.
+        $settings->set('locale', 'de_AT');
+        try {
+            [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
+            $this->assertMatchesRegularExpression('/<option value="de" selected/', $page);
+            // The library's filter comes first.
+            [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'lang=en']);
+            $this->assertMatchesRegularExpression('/<option value="en" selected/', $page);
+        } finally {
+            $settings->set('locale', $locale);
+        }
     }
 
     public function testImportingMakesTheVocabularyInOmeka()
