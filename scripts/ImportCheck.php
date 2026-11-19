@@ -92,11 +92,10 @@ class ImportCheck
      * library and an administrator comparing the two would see.
      *
      * Labels and comments are compared in every language both files have
-     * either in, and regardless of spacing, as Compare shows them, with
+     * either in, and regardless of spacing, as core's review shows them, with
      * comments read as the library imports them, a definition first. So a
      * change only to the comment of a term that also has a definition, which
-     * Compare shows for a vocabulary imported through Omeka's own form, isn't
-     * counted.
+     * core's review shows for a vocabulary read comment first, isn't counted.
      *
      * @param array $old A check result
      * @param array $new

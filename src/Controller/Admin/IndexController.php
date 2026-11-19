@@ -6,7 +6,6 @@ use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
 use Omeka\Api\Exception\ValidationException;
 use Omeka\Api\Representation\VocabularyRepresentation;
-use Omeka\Form\ConfirmForm;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\Message;
@@ -231,121 +230,6 @@ class IndexController extends AbstractActionController
             return $this->redirect()->toUrl($this->libraryUrl());
         }
         return $this->redirect()->toUrl($url);
-    }
-
-    /**
-     * Shows how the vocabulary in Omeka differs from the library's file, and
-     * applies the difference on request, with core's importer.
-     *
-     * Core's update adds classes and properties and changes labels and
-     * comments; it never removes any. The module can't tell which side is
-     * newer, so the admin decides.
-     */
-    public function compareAction()
-    {
-        [, $entry] = $this->entry();
-        $installed = $this->siteVocabularies->installed($entry);
-        if (!$installed || !$installed['exact']) {
-            throw new NotFoundException;
-        }
-        if (!$installed['comparable']) {
-            throw new PermissionDeniedException('Cannot update this vocabulary');
-        }
-        $vocabulary = $installed['vocabulary'];
-        // An empty language is "First available": no preferred language, as
-        // core's import form defaults to. Until the admin chooses, the page
-        // reads the file in the language the vocabulary was imported in, where
-        // the file has several, so only real changes show.
-        $lang = $this->params()->fromPost('lang', $this->params()->fromQuery('lang'));
-        if ($lang === '') {
-            $lang = null;
-        } elseif (!in_array($lang, $entry['languages'], true)) {
-            $lang = count($entry['languages']) > 1
-                ? $this->importer->matchingLanguage($entry, $vocabulary)
-                : TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
-        }
-        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
-        // The diff is computed on every request, never taken from the form.
-        [$reading, $diff] = $this->importer->diffAsImported($entry, $lang, $reading);
-        $form = $this->getForm(ConfirmForm::class);
-
-        if ($this->getRequest()->isPost()) {
-            $form->setData($this->params()->fromPost());
-            if ($form->isValid()) {
-                try {
-                    $this->importer->update($vocabulary->id(), $diff);
-                } catch (\Exception $e) {
-                    $this->messenger()->addError($e->getMessage());
-                    return $this->redirect()->toUrl($this->libraryUrl());
-                }
-                $this->succeeded('Changes to the vocabulary successfully made. %s', $vocabulary); // @translate
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $this->messenger()->addFormErrors($form);
-        }
-
-        $view = new ViewModel;
-        $view->setVariable('entry', $entry);
-        $view->setVariable('vocabulary', $vocabulary);
-        $view->setVariable('diff', $diff);
-        $view->setVariable('collation', $this->collation);
-        $labels = Importer::labels($vocabulary);
-        $view->setVariable('labels', $labels);
-        $view->setVariable('missing', $this->importer->missingTerms($entry, $labels, $lang));
-        $view->setVariable('lang', $lang);
-        $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
-        $view->setVariable('commentReading', $reading);
-        $view->setVariable('form', $form);
-        $view->setVariable('libraryUrl', $this->libraryUrl());
-        $view->setVariable('libraryState', http_build_query($this->libraryState()));
-        return $view;
-    }
-
-    /**
-     * Changes the namespace of Omeka's vocabulary, which has the library's in
-     * another form (http for https, another closing # or /), to the
-     * library's, then goes on to compare it. Asked for, it gives the
-     * confirmation for the details sidebar, as core confirms a deletion;
-     * confirmed, it makes the change core's Edit vocabulary form makes,
-     * through the API, which checks the user may make it. Only the library
-     * knows the form to change it to.
-     */
-    public function changeNamespaceAction()
-    {
-        [$slug, $entry] = $this->entry();
-        $installed = $this->siteVocabularies->installed($entry);
-        if (!$installed || $installed['exact']) {
-            throw new NotFoundException;
-        }
-        if (!$installed['changeable']) {
-            throw new PermissionDeniedException('Cannot change this vocabulary');
-        }
-        $vocabulary = $installed['vocabulary'];
-        $form = $this->getForm(ConfirmForm::class);
-
-        if ($this->getRequest()->isPost()) {
-            $form->setData($this->params()->fromPost());
-            if (!$form->isValid()) {
-                $this->messenger()->addFormErrors($form);
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $response = $this->api($form)->update('vocabularies', $vocabulary->id(), ['o:namespace_uri' => $entry['namespace']], [], ['isPartial' => true]);
-            if (!$response) {
-                // Core's api plugin has already shown the API's errors.
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $this->messenger()->addSuccess('Namespace successfully changed'); // @translate
-            $state = $this->libraryState();
-            return $this->redirect()->toRoute('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug], $state ? ['query' => ['return' => http_build_query($state)]] : []);
-        }
-
-        $form->setAttribute('action', $this->url()->fromRoute('admin/vocabulary-library', ['action' => 'change-namespace', 'slug' => $slug]));
-        $view = new ViewModel;
-        $view->setTerminal(true);
-        $view->setVariable('entry', $entry);
-        $view->setVariable('installed', $installed);
-        $view->setVariable('form', $form);
-        return $view;
     }
 
     /**

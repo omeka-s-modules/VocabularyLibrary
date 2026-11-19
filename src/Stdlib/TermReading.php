@@ -7,7 +7,7 @@ use Omeka\Stdlib\RdfImporter;
  * How a term's label and comment are read from a vocabulary's file: from
  * which properties, and in which language by default.
  *
- * The module imports, shows and compares terms with these, and the build
+ * The module imports and shows terms with these, and the build
  * checks files and writes the term index with them, so the two always agree,
  * and term search shows the labels the sidebar shows. The build's scripts
  * load the class without starting Omeka, so it may use core's classes, as
@@ -34,12 +34,6 @@ class TermReading
      * string.
      */
     const COMMENT_PROPERTY = RdfImporter::DEFINITION_COMMENT_PROPERTY;
-
-    /**
-     * Omeka's own import form's default, for comparing a vocabulary that was
-     * imported outside the library.
-     */
-    const OMEKA_COMMENT_PROPERTY = 'rdfs:comment';
 
     /**
      * The language a vocabulary's labels and comments are read in by default:

@@ -32,7 +32,7 @@ class TermReadingTest extends TestCase
     public function testTheLibraryReadsDefinitionsBeforeComments()
     {
         $this->assertSame('skos:definition', explode('|', TermReading::COMMENT_PROPERTY)[0]);
-        $this->assertContains(TermReading::OMEKA_COMMENT_PROPERTY, explode('|', TermReading::COMMENT_PROPERTY));
+        $this->assertContains('rdfs:comment', explode('|', TermReading::COMMENT_PROPERTY));
     }
 
     public function testTheLibrarysReadingIsOneOfCoresChoices()

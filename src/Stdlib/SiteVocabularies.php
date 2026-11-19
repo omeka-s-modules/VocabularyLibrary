@@ -45,10 +45,7 @@ class SiteVocabularies
      *   file and update it, in core's review, which also changes a namespace
      *   written another way to the library's: not one Omeka keeps fixed
      *   (Dublin Core and its types), and one the user may change
-     *   (Supervisors may change only their own), 'comparable' and
-     *   'changeable' => the same, split by whether the namespace is written
-     *   the same way, for the module's own Compare and Change namespace,
-     *   which go once core's review replaces them].
+     *   (Supervisors may change only their own)].
      *   The pages treat both forms as in use, and only the details sidebar
      *   says which
      */
@@ -75,8 +72,6 @@ class SiteVocabularies
             'url' => $this->url($match),
             'exact' => $exact,
             'updatable' => $editable,
-            'comparable' => $exact && $editable,
-            'changeable' => !$exact && $editable,
         ];
     }
 

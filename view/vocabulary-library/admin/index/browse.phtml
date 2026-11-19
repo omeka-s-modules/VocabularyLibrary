@@ -153,19 +153,3 @@ $selected = function ($name, $value) use ($query) {
     ]); ?>
     <div class="sidebar-content"></div>
 </div>
-
-<?php
-// Over the details, for confirming a change, as core stacks one sidebar over
-// another: closing it leaves the details as they were. Wrapped, so it isn't
-// one of the content's own sidebars, where core loads a sidebar link by
-// default; only a link that names it loads into it.
-?>
-<div class="vocabulary-library-confirm">
-    <div class="sidebar" id="vocabulary-library-confirm-sidebar">
-        <?php echo $this->hyperlink('', '#', [
-            'class' => 'sidebar-close o-icon-close',
-            'title' => $translate('Close'),
-        ]); ?>
-        <div class="sidebar-content"></div>
-    </div>
-</div>

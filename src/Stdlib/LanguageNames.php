@@ -6,7 +6,7 @@ use Laminas\I18n\Translator\Translator;
 /**
  * The language tags of vocabularies' labels, named in the admin's language,
  * for the library's label language filter, the details sidebar, and the
- * language menus on the import form and Compare page.
+ * import form's language menu.
  */
 class LanguageNames
 {

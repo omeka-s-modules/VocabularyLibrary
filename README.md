@@ -72,10 +72,10 @@ version of the module list the vocabularies that changed.
 
 ## Server memory
 
-The largest files need more memory than PHP's default limit of 128 MB. The
-library raises the limit to 256 MB where the server allows it. If the
-details, import, or comparison of a large vocabulary fails, raise PHP's
-`memory_limit`.
+The largest files need more memory than PHP's default limit of 128 MB.
+Omeka raises the limit to 256 MB while reading a vocabulary's file, where the
+server allows it. If the details, import, or comparison of a large vocabulary
+fails, raise PHP's `memory_limit`.
 
 ## About the library
 

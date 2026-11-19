@@ -203,7 +203,7 @@
 }
 
 /* What follows the status in the sidebar: its button and, for a namespace
-   in another form, why it can't be compared. */
+   in another form, what comparing does to it. */
 .vocabulary-library-status-next {
     margin: 6px 0 0;
 }
@@ -277,67 +277,8 @@
     color: #a91919;
 }
 
-/* Compare and update page. The Show changes button follows the reading
-   options rather than sitting in a field, where core's button lacks contrast
-   on the field's gray. */
-.vocabulary-library-reading-actions {
-    margin: 0 0 24px;
-}
-
-/* The sections below, as one line of links. */
-.vocabulary-library-compare-summary ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    margin: 0 0 12px;
-    padding: 0;
-    list-style: none;
-}
-
-/* In a table of changes the first column holds only a label and a term, so
-   the values from and to get the room; core's tables otherwise give every
-   column the same width. */
-.vocabulary-library-change-table th:first-child {
-    width: 25%;
-}
-
-/* What differs within a changed value: struck out where removed, underlined
-   where added, each on a tint, so it shows without colour and a changed
-   space shows at all. */
-.vocabulary-library-value del {
-    background-color: #fbe3e3;
-    text-decoration: line-through;
-}
-
-.vocabulary-library-value ins {
-    background-color: #dff3df;
-    text-decoration: underline;
-}
-
-/* The sign for a line break added or removed. */
-.vocabulary-library-line-break {
-    font-family: sans-serif;
-}
-
-/* A term, as its label and beneath it its term in core's style for terms. */
-.vocabulary-library-compare-table .field-term {
-    display: block;
-}
-
-/* Long comments make tall rows; keep each term beside the start of its
-   values. */
-table.tablesaw.vocabulary-library-compare-table td {
-    vertical-align: top;
-}
-
-/* Values as they would be stored, line breaks and spacing included, which
-   show where they are part of a change in the words. */
-.vocabulary-library-value {
-    white-space: pre-wrap;
-}
-
-/* Stands in for a missing value, set apart from real ones: "None" on the
-   compare page, and what the publisher didn't provide in the sidebar. */
+/* Stands in for a missing value, set apart from real ones: what the
+   publisher didn't provide, in the sidebar. */
 .vocabulary-library-none {
     color: #676767;
     font-style: italic;
