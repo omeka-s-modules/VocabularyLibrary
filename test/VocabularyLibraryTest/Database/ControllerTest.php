@@ -438,7 +438,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // Core's review calls the file the library's vocabulary.
         [$status, $page] = $this->send('GET', $review);
         $this->assertSame(200, $status);
-        $this->assertMatchesRegularExpression('#This vocabulary already matches the library\S*s vocabulary\.#', $page);
+        $this->assertMatchesRegularExpression('#This vocabulary already matches the library\S*s vocabulary, read with the choices above\.#', $page);
 
         // Leaving it returns to the library as the admin left it.
         parse_str((string) parse_url($review, PHP_URL_QUERY), $query);
