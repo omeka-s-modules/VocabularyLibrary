@@ -2,13 +2,12 @@
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
 $this->headLink()->appendStylesheet($this->assetUrl('css/vocabulary-library.css', 'VocabularyLibrary'));
-$this->headScript()->appendFile($this->assetUrl('js/vocabulary-library.js', 'VocabularyLibrary'));
 $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import');
 ?>
 
 <?php echo $this->pageTitle($entry['name'], 1, $translate('Vocabulary Library'), $translate('Import')); ?>
 
-<?php if ($installed): ?>
+<?php // Only for a vocabulary Omeka already has: the import itself is core's import details. ?>
 
 <div id="page-actions">
     <?php echo $this->hyperlink($translate('Back to the library'), $libraryUrl, ['class' => 'button']); ?>
@@ -20,50 +19,3 @@ $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label()
 ?>
 <p><?php echo sprintf($escape($translate('Omeka already has this vocabulary: %s.')), $inOmeka); ?></p>
 <?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'long' => true, 'return' => $libraryState]); ?>
-
-<?php else: ?>
-
-<?php $form->prepare(); ?>
-<?php echo $this->form()->openTag($form); ?>
-<div id="page-actions">
-    <?php echo $this->hyperlink($translate('Cancel'), $libraryUrl, ['class' => 'button']); ?>
-    <button type="submit"><?php echo $translate('Import'); ?></button>
-</div>
-<?php // In core's import details order: label, comment, namespace, prefix, language. ?>
-
-<?php echo $this->formRow($form->get('o:label')); ?>
-<?php echo $this->formRow($form->get('o:comment')); ?>
-<div class="field">
-    <div class="field-meta">
-        <?php // Not a form control, so core's label style without a <label>. ?>
-        <span class="label"><?php echo $translate('Namespace URI'); ?></span>
-    </div>
-    <div class="inputs"><?php echo $escape($entry['namespace']); ?></div>
-</div>
-<?php // The warnings describe the field, so they are read with it, and again when they change. ?>
-<?php $form->get('o:prefix')->setAttribute('aria-describedby', 'vocabulary-library-prefix-warnings'); ?>
-<?php echo $this->formRow($form->get('o:prefix')); ?>
-<div id="vocabulary-library-prefix-warnings" class="vocabulary-library-prefix-warnings"
-    data-installed-prefixes="<?php echo $escape(json_encode($installedPrefixes ?: new \stdClass)); ?>">
-    <p class="vocabulary-library-prefix-taken" hidden>
-        <?php echo $translate('This prefix is already used in Omeka by:'); ?>
-        <span class="vocabulary-library-prefix-holder"></span>
-    </p>
-    <p class="vocabulary-library-prefix-reserved" hidden>
-        <?php echo $translate('Omeka reserves the prefix "o" and prefixes beginning "o-".'); ?>
-    </p>
-</div>
-<?php // The warning showing, read out once the admin pauses; filled in by the script. ?>
-<p class="vocabulary-library-announcement vocabulary-library-prefix-announcement" aria-live="polite" aria-atomic="true"></p>
-<?php if ($form->has('lang')): ?>
-<?php // Under the label core gives the same choice on its import details page. ?>
-<fieldset>
-    <legend><?php echo $translate('Classes and properties'); ?></legend>
-    <?php echo $this->formRow($form->get('lang')); ?>
-</fieldset>
-<?php endif; ?>
-
-<?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>
-<?php echo $this->form()->closeTag(); ?>
-
-<?php endif; ?>

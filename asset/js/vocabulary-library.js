@@ -577,41 +577,10 @@
         status.heard(filter());
     };
 
-    /**
-     * The import form: warns while the admin types a prefix that the site
-     * already uses, or that Omeka reserves. Omeka compares prefixes without
-     * regard to case.
-     */
-    const initImport = function (warnings) {
-        const input = document.getElementById('o:prefix');
-        const installed = warnings.data('installed-prefixes');
-        const taken = warnings.find('.vocabulary-library-prefix-taken');
-        const reserved = warnings.find('.vocabulary-library-prefix-reserved');
-        const warning = announcer(document.querySelector('.vocabulary-library-prefix-announcement'));
-        const check = function () {
-            const prefix = input.value.trim();
-            const holder = own(installed, prefix.toLowerCase());
-            taken.prop('hidden', !holder);
-            taken.find('.vocabulary-library-prefix-holder').text(holder || '');
-            reserved.prop('hidden', !/^o(-|$)/.test(prefix));
-            return warnings.children(':not([hidden])').text().trim().replace(/\s+/g, ' ');
-        };
-        // A warning that appears or changes while typing is read out. One
-        // the form opens with is read with the field, which it describes.
-        $(input).on('input', function () {
-            warning.say(check());
-        });
-        warning.heard(check());
-    };
-
     $(document).ready(function () {
         const filters = $('#vocabulary-library-filters');
         if (filters.length) {
             initBrowse(filters);
-        }
-        const warnings = $('#vocabulary-library-prefix-warnings');
-        if (warnings.length) {
-            initImport(warnings);
         }
     });
 

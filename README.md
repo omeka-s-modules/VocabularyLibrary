@@ -56,7 +56,8 @@ use, opens Omeka's review of how the library's vocabulary differs from
 Omeka's, and **Accept changes** applies the differences. Updating adds
 classes and properties and changes the labels and comments of existing ones
 to match the library's vocabulary, so look over the changes first. It never
-removes a class or property. Accepting or cancelling returns to the library.
+removes a class or property. Accepting or cancelling leads to the
+vocabulary's page in Omeka, as any review does.
 
 Where the library's vocabulary has several languages, or gives its terms both
 definitions and comments, the review offers a choice of which to compare. It

@@ -1,15 +1,15 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
-use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Stdlib\RdfImporter;
 
 /**
- * Reads and imports the library's files with core's importer, and knows
- * where they are. Every read of a file's terms goes through here, so this is
- * where its options are set, the format of the files core's review reads
- * included. Comparing and updating are core's review's (VocabularyReview),
- * and core raises PHP's memory limit for a large file.
+ * Reads the library's files with core's importer, and knows where they are.
+ * Core's import details imports them (VocabularyImport), and core's review
+ * compares and updates them (VocabularyReview). Every read of a file's terms
+ * goes through here, so this is where its options are set, the format of
+ * the files core's review reads included. Core raises PHP's memory limit for
+ * a large file.
  */
 class Importer
 {
@@ -36,23 +36,6 @@ class Importer
     public function members(array $entry, $lang)
     {
         return $this->rdfImporter->getMembers('file', $entry['namespace'], $this->options($entry, $lang));
-    }
-
-    /**
-     * Imports an entry's file as a new vocabulary.
-     *
-     * @param array $vocabulary The vocabulary's "o:prefix", "o:label" and
-     *   "o:comment"
-     * @param string|null $lang The language to read labels and comments in
-     * @return VocabularyRepresentation
-     */
-    public function import(array $entry, array $vocabulary, $lang)
-    {
-        return $this->rdfImporter->import(
-            'file',
-            ['o:namespace_uri' => $entry['namespace']] + $vocabulary,
-            $this->options($entry, $lang)
-        )->getContent();
     }
 
     /**

@@ -46,12 +46,4 @@ class LanguageNamesTest extends TestCase
     {
         $this->assertSame(['qqq' => 'qqq'], $this->languageNames('en_US')->names(['qqq']));
     }
-
-    public function testOptionsNameEachTagWithTheTagItself()
-    {
-        $this->assertSame(
-            ['en-US' => 'English (en-US)', 'de' => 'German (de)', 'qqq' => 'qqq'],
-            $this->languageNames('en_US')->options(['de', 'qqq', 'en-US'])
-        );
-    }
 }
