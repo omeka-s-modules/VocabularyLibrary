@@ -29,8 +29,7 @@ $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label()
     <?php echo $this->hyperlink($translate('Cancel'), $libraryUrl, ['class' => 'button']); ?>
     <button type="submit"><?php echo $translate('Import'); ?></button>
 </div>
-<?php // As core's import details page opens, and in its order: label, comment, namespace, prefix, language. ?>
-<p><?php echo $translate('The details below are filled in from the library\'s vocabulary. Check them and change any as needed, then click Import.'); ?></p>
+<?php // In core's import details order: label, comment, namespace, prefix, language. ?>
 
 <?php echo $this->formRow($form->get('o:label')); ?>
 <?php echo $this->formRow($form->get('o:comment')); ?>

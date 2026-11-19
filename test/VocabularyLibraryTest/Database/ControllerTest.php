@@ -263,9 +263,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
     {
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
         $this->assertSame(200, $status);
-        // As core's import details page opens, and in its order: label,
-        // comment, namespace, prefix, language.
-        $this->assertMatchesRegularExpression('#<p>The details below are filled in from the library\S*s vocabulary\. Check them and change any as needed, then click Import\.</p>#', $page);
+        // In core's import details order: label, comment, namespace,
+        // prefix, language.
         $order = array_map(function ($marker) use ($page) {
             return strpos($page, $marker);
         }, ['name="o:label"', 'name="o:comment"', '>http://example.org/ns#</div>', 'name="o:prefix"', 'name="lang"']);

@@ -24,7 +24,8 @@ class ImportForm extends Form
             'name' => 'o:prefix',
             'options' => [
                 'label' => 'Namespace prefix', // @translate
-                'info' => 'Cannot be changed after import.', // @translate
+                // Core's own, from its import details page.
+                'info' => 'Enter a concise vocabulary identifier used as a shorthand for the namespace URI. It can\'t be changed after importing.', // @translate
             ],
             'attributes' => [
                 'id' => 'o:prefix',
