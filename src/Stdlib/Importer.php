@@ -7,12 +7,19 @@ use Omeka\Stdlib\RdfImporter;
  * Reads the library's files with core's importer, and knows where they are.
  * Core's import details imports them (VocabularyImport), and core's review
  * compares and updates them (VocabularyReview). Every read of a file's terms
- * goes through here, so this is where its options are set, the format of
- * the files core's review reads included. Core raises PHP's memory limit for
- * a large file.
+ * goes through here, so this is where its options are set. Core raises PHP's
+ * memory limit for a large file.
  */
 class Importer
 {
+    /**
+     * The format the library's files are read in, and handed to core in:
+     * the one EasyRdf guesses, where core's importer then tries each format
+     * in turn if the guess fails or reads nothing. The build reads every
+     * file the same way, so each one the library has reads.
+     */
+    const FORMAT = 'guess';
+
     protected $rdfImporter;
     protected $dataDir;
 
@@ -39,15 +46,6 @@ class Importer
     }
 
     /**
-     * The format to read an entry's file in: the one the build check found,
-     * or "guess" where it found the file by autodetecting.
-     */
-    public function format(array $entry)
-    {
-        return $entry['format'] ?? 'guess';
-    }
-
-    /**
      * The path to an entry's file.
      */
     public function path(array $entry)
@@ -62,7 +60,7 @@ class Importer
     {
         return [
             'file' => $this->path($entry),
-            'format' => $this->format($entry),
+            'format' => self::FORMAT,
             'lang' => $lang,
             'label_property' => TermReading::LABEL_PROPERTY,
             'comment_property' => TermReading::COMMENT_PROPERTY,

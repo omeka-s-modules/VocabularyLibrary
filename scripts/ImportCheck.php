@@ -2,9 +2,11 @@
 namespace VocabularyLibrary\Scripts;
 
 use EasyRdf\Graph as RdfGraph;
+use Omeka\Api\Exception\ValidationException;
 use Omeka\Entity\Vocabulary;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
+use RuntimeException;
 use Throwable;
 use VocabularyLibrary\Stdlib\PlainText;
 use VocabularyLibrary\Stdlib\TermReading;
@@ -13,9 +15,10 @@ use VocabularyLibrary\Stdlib\TermReading;
  * Tests a vocabulary file against Omeka's own importer, without a database or
  * a running install.
  *
- * The file is parsed the way RdfImporter::getMembers() parses it, then the
- * importer's own getMembersOfTypes() is called with the namespace and its
- * http/https and #// variants, and the best result is kept. Only if all of
+ * The file is read by the importer's own readGraph(), as
+ * RdfImporter::getMembers() reads it, then the importer's own
+ * getMembersOfTypes() is called with the namespace and its http/https and #//
+ * variants (Vocabulary::getNamespaceUriForms()), and the best result is kept. Only if all of
  * those import nothing is the namespace the file's terms actually use tried,
  * because a file that redeclares another vocabulary's terms would otherwise be
  * credited with that vocabulary.
@@ -54,7 +57,7 @@ class ImportCheck
 
     public function __construct()
     {
-        $this->importer = (new ReflectionClass(CheckImporter::class))->newInstanceWithoutConstructor();
+        $this->importer = CheckImporter::create();
     }
 
     /**
@@ -156,7 +159,6 @@ class ImportCheck
      * @return array The check result: "parsed", and "classes" and
      *   "properties" as counts; "error" where the file, or a term's label or
      *   comment, doesn't parse; and where they do:
-     *   - format: the format it parsed as, or null if autodetected
      *   - namespace: the namespace found to import
      *   - namespace_source: where that came from: "given", "declared" (the
      *     file's vann:preferredNamespaceUri), "ontology" (its owl:Ontology),
@@ -177,37 +179,17 @@ class ImportCheck
      */
     public function check($path, $namespace = null)
     {
-        // As Omeka's form does by default, autodetect the format. If that
-        // fails, try the formats a user can choose explicitly. A guess can
-        // also be wrong without failing: given a namespace, EasyRdf takes a
-        // Turtle file that mentions RDFa near its start for RDFa, which
-        // reads nothing. So a guess that reads nothing gives way to the
-        // first of those formats that parses, and is kept if none does.
-        $graph = null;
-        $error = null;
-        $format = null;
-        foreach (['guess', 'rdfxml', 'turtle', 'jsonld', 'ntriples'] as $try) {
-            $attempt = new RdfGraph;
-            try {
-                $attempt->parseFile($path, $try, $namespace);
-            } catch (Throwable $e) {
-                $error = $error ?: mb_substr($e->getMessage(), 0, 300);
-                continue;
-            }
-            [$graph, $format] = [$attempt, $try];
-            if ($try !== 'guess' || $attempt->countTriples()) {
-                break;
-            }
-        }
-        if (!$graph) {
-            return ['parsed' => false, 'error' => $error, 'classes' => 0, 'properties' => 0];
+        try {
+            $graph = $this->importer->graph($path, $namespace);
+        } catch (Throwable $e) {
+            return ['parsed' => false, 'error' => mb_substr($e->getMessage(), 0, 300), 'classes' => 0, 'properties' => 0];
         }
         // Reading the terms reads their labels and comments, which EasyRdf
         // checks against their datatypes only then. One that isn't valid,
         // such as a label typed as a number that isn't one, throws, as it
         // would in Omeka's importer, and the file doesn't import.
         try {
-            return $this->checkParsed($graph, $namespace, $format);
+            return $this->checkParsed($graph, $namespace);
         } catch (Throwable $e) {
             return ['parsed' => false, 'error' => 'a term\'s label or comment: ' . mb_substr($e->getMessage(), 0, 300), 'classes' => 0, 'properties' => 0];
         }
@@ -215,11 +197,8 @@ class ImportCheck
 
     /**
      * The rest of check(), for a file that parsed.
-     *
-     * @param string|null $format The format it parsed as, "guess" if
-     *   autodetected
      */
-    protected function checkParsed(RdfGraph $graph, $namespace, $format)
+    protected function checkParsed(RdfGraph $graph, $namespace)
     {
         $source = $namespace ? 'given' : null;
         if (!$namespace) {
@@ -237,7 +216,7 @@ class ImportCheck
         $best = $namespace;
         $bestMembers = $namespace ? $this->importer->members($graph, $namespace, self::LANG) : ['classes' => [], 'properties' => []];
         $bestCount = $this->count($bestMembers);
-        foreach ($namespace ? $this->candidates($namespace) : [] as $candidate) {
+        foreach ($namespace ? Vocabulary::getNamespaceUriForms($namespace) : [] as $candidate) {
             // The namespace itself is the first candidate, already counted.
             if ($candidate === $namespace) {
                 continue;
@@ -292,7 +271,6 @@ class ImportCheck
 
         return [
             'parsed' => true,
-            'format' => $format === 'guess' ? null : $format,
             'namespace' => $best,
             'namespace_source' => $source,
             'classes' => count($bestMembers['classes']),
@@ -337,15 +315,6 @@ class ImportCheck
     protected function count(array $members)
     {
         return count($members['classes']) + count($members['properties']);
-    }
-
-    /**
-     * The namespace with its #// and http/https variants: its forms as core
-     * finds a vocabulary under another form.
-     */
-    public static function candidates($namespace)
-    {
-        return Vocabulary::getNamespaceUriForms($namespace);
     }
 
     /**
@@ -644,6 +613,48 @@ class ImportCheck
  */
 class CheckImporter extends RdfImporter
 {
+    /**
+     * An importer without Omeka's services, which reading a file and its
+     * terms doesn't use.
+     */
+    public static function create()
+    {
+        return (new ReflectionClass(static::class))->newInstanceWithoutConstructor();
+    }
+
+    /**
+     * A file's graph, read as core reads a file to import it (readGraph()):
+     * in the format EasyRdf guesses, then in each format in turn where the
+     * guess fails or reads nothing, with the namespace as the base for
+     * relative URIs.
+     *
+     * @param string|null $namespace
+     * @throws Throwable The parser's first error, where no format reads the
+     *   file: core's own message says only that, not why
+     */
+    public function graph($path, $namespace)
+    {
+        // Core reads nothing from an empty file either, but its JSON-LD
+        // parser warns on one first.
+        if (is_file($path) && !filesize($path)) {
+            throw new RuntimeException('the file is empty');
+        }
+        $error = null;
+        $read = function (RdfGraph $graph, $format) use ($path, $namespace, &$error) {
+            try {
+                $graph->parseFile($path, $format, $namespace);
+            } catch (Throwable $e) {
+                $error ??= $e;
+                throw $e;
+            }
+        };
+        try {
+            return $this->readGraph($read, 'guess', 'Could not parse vocabulary file.');
+        } catch (ValidationException $e) {
+            throw $error ?? $e;
+        }
+    }
+
     public function members(RdfGraph $graph, $namespaceUri, $lang = null)
     {
         return [

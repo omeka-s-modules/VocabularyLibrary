@@ -3,7 +3,6 @@
         "alt_title": null,
         "classes": 52,
         "file": "vocabs/a-cat.rdf",
-        "format": null,
         "language_coverage": {
             "en": 120,
             "it": 120
@@ -26,7 +25,6 @@
         "alt_title": null,
         "classes": 176,
         "file": "vocabs/a-cd.rdf",
-        "format": null,
         "language_coverage": {
             "en": 601,
             "it": 601
@@ -49,7 +47,6 @@
         "alt_title": null,
         "classes": 15,
         "file": "vocabs/a-ce.rdf",
-        "format": null,
         "language_coverage": {
             "en": 36,
             "it": 36
@@ -73,7 +70,6 @@
         "alt_title": null,
         "classes": 51,
         "file": "vocabs/a-dd.rdf",
-        "format": null,
         "language_coverage": {
             "en": 226,
             "it": 226
@@ -96,7 +92,6 @@
         "alt_title": null,
         "classes": 62,
         "file": "vocabs/a-ip.owl",
-        "format": null,
         "language_coverage": {
             "en": 107,
             "it": 107
@@ -119,7 +114,6 @@
         "alt_title": null,
         "classes": 75,
         "file": "vocabs/a-loc.rdf",
-        "format": null,
         "language_coverage": {
             "en": 188,
             "it": 188
@@ -143,7 +137,6 @@
         "alt_title": null,
         "classes": 125,
         "file": "vocabs/a-mp.owl",
-        "format": null,
         "language_coverage": {
             "en": 287,
             "it": 287
@@ -167,7 +160,6 @@
         "alt_title": "Audiovisual Core",
         "classes": 4,
         "file": "vocabs/ac.nt",
-        "format": null,
         "language_coverage": {
             "en": 76
         },
@@ -189,7 +181,6 @@
         "alt_title": "AGLS Metadata Terms",
         "classes": 7,
         "file": "vocabs/agls.nt",
-        "format": null,
         "language_coverage": {
             "en-au": 22
         },
@@ -210,7 +201,6 @@
         "alt_title": null,
         "classes": 48,
         "file": "vocabs/agrelon.ttl",
-        "format": null,
         "language_coverage": {
             "de": 131,
             "en": 131,
@@ -237,7 +227,6 @@
         "alt_title": null,
         "classes": 15,
         "file": "vocabs/aiiso.nt",
-        "format": null,
         "language_coverage": {
             "en": 24
         },
@@ -258,7 +247,6 @@
         "alt_title": null,
         "classes": 8,
         "file": "vocabs/amo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 29
         },
@@ -281,7 +269,6 @@
         "alt_title": null,
         "classes": 39,
         "file": "vocabs/aos.rdf",
-        "format": null,
         "language_coverage": {
             "en": 79
         },
@@ -302,7 +289,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/arch.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -319,7 +305,6 @@
         "alt_title": null,
         "classes": 46,
         "file": "vocabs/arco.rdf",
-        "format": null,
         "language_coverage": {
             "en": 119,
             "it": 119
@@ -342,7 +327,6 @@
         "alt_title": null,
         "classes": 23,
         "file": "vocabs/arco-core.rdf",
-        "format": null,
         "language_coverage": {
             "en": 102,
             "it": 102
@@ -365,7 +349,6 @@
         "alt_title": "Art and Rare Materials (ARM) BIBFRAME Ontology Extensions",
         "classes": 49,
         "file": "vocabs/arm.rdf",
-        "format": null,
         "language_coverage": {
             "en": 90
         },
@@ -387,7 +370,6 @@
         "alt_title": null,
         "classes": 55,
         "file": "vocabs/as.ttl",
-        "format": null,
         "language_coverage": {
             "en": 124
         },
@@ -408,7 +390,6 @@
         "alt_title": null,
         "classes": 15,
         "file": "vocabs/awol.nt",
-        "format": null,
         "language_coverage": {
             "en": 55
         },
@@ -429,7 +410,6 @@
         "alt_title": "Buddhist Digital Ontology",
         "classes": 167,
         "file": "vocabs/bdo.owl",
-        "format": null,
         "language_coverage": {
             "bo-x-ewts": 2,
             "en": 452
@@ -454,7 +434,6 @@
         "alt_title": null,
         "classes": 28,
         "file": "vocabs/bflc.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -471,7 +450,6 @@
         "alt_title": null,
         "classes": 224,
         "file": "vocabs/bibframe.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -488,7 +466,6 @@
         "alt_title": "The Bibliographic Ontology (BIBO)",
         "classes": 59,
         "file": "vocabs/bibo.ttl",
-        "format": null,
         "language_coverage": {
             "en": 104
         },
@@ -510,7 +487,6 @@
         "alt_title": null,
         "classes": 15,
         "file": "vocabs/bibtex.rdf",
-        "format": null,
         "language_coverage": {
             "en": 55
         },
@@ -531,7 +507,6 @@
         "alt_title": null,
         "classes": 42,
         "file": "vocabs/bio.nt",
-        "format": null,
         "language_coverage": {
             "en": 75
         },
@@ -552,7 +527,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/bioc.ttl",
-        "format": null,
         "language_coverage": {
             "en": 13,
             "fr": 13
@@ -575,7 +549,6 @@
         "alt_title": null,
         "classes": 26,
         "file": "vocabs/biocrm.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -593,7 +566,6 @@
         "alt_title": "Biological Taxonomy Vocabulary (Core)",
         "classes": 3,
         "file": "vocabs/biol.nt",
-        "format": null,
         "language_coverage": {
             "en": 19
         },
@@ -614,7 +586,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/biro.rdf",
-        "format": null,
         "language_coverage": {
             "en": 18
         },
@@ -635,7 +606,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/bkb.ttl",
-        "format": null,
         "language_coverage": {
             "en": 16
         },
@@ -657,7 +627,6 @@
         "alt_title": null,
         "classes": 10,
         "file": "vocabs/blt.nt",
-        "format": null,
         "language_coverage": {
             "en": 16
         },
@@ -678,7 +647,6 @@
         "alt_title": "Biological Taxonomy Vocabulary (Botany)",
         "classes": 1,
         "file": "vocabs/botany.nt",
-        "format": null,
         "language_coverage": {
             "en-gb": 113
         },
@@ -699,7 +667,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/c4o.rdf",
-        "format": null,
         "language_coverage": {
             "en": 26
         },
@@ -720,7 +687,6 @@
         "alt_title": "RDF Calendar",
         "classes": 14,
         "file": "vocabs/cal.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -737,7 +703,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/cao.rdf",
-        "format": null,
         "language_coverage": {
             "en": 51
         },
@@ -758,7 +723,6 @@
         "alt_title": null,
         "classes": 57,
         "file": "vocabs/cbo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 192
         },
@@ -780,7 +744,6 @@
         "alt_title": "Creative Commons Rights Expression Language (ccREL)",
         "classes": 6,
         "file": "vocabs/cc.rdf",
-        "format": null,
         "language_coverage": {
             "en-US": 12
         },
@@ -801,7 +764,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/cdtype.rdf",
-        "format": null,
         "language_coverage": {
             "en": 4
         },
@@ -823,7 +785,6 @@
         "alt_title": "Cultural Heritage Ontology (CEO)",
         "classes": 30,
         "file": "vocabs/ceo.nt",
-        "format": null,
         "language_coverage": {
             "en": 163,
             "nl": 163
@@ -847,7 +808,6 @@
         "alt_title": "Common European Research Information Format (CERIF) Ontology",
         "classes": 26,
         "file": "vocabs/cerif.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -865,7 +825,6 @@
         "alt_title": "Chronometric Age Vocabulary",
         "classes": 1,
         "file": "vocabs/chrono.nt",
-        "format": null,
         "language_coverage": {
             "en": 23
         },
@@ -887,7 +846,6 @@
         "alt_title": "CIDOC CRM",
         "classes": 76,
         "file": "vocabs/cidoc-crm.rdf",
-        "format": null,
         "language_coverage": {
             "de": 299,
             "el": 280,
@@ -920,7 +878,6 @@
         "alt_title": "Cultural-ON (Cultural ONtology)",
         "classes": 31,
         "file": "vocabs/cis.ttl",
-        "format": null,
         "language_coverage": {
             "en": 61,
             "it": 61
@@ -945,7 +902,6 @@
         "alt_title": null,
         "classes": 9,
         "file": "vocabs/cito.rdf",
-        "format": null,
         "language_coverage": {
             "en": 113
         },
@@ -967,7 +923,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/citof.nt",
-        "format": null,
         "language_coverage": {
             "en": 6
         },
@@ -988,7 +943,6 @@
         "alt_title": null,
         "classes": 22,
         "file": "vocabs/cl.ttl",
-        "format": null,
         "language_coverage": {
             "en": 45,
             "fr": 42
@@ -1011,7 +965,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/cld.rdf",
-        "format": null,
         "language_coverage": {
             "en": 8
         },
@@ -1033,7 +986,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/cnt.rdf",
-        "format": null,
         "language_coverage": {
             "en": 18
         },
@@ -1054,7 +1006,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/co.nt",
-        "format": "turtle",
         "language_coverage": {
             "en": 22
         },
@@ -1075,7 +1026,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/costume-core.rdf",
-        "format": null,
         "language_coverage": {
             "en": 52
         },
@@ -1096,7 +1046,6 @@
         "alt_title": null,
         "classes": 12,
         "file": "vocabs/country-and-subdivision-representation.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://opensource.org/licenses/MIT",
@@ -1113,7 +1062,6 @@
         "alt_title": "Catalogus Professorum Model (CPM)",
         "classes": 35,
         "file": "vocabs/cpm.xml",
-        "format": null,
         "language_coverage": {
             "de": 97,
             "en": 97
@@ -1137,7 +1085,6 @@
         "alt_title": "CRMarchaeo",
         "classes": 10,
         "file": "vocabs/crmarchaeo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 69
         },
@@ -1158,7 +1105,6 @@
         "alt_title": "CRMdig",
         "classes": 14,
         "file": "vocabs/crmdig.rdf",
-        "format": null,
         "language_coverage": {
             "en": 57
         },
@@ -1181,7 +1127,6 @@
         "alt_title": null,
         "classes": 126,
         "file": "vocabs/crmeh.rdf",
-        "format": "rdfxml",
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1198,7 +1143,6 @@
         "alt_title": "CRMinf",
         "classes": 14,
         "file": "vocabs/crminf.rdf",
-        "format": null,
         "language_coverage": {
             "en": 66
         },
@@ -1221,7 +1165,6 @@
         "alt_title": "CRMsci",
         "classes": 28,
         "file": "vocabs/crmsci.rdf",
-        "format": null,
         "language_coverage": {
             "en": 105
         },
@@ -1243,7 +1186,6 @@
         "alt_title": "CRMtex",
         "classes": 14,
         "file": "vocabs/crmtex.rdf",
-        "format": null,
         "language_coverage": {
             "en": 48
         },
@@ -1265,7 +1207,6 @@
         "alt_title": null,
         "classes": 30,
         "file": "vocabs/cro.ttl",
-        "format": null,
         "language_coverage": {
             "en": 35
         },
@@ -1286,7 +1227,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/ctag.nt",
-        "format": null,
         "language_coverage": {
             "en": 10
         },
@@ -1307,7 +1247,6 @@
         "alt_title": null,
         "classes": 16,
         "file": "vocabs/cwork.nt",
-        "format": null,
         "language_coverage": {
             "en-gb": 32
         },
@@ -1328,7 +1267,6 @@
         "alt_title": null,
         "classes": 124,
         "file": "vocabs/cwrc.nt",
-        "format": null,
         "language_coverage": {
             "de": 1,
             "en": 371,
@@ -1354,7 +1292,6 @@
         "alt_title": null,
         "classes": 21,
         "file": "vocabs/cwrc-illness-injury.ttl",
-        "format": null,
         "language_coverage": {
             "en": 23
         },
@@ -1375,7 +1312,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/daia.nt",
-        "format": null,
         "language_coverage": {
             "en": 34
         },
@@ -1396,7 +1332,6 @@
         "alt_title": null,
         "classes": 19,
         "file": "vocabs/datacite.rdf",
-        "format": null,
         "language_coverage": {
             "en": 209
         },
@@ -1417,7 +1352,6 @@
         "alt_title": null,
         "classes": 32,
         "file": "vocabs/dba.rdf",
-        "format": null,
         "language_coverage": {
             "en": 67,
             "it": 67
@@ -1440,7 +1374,6 @@
         "alt_title": null,
         "classes": 754,
         "file": "vocabs/dbpedia-owl.nt",
-        "format": null,
         "language_coverage": {
             "ar": 5,
             "be": 5,
@@ -1519,7 +1452,6 @@
         "alt_title": "Dublin Core Metadata Element Set (DCMES), Version 1.1",
         "classes": 0,
         "file": "vocabs/dc11.ttl",
-        "format": null,
         "language_coverage": {
             "en": 15
         },
@@ -1540,7 +1472,6 @@
         "alt_title": "The data catalog vocabulary (DCAT)",
         "classes": 9,
         "file": "vocabs/dcat.ttl",
-        "format": null,
         "language_coverage": {
             "ar": 16,
             "cs": 36,
@@ -1581,7 +1512,6 @@
         "alt_title": "NDL Metadata Terms",
         "classes": 3,
         "file": "vocabs/dcndl.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1598,7 +1528,6 @@
         "alt_title": "DCMI Metadata Terms",
         "classes": 22,
         "file": "vocabs/dcterms.ttl",
-        "format": null,
         "language_coverage": {
             "en": 77
         },
@@ -1620,7 +1549,6 @@
         "alt_title": null,
         "classes": 12,
         "file": "vocabs/dctype.ttl",
-        "format": null,
         "language_coverage": {
             "en": 12
         },
@@ -1641,7 +1569,6 @@
         "alt_title": null,
         "classes": 31,
         "file": "vocabs/deo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 40
         },
@@ -1662,7 +1589,6 @@
         "alt_title": "Digital History Facts and Criticism (DHFC)",
         "classes": 36,
         "file": "vocabs/dhfc.jsonld",
-        "format": "jsonld",
         "language_coverage": {
             "en": 105
         },
@@ -1685,7 +1611,6 @@
         "alt_title": null,
         "classes": 13,
         "file": "vocabs/dicera.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1703,7 +1628,6 @@
         "alt_title": null,
         "classes": 16,
         "file": "vocabs/disco.ttl",
-        "format": null,
         "language_coverage": {
             "de": 13,
             "en": 57,
@@ -1728,7 +1652,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/display.ttl",
-        "format": null,
         "language_coverage": {
             "en": 38,
             "fr": 38
@@ -1751,7 +1674,6 @@
         "alt_title": null,
         "classes": 11,
         "file": "vocabs/dm2e.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1769,7 +1691,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/dnbt.ttl",
-        "format": null,
         "language_coverage": {
             "de": 15,
             "en": 15
@@ -1792,7 +1713,6 @@
         "alt_title": null,
         "classes": 13,
         "file": "vocabs/doap.rdf",
-        "format": null,
         "language_coverage": {
             "cs": 38,
             "de": 37,
@@ -1823,7 +1743,6 @@
         "alt_title": null,
         "classes": 53,
         "file": "vocabs/doco.rdf",
-        "format": null,
         "language_coverage": {
             "en": 73
         },
@@ -1844,7 +1763,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/dpd.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1861,7 +1779,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/dr.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -1880,7 +1797,6 @@
         "alt_title": null,
         "classes": 48,
         "file": "vocabs/drammar.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "Ontology Drammar is available at the url http://purl.org/drammar, under the license Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). The canonical citation for Drammar is \"Vincenzo Lombardo, Rossana Damiano, Antonio Pizzo. Drammar: a comprehensive ontology of drama (2018). http://purl.org/drammar\"",
@@ -1898,7 +1814,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/dso.nt",
-        "format": null,
         "language_coverage": {
             "en": 7
         },
@@ -1919,7 +1834,6 @@
         "alt_title": "Darwin-SW",
         "classes": 7,
         "file": "vocabs/dsw.owl",
-        "format": null,
         "language_coverage": {
             "en": 42
         },
@@ -1940,7 +1854,6 @@
         "alt_title": null,
         "classes": 78,
         "file": "vocabs/dul.ttl",
-        "format": null,
         "language_coverage": {
             "en": 186,
             "it": 170
@@ -1963,7 +1876,6 @@
         "alt_title": "Darwin Core",
         "classes": 25,
         "file": "vocabs/dwc.nt",
-        "format": null,
         "language_coverage": {
             "en": 314
         },
@@ -1984,7 +1896,6 @@
         "alt_title": null,
         "classes": 27,
         "file": "vocabs/e-collections.rdf",
-        "format": null,
         "language_coverage": {
             "en": 42,
             "es": 42
@@ -2007,7 +1918,6 @@
         "alt_title": "EAC-CPF Descriptions Ontology for Linked Archival Data",
         "classes": 10,
         "file": "vocabs/eac-cpf.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2025,7 +1935,6 @@
         "alt_title": null,
         "classes": 121,
         "file": "vocabs/ebucore.nt",
-        "format": null,
         "language_coverage": {
             "en": 450
         },
@@ -2046,7 +1955,6 @@
         "alt_title": null,
         "classes": 19,
         "file": "vocabs/eclap.nt",
-        "format": null,
         "language_coverage": {
             "en": 90
         },
@@ -2068,7 +1976,6 @@
         "alt_title": "Enumeration and Chronology of Periodicals Ontology (ECPO)",
         "classes": 3,
         "file": "vocabs/ecpo.ttl",
-        "format": null,
         "language_coverage": {
             "de": 30,
             "en": 32
@@ -2091,7 +1998,6 @@
         "alt_title": null,
         "classes": 76,
         "file": "vocabs/ecrm.rdf",
-        "format": null,
         "language_coverage": {
             "de": 299,
             "el": 280,
@@ -2124,7 +2030,6 @@
         "alt_title": null,
         "classes": 11,
         "file": "vocabs/edm.nt",
-        "format": "turtle",
         "language_coverage": {
             "en": 45
         },
@@ -2145,7 +2050,6 @@
         "alt_title": null,
         "classes": 38,
         "file": "vocabs/efrbroo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 143
         },
@@ -2167,7 +2071,6 @@
         "alt_title": "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary",
         "classes": 93,
         "file": "vocabs/ekc.ttl",
-        "format": null,
         "language_coverage": {
             "en": 251,
             "ko": 269
@@ -2191,7 +2094,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/ekcd.ttl",
-        "format": null,
         "language_coverage": {
             "en": 31,
             "ko": 31
@@ -2215,7 +2117,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/ep.nt",
-        "format": null,
         "language_coverage": {
             "en": 8
         },
@@ -2236,7 +2137,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/event.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2253,7 +2153,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/exif.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2270,7 +2169,6 @@
         "alt_title": null,
         "classes": 254,
         "file": "vocabs/fabio.rdf",
-        "format": null,
         "language_coverage": {
             "en": 358
         },
@@ -2291,7 +2189,6 @@
         "alt_title": null,
         "classes": 13,
         "file": "vocabs/foaf.jsonld",
-        "format": "jsonld",
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2309,7 +2206,6 @@
         "alt_title": "A Factoid Prosopography Ontology (FPO)",
         "classes": 35,
         "file": "vocabs/fpo.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -2328,7 +2224,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/fpr.ttl",
-        "format": null,
         "language_coverage": {
             "en": 13
         },
@@ -2349,7 +2244,6 @@
         "alt_title": "Functional Requirements for Authority Data (FRAD)",
         "classes": 12,
         "file": "vocabs/frad.ttl",
-        "format": null,
         "language_coverage": {
             "en": 150,
             "es": 77
@@ -2373,7 +2267,6 @@
         "alt_title": null,
         "classes": 88,
         "file": "vocabs/frapo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 226
         },
@@ -2394,7 +2287,6 @@
         "alt_title": null,
         "classes": 23,
         "file": "vocabs/frbr.nt",
-        "format": null,
         "language_coverage": {
             "en": 79
         },
@@ -2415,7 +2307,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/frbre.nt",
-        "format": null,
         "language_coverage": {
             "en": 56
         },
@@ -2436,7 +2327,6 @@
         "alt_title": "FRBR Entity-Relationship Model (FRBRer)",
         "classes": 10,
         "file": "vocabs/frbrer.rdf",
-        "format": null,
         "language_coverage": {
             "en": 216,
             "es": 215
@@ -2459,7 +2349,6 @@
         "alt_title": null,
         "classes": 46,
         "file": "vocabs/frbroo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 188
         },
@@ -2481,7 +2370,6 @@
         "alt_title": "Functional Requirements for Subject Authority Data (FRSAD)",
         "classes": 2,
         "file": "vocabs/frsad.rdf",
-        "format": null,
         "language_coverage": {
             "en": 19,
             "es": 19
@@ -2504,7 +2392,6 @@
         "alt_title": "GADM Ontology",
         "classes": 11,
         "file": "vocabs/gadm.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2521,7 +2408,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/gamecip.rdf",
-        "format": null,
         "language_coverage": {
             "en": 20
         },
@@ -2543,7 +2429,6 @@
         "alt_title": null,
         "classes": 12,
         "file": "vocabs/gen.rdf",
-        "format": null,
         "language_coverage": {
             "en": 33
         },
@@ -2564,7 +2449,6 @@
         "alt_title": "FAO Geopolitical Ontology",
         "classes": 11,
         "file": "vocabs/geop.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2581,7 +2465,6 @@
         "alt_title": "GeoRSS",
         "classes": 0,
         "file": "vocabs/georss.owl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2598,7 +2481,6 @@
         "alt_title": "GeoSPARQL",
         "classes": 6,
         "file": "vocabs/geosparql.ttl",
-        "format": null,
         "language_coverage": {
             "en": 60
         },
@@ -2619,7 +2501,6 @@
         "alt_title": null,
         "classes": 65,
         "file": "vocabs/gesah.ttl",
-        "format": null,
         "language_coverage": {
             "de": 1,
             "de-DE": 233,
@@ -2644,7 +2525,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/gn.rdf",
-        "format": null,
         "language_coverage": {
             "en": 35
         },
@@ -2665,7 +2545,6 @@
         "alt_title": null,
         "classes": 64,
         "file": "vocabs/gndo.ttl",
-        "format": null,
         "language_coverage": {
             "de": 336,
             "en": 336
@@ -2689,7 +2568,6 @@
         "alt_title": null,
         "classes": 14,
         "file": "vocabs/gov.rdf",
-        "format": null,
         "language_coverage": {
             "de": 54,
             "en": 54
@@ -2713,7 +2591,6 @@
         "alt_title": null,
         "classes": 31,
         "file": "vocabs/graves.rdf",
-        "format": null,
         "language_coverage": {
             "de": 65,
             "en": 72,
@@ -2739,7 +2616,6 @@
         "alt_title": null,
         "classes": 43,
         "file": "vocabs/gtm.ttl",
-        "format": null,
         "language_coverage": {
             "en": 135,
             "nl": 135
@@ -2763,7 +2639,6 @@
         "alt_title": "Getty Vocabulary Program (GVP) ontology",
         "classes": 14,
         "file": "vocabs/gvp.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2780,7 +2655,6 @@
         "alt_title": "Historical Hierarchical Territories (HHT)",
         "classes": 27,
         "file": "vocabs/hht.ttl",
-        "format": null,
         "language_coverage": {
             "en": 90
         },
@@ -2802,7 +2676,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/hico.rdf",
-        "format": null,
         "language_coverage": {
             "en": 15
         },
@@ -2825,7 +2698,6 @@
         "alt_title": "Histograph Ontology",
         "classes": 1,
         "file": "vocabs/histograph.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2843,7 +2715,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/holding.ttl",
-        "format": null,
         "language_coverage": {
             "en": 16
         },
@@ -2864,7 +2735,6 @@
         "alt_title": null,
         "classes": 41,
         "file": "vocabs/icon.rdf",
-        "format": null,
         "language_coverage": {
             "en": 118
         },
@@ -2886,7 +2756,6 @@
         "alt_title": "IIIF Image API 2",
         "classes": 5,
         "file": "vocabs/iiif-image-2.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2904,7 +2773,6 @@
         "alt_title": "IIIF Presentation API 2",
         "classes": 10,
         "file": "vocabs/iiif-presentation-2.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -2922,7 +2790,6 @@
         "alt_title": null,
         "classes": 144,
         "file": "vocabs/information-model-for-visual-arts.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://creativecommons.org/licenses/by/4.0",
@@ -2939,7 +2806,6 @@
         "alt_title": null,
         "classes": 87,
         "file": "vocabs/intro.rdf",
-        "format": null,
         "language_coverage": {
             "en": 130
         },
@@ -2960,7 +2826,6 @@
         "alt_title": null,
         "classes": 27,
         "file": "vocabs/isbd.ttl",
-        "format": null,
         "language_coverage": {
             "en": 190,
             "es": 173
@@ -2983,7 +2848,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/isbdu.rdf",
-        "format": null,
         "language_coverage": {
             "en": 163
         },
@@ -3004,7 +2868,6 @@
         "alt_title": "SKOS-Thes",
         "classes": 6,
         "file": "vocabs/iso-thes.ttl",
-        "format": null,
         "language_coverage": {
             "en": 22
         },
@@ -3025,7 +2888,6 @@
         "alt_title": null,
         "classes": 111,
         "file": "vocabs/kanzaki-music.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3042,7 +2904,6 @@
         "alt_title": "KB Base Vocabulary",
         "classes": 422,
         "file": "vocabs/kbv.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3059,7 +2920,6 @@
         "alt_title": null,
         "classes": 16,
         "file": "vocabs/l4lod.rdf",
-        "format": null,
         "language_coverage": {
             "en": 21
         },
@@ -3080,7 +2940,6 @@
         "alt_title": null,
         "classes": 39,
         "file": "vocabs/language-representation.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://opensource.org/licenses/MIT",
@@ -3097,7 +2956,6 @@
         "alt_title": "Linking Ancient World Data Ontology (LAWD)",
         "classes": 23,
         "file": "vocabs/lawd.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "Copyright © 2013 Hugh A. Cayless",
@@ -3116,7 +2974,6 @@
         "alt_title": null,
         "classes": 21,
         "file": "vocabs/ldr.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://creativecommons.org/licenses/by/3.0/",
@@ -3133,7 +2990,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/lexicog.rdf",
-        "format": null,
         "language_coverage": {
             "en": 10,
             "es": 10,
@@ -3158,7 +3014,6 @@
         "alt_title": null,
         "classes": 259,
         "file": "vocabs/lexinfo.rdf",
-        "format": null,
         "language_coverage": {
             "be": 44,
             "bg": 44,
@@ -3253,7 +3108,6 @@
         "alt_title": null,
         "classes": 16,
         "file": "vocabs/lib.nt",
-        "format": null,
         "language_coverage": {
             "en": 19
         },
@@ -3274,7 +3128,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/limo.nt",
-        "format": null,
         "language_coverage": {
             "it": 6
         },
@@ -3295,7 +3148,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/lingvo.ttl",
-        "format": null,
         "language_coverage": {
             "de": 1,
             "en": 47,
@@ -3346,7 +3198,6 @@
         "alt_title": "Linked Art",
         "classes": 7,
         "file": "vocabs/linked-art.rdf",
-        "format": null,
         "language_coverage": {
             "en": 41
         },
@@ -3367,7 +3218,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/lio.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -3385,7 +3235,6 @@
         "alt_title": null,
         "classes": 12,
         "file": "vocabs/locah.nt",
-        "format": null,
         "language_coverage": {
             "en": 72
         },
@@ -3406,7 +3255,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/locn.ttl",
-        "format": null,
         "language_coverage": {
             "en": 17
         },
@@ -3427,7 +3275,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/lode.nt",
-        "format": null,
         "language_coverage": {
             "en": 8
         },
@@ -3448,7 +3295,6 @@
         "alt_title": null,
         "classes": 17,
         "file": "vocabs/lom.nt",
-        "format": "turtle",
         "language_coverage": [],
         "languages": [],
         "license": "Copyright © 2015 University of Alcala, Information Engineering (IE) research unit (http://www.ieru.org/)",
@@ -3465,7 +3311,6 @@
         "alt_title": "LRMoo",
         "classes": 16,
         "file": "vocabs/lrmoo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 88
         },
@@ -3487,7 +3332,6 @@
         "alt_title": "Library Transaction Ontology (LTO)",
         "classes": 34,
         "file": "vocabs/lto.ttl",
-        "format": null,
         "language_coverage": {
             "en": 230
         },
@@ -3508,7 +3352,6 @@
         "alt_title": null,
         "classes": 14,
         "file": "vocabs/lv.ttl",
-        "format": null,
         "language_coverage": {
             "de": 61,
             "en": 61
@@ -3531,7 +3374,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/lvont.rdf",
-        "format": null,
         "language_coverage": {
             "en": 41
         },
@@ -3552,7 +3394,6 @@
         "alt_title": "Ontology for Media Resources",
         "classes": 14,
         "file": "vocabs/ma-ont.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3569,7 +3410,6 @@
         "alt_title": null,
         "classes": 59,
         "file": "vocabs/mads.rdf",
-        "format": null,
         "language_coverage": {
             "en": 54
         },
@@ -3591,7 +3431,6 @@
         "alt_title": "Monument Diagnosis and Conservation System (MDCS) damage atlas ontology",
         "classes": 345,
         "file": "vocabs/mdcs.rdf",
-        "format": null,
         "language_coverage": {
             "en": 345,
             "nl": 345
@@ -3614,7 +3453,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/media.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3631,7 +3469,6 @@
         "alt_title": "Mapping Manuscript Migrations Metadata Schema",
         "classes": 14,
         "file": "vocabs/mmms.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "https://creativecommons.org/licenses/by-nc/4.0/",
@@ -3648,7 +3485,6 @@
         "alt_title": null,
         "classes": 60,
         "file": "vocabs/mo.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3666,7 +3502,6 @@
         "alt_title": "MODS/RDF",
         "classes": 9,
         "file": "vocabs/mods-rdf.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3683,7 +3518,6 @@
         "alt_title": "MPEG-7 Ontology",
         "classes": 381,
         "file": "vocabs/mpeg7.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3700,7 +3534,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/mrel.nt",
-        "format": null,
         "language_coverage": {
             "en": 268
         },
@@ -3722,7 +3555,6 @@
         "alt_title": null,
         "classes": 142,
         "file": "vocabs/muninn-military.rdf",
-        "format": null,
         "language_coverage": {
             "ca": 4,
             "cs": 5,
@@ -3776,7 +3608,6 @@
         "alt_title": null,
         "classes": 33,
         "file": "vocabs/muninn-organization.rdf",
-        "format": null,
         "language_coverage": {
             "de": 19,
             "en": 68,
@@ -3802,7 +3633,6 @@
         "alt_title": null,
         "classes": 10,
         "file": "vocabs/muo.nt",
-        "format": null,
         "language_coverage": {
             "en": 19
         },
@@ -3823,7 +3653,6 @@
         "alt_title": "DOREMUS Ontology",
         "classes": 83,
         "file": "vocabs/mus.ttl",
-        "format": null,
         "language_coverage": {
             "en": 359,
             "fr": 98
@@ -3847,7 +3676,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/musemeta.rdf",
-        "format": null,
         "language_coverage": {
             "en": 206
         },
@@ -3869,7 +3697,6 @@
         "alt_title": null,
         "classes": 47,
         "file": "vocabs/music-meta.rdf",
-        "format": null,
         "language_coverage": {
             "en": 116
         },
@@ -3891,7 +3718,6 @@
         "alt_title": "Modular and Unified Tagging Ontology (MUTO)",
         "classes": 4,
         "file": "vocabs/muto.nt",
-        "format": null,
         "language_coverage": {
             "en": 21
         },
@@ -3912,7 +3738,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/national-library-of-scotland-digital.rdf",
-        "format": null,
         "language_coverage": {
             "en": 44
         },
@@ -3933,7 +3758,6 @@
         "alt_title": null,
         "classes": 17,
         "file": "vocabs/naval.rdf",
-        "format": null,
         "language_coverage": {
             "de": 36,
             "en": 50,
@@ -3958,7 +3782,6 @@
         "alt_title": "Nepomuk File Ontology (NFO)",
         "classes": 52,
         "file": "vocabs/nfo.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3975,7 +3798,6 @@
         "alt_title": "Nepomuk Information Element Ontology (NIE)",
         "classes": 4,
         "file": "vocabs/nie.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -3992,7 +3814,6 @@
         "alt_title": null,
         "classes": 24,
         "file": "vocabs/nlon.nt",
-        "format": null,
         "language_coverage": {
             "en": 155,
             "ko": 150
@@ -4015,7 +3836,6 @@
         "alt_title": "Nomisma Ontology",
         "classes": 34,
         "file": "vocabs/nmo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 105
         },
@@ -4037,7 +3857,6 @@
         "alt_title": null,
         "classes": 21,
         "file": "vocabs/oa.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4055,7 +3874,6 @@
         "alt_title": "Ontology for archival description (OAD)",
         "classes": 14,
         "file": "vocabs/oad.nt",
-        "format": null,
         "language_coverage": {
             "en": 54,
             "it": 54
@@ -4078,7 +3896,6 @@
         "alt_title": null,
         "classes": 16,
         "file": "vocabs/oc.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4096,7 +3913,6 @@
         "alt_title": "Open Digital Rights Language (ODRL)",
         "classes": 26,
         "file": "vocabs/odrl.ttl",
-        "format": null,
         "language_coverage": {
             "en": 84
         },
@@ -4117,7 +3933,6 @@
         "alt_title": "Open Data Rights Statement Vocabulary (ODRS)",
         "classes": 2,
         "file": "vocabs/odrs.ttl",
-        "format": null,
         "language_coverage": {
             "en": 17
         },
@@ -4138,7 +3953,6 @@
         "alt_title": "Open Graph protocol",
         "classes": 0,
         "file": "vocabs/og.nt",
-        "format": null,
         "language_coverage": {
             "en-us": 35
         },
@@ -4159,7 +3973,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/oh.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4176,7 +3989,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/olo.nt",
-        "format": null,
         "language_coverage": {
             "en": 9
         },
@@ -4197,7 +4009,6 @@
         "alt_title": null,
         "classes": 803,
         "file": "vocabs/om.rdf",
-        "format": "rdfxml",
         "language_coverage": {
             "en": 836,
             "ja": 17,
@@ -4224,7 +4035,6 @@
         "alt_title": null,
         "classes": 8,
         "file": "vocabs/ontolex.rdf",
-        "format": null,
         "language_coverage": {
             "af": 26,
             "de": 28,
@@ -4265,7 +4075,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/orca.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4283,7 +4092,6 @@
         "alt_title": "Open Archives Initiative Object Reuse and Exchange (OAI ORE)",
         "classes": 4,
         "file": "vocabs/ore.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://creativecommons.org/licenses/by-sa/3.0/",
@@ -4300,7 +4108,6 @@
         "alt_title": "The Organization Ontology",
         "classes": 9,
         "file": "vocabs/org.ttl",
-        "format": null,
         "language_coverage": {
             "en": 44,
             "es": 44,
@@ -4327,7 +4134,6 @@
         "alt_title": "OWL 2 Web Ontology Language",
         "classes": 26,
         "file": "vocabs/owl.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4344,7 +4150,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/participation.nt",
-        "format": null,
         "language_coverage": {
             "en": 5
         },
@@ -4365,7 +4170,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/pav.rdf",
-        "format": null,
         "language_coverage": {
             "en": 40
         },
@@ -4387,7 +4191,6 @@
         "alt_title": "Portland Common Data Model (PCDM)",
         "classes": 4,
         "file": "vocabs/pcdm.rdf",
-        "format": null,
         "language_coverage": {
             "en": 10
         },
@@ -4408,7 +4211,6 @@
         "alt_title": "Portland Common Data Model (PCDM): Use Extension",
         "classes": 8,
         "file": "vocabs/pcdmuse.rdf",
-        "format": null,
         "language_coverage": {
             "en": 8
         },
@@ -4430,7 +4232,6 @@
         "alt_title": "Portland Common Data Model (PCDM): Works Extension",
         "classes": 4,
         "file": "vocabs/pcdmworks.rdf",
-        "format": null,
         "language_coverage": {
             "en": 4
         },
@@ -4451,7 +4252,6 @@
         "alt_title": "Born Digital Archives",
         "classes": 6,
         "file": "vocabs/pericles-born-digital-archives.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4469,7 +4269,6 @@
         "alt_title": "Computer System",
         "classes": 5,
         "file": "vocabs/pericles-computer-system.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4486,7 +4285,6 @@
         "alt_title": "Digital Video",
         "classes": 31,
         "file": "vocabs/pericles-digital-video.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4504,7 +4302,6 @@
         "alt_title": "Policy",
         "classes": 10,
         "file": "vocabs/pericles-policy.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4521,7 +4318,6 @@
         "alt_title": null,
         "classes": 96,
         "file": "vocabs/persee.rdf",
-        "format": null,
         "language_coverage": {
             "en": 107,
             "fr": 107
@@ -4545,7 +4341,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/person.nt",
-        "format": null,
         "language_coverage": {
             "en": 9
         },
@@ -4566,7 +4361,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/personlink.nt",
-        "format": "turtle",
         "language_coverage": {
             "ar": 80,
             "en": 76,
@@ -4591,7 +4385,6 @@
         "alt_title": null,
         "classes": 47,
         "file": "vocabs/place.nt",
-        "format": null,
         "language_coverage": {
             "de": 48,
             "en": 48,
@@ -4620,7 +4413,6 @@
         "alt_title": "Performed Music Ontology (PMO)",
         "classes": 16,
         "file": "vocabs/pmo.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -4638,7 +4430,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/pna.nt",
-        "format": null,
         "language_coverage": {
             "en": 15
         },
@@ -4659,7 +4450,6 @@
         "alt_title": "Person Name Vocabulary (PNV)",
         "classes": 2,
         "file": "vocabs/pnv.rdf",
-        "format": null,
         "language_coverage": {
             "en": 20,
             "nl": 19
@@ -4682,7 +4472,6 @@
         "alt_title": null,
         "classes": 40,
         "file": "vocabs/po.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://creativecommons.org/licenses/by/4.0#id",
@@ -4699,7 +4488,6 @@
         "alt_title": null,
         "classes": 31,
         "file": "vocabs/premis.rdf",
-        "format": null,
         "language_coverage": {
             "en": 68
         },
@@ -4720,7 +4508,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/pro.rdf",
-        "format": null,
         "language_coverage": {
             "en": 32,
             "it": 1
@@ -4743,7 +4530,6 @@
         "alt_title": null,
         "classes": 30,
         "file": "vocabs/prov.ttl",
-        "format": null,
         "language_coverage": {
             "en": 58
         },
@@ -4765,7 +4551,6 @@
         "alt_title": null,
         "classes": 5,
         "file": "vocabs/pso.rdf",
-        "format": null,
         "language_coverage": {
             "en": 30
         },
@@ -4786,7 +4571,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/pwo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 46
         },
@@ -4807,7 +4591,6 @@
         "alt_title": "Quantities, Units, Dimensions and Types (QUDT) Schema",
         "classes": 67,
         "file": "vocabs/qudt.ttl",
-        "format": null,
         "language_coverage": {
             "en": 3
         },
@@ -4828,7 +4611,6 @@
         "alt_title": null,
         "classes": 58,
         "file": "vocabs/rcgs.ttl",
-        "format": null,
         "language_coverage": {
             "en": 107,
             "ja": 144
@@ -4852,7 +4634,6 @@
         "alt_title": null,
         "classes": 9,
         "file": "vocabs/rda-onix-framework-element-set.nt",
-        "format": null,
         "language_coverage": {
             "ar": 33,
             "cs": 33,
@@ -4895,7 +4676,6 @@
         "alt_title": "RDA Agent properties",
         "classes": 0,
         "file": "vocabs/rdaa.nt",
-        "format": null,
         "language_coverage": {
             "ar": 1053,
             "ca": 1106,
@@ -4952,7 +4732,6 @@
         "alt_title": null,
         "classes": 13,
         "file": "vocabs/rdac.rdf",
-        "format": null,
         "language_coverage": {
             "ar": 13,
             "ca": 13,
@@ -5011,7 +4790,6 @@
         "alt_title": "RDA Expression properties",
         "classes": 0,
         "file": "vocabs/rdae.nt",
-        "format": null,
         "language_coverage": {
             "ar": 524,
             "ca": 557,
@@ -5068,7 +4846,6 @@
         "alt_title": "RDA Item properties",
         "classes": 0,
         "file": "vocabs/rdai.nt",
-        "format": null,
         "language_coverage": {
             "ar": 136,
             "ca": 156,
@@ -5127,7 +4904,6 @@
         "alt_title": "RDA Manifestation properties",
         "classes": 0,
         "file": "vocabs/rdam.nt",
-        "format": null,
         "language_coverage": {
             "ar": 400,
             "ca": 429,
@@ -5186,7 +4962,6 @@
         "alt_title": "RDA Nomen properties",
         "classes": 0,
         "file": "vocabs/rdan.nt",
-        "format": null,
         "language_coverage": {
             "ar": 173,
             "ca": 174,
@@ -5239,7 +5014,6 @@
         "alt_title": "RDA Place properties",
         "classes": 0,
         "file": "vocabs/rdap.nt",
-        "format": null,
         "language_coverage": {
             "ar": 51,
             "ca": 54,
@@ -5296,7 +5070,6 @@
         "alt_title": "RDA Time-span properties",
         "classes": 0,
         "file": "vocabs/rdat.nt",
-        "format": null,
         "language_coverage": {
             "ar": 59,
             "ca": 60,
@@ -5349,7 +5122,6 @@
         "alt_title": "RDA Unconstrained properties",
         "classes": 0,
         "file": "vocabs/rdau.nt",
-        "format": null,
         "language_coverage": {
             "ar": 1114,
             "ca": 218,
@@ -5392,7 +5164,6 @@
         "alt_title": "RDA Work properties",
         "classes": 0,
         "file": "vocabs/rdaw.rdf",
-        "format": null,
         "language_coverage": {
             "ar": 590,
             "ca": 637,
@@ -5451,7 +5222,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/rdax.nt",
-        "format": null,
         "language_coverage": {
             "ar": 29,
             "ca": 30,
@@ -5506,7 +5276,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/rdf.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5523,7 +5292,6 @@
         "alt_title": null,
         "classes": 6,
         "file": "vocabs/rdfs.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5540,7 +5308,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/rel.nt",
-        "format": null,
         "language_coverage": {
             "en": 35
         },
@@ -5561,7 +5328,6 @@
         "alt_title": null,
         "classes": 3,
         "file": "vocabs/rev.nt",
-        "format": null,
         "language_coverage": {
             "en": 7
         },
@@ -5582,7 +5348,6 @@
         "alt_title": "Records in Contexts Ontology (ICA RiC-O)",
         "classes": 107,
         "file": "vocabs/rico.rdf",
-        "format": null,
         "language_coverage": {
             "de": 107,
             "en": 662,
@@ -5609,7 +5374,6 @@
         "alt_title": null,
         "classes": 10,
         "file": "vocabs/roar.rdf",
-        "format": null,
         "language_coverage": {
             "en": 44
         },
@@ -5632,7 +5396,6 @@
         "alt_title": null,
         "classes": 1,
         "file": "vocabs/rov.ttl",
-        "format": null,
         "language_coverage": {
             "en": 7
         },
@@ -5653,7 +5416,6 @@
         "alt_title": "RDF Site Summary (RSS) 1.0",
         "classes": 4,
         "file": "vocabs/rss.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5670,7 +5432,6 @@
         "alt_title": null,
         "classes": 20,
         "file": "vocabs/san-lod.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "Per l'ontologia ed il thesaurus SAN, si applica una licenza Creative Commons 2.5 BY di attribuzione. Per tipologie di uso e riutilizzo non consentite dalla licenza adottata, è necessario richiedere esplicita autorizzazione all'ICAR",
@@ -5687,7 +5448,6 @@
         "alt_title": "Sharing Ancient Wisdoms (SAWS) ontology",
         "classes": 32,
         "file": "vocabs/saws.nt",
-        "format": null,
         "language_coverage": {
             "en": 110
         },
@@ -5708,7 +5468,6 @@
         "alt_title": "Schema.org",
         "classes": 939,
         "file": "vocabs/schema.ttl",
-        "format": null,
         "language_coverage": {
             "en": 7
         },
@@ -5729,7 +5488,6 @@
         "alt_title": null,
         "classes": 15,
         "file": "vocabs/scoro.rdf",
-        "format": null,
         "language_coverage": {
             "en": 41
         },
@@ -5750,7 +5508,6 @@
         "alt_title": null,
         "classes": 50,
         "file": "vocabs/sealit.ttl",
-        "format": null,
         "language_coverage": {
             "en": 205
         },
@@ -5771,7 +5528,6 @@
         "alt_title": "Simple Event Model (SEM)",
         "classes": 17,
         "file": "vocabs/sem.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5789,7 +5545,6 @@
         "alt_title": "Shoah Vocabulary Specification",
         "classes": 9,
         "file": "vocabs/shoah.nt",
-        "format": null,
         "language_coverage": {
             "en": 62
         },
@@ -5811,7 +5566,6 @@
         "alt_title": "Semantically-Interlinked Online Communities (SIOC)",
         "classes": 11,
         "file": "vocabs/sioc.rdf",
-        "format": null,
         "language_coverage": {
             "en": 98
         },
@@ -5832,7 +5586,6 @@
         "alt_title": "Simple Knowledge Organization System (SKOS)",
         "classes": 4,
         "file": "vocabs/skos.rdf",
-        "format": null,
         "language_coverage": {
             "en": 32
         },
@@ -5853,7 +5606,6 @@
         "alt_title": "SKOS eXtension for Labels (SKOS-XL)",
         "classes": 1,
         "file": "vocabs/skosxl.rdf",
-        "format": null,
         "language_coverage": {
             "en": 6
         },
@@ -5874,7 +5626,6 @@
         "alt_title": "K-samsök",
         "classes": 22,
         "file": "vocabs/soch.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5892,7 +5643,6 @@
         "alt_title": "Symbolic Music Ontology",
         "classes": 44,
         "file": "vocabs/symbolic-music.owl",
-        "format": null,
         "language_coverage": {
             "en": 24,
             "en-UK": 16,
@@ -5919,7 +5669,6 @@
         "alt_title": null,
         "classes": 45,
         "file": "vocabs/taxon-name-and-rank.rdf",
-        "format": null,
         "language_coverage": {
             "en": 100
         },
@@ -5940,7 +5689,6 @@
         "alt_title": "Theatre Ontology",
         "classes": 17,
         "file": "vocabs/theatre.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -5957,7 +5705,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/thematic-indexes.rdf",
-        "format": null,
         "language_coverage": {
             "en": 6
         },
@@ -5979,7 +5726,6 @@
         "alt_title": null,
         "classes": 20,
         "file": "vocabs/time.ttl",
-        "format": null,
         "language_coverage": {
             "ar": 1,
             "de": 1,
@@ -6022,7 +5768,6 @@
         "alt_title": null,
         "classes": 22,
         "file": "vocabs/tl.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6039,7 +5784,6 @@
         "alt_title": "The Time-indexed Value in Context pattern (TVC)",
         "classes": 1,
         "file": "vocabs/tvc.rdf",
-        "format": null,
         "language_coverage": {
             "en": 14
         },
@@ -6061,7 +5805,6 @@
         "alt_title": null,
         "classes": 81,
         "file": "vocabs/txn.rdf",
-        "format": null,
         "language_coverage": {
             "en": 20
         },
@@ -6082,7 +5825,6 @@
         "alt_title": "Uncertainty Ontology",
         "classes": 21,
         "file": "vocabs/un.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6099,7 +5841,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/vartrans.rdf",
-        "format": null,
         "language_coverage": {
             "af": 11,
             "de": 17,
@@ -6140,7 +5881,6 @@
         "alt_title": null,
         "classes": 62,
         "file": "vocabs/vcard.ttl",
-        "format": null,
         "language_coverage": {
             "en": 146
         },
@@ -6161,7 +5901,6 @@
         "alt_title": null,
         "classes": 32,
         "file": "vocabs/vgo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 69
         },
@@ -6182,7 +5921,6 @@
         "alt_title": null,
         "classes": 7,
         "file": "vocabs/viaf.owl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6200,7 +5938,6 @@
         "alt_title": null,
         "classes": 97,
         "file": "vocabs/video.ttl",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6217,7 +5954,6 @@
         "alt_title": null,
         "classes": 0,
         "file": "vocabs/vir.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).",
@@ -6235,7 +5971,6 @@
         "alt_title": null,
         "classes": 146,
         "file": "vocabs/vivo.rdf",
-        "format": null,
         "language_coverage": {
             "en": 814,
             "en-us": 2
@@ -6259,7 +5994,6 @@
         "alt_title": null,
         "classes": 4,
         "file": "vocabs/void.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6276,7 +6010,6 @@
         "alt_title": "VRA Ontology",
         "classes": 23,
         "file": "vocabs/vra.nt",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6293,7 +6026,6 @@
         "alt_title": null,
         "classes": 2,
         "file": "vocabs/wgs84.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6310,7 +6042,6 @@
         "alt_title": "Wittgenstein Ontology",
         "classes": 10,
         "file": "vocabs/wittgenstein.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,
@@ -6327,7 +6058,6 @@
         "alt_title": null,
         "classes": 31,
         "file": "vocabs/wo.nt",
-        "format": null,
         "language_coverage": {
             "en-gb": 61
         },
@@ -6348,7 +6078,6 @@
         "alt_title": null,
         "classes": 136,
         "file": "vocabs/xtypes.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": "http://creativecommons.org/publicdomain/zero/1.0/",
@@ -6365,7 +6094,6 @@
         "alt_title": null,
         "classes": 8,
         "file": "vocabs/zbwext.rdf",
-        "format": null,
         "language_coverage": {
             "en": 23
         },
@@ -6387,7 +6115,6 @@
         "alt_title": "Biological Taxonomy Vocabulary (Zoology)",
         "classes": 1,
         "file": "vocabs/zoology.rdf",
-        "format": null,
         "language_coverage": [],
         "languages": [],
         "license": null,

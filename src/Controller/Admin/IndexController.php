@@ -173,7 +173,7 @@ class IndexController extends AbstractActionController
                     'o:prefix' => $entry['prefix'],
                 ],
                 array_filter([
-                    'format' => $this->importer->format($entry),
+                    'format' => Importer::FORMAT,
                     'lang' => $this->importLanguage($entry),
                     'comment_property' => TermReading::COMMENT_PROPERTY,
                 ], function ($option) {
@@ -210,9 +210,10 @@ class IndexController extends AbstractActionController
             $url = $this->vocabularyReview->start(
                 $installed['vocabulary']->id(),
                 $this->importer->path($entry),
-                // The file's own format, never left to the one stored for
-                // Omeka's vocabulary, which may be another file's.
-                ['format' => $this->importer->format($entry)],
+                // Guessed, as the library reads its files, never left to the
+                // format stored for Omeka's vocabulary, which may be another
+                // file's.
+                ['format' => Importer::FORMAT],
                 [
                     // Compared exactly: a namespace that differs only in
                     // capitals is the same vocabulary to Omeka, but not to

@@ -12,7 +12,6 @@ class BuildTest extends ScriptTestCase
             'alt_title' => null,
             'classes' => 1,
             'file' => 'vocabs/ex.ttl',
-            'format' => null,
             // How many terms have a label in each language.
             'language_coverage' => ['de' => 2, 'en' => 2],
             'languages' => ['de', 'en'],

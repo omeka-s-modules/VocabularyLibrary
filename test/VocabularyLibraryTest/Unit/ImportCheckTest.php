@@ -139,17 +139,6 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertStringStartsWith('does not parse: a term\'s label or comment: ', ImportCheck::failure($result));
     }
 
-    public function testAFormatGuessedWrongIsTriedAgainAsTheOthers()
-    {
-        // Given a namespace, EasyRdf guesses a Turtle file that mentions
-        // RDFa near its start is RDFa, and reads nothing from it.
-        file_put_contents($this->dir . '/mentions.ttl', "# Not RDFa.\n" . file_get_contents(self::fixture('basic.ttl')));
-        $result = (new ImportCheck)->check($this->dir . '/mentions.ttl', self::NS);
-        $this->assertNull(ImportCheck::failure($result));
-        $this->assertSame('turtle', $result['format']);
-        $this->assertSame(1, $result['classes']);
-    }
-
     /**
      * A check result for a copy of the basic fixture with some text replaced.
      */

@@ -177,12 +177,11 @@ foreach ($sources as $slug => $entry) {
     }
     $index[$slug] = $terms;
 
-    // The namespace and format are the ones the check found to import.
+    // The namespace is the one the check found to import.
     $vocabularies[$slug] = [
         'alt_title' => $entry['alt_title'] ?? null,
         'classes' => $result['classes'],
         'file' => substr($files[0], strlen($repo->path('data')) + 1),
-        'format' => $result['format'],
         'language_coverage' => $result['language_coverage'],
         'languages' => $result['languages'],
         'license' => $result['license'],
