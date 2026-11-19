@@ -88,7 +88,7 @@ class ImportCheckTest extends TempDirTestCase
     {
         $result = $this->check('basic.ttl', 'https://example.org/ns/');
         $this->assertSame(self::NS, $result['namespace']);
-        $this->assertSame('variant', $result['namespace_source']);
+        $this->assertSame('other_form', $result['namespace_source']);
         $this->assertNull(ImportCheck::failure($result));
     }
 
@@ -112,8 +112,9 @@ class ImportCheckTest extends TempDirTestCase
     {
         // The English label is short; the German one is not.
         $result = $this->check('long-label.ttl');
-        $this->assertSame(['1 labels longer than 255 characters in "de"'], $result['limits']);
-        $this->assertSame('1 labels longer than 255 characters in "de"', ImportCheck::failure($result));
+        // In core's words, naming the term.
+        $this->assertSame(['These classes or properties have labels longer than 255 characters: Thing in "de"'], $result['limits']);
+        $this->assertSame('These classes or properties have labels longer than 255 characters: Thing in "de"', ImportCheck::failure($result));
     }
 
     public function testAFileThatDoesNotParseFails()

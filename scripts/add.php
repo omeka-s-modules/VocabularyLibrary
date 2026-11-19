@@ -11,8 +11,8 @@
  * Downloads the file and runs the import check. The namespace is the one the
  * check finds to import, starting from --namespace where it is given, which
  * may then be stored in another #// or http/https form. The prefix is the one
- * the vocabulary declares for itself (vann:preferredNamespacePrefix), unless
- * --prefix is given; most files declare none. The slug defaults to the
+ * the vocabulary declares for itself (vann:preferredNamespacePrefix), where
+ * Omeka can use it, unless --prefix is given; most files declare none. The slug defaults to the
  * prefix, lowercased; slugs are permanent once released, so choose with
  * care. --summary is the library's one-sentence summary of the vocabulary.
  * --summary-basis is the address of the publisher's documentation, if the

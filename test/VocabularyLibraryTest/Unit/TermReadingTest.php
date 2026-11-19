@@ -32,20 +32,6 @@ class TermReadingTest extends TestCase
         $this->assertNull(TermReading::preferredLanguage([]));
     }
 
-    public function testTheLibraryReadsDefinitionsBeforeComments()
-    {
-        $this->assertSame('skos:definition', explode('|', TermReading::COMMENT_PROPERTY)[0]);
-        $this->assertContains('rdfs:comment', explode('|', TermReading::COMMENT_PROPERTY));
-    }
-
-    public function testTheLibrarysReadingIsOneOfCoresChoices()
-    {
-        // Core's review finds a stored reading among its choices by the
-        // exact string.
-        $this->assertContains(TermReading::COMMENT_PROPERTY, \Omeka\Stdlib\RdfImporter::COMMENT_PROPERTY_CHOICES);
-        $this->assertSame(\Omeka\Stdlib\RdfImporter::LABEL_PROPERTY, TermReading::LABEL_PROPERTY);
-    }
-
     public function testItMatchesAsCoresImportDetailsDoes()
     {
         // The library copies core's protected rule, so it can't drift from

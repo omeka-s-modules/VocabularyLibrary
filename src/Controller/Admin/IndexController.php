@@ -4,6 +4,7 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
+use Omeka\Api\Exception\ValidationException;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
 use Omeka\Stdlib\VocabularyImport;
@@ -307,22 +308,18 @@ class IndexController extends AbstractActionController
 
     /**
      * The messages for an error from core's importer, as core's import shows
-     * them: the importer's own, and any from the API's validation.
+     * them (VocabularyController::getErrors()): the importer's own, and any
+     * from the API's validation, else that something went wrong.
      *
-     * @return string[]
+     * @return array For the messenger's addErrors()
      */
     protected function errorMessages(\Exception $e)
     {
-        $messages = [];
-        if ($e->getMessage()) {
-            $messages[] = $e->getMessage();
+        // An API refusal has no message of its own, only its reasons.
+        $messages = '' === (string) $e->getMessage() ? [] : [$e->getMessage()];
+        if ($e instanceof ValidationException && $e->getErrorStore()->getErrors()) {
+            $messages[] = $e->getErrorStore()->getErrors();
         }
-        if (method_exists($e, 'getErrorStore')) {
-            foreach ($e->getErrorStore()->getErrors() as $message) {
-                $messages[] = $message;
-            }
-        }
-        // As core says it, where the error says nothing.
         return $messages ?: [$this->translate('Something went wrong')];
     }
 

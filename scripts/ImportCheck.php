@@ -18,13 +18,16 @@ use VocabularyLibrary\Stdlib\TermReading;
  * The file is read by the importer's own readGraph(), as
  * RdfImporter::getMembers() reads it, then the importer's own
  * getMembersOfTypes() is called with the namespace and its http/https and #//
- * variants (Vocabulary::getNamespaceUriForms()), and the best result is kept. Only if all of
- * those import nothing is the namespace the file's terms actually use tried,
- * because a file that redeclares another vocabulary's terms would otherwise be
- * credited with that vocabulary.
+ * variants (Vocabulary::getNamespaceUriForms()), and the best result is kept.
+ * Only if all of those import nothing is the namespace the file's terms
+ * actually use tried, because a file that redeclares another vocabulary's
+ * terms would otherwise be credited with that vocabulary. With no namespace
+ * given, it is found as core's import details finds it. What the file says of
+ * its vocabulary, its languages, and the terms too long to store are read by
+ * the importer too (CheckImporter).
  *
- * The database is not touched, so the column limits of Omeka's schema are
- * checked here; a vocabulary that breaks one fails on import.
+ * The database is not touched, so the namespace's column length is checked
+ * here; a vocabulary that breaks it fails on import.
  */
 class ImportCheck
 {
@@ -35,15 +38,11 @@ class ImportCheck
     const LABEL_PROPERTY = TermReading::LABEL_PROPERTY;
     const COMMENT_PROPERTY = TermReading::COMMENT_PROPERTY;
 
-    const VANN = 'http://purl.org/vocab/vann/';
-
     /**
-     * Column lengths: core's own for a term's label and local name, which it
-     * refuses an import over; and vocabulary namespace_uri varchar(190) in
-     * application/data/install/schema.sql, which core has no constant for.
+     * The column length of a vocabulary's namespace_uri, varchar(190) in
+     * application/data/install/schema.sql, which core has no constant or
+     * check for. Core checks terms' local names and labels itself.
      */
-    const MAX_LABEL = Vocabulary::LABEL_MAX_LENGTH;
-    const MAX_LOCAL_NAME = Vocabulary::LOCAL_NAME_MAX_LENGTH;
     const MAX_NAMESPACE = 190;
 
     /**
@@ -110,6 +109,7 @@ class ImportCheck
      */
     public static function differences(array $old, array $new)
     {
+        $importer = CheckImporter::create();
         $labels = $comments = [];
         // Language by language, or as each file reads by default where they
         // share no language, as when a file's labels gain language tags.
@@ -119,24 +119,20 @@ class ImportCheck
         }
         foreach ($pairs ?: [[$old['members'], $new['members']]] as [$oldMembers, $members]) {
             foreach (['classes', 'properties'] as $kind) {
-                foreach (array_intersect_key($members[$kind], $oldMembers[$kind]) as $localName => $member) {
-                    $before = $oldMembers[$kind][$localName];
-                    // As core's review compares (RdfImporter::getDiff()), so a
-                    // vocabulary counted as changed shows changes there: a
-                    // label isn't replaced by the local name a term without
-                    // one stands in for (here a label that is its local name
-                    // counts as one, where core can tell a real one), and a
-                    // comment isn't emptied.
-                    if (PlainText::spaced($member['label']) !== PlainText::spaced($before['label'])
-                        && (string) $member['label'] !== (string) $localName
-                    ) {
+                // As core's review compares (RdfImporter::getDiff()), so a
+                // vocabulary counted as changed shows changes there. Core's
+                // review also never puts the local name a term without a
+                // label stands in for in place of a label; here a label that
+                // is its local name counts as one, where core can tell a real
+                // one.
+                $diff = $importer->diff($oldMembers[$kind], $members[$kind]);
+                foreach ($diff['label'] as $localName => $change) {
+                    if ((string) $change[1] !== (string) $localName) {
                         $labels["$kind $localName"] = true;
                     }
-                    if ('' !== PlainText::spaced($member['comment'])
-                        && PlainText::spaced($member['comment']) !== PlainText::spaced($before['comment'])
-                    ) {
-                        $comments["$kind $localName"] = true;
-                    }
+                }
+                foreach (array_keys($diff['comment']) as $localName) {
+                    $comments["$kind $localName"] = true;
                 }
             }
         }
@@ -160,10 +156,11 @@ class ImportCheck
      *   "properties" as counts; "error" where the file, or a term's label or
      *   comment, doesn't parse; and where they do:
      *   - namespace: the namespace found to import
-     *   - namespace_source: where that came from: "given", "declared" (the
-     *     file's vann:preferredNamespaceUri), "ontology" (its owl:Ontology),
-     *     "variant" (another #// or http/https form of one of those), or
-     *     "terms" (the one its terms use, which failure() refuses)
+     *   - namespace_source: where that came from: "given", or as core's
+     *     import details names it: "declared" (the file's
+     *     vann:preferredNamespaceUri), "ontology" (its owl:Ontology),
+     *     "other_form" (another #// or http/https form of one of those), or
+     *     "terms" (the one most of its terms use, which failure() refuses)
      *   - members: the classes and properties, as CheckImporter::members()
      *     returns them, in the language the module shows
      *   - readings: the same, in each language the file has labels or
@@ -200,41 +197,35 @@ class ImportCheck
      */
     protected function checkParsed(RdfGraph $graph, $namespace)
     {
-        $source = $namespace ? 'given' : null;
-        if (!$namespace) {
-            $declared = $this->safely(function () use ($graph) {
-                return $this->literal($graph, self::VANN . 'preferredNamespaceUri');
-            });
-            if ($declared) {
-                [$namespace, $source] = [$declared, 'declared'];
+        if ($namespace) {
+            $best = $namespace;
+            $source = 'given';
+            $bestMembers = $this->importer->members($graph, $namespace, self::LANG);
+            $bestCount = $this->count($bestMembers);
+            foreach (Vocabulary::getNamespaceUriForms($namespace) as $candidate) {
+                // The namespace itself is the first candidate, already counted.
+                if ($candidate === $namespace) {
+                    continue;
+                }
+                $members = $this->importer->members($graph, $candidate, self::LANG);
+                if ($this->count($members) > $bestCount) {
+                    [$best, $bestMembers, $bestCount, $source] = [$candidate, $members, $this->count($members), 'other_form'];
+                }
             }
-        }
-        if (!$namespace && ($ontology = $graph->allOfType('owl:Ontology')) && preg_match('#^https?://#', (string) $ontology[0]->getUri())) {
-            [$namespace, $source] = [$ontology[0]->getUri(), 'ontology'];
-        }
-
-        $best = $namespace;
-        $bestMembers = $namespace ? $this->importer->members($graph, $namespace, self::LANG) : ['classes' => [], 'properties' => []];
-        $bestCount = $this->count($bestMembers);
-        foreach ($namespace ? Vocabulary::getNamespaceUriForms($namespace) : [] as $candidate) {
-            // The namespace itself is the first candidate, already counted.
-            if ($candidate === $namespace) {
-                continue;
+            if (!$bestCount && $inferred = $this->importer->mostUsedNamespaceUri($graph)) {
+                $members = $this->importer->members($graph, $inferred, self::LANG);
+                if ($this->count($members)) {
+                    [$best, $bestMembers, $bestCount, $source] = [$inferred, $members, $this->count($members), 'terms'];
+                }
             }
-            $members = $this->importer->members($graph, $candidate, self::LANG);
-            if ($this->count($members) > $bestCount) {
-                [$best, $bestMembers, $bestCount, $source] = [$candidate, $members, $this->count($members), 'variant'];
-            }
-        }
-        if (!$bestCount && $inferred = $this->inferredNamespace($graph)) {
-            $members = $this->importer->members($graph, $inferred, self::LANG);
-            if ($this->count($members)) {
-                [$best, $bestMembers, $bestCount, $source] = [$inferred, $members, $this->count($members), 'terms'];
-            }
+        } else {
+            [$best, $source] = $this->importer->namespaceUri($graph);
+            $bestMembers = $best === null ? ['classes' => [], 'properties' => []] : $this->importer->members($graph, $best, self::LANG);
+            $bestCount = $this->count($bestMembers);
         }
         $best = (string) $best;
         $languages = $this->safely(function () use ($graph, $best) {
-            return $this->languages($graph, $best);
+            return $this->importer->languages($graph, $best, self::LABEL_PROPERTY);
         }) ?: [];
         // Counted by core's own import details, so the module's import starts
         // on the language core's would, for the languages the library lists.
@@ -258,7 +249,7 @@ class ImportCheck
         // And read in each, comments' languages included, to compare one
         // file with another.
         $commentLanguages = $this->safely(function () use ($graph, $best) {
-            return $this->languages($graph, $best, self::COMMENT_PROPERTY);
+            return $this->importer->languages($graph, $best, self::COMMENT_PROPERTY);
         }) ?: [];
         foreach ($bestCount ? array_diff(array_unique(array_merge($languages, $commentLanguages)), [$read]) : [] as $language) {
             $readings[$language] = $this->importer->members($graph, $best, $language);
@@ -281,16 +272,13 @@ class ImportCheck
             'languages' => $languages,
             'language_coverage' => $coverage,
             'prefix' => $this->safely(function () use ($graph, $best) {
-                return $this->declaredPrefix($graph, $best);
+                return $this->importer->vocabularyPrefix($graph, $best);
             }),
             'title' => $this->safely(function () use ($graph, $best) {
-                return $this->describe($graph, $best, 'dcterms:title|dc11:title|rdfs:label', false);
+                return $this->plain($this->importer->vocabularyTitle($graph, $best), false);
             }),
-            // A note only where there's no description: some element sets
-            // describe themselves in skos:note.
             'description' => $this->safely(function () use ($graph, $best) {
-                return $this->describe($graph, $best, 'dcterms:description|dc11:description|rdfs:comment|skos:definition', true)
-                    ?? $this->describe($graph, $best, 'skos:note', true);
+                return $this->plain($this->importer->vocabularyDescription($graph, $best), true);
             }),
             'license' => $this->safely(function () use ($graph, $best) {
                 return $this->license($graph, $best);
@@ -318,7 +306,9 @@ class ImportCheck
     }
 
     /**
-     * Omeka's column limits that the namespace or a term would break.
+     * Omeka's limits that the namespace or a term would break: the
+     * namespace's column length, text that isn't valid UTF-8, and the local
+     * names and labels core refuses as too long to store.
      *
      * @return string[] One message per kind of violation
      */
@@ -328,275 +318,42 @@ class ImportCheck
         if (mb_strlen($namespace) > self::MAX_NAMESPACE) {
             $limits[] = sprintf('namespace longer than %d characters', self::MAX_NAMESPACE);
         }
-        $longNames = $longLabels = $invalid = 0;
+        $invalid = 0;
         foreach (['classes', 'properties'] as $kind) {
             foreach ($members[$kind] as $localName => $member) {
-                $longNames += mb_strlen((string) $localName) > self::MAX_LOCAL_NAME ? 1 : 0;
-                $longLabels += mb_strlen((string) $member['label']) > self::MAX_LABEL ? 1 : 0;
                 $invalid += mb_check_encoding($localName . $member['label'] . $member['comment'], 'UTF-8') ? 0 : 1;
             }
         }
         if ($invalid) {
             $limits[] = sprintf('%d terms that are not valid UTF-8', $invalid);
         }
-        if ($longNames) {
-            $limits[] = sprintf('%d local names longer than %d characters', $longNames, self::MAX_LOCAL_NAME);
-        }
-        if ($longLabels) {
-            $limits[] = sprintf('%d labels longer than %d characters', $longLabels, self::MAX_LABEL);
-        }
-        return $limits;
+        return array_merge($limits, $this->importer->lengthLimits($members));
     }
 
     /**
-     * The namespace most of the file's class and property terms use: each
-     * term's URI minus its local name, by frequency.
+     * A title or description as core read it from the file, without the
+     * XHTML or Markdown some publishers write them in: a title on one line,
+     * a description in paragraphs.
      */
-    protected function inferredNamespace(RdfGraph $graph)
+    protected function plain($text, $paragraphs)
     {
-        $counts = [];
-        foreach ($this->importer->acceptedTypes() as $type) {
-            foreach ($graph->allOfType($type) as $resource) {
-                if ($resource->isBNode()) {
-                    continue;
-                }
-                $uri = $resource->getUri();
-                $local = $resource->localName();
-                // Without a namespace to use as the base, relative URIs
-                // resolve against the file's own path; never offer that.
-                if (!preg_match('#^https?://#', (string) $uri)) {
-                    continue;
-                }
-                if ($local && substr($uri, -strlen($local)) === $local) {
-                    $prefix = substr($uri, 0, -strlen($local));
-                    $counts[$prefix] = ($counts[$prefix] ?? 0) + 1;
-                }
-            }
-        }
-        arsort($counts);
-        return key($counts);
-    }
-
-    /**
-     * The language tags on the labels, or the values of another property, of
-     * the terms that would be imported.
-     *
-     * @param string $property Alternatives, as "a|b"
-     * @return string[]
-     */
-    protected function languages(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
-    {
-        $tags = [];
-        foreach ($this->importer->acceptedTypes() as $type) {
-            foreach ($graph->allOfType($type) as $resource) {
-                if ($resource->getUri() !== $namespace . $resource->localName()) {
-                    continue;
-                }
-                foreach ($resource->all($property, 'literal') as $label) {
-                    if ($label->getLang()) {
-                        $tags[$label->getLang()] = true;
-                    }
-                }
-            }
-        }
-        $tags = array_keys($tags);
-        sort($tags);
-        return $tags;
-    }
-
-    /**
-     * The first value of a property on any resource, as a string.
-     */
-    protected function literal(RdfGraph $graph, $property)
-    {
-        foreach ($graph->resources() as $resource) {
-            if ($value = $resource->get('<' . $property . '>')) {
-                return (string) $value;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * The prefix the vocabulary declares for itself: vann:preferredNamespacePrefix
-     * on the namespace resource or on the ontology record for the namespace.
-     * A file that also describes vocabularies it reuses may declare their
-     * prefixes on their records, so no other resource is read.
-     */
-    protected function declaredPrefix(RdfGraph $graph, $namespace)
-    {
-        if ($namespace === '') {
+        if ($text === null) {
             return null;
         }
-        $subjects = $this->ownOntologies($graph, $namespace);
-        $subjects[] = $graph->resource($namespace);
-        $subjects[] = $graph->resource(rtrim($namespace, '#/'));
-        foreach ($subjects as $subject) {
-            $value = trim((string) $subject->get('<' . self::VANN . 'preferredNamespacePrefix>'));
-            if ($value !== '') {
-                return $value;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * The file's ontology records for the namespace.
-     *
-     * @return \EasyRdf\Resource[]
-     */
-    protected function ownOntologies(RdfGraph $graph, $namespace)
-    {
-        $base = rtrim($namespace, '#/');
-        $own = [];
-        foreach ($graph->allOfType('owl:Ontology') as $ontology) {
-            if (rtrim((string) $ontology->getUri(), '#/') === $base) {
-                $own[] = $ontology;
-            }
-        }
-        return $own;
-    }
-
-    /**
-     * The ontology records that describe the vocabulary itself: those for
-     * the namespace, or else the file's only one, which many files give a
-     * URI other than the namespace. A file that also describes vocabularies
-     * it reuses has several, and theirs are not read.
-     *
-     * @return \EasyRdf\Resource[]
-     */
-    protected function describingOntologies(RdfGraph $graph, $namespace)
-    {
-        $own = $this->ownOntologies($graph, $namespace);
-        if ($own) {
-            return $own;
-        }
-        $all = $graph->allOfType('owl:Ontology');
-        return count($all) === 1 ? $all : [];
-    }
-
-    /**
-     * The record most of the vocabulary's terms name with rdfs:isDefinedBy,
-     * or null if they name none.
-     */
-    protected function definingRecord(RdfGraph $graph, $namespace)
-    {
-        $counts = [];
-        foreach ($graph->resources() as $resource) {
-            if ($resource->isBNode() || strpos($resource->getUri(), $namespace) !== 0) {
-                continue;
-            }
-            foreach ($resource->allResources('rdfs:isDefinedBy') as $record) {
-                if (!$record->isBNode()) {
-                    $counts[$record->getUri()] = ($counts[$record->getUri()] ?? 0) + 1;
-                }
-            }
-        }
-        if (!$counts) {
-            return null;
-        }
-        arsort($counts);
-        return array_key_first($counts);
-    }
-
-    /**
-     * The records a file may describe the vocabulary in, in the order they
-     * are read: its ontology records, then the namespace resource, with and
-     * without its closing # or /, then the record its terms name with
-     * rdfs:isDefinedBy, as element sets from the Open Metadata Registry do.
-     * Some files have no ontology record and describe themselves on the
-     * namespace, as OAI-ORE does.
-     *
-     * @return \EasyRdf\Resource[]
-     */
-    protected function records(RdfGraph $graph, $namespace)
-    {
-        $records = $this->describingOntologies($graph, $namespace);
-        if ($namespace !== '') {
-            $records[] = $graph->resource($namespace);
-            $records[] = $graph->resource(rtrim($namespace, '#/'));
-            $defining = $this->definingRecord($graph, $namespace);
-            if ($defining !== null) {
-                $records[] = $graph->resource($defining);
-            }
-        }
-        return $records;
-    }
-
-    /**
-     * The vocabulary's own title or description, as its publisher wrote it,
-     * from the first of its records that has one. English if the file offers
-     * it, otherwise the first value in any language. A description the file
-     * gives as several values, such as a description and a changelog, keeps
-     * them all, each as its own paragraph.
-     *
-     * @param bool $paragraphs Keep paragraph breaks (blank lines), and all of
-     *   the values; otherwise the text is one line, from one value
-     */
-    protected function describe(RdfGraph $graph, $namespace, $properties, $paragraphs)
-    {
-        foreach ($this->records($graph, $namespace) as $subject) {
-            $values = $paragraphs
-                ? self::allValues($subject, $properties)
-                : array_filter([$subject->get($properties, 'literal', 'en') ?: $subject->get($properties, 'literal')]);
-            $blocks = [];
-            foreach ($values as $value) {
-                // Some files use XHTML literals, and some Markdown; keep the text.
-                $text = PlainText::from($value);
-                if (!mb_check_encoding($text, 'UTF-8')) {
-                    continue;
-                }
-                $blocks = array_merge($blocks, $paragraphs ? Markdown::paragraphs($text) : array_filter([Markdown::line($text)], 'strlen'));
-            }
-            if ($blocks) {
-                return implode("\n\n", $blocks);
-            }
-        }
-        return null;
-    }
-
-    /**
-     * All the values of a description, in the file's order, from the
-     * property a lookup of one value would choose: the first of the
-     * properties with an English value, taking its values in English and
-     * those with no language; or else the first with any value, taking its
-     * values in that value's language.
-     *
-     * @param \EasyRdf\Resource $subject
-     * @param string $properties Alternatives, as "a|b"
-     * @return \EasyRdf\Literal[]
-     */
-    protected static function allValues($subject, $properties)
-    {
-        foreach ([true, false] as $english) {
-            foreach (explode('|', $properties) as $property) {
-                $values = $subject->all($property, 'literal');
-                if (!$values) {
-                    continue;
-                }
-                $languages = array_map(function ($value) {
-                    return (string) $value->getLang();
-                }, $values);
-                if ($english && !in_array('en', $languages, true)) {
-                    continue;
-                }
-                $keep = $english ? ['en', ''] : [$languages[0]];
-                return array_values(array_filter($values, function ($value) use ($keep) {
-                    return in_array((string) $value->getLang(), $keep, true);
-                }));
-            }
-        }
-        return [];
+        $text = PlainText::from($text);
+        $blocks = $paragraphs ? Markdown::paragraphs($text) : array_filter([Markdown::line($text)], 'strlen');
+        return $blocks ? implode("\n\n", $blocks) : null;
     }
 
     /**
      * The license the vocabulary's records declare, from the first that
-     * declares one, if any.
+     * declares one, if any: the records core reads the title and
+     * description from.
      */
     protected function license(RdfGraph $graph, $namespace)
     {
         $properties = ['dcterms:license', 'dc11:rights', 'dcterms:rights', '<http://creativecommons.org/ns#license>', '<http://www.w3.org/1999/xhtml/vocab#license>'];
-        foreach ($this->records($graph, $namespace) as $record) {
+        foreach ($this->importer->describingResources($graph, $namespace) as $record) {
             foreach ($properties as $property) {
                 $value = trim(PlainText::from($record->get($property)));
                 if ($value !== '' && mb_check_encoding($value, 'UTF-8')) {
@@ -609,7 +366,9 @@ class ImportCheck
 }
 
 /**
- * Exposes the importer's term selection, unchanged, for a graph parsed once.
+ * Exposes the importer's reading, unchanged, for a graph parsed once: its
+ * terms, what it says of its vocabulary, its languages, its namespace, and
+ * how two readings of its terms differ.
  */
 class CheckImporter extends RdfImporter
 {
@@ -663,9 +422,94 @@ class CheckImporter extends RdfImporter
         ];
     }
 
-    public function acceptedTypes()
+    /**
+     * The namespace and where it was found, as core's import details finds
+     * it in a file (findNamespaceUri()).
+     *
+     * @return array [namespace or null, source or null]
+     */
+    public function namespaceUri(RdfGraph $graph)
     {
-        return array_merge($this->classTypes, $this->propertyTypes);
+        return $this->findNamespaceUri($graph);
+    }
+
+    public function mostUsedNamespaceUri(RdfGraph $graph)
+    {
+        return $this->getMostUsedNamespaceUri($graph);
+    }
+
+    /**
+     * The language tags on the values of a property, such as the labels, of
+     * the classes and properties in the namespace.
+     */
+    public function languages(RdfGraph $graph, $namespaceUri, $property)
+    {
+        return $this->getGraphLanguages($graph, $namespaceUri, $property);
+    }
+
+    /**
+     * The prefix the file declares for the vocabulary, if Omeka can use it.
+     */
+    public function vocabularyPrefix(RdfGraph $graph, $namespaceUri)
+    {
+        return $this->getVocabularyPrefix($graph, $namespaceUri);
+    }
+
+    /**
+     * The file's title for the vocabulary, in English or the nearest
+     * language it has, as written.
+     */
+    public function vocabularyTitle(RdfGraph $graph, $namespaceUri)
+    {
+        return $this->getVocabularyTitle($graph, $namespaceUri, ImportCheck::LANG);
+    }
+
+    /**
+     * The file's description of the vocabulary, the same way.
+     */
+    public function vocabularyDescription(RdfGraph $graph, $namespaceUri)
+    {
+        return $this->getVocabularyDescription($graph, $namespaceUri, ImportCheck::LANG);
+    }
+
+    /**
+     * The resources that may describe the vocabulary, in the order core
+     * reads its title and description from them.
+     */
+    public function describingResources(RdfGraph $graph, $namespaceUri)
+    {
+        return $this->getDescribingResources($graph, $namespaceUri);
+    }
+
+    /**
+     * The changes core's review would make from one reading of a kind of
+     * terms to another: new terms, and labels and comments that differ.
+     */
+    public function diff(array $from, array $to)
+    {
+        return $this->calculateDiff($from, $to);
+    }
+
+    /**
+     * Core's reasons the terms can't be stored: local names and labels too
+     * long, naming them.
+     *
+     * @return string[]
+     */
+    public function lengthLimits(array $members)
+    {
+        try {
+            $this->checkTermLengths($members);
+        } catch (ValidationException $e) {
+            $limits = [];
+            foreach ($e->getErrorStore()->getErrors() as $messages) {
+                foreach ($messages as $message) {
+                    $limits[] = (string) $message;
+                }
+            }
+            return $limits;
+        }
+        return [];
     }
 
     /**
