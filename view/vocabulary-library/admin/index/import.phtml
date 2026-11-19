@@ -56,7 +56,11 @@ $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label()
 <?php // The warning showing, read out once the admin pauses; filled in by the script. ?>
 <p class="vocabulary-library-announcement vocabulary-library-prefix-announcement" aria-live="polite" aria-atomic="true"></p>
 <?php if ($form->has('lang')): ?>
-<?php echo $this->formRow($form->get('lang')); ?>
+<?php // Under the label core gives the same choice on its import details page. ?>
+<fieldset>
+    <legend><?php echo $translate('Classes and properties'); ?></legend>
+    <?php echo $this->formRow($form->get('lang')); ?>
+</fieldset>
 <?php endif; ?>
 
 <?php echo $this->formHidden($form->get($form->getName() . '_csrf')); ?>

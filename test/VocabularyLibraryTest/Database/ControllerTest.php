@@ -278,7 +278,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('<div id="vocabulary-library-prefix-warnings"', $page);
         $this->assertMatchesRegularExpression('/<input[^>]*name="o:label"[^>]*value="Example Vocabulary"/', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.</textarea>', $page);
-        // Two languages to choose from, English chosen.
+        // Two languages to choose from, English chosen, under core's label
+        // for the choice.
+        $this->assertMatchesRegularExpression('#<fieldset>\s*<legend>Classes and properties</legend>\s*.*?name="lang".*?</fieldset>#s', $page);
         $this->assertMatchesRegularExpression('/<option value="en" selected[^>]*>English \(en\)/', $page);
         $this->assertStringContainsString('German (de)', $page);
     }
