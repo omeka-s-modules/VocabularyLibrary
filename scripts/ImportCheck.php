@@ -6,7 +6,6 @@ use Omeka\Api\Exception\ValidationException;
 use Omeka\Entity\Vocabulary;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
-use RuntimeException;
 use Throwable;
 use VocabularyLibrary\Stdlib\PlainText;
 use VocabularyLibrary\Stdlib\TermReading;
@@ -393,11 +392,9 @@ class CheckImporter extends RdfImporter
      */
     public function graph($path, $namespace)
     {
-        // Core reads nothing from an empty file either, but its JSON-LD
-        // parser warns on one first.
-        if (is_file($path) && !filesize($path)) {
-            throw new RuntimeException('the file is empty');
-        }
+        // As core refuses an empty file, before its JSON-LD parser can warn
+        // on one.
+        $this->checkFileHasText($path);
         $error = null;
         $read = function (RdfGraph $graph, $format) use ($path, $namespace, &$error) {
             try {
