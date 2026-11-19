@@ -31,32 +31,32 @@ Supervisors can use it.
 
 ## Finding and importing
 
-Filter the list by tag, by label language, or by whether a vocabulary's
-namespace is already in use in Omeka, and search it by name, summary, tag,
-prefix, or namespace. Check **Also search class and property names** to find
+Filter the list by tag, by label language, or by whether a vocabulary is
+already imported, and search it by name, summary, tag, prefix, or
+namespace. Check **Also search class and property names** to find
 vocabularies by their terms. Select a vocabulary's name to see its details,
 and **Import** to import it.
 
-## Namespaces already in use
+## Vocabularies already imported
 
-**Namespace in use** means that Omeka already has a vocabulary with this
-namespace, so this one cannot be imported. It can be compared and updated
-instead, as described below.
+**Imported** means that Omeka already has a vocabulary with this one's
+namespace, whatever file it came from, so this one cannot be imported again.
+Its changes can be reviewed and applied instead, as described below.
 
 A vocabulary whose namespace in Omeka differs slightly from the library's,
-`http` for `https` or a different closing `/` or `#`, is in use too. Its
-details say so, and comparing and updating it also changes its namespace to
-the library's. This changes the addresses of its classes and properties
+`http` for `https` or a different closing `/` or `#`, counts as imported too.
+Its details say so, and updating it also changes its namespace to the
+library's. This changes the addresses of its classes and properties
 everywhere Omeka publishes them. Values stay attached to their properties.
 
-## Comparing and updating
+## Reviewing changes
 
-**Compare and update**, in the details of a vocabulary whose namespace is in
-use, opens Omeka's review of how the library's vocabulary differs from
-Omeka's, and **Accept changes** applies the differences. Updating adds
-classes and properties and changes the labels and comments of existing ones
-to match the library's vocabulary, so look over the changes first. It never
-removes a class or property. Accepting or cancelling leads to the
+**Review changes**, in the details of an imported vocabulary, opens Omeka's
+review of how the library's vocabulary differs from Omeka's, and **Accept
+changes** applies the differences. Updating adds classes and properties and
+changes the labels and comments of existing ones to match the library's
+vocabulary, so look over the changes first. It never removes a class or
+property. Accepting or cancelling leads to the
 vocabulary's page in Omeka, as any review does.
 
 Where the library's vocabulary has several languages, or gives its terms both

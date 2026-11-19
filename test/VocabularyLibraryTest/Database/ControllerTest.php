@@ -181,7 +181,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // A failed term search has its message, hidden until then.
         $this->assertMatchesRegularExpression('/<p class="vocabulary-library-term-search-failed[^"]*" role="alert" hidden>/', $page);
         // Only the filter's option says so; no vocabulary's status does.
-        $this->assertSame(1, substr_count($page, 'Namespace in use'));
+        $this->assertSame(1, substr_count($page, '>Imported<'));
         // A search finds a vocabulary by its tags' names too.
         $this->assertMatchesRegularExpression('/data-search="[^"]*General"/', $page);
     }
@@ -219,7 +219,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertLessThan(strpos($page, '<h4>Status</h4>'), strpos($page, '<h4>Summary</h4>'));
         $this->assertStringContainsString('<div class="value">English, German</div>', $page);
         // The status is a state, with the next step under it.
-        $this->assertMatchesRegularExpression('#Namespace not in use\s*<p class="vocabulary-library-status-next"><a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/import/ex">Import</a></p>#', $page);
+        $this->assertMatchesRegularExpression('#Not imported\s*<p class="vocabulary-library-status-next"><a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/import/ex">Import</a></p>#', $page);
         // The lists, read from the file, load when their tab is shown.
         $this->assertStringNotContainsString('ex:hasPart', $page);
         $this->assertMatchesRegularExpression('#<div class="sidebar-section" id="vocabulary-library-term-lists"[^>]*data-terms-url="/admin/vocabulary-library/show-terms/ex"\s+data-filter="">#', $page);
@@ -402,12 +402,12 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertNull($this->vocabulary());
     }
 
-    public function testAVocabularyInOmekaIsInUseAndCannotBeImportedAgain()
+    public function testAnImportedVocabularyCannotBeImportedAgain()
     {
         $this->import();
         [, $page] = $this->send('GET', '/admin/vocabulary-library');
         // More than the filter's option: the vocabulary's status says so.
-        $this->assertGreaterThan(1, substr_count($page, 'Namespace in use'));
+        $this->assertGreaterThan(1, substr_count($page, '>Imported<'));
         $this->assertStringNotContainsString('/admin/vocabulary-library/import/ex', $page);
         [$status, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
         $this->assertSame(200, $status);
@@ -417,24 +417,24 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
         $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
-        // Where the library's script doesn't run, Compare and update keeps
+        // Where the library's script doesn't run, Review changes keeps
         // the library's place itself.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'tag=general']);
         $this->assertStringContainsString('href="/admin/vocabulary-library/review/ex?return=tag%3Dgeneral"', $page);
     }
 
-    public function testAVocabularyInUseIsComparedFromItsDetailsNotItsRow()
+    public function testAnImportedVocabularyIsReviewedFromItsDetailsNotItsRow()
     {
         $this->import();
         // On every row the link would read as something to do.
         [, $page] = $this->send('GET', '/admin/vocabulary-library');
-        $this->assertStringContainsString('Namespace in use: Example Vocabulary', $page);
+        $this->assertStringContainsString('Imported: Example Vocabulary', $page);
         $this->assertStringNotContainsString('/admin/vocabulary-library/review/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
-        $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Compare and update</a>#', $page);
+        $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Review changes</a>#', $page);
         // The status names Omeka's vocabulary, linked to its page in core;
         // its namespace is the library's, so it isn't repeated.
-        $this->assertMatchesRegularExpression('#Namespace in use by <a href="/admin/vocabulary/' . $this->vocabulary()->id() . '">Example Vocabulary \(ex\)</a>#', $page);
+        $this->assertMatchesRegularExpression('#Imported as <a href="/admin/vocabulary/' . $this->vocabulary()->id() . '">Example Vocabulary \(ex\)</a>#', $page);
         $this->assertSame(1, substr_count($page, '>http://example.org/ns#</div>'));
         // Nor by a supervisor, who doesn't own it.
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex', [], 'library-supervisor@example.com');
@@ -442,7 +442,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertSame(403, $this->send('GET', '/admin/vocabulary-library/review/ex', [], 'library-supervisor@example.com')[0]);
     }
 
-    public function testCompareAndUpdateOpensCoresReviewOfTheLibrarysFile()
+    public function testReviewChangesOpensCoresReviewOfTheLibrarysFile()
     {
         $this->import();
         $id = $this->vocabulary()->id();
@@ -464,12 +464,12 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertSame('/admin/vocabulary/' . $id, $this->getResponse()->getHeaders()->get('Location')->getUri());
     }
 
-    public function testCompareAndUpdateNeedsTheVocabularyInOmeka()
+    public function testReviewChangesNeedsTheVocabularyInOmeka()
     {
         $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/review/ex')[0]);
     }
 
-    public function testCompareAndUpdateReadsTheLibrarysFileInItsOwnFormat()
+    public function testReviewChangesReadsTheLibrarysFileInItsOwnFormat()
     {
         // Omeka's vocabulary was read from another file, in another format,
         // as core's installer stores RDF/XML for BIBO, where the library's
@@ -480,7 +480,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?review=#', $this->getResponse()->getHeaders()->get('Location')->getUri());
     }
 
-    public function testCompareAndUpdateOfANamespaceDifferingInCapitalsReviewsChangingIt()
+    public function testReviewChangesOfANamespaceDifferingInCapitalsReviewsChangingIt()
     {
         DbTestCase::signIn(DbTestCase::ADMIN);
         $api = DbTestCase::services()->get('Omeka\ApiManager');
@@ -503,7 +503,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         }
     }
 
-    public function testCompareAndUpdateOfANamespaceInAnotherFormReviewsChangingIt()
+    public function testReviewChangesOfANamespaceInAnotherFormReviewsChangingIt()
     {
         DbTestCase::signIn(DbTestCase::ADMIN);
         $api = DbTestCase::services()->get('Omeka\ApiManager');
@@ -529,7 +529,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         }
     }
 
-    public function testANamespaceInAnotherFormIsInUseAndItsDetailsSayComparingChangesIt()
+    public function testANamespaceInAnotherFormCountsAsImportedAndItsDetailsSayUpdatingChangesIt()
     {
         DbTestCase::signIn(DbTestCase::ADMIN);
         $vocabulary = DbTestCase::services()->get('Omeka\ApiManager')->create('vocabularies', [
@@ -538,24 +538,24 @@ class ControllerTest extends AbstractHttpControllerTestCase
             'o:label' => 'Variant',
         ])->getContent();
         try {
-            // The table says it is in use, as of any other, and no more.
+            // The table says it is imported, as of any other, and no more.
             [, $page] = $this->send('GET', '/admin/vocabulary-library');
-            $this->assertMatchesRegularExpression('#<a aria-label="Namespace in use: Example Vocabulary" href="[^"]*">Namespace in use</a>#', $page);
+            $this->assertMatchesRegularExpression('#<a aria-label="Imported: Example Vocabulary" href="[^"]*">Imported</a>#', $page);
             $this->assertStringNotContainsString('vocabulary-library-status-next', $page);
             $this->assertStringNotContainsString('/admin/vocabulary-library/import/ex', $page);
 
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
             $this->assertSame(
-                "Omeka's vocabulary has a slightly different namespace. Comparing and updating it also changes its namespace to the library's.",
+                "Omeka's vocabulary has a slightly different namespace. Updating it also changes its namespace to the library's.",
                 $this->statusNote($page)
             );
             // The status names Omeka's vocabulary, with its namespace under
             // it, so the difference shows.
-            $this->assertMatchesRegularExpression('#Namespace in use by <a href="[^"]*">Variant \(variant\)</a>\s*<div class="vocabulary-library-namespace">https://example.org/ns/</div>#', $page);
+            $this->assertMatchesRegularExpression('#Imported as <a href="[^"]*">Variant \(variant\)</a>\s*<div class="vocabulary-library-namespace">https://example.org/ns/</div>#', $page);
             $this->assertStringNotContainsString('<h4>Omeka', $page);
-            // Compare and update opens core's review, as for any vocabulary
-            // in use, which changes the namespace with the rest.
-            $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Compare and update</a>#', $page);
+            // Review changes opens core's review, as for any vocabulary
+            // imported, which changes the namespace with the rest.
+            $this->assertMatchesRegularExpression('#<a class="button vocabulary-library-keep-place" href="/admin/vocabulary-library/review/ex">Review changes</a>#', $page);
 
             // A supervisor, who can't update it, is told it differs, and no
             // more.

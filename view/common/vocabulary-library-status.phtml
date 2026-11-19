@@ -1,23 +1,23 @@
 <?php
 /**
- * A library vocabulary's status in Omeka: its namespace in use, meaning Omeka
- * has a vocabulary with it, whatever file or version that came from, or an
- * Import button.
+ * A library vocabulary's status in Omeka: imported, meaning Omeka has a
+ * vocabulary with its namespace, whatever file or version that came from, or
+ * an Import button.
  *
  * In the table the status links to the vocabulary in core. The sidebar names
- * that vocabulary, linked, with a Compare and update button when the user can
- * update it; and a namespace not in use is said too, in the same words as the
- * table's filter, with the Import button under it, so the status reads as
- * one. The table has no Compare and update button: on every row it would read
+ * that vocabulary, linked, with a Review changes button when the user can
+ * update it; and a vocabulary not imported is said too, in the same words as
+ * the table's filter, with the Import button under it, so the status reads as
+ * one. The table has no Review changes button: on every row it would read
  * as something to do, when most vocabularies in Omeka have nothing to update.
  *
- * A namespace Omeka has in another form, such as http for https, is in use
- * all the same, and the table says no more. The sidebar shows Omeka's form
- * under the vocabulary's name. In full, the status says the namespace differs
- * and, for someone who may update the vocabulary, that comparing and updating
- * it also changes its namespace to the library's: core's review, which
- * Compare and update opens, shows both namespaces and what the change does,
- * and makes it along with the rest.
+ * A namespace Omeka has in another form, such as http for https, counts as
+ * imported all the same, and the table says no more. The sidebar shows
+ * Omeka's form under the vocabulary's name. In full, the status says the
+ * namespace differs and, for someone who may update the vocabulary, that
+ * updating it also changes its namespace to the library's: core's review,
+ * which Review changes opens, shows both namespaces and what the change
+ * does, and makes it along with the rest.
  *
  * @var string $slug
  * @var string|null $name The vocabulary's name, where many statuses share a
@@ -51,7 +51,7 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
 ]));
 ?>
 <?php if ($long): ?>
-<?php echo $this->translate('Namespace not in use'); ?>
+<?php echo $this->translate('Not imported'); ?>
 <p class="vocabulary-library-status-next"><?php echo $import; ?></p>
 <?php else: ?>
 <?php echo $import; ?>
@@ -63,29 +63,29 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
 <span class="vocabulary-library-prefix-note"><?php echo $this->translate('Prefix in use'); ?><span class="vocabulary-library-sr-only">: <?php echo $this->escapeHtml(sprintf($this->translate('Used by "%s"'), $prefixTakenBy)); ?></span></span>
 <?php endif; ?>
 <?php elseif (!$long): ?>
-<?php echo $this->hyperlink($this->translate('Namespace in use'), $installed['url'], array_filter([
-    'aria-label' => $name === null ? null : sprintf($this->translate('Namespace in use: %s'), $name),
+<?php echo $this->hyperlink($this->translate('Imported'), $installed['url'], array_filter([
+    'aria-label' => $name === null ? null : sprintf($this->translate('Imported: %s'), $name),
 ])); ?>
 <?php else: ?>
 <?php if ($sidebar): ?>
 <?php // As core writes a vocabulary in its selectors: label (prefix). ?>
-<?php echo sprintf($this->escapeHtml($this->translate('Namespace in use by %s')), $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url'])); ?>
+<?php echo sprintf($this->escapeHtml($this->translate('Imported as %s')), $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url'])); ?>
 <?php if (!$installed['exact']): ?>
 <?php // Omeka's form of the namespace, under the vocabulary that has it; the sentence below says why it matters. ?>
 <div class="vocabulary-library-namespace"><?php echo $this->escapeHtml($installed['vocabulary']->namespaceUri()); ?></div>
 <?php endif; ?>
 <?php else: ?>
-<?php echo $this->translate('Namespace in use'); ?>
+<?php echo $this->translate('Imported'); ?>
 <?php endif; ?>
 <?php if (!$installed['exact']): ?>
 <?php // Both namespaces in full, and what changing it does, are on core's review. ?>
 <p class="vocabulary-library-status-next"><?php echo $this->escapeHtml($installed['updatable']
-    ? $this->translate('Omeka\'s vocabulary has a slightly different namespace. Comparing and updating it also changes its namespace to the library\'s.')
+    ? $this->translate('Omeka\'s vocabulary has a slightly different namespace. Updating it also changes its namespace to the library\'s.')
     : $this->translate('Omeka\'s vocabulary has a slightly different namespace.')); ?></p>
 <?php endif; ?>
 <?php if ($installed['updatable']): ?>
 <?php // Core's review of the library's file, which ends on the vocabulary's page, as any review does. ?>
-<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'review', 'slug' => $slug], '' === $return ? [] : ['query' => ['return' => $return]]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Review changes'), $this->url('admin/vocabulary-library', ['action' => 'review', 'slug' => $slug], '' === $return ? [] : ['query' => ['return' => $return]]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
 <?php endif; ?>
 <?php endif; ?>
 </div>

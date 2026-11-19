@@ -343,7 +343,7 @@
         $(form.tag).add(form.lang).add(form.show).on('change', apply);
         $(form.sort_by).add(form.sort_order).on('change', sort);
 
-        // Import and Compare and update carry the library's search, filters
+        // Import and Review changes carry the library's search, filters
         // and sort, so that their way back returns to it as it is now.
         // Without the script, they lead back to the library as it first shows.
         const keepPlace = function (address) {

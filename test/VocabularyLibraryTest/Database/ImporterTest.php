@@ -6,7 +6,7 @@ use VocabularyLibraryTest\DbTestCase;
 
 /**
  * Reads the tests' vocabulary through core's importer. Importing is core's
- * import details', and comparing and updating core's review's.
+ * import details', and reviewing changes core's review's.
  */
 class ImporterTest extends DbTestCase
 {

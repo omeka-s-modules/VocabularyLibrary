@@ -175,15 +175,14 @@
     word-break: normal;
 }
 
-/* The status at the size of the button and note it can hold, so "Namespace
-   in use" fits on one line. */
+/* The status at the size of the button and note it can hold. */
 #vocabulary-library-table .vocabulary-library-status {
     font-size: 13px;
     line-height: 18px;
 }
 
-/* The Import, Compare and update, and Change namespace buttons in a status,
-   in the table and the sidebar: sized as core's buttons in browse controls, without the bottom
+/* The Import and Review changes buttons in a status, in the table and the
+   sidebar: sized as core's buttons in browse controls, without the bottom
    margin core gives buttons. The status is one block, so core's flex cell
    layout doesn't put the note beside the button. */
 .vocabulary-library-status .button {
@@ -203,7 +202,7 @@
 }
 
 /* What follows the status in the sidebar: its button and, for a namespace
-   in another form, what comparing does to it. */
+   in another form, what updating does to it. */
 .vocabulary-library-status-next {
     margin: 6px 0 0;
 }

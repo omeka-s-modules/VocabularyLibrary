@@ -18,16 +18,16 @@ use VocabularyLibrary\Stdlib\TermSearch;
 
 /**
  * The library's pages: the list of vocabularies with its details sidebar and
- * term search, and the file download; and Import, and Compare and update,
+ * term search, and the file download; and Import, and Review changes,
  * which hand the library's file to core's import details and review.
  */
 class IndexController extends AbstractActionController
 {
     /**
      * The library page's search, filters and sort, which its URL keeps: the
-     * page gives the script this list, for saveState(). Import and Compare
-     * carry them in "return", so their links back lead to the library as the
-     * admin left it.
+     * page gives the script this list, for saveState(). Import and Review
+     * changes carry them in "return", so their links back lead to the
+     * library as the admin left it.
      */
     const LIBRARY_STATE = ['q', 'terms', 'tag', 'lang', 'show', 'sort_by', 'sort_order'];
 

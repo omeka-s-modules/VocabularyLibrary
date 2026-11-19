@@ -50,8 +50,8 @@ $selected = function ($name, $value) use ($query) {
         </select>
         <select name="show" aria-label="<?php echo $escape($translate('Show')); ?>">
             <option value=""><?php echo $translate('All vocabularies'); ?></option>
-            <option value="installed"<?php echo $selected('show', 'installed'); ?>><?php echo $translate('Namespace in use'); ?></option>
-            <option value="not-installed"<?php echo $selected('show', 'not-installed'); ?>><?php echo $translate('Namespace not in use'); ?></option>
+            <option value="installed"<?php echo $selected('show', 'installed'); ?>><?php echo $translate('Imported'); ?></option>
+            <option value="not-installed"<?php echo $selected('show', 'not-installed'); ?>><?php echo $translate('Not imported'); ?></option>
         </select>
         <?php // Shown by the script while a filter is set. It leaves the search, which the admin typed. ?>
         <button type="button" class="vocabulary-library-clear-filters" hidden><?php echo $translate('Clear filters'); ?></button>
