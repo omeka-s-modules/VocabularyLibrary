@@ -18,7 +18,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
     const NS = 'http://example.org/ns#';
 
     /**
-     * The file store tokens of the imports a test started, removed after it.
+     * The staged files' tokens of the imports a test started, deleted after it.
      */
     protected $importFiles = [];
 
@@ -44,7 +44,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         parent::tearDown();
         DbTestCase::signIn(DbTestCase::ADMIN);
         foreach ($this->importFiles as $token) {
-            DbTestCase::services()->get('Omeka\VocabularyFileStore')->remove($token);
+            DbTestCase::services()->get('Omeka\File\StagedFiles')->delete($token);
         }
         if ($vocabulary = $this->vocabulary()) {
             DbTestCase::services()->get('Omeka\ApiManager')->delete('vocabularies', $vocabulary->id());
