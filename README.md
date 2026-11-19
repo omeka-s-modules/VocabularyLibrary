@@ -35,7 +35,11 @@ Filter the list by tag, by label language, or by whether a vocabulary is
 already imported, and search it by name, summary, tag, prefix, or
 namespace. Check **Also search class and property names** to find
 vocabularies by their terms. Select a vocabulary's name to see its details,
-and **Import** to import it.
+and **Import** to import it. Import opens Omeka's import details, filled in
+from the library's vocabulary: its name, summary, prefix, and namespace, and
+the language the library is filtered by, or else the installation's, where
+the vocabulary has it. Check them, change any as needed, and import;
+importing leads to the vocabulary's page in Omeka.
 
 ## Vocabularies already imported
 
@@ -56,8 +60,8 @@ review of how the library's vocabulary differs from Omeka's, and **Accept
 changes** applies the differences. Updating adds classes and properties and
 changes the labels and comments of existing ones to match the library's
 vocabulary, so look over the changes first. It never removes a class or
-property. Accepting or cancelling leads to the
-vocabulary's page in Omeka, as any review does.
+property. Accepting or cancelling leads to the vocabulary's page in Omeka,
+as any review does.
 
 Where the library's vocabulary has several languages, or gives its terms both
 definitions and comments, the review offers a choice of which to compare. It
