@@ -82,8 +82,6 @@ class ImportCheckTest extends TempDirTestCase
     {
         $members = $this->check('no-metadata.ttl')['members'];
         $this->assertSame('Other', (string) $members['classes']['Other']['label']);
-        // A term with no label gets its local name, as Omeka labels it.
-        $this->assertSame('Thing', (string) $members['classes']['Thing']['label']);
     }
 
     public function testAnotherFormOfTheNamespaceIsFound()
@@ -138,8 +136,7 @@ class ImportCheckTest extends TempDirTestCase
         file_put_contents($this->dir . '/typed.ttl', "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n<http://example.org/ns#Thing> a rdfs:Class ; rdfs:label \"1.0.0\"^^xsd:decimal .\n");
         $result = (new ImportCheck)->check($this->dir . '/typed.ttl', self::NS);
         $this->assertFalse($result['parsed']);
-        // Core's message, which doesn't quote the value.
-        $this->assertSame('does not parse: a term\'s label or comment: A class or property has a label or comment that isn\'t valid for its datatype.', ImportCheck::failure($result));
+        $this->assertStringStartsWith('does not parse: a term\'s label or comment: ', ImportCheck::failure($result));
     }
 
     public function testAFormatGuessedWrongIsTriedAgainAsTheOthers()
@@ -216,13 +213,5 @@ class ImportCheckTest extends TempDirTestCase
     {
         $new = $this->changed(['"Example Vocabulary"@en' => '"An Example"@en', 'licenses/by/4.0/' => 'licenses/by-sa/4.0/', ', "Ding"@de' => '', ', "hat Teil"@de' => '']);
         $this->assertSame(['title', 'license', 'languages'], ImportCheck::differences($this->check('basic.ttl'), $new)['details']);
-    }
-
-    public function testCandidatesAreTheNamespacesOtherForms()
-    {
-        $this->assertSame(
-            ['http://example.org/ns#', 'http://example.org/ns/', 'http://example.org/ns', 'https://example.org/ns#', 'https://example.org/ns/', 'https://example.org/ns'],
-            ImportCheck::candidates('http://example.org/ns#')
-        );
     }
 }

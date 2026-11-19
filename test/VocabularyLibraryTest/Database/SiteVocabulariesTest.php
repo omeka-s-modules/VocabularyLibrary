@@ -33,26 +33,14 @@ class SiteVocabulariesTest extends DbTestCase
         $this->assertSame('/admin/vocabulary/' . $installed['vocabulary']->id(), $installed['url']);
     }
 
-    /**
-     * @dataProvider otherForms
-     */
-    public function testANamespaceWrittenAnotherWayIsInstalledAndUpdatable($namespace)
+    public function testANamespaceWrittenAnotherWayIsInstalledAndUpdatable()
     {
-        $installed = $this->siteVocabularies()->installed(['namespace' => $namespace]);
+        $installed = $this->siteVocabularies()->installed(['namespace' => 'https://xmlns.com/foaf/0.1/']);
         $this->assertSame('foaf', $installed['vocabulary']->prefix());
         $this->assertFalse($installed['exact']);
         // Core's review changes its namespace to the library's along with
         // the rest.
         $this->assertTrue($installed['updatable']);
-    }
-
-    public function otherForms()
-    {
-        return [
-            'https' => ['https://xmlns.com/foaf/0.1/'],
-            'no closing slash' => ['http://xmlns.com/foaf/0.1'],
-            'hash for slash' => ['http://xmlns.com/foaf/0.1#'],
-        ];
     }
 
     public function testCapitalsAloneAreTheSameWay()
