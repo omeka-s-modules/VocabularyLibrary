@@ -183,6 +183,7 @@ foreach ($sources as $slug => $entry) {
         'classes' => $result['classes'],
         'file' => substr($files[0], strlen($repo->path('data')) + 1),
         'format' => $result['format'],
+        'language_coverage' => $result['language_coverage'],
         'languages' => $result['languages'],
         'license' => $result['license'],
         'namespace' => $result['namespace'],

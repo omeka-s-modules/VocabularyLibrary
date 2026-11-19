@@ -191,7 +191,7 @@ class Importer
         $this->raiseMemoryLimit();
         $graph = new RdfGraph;
         $graph->parseFile($this->path($entry), $entry['format'] ?? 'guess', $entry['namespace']);
-        $default = TermReading::preferredLanguage($entry['languages']);
+        $default = TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
         $best = $default;
         $bestMatches = -1;
         foreach (array_unique(array_merge([$default], $entry['languages'], [null])) as $lang) {

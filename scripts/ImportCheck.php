@@ -159,6 +159,8 @@ class ImportCheck
      *   - limits: Omeka's column limits broken in any of the languages, as
      *     limits() words them
      *   - languages: the language tags on the terms' labels
+     *   - language_coverage: how many terms have a label in each of them,
+     *     by language tag
      *   - prefix, title, description, license: what the file says of the
      *     vocabulary, each null where it says nothing
      */
@@ -241,13 +243,14 @@ class ImportCheck
             }
         }
         $best = (string) $best;
-        $languages = $this->safely(function () use ($graph, $best) {
-            return $this->languages($graph, $best);
+        $coverage = $this->safely(function () use ($graph, $best) {
+            return $this->languageCoverage($graph, $best);
         }) ?: [];
+        $languages = array_keys($coverage);
         // Labels and comments in the language the module shows and imports
         // them in, so the term index matches the sidebar. Only they change
         // with the language, not which terms there are.
-        $lang = TermReading::preferredLanguage($languages);
+        $lang = TermReading::preferredLanguage($languages, $coverage);
         $read = self::LANG;
         if ($bestCount && $lang !== null && $lang !== self::LANG) {
             $bestMembers = $this->importer->members($graph, $best, $lang);
@@ -282,6 +285,7 @@ class ImportCheck
             'readings' => $readings,
             'limits' => $limits,
             'languages' => $languages,
+            'language_coverage' => $coverage,
             'prefix' => $this->safely(function () use ($graph, $best) {
                 return $this->declaredPrefix($graph, $best);
             }),
@@ -408,22 +412,38 @@ class ImportCheck
      */
     protected function languages(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
     {
-        $tags = [];
+        return array_keys($this->languageCoverage($graph, $namespace, $property));
+    }
+
+    /**
+     * How many of the terms that would be imported have a label, or a value
+     * of another property, in each language: what core weighs in choosing
+     * among a language's tags (RdfImporter::getMatchingLanguage()).
+     *
+     * @param string $property Alternatives, as "a|b"
+     * @return int[] By language tag, in order of tag
+     */
+    protected function languageCoverage(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
+    {
+        $counts = [];
         foreach ($this->importer->acceptedTypes() as $type) {
             foreach ($graph->allOfType($type) as $resource) {
                 if ($resource->getUri() !== $namespace . $resource->localName()) {
                     continue;
                 }
+                $tags = [];
                 foreach ($resource->all($property, 'literal') as $label) {
                     if ($label->getLang()) {
                         $tags[$label->getLang()] = true;
                     }
                 }
+                foreach (array_keys($tags) as $tag) {
+                    $counts[$tag] = ($counts[$tag] ?? 0) + 1;
+                }
             }
         }
-        $tags = array_keys($tags);
-        sort($tags);
-        return $tags;
+        ksort($counts, SORT_STRING);
+        return $counts;
     }
 
     /**

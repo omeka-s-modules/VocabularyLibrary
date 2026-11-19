@@ -4,6 +4,10 @@
         "classes": 2,
         "file": "vocabs/ex.ttl",
         "format": null,
+        "language_coverage": {
+            "de": 4,
+            "en": 4
+        },
         "languages": [
             "de",
             "en"

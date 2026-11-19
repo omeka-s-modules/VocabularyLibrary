@@ -53,6 +53,22 @@ class TermReadingTest extends TestCase
         $this->assertSame('pt-BR', TermReading::matchingLanguage('pt_BR', ['en', 'pt-BR']));
     }
 
+    public function testOfALanguagesTagsTheOneCoveringTheMostTermsWins()
+    {
+        // As core's import picks: DCAT tags two labels en-US and 90 en, so an
+        // en_US site starts on en.
+        $languages = ['en', 'en-GB', 'en-US', 'fr'];
+        $coverage = ['en' => 90, 'en-GB' => 2, 'en-US' => 2, 'fr' => 32];
+        $this->assertSame('en', TermReading::matchingLanguage('en_US', $languages, $coverage));
+        $this->assertSame('en', TermReading::preferredLanguage($languages, $coverage));
+        // A regional tag covering more wins over the language alone.
+        $this->assertSame('fr-CA', TermReading::matchingLanguage('fr', ['fr', 'fr-CA'], ['fr' => 3, 'fr-CA' => 40]));
+        // Where they tie, the nearest wins.
+        $this->assertSame('en-US', TermReading::matchingLanguage('en_US', ['en', 'en-US'], ['en' => 5, 'en-US' => 5]));
+        // Not another language, however much it covers.
+        $this->assertSame('en-US', TermReading::matchingLanguage('en_US', ['en-US', 'fr'], ['en-US' => 1, 'fr' => 90]));
+    }
+
     public function testNoNearLanguageOrNoneWantedMatchesNothing()
     {
         $this->assertNull(TermReading::matchingLanguage('it', ['de', 'fr']));

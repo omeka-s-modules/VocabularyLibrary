@@ -179,7 +179,7 @@ class IndexController extends AbstractActionController
             return $view;
         }
         $data = $form->getData();
-        $lang = $form->has('lang') ? $data['lang'] : TermReading::preferredLanguage($entry['languages']);
+        $lang = $form->has('lang') ? $data['lang'] : TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
         try {
             $vocabulary = $this->importer->import($entry, [
                 'o:prefix' => $data['o:prefix'],
@@ -262,7 +262,7 @@ class IndexController extends AbstractActionController
         } elseif (!in_array($lang, $entry['languages'], true)) {
             $lang = count($entry['languages']) > 1
                 ? $this->importer->matchingLanguage($entry, $vocabulary)
-                : TermReading::preferredLanguage($entry['languages']);
+                : TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
         }
         $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
         // The diff is computed on every request, never taken from the form.
@@ -355,7 +355,7 @@ class IndexController extends AbstractActionController
     public function showTermsAction()
     {
         [, $entry] = $this->entry();
-        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
+        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']));
         foreach ($members as &$terms) {
             // Some files put HTML in their labels and comments, which is
             // shown here as text; import stores them as they are, as Omeka's
@@ -500,17 +500,18 @@ class IndexController extends AbstractActionController
      * The language the import form starts on: the one the library was
      * filtered by, else the installation's, each matched to the vocabulary's
      * languages as core's import matches them, so the filter's "zh" finds
-     * "zh-Hans-CN"; else the library's default for the vocabulary.
+     * "zh-Hans-CN", and an en_US site starts on "en" where "en-US" tags only
+     * a few labels; else the library's default for the vocabulary.
      */
     protected function importLanguage(array $entry)
     {
         foreach ([$this->libraryState()['lang'] ?? null, $this->settings()->get('locale')] as $wanted) {
-            $lang = TermReading::matchingLanguage($wanted, $entry['languages']);
+            $lang = TermReading::matchingLanguage($wanted, $entry['languages'], $entry['language_coverage']);
             if (null !== $lang) {
                 return $lang;
             }
         }
-        return TermReading::preferredLanguage($entry['languages']);
+        return TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
     }
 
     /**

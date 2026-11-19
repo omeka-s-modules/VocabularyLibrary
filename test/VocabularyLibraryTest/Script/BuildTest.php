@@ -13,6 +13,8 @@ class BuildTest extends ScriptTestCase
             'classes' => 1,
             'file' => 'vocabs/ex.ttl',
             'format' => null,
+            // How many terms have a label in each language.
+            'language_coverage' => ['de' => 2, 'en' => 2],
             'languages' => ['de', 'en'],
             'license' => 'https://creativecommons.org/licenses/by/4.0/',
             'namespace' => 'http://example.org/ns#',

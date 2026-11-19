@@ -23,6 +23,7 @@ class ImportCheckTest extends TempDirTestCase
         $this->assertSame(1, $result['classes']);
         $this->assertSame(1, $result['properties']);
         $this->assertSame(['de', 'en'], $result['languages']);
+        $this->assertSame(['de' => 2, 'en' => 2], $result['language_coverage']);
         $this->assertSame([], $result['limits']);
     }
 
