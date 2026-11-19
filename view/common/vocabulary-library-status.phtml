@@ -84,7 +84,7 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
     : $this->translate('Omeka\'s vocabulary has a slightly different namespace.')); ?></p>
 <?php endif; ?>
 <?php if ($installed['updatable']): ?>
-<?php // Core's review of the library's file, which returns to the library as the admin left it. ?>
+<?php // Core's review of the library's file, which ends on the vocabulary's page, as any review does. ?>
 <p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'review', 'slug' => $slug], '' === $return ? [] : ['query' => ['return' => $return]]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
 <?php endif; ?>
 <?php endif; ?>
