@@ -3,7 +3,7 @@ namespace VocabularyLibraryTest\Unit;
 
 use Omeka\Entity\Vocabulary;
 use PHPUnit\Framework\TestCase;
-use VocabularyLibrary\Stdlib\NamespaceUri;
+use VocabularyLibrary\Scripts\NamespaceUri;
 
 class NamespaceUriTest extends TestCase
 {

@@ -23,8 +23,8 @@ require __DIR__ . '/bootstrap.php';
 use Omeka\Entity\Vocabulary;
 use VocabularyLibrary\Scripts\Download;
 use VocabularyLibrary\Scripts\ImportCheck;
+use VocabularyLibrary\Scripts\NamespaceUri;
 use VocabularyLibrary\Scripts\Repo;
-use VocabularyLibrary\Stdlib\NamespaceUri;
 use VocabularyLibrary\Stdlib\PlainText;
 
 $check = new ImportCheck;

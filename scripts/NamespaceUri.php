@@ -1,5 +1,5 @@
 <?php
-namespace VocabularyLibrary\Stdlib;
+namespace VocabularyLibrary\Scripts;
 
 /**
  * A vocabulary's namespace URI without its scheme, case or trailing # or /,

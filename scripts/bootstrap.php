@@ -13,7 +13,6 @@ if (!is_file("$omekaDir/vendor/autoload.php")) {
 require "$omekaDir/vendor/autoload.php";
 // The module's src/ is autoloaded only inside Omeka.
 require dirname(__DIR__) . '/src/Stdlib/PlainText.php';
-require dirname(__DIR__) . '/src/Stdlib/NamespaceUri.php';
 require dirname(__DIR__) . '/src/Stdlib/TermReading.php';
 
 // A script that stops on an error says why, whatever the CLI's display
@@ -23,6 +22,7 @@ require dirname(__DIR__) . '/src/Stdlib/TermReading.php';
 set_exception_handler(function (Throwable $e) {
     fail($e instanceof RuntimeException ? $e->getMessage() : (string) $e);
 });
+require __DIR__ . '/NamespaceUri.php';
 require __DIR__ . '/Repo.php';
 require __DIR__ . '/Markdown.php';
 require __DIR__ . '/ImportCheck.php';
