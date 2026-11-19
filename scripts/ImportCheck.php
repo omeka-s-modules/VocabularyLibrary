@@ -155,11 +155,14 @@ class ImportCheck
      *   "properties" as counts; "error" where the file, or a term's label or
      *   comment, doesn't parse; and where they do:
      *   - namespace: the namespace found to import
-     *   - namespace_source: where that came from: "given", or as core's
-     *     import details names it: "declared" (the file's
-     *     vann:preferredNamespaceUri), "ontology" (its owl:Ontology),
-     *     "other_form" (another #// or http/https form of one of those), or
-     *     "terms" (the one most of its terms use, which failure() refuses)
+     *   - namespace_source: where that came from. Given a namespace:
+     *     "given"; "other_form", another #// or http/https form of it that
+     *     imports more; or "terms", the one most of the file's terms use,
+     *     where no form imports anything. Given none, as core's import
+     *     details finds a file's namespace (RdfImporter::findNamespaceUri()):
+     *     "declared" (the file's vann:preferredNamespaceUri), "ontology" (its
+     *     owl:Ontology), "other_form" (another form of one of those), or
+     *     "terms"; null where it finds none. failure() refuses "terms".
      *   - members: the classes and properties, as CheckImporter::members()
      *     returns them, in the language the module shows
      *   - readings: the same, in each language the file has labels or
