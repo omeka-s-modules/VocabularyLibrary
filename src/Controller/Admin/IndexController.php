@@ -26,8 +26,9 @@ class IndexController extends AbstractActionController
     /**
      * The library page's search, filters and sort, which its URL keeps: the
      * page gives the script this list, for saveState(). Import and Review
-     * changes carry them in "return", so their links back lead to the
-     * library as the admin left it.
+     * changes carry them in "return": the import starts on the language the
+     * library is filtered by, and an error leads back to the library as the
+     * admin left it. Both otherwise end in core, on the vocabulary's page.
      */
     const LIBRARY_STATE = ['q', 'terms', 'tag', 'lang', 'show', 'sort_by', 'sort_order'];
 
@@ -171,11 +172,13 @@ class IndexController extends AbstractActionController
                     'o:namespace_uri' => $entry['namespace'],
                     'o:prefix' => $entry['prefix'],
                 ],
-                [
+                array_filter([
                     'format' => $this->importer->format($entry),
                     'lang' => $this->importLanguage($entry),
                     'comment_property' => TermReading::COMMENT_PROPERTY,
-                ]
+                ], function ($option) {
+                    return null !== $option;
+                })
             );
         } catch (\Exception $e) {
             $this->messenger()->addErrors($this->errorMessages($e));
@@ -215,7 +218,6 @@ class IndexController extends AbstractActionController
                     // capitals is the same vocabulary to Omeka, but not to
                     // the review's reading of the file.
                     'new_namespace_uri' => $installed['vocabulary']->namespaceUri() === $entry['namespace'] ? null : $entry['namespace'],
-                    'source_label' => $this->translate('the library\'s vocabulary'),
                 ]
             );
         } catch (\Exception $e) {
@@ -319,7 +321,8 @@ class IndexController extends AbstractActionController
                 $messages[] = $message;
             }
         }
-        return $messages;
+        // As core says it, where the error says nothing.
+        return $messages ?: [$this->translate('Something went wrong')];
     }
 
     /**
@@ -355,21 +358,17 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * The language the import form starts on: the one the library was
-     * filtered by, else the installation's, each matched to the vocabulary's
-     * languages as core's import matches them, so the filter's "zh" finds
-     * "zh-Hans-CN", and an en_US site starts on "en" where "en-US" tags only
-     * a few labels; else the library's default for the vocabulary.
+     * The language the import starts on, where the library was filtered by
+     * one: the vocabulary's tag for it, matched as core's import matches a
+     * language, so the filter's "zh" finds "zh-Hans-CN". Otherwise none, and
+     * core's import details choose, as for any file: from all of the file's
+     * labels and comments, where the library knows only its labels'.
+     *
+     * @return string|null
      */
     protected function importLanguage(array $entry)
     {
-        foreach ([$this->libraryState()['lang'] ?? null, $this->settings()->get('locale')] as $wanted) {
-            $lang = TermReading::matchingLanguage($wanted, $entry['languages'], $entry['language_coverage']);
-            if (null !== $lang) {
-                return $lang;
-            }
-        }
-        return TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']);
+        return TermReading::matchingLanguage($this->libraryState()['lang'] ?? null, $entry['languages'], $entry['language_coverage']);
     }
 
     /**

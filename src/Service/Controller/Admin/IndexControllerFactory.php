@@ -25,7 +25,7 @@ class IndexControllerFactory implements FactoryInterface
             new Importer($services->get('Omeka\RdfImporter'), $dataDir),
             new TermSearch("$dataDir/term-index.json", $vocabularies),
             new LanguageNames($translator, $collation),
-            new SiteVocabularies($services->get('Omeka\ApiManager'), $services->get('ViewHelperManager')->get('Url')),
+            new SiteVocabularies($services->get('Omeka\ApiManager')),
             $services->get('Omeka\VocabularyReview'),
             $services->get('Omeka\VocabularyImport'),
             $collation,

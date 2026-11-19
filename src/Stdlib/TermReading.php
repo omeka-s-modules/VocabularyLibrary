@@ -26,8 +26,8 @@ class TermReading
     /**
      * Where a term's comment is read from, in the same form: a term's
      * definition, else its comment, else a description. Many files define
-     * their terms in skos:definition, which Omeka's own import doesn't read,
-     * and where a term has both, the definition is nearly always the
+     * their terms in skos:definition, and where a term has both, the
+     * definition is nearly always the
      * definition and the comment a note (BIBFRAME's suggested values, EDM's
      * usage notes). It is core's "Definition, else comment", by reference, so
      * core's review names it as that choice, which it finds by the exact

@@ -344,8 +344,9 @@
         $(form.sort_by).add(form.sort_order).on('change', sort);
 
         // Import and Review changes carry the library's search, filters
-        // and sort, so that their way back returns to it as it is now.
-        // Without the script, they lead back to the library as it first shows.
+        // and sort: the import starts on the language filtered by, and an
+        // error leads back to the library as it is now. Without the script,
+        // an error leads back to the library as it first shows.
         const keepPlace = function (address) {
             // The address may carry what was set when it was last followed,
             // as after coming Back to this page, so it is set or removed anew.

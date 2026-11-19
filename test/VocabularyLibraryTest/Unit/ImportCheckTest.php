@@ -221,7 +221,7 @@ class ImportCheckTest extends TempDirTestCase
     public function testCandidatesAreTheNamespacesOtherForms()
     {
         $this->assertSame(
-            ['http://example.org/ns#', 'http://example.org/ns/', 'https://example.org/ns#', 'https://example.org/ns/'],
+            ['http://example.org/ns#', 'http://example.org/ns/', 'http://example.org/ns', 'https://example.org/ns#', 'https://example.org/ns/', 'https://example.org/ns'],
             ImportCheck::candidates('http://example.org/ns#')
         );
     }

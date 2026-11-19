@@ -37,9 +37,9 @@ namespace. Check **Also search class and property names** to find
 vocabularies by their terms. Select a vocabulary's name to see its details,
 and **Import** to import it. Import opens Omeka's import details, filled in
 from the library's vocabulary: its name, summary, prefix, and namespace, and
-the language the library is filtered by, or else the installation's, where
-the vocabulary has it. Check them, change any as needed, and import;
-importing leads to the vocabulary's page in Omeka.
+the language the library is filtered by, where the vocabulary has it;
+otherwise Omeka chooses the language, as for any file. Check them, change any
+as needed, and import; importing leads to the vocabulary's page in Omeka.
 
 ## Vocabularies already imported
 

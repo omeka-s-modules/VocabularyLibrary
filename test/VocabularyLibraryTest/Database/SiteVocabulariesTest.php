@@ -15,7 +15,7 @@ class SiteVocabulariesTest extends DbTestCase
     protected function siteVocabularies()
     {
         $services = self::services();
-        return new SiteVocabularies($services->get('Omeka\ApiManager'), $services->get('ViewHelperManager')->get('Url'));
+        return new SiteVocabularies($services->get('Omeka\ApiManager'));
     }
 
     public function testANamespaceOmekaDoesNotHaveIsNotInstalled()

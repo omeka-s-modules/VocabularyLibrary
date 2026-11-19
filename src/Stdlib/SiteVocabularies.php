@@ -1,9 +1,9 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
-use Laminas\View\Helper\Url;
 use Omeka\Api\Manager as ApiManager;
 use Omeka\Api\Representation\VocabularyRepresentation;
+use Omeka\Entity\Vocabulary;
 
 /**
  * The site's vocabularies, matched to the library's: which library
@@ -13,7 +13,6 @@ use Omeka\Api\Representation\VocabularyRepresentation;
 class SiteVocabularies
 {
     protected $api;
-    protected $url;
 
     /**
      * @var VocabularyRepresentation[]|null
@@ -25,19 +24,17 @@ class SiteVocabularies
      */
     protected $prefixes;
 
-    /**
-     * @param Url $url Core's url view helper
-     */
-    public function __construct(ApiManager $api, Url $url)
+    public function __construct(ApiManager $api)
     {
         $this->api = $api;
-        $this->url = $url;
     }
 
     /**
      * The site's vocabulary with an entry's namespace, written the same way
-     * or not. A site can have both forms, for example http://schema.org/ and
-     * https://schema.org/; an exact match wins.
+     * or in another form, as core's import details find one
+     * (Vocabulary::getNamespaceUriForms()), in any case, as Omeka's database
+     * compares namespaces. A site can have both forms, for example
+     * http://schema.org/ and https://schema.org/; an exact match wins.
      *
      * @return array|null ['vocabulary' => representation, 'url' => link,
      *   'exact' => whether the namespace is written the same way,
@@ -52,13 +49,15 @@ class SiteVocabularies
     public function installed(array $entry)
     {
         $namespace = $entry['namespace'];
+        $forms = array_map('mb_strtolower', Vocabulary::getNamespaceUriForms($namespace));
         $match = null;
         foreach ($this->vocabularies() as $vocabulary) {
-            if (mb_strtolower($vocabulary->namespaceUri()) === mb_strtolower($namespace)) {
+            $theirs = mb_strtolower($vocabulary->namespaceUri());
+            if ($theirs === mb_strtolower($namespace)) {
                 $match = $vocabulary;
                 break;
             }
-            if (!$match && NamespaceUri::normalized($vocabulary->namespaceUri()) === NamespaceUri::normalized($namespace)) {
+            if (!$match && in_array($theirs, $forms, true)) {
                 $match = $vocabulary;
             }
         }
@@ -108,7 +107,7 @@ class SiteVocabularies
      */
     public function url(VocabularyRepresentation $vocabulary)
     {
-        return ($this->url)('admin/id', ['controller' => 'vocabulary', 'id' => $vocabulary->id()]);
+        return $vocabulary->adminUrl();
     }
 
     /**

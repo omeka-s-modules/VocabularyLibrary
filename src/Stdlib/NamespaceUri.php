@@ -7,10 +7,12 @@ namespace VocabularyLibrary\Stdlib;
  * http://schema.org/ and https://schema.org/.
  *
  * The build uses it to refuse a namespace that is already in the collection or
- * excluded, and the module to find a site's vocabulary however the site
- * writes its namespace, so the two always agree. The build's scripts load it
- * without starting Omeka, so it must not use Omeka's services, configuration
- * or database.
+ * excluded. It treats as one namespace exactly those that core's import
+ * details find as one vocabulary (Vocabulary::getNamespaceUriForms(), in any
+ * case, as Omeka's database compares namespaces), as its test checks, so the
+ * collection never holds two vocabularies Omeka would take for one. The build's
+ * scripts load it without starting Omeka, so it must not use Omeka's
+ * services, configuration or database.
  */
 class NamespaceUri
 {

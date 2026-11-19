@@ -2,6 +2,7 @@
 namespace VocabularyLibrary\Scripts;
 
 use EasyRdf\Graph as RdfGraph;
+use Omeka\Entity\Vocabulary;
 use Omeka\Stdlib\RdfImporter;
 use ReflectionClass;
 use Throwable;
@@ -34,12 +35,12 @@ class ImportCheck
     const VANN = 'http://purl.org/vocab/vann/';
 
     /**
-     * Column lengths in application/data/install/schema.sql: property and
-     * resource_class label varchar(255) and local_name varchar(190);
-     * vocabulary namespace_uri varchar(190).
+     * Column lengths: core's own for a term's label and local name, which it
+     * refuses an import over; and vocabulary namespace_uri varchar(190) in
+     * application/data/install/schema.sql, which core has no constant for.
      */
-    const MAX_LABEL = 255;
-    const MAX_LOCAL_NAME = 190;
+    const MAX_LABEL = Vocabulary::LABEL_MAX_LENGTH;
+    const MAX_LOCAL_NAME = Vocabulary::LOCAL_NAME_MAX_LENGTH;
     const MAX_NAMESPACE = 190;
 
     /**
@@ -117,10 +118,20 @@ class ImportCheck
             foreach (['classes', 'properties'] as $kind) {
                 foreach (array_intersect_key($members[$kind], $oldMembers[$kind]) as $localName => $member) {
                     $before = $oldMembers[$kind][$localName];
-                    if (PlainText::spaced($member['label']) !== PlainText::spaced($before['label'])) {
+                    // As core's review compares (RdfImporter::getDiff()), so a
+                    // vocabulary counted as changed shows changes there: a
+                    // label isn't replaced by the local name a term without
+                    // one stands in for (here a label that is its local name
+                    // counts as one, where core can tell a real one), and a
+                    // comment isn't emptied.
+                    if (PlainText::spaced($member['label']) !== PlainText::spaced($before['label'])
+                        && (string) $member['label'] !== (string) $localName
+                    ) {
                         $labels["$kind $localName"] = true;
                     }
-                    if (PlainText::spaced($member['comment']) !== PlainText::spaced($before['comment'])) {
+                    if ('' !== PlainText::spaced($member['comment'])
+                        && PlainText::spaced($member['comment']) !== PlainText::spaced($before['comment'])
+                    ) {
                         $comments["$kind $localName"] = true;
                     }
                 }
@@ -329,23 +340,12 @@ class ImportCheck
     }
 
     /**
-     * The namespace with its #// and http/https variants.
+     * The namespace with its #// and http/https variants: its forms as core
+     * finds a vocabulary under another form.
      */
     public static function candidates($namespace)
     {
-        $forms = [$namespace];
-        $base = rtrim($namespace, '#/');
-        foreach (['#', '/'] as $end) {
-            $forms[] = $base . $end;
-        }
-        foreach ($forms as $form) {
-            if (strpos($form, 'http://') === 0) {
-                $forms[] = 'https://' . substr($form, 7);
-            } elseif (strpos($form, 'https://') === 0) {
-                $forms[] = 'http://' . substr($form, 8);
-            }
-        }
-        return array_values(array_unique($forms));
+        return Vocabulary::getNamespaceUriForms($namespace);
     }
 
     /**

@@ -310,16 +310,18 @@ class ControllerTest extends AbstractHttpControllerTestCase
     {
         [, $page] = $this->send('GET', $this->startImport(['return' => 'lang=de']));
         $this->assertMatchesRegularExpression('/<option value="de" selected/', $page);
-        // Not one the vocabulary doesn't have.
+        // Not one the vocabulary doesn't have: core chooses, as it would
+        // for any file.
         [, $page] = $this->send('GET', $this->startImport(['return' => 'lang=fr']));
         $this->assertMatchesRegularExpression('/<option value="en" selected/', $page);
     }
 
-    public function testTheImportThenStartsOnTheInstallationsLanguage()
+    public function testWithoutAFilterCoreChoosesTheImportsLanguage()
     {
         $settings = DbTestCase::services()->get('Omeka\Settings');
         $locale = $settings->get('locale');
-        // A locale in Omeka's form, with a region the file doesn't have.
+        // Core starts on the installation's language, here with a region the
+        // file doesn't have, as for any file; the library hands none.
         $settings->set('locale', 'de_AT');
         try {
             [, $page] = $this->send('GET', $this->startImport());
@@ -451,10 +453,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $review = $this->getResponse()->getHeaders()->get('Location')->getUri();
         $this->assertMatchesRegularExpression('#^/admin/vocabulary/' . $id . '/review\?review=[0-9a-f]{32}$#', $review);
 
-        // Core's review calls the file the library's vocabulary.
+        // Core's review, as for any file.
         [$status, $page] = $this->send('GET', $review);
         $this->assertSame(200, $status);
-        $this->assertMatchesRegularExpression('#This vocabulary already matches the library\S*s vocabulary, read with the choices above\.#', $page);
+        $this->assertStringContainsString('This vocabulary already matches the file, read with the choices above.', $page);
 
         // Leaving it ends on the vocabulary's page, as any review does.
         parse_str((string) parse_url($review, PHP_URL_QUERY), $query);
@@ -519,7 +521,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
             // classes and properties, on one Accept.
             [, $page] = $this->send('GET', $this->getResponse()->getHeaders()->get('Location')->getUri());
             $this->assertMatchesRegularExpression('#<span class="review-value">https://example.org/ns/</span></td>\s*<td><span class="review-value">http://example.org/ns\#</span>#', $page);
-            $this->assertMatchesRegularExpression('#Accepting makes the changes below, from the library\S*s vocabulary\.#', $page);
+            $this->assertStringContainsString('Accepting makes the changes below, from the file.', $page);
             // Nothing changes until it's accepted.
             DbTestCase::services()->get('Omeka\EntityManager')->clear();
             $this->assertSame('https://example.org/ns/', $api->read('vocabularies', $vocabulary->id())->getContent()->namespaceUri());
