@@ -5,7 +5,7 @@
         "file": "vocabs/a-cat.rdf",
         "format": null,
         "language_coverage": {
-            "en": 128,
+            "en": 130,
             "it": 130
         },
         "languages": [
@@ -28,8 +28,8 @@
         "file": "vocabs/a-cd.rdf",
         "format": null,
         "language_coverage": {
-            "en": 633,
-            "it": 633
+            "en": 636,
+            "it": 636
         },
         "languages": [
             "en",
@@ -51,8 +51,8 @@
         "file": "vocabs/a-ce.rdf",
         "format": null,
         "language_coverage": {
-            "en": 40,
-            "it": 40
+            "en": 41,
+            "it": 41
         },
         "languages": [
             "en",
@@ -75,8 +75,8 @@
         "file": "vocabs/a-dd.rdf",
         "format": null,
         "language_coverage": {
-            "en": 234,
-            "it": 235
+            "en": 237,
+            "it": 237
         },
         "languages": [
             "en",
@@ -99,7 +99,7 @@
         "format": null,
         "language_coverage": {
             "en": 107,
-            "it": 106
+            "it": 107
         },
         "languages": [
             "en",
@@ -121,8 +121,8 @@
         "file": "vocabs/a-loc.rdf",
         "format": null,
         "language_coverage": {
-            "en": 190,
-            "it": 189
+            "en": 192,
+            "it": 192
         },
         "languages": [
             "en",
@@ -191,7 +191,7 @@
         "file": "vocabs/agls.nt",
         "format": null,
         "language_coverage": {
-            "en-au": 20
+            "en-au": 22
         },
         "languages": [
             "en-au"
@@ -322,7 +322,7 @@
         "format": null,
         "language_coverage": {
             "en": 139,
-            "it": 137
+            "it": 139
         },
         "languages": [
             "en",
@@ -344,8 +344,8 @@
         "file": "vocabs/arco-core.rdf",
         "format": null,
         "language_coverage": {
-            "en": 101,
-            "it": 102
+            "en": 105,
+            "it": 105
         },
         "languages": [
             "en",
@@ -410,7 +410,7 @@
         "file": "vocabs/awol.nt",
         "format": null,
         "language_coverage": {
-            "en": 57
+            "en": 76
         },
         "languages": [
             "en"
@@ -490,7 +490,7 @@
         "file": "vocabs/bibo.ttl",
         "format": null,
         "language_coverage": {
-            "en": 94
+            "en": 104
         },
         "languages": [
             "en"
@@ -616,7 +616,7 @@
         "file": "vocabs/biro.rdf",
         "format": null,
         "language_coverage": {
-            "en": 8
+            "en": 19
         },
         "languages": [
             "en"
@@ -680,7 +680,7 @@
         "file": "vocabs/botany.nt",
         "format": null,
         "language_coverage": {
-            "en-gb": 111
+            "en-gb": 113
         },
         "languages": [
             "en-gb"
@@ -701,7 +701,7 @@
         "file": "vocabs/c4o.rdf",
         "format": null,
         "language_coverage": {
-            "en": 20
+            "en": 28
         },
         "languages": [
             "en"
@@ -739,7 +739,7 @@
         "file": "vocabs/cao.rdf",
         "format": null,
         "language_coverage": {
-            "en": 26
+            "en": 51
         },
         "languages": [
             "en"
@@ -760,7 +760,7 @@
         "file": "vocabs/cbo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 166
+            "en": 193
         },
         "languages": [
             "en"
@@ -922,7 +922,7 @@
         "file": "vocabs/cis.ttl",
         "format": null,
         "language_coverage": {
-            "en": 62,
+            "en": 63,
             "it": 63
         },
         "languages": [
@@ -947,7 +947,7 @@
         "file": "vocabs/cito.rdf",
         "format": null,
         "language_coverage": {
-            "en": 114
+            "en": 117
         },
         "languages": [
             "en"
@@ -990,7 +990,7 @@
         "file": "vocabs/cl.ttl",
         "format": null,
         "language_coverage": {
-            "en": 87,
+            "en": 93,
             "fr": 87
         },
         "languages": [
@@ -1332,7 +1332,7 @@
         "language_coverage": {
             "de": 1,
             "en": 381,
-            "fr": 138
+            "fr": 140
         },
         "languages": [
             "de",
@@ -1377,7 +1377,7 @@
         "file": "vocabs/daia.nt",
         "format": null,
         "language_coverage": {
-            "en": 26
+            "en": 34
         },
         "languages": [
             "en"
@@ -1398,7 +1398,7 @@
         "file": "vocabs/datacite.rdf",
         "format": null,
         "language_coverage": {
-            "en": 32
+            "en": 214
         },
         "languages": [
             "en"
@@ -1444,32 +1444,32 @@
         "language_coverage": {
             "ar": 6,
             "be": 5,
-            "bg": 22,
+            "bg": 24,
             "bn": 6,
-            "ca": 42,
+            "ca": 43,
             "cs": 2,
-            "de": 3178,
-            "el": 1705,
-            "en": 6204,
-            "es": 321,
+            "de": 3283,
+            "el": 1799,
+            "en": 6344,
+            "es": 330,
             "eu": 5,
-            "fr": 987,
-            "ga": 507,
+            "fr": 1035,
+            "ga": 508,
             "gl": 47,
             "hy": 1,
             "in": 9,
-            "it": 275,
-            "ja": 645,
+            "it": 279,
+            "ja": 668,
             "ko": 237,
             "kr": 1,
             "lv": 1,
-            "nl": 1874,
-            "pl": 196,
-            "pt": 341,
+            "nl": 1934,
+            "pl": 197,
+            "pt": 361,
             "ro": 1,
             "ru": 33,
-            "sl": 20,
-            "sr": 463,
+            "sl": 28,
+            "sr": 493,
             "tr": 47,
             "zh": 11
         },
@@ -1543,13 +1543,13 @@
         "format": null,
         "language_coverage": {
             "ar": 32,
-            "cs": 70,
+            "cs": 72,
             "da": 72,
             "el": 32,
-            "en": 90,
+            "en": 92,
             "en-GB": 2,
             "en-US": 2,
-            "es": 86,
+            "es": 92,
             "fr": 32,
             "it": 92,
             "ja": 32
@@ -1643,7 +1643,7 @@
         "file": "vocabs/deo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 24
+            "en": 43
         },
         "languages": [
             "en"
@@ -1664,7 +1664,7 @@
         "file": "vocabs/dhfc.jsonld",
         "format": "jsonld",
         "language_coverage": {
-            "en": 120
+            "en": 121
         },
         "languages": [
             "en"
@@ -1825,7 +1825,7 @@
         "file": "vocabs/doco.rdf",
         "format": null,
         "language_coverage": {
-            "en": 52
+            "en": 73
         },
         "languages": [
             "en"
@@ -1921,7 +1921,7 @@
         "file": "vocabs/dsw.owl",
         "format": null,
         "language_coverage": {
-            "en": 29
+            "en": 44
         },
         "languages": [
             "en"
@@ -2027,7 +2027,7 @@
         "file": "vocabs/ebucore.nt",
         "format": null,
         "language_coverage": {
-            "en": 370
+            "en": 450
         },
         "languages": [
             "en"
@@ -2169,8 +2169,8 @@
         "file": "vocabs/ekc.ttl",
         "format": null,
         "language_coverage": {
-            "en": 232,
-            "ko": 73
+            "en": 255,
+            "ko": 272
         },
         "languages": [
             "en",
@@ -2193,8 +2193,8 @@
         "file": "vocabs/ekcd.ttl",
         "format": null,
         "language_coverage": {
-            "en": 26,
-            "ko": 26
+            "en": 36,
+            "ko": 36
         },
         "languages": [
             "en",
@@ -2272,7 +2272,7 @@
         "file": "vocabs/fabio.rdf",
         "format": null,
         "language_coverage": {
-            "en": 320
+            "en": 385
         },
         "languages": [
             "en"
@@ -2375,7 +2375,7 @@
         "file": "vocabs/frapo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 217
+            "en": 243
         },
         "languages": [
             "en"
@@ -2396,7 +2396,7 @@
         "file": "vocabs/frbr.nt",
         "format": null,
         "language_coverage": {
-            "en": 71
+            "en": 79
         },
         "languages": [
             "en"
@@ -2545,7 +2545,7 @@
         "file": "vocabs/gen.rdf",
         "format": null,
         "language_coverage": {
-            "en": 24
+            "en": 33
         },
         "languages": [
             "en"
@@ -2622,8 +2622,8 @@
         "format": null,
         "language_coverage": {
             "de": 1,
-            "de-DE": 231,
-            "en-US": 233
+            "de-DE": 234,
+            "en-US": 236
         },
         "languages": [
             "de",
@@ -2646,7 +2646,7 @@
         "file": "vocabs/gn.rdf",
         "format": null,
         "language_coverage": {
-            "en": 36
+            "en": 37
         },
         "languages": [
             "en"
@@ -2741,8 +2741,8 @@
         "file": "vocabs/gtm.ttl",
         "format": null,
         "language_coverage": {
-            "en": 124,
-            "nl": 124
+            "en": 135,
+            "nl": 135
         },
         "languages": [
             "en",
@@ -2782,7 +2782,7 @@
         "file": "vocabs/hht.ttl",
         "format": null,
         "language_coverage": {
-            "en": 28
+            "en": 96
         },
         "languages": [
             "en"
@@ -2804,7 +2804,7 @@
         "file": "vocabs/hico.rdf",
         "format": null,
         "language_coverage": {
-            "en": 6
+            "en": 15
         },
         "languages": [
             "en"
@@ -2845,7 +2845,7 @@
         "file": "vocabs/holding.ttl",
         "format": null,
         "language_coverage": {
-            "en": 14
+            "en": 16
         },
         "languages": [
             "en"
@@ -2866,7 +2866,7 @@
         "file": "vocabs/icon.rdf",
         "format": null,
         "language_coverage": {
-            "en": 118
+            "en": 119
         },
         "languages": [
             "en"
@@ -3137,7 +3137,7 @@
         "language_coverage": {
             "en": 10,
             "es": 10,
-            "nl": 9
+            "nl": 10
         },
         "languages": [
             "en",
@@ -3489,7 +3489,7 @@
         "file": "vocabs/lto.ttl",
         "format": null,
         "language_coverage": {
-            "en": 191
+            "en": 230
         },
         "languages": [
             "en"
@@ -3510,8 +3510,8 @@
         "file": "vocabs/lv.ttl",
         "format": null,
         "language_coverage": {
-            "de": 59,
-            "en": 59
+            "de": 61,
+            "en": 61
         },
         "languages": [
             "de",
@@ -3571,7 +3571,7 @@
         "file": "vocabs/mads.rdf",
         "format": null,
         "language_coverage": {
-            "en": 47
+            "en": 54
         },
         "languages": [
             "en"
@@ -3727,7 +3727,7 @@
             "ca": 4,
             "cs": 5,
             "de": 92,
-            "en": 152,
+            "en": 153,
             "es": 4,
             "fi": 4,
             "fr": 93,
@@ -3825,8 +3825,8 @@
         "file": "vocabs/mus.ttl",
         "format": null,
         "language_coverage": {
-            "en": 360,
-            "fr": 97
+            "en": 361,
+            "fr": 99
         },
         "languages": [
             "en",
@@ -3871,7 +3871,7 @@
         "file": "vocabs/music-meta.rdf",
         "format": null,
         "language_coverage": {
-            "en": 121
+            "en": 123
         },
         "languages": [
             "en"
@@ -3995,7 +3995,7 @@
         "format": null,
         "language_coverage": {
             "en": 155,
-            "ko": 149
+            "ko": 150
         },
         "languages": [
             "en",
@@ -4017,7 +4017,7 @@
         "file": "vocabs/nmo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 5
+            "en": 108
         },
         "languages": [
             "en"
@@ -4140,7 +4140,7 @@
         "file": "vocabs/og.nt",
         "format": null,
         "language_coverage": {
-            "en-us": 22
+            "en-us": 35
         },
         "languages": [
             "en-us"
@@ -4199,9 +4199,9 @@
         "file": "vocabs/om.rdf",
         "format": "rdfxml",
         "language_coverage": {
-            "en": 839,
+            "en": 841,
             "ja": 20,
-            "nl": 229,
+            "nl": 249,
             "zh": 26
         },
         "languages": [
@@ -4228,7 +4228,7 @@
         "language_coverage": {
             "af": 31,
             "de": 33,
-            "en": 33,
+            "en": 38,
             "es": 33,
             "fr": 33,
             "it": 33,
@@ -4367,7 +4367,7 @@
         "file": "vocabs/pav.rdf",
         "format": null,
         "language_coverage": {
-            "en": 31
+            "en": 42
         },
         "languages": [
             "en"
@@ -4524,7 +4524,7 @@
         "format": null,
         "language_coverage": {
             "en": 118,
-            "fr": 96
+            "fr": 118
         },
         "languages": [
             "en",
@@ -4722,7 +4722,7 @@
         "file": "vocabs/pro.rdf",
         "format": null,
         "language_coverage": {
-            "en": 15,
+            "en": 34,
             "it": 1
         },
         "languages": [
@@ -4745,7 +4745,7 @@
         "file": "vocabs/prov.ttl",
         "format": null,
         "language_coverage": {
-            "en": 1
+            "en": 58
         },
         "languages": [
             "en"
@@ -4767,7 +4767,7 @@
         "file": "vocabs/pso.rdf",
         "format": null,
         "language_coverage": {
-            "en": 13
+            "en": 31
         },
         "languages": [
             "en"
@@ -4788,7 +4788,7 @@
         "file": "vocabs/pwo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 18
+            "en": 48
         },
         "languages": [
             "en"
@@ -4897,13 +4897,13 @@
         "file": "vocabs/rdaa.nt",
         "format": null,
         "language_coverage": {
-            "ar": 1052,
+            "ar": 1053,
             "ca": 1106,
             "cs": 1053,
             "da": 1091,
             "de": 1106,
             "el": 1091,
-            "en": 1101,
+            "en": 1103,
             "es": 1053,
             "et": 1051,
             "fi": 1106,
@@ -5074,7 +5074,7 @@
             "ca": 156,
             "cs": 122,
             "da": 152,
-            "de": 155,
+            "de": 156,
             "el": 71,
             "en": 149,
             "es": 122,
@@ -5133,9 +5133,9 @@
             "ca": 429,
             "cs": 409,
             "da": 420,
-            "de": 426,
+            "de": 429,
             "el": 248,
-            "en": 446,
+            "en": 447,
             "es": 409,
             "et": 394,
             "fi": 429,
@@ -5351,18 +5351,18 @@
         "file": "vocabs/rdau.nt",
         "format": null,
         "language_coverage": {
-            "ar": 1113,
-            "ca": 34,
-            "cs": 1123,
+            "ar": 1114,
+            "ca": 218,
+            "cs": 1124,
             "da": 1152,
-            "de": 1126,
-            "en": 1213,
-            "es": 1123,
+            "de": 1131,
+            "en": 1214,
+            "es": 1124,
             "fi": 1133,
             "hu": 1130,
             "nl": 1131,
-            "tr": 1123,
-            "zh-Hans-CN": 1123
+            "tr": 1124,
+            "zh-Hans-CN": 1124
         },
         "languages": [
             "ar",
@@ -5398,7 +5398,7 @@
             "ca": 637,
             "cs": 608,
             "da": 605,
-            "de": 633,
+            "de": 636,
             "el": 326,
             "en": 630,
             "es": 608,
@@ -5409,7 +5409,7 @@
             "it": 587,
             "lv": 590,
             "nl": 621,
-            "no": 589,
+            "no": 590,
             "sv": 27,
             "tr": 608,
             "vi": 326,
@@ -5611,7 +5611,7 @@
         "file": "vocabs/roar.rdf",
         "format": null,
         "language_coverage": {
-            "en": 18
+            "en": 44
         },
         "languages": [
             "en"
@@ -5689,7 +5689,7 @@
         "file": "vocabs/saws.nt",
         "format": null,
         "language_coverage": {
-            "en": 130
+            "en": 133
         },
         "languages": [
             "en"
@@ -5731,7 +5731,7 @@
         "file": "vocabs/scoro.rdf",
         "format": null,
         "language_coverage": {
-            "en": 31
+            "en": 44
         },
         "languages": [
             "en"
@@ -5752,7 +5752,7 @@
         "file": "vocabs/sealit.ttl",
         "format": null,
         "language_coverage": {
-            "en": 204
+            "en": 205
         },
         "languages": [
             "en"
@@ -5921,7 +5921,7 @@
         "file": "vocabs/taxon-name-and-rank.rdf",
         "format": null,
         "language_coverage": {
-            "en": 94
+            "en": 100
         },
         "languages": [
             "en"
@@ -5984,7 +5984,7 @@
             "ar": 1,
             "de": 1,
             "en": 79,
-            "es": 76,
+            "es": 79,
             "fr": 1,
             "it": 1,
             "ja": 1,
@@ -6041,7 +6041,7 @@
         "file": "vocabs/tvc.rdf",
         "format": null,
         "language_coverage": {
-            "en": 4
+            "en": 14
         },
         "languages": [
             "en"
@@ -6063,7 +6063,7 @@
         "file": "vocabs/txn.rdf",
         "format": null,
         "language_coverage": {
-            "en": 18
+            "en": 20
         },
         "languages": [
             "en"
@@ -6237,7 +6237,7 @@
         "file": "vocabs/vivo.rdf",
         "format": null,
         "language_coverage": {
-            "en": 268,
+            "en": 835,
             "en-us": 2
         },
         "languages": [

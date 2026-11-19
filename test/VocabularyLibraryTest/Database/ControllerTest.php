@@ -408,6 +408,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
         [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
         $this->assertStringContainsString('/admin/vocabulary-library/review/ex', $page);
+        // Where the library's script doesn't run, Compare and update keeps
+        // the library's place itself.
+        [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex', ['return' => 'tag=general']);
+        $this->assertStringContainsString('href="/admin/vocabulary-library/review/ex?return=tag%3Dgeneral"', $page);
     }
 
     public function testAVocabularyInUseIsComparedFromItsDetailsNotItsRow()
@@ -454,6 +458,40 @@ class ControllerTest extends AbstractHttpControllerTestCase
     public function testCompareAndUpdateNeedsTheVocabularyInOmeka()
     {
         $this->assertSame(404, $this->send('GET', '/admin/vocabulary-library/review/ex')[0]);
+    }
+
+    public function testCompareAndUpdateReadsTheLibrarysFileInItsOwnFormat()
+    {
+        // Omeka's vocabulary was read from another file, in another format,
+        // as core's installer stores RDF/XML for BIBO, where the library's
+        // BIBO is Turtle.
+        $this->import();
+        DbTestCase::services()->get('Omeka\ApiManager')->update('vocabularies', $this->vocabulary()->id(), ['o:import_options' => ['format' => 'rdfxml']], [], ['isPartial' => true]);
+        $this->send('GET', '/admin/vocabulary-library/review/ex');
+        $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?review=#', $this->getResponse()->getHeaders()->get('Location')->getUri());
+    }
+
+    public function testCompareAndUpdateOfANamespaceDifferingInCapitalsReviewsChangingIt()
+    {
+        DbTestCase::signIn(DbTestCase::ADMIN);
+        $api = DbTestCase::services()->get('Omeka\ApiManager');
+        // The same vocabulary to Omeka, which ignores capitals, but not to
+        // the file's terms.
+        $vocabulary = $api->create('vocabularies', [
+            'o:namespace_uri' => 'http://EXAMPLE.org/ns#',
+            'o:prefix' => 'capitals',
+            'o:label' => 'Capitals',
+        ])->getContent();
+        try {
+            $this->send('GET', '/admin/vocabulary-library/review/ex');
+            $review = $this->getResponse()->getHeaders()->get('Location')->getUri();
+            $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?review=#', $review);
+            [, $page] = $this->send('GET', $review);
+            $this->assertMatchesRegularExpression('#<span class="review-value">http://EXAMPLE.org/ns\#</span></td>\s*<td><span class="review-value">http://example.org/ns\#</span>#', $page);
+        } finally {
+            DbTestCase::signIn(DbTestCase::ADMIN);
+            $api->delete('vocabularies', $vocabulary->id());
+        }
     }
 
     public function testCompareAndUpdateOfANamespaceInAnotherFormReviewsChangingIt()

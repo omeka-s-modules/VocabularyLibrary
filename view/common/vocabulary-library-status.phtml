@@ -32,11 +32,15 @@
  * @var bool $sidebar Whether it is in the details sidebar, which names Omeka's
  *   vocabulary in the status. Elsewhere, as on the import page, the page
  *   names it.
+ * @var string $return The library's place, as the "return" its links carry,
+ *   where the page has it and the library's script doesn't add it, as on the
+ *   import page
  */
 $name = $name ?? null;
 $prefixTakenBy = $prefixTakenBy ?? null;
 $long = $long ?? false;
 $sidebar = $sidebar ?? false;
+$return = $return ?? '';
 ?>
 <div class="vocabulary-library-status">
 <?php if (!$installed): ?>
@@ -81,7 +85,7 @@ $import = $this->hyperlink($this->translate('Import'), $this->url('admin/vocabul
 <?php endif; ?>
 <?php if ($installed['updatable']): ?>
 <?php // Core's review of the library's file, which returns to the library as the admin left it. ?>
-<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'review', 'slug' => $slug]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
+<p class="vocabulary-library-status-next"><?php echo $this->hyperlink($this->translate('Compare and update'), $this->url('admin/vocabulary-library', ['action' => 'review', 'slug' => $slug], '' === $return ? [] : ['query' => ['return' => $return]]), ['class' => 'button vocabulary-library-keep-place']); ?></p>
 <?php endif; ?>
 <?php endif; ?>
 </div>

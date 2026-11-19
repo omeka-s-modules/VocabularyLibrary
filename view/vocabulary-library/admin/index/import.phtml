@@ -19,7 +19,7 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import'
 $inOmeka = $this->hyperlink(sprintf('%s (%s)', $installed['vocabulary']->label(), $installed['vocabulary']->prefix()), $installed['url']);
 ?>
 <p><?php echo sprintf($escape($translate('Omeka already has this vocabulary: %s.')), $inOmeka); ?></p>
-<?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'long' => true]); ?>
+<?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'long' => true, 'return' => $libraryState]); ?>
 
 <?php else: ?>
 

@@ -4,7 +4,6 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
-use Omeka\Api\Exception\ValidationException;
 use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
@@ -153,6 +152,7 @@ class IndexController extends AbstractActionController
         $view->setVariable('entry', $entry);
         $view->setVariable('installed', $installed);
         $view->setVariable('libraryUrl', $this->libraryUrl());
+        $view->setVariable('libraryState', http_build_query($this->libraryState()));
         if ($installed) {
             return $view;
         }
@@ -218,14 +218,19 @@ class IndexController extends AbstractActionController
             $url = $this->vocabularyReview->start(
                 $installed['vocabulary']->id(),
                 $this->importer->path($entry),
-                ['format' => $entry['format'] ?? null],
+                // The file's own format, never left to the one stored for
+                // Omeka's vocabulary, which may be another file's.
+                ['format' => $this->importer->format($entry)],
                 [
-                    'new_namespace_uri' => $installed['exact'] ? null : $entry['namespace'],
+                    // Compared exactly: a namespace that differs only in
+                    // capitals is the same vocabulary to Omeka, but not to
+                    // the review's reading of the file.
+                    'new_namespace_uri' => $installed['vocabulary']->namespaceUri() === $entry['namespace'] ? null : $entry['namespace'],
                     'return_url' => $this->libraryUrl(),
                     'source_label' => $this->translate('the library\'s vocabulary'),
                 ]
             );
-        } catch (ValidationException $e) {
+        } catch (\Exception $e) {
             $this->messenger()->addErrors($this->errorMessages($e));
             return $this->redirect()->toUrl($this->libraryUrl());
         }
@@ -310,10 +315,11 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * Says an import or update succeeded, with a link to the vocabulary in
-     * Omeka. Both lead back to the library, as the admin left it, so that
+     * Says an import succeeded, with a link to the vocabulary in Omeka. The
+     * import leads back to the library, as the admin left it, so that
      * choosing vocabularies isn't interrupted; the link is there for when
-     * the vocabulary itself is wanted.
+     * the vocabulary itself is wanted. An update ends in core's review,
+     * which says so itself.
      *
      * @param string $message With %s for the link
      */

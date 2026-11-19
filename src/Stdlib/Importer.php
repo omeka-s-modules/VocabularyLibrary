@@ -7,8 +7,9 @@ use Omeka\Stdlib\RdfImporter;
 /**
  * Reads and imports the library's files with core's importer, and knows
  * where they are. Every read of a file's terms goes through here, so this is
- * where its options are set. Comparing and updating are core's review's
- * (VocabularyReview), and core raises PHP's memory limit for a large file.
+ * where its options are set, the format of the files core's review reads
+ * included. Comparing and updating are core's review's (VocabularyReview),
+ * and core raises PHP's memory limit for a large file.
  */
 class Importer
 {
@@ -55,6 +56,15 @@ class Importer
     }
 
     /**
+     * The format to read an entry's file in: the one the build check found,
+     * or "guess" where it found the file by autodetecting.
+     */
+    public function format(array $entry)
+    {
+        return $entry['format'] ?? 'guess';
+    }
+
+    /**
      * The path to an entry's file.
      */
     public function path(array $entry)
@@ -63,14 +73,13 @@ class Importer
     }
 
     /**
-     * Options for core's importer to read an entry's file. A null format is
-     * one the build check found by autodetecting.
+     * Options for core's importer to read an entry's file.
      */
     protected function options(array $entry, $lang)
     {
         return [
             'file' => $this->path($entry),
-            'format' => $entry['format'] ?? 'guess',
+            'format' => $this->format($entry),
             'lang' => $lang,
             'label_property' => TermReading::LABEL_PROPERTY,
             'comment_property' => TermReading::COMMENT_PROPERTY,

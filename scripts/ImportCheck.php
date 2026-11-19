@@ -158,8 +158,9 @@ class ImportCheck
      *   - limits: Omeka's column limits broken in any of the languages, as
      *     limits() words them
      *   - languages: the language tags on the terms' labels
-     *   - language_coverage: how many terms have a label in each of them,
-     *     by language tag
+     *   - language_coverage: for each of them, how many classes and
+     *     properties core's import details counts as having a label or
+     *     comment in it (CheckImporter::languageCoverage())
      *   - prefix, title, description, license: what the file says of the
      *     vocabulary, each null where it says nothing
      */
@@ -242,10 +243,15 @@ class ImportCheck
             }
         }
         $best = (string) $best;
-        $coverage = $this->safely(function () use ($graph, $best) {
-            return $this->languageCoverage($graph, $best);
+        $languages = $this->safely(function () use ($graph, $best) {
+            return $this->languages($graph, $best);
         }) ?: [];
-        $languages = array_keys($coverage);
+        // Counted by core's own import details, so the module's import starts
+        // on the language core's would, for the languages the library lists.
+        $coverage = array_intersect_key($this->safely(function () use ($graph) {
+            return $this->importer->languageCoverage($graph);
+        }) ?: [], array_flip($languages));
+        ksort($coverage, SORT_STRING);
         // Labels and comments in the language the module shows and imports
         // them in, so the term index matches the sidebar. Only they change
         // with the language, not which terms there are.
@@ -411,38 +417,22 @@ class ImportCheck
      */
     protected function languages(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
     {
-        return array_keys($this->languageCoverage($graph, $namespace, $property));
-    }
-
-    /**
-     * How many of the terms that would be imported have a label, or a value
-     * of another property, in each language: what core weighs in choosing
-     * among a language's tags (RdfImporter::getMatchingLanguage()).
-     *
-     * @param string $property Alternatives, as "a|b"
-     * @return int[] By language tag, in order of tag
-     */
-    protected function languageCoverage(RdfGraph $graph, $namespace, $property = self::LABEL_PROPERTY)
-    {
-        $counts = [];
+        $tags = [];
         foreach ($this->importer->acceptedTypes() as $type) {
             foreach ($graph->allOfType($type) as $resource) {
                 if ($resource->getUri() !== $namespace . $resource->localName()) {
                     continue;
                 }
-                $tags = [];
                 foreach ($resource->all($property, 'literal') as $label) {
                     if ($label->getLang()) {
                         $tags[$label->getLang()] = true;
                     }
                 }
-                foreach (array_keys($tags) as $tag) {
-                    $counts[$tag] = ($counts[$tag] ?? 0) + 1;
-                }
             }
         }
-        ksort($counts, SORT_STRING);
-        return $counts;
+        $tags = array_keys($tags);
+        sort($tags);
+        return $tags;
     }
 
     /**
@@ -665,5 +655,17 @@ class CheckImporter extends RdfImporter
     public function acceptedTypes()
     {
         return array_merge($this->classTypes, $this->propertyTypes);
+    }
+
+    /**
+     * How many classes and properties have a label or comment in each
+     * language, counted as core's import details counts them to choose its
+     * starting language (getVocabularyDetails()).
+     *
+     * @return int[] By language tag
+     */
+    public function languageCoverage(RdfGraph $graph)
+    {
+        return $this->countGraphLanguages($graph, null, self::LABEL_PROPERTY . '|' . self::COMMENT_PROPERTY);
     }
 }

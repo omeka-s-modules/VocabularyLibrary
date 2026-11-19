@@ -42,7 +42,8 @@ class TermReading
      * tag that covers the most terms wins, as in matchingLanguage().
      *
      * @param string[] $languages The language tags of a file's labels
-     * @param int[] $coverage How many terms have a label in each, by tag
+     * @param int[] $coverage How many terms have a label or comment in
+     *   each, by tag, as core counts them (the build's language_coverage)
      * @return string|null
      */
     public static function preferredLanguage(array $languages, array $coverage = [])
@@ -62,8 +63,9 @@ class TermReading
      *
      * @param string|null $wanted A language tag or locale
      * @param string[] $languages The language tags of a file's labels
-     * @param int[] $coverage How many terms have a label in each, by tag;
-     *   without it, the nearest wins
+     * @param int[] $coverage How many terms have a label or comment in each,
+     *   by tag, as core counts them (the build's language_coverage); without
+     *   it, the nearest wins
      * @return string|null One of the file's languages, as the file has it;
      *   null where none is near
      */
