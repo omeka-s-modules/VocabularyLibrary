@@ -39,7 +39,6 @@ class TermReadingTest extends TestCase
         // falls back to English itself, where the library goes on to
         // preferredLanguage().
         $core = new \ReflectionMethod(\Omeka\Stdlib\RdfImporter::class, 'getMatchingLanguage');
-        $core->setAccessible(true);
         $importer = (new \ReflectionClass(\Omeka\Stdlib\RdfImporter::class))->newInstanceWithoutConstructor();
         $cases = [
             ['en_US', ['en', 'en-GB', 'en-US', 'fr'], ['en' => 90, 'en-GB' => 2, 'en-US' => 2, 'fr' => 32]],

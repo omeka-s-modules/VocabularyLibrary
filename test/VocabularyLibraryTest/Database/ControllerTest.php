@@ -144,6 +144,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $url ??= $this->startImport();
         $data += ['o:prefix' => 'ex', 'o:label' => 'Example Vocabulary', 'o:comment' => 'Summary.', 'lang' => 'en'];
         return $this->send('POST', $url, [
+            'import' => '1',
             'vocabulary-info' => ['o:label' => $data['o:label'], 'o:comment' => $data['o:comment'], 'o:namespace_uri' => self::NS, 'o:prefix' => $data['o:prefix']],
             'vocabulary-advanced' => ['lang' => $data['lang'], 'comments' => 'definition', 'label_property' => '', 'comment_property' => ''],
         ] + $this->csrf($url));
