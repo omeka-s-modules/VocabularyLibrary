@@ -18,9 +18,14 @@ class ControllerTest extends AbstractHttpControllerTestCase
     const NS = 'http://example.org/ns#';
 
     /**
-     * The staged files' tokens of the imports a test started, deleted after it.
+     * The tokens of the imports a test started, cancelled after it.
      */
-    protected $importFiles = [];
+    protected $importTokens = [];
+
+    /**
+     * The tokens of the reviews a test started, cancelled after it.
+     */
+    protected $reviewTokens = [];
 
     public static function setUpBeforeClass(): void
     {
@@ -41,14 +46,19 @@ class ControllerTest extends AbstractHttpControllerTestCase
 
     public function tearDown(): void
     {
-        parent::tearDown();
+        // Before the test framework clears the session, where core keeps
+        // each import and review, with its file's path.
         DbTestCase::signIn(DbTestCase::ADMIN);
-        foreach ($this->importFiles as $token) {
-            DbTestCase::services()->get('Omeka\File\StagedFiles')->delete($token);
+        foreach ($this->importTokens as $token) {
+            DbTestCase::services()->get('Omeka\VocabularyImport')->cancel($token);
+        }
+        foreach ($this->reviewTokens as $token) {
+            DbTestCase::services()->get('Omeka\VocabularyReview')->cancel($token);
         }
         if ($vocabulary = $this->vocabulary()) {
             DbTestCase::services()->get('Omeka\ApiManager')->delete('vocabularies', $vocabulary->id());
         }
+        parent::tearDown();
     }
 
     /**
@@ -127,9 +137,26 @@ class ControllerTest extends AbstractHttpControllerTestCase
         [$status] = $this->send('GET', '/admin/vocabulary-library/import/ex', $query);
         $this->assertSame(302, $status);
         $url = $this->getResponse()->getHeaders()->get('Location')->getUri();
-        $this->assertStringStartsWith('/admin/vocabulary/import-details?file_token=', $url);
+        $this->assertStringStartsWith('/admin/vocabulary/import-details?token=', $url);
         parse_str((string) parse_url($url, PHP_URL_QUERY), $params);
-        $this->importFiles[] = $params['file_token'];
+        $this->importTokens[] = $params['token'];
+        return $url;
+    }
+
+    /**
+     * Start core's review of the tests' vocabulary, as the library's Review
+     * changes does.
+     *
+     * @return string The review page's URL
+     */
+    protected function startReview()
+    {
+        [$status] = $this->send('GET', '/admin/vocabulary-library/review/ex');
+        $this->assertSame(302, $status);
+        $url = $this->getResponse()->getHeaders()->get('Location')->getUri();
+        $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?token=#', $url);
+        parse_str((string) parse_url($url, PHP_URL_QUERY), $params);
+        $this->reviewTokens[] = $params['token'];
         return $url;
     }
 
@@ -145,8 +172,8 @@ class ControllerTest extends AbstractHttpControllerTestCase
         $data += ['o:prefix' => 'ex', 'o:label' => 'Example Vocabulary', 'o:comment' => 'Summary.', 'lang' => 'en'];
         return $this->send('POST', $url, [
             'import' => '1',
-            'vocabulary-info' => ['o:label' => $data['o:label'], 'o:comment' => $data['o:comment'], 'o:namespace_uri' => self::NS, 'o:prefix' => $data['o:prefix']],
-            'vocabulary-advanced' => ['lang' => $data['lang'], 'comments' => 'definition', 'label_property' => '', 'comment_property' => ''],
+            'o:label' => $data['o:label'], 'o:comment' => $data['o:comment'], 'o:namespace_uri' => self::NS, 'o:prefix' => $data['o:prefix'],
+            'lang' => $data['lang'], 'comments' => 'definition', 'label_property' => '', 'comment_property' => '',
         ] + $this->csrf($url));
     }
 
@@ -283,10 +310,10 @@ class ControllerTest extends AbstractHttpControllerTestCase
         [$status, $page] = $this->send('GET', $this->startImport());
         $this->assertSame(200, $status);
         // The library's name, summary, namespace, and prefix.
-        $this->assertMatchesRegularExpression('/<input[^>]*name="vocabulary-info\[o:label\]"[^>]*value="Example Vocabulary"/', $page);
+        $this->assertMatchesRegularExpression('/<input[^>]*name="o:label"[^>]*value="Example Vocabulary"/', $page);
         $this->assertStringContainsString('Classes and properties for describing things and their parts.</textarea>', $page);
-        $this->assertMatchesRegularExpression('/<input[^>]*name="vocabulary-info\[o:namespace_uri\]"[^>]*value="http:\/\/example.org\/ns#"/', $page);
-        $this->assertMatchesRegularExpression('/<input[^>]*name="vocabulary-info\[o:prefix\]"[^>]*value="ex"/', $page);
+        $this->assertMatchesRegularExpression('/<input[^>]*name="o:namespace_uri"[^>]*value="http:\/\/example.org\/ns#"/', $page);
+        $this->assertMatchesRegularExpression('/<input[^>]*name="o:prefix"[^>]*value="ex"/', $page);
         // Its reading: the definition, else the comment.
         $this->assertStringContainsString('<option value="definition" selected>', $page);
     }
@@ -379,10 +406,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
     {
         $this->import();
         $id = $this->vocabulary()->id();
-        [$status] = $this->send('GET', '/admin/vocabulary-library/review/ex');
-        $this->assertSame(302, $status);
-        $review = $this->getResponse()->getHeaders()->get('Location')->getUri();
-        $this->assertMatchesRegularExpression('#^/admin/vocabulary/' . $id . '/review\?review=[0-9a-f]{32}$#', $review);
+        $this->assertMatchesRegularExpression('#^/admin/vocabulary/' . $id . '/review\?token=[0-9a-f]{32}$#', $this->startReview());
     }
 
     public function testReviewChangesNeedsTheVocabularyInOmeka()
@@ -397,8 +421,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
         // BIBO is Turtle.
         $this->import();
         DbTestCase::services()->get('Omeka\ApiManager')->update('vocabularies', $this->vocabulary()->id(), ['o:import_options' => ['format' => 'rdfxml']], [], ['isPartial' => true]);
-        $this->send('GET', '/admin/vocabulary-library/review/ex');
-        $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?review=#', $this->getResponse()->getHeaders()->get('Location')->getUri());
+        $this->startReview();
     }
 
     public function testReviewChangesOfANamespaceDifferingInCapitalsReviewsChangingIt()
@@ -413,10 +436,7 @@ class ControllerTest extends AbstractHttpControllerTestCase
             'o:label' => 'Capitals',
         ])->getContent();
         try {
-            $this->send('GET', '/admin/vocabulary-library/review/ex');
-            $review = $this->getResponse()->getHeaders()->get('Location')->getUri();
-            $this->assertMatchesRegularExpression('#^/admin/vocabulary/\d+/review\?review=#', $review);
-            [, $page] = $this->send('GET', $review);
+            [, $page] = $this->send('GET', $this->startReview());
             $this->assertMatchesRegularExpression('#<span class="review-value">http://EXAMPLE.org/ns\#</span></td>\s*<td><span class="review-value">http://example.org/ns\#</span>#', $page);
         } finally {
             DbTestCase::signIn(DbTestCase::ADMIN);
@@ -434,11 +454,9 @@ class ControllerTest extends AbstractHttpControllerTestCase
             'o:label' => 'Variant',
         ])->getContent();
         try {
-            [$status] = $this->send('GET', '/admin/vocabulary-library/review/ex');
-            $this->assertSame(302, $status);
             // The review changes the namespace to the library's, with the
             // classes and properties, on one Accept.
-            [, $page] = $this->send('GET', $this->getResponse()->getHeaders()->get('Location')->getUri());
+            [, $page] = $this->send('GET', $this->startReview());
             $this->assertMatchesRegularExpression('#<span class="review-value">https://example.org/ns/</span></td>\s*<td><span class="review-value">http://example.org/ns\#</span>#', $page);
         } finally {
             DbTestCase::signIn(DbTestCase::ADMIN);
