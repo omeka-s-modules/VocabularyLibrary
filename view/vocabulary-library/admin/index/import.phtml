@@ -17,5 +17,9 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabulary-library import'
 // say it, and the next step as the details give it.
 $inOmeka = $this->hyperlink($installed['vocabulary']->label(), $installed['url']);
 ?>
+<?php if ($installed['exact']): ?>
 <p><?php echo sprintf($escape($translate('%s already uses this vocabulary\'s namespace URI.')), $inOmeka); ?></p>
+<?php else: ?>
+<p><?php echo sprintf($escape($translate('%1$s uses another form of this vocabulary\'s namespace URI, %2$s.')), $inOmeka, $escape($installed['vocabulary']->namespaceUri())); ?></p>
+<?php endif; ?>
 <?php echo $this->partial('common/vocabulary-library-status', ['slug' => $slug, 'installed' => $installed, 'long' => true, 'return' => $libraryState]); ?>

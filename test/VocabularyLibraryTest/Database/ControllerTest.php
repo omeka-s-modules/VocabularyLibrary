@@ -478,6 +478,11 @@ class ControllerTest extends AbstractHttpControllerTestCase
             $this->assertMatchesRegularExpression('#<a aria-label="Imported: Example Vocabulary" href="[^"]*">Imported</a>#', $page);
             $this->assertStringNotContainsString('vocabulary-library-status-next', $page);
             $this->assertStringNotContainsString('/admin/vocabulary-library/import/ex', $page);
+            // Reached anyway, the import page says which form Omeka has, as
+            // core's import details do.
+            [, $page] = $this->send('GET', '/admin/vocabulary-library/import/ex');
+            $this->assertMatchesRegularExpression('#<a href="[^"]*">Variant</a> uses another form of this vocabulary\S*s namespace URI, https://example\.org/ns/\.#', $page);
+            $this->assertStringNotContainsString('already uses this vocabulary', $page);
 
             [, $page] = $this->send('GET', '/admin/vocabulary-library/show-details/ex');
             $this->assertSame(

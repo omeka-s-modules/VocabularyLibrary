@@ -44,8 +44,8 @@ class SiteVocabularies
      *   (Dublin Core and its types), and one the user may change
      *   (Supervisors may change only their own), as core decides it
      *   (VocabularyRepresentation::userMayUpdate())].
-     *   The pages treat both forms as in use, and only the details sidebar
-     *   says which
+     *   The pages treat both forms as in use; the details sidebar and the
+     *   import page say which
      */
     public function installed(array $entry)
     {
