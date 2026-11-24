@@ -343,11 +343,10 @@
         $(form.tag).add(form.lang).add(form.show).on('change', apply);
         $(form.sort_by).add(form.sort_order).on('change', sort);
 
-        // Import and Compare carry the library's search, filters and sort, so
-        // that their links back return to it as it is now. Without the
-        // script, they lead back to the library as it first shows.
-        // The confirmation for changing a namespace, in the details sidebar,
-        // does the same for its form.
+        // Import and Review changes carry the library's search, filters
+        // and sort: the import starts on the language filtered by, and an
+        // error leads back to the library as it is now. Without the script,
+        // an error leads back to the library as it first shows.
         const keepPlace = function (address) {
             // The address may carry what was set when it was last followed,
             // as after coming Back to this page, so it is set or removed anew.
@@ -362,9 +361,6 @@
         };
         $(document).on('click', 'a.vocabulary-library-keep-place', function () {
             this.href = keepPlace(this.href);
-        });
-        $(document).on('submit', 'form.vocabulary-library-keep-place', function () {
-            this.action = keepPlace(this.action);
         });
 
         // The empty state's button, and Clear filters, change the controls
@@ -428,15 +424,11 @@
             }
         });
 
-        // The sidebar a confirmation opens in, over the details.
-        const confirmSidebar = document.getElementById('vocabulary-library-confirm-sidebar');
         // Closing the sidebar returns focus to where it was opened from, or
         // else to that vocabulary's name, or the search: the close link
         // itself is hidden with the sidebar. Escape closes it too.
         $(document).on('click', 'a.sidebar-content', function () {
-            // A link in a row, which opens the details. Not one within the
-            // details, such as Change namespace: it is hidden once they
-            // close, so focus goes back to the row.
+            // A link in a row, which opens the details.
             const row = this.closest('tr');
             if (row) {
                 sidebarOpener = this;
@@ -444,15 +436,6 @@
             }
         });
         $(document).on('o:sidebar-closed', '.sidebar', function () {
-            // A confirmation closing returns to the details under it, at the
-            // button that opened it, where they are still there to return to.
-            if (this === confirmSidebar) {
-                const button = document.querySelector('.sidebar.active [data-sidebar-selector="#vocabulary-library-confirm-sidebar"]');
-                if (button) {
-                    button.focus();
-                }
-                return;
-            }
             const rowName = sidebarOpenerRow && sidebarOpenerRow.querySelector('.vocabulary-library-title > a.sidebar-content');
             const target = [sidebarOpener, rowName, form.q].find(el => el && el.isConnected && !el.closest('[hidden]'));
             sidebarOpener = sidebarOpenerRow = null;
@@ -460,25 +443,16 @@
                 target.focus();
             }
         });
-        // A confirmation is for the details under it, so it closes when they
-        // close or show another vocabulary.
-        $(document).on('o:sidebar-closed o:sidebar-content-loaded', '.sidebar', function () {
-            if (this !== confirmSidebar && confirmSidebar.classList.contains('active')) {
-                Omeka.closeSidebar($(confirmSidebar));
-            }
-        });
         // Not from a text field, where Escape is for the field: it cancels
-        // what is being composed, or dismisses the browser's suggestions. A
-        // button made with an input, as core's confirmations make theirs, is
-        // not one.
+        // what is being composed, or dismisses the browser's suggestions.
         $(document).on('keydown', '.sidebar.active', function (e) {
-            if (e.key === 'Escape' && !e.isComposing && !e.isDefaultPrevented() && !$(e.target).is('input:not([type=submit], [type=button]), textarea, select')) {
+            if (e.key === 'Escape' && !e.isComposing && !e.isDefaultPrevented() && !$(e.target).is('input, textarea, select')) {
                 Omeka.closeSidebar($(this));
             }
         });
 
         // When the details sidebar opens, move focus into it: to the title,
-        // the details' or a confirmation's, or, when it opened from "All
+        // or, when it opened from "All
         // matching terms", to the Classes and properties tab, which loads its
         // lists, and once they are in, to their filter, set to the search, so
         // the matches are in view. Core
@@ -507,7 +481,7 @@
                     });
                     return;
                 }
-                const title = sidebar.querySelector('.vocabulary-library-details-title, .vocabulary-library-confirm-title');
+                const title = sidebar.querySelector('.vocabulary-library-details-title');
                 if (title) {
                     title.focus();
                 }
@@ -604,41 +578,10 @@
         status.heard(filter());
     };
 
-    /**
-     * The import form: warns while the admin types a prefix that the site
-     * already uses, or that Omeka reserves. Omeka compares prefixes without
-     * regard to case.
-     */
-    const initImport = function (warnings) {
-        const input = document.getElementById('o:prefix');
-        const installed = warnings.data('installed-prefixes');
-        const taken = warnings.find('.vocabulary-library-prefix-taken');
-        const reserved = warnings.find('.vocabulary-library-prefix-reserved');
-        const warning = announcer(document.querySelector('.vocabulary-library-prefix-announcement'));
-        const check = function () {
-            const prefix = input.value.trim();
-            const holder = own(installed, prefix.toLowerCase());
-            taken.prop('hidden', !holder);
-            taken.find('.vocabulary-library-prefix-holder').text(holder || '');
-            reserved.prop('hidden', !/^o(-|$)/.test(prefix));
-            return warnings.children(':not([hidden])').text().trim().replace(/\s+/g, ' ');
-        };
-        // A warning that appears or changes while typing is read out. One
-        // the form opens with is read with the field, which it describes.
-        $(input).on('input', function () {
-            warning.say(check());
-        });
-        warning.heard(check());
-    };
-
     $(document).ready(function () {
         const filters = $('#vocabulary-library-filters');
         if (filters.length) {
             initBrowse(filters);
-        }
-        const warnings = $('#vocabulary-library-prefix-warnings');
-        if (warnings.length) {
-            initImport(warnings);
         }
     });
 

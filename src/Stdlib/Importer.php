@@ -1,32 +1,24 @@
 <?php
 namespace VocabularyLibrary\Stdlib;
 
-use EasyRdf\Graph as RdfGraph;
-use Omeka\Api\Representation\VocabularyRepresentation;
 use Omeka\Stdlib\RdfImporter;
 
 /**
- * Reads, imports and compares the library's files with core's importer, and
- * knows where they are. Every read of a file's terms goes through here, so
- * this is where its options are set and the memory limit is raised.
+ * Reads the library's files with core's importer, and knows where they are.
+ * Core's import details imports them (VocabularyImport), and core's review
+ * compares and updates them (VocabularyReview). Every read of a file's terms
+ * goes through here, so this is where its options are set. Core raises PHP's
+ * memory limit for a large file.
  */
 class Importer
 {
     /**
-     * Memory to read a vocabulary's file in. Core's importer holds the whole
-     * file in memory, and the largest files need more than PHP's default of
-     * 128M to compare.
+     * The format the library's files are read in, and handed to core in:
+     * the one EasyRdf guesses, where core's importer then tries each format
+     * in turn if the guess fails or reads nothing. The build reads every
+     * file the same way, so each one the library has reads.
      */
-    const MEMORY_LIMIT = '256M';
-
-    /**
-     * The ways Compare can read terms' comments: as the library imports them,
-     * or as Omeka's own import does.
-     */
-    const COMMENT_READINGS = [
-        'definitions' => TermReading::COMMENT_PROPERTY,
-        'comments' => TermReading::OMEKA_COMMENT_PROPERTY,
-    ];
+    const FORMAT = 'guess';
 
     protected $rdfImporter;
     protected $dataDir;
@@ -45,176 +37,12 @@ class Importer
      * them.
      *
      * @param string|null $lang The language to read labels and comments in
-     * @param string $commentProperty Where terms' comments are read from
      * @return array ['classes' => [local name => ['label' => …, 'comment' =>
      *   …], …], 'properties' => […]]
      */
-    public function members(array $entry, $lang, $commentProperty = TermReading::COMMENT_PROPERTY)
+    public function members(array $entry, $lang)
     {
-        return $this->rdfImporter->getMembers('file', $entry['namespace'], $this->options($entry, $lang, $commentProperty));
-    }
-
-    /**
-     * Imports an entry's file as a new vocabulary.
-     *
-     * @param array $vocabulary The vocabulary's "o:prefix", "o:label" and
-     *   "o:comment"
-     * @param string|null $lang The language to read labels and comments in
-     * @return VocabularyRepresentation
-     */
-    public function import(array $entry, array $vocabulary, $lang)
-    {
-        return $this->rdfImporter->import(
-            'file',
-            ['o:namespace_uri' => $entry['namespace']] + $vocabulary,
-            $this->options($entry, $lang)
-        )->getContent();
-    }
-
-    /**
-     * How the vocabulary in Omeka differs from an entry's file, as core's
-     * importer computes it. A label or comment that differs only in its
-     * spacing is left out: a double space, a line break for a space, or a
-     * comment going from none to an empty one (a file's empty definition
-     * reads as "", where Omeka has none). Omeka's pages show both the same,
-     * and Compare could only mark spaces, or show "None" changing to "None".
-     *
-     * @param string|null $lang The language to read labels and comments in
-     * @param string $commentProperty Where terms' comments are read from:
-     *   TermReading::COMMENT_PROPERTY, or
-     *   TermReading::OMEKA_COMMENT_PROPERTY, to compare a vocabulary imported
-     *   outside the library
-     */
-    public function diff(array $entry, $lang, $commentProperty)
-    {
-        $diff = $this->rdfImporter->getDiff('file', $entry['namespace'], $this->options($entry, $lang, $commentProperty));
-        foreach (['classes', 'properties'] as $kind) {
-            foreach (['label', 'comment'] as $field) {
-                $diff[$kind][$field] = array_filter($diff[$kind][$field], function ($change) {
-                    return PlainText::spaced($change[0]) !== PlainText::spaced($change[1]);
-                });
-            }
-        }
-        return $diff;
-    }
-
-    /**
-     * How the vocabulary in Omeka differs from an entry's file, with its
-     * comments read the way asked, or else the way it was imported.
-     *
-     * The library imports a term's definition where the file has one, and
-     * Omeka's own import only its comment. Read the other way, every such
-     * comment would show as changed, so the admin chooses. Until they do,
-     * comments are read whichever way would change fewer of those in Omeka,
-     * which is the way the vocabulary was imported; where both ways read the
-     * same, there's no choice to offer.
-     *
-     * @param string|null $lang The language to read labels and comments in
-     * @param string|null $reading A key of COMMENT_READINGS; anything else
-     *   is no choice
-     * @return array [a key of COMMENT_READINGS, or null where no way was
-     *   asked and both read the same, and the diff]
-     */
-    public function diffAsImported(array $entry, $lang, $reading = null)
-    {
-        if (is_string($reading) && isset(self::COMMENT_READINGS[$reading])) {
-            return [$reading, $this->diff($entry, $lang, self::COMMENT_READINGS[$reading])];
-        }
-        $diffs = [];
-        foreach (self::COMMENT_READINGS as $key => $property) {
-            $diffs[$key] = $this->diff($entry, $lang, $property);
-        }
-        if ($diffs['definitions'] == $diffs['comments']) {
-            return [null, $diffs['definitions']];
-        }
-        $changed = function (array $diff) {
-            return count($diff['classes']['comment']) + count($diff['properties']['comment']);
-        };
-        $reading = $changed($diffs['comments']) < $changed($diffs['definitions']) ? 'comments' : 'definitions';
-        return [$reading, $diffs[$reading]];
-    }
-
-    /**
-     * The classes and properties the vocabulary in Omeka has and an entry's
-     * file doesn't. Core's update keeps them.
-     *
-     * @param array $labels The vocabulary in Omeka's, as labels() gives them
-     * @param string|null $lang The language to read the file in
-     * @return array ['classes' => [local name => label, …], 'properties' =>
-     *   […]]
-     */
-    public function missingTerms(array $entry, array $labels, $lang)
-    {
-        $members = $this->members($entry, $lang);
-        return [
-            'classes' => array_diff_key($labels['classes'], $members['classes']),
-            'properties' => array_diff_key($labels['properties'], $members['properties']),
-        ];
-    }
-
-    /**
-     * The labels a vocabulary's classes and properties have in Omeka.
-     *
-     * @return array ['classes' => [local name => label, …], 'properties' =>
-     *   […]]
-     */
-    public static function labels(VocabularyRepresentation $vocabulary)
-    {
-        $labels = ['classes' => [], 'properties' => []];
-        foreach (['classes' => $vocabulary->resourceClasses(), 'properties' => $vocabulary->properties()] as $kind => $terms) {
-            foreach ($terms as $term) {
-                $labels[$kind][$term->localName()] = $term->label();
-            }
-        }
-        return $labels;
-    }
-
-    /**
-     * The language the vocabulary in Omeka was most likely imported in: of
-     * the entry's languages, and none ("First available"), the one whose
-     * labels match the most of its labels. Ties go to the library's default
-     * language.
-     *
-     * The file is read once, and each term's label in each language read as
-     * core's importer reads it: in that language, else in any, else its local
-     * name. Reading the file once per language would take seconds for
-     * vocabularies with twenty languages.
-     *
-     * @return string|null A language tag, or null for none
-     */
-    public function matchingLanguage(array $entry, VocabularyRepresentation $vocabulary)
-    {
-        $labels = [];
-        foreach (array_merge($vocabulary->resourceClasses(), $vocabulary->properties()) as $term) {
-            $labels[$term->localName()] = $term->label();
-        }
-        $this->raiseMemoryLimit();
-        $graph = new RdfGraph;
-        $graph->parseFile($this->path($entry), $entry['format'] ?? 'guess', $entry['namespace']);
-        $default = TermReading::preferredLanguage($entry['languages']);
-        $best = $default;
-        $bestMatches = -1;
-        foreach (array_unique(array_merge([$default], $entry['languages'], [null])) as $lang) {
-            $matches = 0;
-            foreach ($labels as $localName => $label) {
-                $term = $graph->resource($entry['namespace'] . $localName);
-                $read = $term->get(TermReading::LABEL_PROPERTY, 'literal', $lang) ?: $term->get(TermReading::LABEL_PROPERTY, 'literal');
-                $value = $read ? (string) $read->getValue() : '';
-                $matches += PlainText::spaced($value === '' ? $localName : $value) === PlainText::spaced($label) ? 1 : 0;
-            }
-            if ($matches > $bestMatches) {
-                [$best, $bestMatches] = [$lang, $matches];
-            }
-        }
-        return $best;
-    }
-
-    /**
-     * Applies a diff to the vocabulary in Omeka, with core's update.
-     */
-    public function update($vocabularyId, array $diff)
-    {
-        $this->rdfImporter->update($vocabularyId, $diff);
+        return $this->rdfImporter->getMembers('file', $entry['namespace'], $this->options($entry, $lang));
     }
 
     /**
@@ -226,41 +54,16 @@ class Importer
     }
 
     /**
-     * Options for core's importer to read an entry's file. A null format is
-     * one the build check found by autodetecting.
+     * Options for core's importer to read an entry's file.
      */
-    protected function options(array $entry, $lang, $commentProperty = TermReading::COMMENT_PROPERTY)
+    protected function options(array $entry, $lang)
     {
-        $this->raiseMemoryLimit();
         return [
             'file' => $this->path($entry),
-            'format' => $entry['format'] ?? 'guess',
+            'format' => self::FORMAT,
             'lang' => $lang,
             'label_property' => TermReading::LABEL_PROPERTY,
-            'comment_property' => $commentProperty,
+            'comment_property' => TermReading::COMMENT_PROPERTY,
         ];
-    }
-
-    /**
-     * Raises PHP's memory limit to MEMORY_LIMIT where it is lower, as Omeka's
-     * own Datascribe and OSII modules do for their jobs. A host that doesn't
-     * allow it keeps its limit.
-     */
-    protected function raiseMemoryLimit()
-    {
-        $limit = (string) ini_get('memory_limit');
-        if ($limit !== '-1' && self::bytes($limit) < self::bytes(self::MEMORY_LIMIT)) {
-            ini_set('memory_limit', self::MEMORY_LIMIT);
-        }
-    }
-
-    /**
-     * Bytes in a PHP memory size, such as "128M".
-     */
-    protected static function bytes($size)
-    {
-        $size = trim($size);
-        $units = ['k' => 1024, 'm' => 1024 ** 2, 'g' => 1024 ** 3];
-        return (int) $size * ($units[strtolower(substr($size, -1))] ?? 1);
     }
 }

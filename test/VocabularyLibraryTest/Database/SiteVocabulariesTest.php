@@ -15,7 +15,7 @@ class SiteVocabulariesTest extends DbTestCase
     protected function siteVocabularies()
     {
         $services = self::services();
-        return new SiteVocabularies($services->get('Omeka\ApiManager'), $services->get('ViewHelperManager')->get('Url'));
+        return new SiteVocabularies($services->get('Omeka\ApiManager'));
     }
 
     public function testANamespaceOmekaDoesNotHaveIsNotInstalled()
@@ -23,38 +23,24 @@ class SiteVocabulariesTest extends DbTestCase
         $this->assertNull($this->siteVocabularies()->installed(['namespace' => 'http://example.org/ns#']));
     }
 
-    public function testANamespaceWrittenTheSameWayIsInstalledAndComparable()
+    public function testANamespaceWrittenTheSameWayIsInstalledAndUpdatable()
     {
         $installed = $this->siteVocabularies()->installed(['namespace' => self::FOAF]);
         $this->assertSame('foaf', $installed['vocabulary']->prefix());
         $this->assertTrue($installed['exact']);
-        $this->assertTrue($installed['comparable']);
-        $this->assertFalse($installed['changeable']);
-        // Core's Vocabularies page, showing only this one.
-        $this->assertSame('/admin/vocabulary?namespace_uri=' . self::FOAF, $installed['url']);
+        $this->assertTrue($installed['updatable']);
+        // Core's page for the vocabulary.
+        $this->assertSame('/admin/vocabulary/' . $installed['vocabulary']->id(), $installed['url']);
     }
 
-    /**
-     * @dataProvider otherForms
-     */
-    public function testANamespaceWrittenAnotherWayIsInstalledButNotComparable($namespace)
+    public function testANamespaceWrittenAnotherWayIsInstalledAndUpdatable()
     {
-        $installed = $this->siteVocabularies()->installed(['namespace' => $namespace]);
+        $installed = $this->siteVocabularies()->installed(['namespace' => 'https://xmlns.com/foaf/0.1/']);
         $this->assertSame('foaf', $installed['vocabulary']->prefix());
         $this->assertFalse($installed['exact']);
-        $this->assertFalse($installed['comparable']);
-        // Changing its namespace to the library's is what would make it
-        // comparable.
-        $this->assertTrue($installed['changeable']);
-    }
-
-    public function otherForms()
-    {
-        return [
-            'https' => ['https://xmlns.com/foaf/0.1/'],
-            'no closing slash' => ['http://xmlns.com/foaf/0.1'],
-            'hash for slash' => ['http://xmlns.com/foaf/0.1#'],
-        ];
+        // Core's review changes its namespace to the library's along with
+        // the rest.
+        $this->assertTrue($installed['updatable']);
     }
 
     public function testCapitalsAloneAreTheSameWay()
@@ -63,20 +49,20 @@ class SiteVocabulariesTest extends DbTestCase
         $this->assertTrue($installed['exact']);
     }
 
-    public function testTheVocabulariesOmekaKeepsFixedAreNotComparable()
+    public function testTheVocabulariesOmekaKeepsFixedAreNotUpdatable()
     {
         $installed = $this->siteVocabularies()->installed(['namespace' => 'http://purl.org/dc/terms/']);
         $this->assertTrue($installed['exact']);
-        $this->assertFalse($installed['comparable']);
+        $this->assertFalse($installed['updatable']);
     }
 
-    public function testASupervisorMayCompareOnlyTheirOwnVocabularies()
+    public function testASupervisorMayUpdateOnlyTheirOwnVocabularies()
     {
         self::makeUser('supervisor@example.com', 'site_admin');
         self::signIn('supervisor@example.com');
-        $this->assertFalse($this->siteVocabularies()->installed(['namespace' => self::FOAF])['comparable']);
-        // Nor change the namespace of one written another way.
-        $this->assertFalse($this->siteVocabularies()->installed(['namespace' => 'https://xmlns.com/foaf/0.1/'])['changeable']);
+        $this->assertFalse($this->siteVocabularies()->installed(['namespace' => self::FOAF])['updatable']);
+        // Written another way too.
+        $this->assertFalse($this->siteVocabularies()->installed(['namespace' => 'https://xmlns.com/foaf/0.1/'])['updatable']);
 
         self::services()->get('Omeka\ApiManager')->create('vocabularies', [
             'o:namespace_uri' => 'http://example.org/mine#',
@@ -84,9 +70,8 @@ class SiteVocabulariesTest extends DbTestCase
             'o:label' => 'Mine',
         ]);
         $installed = $this->siteVocabularies()->installed(['namespace' => 'http://example.org/mine#']);
-        $this->assertTrue($installed['comparable']);
-        // A closing "#" is part of the namespace, not the end of the link.
-        $this->assertSame('/admin/vocabulary?namespace_uri=http://example.org/mine%23', $installed['url']);
+        $this->assertTrue($installed['updatable']);
+        $this->assertSame('/admin/vocabulary/' . $installed['vocabulary']->id(), $installed['url']);
     }
 
     public function testPrefixesAreFoundInAnyCase()

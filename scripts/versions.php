@@ -14,7 +14,7 @@
  */
 require __DIR__ . '/bootstrap.php';
 
-use EasyRdf\Graph as RdfGraph;
+use VocabularyLibrary\Scripts\CheckImporter;
 
 // Where the date is read from, in the order tried.
 const DATES = [
@@ -35,6 +35,7 @@ foreach (array_diff($only, array_keys($vocabularies)) as $unknown) {
     fail("Unknown slug: $unknown");
 }
 $draftsOnly = in_array('--drafts', $argv, true);
+$importer = CheckImporter::create();
 
 /**
  * The first line of the first non-empty value of a property on any of the
@@ -57,9 +58,9 @@ foreach ($vocabularies as $slug => $entry) {
     if ($only && !in_array((string) $slug, $only, true)) {
         continue;
     }
-    $graph = new RdfGraph;
     try {
-        $graph->parseFile($repo->path('data/' . $entry['file']), $entry['format'] ?: null);
+        // As Omeka reads it to import it.
+        $graph = $importer->graph($repo->path('data/' . $entry['file']), $entry['namespace']);
     } catch (Throwable $e) {
         $rows[] = [$slug, 'does not parse', '', ''];
         continue;

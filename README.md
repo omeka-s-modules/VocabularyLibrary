@@ -23,7 +23,7 @@ This page has a part for each kind of reader:
 
 Install it as any module (see
 [Installing modules](https://omeka.org/s/docs/user-manual/modules/#installing-modules)
-in the Omeka S user manual). It needs Omeka S 4.2.1 or later.
+in the Omeka S user manual). It needs Omeka S 4.3.0 or later.
 
 The library is under **Modules > Vocabulary Library** in the admin menu, and
 Omeka's **Import new vocabulary** page links to it. Global Administrators and
@@ -31,38 +31,42 @@ Supervisors can use it.
 
 ## Finding and importing
 
-Filter the list by tag, by label language, or by whether a vocabulary's
-namespace is already in use in Omeka, and search it by name, summary, tag,
-prefix, or namespace. Check **Also search class and property names** to find
+Filter the list by tag, by label language, or by whether a vocabulary is
+already imported, and search it by name, summary, tag, prefix, or
+namespace. Check **Also search class and property names** to find
 vocabularies by their terms. Select a vocabulary's name to see its details,
-and **Import** to import it.
+and **Import** to import it. Import opens Omeka's import details, filled in
+from the library's vocabulary: its name, summary, prefix, and namespace, and
+the language the library is filtered by, where the vocabulary has it;
+otherwise Omeka chooses the language, as for any file. Check them, change any
+as needed, and import; importing leads to the vocabulary's page in Omeka.
 
-## Namespaces already in use
+## Vocabularies already imported
 
-**Namespace in use** means that Omeka already has a vocabulary with this
-namespace, so this one cannot be imported. In most cases it can be compared
-and updated, as described below.
+**Imported** means that Omeka already has a vocabulary with this one's
+namespace, whatever file it came from, so this one cannot be imported again.
+Its changes can be reviewed and applied instead, as described below.
 
-The exception is a vocabulary whose namespace in Omeka differs slightly from
-the library's: `http` for `https`, or a different closing `/` or `#`. Omeka
-identifies a vocabulary by its exact namespace, so the library can't compare
-one that differs, even by a character. Its details say so, and offer **Change
-namespace**, which changes it to the library's after you confirm, then
-compares it. This changes the addresses of its classes and properties
+A vocabulary whose namespace in Omeka differs slightly from the library's,
+`http` for `https` or a different closing `/` or `#`, counts as imported too.
+Its details say so, and updating it also changes its namespace to the
+library's. This changes the addresses of its classes and properties
 everywhere Omeka publishes them. Values stay attached to their properties.
 
-## Comparing and updating
+## Reviewing changes
 
-**Compare and update**, in the details of a vocabulary whose namespace is in
-use, shows how Omeka's vocabulary differs from the library's, and **Update**
-applies the differences. Updating adds classes and properties and changes the
-labels and comments of existing ones to match the library's vocabulary, so
-look over the changes first. It never removes a class or property.
+**Review changes**, in the details of an imported vocabulary, opens Omeka's
+review of how the library's vocabulary differs from Omeka's, and **Accept
+changes** applies the differences. Updating adds classes and properties and
+changes the labels and comments of existing ones to match the library's
+vocabulary, so look over the changes first. It never removes a class or
+property. Accepting or cancelling leads to the vocabulary's page in Omeka,
+as any review does.
 
 Where the library's vocabulary has several languages, or gives its terms both
-definitions and comments, the page offers a choice of which to compare. It
-starts with the choice closest to Omeka's vocabulary, so in most cases only
-real changes show.
+definitions and comments, the review offers a choice of which to compare. It
+starts with the choice Omeka's vocabulary was imported with, or else the
+closest, so in most cases only real changes show.
 
 Dublin Core and Dublin Core Type cannot be updated. Supervisors can update
 only the vocabularies they own.
@@ -73,10 +77,10 @@ version of the module list the vocabularies that changed.
 
 ## Server memory
 
-The largest files need more memory than PHP's default limit of 128 MB. The
-library raises the limit to 256 MB where the server allows it. If the
-details, import, or comparison of a large vocabulary fails, raise PHP's
-`memory_limit`.
+The largest files need more memory than PHP's default limit of 128 MB.
+Omeka raises the limit to 256 MB while reading a vocabulary's file, where the
+server allows it. If the details, import, or comparison of a large vocabulary
+fails, raise PHP's `memory_limit`.
 
 ## About the library
 

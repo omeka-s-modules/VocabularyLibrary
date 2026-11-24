@@ -4,12 +4,11 @@ namespace VocabularyLibrary\Controller\Admin;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
-use Omeka\Api\Representation\VocabularyRepresentation;
-use Omeka\Form\ConfirmForm;
+use Omeka\Api\Exception\ValidationException;
 use Omeka\Mvc\Exception\NotFoundException;
 use Omeka\Mvc\Exception\PermissionDeniedException;
-use Omeka\Stdlib\Message;
-use VocabularyLibrary\Form\ImportForm;
+use Omeka\Stdlib\VocabularyImport;
+use Omeka\Stdlib\VocabularyReview;
 use VocabularyLibrary\Stdlib\Collation;
 use VocabularyLibrary\Stdlib\Importer;
 use VocabularyLibrary\Stdlib\LanguageNames;
@@ -20,15 +19,17 @@ use VocabularyLibrary\Stdlib\TermSearch;
 
 /**
  * The library's pages: the list of vocabularies with its details sidebar and
- * term search, the import form, Compare and update, and the file download.
+ * term search, and the file download; and Import, and Review changes,
+ * which hand the library's file to core's import details and review.
  */
 class IndexController extends AbstractActionController
 {
     /**
      * The library page's search, filters and sort, which its URL keeps: the
-     * page gives the script this list, for saveState(). Import and Compare
-     * carry them in "return", so their links back lead to the library as the
-     * admin left it.
+     * page gives the script this list, for saveState(). Import and Review
+     * changes carry them in "return": the import starts on the language the
+     * library is filtered by, and an error leads back to the library as the
+     * admin left it. Both otherwise end in core, on the vocabulary's page.
      */
     const LIBRARY_STATE = ['q', 'terms', 'tag', 'lang', 'show', 'sort_by', 'sort_order'];
 
@@ -48,6 +49,8 @@ class IndexController extends AbstractActionController
     protected $termSearch;
     protected $languageNames;
     protected $siteVocabularies;
+    protected $vocabularyReview;
+    protected $vocabularyImport;
     protected $collation;
     protected $vocabularies;
     protected $tags;
@@ -56,12 +59,14 @@ class IndexController extends AbstractActionController
      * @param array $vocabularies The library, keyed by slug
      * @param array $tags Tags to filter by, key => label
      */
-    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, Collation $collation, array $vocabularies, array $tags)
+    public function __construct(Importer $importer, TermSearch $termSearch, LanguageNames $languageNames, SiteVocabularies $siteVocabularies, VocabularyReview $vocabularyReview, VocabularyImport $vocabularyImport, Collation $collation, array $vocabularies, array $tags)
     {
         $this->importer = $importer;
         $this->termSearch = $termSearch;
         $this->languageNames = $languageNames;
         $this->siteVocabularies = $siteVocabularies;
+        $this->vocabularyReview = $vocabularyReview;
+        $this->vocabularyImport = $vocabularyImport;
         $this->collation = $collation;
         // The name shown for a vocabulary: the library's alternative title,
         // else the file's title. The build requires one of them.
@@ -139,182 +144,89 @@ class IndexController extends AbstractActionController
         return $view;
     }
 
+    /**
+     * Hands the library's file to core's import details, which fills in the
+     * library's name, summary, namespace, and prefix, and starts on the
+     * library's language and reading. The import then ends as any does in
+     * core, on the vocabulary's page. A vocabulary Omeka already has, reached
+     * from a stale tab or the Back button, says so instead.
+     */
     public function importAction()
     {
         [$slug, $entry] = $this->entry();
         $installed = $this->siteVocabularies->installed($entry);
-
-        $view = new ViewModel;
-        $view->setVariable('slug', $slug);
-        $view->setVariable('entry', $entry);
-        $view->setVariable('installed', $installed);
-        $view->setVariable('libraryUrl', $this->libraryUrl());
         if ($installed) {
+            $view = new ViewModel;
+            $view->setVariable('slug', $slug);
+            $view->setVariable('entry', $entry);
+            $view->setVariable('installed', $installed);
+            $view->setVariable('libraryUrl', $this->libraryUrl());
+            $view->setVariable('libraryState', http_build_query($this->libraryState()));
             return $view;
         }
-
-        $form = $this->getForm(ImportForm::class, ['languages' => $this->languageNames->options($entry['languages'])]);
-        // The label and comment the vocabulary gets in Omeka: the name shown in
-        // the library, and the library's summary.
-        $form->setData([
-            'o:prefix' => $entry['prefix'],
-            'o:label' => $entry['name'],
-            'o:comment' => $entry['summary'],
-            'lang' => $this->importLanguage($entry),
-        ]);
-        $view->setVariable('form', $form);
-        $view->setVariable('installedPrefixes', $this->siteVocabularies->prefixes());
-
-        if (!$this->getRequest()->isPost()) {
-            return $view;
-        }
-        $form->setData($this->params()->fromPost());
-        if (!$form->isValid()) {
-            $this->messenger()->addFormErrors($form);
-            return $view;
-        }
-        $data = $form->getData();
-        $lang = $form->has('lang') ? $data['lang'] : TermReading::preferredLanguage($entry['languages']);
         try {
-            $vocabulary = $this->importer->import($entry, [
-                'o:prefix' => $data['o:prefix'],
-                'o:label' => $data['o:label'],
-                'o:comment' => $data['o:comment'],
-            ], $lang);
+            $url = $this->vocabularyImport->start(
+                $this->importer->path($entry),
+                [
+                    'o:label' => $entry['name'],
+                    'o:comment' => $entry['summary'],
+                    'o:namespace_uri' => $entry['namespace'],
+                    'o:prefix' => $entry['prefix'],
+                ],
+                array_filter([
+                    'format' => Importer::FORMAT,
+                    'lang' => $this->importLanguage($entry),
+                    'comment_property' => TermReading::COMMENT_PROPERTY,
+                ], function ($option) {
+                    return null !== $option;
+                })
+            );
         } catch (\Exception $e) {
-            // As core's import does: the importer's message, and any from the
-            // API's validation.
-            $messages = [];
-            if ($e->getMessage()) {
-                $messages[] = $e->getMessage();
-            }
-            if (method_exists($e, 'getErrorStore')) {
-                foreach ($e->getErrorStore()->getErrors() as $message) {
-                    $messages[] = $message;
-                }
-            }
-            $this->messenger()->addErrors($messages);
-            return $view;
+            $this->messenger()->addErrors($this->errorMessages($e));
+            return $this->redirect()->toUrl($this->libraryUrl());
         }
-
-        // Core's own message, already translated.
-        $this->succeeded('Vocabulary successfully imported. %s', $vocabulary); // @translate
-        return $this->redirect()->toUrl($this->libraryUrl());
+        return $this->redirect()->toUrl($url);
     }
 
     /**
-     * Shows how the vocabulary in Omeka differs from the library's file, and
-     * applies the difference on request, with core's importer.
-     *
-     * Core's update adds classes and properties and changes labels and
-     * comments; it never removes any. The module can't tell which side is
-     * newer, so the admin decides.
+     * Starts core's review of the changes the library's file would make to
+     * Omeka's vocabulary, and goes there. Core's review reads the file as the
+     * vocabulary was read, or else guesses how, offers the choices, checks
+     * the user may update it, and applies the changes on Accept. Where
+     * Omeka's vocabulary has the library's namespace in another form, the
+     * review changes it to the library's along with the rest. Accept and
+     * Cancel end on the vocabulary's page, as any review does.
      */
-    public function compareAction()
+    public function reviewAction()
     {
         [, $entry] = $this->entry();
         $installed = $this->siteVocabularies->installed($entry);
-        if (!$installed || !$installed['exact']) {
+        if (!$installed) {
             throw new NotFoundException;
         }
-        if (!$installed['comparable']) {
+        if (!$installed['updatable']) {
             throw new PermissionDeniedException('Cannot update this vocabulary');
         }
-        $vocabulary = $installed['vocabulary'];
-        // An empty language is "First available": no preferred language, as
-        // core's import form defaults to. Until the admin chooses, the page
-        // reads the file in the language the vocabulary was imported in, where
-        // the file has several, so only real changes show.
-        $lang = $this->params()->fromPost('lang', $this->params()->fromQuery('lang'));
-        if ($lang === '') {
-            $lang = null;
-        } elseif (!in_array($lang, $entry['languages'], true)) {
-            $lang = count($entry['languages']) > 1
-                ? $this->importer->matchingLanguage($entry, $vocabulary)
-                : TermReading::preferredLanguage($entry['languages']);
+        try {
+            $url = $this->vocabularyReview->start(
+                $installed['vocabulary']->id(),
+                $this->importer->path($entry),
+                // Guessed, as the library reads its files, never left to the
+                // format stored for Omeka's vocabulary, which may be another
+                // file's.
+                ['format' => Importer::FORMAT],
+                [
+                    // Compared exactly: a namespace that differs only in
+                    // capitals is the same vocabulary to Omeka, but not to
+                    // the review's reading of the file.
+                    'new_namespace_uri' => $installed['vocabulary']->namespaceUri() === $entry['namespace'] ? null : $entry['namespace'],
+                ]
+            );
+        } catch (\Exception $e) {
+            $this->messenger()->addErrors($this->errorMessages($e));
+            return $this->redirect()->toUrl($this->libraryUrl());
         }
-        $reading = $this->params()->fromPost('comments', $this->params()->fromQuery('comments'));
-        // The diff is computed on every request, never taken from the form.
-        [$reading, $diff] = $this->importer->diffAsImported($entry, $lang, $reading);
-        $form = $this->getForm(ConfirmForm::class);
-
-        if ($this->getRequest()->isPost()) {
-            $form->setData($this->params()->fromPost());
-            if ($form->isValid()) {
-                try {
-                    $this->importer->update($vocabulary->id(), $diff);
-                } catch (\Exception $e) {
-                    $this->messenger()->addError($e->getMessage());
-                    return $this->redirect()->toUrl($this->libraryUrl());
-                }
-                $this->succeeded('Changes to the vocabulary successfully made. %s', $vocabulary); // @translate
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $this->messenger()->addFormErrors($form);
-        }
-
-        $view = new ViewModel;
-        $view->setVariable('entry', $entry);
-        $view->setVariable('vocabulary', $vocabulary);
-        $view->setVariable('diff', $diff);
-        $view->setVariable('collation', $this->collation);
-        $labels = Importer::labels($vocabulary);
-        $view->setVariable('labels', $labels);
-        $view->setVariable('missing', $this->importer->missingTerms($entry, $labels, $lang));
-        $view->setVariable('lang', $lang);
-        $view->setVariable('languageOptions', $this->languageNames->options($entry['languages']));
-        $view->setVariable('commentReading', $reading);
-        $view->setVariable('form', $form);
-        $view->setVariable('libraryUrl', $this->libraryUrl());
-        $view->setVariable('libraryState', http_build_query($this->libraryState()));
-        return $view;
-    }
-
-    /**
-     * Changes the namespace of Omeka's vocabulary, which has the library's in
-     * another form (http for https, another closing # or /), to the
-     * library's, then goes on to compare it. Asked for, it gives the
-     * confirmation for the details sidebar, as core confirms a deletion;
-     * confirmed, it makes the change core's Edit vocabulary form makes,
-     * through the API, which checks the user may make it. Only the library
-     * knows the form to change it to.
-     */
-    public function changeNamespaceAction()
-    {
-        [$slug, $entry] = $this->entry();
-        $installed = $this->siteVocabularies->installed($entry);
-        if (!$installed || $installed['exact']) {
-            throw new NotFoundException;
-        }
-        if (!$installed['changeable']) {
-            throw new PermissionDeniedException('Cannot change this vocabulary');
-        }
-        $vocabulary = $installed['vocabulary'];
-        $form = $this->getForm(ConfirmForm::class);
-
-        if ($this->getRequest()->isPost()) {
-            $form->setData($this->params()->fromPost());
-            if (!$form->isValid()) {
-                $this->messenger()->addFormErrors($form);
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $response = $this->api($form)->update('vocabularies', $vocabulary->id(), ['o:namespace_uri' => $entry['namespace']], [], ['isPartial' => true]);
-            if (!$response) {
-                // Core's api plugin has already shown the API's errors.
-                return $this->redirect()->toUrl($this->libraryUrl());
-            }
-            $this->messenger()->addSuccess('Namespace successfully changed'); // @translate
-            $state = $this->libraryState();
-            return $this->redirect()->toRoute('admin/vocabulary-library', ['action' => 'compare', 'slug' => $slug], $state ? ['query' => ['return' => http_build_query($state)]] : []);
-        }
-
-        $form->setAttribute('action', $this->url()->fromRoute('admin/vocabulary-library', ['action' => 'change-namespace', 'slug' => $slug]));
-        $view = new ViewModel;
-        $view->setTerminal(true);
-        $view->setVariable('entry', $entry);
-        $view->setVariable('installed', $installed);
-        $view->setVariable('form', $form);
-        return $view;
+        return $this->redirect()->toUrl($url);
     }
 
     /**
@@ -324,7 +236,7 @@ class IndexController extends AbstractActionController
     public function showTermsAction()
     {
         [, $entry] = $this->entry();
-        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages']));
+        $members = $this->importer->members($entry, TermReading::preferredLanguage($entry['languages'], $entry['language_coverage']));
         foreach ($members as &$terms) {
             // Some files put HTML in their labels and comments, which is
             // shown here as text; import stores them as they are, as Omeka's
@@ -395,22 +307,20 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * Says an import or update succeeded, with a link to the vocabulary in
-     * Omeka. Both lead back to the library, as the admin left it, so that
-     * choosing vocabularies isn't interrupted; the link is there for when
-     * the vocabulary itself is wanted.
+     * The messages for an error from core's importer, as core's import shows
+     * them (VocabularyController::getErrors()): the importer's own, and any
+     * from the API's validation, else that something went wrong.
      *
-     * @param string $message With %s for the link
+     * @return array For the messenger's addErrors()
      */
-    protected function succeeded($message, VocabularyRepresentation $vocabulary)
+    protected function errorMessages(\Exception $e)
     {
-        $message = new Message($message, sprintf(
-            '<a href="%s">%s</a>',
-            htmlspecialchars($this->siteVocabularies->url($vocabulary)),
-            htmlspecialchars($this->translate('View it in Omeka'))
-        ));
-        $message->setEscapeHtml(false);
-        $this->messenger()->addSuccess($message);
+        // An API refusal has no message of its own, only its reasons.
+        $messages = '' === (string) $e->getMessage() ? [] : [$e->getMessage()];
+        if ($e instanceof ValidationException && $e->getErrorStore()->getErrors()) {
+            $messages[] = $e->getErrorStore()->getErrors();
+        }
+        return $messages ?: [$this->translate('Something went wrong')];
     }
 
     /**
@@ -446,14 +356,17 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * The language the import form starts on: the one the library was
-     * filtered by, where the vocabulary has it, else the library's default
-     * for the vocabulary.
+     * The language the import starts on, where the library was filtered by
+     * one: the vocabulary's tag for it, matched as core's import matches a
+     * language, so the filter's "zh" finds "zh-Hans-CN". Otherwise none, and
+     * core's import details choose, as for any file: from all of the file's
+     * labels and comments, where the library knows only its labels'.
+     *
+     * @return string|null
      */
     protected function importLanguage(array $entry)
     {
-        $lang = $this->libraryState()['lang'] ?? null;
-        return in_array($lang, $entry['languages'], true) ? $lang : TermReading::preferredLanguage($entry['languages']);
+        return TermReading::matchingLanguage($this->libraryState()['lang'] ?? null, $entry['languages'], $entry['language_coverage']);
     }
 
     /**

@@ -6,8 +6,7 @@ $escape = $this->plugin('escapeHtml');
 $license = $entry['license'];
 $file = basename($entry['file']);
 // Every section shows for every vocabulary, so sidebars keep one structure:
-// what the file lacks says so, styled apart from values, as the compare page
-// marks "None".
+// what the file lacks says so, styled apart from values.
 $notProvided = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not provided by the publisher')));
 // Labels with no language tag: the labels are there, but not their language.
 $notStated = sprintf('<span class="vocabulary-library-none">%s</span>', $escape($translate('Not stated in the file')));

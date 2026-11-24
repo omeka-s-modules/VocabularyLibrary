@@ -5,8 +5,7 @@ use Laminas\I18n\Translator\Translator;
 
 /**
  * The language tags of vocabularies' labels, named in the admin's language,
- * for the library's label language filter, the details sidebar, and the
- * language menus on the import form and Compare page.
+ * for the library's label language filter and the details sidebar.
  */
 class LanguageNames
 {
@@ -59,23 +58,4 @@ class LanguageNames
         return $this->collation->sorted($names);
     }
 
-    /**
-     * A menu of language tags, each named as the filter and sidebar name it,
-     * with the tag itself, which a regional one needs and core's forms use:
-     * "German (de)", "English (en-US)". A language that can't be named is its
-     * tag alone. In alphabetical order of the text.
-     *
-     * @param string[] $tags
-     * @return array tag => option text
-     */
-    public function options(array $tags)
-    {
-        $names = $this->names($this->primaries($tags));
-        $options = [];
-        foreach ($tags as $tag) {
-            $primary = strtolower(explode('-', $tag)[0]);
-            $options[$tag] = $names[$primary] === $primary ? $tag : sprintf('%s (%s)', $names[$primary], $tag);
-        }
-        return $this->collation->sorted($options);
-    }
 }
